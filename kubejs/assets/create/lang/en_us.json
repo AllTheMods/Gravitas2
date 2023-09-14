@@ -1,0 +1,17 @@
+{
+  "item.create.andesite_alloy": "Igneous Zinc Alloy",
+  "item.create.electron_tube": "Primitive Electron Tube",
+  "item.create.super_glue": "Glue Tube",
+  "block.create.andesite_casing": "Igneous Zinc Casing",
+  "block.create.andesite_encased_cogwheel": "Igneous Zinc Encased Cogwheel",
+  "block.create.andesite_encased_large_cogwheel": "Igneous Zinc Encased Large Cogwheel",
+  "block.create.andesite_encased_shaft": "Igneous Zinc Encased Shaft",
+  "block.create.andesite_funnel": "Igneous Zinc Funnel",
+  "block.create.andesite_ladder": "Igneous Zinc Ladder",
+  "block.create.andesite_pillar": "Igneous Zinc Pillar",
+  "block.create.andesite_tunnel": "Igneous Zinc Tunnel",
+  "block.create.small_andesite_brick_slab": "Small Igneous Zinc Brick Slab",
+  "block.create.small_andesite_brick_stairs": "Small Igneous Zinc Brick Stairs",
+  "block.create.small_andesite_brick_wall": "Small Igneous Zinc Brick Wall",
+  "block.create.small_andesite_bricks": "Small Igneous Zinc Bricks"
+}

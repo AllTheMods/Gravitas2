@@ -1,0 +1,65 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ultimate_voltage"
+	group: "6A4ED78F1D529DE3"
+	icon: "gtceu:crystal_processor_mainframe"
+	id: "5B77623308D74366"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			id: "0B73851C0744C118"
+			size: 1.5d
+			tasks: [{
+				id: "3C6A49DF8741F1BE"
+				item: "gtceu:crystal_processor_mainframe"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			id: "5853812153009EDE"
+			tasks: [{
+				id: "2E3A140B938F5EBA"
+				item: "gtceu:wetware_processor"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			id: "1D6AD4E8C3C99173"
+			tasks: [{
+				id: "0A3B4A6333E3BC27"
+				item: "gtceu:wetware_processor_assembly"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 0.5d
+		}
+		{
+			id: "27A6671ECA08D9B1"
+			tasks: [{
+				id: "2AB17F33B74F0BC0"
+				item: "gtceu:wetware_processor_computer"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 2.0d
+		}
+		{
+			id: "1CC7F5C8EA2B2491"
+			size: 1.5d
+			tasks: [{
+				id: "5E2699128FBE81A3"
+				item: "gtceu:wetware_processor_mainframe"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.5d
+		}
+	]
+	title: "Ultimate Voltage"
+}

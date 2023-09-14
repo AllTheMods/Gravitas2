@@ -1,0 +1,142 @@
+
+["Stellar View Client Config"]
+
+	["Stellar View Client Config".client]
+		#Replaces the Vanilla Overworld sky with Stellar View sky
+		replace_vanilla = true
+		#Removes Stars
+		disable_stars = false
+		#Stars will be visible during the day
+		day_stars = false
+		#Makes Stars brighter
+		bright_stars = true
+		#Controls how much the sky rotates when moving
+		#Range: 1 ~ 300
+		rotation_multiplier = 300
+		#Disables the Sun
+		disable_sun = false
+		#Disables the Moon
+		disable_moon = false
+		#Disables Moon phases
+		disable_moon_phases = false
+		#Chance of a meteor shower happening each day
+		#Range: 0 ~ 100
+		meteor_shower_chance = 10
+		#Chance of a shooting star appearing each 1000 ticks
+		#Range: 0 ~ 100
+		shooting_star_chance = 10
+		#Specifies Milky Way X position
+		#Range: -45 ~ 45
+		milky_way_x = 0
+		#Specifies Milky Way Y position
+		#Range: -45 ~ 45
+		milky_way_y = 0
+		#Specifies Milky Way Z position
+		#Range: -45 ~ 45
+		milky_way_z = 16
+		#Specifies Milky Way Alpha rotation
+		#Range: 0 ~ 360
+		milky_way_alpha = 90
+		#Specifies Milky Way Beta rotation
+		#Range: 0 ~ 360
+		milky_way_beta = 18
+		#Specifies Milky Way Gamma rotation
+		#Range: 0 ~ 360
+		milky_way_gamma = 0
+
+		["Stellar View Client Config".client.alpha]
+			#Disables the Sun
+			disable_sun = false
+			#Disables the Moon
+			disable_moon = false
+			#Disables Moon phases
+			disable_moon_phases = false
+			#Chance of a meteor shower happening each day
+			#Range: 0 ~ 100
+			meteor_shower_chance = 10
+			#Chance of a shooting star appearing each 1000 ticks
+			#Range: 0 ~ 100
+			shooting_star_chance = 10
+			#Specifies Milky Way X position
+			#Range: -45 ~ 45
+			milky_way_x = 0
+			#Specifies Milky Way Y position
+			#Range: -45 ~ 45
+			milky_way_y = 0
+			#Specifies Milky Way Z position
+			#Range: -45 ~ 45
+			milky_way_z = 16
+			#Specifies Milky Way Alpha rotation
+			#Range: 0 ~ 360
+			milky_way_alpha = 90
+			#Specifies Milky Way Beta rotation
+			#Range: 0 ~ 360
+			milky_way_beta = 18
+			#Specifies Milky Way Gamma rotation
+			#Range: 0 ~ 360
+			milky_way_gamma = 0
+
+		["Stellar View Client Config".client.beta]
+			#Disables the Sun
+			disable_sun = false
+			#Disables the Moon
+			disable_moon = false
+			#Disables Moon phases
+			disable_moon_phases = false
+			#Chance of a meteor shower happening each day
+			#Range: 0 ~ 100
+			meteor_shower_chance = 10
+			#Chance of a shooting star appearing each 1000 ticks
+			#Range: 0 ~ 100
+			shooting_star_chance = 10
+			#Specifies Milky Way X position
+			#Range: -45 ~ 45
+			milky_way_x = 0
+			#Specifies Milky Way Y position
+			#Range: -45 ~ 45
+			milky_way_y = 0
+			#Specifies Milky Way Z position
+			#Range: -45 ~ 45
+			milky_way_z = 16
+			#Specifies Milky Way Alpha rotation
+			#Range: 0 ~ 360
+			milky_way_alpha = 90
+			#Specifies Milky Way Beta rotation
+			#Range: 0 ~ 360
+			milky_way_beta = 18
+			#Specifies Milky Way Gamma rotation
+			#Range: 0 ~ 360
+			milky_way_gamma = 0
+
+		["Stellar View Client Config".client.gamma]
+			#Disables the Sun
+			disable_sun = false
+			#Disables the Moon
+			disable_moon = false
+			#Disables Moon phases
+			disable_moon_phases = false
+			#Chance of a meteor shower happening each day
+			#Range: 0 ~ 100
+			meteor_shower_chance = 10
+			#Chance of a shooting star appearing each 1000 ticks
+			#Range: 0 ~ 100
+			shooting_star_chance = 10
+			#Specifies Milky Way X position
+			#Range: -45 ~ 45
+			milky_way_x = 0
+			#Specifies Milky Way Y position
+			#Range: -45 ~ 45
+			milky_way_y = 0
+			#Specifies Milky Way Z position
+			#Range: -45 ~ 45
+			milky_way_z = 16
+			#Specifies Milky Way Alpha rotation
+			#Range: 0 ~ 360
+			milky_way_alpha = 90
+			#Specifies Milky Way Beta rotation
+			#Range: 0 ~ 360
+			milky_way_beta = 18
+			#Specifies Milky Way Gamma rotation
+			#Range: 0 ~ 360
+			milky_way_gamma = 0
+

@@ -1,0 +1,140 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "copper_anvils"
+	group: "20028FE0986EEEC1"
+	icon: {
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "tfc:metal/anvil/copper"
+	}
+	id: "5B4F6C8B409688D4"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{gravitas.quest.copper.desc.flux.1}"
+				"{gravitas.quest.copper.desc.flux.2}"
+			]
+			id: "28D6404D84C87C70"
+			tasks: [{
+				count: 16L
+				id: "32B11FC0F2015C21"
+				item: "tfc:powder/flux"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"28D6404D84C87C70"
+				"50665005FAC7C569"
+			]
+			description: ["{gravitas.quest.copper.desc.copper_double}"]
+			id: "593520325799F3D6"
+			tasks: [{
+				id: "2D763A27456019A2"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/double_ingot/copper"
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["593520325799F3D6"]
+			description: [
+				"{gravitas.quest.copper.desc.anvil.1}"
+				"{gravitas.quest.copper.desc.anvil.2}"
+			]
+			id: "1BD449BE6B5C6E93"
+			tasks: [{
+				id: "7079ACD99C9E5967"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/copper"
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			description: [
+				"{gravitas.quest.copper.desc.charcoal_forge.1}"
+				"{gravitas.quest.copper.desc.charcoal_forge.2}"
+			]
+			id: "543CB2FB24387CF0"
+			tasks: [{
+				count: 8L
+				id: "2FFBFD1E56ABAF0E"
+				item: "minecraft:charcoal"
+				type: "item"
+			}]
+			title: "{gravitas.quest.copper.charcoal_forge}"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"543CB2FB24387CF0"
+				"558C90FFC7FA976D"
+			]
+			description: [
+				"{gravitas.quest.copper.desc.bellows.1}"
+				"{gravitas.quest.copper.desc.bellows.2}"
+			]
+			id: "5862FB3D01494F5C"
+			tasks: [{
+				id: "646442B25233B967"
+				item: "tfc:bellows"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["543CB2FB24387CF0"]
+			description: ["{gravitas.quest.copper.desc.ingot}"]
+			id: "50665005FAC7C569"
+			tasks: [{
+				id: "6AD8D6C94291AD4A"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+	]
+	title: "{gravitas.chapters.2.title}"
+}

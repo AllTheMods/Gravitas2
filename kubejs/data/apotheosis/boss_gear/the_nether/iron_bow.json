@@ -1,0 +1,39 @@
+{
+	"weight": 80,
+	"quality": 5,
+	"mainhands": [{
+			"weight": 3,
+			"stack": {
+				"item": "minecraft:bow"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/boots/wrought_iron"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/greaves/wrought_iron"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/chestplate/wrought_iron"
+		}
+	}],
+	"helmets": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/helmet/wrought_iron"
+		}
+	}],
+	"tags": [
+		"overworld_bow"
+	]
+}

@@ -1,0 +1,1365 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "rock_anvils"
+	group: "20028FE0986EEEC1"
+	icon: "tfc:rock/anvil/basalt"
+	id: "44544D44D2E68336"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.0d
+			hover: [ ]
+			image: "tfc:textures/item/wood/log/oak.png"
+			rotation: 0.0d
+			width: 1.0d
+			x: 9.0d
+			y: 7.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.0d
+			hover: [ ]
+			image: "tfc:textures/item/wood/log/oak.png"
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.0d
+			y: 7.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.0d
+			hover: [ ]
+			image: "tfc:textures/item/wood/log/oak.png"
+			rotation: 0.0d
+			width: 1.0d
+			x: 9.5d
+			y: 7.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 2.0d
+			hover: [ ]
+			image: "tfc:textures/item/firepit.png"
+			rotation: 0.0d
+			width: 2.0d
+			x: 9.5d
+			y: 6.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "tfc:textures/item/loose_rock/andesite.png"
+			rotation: 15.0d
+			width: 0.5d
+			x: 9.2d
+			y: 3.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "tfc:textures/item/loose_rock/basalt.png"
+			rotation: 15.0d
+			width: 0.5d
+			x: 9.0d
+			y: 2.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "tfc:textures/item/loose_rock/quartzite.png"
+			rotation: 15.0d
+			width: 0.5d
+			x: 9.0d
+			y: 3.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "tfc:textures/item/wood/twig/acacia.png"
+			rotation: -15.0d
+			width: 0.5d
+			x: 6.8d
+			y: 3.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "tfc:textures/item/wood/twig/pine.png"
+			rotation: -15.0d
+			width: 0.5d
+			x: 7.0d
+			y: 2.6d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "tfc:textures/item/wood/twig/aspen.png"
+			rotation: -15.0d
+			width: 0.5d
+			x: 7.0d
+			y: 3.55d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.25d
+			hover: [ ]
+			image: "ftbquests:textures/block/item_input.png"
+			rotation: 0.0d
+			width: 1.25d
+			x: 14.0d
+			y: 3.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.75d
+			hover: [ ]
+			image: "tfc:textures/item/ceramic/green_glazed_vessel.png"
+			rotation: 0.0d
+			width: 0.75d
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.75d
+			hover: [ ]
+			image: "tfc:textures/item/ceramic/red_glazed_vessel.png"
+			rotation: 0.0d
+			width: 0.75d
+			x: 14.0d
+			y: 2.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 3.25d
+			hover: [ ]
+			image: "thermal:textures/block/dynamos/dynamo_magmatic.png"
+			rotation: 0.0d
+			width: 3.25d
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 3.0d
+			hover: [ ]
+			image: "gravitas:textures/items/gravitas_icon.png"
+			rotation: 0.0d
+			width: 3.0d
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.0d
+			hover: [ ]
+			image: "ftbchunks:textures/faces/minecraft/bee.png"
+			rotation: 0.0d
+			width: 1.0d
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "firmalife:textures/item/raw_honey.png"
+			rotation: 0.0d
+			width: 0.5d
+			x: 3.0d
+			y: -2.25d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "firmalife:textures/item/raw_honey.png"
+			rotation: 0.0d
+			width: 0.5d
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.0d
+			hover: [ ]
+			image: "tfc:textures/block/devices/composter/ready.png"
+			rotation: 45.0d
+			width: 1.0d
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 1.0d
+			hover: [ ]
+			image: "ftbchunks:textures/faces/minecraft/cow.png"
+			rotation: 0.0d
+			width: 1.0d
+			x: 6.5d
+			y: -4.5d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "minecraft:textures/item/leather.png"
+			rotation: 0.0d
+			width: 0.5d
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 0.5d
+			hover: [ ]
+			image: "minecraft:textures/item/leather.png"
+			rotation: 0.0d
+			width: 0.5d
+			x: 7.0d
+			y: -4.0d
+		}
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 2.5d
+			hover: [ ]
+			image: "tfc:textures/gui/book/tutorial/loom_done.png"
+			rotation: 0.0d
+			width: 2.5d
+			x: 14.5d
+			y: -1.25d
+		}
+	]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6360E6403A8BB4EE"]
+			description: [
+				"Using our newly crafted tools, we can now grab some vital resources for our survival."
+				""
+				"With the &aAxe&r, you can cut down trees. You won't be getting the standard logs, though."
+				""
+				"With the &eKnife&r, you can cut &2grass&r or &2plants&r to get &aStraw&r."
+				""
+				"The &3Hammer&r is used for Forging, and the &eJavelin&r is great as a weapon!"
+			]
+			id: "297C2E9EF534A201"
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					icon: "tfc:wood/log/oak"
+					id: "4D69524B510111AC"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					match_nbt: false
+					title: "Any Tree Log"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "7EDACFE705983F49"
+					item: "tfc:straw"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.caveman.start_somewhere}"
+			x: 9.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1CD5C4226B41ACCE"]
+			description: [
+				"It doesn't make much sense to make wooden tools first when there are literally stones all over the ground, right?"
+				""
+				"Pick up some &3Pebbles&r you see along the ground. You'll get different types of stones and even small ores depending on the geological region you are in."
+				""
+				"To help you locate which region you are in, make sure to open up the &cBlaze Map&r and select &aGeology&r on the left side! You might have to set a keybind for this as well."
+				""
+				"Make sure to check out the TFC guidebook on different areas to learn what you can gather!"
+			]
+			hide_dependency_lines: false
+			id: "237587BDC90B1D64"
+			min_width: 300
+			tasks: [{
+				consume_items: false
+				count: 2L
+				icon: "tfc:rock/loose/granite"
+				id: "3AC63C89B50E3590"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:rock_knapping"
+					}
+				}
+				title: "{gravitas.quest.caveman.pebbles}"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 3.0d
+		}
+		{
+			can_repeat: true
+			dependencies: [
+				"5CB48C20D61478AD"
+				"237587BDC90B1D64"
+			]
+			description: [
+				"With enough Pebbles, we can create our starter tools by &eKnapping&r the rocks into the shape of the tool head we want."
+				""
+				"To do this, hold &aat least 2&r pebbles in your hand and right click. From here, you can carve out the desired shape to get the tool head you want. Combine the tool head with a twig to get your first tool!"
+				""
+				"Tip: All of the knapping recipes can be found in JEI!"
+				""
+				"{image:gravitas:textures/quests/knapping.png width:200 height:150 align:1}"
+			]
+			id: "6360E6403A8BB4EE"
+			min_width: 400
+			tasks: [
+				{
+					id: "2A253FDE8C99D5EA"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:hammers"
+						}
+					}
+					title: "{gravitas.quest.caveman.stone_hammer}"
+					type: "item"
+				}
+				{
+					id: "4641E1711390F96F"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:axes"
+						}
+					}
+					title: "{gravitas.quest.caveman.stone_axe}"
+					type: "item"
+				}
+				{
+					id: "5B01FFE305AFC29D"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:knives"
+						}
+					}
+					match_nbt: true
+					tags: ["tfcstone_tools"]
+					title: "{gravitas.quest.caveman.stone_knife}"
+					type: "item"
+				}
+				{
+					id: "00419104F5F7FA5E"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:stone_javelins"
+						}
+					}
+					title: "Stone Javelin"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.caveman.stone_tools}"
+			x: 8.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1CD5C4226B41ACCE"]
+			description: [
+				"Can you chop down a tree with your hand in real life? No?"
+				""
+				"Just like IRL, you'll need to gather &aTwigs&r from the ground. These make great handles for the tools we'll make."
+			]
+			id: "5CB48C20D61478AD"
+			tasks: [{
+				consume_items: false
+				count: 2L
+				icon: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:wood/twig/oak"
+				}
+				id: "50903D61361FDE13"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:twigs"
+					}
+				}
+				only_from_crafting: false
+				title: "Twigs"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.stick}"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0DD3F3EDB709A4E6"]
+			description: [
+				"{gravitas.quest.caveman.desc.raw_hide.1}"
+				"{gravitas.quest.caveman.desc.raw_hide.2}"
+			]
+			id: "3D5D15DB0546D915"
+			tasks: [{
+				id: "1B44F920B1E3B777"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:raw_hides"
+					}
+				}
+				title: "{gravitas.quest.caveman.any_raw_hide}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.raw_hide}"
+			x: 9.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3D5D15DB0546D915"]
+			description: ["{gravitas.quest.caveman.desc.soak}"]
+			id: "17F16D7C369DD0F4"
+			subtitle: "{gravitas.quest.caveman.limewater_hide}"
+			tasks: [{
+				id: "531CCD8E2ACC0D88"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:soaked_hides"
+					}
+				}
+				title: "{gravitas.quest.caveman.soaked_hide}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.soak}"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["17F16D7C369DD0F4"]
+			description: ["{gravitas.quest.caveman.desc.squeegee}"]
+			id: "3506851642FE561A"
+			tasks: [{
+				id: "75BBBE9877032AB0"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:scraped_hides"
+					}
+				}
+				title: "{gravitas.quest.caveman.scraped_hide}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.squeegee}"
+			x: 6.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3506851642FE561A"]
+			description: ["{gravitas.quest.caveman.desc.soak_2}"]
+			id: "5E783B279FD57C33"
+			tasks: [{
+				id: "54205C2480AF91AB"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:prepared_hides"
+					}
+				}
+				title: "{gravitas.quest.caveman.prepared_hide}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.soak_2}"
+			x: 5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5E783B279FD57C33"]
+			description: [
+				"{gravitas.quest.caveman.desc.leather.1}"
+				"{gravitas.quest.caveman.desc.leather.2}"
+			]
+			id: "2B6349519D07FEE8"
+			tasks: [{
+				count: 3L
+				id: "558C90FFC7FA976D"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:leather"
+					}
+				}
+				title: "{gravitas.quest.caveman.any_leather}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.leather}"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7C2E28402F918FEA"]
+			description: ["{gravitas.quest.caveman.desc.important_molds}"]
+			id: "132DC94857046575"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "40ECE0631EEBA458"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_pickaxe_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "11974EF6BB3234EE"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_propick_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "7CAB3C0A7F6DA417"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_saw_blade_mold"
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.caveman.important_molds}"
+			x: 12.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"132DC94857046575"
+				"180277183EB60B6D"
+				"31DC96A27D8FC91C"
+				"239FE88B9320DF9E"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"Now that we have access to fire, we can fire our clay molds in a &cPit Kiln&r."
+				""
+				"To create one, make a 1x1 hole and press &aV&r while holding a mold you want to fire up. You can place up to 4 small molds, or one large mold like a Vessel."
+				""
+				"Now right click on the items with 8 pieces of straw, then right click with 8 logs to place them down. Now you can sneak-right click on it to use the &cFirestarter&r to light it on fire."
+				""
+				"It does take a little bit to fire up the molds, roughly 8 in-game hours."
+			]
+			id: "72DDCB9936148388"
+			min_width: 300
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "7D37012EBF41E254"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:fired_molds"
+						}
+					}
+					title: "Fired Mold"
+					type: "item"
+				}
+				{
+					icon: {
+						Count: 1b
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/vessel"
+						tag: { }
+					}
+					id: "713636C504E468E9"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:fired_vessels"
+						}
+					}
+					title: "Vessel"
+					type: "item"
+				}
+			]
+			title: "&cPit Kilns&r"
+			x: 11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7C2E28402F918FEA"]
+			description: ["&aVessels&r are great for early game storage. They are also used for creating our first metal tools!"]
+			id: "31DC96A27D8FC91C"
+			tasks: [{
+				count: 4L
+				id: "53987150CA61D080"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:ceramic/unfired_vessel"
+				}
+				type: "item"
+			}]
+			title: "Early Game Storage"
+			x: 12.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["72DDCB9936148388"]
+			description: [
+				"Now that we have access to a &cFirepit&r and some &aFired Molds&r, our next step is to find &aSmall Pieces of Copper&r."
+				""
+				"You won't be able to mine anything until you have a pickaxe, so heading into the caves won't work. Instead, your best bet is to head to a &eLimestone&r region to find &a Small Malachite&r pebbles."
+				""
+				"Each one of these will net you 10mb of Copper when smelted down, so you'll need 10 Small Malachite per tool head you want to make."
+			]
+			id: "6A9592B8BDE532CE"
+			shape: "gear"
+			tasks: [{
+				id: "45AB7A368F769835"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:small_ore_pieces_copper"
+					}
+				}
+				title: "Small Ore Pieces of Copper"
+				type: "item"
+			}]
+			title: "&eFinding Copper&r"
+			x: 11.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7CF28D1E8ABAF228"]
+			description: [
+				"You'll notice right away that you can't get any stone blocks from mining with that pickaxe."
+				""
+				"To do this, you'll need to find any kind of stone and break away all of the blocks around the block touching each face. Once you do this, the stone will pop out as an item!"
+				""
+				"To make our first anvil, we'll need to gather at least one of these blocks: Rhyolite, Basalt, Andesite, Dacite, Granite, Diorite, or Gabbro."
+				""
+				"With one of these &aRaw Rocks&r, we can make our first &eAnvil&r by placing it down and right clicking it with a TFC Hammer."
+			]
+			id: "59541FF5AD12B13A"
+			min_width: 300
+			progression_mode: "linear"
+			tasks: [{
+				icon: "tfc:rock/anvil/diorite"
+				id: "33C36ACF058CD1AE"
+				observe_type: 1
+				timer: 1L
+				title: "{gravitas.quest.caveman.rock_anvil}"
+				to_observe: "tfc:rock_anvils"
+				type: "observation"
+			}]
+			title: "Our First Anvil"
+			x: 11.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7CF28D1E8ABAF228"]
+			description: ["{gravitas.quest.caveman.desc.saw_blade}"]
+			id: "70D78EF128C722A1"
+			tasks: [
+				{
+					id: "13BC7D6A62F1E4FA"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:saws"
+						}
+					}
+					title: "{gravitas.quest.caveman.copper_saw}"
+					type: "item"
+				}
+				{
+					icon: "tfc:wood/lumber/oak"
+					id: "66402090BB5AD114"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:lumber"
+						}
+					}
+					title: "Lumber"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.caveman.saw_blade}"
+			x: 9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["70D78EF128C722A1"]
+			description: ["{gravitas.quest.caveman.desc.work_bench}"]
+			id: "22A0A2AB85BF37A4"
+			tasks: [{
+				id: "66295A20EFF4960C"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:workbenches"
+					}
+				}
+				title: "{gravitas.quest.caveman.workbench}"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["22A0A2AB85BF37A4"]
+			description: ["{gravitas.quest.caveman.desc.crafting_table}"]
+			id: "39F109AD95ADF073"
+			optional: true
+			tasks: [{
+				id: "78177D543FFD6FE0"
+				item: "minecraft:crafting_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.crafting_table}"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["22A0A2AB85BF37A4"]
+			description: ["{gravitas.quest.caveman.desc.beehive_frame}"]
+			id: "5478150085EF27C0"
+			tasks: [{
+				id: "2043745EBEE5014D"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						Parent: { }
+					}
+					id: "firmalife:beehive_frame"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5478150085EF27C0"]
+			description: ["{gravitas.quest.caveman.desc.beehive}"]
+			id: "5F20B205754CE462"
+			tasks: [{
+				id: "3912D042102BC487"
+				item: "firmalife:beehive"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5F20B205754CE462"]
+			description: ["{gravitas.quest.caveman.desc.beeswax}"]
+			id: "535D2CF323ED6D05"
+			tasks: [{
+				id: "2CF9B6351BF3F931"
+				item: "firmalife:beeswax"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5F20B205754CE462"]
+			description: ["{gravitas.quest.caveman.desc.honey}"]
+			id: "604EA4BA99BE1F09"
+			tasks: [
+				{
+					id: "2BEA73756C5ED364"
+					item: "firmalife:raw_honey"
+					type: "item"
+				}
+				{
+					id: "31DF626D3F0ED54F"
+					item: "firmalife:empty_jar"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["535D2CF323ED6D05"]
+			description: [
+				"{gravitas.quest.caveman.desc.treated_lumber.1}"
+				"{gravitas.quest.caveman.desc.treated_lumber.2}"
+			]
+			id: "422CCA1364475F5B"
+			tasks: [{
+				count: 8L
+				id: "398FC569E02105BC"
+				item: "firmalife:treated_lumber"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			description: ["{gravitas.quest.caveman.desc.clay}"]
+			id: "7C2E28402F918FEA"
+			shape: "diamond"
+			tasks: [{
+				count: 16L
+				id: "322C2C60EA9EEE92"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.clay}"
+			x: 14.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7C2E28402F918FEA"]
+			description: ["{gravitas.quest.caveman.desc.useful_molds}"]
+			id: "239FE88B9320DF9E"
+			tasks: [
+				{
+					id: "75F6AE09CF9D78EF"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_axe_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "516D146851E5BDBE"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_shovel_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "40DDB683B6FF6059"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_hoe_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "7AE9FC96DD5AF260"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_knife_blade_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "1D236FA0391ED293"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_bell_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "4DEA09936F5427C2"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_pot"
+					}
+					type: "item"
+				}
+				{
+					id: "6381B3C4AEAE79CC"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_chisel_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "4D927495AB91562D"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_hammer_head_mold"
+					}
+					type: "item"
+				}
+				{
+					id: "1D0BF913F0D731FC"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_large_vessel"
+					}
+					type: "item"
+				}
+				{
+					id: "60F56809385ECD0C"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_jug"
+					}
+					type: "item"
+				}
+				{
+					id: "1ED46E5E981CC7FD"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_brick"
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.caveman.useful_molds}"
+			x: 12.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["70D78EF128C722A1"]
+			description: ["{gravitas.quest.caveman.desc.big_barrel}"]
+			id: "0DD3F3EDB709A4E6"
+			tasks: [{
+				count: 4L
+				id: "39E80AB56CB3FFC9"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:barrels"
+					}
+				}
+				title: "{gravitas.quest.caveman.barrels}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.big_barrel}"
+			x: 9.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1CD5C4226B41ACCE"]
+			description: ["{gravitas.quest.caveman.desc.waystone}"]
+			id: "61D2B2C65CD18F80"
+			tasks: [{
+				id: "314D9E700211415E"
+				item: "waystones:waystone"
+				type: "item"
+			}]
+			title: "Getting Around"
+			x: 9.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["16BB7334ACB35025"]
+			description: [
+				"The &bLoom&r can be used to turn 16 Wool Yarn into &aWool Cloth&r."
+				""
+				"To do this, place the Loom down and right click on it with Wool Yarn. Once it has enough, you can hold right click to begin working the yarn. When finished, right click to get your Wool Cloth!"
+			]
+			id: "154A9384B22C1FC2"
+			tasks: [
+				{
+					id: "44946F4DFE65105E"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:looms"
+						}
+					}
+					title: "Any #tfc:looms"
+					type: "item"
+				}
+				{
+					id: "65848989354A2C66"
+					item: "tfc:wool_cloth"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.caveman.loom}"
+			x: 12.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7CF28D1E8ABAF228"]
+			description: ["&aSpindles&r are used to break down Wool into &eWool Yarn&r, which can eventually be turned into the Wool in vanilla!"]
+			id: "3BD7DB417DDE94D0"
+			tasks: [
+				{
+					id: "5863B1581F033BED"
+					item: {
+						Count: 1b
+						id: "tfc:spindle"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "54E51672B9908691"
+					item: "tfc:ceramic/spindle_head"
+					type: "item"
+				}
+				{
+					id: "43CA0F502CF752E4"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:ceramic/unfired_spindle_head"
+					}
+					type: "item"
+				}
+			]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3BD7DB417DDE94D0"]
+			description: ["Gather up some &aWool&r from the local wildlife. Using your Spindle, turn the Wool into &aWool Yarn&r."]
+			id: "16BB7334ACB35025"
+			tasks: [
+				{
+					id: "4105116D1A10B5BA"
+					item: "tfc:wool"
+					type: "item"
+				}
+				{
+					id: "047946C7AA04FB94"
+					item: "tfc:wool_yarn"
+					type: "item"
+				}
+			]
+			x: 12.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["154A9384B22C1FC2"]
+			description: ["{gravitas.quest.caveman.desc.small_ship}"]
+			id: "1CB1E914C394C297"
+			tasks: [{
+				id: "529B9E366ECAAB88"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "smallships:cogs"
+					}
+				}
+				title: "Any #smallships:cogs"
+				type: "item"
+			}]
+			title: "{gravitas.quest.caveman.small_ship}"
+			x: 11.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["70D78EF128C722A1"]
+			description: [
+				"{gravitas.quest.caveman.desc.composter.1}"
+				"{gravitas.quest.caveman.desc.composter.2}"
+			]
+			id: "2AD5D0FD00A5C4FD"
+			shape: "diamond"
+			tasks: [{
+				id: "0B81C8F0564E121A"
+				item: "tfc:composter"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"TerraFirmaCraft (TFC) adds a completely different experience from the standard Minecraft journey."
+				""
+				"It's easy to get lost, but you've been equipped with a guidebook in your inventory! If you ever need help, click on the TFC guidebook tab on the right side of your inventory screen!"
+			]
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "ftbquests:textures/gui/guide.png"
+				}
+			}
+			id: "1CD5C4226B41ACCE"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				dimension: "minecraft:overworld"
+				id: "417CC152C24BFD53"
+				title: "Getting Started"
+				type: "dimension"
+			}]
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["297C2E9EF534A201"]
+			description: [
+				"Using 2 Twigs, you can craft a &cFirestarter&r, which will help us make a &cFirepit&r!"
+				""
+				"Campfires are made by throwing down these items all on one block: 1 log, 3 Sticks, and up to 5 pieces of Kindling (Straw is great for this!)"
+				""
+				"Once all items are thrown down, use the Firestarter on the items to try and light it. If successful, you will make your first &cFirepit&r!"
+			]
+			icon: "tfc:firepit"
+			id: "180277183EB60B6D"
+			min_width: 300
+			shape: "square"
+			size: 1.25d
+			tasks: [
+				{
+					id: "144E1396C65C0BCC"
+					item: {
+						Count: 1b
+						id: "tfc:firestarter"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					advancement: "tfc:story/firepit"
+					criterion: ""
+					id: "1CEA9B0C4959F993"
+					title: "Make a Firepit"
+					type: "advancement"
+				}
+			]
+			title: "We have &cFIRE&r!"
+			x: 11.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6A9592B8BDE532CE"]
+			description: [
+				"Once you've found at least 10 pebbles that make copper, we can use a Pit Kiln to cast some tool parts."
+				""
+				"To do this, make a &eVessel&r and fill it with enough copper pebbles, then fire it up using a Pit Kiln."
+				""
+				"Once the Kiln is done, pick up the Vessel and place your pickaxe mold inside. Be quick about this! The contents can solidify if you take too long. If this does happen, you can run it back through the Kiln to melt it back down."
+				""
+				"Once the mold has solidified, you can sneak-right click it to get your first Copper pickaxe head! You'll want to make a Prospector's pick as well."
+			]
+			id: "7CF28D1E8ABAF228"
+			min_width: 300
+			tasks: [
+				{
+					id: "3375A5CA9F1B1FF3"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/pickaxe_head/copper"
+					}
+					type: "item"
+				}
+				{
+					id: "158CE6F45E6BCB20"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/propick_head/copper"
+					}
+					type: "item"
+				}
+			]
+			title: "&aMaking Our First Metal Tools&r"
+			x: 11.0d
+			y: 0.0d
+		}
+	]
+	title: "Getting Started(Babbys' first Anvil!)"
+}

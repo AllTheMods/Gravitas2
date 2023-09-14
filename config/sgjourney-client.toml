@@ -1,0 +1,74 @@
+
+["Stargate Journey Client Config"]
+
+	["Stargate Journey Client Config".client]
+		#Stargate Journey Client Config
+		#Disables smooth animations of Stargate Journey Block Entities
+		disable_smooth_animations = false
+		#Stargate Journey Client Stargate Config
+		#If true Solar Systems will use unique Symbols
+		unique_symbols = false
+		#Decide if Milky Way Stargate should use the Movie Stargate model
+		use_movie_stargate_model = false
+		#Decide if Chevrons on the back of Milky Way Stargate should light up
+		milky_way_stargate_back_lights_up = false
+		#Decide if Chevrons on the back of Pegasus Stargate should light up
+		pegasus_stargate_back_lights_up = true
+		#Decide if Chevrons on the back of Tollan Stargate should light up
+		tollan_stargate_back_lights_up = true
+
+		["Stargate Journey Client Config".client.universe_stargate]
+			#The RGBA values in Universe Stargate's Event Horizon
+			#Range: 0 ~ 255
+			red = 255
+			#Range: 0 ~ 255
+			green = 255
+			#Range: 0 ~ 255
+			blue = 255
+			#Range: 0 ~ 255
+			alpha = 255
+
+		["Stargate Journey Client Config".client.milky_way_stargate]
+			#The RGBA values in Milky Way Stargate's Event Horizon
+			#Range: 0 ~ 255
+			red = 55
+			#Range: 0 ~ 255
+			green = 55
+			#Range: 0 ~ 255
+			blue = 255
+			#Range: 0 ~ 255
+			alpha = 255
+
+		["Stargate Journey Client Config".client.pegasus_stargate]
+			#The RGBA values in Pegasus Stargate's Event Horizon
+			#Range: 0 ~ 255
+			red = 55
+			#Range: 0 ~ 255
+			green = 55
+			#Range: 0 ~ 255
+			blue = 255
+			#Range: 0 ~ 255
+			alpha = 255
+
+		["Stargate Journey Client Config".client.classic_stargate]
+			#The RGBA values in Classic Stargate's Event Horizon
+			#Range: 0 ~ 255
+			red = 55
+			#Range: 0 ~ 255
+			green = 55
+			#Range: 0 ~ 255
+			blue = 255
+			#Range: 0 ~ 255
+			alpha = 255
+
+		["Stargate Journey Client Config".client.tollan_stargate]
+			#The RGBA values in Tollan Stargate's Event Horizon
+			#Range: 0 ~ 255
+			red = 55
+			#Range: 0 ~ 255
+			green = 55
+			#Range: 0 ~ 255
+			blue = 255
+			#Range: 0 ~ 255
+			alpha = 255
+

@@ -1,0 +1,65 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "zero_point_module"
+	group: "6A4ED78F1D529DE3"
+	icon: "gtceu:quantum_processor_mainframe"
+	id: "47172A2FD75A54D0"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			id: "3611DE59BE9C6350"
+			size: 1.5d
+			tasks: [{
+				id: "2898B1F33C914414"
+				item: "gtceu:quantum_processor_mainframe"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			id: "5A93F7C6C8D1C9C9"
+			size: 1.5d
+			tasks: [{
+				id: "6FE70EB1497848B8"
+				item: "gtceu:crystal_processor_mainframe"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "20C4219A4299216A"
+			tasks: [{
+				id: "7FAA2FBAA6294986"
+				item: "gtceu:crystal_processor"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			id: "263BE92027071F1E"
+			tasks: [{
+				id: "1E1671025D9DC540"
+				item: "gtceu:crystal_processor_assembly"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			id: "25820F4F2BF47BFF"
+			tasks: [{
+				id: "79CF5478C299BA6C"
+				item: "gtceu:crystal_processor_computer"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+	]
+	title: "Zero Point Module"
+}

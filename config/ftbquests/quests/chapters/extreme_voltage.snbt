@@ -1,0 +1,201 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "extreme_voltage"
+	group: "6A4ED78F1D529DE3"
+	icon: "gtceu:micro_processor_computer"
+	id: "489F28A71282B3E7"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5241693278027FFD"
+			size: 1.5d
+			tasks: [{
+				id: "17E7D25D83B98E80"
+				item: "gtceu:micro_processor_computer"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "2E47C92E3E8D826A"
+			size: 1.5d
+			tasks: [{
+				id: "23FFAB356FE1CA42"
+				item: "gtceu:micro_processor_mainframe"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			id: "0262E0D49A12F817"
+			tasks: [{
+				id: "4CB14D90753F710B"
+				item: "gtceu:smd_transistor"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 3.0d
+		}
+		{
+			id: "6445DEC19DD55A34"
+			tasks: [{
+				id: "466FF2FF107AFDFA"
+				item: "gtceu:smd_resistor"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 1.5d
+		}
+		{
+			id: "3D9B7855B5616DCE"
+			tasks: [{
+				id: "0774AA33B0CA149F"
+				item: "gtceu:smd_capacitor"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			id: "0D9D1462C676C050"
+			tasks: [{
+				id: "23F7124635FE5FC8"
+				item: "gtceu:smd_diode"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.5d
+		}
+		{
+			id: "11AAA1DCB452DFFC"
+			tasks: [{
+				id: "210478A03F540A6B"
+				item: "gtceu:smd_inductor"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -3.0d
+		}
+		{
+			id: "78A295D4D1A21BCA"
+			tasks: [{
+				id: "7AB26B5B4167E5EC"
+				item: "chemlib:titanium_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			id: "7C134F7838C23059"
+			tasks: [{
+				id: "5C915E839949FED6"
+				item: "alltheores:platinum_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			id: "0F6FB959B352121D"
+			tasks: [{
+				id: "5F3BEAA5602BA0CD"
+				item: "gtceu:mercury_barium_calcium_cuprate_single_wire"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			description: [
+				"Electrolyze tantalite dust to acquire tantalum dust"
+				""
+				"Also comes as a byproduct of tantalite ore processing!"
+			]
+			id: "7ACC4E777A75E043"
+			tasks: [{
+				id: "309F610CA713BB20"
+				item: "gtceu:tantalum_dust"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			id: "5500BDFA7A5D04EB"
+			tasks: [{
+				id: "261D5EF68A314309"
+				item: "gtceu:nichrome_coil_block"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			id: "55B9C3F5611AA6F6"
+			tasks: [{
+				id: "2726C0BC8094AD20"
+				item: "gtceu:soc"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -5.5d
+		}
+		{
+			id: "724BA14839627737"
+			tasks: [{
+				id: "30D58696133E492C"
+				item: "gtceu:soc_wafer"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -6.5d
+		}
+		{
+			id: "44750710EFE8C306"
+			tasks: [{
+				id: "7F49651F2F1E2E70"
+				item: "gtceu:yellow_glass_lens"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -7.5d
+		}
+		{
+			id: "5F270891C953486E"
+			tasks: [{
+				id: "03BCFA5724D80E16"
+				item: "gtceu:phosphorus_wafer"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -8.5d
+		}
+		{
+			id: "2CC82170BCE61940"
+			tasks: [{
+				id: "7CFE79284D3FFB61"
+				item: "gtceu:phosphorus_boule"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -9.5d
+		}
+		{
+			id: "143BF8A4944C471D"
+			subtitle: "Cheaper than ever!"
+			tasks: [{
+				id: "12938981FF431405"
+				item: "gtceu:microchip_processor"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -4.5d
+		}
+	]
+	title: "Extreme Voltage"
+}

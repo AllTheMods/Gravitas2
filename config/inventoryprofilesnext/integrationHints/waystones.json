@@ -1,0 +1,48 @@
+{
+    "net.blay09.mods.waystones.client.gui.screen.WarpPlateScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SORT": {
+                "bottom": 10
+            },
+            "SORT_COLUMNS": {
+                "bottom": 10
+            },
+            "SORT_ROWS": {
+                "bottom": 10
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "net.blay09.mods.waystones.client.gui.screen.WaystoneSettingsScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "net.blay09.mods.waystones.client.gui.screen.WaystoneSelectionScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    }
+}

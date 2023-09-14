@@ -1,0 +1,15 @@
+{
+	"x": -475,
+	"y": 110,
+	"width": 20,
+	"height": 20,
+	"u": 0,
+	"v": 106,
+	"hoverU": 0,
+	"hoverV": 126,
+	"texWidth": 256,
+	"texHeight": 256,
+	"widgets": false,
+	"action": "OPEN_GUI",
+	"data": "LANGUAGE"
+}

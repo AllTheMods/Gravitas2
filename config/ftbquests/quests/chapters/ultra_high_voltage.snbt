@@ -1,0 +1,47 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ultra_high_voltage"
+	group: "6A4ED78F1D529DE3"
+	icon: "gtceu:wetware_processor_mainframe"
+	id: "0AB2CB848B75A761"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7C0522C3153480EC"
+			size: 1.5d
+			tasks: [{
+				id: "3964305BF4F5C2FB"
+				item: "gtceu:max_battery"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			id: "2DF1F40CA3CB7320"
+			size: 1.5d
+			tasks: [{
+				id: "37B9AC182C12464B"
+				item: "gtceu:wetware_processor_mainframe"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			id: "3FBCB5EAA61C27A1"
+			optional: true
+			subtitle: "This will take 10 days of nonstop crafting"
+			tasks: [{
+				id: "70FB4A184AABB12D"
+				item: "gtceu:nan_certificate"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
+		}
+	]
+	title: "Ultra High Voltage"
+}

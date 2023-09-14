@@ -1,0 +1,61 @@
+{
+	"weight": 70,
+	"mainhands": [{
+			"weight": 3,
+			"stack": {
+				"item": "tfc:metal/sword/bronze"
+			}
+		},
+		{
+			"weight": 3,
+			"stack": {
+				"item": "tfc:metal/axe/bronze"
+			}
+		},
+		{
+			"weight": 2,
+			"stack": {
+				"item": "tfc:metal/pickaxe/bronze"
+			}
+		},
+		{
+			"weight": 2,
+			"stack": {
+				"item": "tfc:metal/shovel/bronze"
+			}
+		}
+	],
+	"offhands": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/shield/bronze"
+		}
+	}],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/boots/bronze"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/greaves/bronze"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/chestplate/bronze"
+		}
+	}],
+	"helmets": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/helmet/bronze"
+		}
+	}],
+	"tags": [
+		"the_nether"
+	]
+}

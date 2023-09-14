@@ -1,0 +1,57 @@
+{
+	"weight": 80,
+	"quality": 5,
+	"mainhands": [{
+			"weight": 3,
+			"stack": {
+				"item": "tfc:metal/sword/wrought_iron"
+			}
+		},
+		{
+			"weight": 3,
+			"stack": {
+				"item": "tfc:metal/axe/wrought_iron"
+			}
+		},
+		{
+			"weight": 2,
+			"stack": {
+				"item": "tfc:metal/pickaxe/wrought_iron"
+			}
+		},
+		{
+			"weight": 2,
+			"stack": {
+				"item": "tfc:metal/shovel/wrought_iron"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/boots/wrought_iron"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/greaves/wrought_iron"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/chestplate/wrought_iron"
+		}
+	}],
+	"helmets": [{
+		"weight": 1,
+		"stack": {
+			"item": "tfc:metal/helmet/wrought_iron"
+		}
+	}],
+	"tags": [
+		"overworld"
+	]
+}

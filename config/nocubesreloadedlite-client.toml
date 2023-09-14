@@ -1,0 +1,16 @@
+#Where each vertex should take its normal to render the mesh
+#Allowed Values: FROM_DIRECTION, FROM_QUAD, FROM_VERTEX
+normal_mode = "FROM_VERTEX"
+#The way the textures are adapted to the mesh
+#Allowed Values: FULL_TEXTURE, INTERPOLATE, CLOSEST_RECTANGLE
+texture_mode = "INTERPOLATE"
+#The way the textures are randomized
+#Allowed Values: NONE, TEXTURE_MIRROR_TOP_BOT, TEXTURE_MIRROR_ALL
+randomization_mode = "TEXTURE_MIRROR_ALL"
+#Does a block under a snow layer render as snow
+does_snow_render_underneath = true
+#Should the selection box of blocks render through walls
+see_block_shape_through_valls = true
+#Should the mesh of selected block be highlighted
+highlight_selection_mesh = true
+

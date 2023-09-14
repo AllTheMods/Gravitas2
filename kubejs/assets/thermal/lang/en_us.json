@@ -1,0 +1,5 @@
+{
+    "fluid.thermal.refined_fuel": "Rocket Fuel",
+    "item.thermal.aquachow.desc": "Freshwater fish and much more - only works in stationary fresh water",
+    "item.thermal.deep_aquachow.desc": "Ocean fish and much more - only works in stationary fresh water"
+}

@@ -1,0 +1,15 @@
+
+#General configuration settings
+[common]
+	#Enable season-based item & train effects?
+	seasonsEnabled = true
+	#Controls whether Christmas mode is (0) enabled, (1) forced, or (2) disabled
+	#Range: 0 ~ 2
+	christmas = 0
+	#Controls whether Halloween mode is (0) enabled, (1) forced, or (2) disabled
+	#Range: 0 ~ 2
+	halloween = 0
+	#Controls whether Harvest mode is (0) enabled, (1) forced, or (2) disabled
+	#Range: 0 ~ 2
+	harvest = 0
+

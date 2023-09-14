@@ -1,0 +1,80 @@
+#Change to limit max speed on strap iron rails. Vanilla iron rails goes as fast as 0.4D/tick
+#Range: 0.1 ~ 0.3
+maxSpeed = 0.12
+#Change to 'true' to allow fluid containers in Chest and Cargo Carts
+chestAllowFluids = false
+#List of items that the cargo loader will ignore
+cargoBlacklist = []
+#change to 'false' to disable Locomotive damage on mobs, they will still knockback mobs
+damageMobs = true
+#Controls how much power locomotives have and how many carts they can pull
+#be warned, longer trains have a greater chance for glitches
+#as such it HIGHLY recommended you do not change this
+#Range: 15.0 ~ 45.0
+horsepower = 15.0
+#Change to false to return minecarts to vanilla player vs cart collision behavior
+#In vanilla minecarts are ghost-like can be walked through
+#but making carts solid also makes them harder to push by hand
+solidCarts = true
+#Change to 'true' to restore minecart collisions with dropped items
+cartsCollideWithItems = false
+#Adjust the speed at which the Bore mines blocks, min=0.1, default=1.0, max=50.0
+#Range: 0.1 ~ 50.0
+boreMininigSpeedMultiplier = 1.0
+#Change to true to cause the Bore to destroy the blocks it mines instead of dropping them
+boreDestorysBlocks = false
+#Change to false to enable mining checks, use true setting with caution, especially on servers
+boreMinesAllBlocks = true
+#Change to "true" to restore vanilla behavior
+cartsBreakOnDrop = false
+#Adjust the multiplier used when calculating fuel use.
+#Range: 0.20000000298023224 ~ 12.0
+steamLocomotiveEfficiency = 3.0
+#Tank cart fluid transfer rate in milli-buckets per tick, min=4, default=32, max=2048.
+#Range: 4 ~ 2048
+tankCartFluidTransferRate = 32
+#Tank cart capacity in buckets, min=4, default=32, max=512
+#Range: 4 ~ 512
+tankCartFluidCapacity = 32
+#Change to false to disable the stacking of tanks.
+tankStackingEnabled = false
+#Allows you to set the max tank base dimension, valid values are 3, 5, 7, and 9.
+#Range: 3 ~ 9
+maxTankSize = 9
+#Allows you to set how many buckets (1000 milliBuckets) of fluid each iron tank block can carry
+#Range: 1 ~ 1600
+tankCapacityPerBlock = 16
+#The base rate of water in milliBuckets that can be gathered from the local environment, applied every 16 ticks to every block that can see the sky
+#Range: 0 ~ 1000
+waterCollectionRate = 4
+#change the value to your desired max launch rail force
+#Range: 5 ~ 50
+maxLauncherTrackForce = 30
+#Set the minimum number of seconds between cart dispensing
+#Range: > 0
+cartDispenserDelay = 0
+#change the vanilla dungeon loot
+changeDungeonLoot = true
+
+#High Speed Track Configuration
+[highSpeedTrack]
+	#Change to limit max speed on high speed rails, useful if your computer can't keep up with chunk loading
+	#iron tracks operate at 0.4 blocks per tick
+	#Range: 0.6 ~ 1.2
+	maxSpeed = 1.0
+	#Add entity names to exclude them from explosions caused by high speed collisions
+	ignoredEntities = ["minecraft:bat", "minecraft:blaze", "minecraft:cave_spider", "minecraft:chicken", "minecraft:parrot", "minecraft:rabbit", "minecraft:spider", "minecraft:vex", "minecraft:bee"]
+
+[charge]
+	#adjust the losses for the Charge network
+	#Range: 0.2 ~ 10.0
+	lossMultiplier = 1.0
+
+[steam]
+	#adjust the heat value of Fuel in a Boiler
+	#Range: 0.20000000298023224 ~ 10.0
+	fuelMultiplier = 1.0
+	#Adjust the amount of fuel used to create steam.
+	#Range: 0.20000000298023224 ~ 6.0
+	fuelPerSteamMultiplier = 1.0
+
