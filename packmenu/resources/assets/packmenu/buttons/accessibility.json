@@ -1,6 +1,6 @@
 {
-	"x": -475,
-	"y": 130,
+	"x": 16,
+	"y": -10,
 	"width": 20,
 	"height": 20,
 	"u": 0,
@@ -11,5 +11,6 @@
 	"texHeight": 64,
 	"texture": "textures/gui/accessibility.png",
 	"action": "OPEN_GUI",
-	"data": "ACCESSIBILITY"
+	"data": "ACCESSIBILITY",
+	"anchor": "MIDDLE_LEFT"
 }

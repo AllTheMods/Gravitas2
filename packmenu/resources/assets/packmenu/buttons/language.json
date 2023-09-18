@@ -1,6 +1,6 @@
 {
-	"x": -475,
-	"y": 110,
+	"x": 16,
+	"y": 70,
 	"width": 20,
 	"height": 20,
 	"u": 0,
@@ -11,5 +11,6 @@
 	"texHeight": 256,
 	"widgets": false,
 	"action": "OPEN_GUI",
-	"data": "LANGUAGE"
+	"data": "LANGUAGE",
+	"anchor": "MIDDLE_LEFT"
 }

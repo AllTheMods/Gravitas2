@@ -1,6 +1,6 @@
 {
-	"x": -450,
-	"y": 150,
+	"x": 40,
+	"y": 70,
 	"width": 200,
 	"height": 20,
 	"langKey": "menu.options",
@@ -12,5 +12,6 @@
 	"texWidth": 200,
 	"texHeight": 40,
 	"texture": "packmenu:textures/gui/button.png",
-	"data": "OPTIONS"
+	"data": "OPTIONS",
+	"anchor": "MIDDLE_LEFT"
 }

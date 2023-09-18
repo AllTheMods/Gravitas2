@@ -1,6 +1,6 @@
 {
-	"x": -450,
-	"y": 110,
+	"x": 40,
+	"y": 30,
 	"width": 200,
 	"height": 20,
 	"langKey": "fml.menu.mods",
@@ -12,5 +12,6 @@
 	"texWidth": 200,
 	"texHeight": 40,
 	"texture": "packmenu:textures/gui/button.png",
-	"data": "MODS"
+	"data": "MODS",
+	"anchor": "MIDDLE_LEFT"
 }

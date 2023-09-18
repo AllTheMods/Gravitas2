@@ -1,6 +1,6 @@
 {
-	"x": -475,
-	"y": 170,
+	"x": 16,
+	"y": 90,
 	"width": 20,
 	"height": 20,
 	"u": 0,
@@ -10,5 +10,6 @@
 	"texWidth": 20,
 	"texHeight": 40,
 	"texture": "packmenu:textures/gui/reload.png",
-	"action": "RELOAD"
+	"action": "RELOAD",
+	"anchor": "MIDDLE_LEFT"
 }
