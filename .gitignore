@@ -27,3 +27,7 @@ usernamecache.json
 .vscode
 /config
 /defaultconfigs
+kubejs/server_scripts/debug/
+kubejs/config/probejs.json
+kubejs/jsconfig.json
+kubejs/documentation/index.html
