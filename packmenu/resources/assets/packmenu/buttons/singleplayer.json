@@ -1,6 +1,6 @@
 {
-	"x": -450,
-	"y": 70,
+	"x": 40,
+	"y": -10,
 	"width": 200,
 	"height": 20,
 	"langKey": "menu.singleplayer",
@@ -12,5 +12,6 @@
 	"texWidth": 200,
 	"texHeight": 40,
 	"texture": "packmenu:textures/gui/button.png",
-	"data": "SINGLEPLAYER"
+	"data": "SINGLEPLAYER",
+	"anchor": "MIDDLE_LEFT"
 }

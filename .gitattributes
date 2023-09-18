@@ -1,2 +1,32 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+/coremods
+/crash-reports
+icon.png
+/ldlib
+/local
+/logs
+/modernfix
+/mods
+observable_announce
+options.txt
+/pathouli_books
+patchouli_data.json
+realms_persistence.json
+/resourcepacks
+rhino.local.properties
+/saves
+/schematics
+/screenshots
+/server-resource-packs
+server.dat
+server.dat_old
+shaderpacks
+usercache.json
+usernamecache.json
+/XaeroWaypoints.*
+/XaeroWorldMap
+.vscode
+/config
+/defaultconfigs
+
