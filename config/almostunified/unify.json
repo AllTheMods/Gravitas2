@@ -88,7 +88,9 @@
   "ignoredTags": [],
   "ignoredItems": [],
   "ignoredRecipeTypes": [
-    "cucumber:shaped_tag"
+    "cucumber:shaped_tag",
+    "tfc:collapse",
+    "tfc:landslide"
   ],
   "ignoredRecipes": [],
   "itemsHidingJeiRei": true
