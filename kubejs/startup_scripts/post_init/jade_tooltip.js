@@ -1,7 +1,8 @@
 // priority 10
-
-const $WailaClientRegistration = Java.loadClass("snownee.jade.impl.WailaClientRegistration")
-
+let $WailaClientRegistration
+if (Platform.isClientEnvironment()){
+  $WailaClientRegistration = Java.loadClass("snownee.jade.impl.WailaClientRegistration")
+}
 let addTooltipToBlocks = (/** @type {Internal.StartupEventJS} */ event) => {
   const blockBanListIngredient = Ingredient.of(global.blockBanList)
   const blockReplaceMapIngredient = Ingredient.of(Object.keys(global.blockReplacementMap))
