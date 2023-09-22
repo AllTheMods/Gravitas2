@@ -3,7 +3,7 @@ earlyWindowHeight = 768
 #Early window framebuffer scale
 earlyWindowFBScale = 1
 #Enable forge global version checking
-versionCheck = true
+versionCheck = false
 #Early window provider
 earlyWindowProvider = "fmlearlywindow"
 #Early window width
