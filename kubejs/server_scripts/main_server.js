@@ -4,6 +4,7 @@ ServerEvents.recipes((event) => {
   recipeRemoval(event)
   replaceRecipes(event)
   recipeAdd(event)
+  replaceTFCHeatingAndCasting(event)
 })
 
 LootJS.modifiers((event) => {
@@ -11,6 +12,15 @@ LootJS.modifiers((event) => {
   modifyAndRemoveChestLoot(event)
   modifyAndRemoveBlockLoot(event)
   modifyAndRemoveEntityLoot(event)
+})
+
+ServerEvents.tags("worldgen/biome", event => {
+  addTFCBiomesToVanilla(event)
+  addStargateBiomes(event)
+})
+
+MoreJSEvents.structureLoad(event => {
+  replaceCollapsableBlocks(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {
