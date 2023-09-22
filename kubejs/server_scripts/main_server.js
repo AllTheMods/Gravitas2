@@ -4,6 +4,7 @@ ServerEvents.recipes((event) => {
   recipeRemoval(event)
   replaceRecipes(event)
   recipeAdd(event)
+  replaceTFCHeatingAndCasting(event)
 })
 
 LootJS.modifiers((event) => {
