@@ -13,6 +13,15 @@ LootJS.modifiers((event) => {
   modifyAndRemoveEntityLoot(event)
 })
 
+ServerEvents.tags("worldgen/biome", event => {
+  addTFCBiomesToVanilla(event)
+  addStargateBiomes(event)
+})
+
+MoreJSEvents.structureLoad(event => {
+  replaceCollapsableBlocks(event)
+})
+
 NetworkEvents.dataReceived("customTask", (event) => {
   serverObserveGtTask(event) // TODO: needs rework
 })
