@@ -123,7 +123,7 @@
 	[blocks.crucible]
 		#Tank capacity of a crucible (in mB).
 		#Range: 0 ~ 2147483645
-		crucibleCapacity = 4000
+		crucibleCapacity = 5760
 		#A modifier for how fast fluid containers empty into crucibles. Containers will empty 1 mB every (this) number of ticks.
 		#Range: > 1
 		cruciblePouringRate = 4
@@ -387,7 +387,7 @@
 	[items.smallVessel]
 		#Tank capacity of a small vessel (in mB).
 		#Range: 0 ~ 2147483645
-		smallVesselCapacity = 3000
+		smallVesselCapacity = 4320
 		#The largest (inclusive) size of an item that is allowed in a small vessel.
 		#Allowed Values: TINY, VERY_SMALL, SMALL, NORMAL, LARGE, VERY_LARGE, HUGE
 		smallVesselMaximumItemSize = "SMALL"
@@ -397,46 +397,46 @@
 	[items.molds]
 		#Tank capacity of a Fire Ingot mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldIngotCapacity = 100
+		moldIngotCapacity = 144
 		#Tank capacity of a Pickaxe Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldPickaxeHeadCapacity = 100
+		moldPickaxeHeadCapacity = 144
 		#Tank capacity of a Propick Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldPropickHeadCapacity = 100
+		moldPropickHeadCapacity = 144
 		#Tank capacity of a Axe Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldAxeHeadCapacity = 100
+		moldAxeHeadCapacity = 144
 		#Tank capacity of a Shovel Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldShovelHeadCapacity = 100
+		moldShovelHeadCapacity = 144
 		#Tank capacity of a Hoe Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldHoeHeadCapacity = 100
+		moldHoeHeadCapacity = 144
 		#Tank capacity of a Chisel Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldChiselHeadCapacity = 100
+		moldChiselHeadCapacity = 144
 		#Tank capacity of a Hammer Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldHammerHeadCapacity = 100
+		moldHammerHeadCapacity = 144
 		#Tank capacity of a Saw Blade mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldSawBladeCapacity = 100
+		moldSawBladeCapacity = 144
 		#Tank capacity of a Javelin Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldJavelinHeadCapacity = 100
+		moldJavelinHeadCapacity = 144
 		#Tank capacity of a Sword Blade mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldSwordBladeCapacity = 200
+		moldSwordBladeCapacity = 288
 		#Tank capacity of a Mace Head mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldMaceHeadCapacity = 200
+		moldMaceHeadCapacity = 288
 		#Tank capacity of a Knife Blade mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldKnifeBladeCapacity = 100
+		moldKnifeBladeCapacity = 144
 		#Tank capacity of a Bell mold (in mB).
 		#Range: 0 ~ 2147483645
-		moldScytheBladeCapacity = 100
+		moldScytheBladeCapacity = 144
 
 	[items.jug]
 		#Tank capacity of a ceramic jug (in mB).
