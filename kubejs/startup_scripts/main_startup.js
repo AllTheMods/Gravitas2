@@ -26,6 +26,7 @@ StartupEvents.registry("item", (event) => {
 })
 
 StartupEvents.postInit((event) => {
+  if (!Platform.isClientEnvironment()) return
   addTooltipToBlocks(event)
 })
 
