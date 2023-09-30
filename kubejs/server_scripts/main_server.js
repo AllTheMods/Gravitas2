@@ -20,7 +20,7 @@ ServerEvents.tags("worldgen/biome", event => {
 })
 
 MoreJSEvents.structureLoad(event => {
-  replaceCollapsableBlocks(event)
+  replaceVanillaBlocks(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {
