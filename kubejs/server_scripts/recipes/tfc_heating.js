@@ -16,29 +16,19 @@ let replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event)
     15: 24,
     35: 48,
   }
-  event.forEachRecipe({ type: 'tfc:heating' }, (recipe) => {
-    if(recipe.json.has('result_fluid')){
-      let fluid = recipe.json.getAsJsonObject('result_fluid');
-      let type = fluid.get('fluid').getAsString();
-      if(type.indexOf('tfc:') >= 0) {
-        fluid['addProperty(java.lang.String,java.lang.Number)']('amount', meltMap[fluid.get('amount').getAsInt()]);
-        recipe.createRecipe();
-      }
-    }
+  event.forEachRecipe({ type: "tfc:heating" }, (recipe) => {
+    let fluid = recipe.json.has("result_fluid") && recipe.json.getAsJsonObject("result_fluid")
+    if (!fluid || !fluid.get("fluid").asString.includes("tfc:")) return
+    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", meltMap[fluid.get("amount")])
   })
 
   let castMap = {
     100: 144,
     200: 288,
   }
-  event.forEachRecipe({ type: 'tfc:casting' }, (recipe) => {
-    if(recipe.json.has('fluid')){
-      let fluid = recipe.json.getAsJsonObject('fluid');
-      let type = fluid.get('ingredient').getAsString();
-      if(type.indexOf('tfc:') >= 0) {
-        fluid['addProperty(java.lang.String,java.lang.Number)']('amount', castMap[fluid.get('amount').getAsInt()]);
-        recipe.createRecipe();
-      }
-    }
+  event.forEachRecipe({ type: "tfc:casting" }, (recipe) => {
+    let fluid = recipe.json.has("fluid") && recipe.json.getAsJsonObject("fluid")
+    if (!fluid || !fluid.get("ingredient").asString.includes("tfc:")) return
+    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", castMap[fluid.get("amount")])
   })
 }

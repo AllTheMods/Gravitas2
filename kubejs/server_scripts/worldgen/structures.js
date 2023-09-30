@@ -1,354 +1,129 @@
 // priority 10
 
-let replaceCollapsableBlocks = (/** @type {Internal.StructureLoadEventJS} */ event) => {
-  let dirtArray = ["minecraft:dirt"]
-  let dirtpathArray = ["minecraft:dirt_path"]
-  let grassArray = ["minecraft:grass_block"]
-  let farmArray = ["minecraft:farmland"]
-  let composter = ["minecraft:composter"]
-  let vanillablocksArray = ["minecraft:furnace","minecraft:blast_furnace", "minecraft:smoker", "minecraft:fletching_table"]
+const strucBlocksReplacementMap = {
+  "minecraft:furnace": "minecraft:air",
+  "minecraft:blast_furnace": "minecraft:air",
+  "minecraft:smoker": "minecraft:air",
+  "minecraft:fletching_table": "minecraft:air",
+  "minecraft:cobblestone": "tfc:rock/raw/granite",
+  "minecraft:dirt": "tfc:dirt/loam",
+  "minecraft:dirt_path": "tfc:grass_path/loam",
+  "minecraft:grass_block": "tfc:grass/loam",
+  "minecraft:farmland": "tfc:farmland/loam",
+  "minecraft:stone_bricks": "tfc:rock/hardened/granite",
+  "minecraft:red_sandstone": "tfc:raw_sandstone/red",
+  "minecraft:cut_red_sandstone": "tfc:cut_sandstone/red",
+  "minecraft:smooth_red_sandstone": "tfc:smooth_sandstone/red",
+  "minecraft:sandstone": "tfc:raw_sandstone/yellow",
+  "minecraft:cut_sandstone": "tfc:cut_sandstone/yellow",
+  "minecraft:smooth_sandstone": "tfc:smooth_sandstone/yellow",
+  "minecraft:attached_pumpkin_stem": "tfc:crop/melon",
+  "minecraft:pumpkin": "tfc:melon",
+  "minecraft:melon": "tfc:melon",
+  "minecraft:attached_melon_stem": "tfc:crop/melon",
+}
 
-  let carrots = ["minecraft:carrots"]
-  let wheat = ["minecraft:wheat"]
-  let beetroots = ["minecraft:beetroots"]
-  let potatoes = ["minecraft:potatoes"]
+const strucBlocksWithPropertiesMap = {
+  "minecraft:composter": "tfc:composter",
+  "minecraft:beetroots": "tfc:crop/beet",
+  "minecraft:carrots": "tfc:crop/carrot",
+  "minecraft:wheat": "tfc:crop/wheat",
+  "minecraft:potatoes": "tfc:crop/potato",
+  "minecraft:cobblestone_wall": "tfc:rock/cobble/granite_wall",
+  "minecraft:cobblestone_stairs": "tfc:rock/cobble/granite_stairs",
+  "minecraft:cobblestone_slab": "tfc:rock/cobble/granite_slab",
+  "minecraft:stone_stairs": "tfc:rock/raw/granite_stairs",
+  "minecraft:stone_brick_stairs": "tfc:rock/bricks/granite_stairs",
+  "minecraft:cut_red_sandstone_slab": "tfc:cut_sandstone/red_slab",
+  "minecraft:cobblestone_wall": "tfc:rock/bricks/granite_wall",
+  "minecraft:chiseled_stone_bricks": "tfc:rock/chiseled/granite",
+  "minecraft:red_sandstone_wall": "tfc:raw_sandstone/red_wall",
+  "minecraft:smooth_red_sandstone_stairs": "tfc:smooth_sandstone/red_stairs",
+  "minecraft:cut_sandstone_slab": "tfc:cut_sandstone/yellow_slab",
+  "minecraft:smooth_sandstone_slab": "tfc:smooth_sandstone/yellow_slab",
+  "minecraft:sandstone_wall": "tfc:raw_sandstone/yellow_wall",
+  "minecraft:smooth_red_sandstone_slab": "tfc:smooth_sandstone/red_slab",
+  "minecraft:smooth_sandstone_stairs": "tfc:smooth_sandstone/yellow_stairs",
+  "minecraft:sandstone_stairs": "tfc:raw_sandstone/yellow_stairs",
+}
 
+function getState(block, state) {
+  if (state == null) return Block.getBlock(block).defaultBlockState()
+  return Block.getBlock(block).withPropertiesOf(state)
+}
 
-  let stoneArray = [ "minecraft:stone_bricks"]
-  let stonestairsArray = [ "minecraft:stone_stairs"]
-  let stonebrickstairsArray = ["minecraft:stone_brick_stairs"]
-  let stonewallsArray = ["minecraft:stone_brick_wall"]
-  let chisstone = ["minecraft:chiseled_stone_bricks"]
+function getWoodReplacement(block) {
+  let item = block
+  if (!item.namespace.equals("minecraft")) return
+  for (let i = 0; i < regexArray.length; i++) {
+    let regExp = regexArray[i][0]
+    let tfcString = regexArray[i][1]
+    let match = item.path.match(regExp)
+    if (!match) continue
+    if (!tfcWoodVanillaToTFC[match[1]]) return
+    let newPath = new String(item.path).replace(match[1], tfcWoodVanillaToTFC[match[1]])
+    let newItem = newPath.replace(regExp, tfcString)
+    return newItem
+  }
+}
 
-  let cobblestoneArray = [ "minecraft:cobblestone"]
-  let cobblestonewallArray = [ "minecraft:cobblestone_wall"]
-  let cobblestonestairsArray = [ "minecraft:cobblestone_stairs"]
-  let cobblestoneslabArray = ["minecraft:cobblestone_slab"]
+const regexArray = [
+  [new RegExp(/^stripped_(\w+?)_log$/), "tfc:wood/stripped_log/$1"],
+  [new RegExp(/^(\w+?)_log$/), "tfc:wood/log/$1"],
+  [new RegExp(/^stripped_(\w+?)_wood$/), "tfc:wood/stripped_wood/$1"],
+  [new RegExp(/^(\w+?)_wood$/), "tfc:wood/wood/$1"],
+  [new RegExp(/^(\w+?)_planks$/), "tfc:wood/planks/$1"],
+  [new RegExp(/^(\w+?)_stairs$/), "tfc:wood/planks/$1_stairs"],
+  [new RegExp(/^(\w+?)_slab$/), "tfc:wood/planks/$1_slab"],
+  [new RegExp(/^(\w+?)_fence$/), "tfc:wood/planks/$1_fence"],
+  [new RegExp(/^(\w+?)_fence_gate$/), "tfc:wood/planks/$1_fence_gate"],
+  [new RegExp(/^(\w+?)_door$/), "tfc:wood/planks/$1_door"],
+  [new RegExp(/^(\w+?)_trapdoor$/), "tfc:wood/planks/$1_trapdoor"],
+  [new RegExp(/^(\w+?)_pressure_plate$/), "tfc:wood/planks/$1_pressure_plate"],
+  [new RegExp(/^(\w+?)_button$/), "tfc:wood/planks/$1_button"],
+]
 
-  let redsandstoneArray = ["minecraft:red_sandstone"]
-  let redsandstonewallArray = ["minecraft:red_sandstone_wall"]
-  let chisredsandstoneArray = ["minecraft:chiseled_red_sandstone"]
-  let cutredsandstoneArray = ["minecraft:cut_red_sandstone"]
-  let redslabArray = ["minecraft:cut_red_sandstone_slab"]
-  let smoothredsandstoneArray = ["minecraft:smooth_red_sandstone"]
-  let smoothredslabArray = ["minecraft:smooth_red_sandstone_slab"]
-  let smoothredstairsArray = ["minecraft:smooth_red_sandstone_stairs"]
+const tfcWoodVanillaToTFC = {
+  oak: "oak",
+  spruce: "spruce",
+  birch: "birch",
+  jungle: "palm",
+  acacia: "acacia",
+  dark_oak: "hickory",
+  // no crimson
+  // no warped
+  mangrove: "mangrove",
+  // no bamboo
+  cherry: "white_cedar",
+}
 
-  let sandstoneArray = ["minecraft:sandstone"]
-  let sandstonewallArray = ["minecraft:sandstone_wall"]
-  let cutsandstoneArray = ["minecraft:cut_sandstone"]
-  let sandslabArray = ["minecraft:cut_sandstone_slab"]
-  let smoothsandstoneArray = ["minecraft:smooth_sandstone"]
-  let smoothsandslabArray = ["minecraft:smooth_sandstone_slab"]
-  let sandstairsArray = ["minecraft:sandstone_stairs"]
-  let smoothsandstairsArray = ["minecraft:smooth_sandstone_stairs"]
-
-  let darkoakplank = ["minecraft:dark_oak_planks"]
-  let darkoakstairs = ["minecraft:dark_oak_stairs"]
-  let darkoakslab = ["minecraft:dark_oak_slab"]
-  let darkoaktrapdoor = ["minecraft:dark_oak_trapdoor"]
-  let darkoaklog = ["minecraft:dark_oak_log"]
-  let darkoakfence = ["minecraft:dark_oak_fence"]
-  let darkoakdoor = ["minecraft:dark_oak_door"]
-  let stripped_darkoakwood = ["minecraft:stripped_dark_oak_wood"]
-  let stripped_darkoaklog = ["minecraft:stripped_dark_oak_log"]
-
-  let oakplank = ["minecraft:oak_planks"]
-  let oakstairs = ["minecraft:oak_stairs"]
-  let oakslab = ["minecraft:oak_slab"]
-  let oaktrapdoor = ["minecraft:oak_trapdoor"]
-  let oaklog = ["minecraft:oak_log"]
-  let oakfence = ["minecraft:oak_fence"]
-  let oakdoor = ["minecraft:oak_door"]
-  let stripped_oakwood = ["minecraft:stripped_oak_wood"]
-  let stripped_oaklog = ["minecraft:stripped_oak_log"]
-
-  let birchplank = ["minecraft:birch_planks"]
-  let birchstairs = ["minecraft:birch_stairs"]
-  let birchslab = ["minecraft:birch_slab"]
-  let birchtrapdoor = ["minecraft:birch_trapdoor"]
-  let birchlog = ["minecraft:birch_log"]
-  let birchfence = ["minecraft:birch_fence"]
-  let birchdoor = ["minecraft:birch_door"]
-  let stripped_birchwood = ["minecraft:stripped_birch_wood"]
-  let stripped_birchlog = ["minecraft:stripped_birch_log"]
-
-
-  let junglefence = ["minecraft:jungle_fence"]
-  let jungleplanks = ["minecraft:jungle_planks"]
-  let junglestairs = ["minecraft:jungle_stairs"]
-  let jungleslab = ["minecraft:jungle_slab"]
-  let jungletrapdoor = ["minecraft:jungle_trapdoor"]
-  let junglelog = ["minecraft:jungle_log"]
-  let jungledoor = ["minecraft:jungle_door"]
-  let stripped_junglewood = ["minecraft:stripped_jungle_wood"]
-  let stripped_junglelog = ["minecraft:stripped_jungle_log"]
-
-  let sprucefence = ["minecraft:spruce_fence"]
-  let spruceplanks = ["minecraft:spruce_planks"]
-  let sprucestairs = ["minecraft:spruce_stairs"]
-  let spruceslab = ["minecraft:spruce_slab"]
-  let sprucetrapdoor = ["minecraft:spruce_trapdoor"]
-  let sprucelog = ["minecraft:spruce_log"]
-  let sprucedoor = ["minecraft:spruce_door"]
-  let stripped_sprucewood = ["minecraft:stripped_spruce_wood"]
-  let stripped_sprucelog = ["minecraft:stripped_spruce_log"]
-
-  if (event.id.startsWith("sgjourney")||event.id.startsWith("minecraft")||event.id.startsWith("repurposed_structures")||event.id.startsWith("apotheosis")||event.id.startsWith("waystones")||event.id.startsWith("ae2")) {
+const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event) => {
+  if (
+    event.id.startsWith("sgjourney") ||
+    event.id.startsWith("minecraft") ||
+    event.id.startsWith("repurposed_structures") ||
+    event.id.startsWith("apotheosis") ||
+    event.id.startsWith("waystones") ||
+    event.id.startsWith("ae2")
+  ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {
-        if (vanillablocksArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("minecraft:air").defaultBlockState())
-        }
-        if (composter.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:composter").withPropertiesOf(struc.state()))
-        }
-        if (beetroots.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:crop/beet").withPropertiesOf(struc.state()))
-        }
-        if (carrots.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:crop/carrot").withPropertiesOf(struc.state()))
-        }
-        if (wheat.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:crop/wheat").withPropertiesOf(struc.state()))
-        }
-        if (potatoes.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:crop/potato").withPropertiesOf(struc.state()))
-        }
-
-
-        if (sprucefence.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/spruce_fence").withPropertiesOf(struc.state()))
-        }
-        if (spruceplanks.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/spruce").withPropertiesOf(struc.state()))
-        }
-        if (sprucestairs.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/spruce_stairs").withPropertiesOf(struc.state()))
-        }
-        if (spruceslab.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/spruce_slab").withPropertiesOf(struc.state()))
-        }
-        if (sprucetrapdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/spruce_trapdoor").withPropertiesOf(struc.state()))
-        }
-        if (sprucelog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/log/spruce").withPropertiesOf(struc.state()))
-        }
-        if (stripped_sprucewood.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/spruce").withPropertiesOf(struc.state()))
-        }
-        if (stripped_sprucelog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/spruce").withPropertiesOf(struc.state()))
-        }
-        if (sprucedoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/spruce_door").withPropertiesOf(struc.state()))
-        }
-
-        if (junglefence.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/palm_fence").withPropertiesOf(struc.state()))
-        }
-        if (jungleplanks.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/palm").withPropertiesOf(struc.state()))
-        }
-        if (junglestairs.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/palm_stairs").withPropertiesOf(struc.state()))
-        }
-        if (jungleslab.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/palm_slab").withPropertiesOf(struc.state()))
-        }
-        if (jungletrapdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/palm_trapdoor").withPropertiesOf(struc.state()))
-        }
-        if (junglelog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/log/palm").withPropertiesOf(struc.state()))
-        }
-        if (stripped_junglewood.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/palm").withPropertiesOf(struc.state()))
-        }
-        if (stripped_junglelog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/palm").withPropertiesOf(struc.state()))
-        }
-        if (jungledoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/palm_door").withPropertiesOf(struc.state()))
-        }
-
-        if (darkoakfence.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/hickory_fence").withPropertiesOf(struc.state()))
-        }
-        if (darkoakplank.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/hickory").withPropertiesOf(struc.state()))
-        }
-        if (darkoakstairs.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/hickory_stairs").withPropertiesOf(struc.state()))
-        }
-        if (darkoakslab.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/hickory_slab").withPropertiesOf(struc.state()))
-        }
-        if (darkoaktrapdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/hickory_trapdoor").withPropertiesOf(struc.state()))
-        }
-        if (darkoaklog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/log/hickory").withPropertiesOf(struc.state()))
-        }
-        if (stripped_darkoakwood.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/hickory").withPropertiesOf(struc.state()))
-        }
-        if (stripped_darkoaklog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/hickory").withPropertiesOf(struc.state()))
-        }
-        if (darkoakdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/hickory_door").withPropertiesOf(struc.state()))
-        }
-
-        if (oakfence.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/oak_fence").withPropertiesOf(struc.state()))
-        }
-        if (oakplank.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/oak").withPropertiesOf(struc.state()))
-        }
-        if (oakstairs.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/oak_stairs").withPropertiesOf(struc.state()))
-        }
-        if (oakslab.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/oak_slab").withPropertiesOf(struc.state()))
-        }
-        if (oaktrapdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/oak_trapdoor").withPropertiesOf(struc.state()))
-        }
-        if (oaklog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/log/oak").withPropertiesOf(struc.state()))
-        }
-        if (stripped_oakwood.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/oak").withPropertiesOf(struc.state()))
-        }
-        if (stripped_oaklog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/oak").withPropertiesOf(struc.state()))
-        }
-        if (oakdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/oak_door").withPropertiesOf(struc.state()))
-        }
-
-        if (birchfence.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/birch_fence").withPropertiesOf(struc.state()))
-        }
-        if (birchplank.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/birch").withPropertiesOf(struc.state()))
-        }
-        if (birchstairs.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/birch_stairs").withPropertiesOf(struc.state()))
-        }
-        if (birchslab.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/birch_slab").withPropertiesOf(struc.state()))
-        }
-        if (birchtrapdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/birch_trapdoor").withPropertiesOf(struc.state()))
-        }
-        if (birchlog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/log/birch").withPropertiesOf(struc.state()))
-        }
-        if (stripped_birchwood.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/birch").withPropertiesOf(struc.state()))
-        }
-        if (stripped_birchlog.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/stripped_log/birch").withPropertiesOf(struc.state()))
-        }
-        if (birchdoor.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:wood/planks/birch_door").withPropertiesOf(struc.state()))
-        }
-
-        if (cobblestoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/raw/granite").defaultBlockState())
-        }
-        if (cobblestonewallArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/cobble/granite_wall").defaultBlockState())
-        }
-        if (cobblestonestairsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/cobble/granite_stairs").withPropertiesOf(struc.state()))
-        }
-        if (cobblestoneslabArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/cobble/granite_slab").defaultBlockState())
-        }
-
-        if (dirtArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:dirt/loam").defaultBlockState())
-        }
-        if (dirtpathArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:grass_path/loam").withPropertiesOf(struc.state()))
-        }
-        if (grassArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:grass/loam").defaultBlockState())
-        }
-        if (farmArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:farmland/loam").defaultBlockState())
-        }
-
-        if (stoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/hardened/granite").defaultBlockState())
-        }
-        if (stonestairsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/raw/granite_stairs").withPropertiesOf(struc.state()))
-        }
-        if (stonebrickstairsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/bricks/granite_stairs").withPropertiesOf(struc.state()))
-        }
-        if (stonewallsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/bricks/granite_wall").withPropertiesOf(struc.state()))
-        }
-        if (chisstone.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:rock/chiseled/granite").withPropertiesOf(struc.state()))
-        }
-
-        if (redslabArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:cut_sandstone/red_slab").defaultBlockState())
-        }
-        if (redsandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:raw_sandstone/red").defaultBlockState())
-        }
-        if (redsandstonewallArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:raw_sandstone/red_wall").defaultBlockState())
-        }
-        if (chisredsandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:chiseled_sandstone/red").defaultBlockState())
-        }
-        if (cutredsandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:cut_sandstone/red").defaultBlockState())
-        }
-        if (smoothredslabArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:smooth_sandstone/red_slab").defaultBlockState())
-        }
-        if (smoothredsandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:smooth_sandstone/red").defaultBlockState())
-        }
-        if (smoothredstairsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:smooth_sandstone/red_stairs").withPropertiesOf(struc.state()))
-        }
-
-        if (sandslabArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:cut_sandstone/yellow_slab").defaultBlockState())
-        }
-        if (sandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:raw_sandstone/yellow").defaultBlockState())
-        }
-        if (cutsandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:cut_sandstone/yellow").defaultBlockState())
-        }
-        if (smoothsandslabArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:smooth_sandstone/yellow_slab").defaultBlockState())
-        }
-        if (smoothsandstoneArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:smooth_sandstone/yellow").defaultBlockState())
-        }
-        if (smoothsandstairsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:smooth_sandstone/yellow_stairs").withPropertiesOf(struc.state()))
-        }
-        if (sandstairsArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:raw_sandstone/yellow_stairs").withPropertiesOf(struc.state()))
-        }
-        if (sandstonewallArray.includes(struc.block.id)) {
-              palette.add(struc.position, Block.getBlock("tfc:raw_sandstone/yellow_wall").defaultBlockState())
+        let newBlockWithProp = strucBlocksWithPropertiesMap[struc.block.id]
+        if (newBlockWithProp) {
+          palette.add(struc.position, getState(newBlockWithProp, struc.state()))
+          return
+        }
+        let newBlock = strucBlocksReplacementMap[struc.block.id]
+        if (newBlock) {
+          palette.add(struc.position, getState(newBlock))
+          return
+        }
+        let newWoodBlock = getWoodReplacement(struc.block.idLocation)
+        if (newWoodBlock) {
+          palette.add(struc.position, getState(newWoodBlock, struc.state()))
+          return
         }
       })
     })
-    }
+  }
 }

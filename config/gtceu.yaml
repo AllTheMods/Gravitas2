@@ -103,10 +103,6 @@ worldgen:
   # Default: 2
   maxFeatureChunkSize: 2
 
-  # Debug ore vein placement? (will print placed veins to server's debug.log)
-  # Default: false (no placement printout in debug.log)
-  debugWorldgen: false
-
   # Rubber Tree spawn chance (% per chunk)
   # Default: 0.5
   rubberTreeSpawnChance: 0.5
@@ -183,6 +179,10 @@ machines:
   # Default: true
   doProcessingArray: true
 
+  # Makes nearly every GCYM Multiblock require blocks which set their maximum voltages.
+  # Default: false
+  enableTieredCasings: false
+
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
   # Default: true
@@ -227,4 +227,13 @@ compat:
   # Whether Gregtech should remove smelting recipes from the vanilla furnace for ingots requiring the Electric Blast Furnace.
   # Default: true
   removeSmeltingForEBFMetals: true
+
+dev:
+  # Debug ore vein placement? (will print placed veins to server's debug.log)
+  # Default: false (no placement printout in debug.log)
+  debugWorldgen: false
+
+  # Dump all registered GT recipes?
+  # Default: false
+  dumpRecipes: false
 
