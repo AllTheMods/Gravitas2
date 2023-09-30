@@ -1,5 +1,4 @@
 // priority 10
-
 let replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event) => {
   let meltMap = {
     6: 9,
