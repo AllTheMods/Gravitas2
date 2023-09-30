@@ -20,7 +20,7 @@ let replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event)
   event.forEachRecipe({ type: "tfc:heating" }, (recipe) => {
     let fluid = recipe.json.has("result_fluid") && recipe.json.getAsJsonObject("result_fluid")
     if (!fluid || !fluid.get("fluid").asString.includes("tfc:")) return
-    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", meltMap[fluid.getAsJsonPrimitive("amount")])
+    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", meltMap[fluid.get("amount")])
   })
 
   let castMap = {
