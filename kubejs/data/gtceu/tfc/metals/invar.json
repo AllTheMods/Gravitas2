@@ -1,0 +1,12 @@
+{
+    "tier": 3,
+    "fluid": "gtceu:invar",
+    "melt_temperature": 1000,
+    "specific_heat_capacity": 0.0095,
+    "ingots": {
+        "tag": "forge:ingots/invar"
+    },
+    "sheets": {
+        "tag": "forge:plates/invar"
+    }
+}

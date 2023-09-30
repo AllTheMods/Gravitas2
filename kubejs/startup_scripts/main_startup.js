@@ -18,6 +18,7 @@ global.blockReplacementMap = {
   "minecraft:barrel": "tfc:wood/barrel/oak", // not same functionality but :shrug:
   "minecraft:lectern": "tfc:wood/lectern/oak",
   "minecraft:bell": "tfc:brass_bell",
+  "minecraft:torch": "tfc:torch"
   //"minecraft:beehive": "firmalife:beehive" TODO: for firmalife
 }
 
