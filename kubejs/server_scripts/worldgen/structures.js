@@ -1,4 +1,22 @@
 // priority 10
+const nbt = {stacks: [], id: "tfc:ingot_pile"}
+const rand = (min, max) => ~~(Math.random() * (max - min) + min);
+const ingots = ['gold', 'copper'];
+const $IngotPileBlock = Java.loadClass("net.dries007.tfc.common.blocks.devices.IngotPileBlock")
+
+const $Integer = Java.loadClass('java.lang.Integer');
+
+function getCap(id){
+    const cap = {ForgeCaps: {}, id: id, Count: 1};
+    cap.ForgeCaps["tfc:item_heat"] = { heat: 0, ticks: 0 };
+    return cap;
+}
+function getNBT(id, count) {
+    return Object.assign(Object.assign({}, nbt), {stacks: new Array(count).fill(getCap(id))})
+}
+function getRandomIngot(){
+    return `tfc:metal/ingot/${ingots[rand(0,ingots.length)]}`;
+}
 
 const strucBlocksReplacementMap = {
   "minecraft:furnace": "minecraft:air",
@@ -21,6 +39,7 @@ const strucBlocksReplacementMap = {
   "minecraft:pumpkin": "tfc:melon",
   "minecraft:melon": "tfc:melon",
   "minecraft:attached_melon_stem": "tfc:crop/melon",
+
 }
 
 const strucBlocksWithPropertiesMap = {
@@ -45,6 +64,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:smooth_red_sandstone_slab": "tfc:smooth_sandstone/red_slab",
   "minecraft:smooth_sandstone_stairs": "tfc:smooth_sandstone/yellow_stairs",
   "minecraft:sandstone_stairs": "tfc:raw_sandstone/yellow_stairs",
+
 }
 
 function getState(block, state) {
@@ -121,6 +141,18 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
         let newWoodBlock = getWoodReplacement(struc.block.idLocation)
         if (newWoodBlock) {
           palette.add(struc.position, getState(newWoodBlock, struc.state()))
+          return
+        }
+        if (struc.block.id == "minecraft:gold_block") {
+          let ra = $Integer.valueOf(rand(1, 65));
+          palette.add(
+            struc.position,
+            Block.getBlock("tfc:ingot_pile").defaultBlockState().setValue($IngotPileBlock.COUNT,ra),
+            getNBT(
+              getRandomIngot(),
+              ra
+            )
+          );
           return
         }
       })
