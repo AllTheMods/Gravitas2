@@ -1,22 +1,4 @@
-// priority 10
-const nbt = {stacks: [], id: "tfc:ingot_pile"}
-const rand = (min, max) => ~~(Math.random() * (max - min) + min);
-const ingots = ['gold', 'copper'];
-const $IngotPileBlock = Java.loadClass("net.dries007.tfc.common.blocks.devices.IngotPileBlock")
-
-const $Integer = Java.loadClass('java.lang.Integer');
-
-function getCap(id){
-    const cap = {ForgeCaps: {}, id: id, Count: 1};
-    cap.ForgeCaps["tfc:item_heat"] = { heat: 0, ticks: 0 };
-    return cap;
-}
-function getNBT(id, count) {
-    return Object.assign(Object.assign({}, nbt), {stacks: new Array(count).fill(getCap(id))})
-}
-function getRandomIngot(){
-    return `tfc:metal/ingot/${ingots[rand(0,ingots.length)]}`;
-}
+// priority: 10
 
 const strucBlocksReplacementMap = {
   "minecraft:furnace": "minecraft:air",
@@ -124,7 +106,8 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("repurposed_structures") ||
     event.id.startsWith("apotheosis") ||
     event.id.startsWith("waystones") ||
-    event.id.startsWith("ae2")
+    event.id.startsWith("ae2") ||
+    event.id.startsWith("ad_astra")
   ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {
@@ -141,18 +124,6 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
         let newWoodBlock = getWoodReplacement(struc.block.idLocation)
         if (newWoodBlock) {
           palette.add(struc.position, getState(newWoodBlock, struc.state()))
-          return
-        }
-        if (struc.block.id == "minecraft:gold_block") {
-          let ra = $Integer.valueOf(rand(1, 65));
-          palette.add(
-            struc.position,
-            Block.getBlock("tfc:ingot_pile").defaultBlockState().setValue($IngotPileBlock.COUNT,ra),
-            getNBT(
-              getRandomIngot(),
-              ra
-            )
-          );
           return
         }
       })
