@@ -6,6 +6,7 @@ const strucBlocksReplacementMap = {
   "minecraft:smoker": "minecraft:air",
   "minecraft:fletching_table": "minecraft:air",
   "minecraft:cobblestone": "tfc:rock/raw/granite",
+  "minecraft:gold_ore": "minecraft:water"
   "minecraft:dirt": "tfc:dirt/loam",
   "minecraft:dirt_path": "tfc:grass_path/loam",
   "minecraft:grass_block": "tfc:grass/loam",
@@ -46,6 +47,23 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:smooth_red_sandstone_slab": "tfc:smooth_sandstone/red_slab",
   "minecraft:smooth_sandstone_stairs": "tfc:smooth_sandstone/yellow_stairs",
   "minecraft:sandstone_stairs": "tfc:raw_sandstone/yellow_stairs",
+  "minecraft:water": "tfc:salt_water",
+  "minecraft:white_bed": "tfc:thatch_bed",
+  "minecraft:blue_bed": "tfc:thatch_bed",
+  "minecraft:red_bed": "tfc:thatch_bed",
+  "minecraft:yellow_bed": "tfc:thatch_bed",
+  "minecraft:cyan_bed": "tfc:thatch_bed",
+  "minecraft:purple_bed": "tfc:thatch_bed",
+  "minecraft:orange_bed": "tfc:thatch_bed",
+  "minecraft:lime_bed": "tfc:thatch_bed",
+  "minecraft:green_bed": "tfc:thatch_bed",
+  "minecraft:pink_bed": "tfc:thatch_bed",
+  "minecraft:black_bed": "tfc:thatch_bed",
+  "minecraft:light_blue_bed": "tfc:thatch_bed",
+  "minecraft:light_gray_bed": "tfc:thatch_bed",
+  "minecraft:gray_bed": "tfc:thatch_bed",
+  "minecraft:brown_bed": "tfc:thatch_bed",
+  "minecraft:magenta_bed": "tfc:thatch_bed",
 
 }
 

@@ -1,0 +1,18 @@
+{
+    "type": "ae2:inscriber",
+    "mode": "inscribe",
+    "result": {
+      "item": "integrateddynamics:menril_sapling"
+    },
+    "ingredients": {
+      "middle": {
+        "tag": "forge:saplings"
+      },
+      "top": {
+        "tag": "forge:dusts/uranium"
+      },
+      "bottom":{
+        "item": "minecraft:ender_eye"
+      }
+    }
+  }

@@ -1,12 +1,10 @@
 {
   "modPriorities": [
+    "gtceu",
     "tfc",
     "kubejs",
     "minecraft",
-    "gtceu",
-    "create",
-    "immersiveengineering",
-    "mekanism"
+    "create"
   ],
   "stoneStrata": [
     "stone",
@@ -36,6 +34,11 @@
     "amber",
     "apatite",
     "bitumen",
+    "bismuth",
+    "bismuth_bronze",
+    "black_bronze",
+    "black_steel",
+    "blue_steel",
     "brass",
     "bronze",
     "charcoal",
@@ -68,15 +71,19 @@
     "peridot",
     "platinum",
     "potassium_nitrate",
+    "red_steel",
     "ruby",
+    "rose_gold",
     "sapphire",
     "signalum",
     "silver",
+    "sterling_silver",
     "steel",
     "sulfur",
     "tin",
     "tungsten",
     "uranium",
+    "wrought_iron",
     "zinc"
   ],
   "priorityOverrides": {},
