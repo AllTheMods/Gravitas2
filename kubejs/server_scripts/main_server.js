@@ -19,6 +19,9 @@ ServerEvents.tags("worldgen/biome", event => {
   addStargateBiomes(event)
 })
 
+ServerEvents.tags("item", event => {
+  addItemTags(event)
+})
 MoreJSEvents.structureLoad(event => {
   replaceVanillaBlocks(event)
 })
