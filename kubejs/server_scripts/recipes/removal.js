@@ -48,15 +48,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Railcraft
   event.remove({id: /^railcraft:.*_gear/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_shovel/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_pickaxe/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_axe/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_hoe/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_sword/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_helmet/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_chestplate/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_leggings/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_boots/, mod: "railcraft" })
   event.remove({id: /^railcraft:.*_shears/, mod: "railcraft" })
 
   //Ad Astra
