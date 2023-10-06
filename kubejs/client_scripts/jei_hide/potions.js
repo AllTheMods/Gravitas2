@@ -10,7 +10,7 @@ const oresToRemove = [
   "vibranium",
   "unobtainium"
 ]
-const toolsToRemove - [
+const toolsToRemove = [
   "bismuth_bronze",
   "black_bronze",
   "bronze",

@@ -36,7 +36,6 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:cobblestone_slab": "tfc:rock/cobble/granite_slab",
   "minecraft:stone_stairs": "tfc:rock/raw/granite_stairs",
   "minecraft:stone_brick_stairs": "tfc:rock/bricks/granite_stairs",
-  "minecraft:red_sandstone_slab": "tfc:sandstone/red_slab",
   "minecraft:cut_red_sandstone_slab": "tfc:cut_sandstone/red_slab",
   "minecraft:cobblestone_wall": "tfc:rock/bricks/granite_wall",
   "minecraft:chiseled_stone_bricks": "tfc:rock/chiseled/granite",

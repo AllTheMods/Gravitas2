@@ -47,4 +47,5 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       item: "gtceu:glass_tube",
     },
   })
+
 }
