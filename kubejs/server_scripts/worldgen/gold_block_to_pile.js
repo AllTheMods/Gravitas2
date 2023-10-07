@@ -1,7 +1,7 @@
-const $IngotPileBlock = Java.loadClass("net.dries007.tfc.common.blocks.devices.IngotPileBlock")
-const $Integer = Java.loadClass('java.lang.Integer');
+// priority: 10
+const metals = ["tfc:metal/ingot/gold","tfc:metal/ingot/copper","tfc:metal/ingot/wrought_iron"]
 
-MoreJSEvents.structureAfterPlace((event) => {
+let replaceGoldBlocksWithPiles = event => {
   let level = event.worldGenLevel
   event.intersectionBoxes.forEach(bb => {
     BlockPos.betweenClosed(bb.minX(), bb.minY(), bb.minZ(), bb.maxX(), bb.maxY(), bb.maxZ()).forEach(pos => {
@@ -16,9 +16,7 @@ MoreJSEvents.structureAfterPlace((event) => {
       }
     })
   })
-})
-
-const metals = ["tfc:metal/ingot/gold","tfc:metal/ingot/copper","tfc:metal/ingot/wrought_iron"]
+}
 
 function generateNbt(metal, count){
     let item = `{ForgeCaps: {"tfc:item_heat": {heat: 0,ticks: 0}},id: "${metal}",Count: 1}`
