@@ -47,5 +47,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       item: "gtceu:glass_tube",
     },
   })
-
+  event.shaped("create:andesite_alloy",["SZ ", "ZS ", "   "],{
+   S: "#tfc:igneous_extrusive_rock",
+   Z: "#forge:nuggets/zinc"
+  })
 }

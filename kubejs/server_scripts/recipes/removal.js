@@ -20,6 +20,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({id: "gtceu:shaped/stick_long_wrought_iron"})
   event.remove({id: "gtceu:shaped/screw_wrought_iron"})
   event.remove({id: "gtceu:shaped/wire_cutter_wrought_iron"})
+
+  //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) =>{
   event.remove({output: `gtceu:${tool}_shovel`, mod: "gtceu" })
   event.remove({output: `gtceu:${tool}_pickaxe`, mod: "gtceu" })
@@ -42,13 +44,14 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({output: `railcraft:${tool}_leggings`, mod: "railcraft" })
   event.remove({output: `railcraft:${tool}_boots`, mod: "railcraft" })
 
-})
-  //ATO
-  event.remove({id: /^alltheores:.*/, mod: "alltheores" })
+  })
 
   //Railcraft
   event.remove({id: /^railcraft:.*_gear/, mod: "railcraft" })
   event.remove({id: /^railcraft:.*_shears/, mod: "railcraft" })
+
+  //ATO
+  event.remove({id: /^alltheores:.*/, mod: "alltheores" })
 
   //Ad Astra
   event.remove({id: /^ad_astra:hammering.*/, mod: "ad_astra" })
@@ -56,5 +59,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create
   event.remove({id: "create:crafting/materials/andesite_alloy"})
   event.remove({id: "create:crafting/materials/andesite_alloy_from_zinc" })
-
+  event.remove({id: "create:mixing/andesite_alloy"})
+  event.remove({id: "create:mixing/andesite_alloy_from_zinc" })
 }
