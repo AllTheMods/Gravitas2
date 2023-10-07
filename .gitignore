@@ -8,7 +8,7 @@ icon.png
 /mods
 observable_announce
 options.txt
-/pathouli_books
+/patchouli_books
 patchouli_data.json
 realms_persistence.json
 /resourcepacks
@@ -32,5 +32,6 @@ kubejs/startup_scripts/debug/
 kubejs/client_scripts/debug/
 kubejs/config/probejs.json
 kubejs/jsconfig.json
-kubejs/documentation/index.html
+kubejs/documentation/
+kubejs/probe/
 .idea

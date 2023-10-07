@@ -24,3 +24,7 @@ let addStargateBiomes = (/** @type {TagEvent.Biome} */ event) =>{
   event.add("sgjourney:has_structure/stargate_pedestal/stargate_pedestal_snow_biomes",["#minecraft:is_beach"])
   event.add("sgjourney:has_structure/stargate_temple/abydos_pyramid_biomes",["#minecraft:is_badlands"])
 }
+
+let removeStrongholdFromOW = (/** @type {TagEvent.Biome} */ event) =>{
+  event.get("minecraft:has_structure/stronghold").remove("#is_overworld")
+}

@@ -8,12 +8,11 @@ const toolsToRemove = [
   "invar",
   "black_steel",
   "blue_steel",
-  "red_steel"
-
+  "red_steel",
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //TFC
-  event.remove({id: "tfc:anvil/wrought_iron_rod"})
+  event.remove({ id: "tfc:anvil/wrought_iron_rod" })
 
   //GT
   event.remove({id: "gtceu:shaped/stick_wrought_iron"})
@@ -47,14 +46,14 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   //Railcraft
-  event.remove({id: /^railcraft:.*_gear/, mod: "railcraft" })
-  event.remove({id: /^railcraft:.*_shears/, mod: "railcraft" })
+  event.remove({ id: /^railcraft:.*_gear/, mod: "railcraft" })
+  event.remove({ id: /^railcraft:.*_shears/, mod: "railcraft" })
 
   //ATO
   event.remove({id: /^alltheores:.*/, mod: "alltheores" })
 
   //Ad Astra
-  event.remove({id: /^ad_astra:hammering.*/, mod: "ad_astra" })
+  event.remove({ id: /^ad_astra:hammering.*/, mod: "ad_astra" })
 
   //Create
   event.remove({id: "create:crafting/materials/andesite_alloy"})
