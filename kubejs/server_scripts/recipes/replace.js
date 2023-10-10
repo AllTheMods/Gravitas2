@@ -27,6 +27,7 @@ const furnacent = [
 
 let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
+  event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:cobblestone_slab", "#forge:slabs/cobblestone")
   //remove furnace existance
   furnacent.forEach((furnace) => {
     event.replaceInput(furnace, "minecraft:furnace", "tfc:crucible")
