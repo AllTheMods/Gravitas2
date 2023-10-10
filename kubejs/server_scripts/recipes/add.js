@@ -4,7 +4,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.custom({
     type: "tfc:anvil",
     input: { tag: "forge:ingots/wrought_iron" },
-    input: { tag: "forge:ingots/wrought_iron" },
     result: {
       item: "gtceu:wrought_iron_rod",
       count: 2
@@ -48,9 +47,47 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       item: "gtceu:glass_tube"
     }
   })
+
+  //Create Start
   event.shaped("create:andesite_alloy", ["SZ ", "ZS ", "   "], {
     S: "#tfc:igneous_extrusive_rock",
     Z: "#forge:nuggets/zinc"
+  })
+
+  event.custom({
+    type: "create:mixing",
+    ingredients: [{ tag: "tfc:igneous_extrusive_rock" }, { tag: "forge:nuggets/zinc" }],
+    results: [{ item: "create:andesite_alloy" }]
+  })
+
+  event.custom({
+    type: "create:pressing",
+    ingredients: [{ item: "tfc:raw_iron_bloom" }],
+    results: [{ item: "tfc:refined_iron_bloom" }]
+  })
+  event.custom({
+    type: "create:pressing",
+    ingredients: [{ item: "tfc:refined_iron_bloom" }],
+    results: [{ item: "tfc:metal/ingot/wrought_iron" }]
+  })
+  //Create End
+
+  //GTCEU Start
+  event.shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
+    H: "#forge:tools/hammers",
+    R: "#forge:rods/steel",
+    S: "#forge:screws/steel",
+    P: "#forge:sheets/steel",
+    B: "gtceu:firebricks",
+    D: "#forge:tools/screwdrivers"
+  })
+  //GTCEU End
+
+  //Railcraft Start
+  event.shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {
+    B: "minecraft:brick",
+    C: "minecraft:fire_charge",
+    F: "tfc:crucible"
   })
 
   event.shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
@@ -64,9 +101,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     R: "#forge:rods/cast_iron",
     C: "framedblocks:framed_chest"
   })
+  //Railcraft End
 
-  //Functional Storage
-
+  //Frunctional Storage Start
   event.shaped("functionalstorage:framed_1", ["SPS", " C ", "SPS"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
@@ -101,4 +138,5 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     R: "minecraft:repeater",
     T: "#forge:rods/brass"
   })
+  //Functional Storage End
 }
