@@ -81,5 +81,7 @@
 	"metal.gtceu.vanadium_gallium": "Vanadium Gallium",
 	"metal.gtceu.vanadium_steel": "Vanadium Steel",
 	"metal.gtceu.yttrium": "Yttrium",
-	"metal.gtceu.yttrium_barium_cuprate": "Yttrium Barium Cuprate"
+	"metal.gtceu.yttrium_barium_cuprate": "Yttrium Barium Cuprate",
+	"block.gtceu.greenhouse": "Greenhouse",
+	"gtceu.greenhouse": "Greenhouse"
 }
