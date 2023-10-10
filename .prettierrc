@@ -1,10 +1,10 @@
 {
-    "tabWidth": 2,
-    "useTabs": false,
-    "printWidth": 120,
-    "semi": false,
-    "editorconfig": true,
-    "trailingComma": "es5",
-    "arrowParens": "always",
-    "bracketSpacing": true
-  }
+  "tabWidth": 2,
+  "useTabs": false,
+  "printWidth": 120,
+  "semi": false,
+  "editorconfig": true,
+  "trailingComma": "none",
+  "arrowParens": "always",
+  "bracketSpacing": true
+}

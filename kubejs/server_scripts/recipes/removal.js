@@ -8,7 +8,7 @@ const toolsToRemove = [
   "invar",
   "black_steel",
   "blue_steel",
-  "red_steel",
+  "red_steel"
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //GT

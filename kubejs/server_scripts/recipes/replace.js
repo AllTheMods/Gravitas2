@@ -22,7 +22,7 @@ const furnacent = [
   "ae2:network/blocks/energy_vibration_chamber",
   "railcraft:tunnel_bore",
   "ad_astra:recipes/coal_generator",
-  "integrateddynamics:crafting/coal_generator",
+  "integrateddynamics:crafting/coal_generator"
 ]
 
 let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
