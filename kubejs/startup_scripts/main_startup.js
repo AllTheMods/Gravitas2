@@ -40,3 +40,11 @@ global.hideAndRemoveRecipe = [
   [],
 ]
 */
+
+GTCEuStartupEvents.registry("gtceu:machine", event => {
+  registerMachines(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
+  registerRecipeTypes(event)
+})
