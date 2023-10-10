@@ -11,8 +11,6 @@ const toolsToRemove = [
   "red_steel",
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
-  //TFC
-  event.remove({ id: "tfc:anvil/wrought_iron_rod" })
 
   //GT
   event.remove({id: "gtceu:shaped/stick_wrought_iron"})
@@ -60,4 +58,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({id: "create:crafting/materials/andesite_alloy_from_zinc" })
   event.remove({id: "create:mixing/andesite_alloy"})
   event.remove({id: "create:mixing/andesite_alloy_from_zinc" })
+
+  //FramedBlocks
+  event.remove({id: "framedblocks:framed_torch"})
+  event.remove({id: "framedblocks:framed_soul_torch"})
+  event.remove({id: "framedblocks:framed_chest"})
+  event.remove({id: "framedblocks:framed_secret_storage"})
 }

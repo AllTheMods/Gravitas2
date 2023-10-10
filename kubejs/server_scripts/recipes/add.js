@@ -51,4 +51,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
    S: "#tfc:igneous_extrusive_rock",
    Z: "#forge:nuggets/zinc"
   })
+
+  event.shaped("framedblocks:framed_chest",["FRF","RCR","FRF"],{
+   F: "framedblocks:framed_cube",
+   R: "#forge:rods/cast_iron",
+   C: "#forge:chests/wooden"
+  })
+
+  event.shaped("framedblocks:framed_secret_storage",["RFR","FCF","RFR"],{
+     F: "framedblocks:framed_cube",
+     R: "#forge:rods/cast_iron",
+     C: "framedblocks:framed_chest"
+    })
 }
