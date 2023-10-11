@@ -22,7 +22,7 @@ const strucBlocksReplacementMap = {
   "minecraft:pumpkin": "tfc:melon",
   "minecraft:melon": "tfc:melon",
   "minecraft:attached_melon_stem": "tfc:crop/melon",
-
+  "minecraft:stone": "tfc:rock/hardened/granite"
 }
 
 const strucBlocksWithPropertiesMap = {
@@ -64,7 +64,9 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:gray_bed": "tfc:thatch_bed",
   "minecraft:brown_bed": "tfc:thatch_bed",
   "minecraft:magenta_bed": "tfc:thatch_bed",
-
+  "minecraft:stone_slab": "tfc:rock/raw/granite_slab",
+  "minecraft:smooth_stone_slab": "tfc:rock/smooth/granite_slab",
+  "minecraft:polished_andesite": 'tfc:rock/smooth/andesite',
 }
 
 function getState(block, state) {
