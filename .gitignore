@@ -35,3 +35,5 @@ kubejs/jsconfig.json
 kubejs/documentation/
 kubejs/probe/
 .idea
+node_modules/
+package-lock.json
