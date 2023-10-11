@@ -1,19 +1,18 @@
 // priority 10
-// @ts-check
 
-const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => {
+let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => {
   /**
    * @param {string} item
    * @param {number} heat - Heat Capacity
    * @param {number} [forgTemp] - Optional: Forging Temperature
    * @param {number} [weldTemp] - Optional: Welding Temperature
    */
-  const addTFCHeatCapability = (item, heat, forgTemp, weldTemp) => {
+  let addTFCHeatCapability = (item, heat, forgTemp, weldTemp) => {
     /** @type {Internal.LinkedHashMap} */
-    const json = JsonIO.toObject({ ingredient: Item.of(item).toJson(), heat_capacity: heat })
+    let json = JsonIO.toObject({ ingredient: Item.of(item).toJson(), heat_capacity: heat })
     forgTemp && json.put("forging_temperature", forgTemp)
     weldTemp && json.put("welding_temperature", weldTemp)
-    const itemLocation = Utils.id(item)
+    let itemLocation = Utils.id(item)
     event.addJson(`${itemLocation.namespace}:tfc/item_heats/metal/${itemLocation.path}.json`, json)
   }
 
@@ -22,10 +21,10 @@ const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) =
    * @param {"tiny"|"very_small"|"small"|"normal"|"large"|"very_large"|"huge"} size
    * @param {"very_light"|"light"|"medium"|"heavy"|"very_heavy"} weight
    */
-  const addTFCSize = (item, size, weight) => {
+  let addTFCSize = (item, size, weight) => {
     /** @type {Internal.LinkedHashMap} */
-    const json = JsonIO.toObject({ ingredient: Item.of(item).toJson(), size: size, weight: weight })
-    const itemLocation = Utils.id(item)
+    let json = JsonIO.toObject({ ingredient: Item.of(item).toJson(), size: size, weight: weight })
+    let itemLocation = Utils.id(item)
     event.addJson(`${itemLocation.namespace}:tfc/item_sizes/${itemLocation.path}.json`, json)
   }
 
@@ -38,58 +37,58 @@ const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) =
    * @param {string} ingots
    * @param {string} sheets
    */
-  const addTFCMetalFluid = (fluid, tier, meltTemp, specificHeatCap, ingots, sheets) => {
+  let addTFCMetalFluid = (fluid, tier, meltTemp, specificHeatCap, ingots, sheets) => {
     /** @type {Internal.LinkedHashMap} */
-    const json = JsonIO.toObject({
+    let json = JsonIO.toObject({
       tier: tier,
       fluid: fluid,
       melt_temperature: meltTemp,
       specific_heat_capacity: specificHeatCap,
       ingots: Ingredient.of(ingots).toJson(),
-      sheets: Ingredient.of(sheets).toJson()
+      sheets: Ingredient.of(sheets).toJson(),
     })
-    const itemLocation = Utils.id(fluid)
+    let itemLocation = Utils.id(fluid)
     event.addJson(`${itemLocation.namespace}:tfc/metals/${itemLocation.path}.json`, json)
   }
 
-  const addTFCHeatingRecipe = (item, fluid, meltTemp, amount) => {
+  let addTFCHeatingRecipe = (item, fluid, meltTemp, amount) => {
     /** @type {Internal.LinkedHashMap} */
-    const json = JsonIO.toObject({
+    let json = JsonIO.toObject({
       type: "tfc:heating",
       ingredient: Ingredient.of(item).toJson(),
       result_fluid: {
         fluid: fluid,
-        amount: amount
+        amount: amount,
       },
-      temperature: meltTemp
+      temperature: meltTemp,
     })
-    const itemLocation = Utils.id(item)
+    let itemLocation = Utils.id(item)
     event.addJson(`tfc:recipes/heating/metal/${itemLocation.path}.json`, json)
   }
 
-  const addTFCCastingRecipe = (item, fluid, amount) => {
+  let addTFCCastingRecipe = (item, fluid, amount) => {
     /** @type {Internal.LinkedHashMap} */
-    const json = JsonIO.toObject({
+    let json = JsonIO.toObject({
       type: "tfc:casting",
       mold: {
-        item: "tfc:ceramic/ingot_mold"
+        item: "tfc:ceramic/ingot_mold",
       },
       fluid: {
         ingredient: fluid,
-        amount: amount
+        amount: amount,
       },
       result: {
-        item: item
+        item: item,
       },
-      break_chance: 0.1
+      break_chance: 0.1,
     })
-    const itemLocation = Utils.id(item)
+    let itemLocation = Utils.id(item)
     event.addJson(`tfc:recipes/casting/${itemLocation.path}.json`, json)
   }
 
   gtceuIngots.forEach((id) => {
-    const fluid = Utils.id("gtceu:" + id)
-    const ingot = Utils.id("gtceu:" + id + "_ingot")
+    let fluid = Utils.id("gtceu:" + id)
+    let ingot = Utils.id("gtceu:" + id + "_ingot")
     let temp = $FluidHelper.getTemperature(Fluid.of(fluid)) - 273 // Kelvin to Celcius
     temp = Math.max(230, temp) // set at minimum temp like Tin
     addTFCHeatCapability(ingot.toString(), 2.857, Math.floor(temp * 0.6), Math.floor(temp * 0.8))
