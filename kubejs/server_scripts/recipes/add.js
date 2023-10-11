@@ -85,11 +85,125 @@ const recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   // GTCEU End
 
+  tfcSaplings.forEach((sapling) => {
+    //Greenhouse
+    event.recipes.gtceu.greenhouse(`gregitas:${sapling}`)
+      .circuit(1)
+      .notConsumable(`tfc:wood/sapling/${sapling}`)
+      .inputFluids(Fluid.of("minecraft:water", 1000))
+      .itemOutputs(
+        `64x tfc:wood/log/${sapling}`,
+        `4x tfc:wood/sapling/${sapling}`
+      )
+      .duration(640)
+      .EUt(MV)
+
+    event.recipes.gtceu.greenhouse(`gregitas:${sapling}_boosted`)
+      .circuit(2)
+      .notConsumable(`tfc:wood/sapling/${sapling}`)
+      .itemInputs("4x gtceu:fertilizer")
+      .inputFluids(Fluid.of("minecraft:water", 1000))
+      .itemOutputs(
+        `64x tfc:wood/log/${sapling}`,
+        `64x tfc:wood/log/${sapling}`,
+        `8x tfc:wood/sapling/${sapling}`
+      )
+      .duration(640)
+      .EUt(MV)
+    
+    //Cutter
+      event.recipes.gtceu.cutter(`gregitas:${sapling}_lumber_water`)
+        .itemInputs(`tfc:wood/log/${sapling}`)
+        .inputFluids(Fluid.of("minecraft:water", 4))
+        .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+        .duration(120)
+        .EUt(LV)
+
+      event.recipes.gtceu.cutter(`gregitas:${sapling}_lumber_distilled_water`)
+        .itemInputs(`tfc:wood/log/${sapling}`)
+        .inputFluids(Fluid.of("gtceu:distilled_water", 3))
+        .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+        .duration(80)
+        .EUt(LV)
+      
+      event.recipes.gtceu.cutter(`gregitas:${sapling}_lumber_lubricant`)
+        .itemInputs(`tfc:wood/log/${sapling}`)
+        .inputFluids(Fluid.of("gtceu:lubricant", 1))
+        .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+        .duration(40)
+        .EUt(LV)
+  })
+  //GTCEU End
+
   // Railcraft Start
   event.shaped('railcraft:solid_fueled_firebox', ['BBB', 'BCB', 'BFB'], {
     B: 'minecraft:brick',
     C: 'minecraft:fire_charge',
     F: 'tfc:crucible'
+  //Rock and Stone!
+  tfcStone.forEach((therock) => {
+    event.custom({
+      type: "gtceu:rock_breaker",
+      duration: 16,
+      data: {
+        fluidA: "minecraft:lava",
+        fluidB: "minecraft:water"
+      },
+      inputs: {
+        item: [
+          {
+            content: {
+              type: "gtceu:sized",
+              "fabric:type": "gtceu:sized",
+              count: 1,
+              ingredient: {
+                item: `tfc:rock/raw/${therock}`
+              }
+            },
+            chance: 0.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      outputs: {
+        item: [
+          {
+            content: {
+              type: "gtceu:sized",
+              "fabric:type": "gtceu:sized",
+              count: 1,
+              ingredient: {
+                item: `tfc:rock/raw/${therock}`
+              }
+            },
+            chance: 1.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      tickInputs: {
+        eu: [
+          {
+            content: LV,
+            chance: 1.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      tickOutputs: {},
+      recipeConditions: [
+        {
+          type: "rock_breaker",
+          data: {}
+        }
+      ]
+    })
+  })
+  //Railcraft Start
+  event.shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {
+    B: "minecraft:brick",
+    C: "minecraft:fire_charge",
+    F: "tfc:crucible"
   })
 
   event.shaped('framedblocks:framed_chest', ['FRF', 'RCR', 'FRF'], {
@@ -104,10 +218,4 @@ const recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: 'framedblocks:framed_chest'
   })
   // Railcraft End
-
-  shaped('enderchests:ender_pouch', ['LRL', 'RFR', 'LRL'], {
-    L: '#forge:leather',
-    R: 'gtceu:silicone_rubber_plate',
-    F: 'gtceu:mv_field_generator'
-  })
 }

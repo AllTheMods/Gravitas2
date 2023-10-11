@@ -12,7 +12,7 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType("greenhouse")
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
-        .recipeModifier(GTRecipeModifiers.PARALLEL_HATCH.apply(OverclockingLogic.PERFECT_OVERCLOCK, GTRecipeModifiers.ELECTRIC_OVERCLOCK))
+        .recipeModifier(GTRecipeModifiers.PARALLEL_HATCH.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.ELECTRIC_OVERCLOCK))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("FFF", "CCC", "CGC", "CGC", "CLC", "CCC")
             .aisle("FFF", "CMC", "GSG", "G#G", "LIL", "COC")
