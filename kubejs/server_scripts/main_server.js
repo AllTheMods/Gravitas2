@@ -14,17 +14,17 @@ LootJS.modifiers((event) => {
   modifyAndRemoveEntityLoot(event)
 })
 
-ServerEvents.tags('worldgen/biome', (event) => {
+ServerEvents.tags("worldgen/biome", (event) => {
   addTFCBiomesToVanilla(event)
   addStargateBiomes(event)
   removeStrongholdFromOW(event)
 })
 
-ServerEvents.tags('block', (event) => {
+ServerEvents.tags("block", (event) => {
   addBlockTags(event)
 })
 
-ServerEvents.tags('item', (event) => {
+ServerEvents.tags("item", (event) => {
   addItemTags(event)
 })
 
@@ -41,6 +41,6 @@ ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
 })
 
-NetworkEvents.dataReceived('customTask', (event) => {
+NetworkEvents.dataReceived("customTask", (event) => {
   serverObserveGtTask(event) // TODO: needs rework
 })

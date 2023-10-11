@@ -11,8 +11,8 @@ const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) =
   const addTFCHeatCapability = (item, heat, forgTemp, weldTemp) => {
     /** @type {Internal.LinkedHashMap} */
     const json = JsonIO.toObject({ ingredient: Item.of(item).toJson(), heat_capacity: heat })
-    forgTemp && json.put('forging_temperature', forgTemp)
-    weldTemp && json.put('welding_temperature', weldTemp)
+    forgTemp && json.put("forging_temperature", forgTemp)
+    weldTemp && json.put("welding_temperature", weldTemp)
     const itemLocation = Utils.id(item)
     event.addJson(`${itemLocation.namespace}:tfc/item_heats/metal/${itemLocation.path}.json`, json)
   }
@@ -55,7 +55,7 @@ const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) =
   const addTFCHeatingRecipe = (item, fluid, meltTemp, amount) => {
     /** @type {Internal.LinkedHashMap} */
     const json = JsonIO.toObject({
-      type: 'tfc:heating',
+      type: "tfc:heating",
       ingredient: Ingredient.of(item).toJson(),
       result_fluid: {
         fluid: fluid,
@@ -70,9 +70,9 @@ const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) =
   const addTFCCastingRecipe = (item, fluid, amount) => {
     /** @type {Internal.LinkedHashMap} */
     const json = JsonIO.toObject({
-      type: 'tfc:casting',
+      type: "tfc:casting",
       mold: {
-        item: 'tfc:ceramic/ingot_mold'
+        item: "tfc:ceramic/ingot_mold"
       },
       fluid: {
         ingredient: fluid,
@@ -88,19 +88,19 @@ const addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) =
   }
 
   gtceuIngots.forEach((id) => {
-    const fluid = Utils.id('gtceu:' + id)
-    const ingot = Utils.id('gtceu:' + id + '_ingot')
+    const fluid = Utils.id("gtceu:" + id)
+    const ingot = Utils.id("gtceu:" + id + "_ingot")
     let temp = $FluidHelper.getTemperature(Fluid.of(fluid)) - 273 // Kelvin to Celcius
     temp = Math.max(230, temp) // set at minimum temp like Tin
     addTFCHeatCapability(ingot.toString(), 2.857, Math.floor(temp * 0.6), Math.floor(temp * 0.8))
-    addTFCMetalFluid(fluid.toString(), 3, temp, 0.0085, '#forge:ingots/' + id, '#forge:plates/' + id)
+    addTFCMetalFluid(fluid.toString(), 3, temp, 0.0085, "#forge:ingots/" + id, "#forge:plates/" + id)
     if (temp > 1540) return // skip if temp is over Red/Blue Steel
     addTFCHeatingRecipe(ingot.toString(), fluid.toString(), temp, 144)
     addTFCCastingRecipe(ingot.toString(), fluid.toString(), 144)
   })
 
-  addTFCHeatCapability('gtceu:double_invar_ingot', 2.857, 921, 1228)
-  addTFCHeatCapability('gtceu:wrought_iron_bolt', 1.429, 921, 1228)
+  addTFCHeatCapability("gtceu:double_invar_ingot", 2.857, 921, 1228)
+  addTFCHeatCapability("gtceu:wrought_iron_bolt", 1.429, 921, 1228)
 
-  addTFCSize('gtceu:double_invar_ingot', 'large', 'heavy')
+  addTFCSize("gtceu:double_invar_ingot", "large", "heavy")
 }
