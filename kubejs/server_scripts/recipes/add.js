@@ -190,7 +190,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
       ]
     })
-
+  })
   //Railcraft Start
   event.shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {
     B: "minecraft:brick",
