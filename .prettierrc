@@ -3,8 +3,9 @@
   "useTabs": false,
   "printWidth": 120,
   "semi": false,
-  "editorconfig": true,
+  "singleQuote": false,
   "trailingComma": "none",
+  "bracketSpacing": true,
   "arrowParens": "always",
-  "bracketSpacing": true
+  "endOfLine": "lf"
 }
