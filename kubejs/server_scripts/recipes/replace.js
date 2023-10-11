@@ -37,6 +37,17 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
 
+  //Functional Storage
+  event.replaceInput(
+    { id: "functionalstorage:framed_storage_controller" },
+    "minecraft:iron_nugget",
+    "#forge:plates/brass"
+  )
+  event.replaceInput(
+    { id: "functionalstorage:framed_controller_extension" },
+    "minecraft:iron_nugget",
+    "#forge:plates/brass"
+  )
   //Railcraft
   event.replaceInput({ id: "railcraft:water_tank_siding" }, "minecraft:slimeball", "gtceu:sticky_resin")
   event.replaceInput({ id: "railcraft:steam_locomotive" }, "railcraft:blast_furnace_bricks", "gtceu:firebricks")
