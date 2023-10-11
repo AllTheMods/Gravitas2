@@ -107,6 +107,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       )
       .duration(640)
       .EUt(MV)
+    
     //Cutter
       event.recipes.gtceu.cutter(`gregitas:${sapling}_lumber_water`)
         .itemInputs(`tfc:wood/log/${sapling}`)
@@ -131,6 +132,65 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //GTCEU End
 
+  //Rock and Stone!
+  tfcStone.forEach((therock) => {
+    event.custom({
+      type: "gtceu:rock_breaker",
+      duration: 16,
+      data: {
+        fluidA: "minecraft:lava",
+        fluidB: "minecraft:water"
+      },
+      inputs: {
+        item: [
+          {
+            content: {
+              type: "gtceu:sized",
+              "fabric:type": "gtceu:sized",
+              count: 1,
+              ingredient: {
+                item: `tfc:rock/raw/${therock}`
+              }
+            },
+            chance: 0.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      outputs: {
+        item: [
+          {
+            content: {
+              type: "gtceu:sized",
+              "fabric:type": "gtceu:sized",
+              count: 1,
+              ingredient: {
+                item: `tfc:rock/raw/${therock}`
+              }
+            },
+            chance: 1.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      tickInputs: {
+        eu: [
+          {
+            content: LV,
+            chance: 1.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      tickOutputs: {},
+      recipeConditions: [
+        {
+          type: "rock_breaker",
+          data: {}
+        }
+      ]
+    })
+
   //Railcraft Start
   event.shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {
     B: "minecraft:brick",
@@ -150,4 +210,41 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "framedblocks:framed_chest"
   })
   //Railcraft End
+
+  //Frunctional Storage Start
+  event.shaped("functionalstorage:framed_1", ["SPS", " C ", "SPS"], {
+    S: "#forge:screws/brass",
+    C: "#forge:chests/wooden",
+    P: "#forge:plates/brass"
+  })
+
+  event.shaped("2x functionalstorage:framed_2", ["SPS", "C C", "SPS"], {
+    S: "#forge:screws/brass",
+    C: "#forge:chests/wooden",
+    P: "#forge:plates/brass"
+  })
+
+  event.shaped("4x functionalstorage:framed_4", ["CSC", "SPS", "CSC"], {
+    S: "#forge:screws/brass",
+    C: "#forge:chests/wooden",
+    P: "#forge:plates/double/brass"
+  })
+
+  event.shaped("functionalstorage:compacting_framed_drawer", ["PSP", "QDQ", "SRS"], {
+    P: "#forge:plates/brass",
+    S: "#forge:screws/brass",
+    Q: "minecraft:piston",
+    D: "#functionalstorage:drawer",
+    R: "minecraft:repeater"
+  })
+
+  event.shaped("functionalstorage:framed_simple_compacting_drawer", ["PSP", "TDQ", "SRS"], {
+    P: "#forge:plates/brass",
+    S: "#forge:screws/brass",
+    Q: "minecraft:piston",
+    D: "#functionalstorage:drawer",
+    R: "minecraft:repeater",
+    T: "#forge:rods/brass"
+  })
+  //Functional Storage End
 }
