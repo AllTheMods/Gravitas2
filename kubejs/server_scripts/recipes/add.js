@@ -81,6 +81,65 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "gtceu:firebricks",
     D: "#forge:tools/screwdrivers"
   })
+  //Rock and Stone!
+  tfcStone.forEach((therock) => {
+    event.custom({
+      type: "gtceu:rock_breaker",
+      duration: 16,
+      data: {
+        fluidA: "minecraft:lava",
+        fluidB: "minecraft:water"
+      },
+      inputs: {
+        item: [
+          {
+            content: {
+              type: "gtceu:sized",
+              "fabric:type": "gtceu:sized",
+              count: 1,
+              ingredient: {
+                item: `tfc:rock/raw/${therock}`
+              }
+            },
+            chance: 0.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      outputs: {
+        item: [
+          {
+            content: {
+              type: "gtceu:sized",
+              "fabric:type": "gtceu:sized",
+              count: 1,
+              ingredient: {
+                item: `tfc:rock/raw/${therock}`
+              }
+            },
+            chance: 1.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      tickInputs: {
+        eu: [
+          {
+            content: LV,
+            chance: 1.0,
+            tierChanceBoost: 0.0
+          }
+        ]
+      },
+      tickOutputs: {},
+      recipeConditions: [
+        {
+          type: "rock_breaker",
+          data: {}
+        }
+      ]
+    })
+  })
   //GTCEU End
 
   //Railcraft Start
