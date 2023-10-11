@@ -37,3 +37,5 @@ kubejs/probe/
 .idea
 node_modules/
 package-lock.json
+.eslintrc
+package.json
