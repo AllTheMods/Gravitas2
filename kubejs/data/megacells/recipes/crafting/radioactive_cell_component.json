@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "ae2:sky_dust"
+    },
+    "b": {
+      "item": "megacells:accumulation_processor"
+    },
+    "c": {
+      "item": "mekanism:radioactive_waste_barrel"
+    },
+    "d": {
+      "item": "ae2:quartz_vibrant_glass"
+    },
+    "e": {
+      "item": "ae2:cell_component_256k"
+    }
+  },
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "result": {
+    "item": "megacells:radioactive_cell_component"
+  },
+  "show_notification": true,
+    "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "appmek"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ae2:chest"
+    },
+    {
+      "item": "megacells:cell_component_16m"
+    },
+    {
+      "item": "ae2:energy_cell"
+    },
+    {
+      "item": "megacells:mega_chemical_cell_housing"
+    }
+  ],
+  "result": {
+    "item": "megacells:portable_chemical_cell_16m"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "appmek"
+    }
+  ]
+}
