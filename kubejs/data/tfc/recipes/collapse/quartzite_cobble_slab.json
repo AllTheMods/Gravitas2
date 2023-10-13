@@ -1,0 +1,7 @@
+{
+    "type": "tfc:collapse",
+    "ingredient": [
+      "tfc:rock/cobble/quartzite_slab"
+    ],
+    "result": "tfc:rock/cobble/quartzite_slab"
+  }

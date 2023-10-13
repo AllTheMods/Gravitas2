@@ -1,0 +1,7 @@
+{
+    "type": "tfc:collapse",
+    "ingredient": [
+      "tfc:rock/cobble/chalk_slab"
+    ],
+    "result": "tfc:rock/cobble/chalk_slab"
+  }

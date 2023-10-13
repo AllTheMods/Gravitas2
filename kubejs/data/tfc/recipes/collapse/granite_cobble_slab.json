@@ -1,0 +1,7 @@
+{
+    "type": "tfc:collapse",
+    "ingredient": [
+      "tfc:rock/cobble/granite_slab"
+    ],
+    "result": "tfc:rock/cobble/granite_slab"
+  }
