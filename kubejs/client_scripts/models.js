@@ -34,21 +34,15 @@ const gtceuOreMap = {
 
 global.gtceuOreMap = [ "aluminium", "cobalt", "lead", "lithium", "magnesium", "osmium", "platinum"]
 
-let registerBlocks = (/** @type {Registry.Block} */ event) => {
-
-    for(const stone of tfcStone){
-        for(const mat of global.gtceuOreMap) {
-          event
-            .create(`gregitas:${mat}_${stone}_ore`)
-            .color(1, gtceuOreMap[mat].color)
-            .modelJson = {
-              "parent": "tfc:block/ore",
-              "textures": {
-                "all": `tfc:block/rock/raw/${stone}`,
-                "particle": `tfc:block/rock/raw/${stone}`,
-                "overlay": "tfc:block/ore/normal_native_silver"
-              }
-            }
-        }
-    }
-}
+ClientEvents.highPriorityAssets(event => {
+  for(const stone of tfcStone){
+      for(const mat of global.gtceuOreMap) {
+        event.addModel('block', `gregitas:${mat}_${stone}_ore`, model => {
+          model.parent("tfc:block/ore")
+          model.texture("all": `tfc:block/rock/raw/${stone}`)
+          model.texture("particle": `tfc:block/rock/raw/${stone}`)
+          model.texture("overlay": "tfc:block/ore/normal_native_silver")
+          }
+      }
+  }
+})
