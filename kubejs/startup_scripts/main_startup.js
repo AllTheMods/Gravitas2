@@ -52,3 +52,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
   registerRecipeTypes(event)
 })
+
+GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
+  TagPrefix(event)
+})
