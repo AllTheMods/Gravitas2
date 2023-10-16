@@ -18,12 +18,16 @@ global.blockReplacementMap = {
   "minecraft:barrel": "tfc:wood/barrel/oak", // not same functionality but :shrug:
   "minecraft:lectern": "tfc:wood/lectern/oak",
   "minecraft:bell": "tfc:brass_bell",
-  "minecraft:torch": "tfc:torch"
-  //"minecraft:beehive": "firmalife:beehive" TODO: for firmalife
-}
+  "minecraft:torch": "tfc:torch",
+  "minecraft:beehive": "firmalife:beehive"
+  }
 
 StartupEvents.registry("item", (event) => {
   registerItems(event)
+})
+
+StartupEvents.registry("block", (event) => {
+  registerBlocks(event)
 })
 
 StartupEvents.postInit((event) => {
