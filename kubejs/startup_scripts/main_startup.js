@@ -26,9 +26,6 @@ StartupEvents.registry("item", (event) => {
   registerItems(event)
 })
 
-StartupEvents.registry("block", (event) => {
-  registerBlocks(event)
-})
 
 StartupEvents.postInit((event) => {
   if (!Platform.isClientEnvironment()) return
@@ -55,4 +52,8 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
 
 GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
   TagPrefix(event)
+})
+
+GTCEuStartupEvents.registry('gtceu:world_gen_layer', event => {
+  OreGen(event)
 })

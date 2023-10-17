@@ -34,3 +34,10 @@ let TagPrefix = (/** @type {Registry.Tag_Prefix} */ event) => {
             .generationCondition(ItemGenerationCondition.hasOreProperty);
     }) 
 }
+
+let OreGen = (/** @type {Registry.World_Gen_Layer} */ event) => {
+    tfcStoneStart.forEach((stone) => {
+        event.create(`${stone}_tfc`)
+            .target([new ResourceLocation(`tfc:rock/raw/${stone}`)])
+    })
+}
