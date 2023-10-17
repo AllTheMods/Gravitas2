@@ -14,21 +14,25 @@ LootJS.modifiers((event) => {
   modifyAndRemoveEntityLoot(event)
 })
 
-ServerEvents.tags("worldgen/biome", event => {
+ServerEvents.tags("worldgen/biome", (event) => {
   addTFCBiomesToVanilla(event)
   addStargateBiomes(event)
   removeStrongholdFromOW(event)
 })
 
-ServerEvents.tags("item", event => {
+ServerEvents.tags("worldgen/placed_feature", (event) => {
+  addGregVeinsToTags(event)
+})
+
+ServerEvents.tags("item", (event) => {
   addItemTags(event)
 })
 
-ServerEvents.tags("block", event => {
+ServerEvents.tags("block", (event) => {
   addBlockTags(event)
 })
 
-MoreJSEvents.structureLoad(event => {
+MoreJSEvents.structureLoad((event) => {
   replaceVanillaBlocks(event)
 })
 
@@ -37,8 +41,9 @@ MoreJSEvents.structureAfterPlace((event) => {
   runErosionFeature(event)
 })
 
-ServerEvents.lowPriorityData(event => {
+ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
+  addGregVeinData(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {
