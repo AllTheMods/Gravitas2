@@ -41,7 +41,6 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
         random_name: veinName
       }
     })
-    console.log(json + `as gregitas:worldgen/configured_feature/vein/${veinName}.json`)
     event.addJson(`gregitas:worldgen/configured_feature/vein/${veinName}.json`, json)
     let json2 = JsonIO.toObject({
       feature: `gregitas:vein/${veinName}`,
