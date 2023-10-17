@@ -43,6 +43,7 @@ MoreJSEvents.structureAfterPlace((event) => {
 
 ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
+  overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
 })
 

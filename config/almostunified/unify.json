@@ -1,9 +1,9 @@
 {
   "modPriorities": [
-    "tfc",
     "gtceu",
-    "kubejs",
     "minecraft",
+    "tfc",
+    "kubejs", 
     "create"
   ],
   "stoneStrata": [
@@ -26,7 +26,10 @@
     "forge:rods/{material}",
     "forge:wires/{material}",
     "forge:storage_blocks/{material}",
-    "forge:storage_blocks/raw_{material}"
+    "forge:storage_blocks/raw_{material}",
+    "forge:double_ingots/{material}",
+    "forge:double_sheets/{material}",
+    "forge:sheets/{material}"
   ],
   "materials": [
     "aeternium",
