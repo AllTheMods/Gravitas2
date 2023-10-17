@@ -134,62 +134,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Rock and Stone!
   tfcStone.forEach((therock) => {
-    event.custom({
-      type: "gtceu:rock_breaker",
-      duration: 16,
-      data: {
-        fluidA: "minecraft:lava",
-        fluidB: "minecraft:water"
-      },
-      inputs: {
-        item: [
-          {
-            content: {
-              type: "gtceu:sized",
-              "fabric:type": "gtceu:sized",
-              count: 1,
-              ingredient: {
-                item: `tfc:rock/raw/${therock}`
-              }
-            },
-            chance: 0.0,
-            tierChanceBoost: 0.0
-          }
-        ]
-      },
-      outputs: {
-        item: [
-          {
-            content: {
-              type: "gtceu:sized",
-              "fabric:type": "gtceu:sized",
-              count: 1,
-              ingredient: {
-                item: `tfc:rock/raw/${therock}`
-              }
-            },
-            chance: 1.0,
-            tierChanceBoost: 0.0
-          }
-        ]
-      },
-      tickInputs: {
-        eu: [
-          {
-            content: LV,
-            chance: 1.0,
-            tierChanceBoost: 0.0
-          }
-        ]
-      },
-      tickOutputs: {},
-      recipeConditions: [
-        {
-          type: "rock_breaker",
-          data: {}
-        }
-      ]
-    })
+    event.recipes.gtceu.rock_breaker(`loose_${stone}`)
+      .notConsumable(`tfc:rock/raw/${therock}`)
+      .itemOutputs(`tfc:rock/raw/${therock}`)
+      .duration(16)
+      .EUt(ULV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water") 
+      .addCondition(RockBreakerCondition.INSTANCE)
   })
   //Railcraft Start
   event.shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {

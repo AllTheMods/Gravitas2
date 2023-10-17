@@ -39,6 +39,7 @@ MoreJSEvents.structureAfterPlace((event) => {
 
 ServerEvents.lowPriorityData(event => {
   addGregTechIngotsToTFC(event)
+  overrideTFCArmourFinalWeld(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {

@@ -104,4 +104,18 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   tfcSaplings.forEach((sapling) => {
     event.add("forge:saplings", `tfc:wood/sapling/${sapling}`)
   })
+
+  tfcMetal.forEach((metal) => {
+    event.add(`forge:plates/${metal}`, `tfc:metal/sheet/${metal}`)
+    event.add(`forge:plates/double/${metal}`, `tfc:metal/double_sheet/${metal}`)
+
+    event.add(`forge:sheets/${metal}`, `gtceu:${metal}_plate`)
+    event.add(`forge:double_sheets/${metal}`, `gtceu:${metal}_double_plate`)
+  })
+
+  event.add('forge:plates/iron', 'tfc:metal/sheet/cast_iron')
+  event.add('forge:plates/double/iron', 'tfc:metal/double_sheet/cast_iron')
+
+  event.add(`forge:sheets/cast_iron`, `gtceu:iron_plate`)
+  event.add(`forge:double_sheets/cast_iron`, `gtceu:iron_double_plate`)
 }

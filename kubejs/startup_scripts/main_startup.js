@@ -57,3 +57,7 @@ GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
 GTCEuStartupEvents.registry('gtceu:world_gen_layer', event => {
   OreGen(event)
 })
+
+GTCEuStartupEvents.registry('gtceu:material', event => {
+  registerGTCEuMaterial(event)
+})
