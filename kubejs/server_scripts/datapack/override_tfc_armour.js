@@ -1,10 +1,10 @@
 let overrideTFCArmourFinalWeld = (/** @type {Internal.DataPackEventJS} */ event) => {
-    let addTFCWeldingRecipe = (inputA, inputB, teirAnvil, result, path) => {
+    let addTFCWeldingRecipe = (inputA, inputB, tierAnvil, result, path) => {
         let json = JsonIO.toObject({
           type: "tfc:welding",
           first_input: { item: inputA },
           second_input: { item: inputB },
-          tier: teirAnvil,
+          tier: tierAnvil,
           result: { item: result }
         })
         event.addJson(`tfc:recipes/welding/${path}.json`, json)

@@ -138,7 +138,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .notConsumable(`tfc:rock/raw/${therock}`)
       .itemOutputs(`tfc:rock/raw/${therock}`)
       .duration(16)
-      .EUt(ULV)
+      .EUt(LV)
       ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
       ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water") 
       .addCondition(RockBreakerCondition.INSTANCE)
