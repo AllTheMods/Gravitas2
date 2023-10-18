@@ -31,10 +31,6 @@ StartupEvents.registry("block", (event) => {
 })
 
 StartupEvents.postInit((event) => {
-  Platform.setModName("gregitas", "Gravitas²")
-})
-
-StartupEvents.postInit((event) => {
   if (!Platform.isClientEnvironment()) return
   addTooltipToBlocks(event)
 })

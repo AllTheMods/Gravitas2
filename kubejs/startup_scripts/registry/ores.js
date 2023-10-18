@@ -1,6 +1,6 @@
 // priority 10
 
-// globals at constant_startup
+// globals at constants_startup
 
 const OVERLAY_MAP = {
   diamond: "gtceu:block/material_sets/diamond/ore",
@@ -27,6 +27,7 @@ const registerGTCOres = (/** @type {Registry.Block} */ event) => {
         .create(`gregitas:ore/${block}/${stone}`, "basic")
         .defaultCutout()
         .noDrops()
+        .requiresTool()
         .tagBlock("minecraft:mineable/pickaxe")
         .tagBlock("tfc:rock/ores")
         .tagBlock("forge:ores")
