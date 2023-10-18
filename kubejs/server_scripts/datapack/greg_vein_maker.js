@@ -2,6 +2,7 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
   /**
    *
    * @param {Array<Array<>>} blockToWeightMap - [["modid:block",weight],[etc...]]
+   * @param {Array} validStones - Stonetype[s] its allowed to spawn in
    * @param {number} chancePerChunk - spawns 1/x chunks
    * @param {number} minY - Lowest Y generation level
    * @param {number} maxY - Highest Y generation level
@@ -10,20 +11,30 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
    * @param {number} veinHeight - how tall the vein
    * @param {string} veinName - Name.
    */
-  const makeTFCDiskVein = (blockToWeightMap, chancePerChunk, minY, maxY, sizeIB, densityIB, veinHeight, veinName) => {
-    let tempArray = []
-    for (const subArray of blockToWeightMap) {
-      tempArray.push(
-        JsonIO.toObject({
-          weight: subArray[1],
-          block: subArray[0]
-        })
-      )
-    }
+  const makeTFCDiskVein = (
+    blockToWeightMap,
+    validStones,
+    chancePerChunk,
+    minY,
+    maxY,
+    sizeIB,
+    densityIB,
+    veinHeight,
+    veinName
+  ) => {
     let blockarray = []
-    global.tfcStone.forEach((stone) => {
+    for (const stone of validStones) {
+      let tempArray = []
+      for (const subArray of blockToWeightMap) {
+        tempArray.push(
+          JsonIO.toObject({
+            weight: subArray[1],
+            block: `gregitas:ore/${subArray[0]}/${stone}`
+          })
+        )
+      }
       blockarray.push(JsonIO.toObject({ replace: [`tfc:rock/raw/${stone}`], with: tempArray }))
-    })
+    }
     let json = JsonIO.toObject({
       type: "tfc:disc_vein",
       config: {
@@ -51,17 +62,7 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
   }
   //Make sure to add anything you add here to `greg_vein_tags.js`
   //Below is an example of how to add a new vein.
-  makeTFCDiskVein(
-    [
-      ["gtceu:deepslate_diamond_ore", 1],
-      ["gtceu:deepslate_diamond_ore", 1]
-    ],
-    5,
-    -30,
-    30,
-    10,
-    0.2,
-    4,
-    `test_diamond`
-  )
+  global.gregVeins.forEach((vein) => {
+    makeTFCDiskVein(vein.oreAndWeight, global.tfcStone, vein.weight, vein.minY, vein.maxY, 15, 0.4, 4, vein.name)
+  })
 }
