@@ -133,7 +133,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //GTCEU End
 
   //Rock and Stone!
-  tfcStone.forEach((stone) => {
+  global.tfcStone.forEach((stone) => {
     event.recipes.gtceu.rock_breaker(`loose_${stone}`)
       .notConsumable(`tfc:rock/raw/${stone}`)
       .itemOutputs(`tfc:rock/raw/${stone}`)

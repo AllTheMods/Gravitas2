@@ -21,7 +21,7 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
       )
     }
     let blockarray = []
-    tfcStone.forEach((stone) => {
+    global.tfcStone.forEach((stone) => {
       blockarray.push(JsonIO.toObject({ replace: [`tfc:rock/raw/${stone}`], with: tempArray }))
     })
     let json = JsonIO.toObject({

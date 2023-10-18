@@ -97,7 +97,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
 
-  tfcStone.forEach((stone) => {
+  global.tfcStone.forEach((stone) => {
     event.add("forge:slabs/cobblestone", `tfc:rock/cobble/${stone}_slab`)
   })
 
