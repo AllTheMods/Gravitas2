@@ -1,8 +1,8 @@
 {
   "modPriorities": [
     "gtceu",
-    "minecraft",
     "tfc",
+    "minecraft",
     "kubejs", 
     "create"
   ],
@@ -80,6 +80,7 @@
     "sapphire",
     "signalum",
     "silver",
+    "stainless_steel",
     "sterling_silver",
     "steel",
     "sulfur",
