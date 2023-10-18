@@ -8,6 +8,10 @@ NetworkEvents.dataReceived('customTask', event => {
   clientObserveGtTask(event) // TODO: needs rework
 })
 
-JEIEvents.hideItems(event =>{
+JEIEvents.hideItems(event => {
   hidePotions(event)
+})
+
+ClientEvents.lang("en_us", (event) => {
+  addGregOresLang(event)
 })
