@@ -19,7 +19,7 @@ const OVERLAY_MAP = {
   gem_horizontal: "gtceu:block/material_sets/diamond/ore" // fallbacks to emerald -> diamond
 }
 
-StartupEvents.registry("block", (event) => {
+const registerGTCOres = (/** @type {Registry.Block} */ event) => {
   const blocks = Object.keys(global.gregOreBlockProps)
   blocks.forEach((block) => {
     global.tfcStone.forEach((stone) => {
@@ -36,6 +36,7 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("tfc:can_start_collapse")
         .tagBlock("tfc:can_trigger_collapse")
         .tagBlock("tfc:monster_spawn_on")
+        .tagBlock("tfc:prospectable")
         .mapColor(global.gregOreBlockProps[block].color)
         .stoneSoundType()
         .color(1, global.gregOreBlockProps[block].color)
@@ -61,4 +62,4 @@ StartupEvents.registry("block", (event) => {
       }
     })
   })
-})
+}
