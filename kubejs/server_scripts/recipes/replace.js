@@ -51,4 +51,10 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Railcraft
   event.replaceInput({ id: "railcraft:water_tank_siding" }, "minecraft:slimeball", "gtceu:sticky_resin")
   event.replaceInput({ id: "railcraft:steam_locomotive" }, "railcraft:blast_furnace_bricks", "gtceu:firebricks")
+
+  //TFC
+  tfcMetal.forEach((metal) => {
+    event.replaceInput({ type: 'minecraft:crafting_shaped' }, `tfc:metal/sheet/${metal}`, `#forge:plates/${metal}`)
+    event.replaceInput({ type: 'minecraft:crafting_shaped' }, `tfc:metal/double_sheet/${metal}`, `#forge:plates/double/${metal}`)
+  })
 }

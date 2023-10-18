@@ -18,13 +18,14 @@ global.blockReplacementMap = {
   "minecraft:barrel": "tfc:wood/barrel/oak", // not same functionality but :shrug:
   "minecraft:lectern": "tfc:wood/lectern/oak",
   "minecraft:bell": "tfc:brass_bell",
-  "minecraft:torch": "tfc:torch"
-  //"minecraft:beehive": "firmalife:beehive" TODO: for firmalife
-}
+  "minecraft:torch": "tfc:torch",
+  "minecraft:beehive": "firmalife:beehive"
+  }
 
 StartupEvents.registry("item", (event) => {
   registerItems(event)
 })
+
 
 StartupEvents.postInit((event) => {
   if (!Platform.isClientEnvironment()) return
@@ -47,4 +48,16 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
 
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
   registerRecipeTypes(event)
+})
+
+GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
+  TagPrefix(event)
+})
+
+GTCEuStartupEvents.registry('gtceu:world_gen_layer', event => {
+  OreGen(event)
+})
+
+GTCEuStartupEvents.registry('gtceu:material', event => {
+  registerGTCEuMaterial(event)
 })

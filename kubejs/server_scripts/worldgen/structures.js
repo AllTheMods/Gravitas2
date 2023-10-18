@@ -13,6 +13,7 @@ const strucBlocksReplacementMap = {
   "minecraft:farmland": "tfc:farmland/loam",
   "minecraft:stone_bricks": "tfc:rock/smooth/granite",
   "minecraft:red_sandstone": "tfc:raw_sandstone/red",
+  "minecraft:chiseled_red_sandstone": "tfc:chiseled_sandstone/red",
   "minecraft:cut_red_sandstone": "tfc:cut_sandstone/red",
   "minecraft:smooth_red_sandstone": "tfc:smooth_sandstone/red",
   "minecraft:sandstone": "tfc:raw_sandstone/yellow",
