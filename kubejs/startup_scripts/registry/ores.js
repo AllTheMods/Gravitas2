@@ -56,7 +56,17 @@ const registerGTCOres = (/** @type {Registry.Block} */ event) => {
           pool.survivesExplosion()
           pool.addEntry({
             type: "minecraft:item",
-            name: `gtceu:raw_${block}`
+            name: `gtceu:raw_${block}`,
+            functions: [
+              {
+                function: "minecraft:apply_bonus",
+                enchantment: "minecraft:fortune",
+                formula: "minecraft:ore_drops"
+              },
+              {
+                function: "minecraft:explosion_decay"
+              }
+            ]
           })
         })
       }
