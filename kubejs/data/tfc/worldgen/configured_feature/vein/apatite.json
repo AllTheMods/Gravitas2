@@ -17,8 +17,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:rhyolite_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/rhyolite"
           }
         ]
       },
@@ -28,8 +28,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:basalt_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/basalt"
           }
         ]
       },
@@ -39,8 +39,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:andesite_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/andesite"
           }
         ]
       },
@@ -50,8 +50,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:dacite_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/dacite"
           }
         ]
       },
@@ -61,8 +61,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:granite_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/granite"
           }
         ]
       },
@@ -72,8 +72,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:diorite_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/diorite"
           }
         ]
       },
@@ -83,8 +83,8 @@
         ],
         "with": [
           {
-            "weight": 100,
-            "block": "gtceu:gabbro_tfc_apatite_ore"
+            "weight": 1,
+            "block": "gregitas:ore/apatite/gabbro"
           }
         ]
       }
