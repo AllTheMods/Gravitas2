@@ -26,6 +26,13 @@ StartupEvents.registry("item", (event) => {
   registerItems(event)
 })
 
+StartupEvents.registry("block", (event) => {
+  registerGTCOres(event)
+})
+
+StartupEvents.postInit((event) => {
+  Platform.setModName("gregitas", "Gravitas²")
+})
 
 StartupEvents.postInit((event) => {
   if (!Platform.isClientEnvironment()) return
@@ -48,14 +55,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
 
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
   registerRecipeTypes(event)
-})
-
-GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
-  TagPrefix(event)
-})
-
-GTCEuStartupEvents.registry('gtceu:world_gen_layer', event => {
-  OreGen(event)
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
