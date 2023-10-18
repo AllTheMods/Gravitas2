@@ -52,7 +52,6 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
         height: veinHeight
       }
     })
-    console.log(json)
     event.addJson(`gregitas:worldgen/configured_feature/vein/${veinName}.json`, json)
     let json2 = JsonIO.toObject({
       feature: `gregitas:vein/${veinName}`,
