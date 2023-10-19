@@ -113,9 +113,10 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add(`forge:double_sheets/${metal}`, `gtceu:${metal}_double_plate`)
   })
 
-  event.add('forge:plates/iron', 'tfc:metal/sheet/cast_iron')
-  event.add('forge:plates/double/iron', 'tfc:metal/double_sheet/cast_iron')
+  event.add("forge:plates/iron", "tfc:metal/sheet/cast_iron")
+  event.add("forge:plates/double/iron", "tfc:metal/double_sheet/cast_iron")
 
   event.add(`forge:sheets/cast_iron`, `gtceu:iron_plate`)
   event.add(`forge:double_sheets/cast_iron`, `gtceu:iron_double_plate`)
+  event.add("firmalife:sweetener", "#tfc:sweetener")
 }

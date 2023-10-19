@@ -98,6 +98,16 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     addTFCCastingRecipe(ingot.toString(), fluid.toString(), 144)
   })
 
+  let TFCMoltenTemps = {
+    "tfc:metal/copper": 1080,
+    "tfc:metal/gold": 1060,
+    "tfc:metal/silver": 961,
+    "tfc:metal/tin": 230,
+    "tfc:metal/cast_iron": 1535,
+    "tfc:metal/zinc": 420,
+    "tfc:metal/nickel": 1453
+  }
+
   let oreToMolten = [
     {
       ore: "gtceu:raw_lead",
@@ -217,7 +227,9 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
   ]
 
   oreToMolten.forEach((ore) => {
-    let temp = $FluidHelper.getTemperature(Fluid.of(ore.liquid)) - 273 // Kelvin to Celcius
+    let temp = ore.liquid.toString().includes("gtceu")
+      ? $FluidHelper.getTemperature(Fluid.of(ore.liquid)) - 273
+      : TFCMoltenTemps[ore.liquid] // Kelvin to Celcius
     temp = Math.max(230, temp)
     addTFCHeatCapability(ore.ore, 2.857)
     addTFCHeatingRecipe(ore.ore, ore.liquid, temp, ore.amount)
