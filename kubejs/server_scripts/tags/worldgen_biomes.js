@@ -27,4 +27,6 @@ let addStargateBiomes = (/** @type {TagEvent.Biome} */ event) =>{
 
 let removeStrongholdFromOW = (/** @type {TagEvent.Biome} */ event) =>{
   event.get("minecraft:has_structure/stronghold").remove("#is_overworld")
+  event.get("minecraft:has_structure/mineshaft").removeAll()
+  event.get("minecraft:has_structure/mineshaft_mesa").removeAll()
 }

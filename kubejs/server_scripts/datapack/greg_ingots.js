@@ -45,7 +45,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       melt_temperature: meltTemp,
       specific_heat_capacity: specificHeatCap,
       ingots: Ingredient.of(ingots).toJson(),
-      sheets: Ingredient.of(sheets).toJson(),
+      sheets: Ingredient.of(sheets).toJson()
     })
     let itemLocation = Utils.id(fluid)
     event.addJson(`${itemLocation.namespace}:tfc/metals/${itemLocation.path}.json`, json)
@@ -58,9 +58,9 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       ingredient: Ingredient.of(item).toJson(),
       result_fluid: {
         fluid: fluid,
-        amount: amount,
+        amount: amount
       },
-      temperature: meltTemp,
+      temperature: meltTemp
     })
     let itemLocation = Utils.id(item)
     event.addJson(`tfc:recipes/heating/metal/${itemLocation.path}.json`, json)
@@ -71,16 +71,16 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     let json = JsonIO.toObject({
       type: "tfc:casting",
       mold: {
-        item: "tfc:ceramic/ingot_mold",
+        item: "tfc:ceramic/ingot_mold"
       },
       fluid: {
         ingredient: fluid,
-        amount: amount,
+        amount: amount
       },
       result: {
-        item: item,
+        item: item
       },
-      break_chance: 0.1,
+      break_chance: 0.1
     })
     let itemLocation = Utils.id(item)
     event.addJson(`tfc:recipes/casting/${itemLocation.path}.json`, json)
@@ -96,6 +96,143 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     if (temp > 1540) return // skip if temp is over Red/Blue Steel
     addTFCHeatingRecipe(ingot.toString(), fluid.toString(), temp, 144)
     addTFCCastingRecipe(ingot.toString(), fluid.toString(), 144)
+  })
+
+  let TFCMoltenTemps = {
+    "tfc:metal/copper": 1080,
+    "tfc:metal/gold": 1060,
+    "tfc:metal/silver": 961,
+    "tfc:metal/tin": 230,
+    "tfc:metal/cast_iron": 1535,
+    "tfc:metal/zinc": 420,
+    "tfc:metal/nickel": 1453
+  }
+
+  let oreToMolten = [
+    {
+      ore: "gtceu:raw_lead",
+      liquid: "gtceu:lead",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_silver",
+      liquid: "tfc:metal/silver",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_tin",
+      liquid: "tfc:metal/tin",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_hematite",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_goethite",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_cassiterite",
+      liquid: "tfc:metal/tin",
+      amount: 144
+    },
+    {
+      ore: "gtceu:raw_cassiterite_sand",
+      liquid: "tfc:metal/tin",
+      amount: 144
+    },
+    {
+      ore: "gtceu:raw_chalcopyrite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_chalcopyrite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_galena",
+      liquid: "gtceu:lead",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_garnierite",
+      liquid: "tfc:metal/nickel",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_magnetite",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_pyrite",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_sphalerite",
+      liquid: "tfc:metal/zinc",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_ctetrahedrite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_chalcopyrite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_yellow_limonite",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_bornite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_chalcocite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_pentlandite",
+      liquid: "tfc:metal/nickel",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_malachite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_basaltic_mineral_sand",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_granitic_mineral_sand",
+      liquid: "tfc:metal/cast_iron",
+      amount: 72
+    }
+  ]
+
+  oreToMolten.forEach((ore) => {
+    let temp = ore.liquid.toString().includes("gtceu")
+      ? $FluidHelper.getTemperature(Fluid.of(ore.liquid)) - 273
+      : TFCMoltenTemps[ore.liquid] // Kelvin to Celcius
+    temp = Math.max(230, temp)
+    addTFCHeatCapability(ore.ore, 2.857)
+    addTFCHeatingRecipe(ore.ore, ore.liquid, temp, ore.amount)
   })
 
   addTFCHeatCapability("gtceu:double_invar_ingot", 2.857, 921, 1228)

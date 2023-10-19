@@ -5,10 +5,11 @@ ServerEvents.recipes((event) => {
   replaceRecipes(event)
   recipeAdd(event)
   replaceTFCHeatingAndCasting(event)
+  addCollapse(event)
 })
 
 LootJS.modifiers((event) => {
-  //event.enableLogging()
+  // event.enableLogging()
   modifyAndRemoveChestLoot(event)
   modifyAndRemoveBlockLoot(event)
   modifyAndRemoveEntityLoot(event)
@@ -30,6 +31,10 @@ ServerEvents.tags("item", (event) => {
 
 ServerEvents.tags("block", (event) => {
   addBlockTags(event)
+})
+
+ServerEvents.tags("worldgen/configured_feature", (event) => {
+  addConfiguredFeaturesTags(event)
 })
 
 MoreJSEvents.structureLoad((event) => {

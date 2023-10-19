@@ -8,7 +8,7 @@ global.blockBanList = [
   "minecraft:smoker",
   "minecraft:blast_furnace",
   "minecraft:campfire",
-  "minecraft:soul_campfire",
+  "minecraft:soul_campfire"
 ]
 
 // shared with server_scripts for LootJS
@@ -20,12 +20,19 @@ global.blockReplacementMap = {
   "minecraft:bell": "tfc:brass_bell",
   "minecraft:torch": "tfc:torch",
   "minecraft:beehive": "firmalife:beehive"
-  }
+}
 
 StartupEvents.registry("item", (event) => {
   registerItems(event)
 })
 
+StartupEvents.registry("block", (event) => {
+  registerGTCOres(event)
+})
+
+StartupEvents.postInit((event) => {
+  Platform.setModName("gregitas", "Gravitas²")
+})
 
 StartupEvents.postInit((event) => {
   if (!Platform.isClientEnvironment()) return
@@ -42,22 +49,14 @@ global.hideAndRemoveRecipe = [
 ]
 */
 
-GTCEuStartupEvents.registry("gtceu:machine", event => {
+GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   registerMachines(event)
 })
 
-GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
+GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
   registerRecipeTypes(event)
 })
 
-GTCEuStartupEvents.registry('gtceu:tag_prefix', event => {
-  TagPrefix(event)
-})
-
-GTCEuStartupEvents.registry('gtceu:world_gen_layer', event => {
-  OreGen(event)
-})
-
-GTCEuStartupEvents.registry('gtceu:material', event => {
+GTCEuStartupEvents.registry("gtceu:material", (event) => {
   registerGTCEuMaterial(event)
 })

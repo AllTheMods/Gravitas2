@@ -7,29 +7,6 @@ const $FluidHelper = Java.loadClass("com.lowdragmc.lowdraglib.side.fluid.FluidHe
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV] = GTValues.VA
 const RockBreakerCondition = Java.loadClass('com.gregtechceu.gtceu.common.recipe.RockBreakerCondition')
 
-const tfcStone = [
-  "granite",
-  "diorite",
-  "gabbro",
-  "shale",
-  "claystone",
-  "limestone",
-  "conglomerate",
-  "dolomite",
-  "chert",
-  "chalk",
-  "rhyolite",
-  "basalt",
-  "andesite",
-  "dacite",
-  "quartzite",
-  "slate",
-  "phyllite",
-  "schist",
-  "gneiss",
-  "marble"
-]
-
 const tfcSaplings = [
   "acacia",
   "ash",

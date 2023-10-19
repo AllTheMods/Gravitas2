@@ -23,7 +23,9 @@ const strucBlocksReplacementMap = {
   "minecraft:pumpkin": "tfc:melon",
   "minecraft:melon": "tfc:melon",
   "minecraft:attached_melon_stem": "tfc:crop/melon",
-  "minecraft:stone": "tfc:rock/hardened/granite"
+  "minecraft:stone": "tfc:rock/hardened/granite",
+  "minecraft:deepslate": "tfc:rock/hardened/basalt",
+  "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt"
 }
 
 const strucBlocksWithPropertiesMap = {

@@ -133,10 +133,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //GTCEU End
 
   //Rock and Stone!
-  tfcStone.forEach((therock) => {
+  global.tfcStone.forEach((stone) => {
     event.recipes.gtceu.rock_breaker(`loose_${stone}`)
-      .notConsumable(`tfc:rock/raw/${therock}`)
-      .itemOutputs(`tfc:rock/raw/${therock}`)
+      .notConsumable(`tfc:rock/raw/${stone}`)
+      .itemOutputs(`tfc:rock/raw/${stone}`)
       .duration(16)
       .EUt(LV)
       ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
