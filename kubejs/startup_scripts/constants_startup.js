@@ -53,7 +53,7 @@ global.gregOreBlockProps = {
   pentlandite: { color: 0xa59605, overlay: "dull" },
   magnetite: { color: 0x1e1e1e, overlay: "metallic" },
   vanadium_magnetite: { color: 0x23233c, overlay: "metallic" },
-  gold: { color: 0xffe650, overlay: "shiny" },
+  //gold: { color: 0xffe650, overlay: "shiny" },
   basaltic_mineral_sand: { color: 0x283228, overlay: "sand" },
   granitic_mineral_sand: { color: 0x283c3c, overlay: "sand" },
   fullers_earth: { color: 0xa0a078, overlay: "fine" },
@@ -66,9 +66,9 @@ global.gregOreBlockProps = {
   lepidolite: { color: 0xf0328c, overlay: "fine" },
   spodumene: { color: 0xbeaaaa, overlay: "dull" },
   oilsands: { color: 0x0a0a0a, overlay: "sand" },
-  iron: { color: 0xc8c8c8, overlay: "metallic" },
+  //iron: { color: 0xc8c8c8, overlay: "metallic" },
   pyrite: { color: 0x967828, overlay: "rough" },
-  copper: { color: 0xff6400, overlay: "shiny" },
+  //copper: { color: 0xff6400, overlay: "shiny" },
   lazurite: { color: 0x6478ff, overlay: "lapis" },
   sodalite: { color: 0x1414ff, overlay: "lapis" },
   lapis: { color: 0x4646dc, overlay: "lapis" },
@@ -250,8 +250,7 @@ global.gregVeins = [
     minY: 30,
     maxY: 80,
     validStones: ["shale", "claystone", "limestone", "conglomerate", "dolomite", "chert", "chalk"],
-    oreAndWeight: [
-    ["oilsands", 1]]
+    oreAndWeight: [["oilsands", 1]]
   },
   {
     name: "copper",

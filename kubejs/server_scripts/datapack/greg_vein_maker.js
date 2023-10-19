@@ -11,6 +11,12 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
    * @param {number} veinHeight - how tall the vein
    * @param {string} veinName - Name.
    */
+  const replacementMap = {
+    gold: "tfc:ore/rich_native_gold/",
+    iron: "tfc:ore/rich_hematite/",
+    copper: "tfc:ore/rich_native_copper/"
+  }
+
   const makeTFCDiskVein = (
     blockToWeightMap,
     validStones,
@@ -29,7 +35,9 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
         tempArray.push(
           JsonIO.toObject({
             weight: subArray[1],
-            block: `gregitas:ore/${subArray[0]}/${stone}`
+            block: replacementMap[subArray[0]]
+              ? `${replacementMap[subArray[0]]}${stone}`
+              : `gregitas:ore/${subArray[0]}/${stone}`
           })
         )
       }
