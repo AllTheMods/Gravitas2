@@ -62,6 +62,6 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
   //Make sure to add anything you add here to `greg_vein_tags.js`
   //Below is an example of how to add a new vein.
   global.gregVeins.forEach((vein) => {
-    makeTFCDiskVein(vein.oreAndWeight, global.tfcStone, vein.weight, vein.minY, vein.maxY, 15, 0.4, 4, vein.name)
+    makeTFCDiskVein(vein.oreAndWeight, vein.validStones, vein.weight, vein.minY, vein.maxY, 15, 0.4, 4, vein.name)
   })
 }

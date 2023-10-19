@@ -98,7 +98,7 @@ global.gregVeins = [
     weight: 40,
     minY: 10,
     maxY: 80,
-    validStones: [], //This should eventually be replaced with what stones its allowed to generate in.
+    validStones: ["basalt", "rhyolite", "andesite", "dacite", "granite", "gabbro", "diorite"], //This should eventually be replaced with what stones its allowed to generate in.
     oreAndWeight: [
       ["apatite", 3],
       ["tricalcium_phosphate", 2],
@@ -110,7 +110,7 @@ global.gregVeins = [
     weight: 80,
     minY: 10,
     maxY: 80,
-    validStones: [],
+    validStones: ["granite", "diorite", "gabbro"],
     oreAndWeight: [
       ["tin", 4],
       ["cassiterite", 2]
@@ -134,7 +134,7 @@ global.gregVeins = [
     weight: 40,
     minY: -15,
     maxY: 45,
-    validStones: [],
+    validStones: ["granite", "gneiss"],
     oreAndWeight: [
       ["galena", 3],
       ["silver", 2],
@@ -172,7 +172,7 @@ global.gregVeins = [
     weight: 120,
     minY: -10,
     maxY: 60,
-    validStones: [],
+    validStones: ["basalt", "rhyolite", "andesite", "dacite"],
     oreAndWeight: [
       ["goethite", 5],
       ["yellow_limonite", 2],
@@ -198,7 +198,7 @@ global.gregVeins = [
     weight: 80,
     minY: 10,
     maxY: 60,
-    validStones: [],
+    validStones: ["basalt", "rhyolite", "andesite", "dacite"],
     oreAndWeight: [
       ["magnetite", 3],
       ["vanadium_magnetite", 2],
@@ -223,7 +223,7 @@ global.gregVeins = [
     weight: 40,
     minY: -10,
     maxY: 60,
-    validStones: [],
+    validStones: ["gabbro", "diorite", "granite"],
     oreAndWeight: [
       ["garnierite", 3],
       ["nickel", 2],
@@ -236,7 +236,7 @@ global.gregVeins = [
     weight: 50,
     minY: 30,
     maxY: 70,
-    validStones: [],
+    validStones: ["shale", "claystone", "limestone", "conglomerate", "dolomite", "chert", "chalk"],
     oreAndWeight: [
       ["rock_salt", 3],
       ["salt", 2],
@@ -302,7 +302,7 @@ global.gregVeins = [
     weight: 20,
     minY: -20,
     maxY: 10,
-    validStones: [],
+    validStones: ["quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
     oreAndWeight: [
       ["bentonite", 2],
       ["magnetite", 1],
@@ -315,7 +315,7 @@ global.gregVeins = [
     weight: 60,
     minY: -65,
     maxY: -10,
-    validStones: [],
+    validStones: ["rhyolite", "basalt", "andesite", "dacite", "quartzite", "shale"],
     oreAndWeight: [
       ["redstone", 2],
       ["ruby", 1],
