@@ -14,17 +14,17 @@ let replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event)
     1400: 2016,
     10: 16,
     15: 24,
-    35: 48,
+    35: 48
   }
   event.forEachRecipe({ type: "tfc:heating" }, (recipe) => {
     let fluid = recipe.json.has("result_fluid") && recipe.json.getAsJsonObject("result_fluid")
-    if (!fluid || !fluid.get("fluid").asString.includes("tfc:")) return
+    if (!fluid || !fluid.get("fluid").asString.includes("tfc:") || !meltMap[fluid.get("amount")]) return
     fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", meltMap[fluid.get("amount")])
   })
 
   let castMap = {
     100: 144,
-    200: 288,
+    200: 288
   }
   event.forEachRecipe({ type: "tfc:casting" }, (recipe) => {
     let fluid = recipe.json.has("fluid") && recipe.json.getAsJsonObject("fluid")

@@ -35,9 +35,10 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
         tempArray.push(
           JsonIO.toObject({
             weight: subArray[1],
-            block: replacementMap[subArray[0]]
-              ? `${replacementMap[subArray[0]]}${stone}`
-              : `gregitas:ore/${subArray[0]}/${stone}`
+            block:
+              replacementMap[subArray[0]] != null
+                ? `${replacementMap[subArray[0]]}${stone}`
+                : `gregitas:ore/${subArray[0]}/${stone}`
           })
         )
       }
