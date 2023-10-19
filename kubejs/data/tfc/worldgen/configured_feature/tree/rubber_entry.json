@@ -1,0 +1,12 @@
+{
+    "__comment__": "This file was automatically created by mcresources",
+    "type": "tfc:forest_entry",
+    "config": {
+      "min_rain": 300,
+      "max_rain": 400,
+      "min_temp": 18,
+      "max_temp": 40,
+      "normal_tree": "tfc:tree/rubber",
+      "dead_tree": "tfc:tree/rubber"
+    }
+  }
