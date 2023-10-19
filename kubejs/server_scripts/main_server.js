@@ -33,6 +33,10 @@ ServerEvents.tags("block", (event) => {
   addBlockTags(event)
 })
 
+ServerEvents.tags("worldgen/configured_feature", (event) => {
+  addConfiguredFeaturesTags(event)
+})
+
 MoreJSEvents.structureLoad((event) => {
   replaceVanillaBlocks(event)
 })
