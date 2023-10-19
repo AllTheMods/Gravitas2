@@ -244,7 +244,15 @@ global.gregVeins = [
       ["spodumene", 1]
     ]
   },
-  { name: "oilsands", weight: 40, minY: 30, maxY: 80, validStones: [], oreAndWeight: [["oilsands", 1]] },
+  {
+    name: "oilsands",
+    weight: 40,
+    minY: 30,
+    maxY: 80,
+    validStones: ["shale", "claystone", "limestone", "conglomerate", "dolomite", "chert", "chalk"],
+    oreAndWeight: [
+    ["oilsands", 1]]
+  },
   {
     name: "copper",
     weight: 80,
