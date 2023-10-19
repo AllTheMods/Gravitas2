@@ -14,4 +14,9 @@ JEIEvents.hideItems(event => {
 
 ClientEvents.lang("en_us", (event) => {
   addGregOresLang(event)
+  addGregitasName(event)
+})
+
+ItemEvents.tooltip(event => {
+  addModNameTooltipToCreativeTab(event)
 })
