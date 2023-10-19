@@ -5,10 +5,11 @@ ServerEvents.recipes((event) => {
   replaceRecipes(event)
   recipeAdd(event)
   replaceTFCHeatingAndCasting(event)
+  addCollapse(event)
 })
 
 LootJS.modifiers((event) => {
-  //event.enableLogging()
+  // event.enableLogging()
   modifyAndRemoveChestLoot(event)
   modifyAndRemoveBlockLoot(event)
   modifyAndRemoveEntityLoot(event)
