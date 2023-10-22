@@ -15,6 +15,7 @@ JEIEvents.hideItems(event => {
 ClientEvents.lang("en_us", (event) => {
   addGregOresLang(event)
   addGregitasName(event)
+  convertBucketsToIngots(event)
 })
 
 ItemEvents.tooltip(event => {

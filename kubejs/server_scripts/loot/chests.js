@@ -71,6 +71,7 @@ const chestBanList = [
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
+  "railcraft:steel_plate"
 ]
 
 const chestReplacementMap = {
@@ -180,6 +181,7 @@ const chestReplacementMap = {
   "minecraft:porkchop": "tfc:food/pork",
   "minecraft:potato": "tfc:food/potato",
   "minecraft:pumpkin": "tfc:pumpkin",
+  "minecraft:pumpkin_seeds": "tfc:seeds/pumpkin",
   "minecraft:rabbit": "tfc:food/rabbit",
   "minecraft:raw_copper": "tfc:ore/rich_native_copper",
   "minecraft:raw_copper_block": "tfc:metal/ingot/copper",

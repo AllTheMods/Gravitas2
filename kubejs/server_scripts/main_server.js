@@ -18,7 +18,8 @@ LootJS.modifiers((event) => {
 ServerEvents.tags("worldgen/biome", (event) => {
   addTFCBiomesToVanilla(event)
   addStargateBiomes(event)
-  removeStrongholdFromOW(event)
+  removeBiomesFromStructures(event)
+  addBiomesToStructures(event)
 })
 
 ServerEvents.tags("worldgen/placed_feature", (event) => {
