@@ -36,6 +36,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
+  event.replaceInput({ output: "create:cogwheel" }, "#minecraft:planks", "#forge:treated_wood")
+  event.replaceInput({ output: "create:large_cogwheel" }, "#minecraft:planks", "#forge:treated_wood")
 
   //Functional Storage
   event.replaceInput(
@@ -54,7 +56,11 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //TFC
   tfcMetal.forEach((metal) => {
-    event.replaceInput({ type: 'minecraft:crafting_shaped' }, `tfc:metal/sheet/${metal}`, `#forge:plates/${metal}`)
-    event.replaceInput({ type: 'minecraft:crafting_shaped' }, `tfc:metal/double_sheet/${metal}`, `#forge:plates/double/${metal}`)
+    event.replaceInput({ type: "minecraft:crafting_shaped" }, `tfc:metal/sheet/${metal}`, `#forge:plates/${metal}`)
+    event.replaceInput(
+      { type: "minecraft:crafting_shaped" },
+      `tfc:metal/double_sheet/${metal}`,
+      `#forge:plates/double/${metal}`
+    )
   })
 }
