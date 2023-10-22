@@ -60,3 +60,12 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
   registerGTCEuMaterial(event)
 })
+
+ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityEvent$EnteringSection", event => {
+  if (event.entity.level().isClientSide()) return
+  notifyChunkOwner(event)
+})
+
+ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
+  addTooltipIngots(event)
+})
