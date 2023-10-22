@@ -62,11 +62,18 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^ad_astra:hammering.*/, mod: "ad_astra" })
   event.remove({ id: "ad_astra:recipes/steel_ingot_from_blasting_iron_ingot" })
 
+  //Apotheosis
+  event.remove({ id: /^apotheosis:salvaging.*_horse_armor/ })
+
   //Create
   event.remove({ id: "create:crafting/materials/andesite_alloy" })
   event.remove({ id: "create:crafting/materials/andesite_alloy_from_zinc" })
   event.remove({ id: "create:mixing/andesite_alloy" })
   event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
+  event.remove({ id: "create:deploying/cogwheel" })
+  event.remove({ id: "create:deploying/large_cogwheel" })
+  event.remove({ input: "minecraft:saddle", mod: "create" })
+  event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -106,4 +113,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "functionalstorage:framed_simple_compacting_drawer" })
   event.remove({ id: "functionalstorage:storage_controller" })
   event.remove({ id: "functionalstorage:controller_extension" })
+
+  //Integrated Dynamics
+  event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
 }
