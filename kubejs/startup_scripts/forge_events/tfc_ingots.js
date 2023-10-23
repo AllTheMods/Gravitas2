@@ -6,7 +6,7 @@ const meltRegex = /(\d+) mB/
 const addTooltipIngots = (/** @type {Internal.ItemTooltipEvent} */ event) => {
   if (!Client.isShiftDown()) return
   const idx = event.toolTip.findIndex((component) => component.contents?.key === "tfc.tooltip.item_melts_into")
-  if (idx === -1) return
+  if (idx == -1) return
   const comp = event.toolTip.get(idx)
   const match = comp.string.match(meltRegex)
   const ingots = parseFloat((parseInt(match[1]) / 144).toFixed(1))
