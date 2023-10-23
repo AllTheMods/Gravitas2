@@ -54,6 +54,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     Z: "#forge:nuggets/zinc"
   })
 
+  event.shaped("create:millstone", [" M ", " G ", " Q "], {
+    M: "tfc:handstone",
+    G: "create:cogwheel",
+    Q: "tfc:quern"
+  })
+  
   event.custom({
     type: "create:mixing",
     ingredients: [{ tag: "tfc:igneous_extrusive_rock" }, { tag: "forge:nuggets/zinc" }],
