@@ -180,7 +180,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       amount: 72
     },
     {
-      ore: "gtceu:raw_ctetrahedrite",
+      ore: "gtceu:raw_tetrahedrite",
       liquid: "tfc:metal/copper",
       amount: 72
     },
