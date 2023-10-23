@@ -72,7 +72,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   event.custom({
     type: "create:deploying",
-    ingregients: [
+    ingredients: [
       {
         item: "create:shaft"
       },
@@ -82,7 +82,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   event.custom({
     type: "create:deploying",
-    ingregients: [
+    ingredients: [
       {
         item: "create:cogwheel"
       },
