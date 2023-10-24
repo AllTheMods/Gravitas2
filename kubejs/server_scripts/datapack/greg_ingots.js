@@ -37,7 +37,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
    * @param {string} ingots
    * @param {string} sheets
    */
-  let addTFCMetalFluid = (fluid, tier, meltTemp, specificHeatCap, ingots, sheets) => {
+  let addTFCMetalFluid = (fluid, tier, meltTemp, specificHeatCap, ingots, sheets, doubleIngots) => {
     /** @type {Internal.LinkedHashMap} */
     let json = JsonIO.toObject({
       tier: tier,
@@ -45,7 +45,8 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       melt_temperature: meltTemp,
       specific_heat_capacity: specificHeatCap,
       ingots: Ingredient.of(ingots).toJson(),
-      sheets: Ingredient.of(sheets).toJson()
+      sheets: Ingredient.of(sheets).toJson(),
+      double_ingots: Ingredient.of(doubleIngots).toJson()
     })
     let itemLocation = Utils.id(fluid)
     event.addJson(`${itemLocation.namespace}:tfc/metals/${itemLocation.path}.json`, json)
@@ -92,7 +93,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     let temp = $FluidHelper.getTemperature(Fluid.of(fluid)) - 273 // Kelvin to Celcius
     temp = Math.max(230, temp) // set at minimum temp like Tin
     addTFCHeatCapability(ingot.toString(), 2.857, Math.floor(temp * 0.6), Math.floor(temp * 0.8))
-    addTFCMetalFluid(fluid.toString(), 3, temp, 0.0085, "#forge:ingots/" + id, "#forge:plates/" + id)
+    addTFCMetalFluid(fluid.toString(), 3, temp, 0.0085, "#forge:ingots/" + id, "#forge:plates/" + id, "#forge:double_ingots/" + id)
     if (temp > 1540) return // skip if temp is over Red/Blue Steel
     addTFCHeatingRecipe(ingot.toString(), fluid.toString(), temp, 144)
     addTFCCastingRecipe(ingot.toString(), fluid.toString(), 144)

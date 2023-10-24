@@ -1,46 +1,37 @@
 // priority 10
-let replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event) => {
-  let meltMap = {
-    6: 9,
-    25: 36,
-    50: 72,
-    75: 108,
-    100: 144,
-    200: 288,
-    400: 576,
-    600: 864,
-    800: 1152,
-    1200: 1728,
-    1400: 2016,
-    10: 16,
-    15: 24,
-    35: 48
+const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event) => {
+  const meltMap = {
+    6: JsonIO.primitiveOf(9),
+    25: JsonIO.primitiveOf(36),
+    50: JsonIO.primitiveOf(72),
+    75: JsonIO.primitiveOf(108),
+    100: JsonIO.primitiveOf(144),
+    200: JsonIO.primitiveOf(288),
+    400: JsonIO.primitiveOf(576),
+    600: JsonIO.primitiveOf(864),
+    800: JsonIO.primitiveOf(1152),
+    1200: JsonIO.primitiveOf(1728),
+    1400: JsonIO.primitiveOf(2016),
+    10: JsonIO.primitiveOf(16),
+    15: JsonIO.primitiveOf(24),
+    35: JsonIO.primitiveOf(48)
   }
-  event.forEachRecipe({ type: "tfc:heating" }, (recipe) => {
-    let fluid = recipe.json.has("result_fluid") && recipe.json.getAsJsonObject("result_fluid")
-    if (!fluid || !fluid.get("fluid").asString.includes("tfc:") || !meltMap[fluid.get("amount")]) return
-    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", meltMap[fluid.get("amount")])
-  })
-
-  let castMap = {
-    100: 144,
-    200: 288
-  }
-  event.forEachRecipe({ type: "tfc:casting" }, (recipe) => {
-    let fluid = recipe.json.has("fluid") && recipe.json.getAsJsonObject("fluid")
-    if (!fluid || !fluid.get("ingredient").asString.includes("tfc:")) return
-    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", castMap[fluid.get("amount")])
-  })
 
   event.forEachRecipe({ type: "tfc:heating" }, (recipe) => {
-    let fluid = recipe.json.has("result_fluid") && recipe.json.getAsJsonObject("result_fluid")
-    if (!fluid || !fluid.get("fluid").asString.includes("firmalife:")) return
-    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", meltMap[fluid.get("amount")])
+    const fluid = recipe.json.asMap()?.result_fluid
+    if (!fluid || !meltMap[fluid.get("amount")]) return
+    fluid.asMap().put("amount", meltMap[fluid.get("amount")])
+    recipe.save()
   })
 
+  const castMap = {
+    100: JsonIO.primitiveOf(144),
+    200: JsonIO.primitiveOf(288)
+  }
   event.forEachRecipe({ type: "tfc:casting" }, (recipe) => {
-    let fluid = recipe.json.has("fluid") && recipe.json.getAsJsonObject("fluid")
-    if (!fluid || !fluid.get("ingredient").asString.includes("firmalife:")) return
-    fluid["addProperty(java.lang.String,java.lang.Number)"]("amount", castMap[fluid.get("amount")])
+    const fluid = recipe.json.asMap()?.fluid
+    if (!fluid || !castMap[fluid.get("amount")]) return
+    fluid.asMap().put("amount", castMap[fluid.get("amount")])
+    recipe.save()
   })
 }
