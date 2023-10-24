@@ -10,10 +10,10 @@
   "coordinate_scale": 1,
   "ambient_light": 0,
   "logical_height": 256,
-  "infiniburn": "#minecraft:infiniburn_overworld",
+  "infiniburn": "#gcys:infiniburn_pace",
   "min_y": 0,
   "height": 256,
-  "effects": "ad_astra:glacio_orbit",
+  "effects": "gcys:space",
   "monster_spawn_block_light_limit": 0,
   "monster_spawn_light_level": {
     "type": "minecraft:uniform",
@@ -25,10 +25,10 @@
   "type": "allthemodium:the_other_orbit",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "ad_astra:orbit",
+    "settings": "gcys:space",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "ad_astra:orbit"
+      "biome": "gcys:space"
     }
   }
 }

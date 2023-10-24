@@ -1,7 +1,7 @@
 {
   "translation": "biome.allthemodium.the_other",
-  "galaxy": "ad_astra:milky_way",
-  "solar_system": "ad_astra:proxima_centauri",
+  "galaxy": "gcys:milky_way",
+  "solar_system": "gvys:proxima_centauri",
   "world": "allthemodium:the_other",
   "orbit_world": "allthemodium:the_other_orbit",
   "rocket_tier": 4,

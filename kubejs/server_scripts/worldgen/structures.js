@@ -11,6 +11,7 @@ const strucBlocksReplacementMap = {
   "minecraft:dirt_path": "tfc:grass_path/loam",
   "minecraft:grass_block": "tfc:grass/loam",
   "minecraft:farmland": "tfc:farmland/loam",
+  "minecraft:andesite": "tfc:rock/hardened/andesite",
   "minecraft:stone_bricks": "tfc:rock/smooth/granite",
   "minecraft:red_sandstone": "tfc:raw_sandstone/red",
   "minecraft:chiseled_red_sandstone": "tfc:chiseled_sandstone/red",
