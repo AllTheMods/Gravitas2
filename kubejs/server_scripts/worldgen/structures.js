@@ -71,6 +71,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:stone_slab": "tfc:rock/raw/granite_slab",
   "minecraft:smooth_stone_slab": "tfc:rock/smooth/granite_slab",
   "minecraft:polished_andesite": 'tfc:rock/smooth/andesite',
+  "minecraft:bookshelf": "tfc:wood/planks/spruce_bookshelf",
 }
 
 function getState(block, state) {
