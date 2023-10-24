@@ -39,6 +39,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:cobblestone_slab": "tfc:rock/cobble/granite_slab",
   "minecraft:stone_stairs": "tfc:rock/raw/granite_stairs",
   "minecraft:stone_brick_stairs": "tfc:rock/bricks/granite_stairs",
+  "minecraft:stone_brick_wall": "tfc:rock/bricks/granite_wall",
   "minecraft:cut_red_sandstone_slab": "tfc:cut_sandstone/red_slab",
   "minecraft:cobblestone_wall": "tfc:rock/bricks/granite_wall",
   "minecraft:chiseled_stone_bricks": "tfc:rock/chiseled/granite",
@@ -70,6 +71,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:stone_slab": "tfc:rock/raw/granite_slab",
   "minecraft:smooth_stone_slab": "tfc:rock/smooth/granite_slab",
   "minecraft:polished_andesite": 'tfc:rock/smooth/andesite',
+  "minecraft:bookshelf": "tfc:wood/planks/spruce_bookshelf",
 }
 
 function getState(block, state) {

@@ -68,6 +68,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create
   event.remove({ id: "create:crafting/materials/andesite_alloy" })
   event.remove({ id: "create:crafting/materials/andesite_alloy_from_zinc" })
+  event.remove({ id: "create:crafting/kinetics/millstone" })
   event.remove({ id: "create:mixing/andesite_alloy" })
   event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
   event.remove({ id: "create:deploying/cogwheel" })
