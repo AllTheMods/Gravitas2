@@ -62,7 +62,7 @@ GTCEuStartupEvents.registry("gtceu:material", (event) => {
 })
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityEvent$EnteringSection", event => {
-  if (event.entity.level().isClientSide()) return
+  if (!event.didChunkChange()) return
   notifyChunkOwner(event)
 })
 

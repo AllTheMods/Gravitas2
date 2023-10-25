@@ -5,7 +5,7 @@ const $ChunkDimPos = Java.loadClass("dev.ftb.mods.ftblibrary.math.ChunkDimPos")
 
 const notifyChunkOwner = (/** @type {Internal.EntityEvent$EnteringSection} */ event) => {
   if (!event.entity.isPlayer()) return
-  if (!event.didChunkChange()) return
+  if (event.entity.level().clientSide) return
   if (!$FTBChunksAPI.isManagerLoaded()) return
   const chunkManager = $FTBChunksAPI.getManager()
   /** @type {Internal.ServerPlayer} */
