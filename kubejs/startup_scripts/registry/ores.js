@@ -20,10 +20,70 @@ const OVERLAY_MAP = {
 }
 
 const registerGTCOres = (/** @type {Registry.Block} */ event) => {
-  const blocks = Object.keys(global.gregOreBlockProps)
+  let blocks = Utils.newList()
+  let stones = Utils.newList()
+  blocks.addAll(Object.keys(global.gregOreBlockProps))
+  stones.addAll(global.tfcStone)
+
+  for (const blocksIt = blocks.iterator(); blocksIt.hasNext();) {
+    let block = blocksIt.next()
+    for (const stonesIt = stones.iterator(); stonesIt.hasNext();) {
+      let stone = stonesIt.next()
+      let ore = event
+        .create(`gregitas:ore/${block}/${stone}`, "basic")
+        .defaultCutout()
+        .noDrops()
+        .requiresTool()
+        .tagBlock("minecraft:mineable/pickaxe")
+        .tagBlock("tfc:rock/ores")
+        .tagBlock("forge:ores")
+        .tagBlock(`forge:ores/${block}`)
+        .tagBlock("minecraft:needs_iron_tool")
+        .tagBlock("tfc:can_collapse")
+        .tagBlock("tfc:can_start_collapse")
+        .tagBlock("tfc:can_trigger_collapse")
+        .tagBlock("tfc:monster_spawn_on")
+        .tagBlock("tfc:prospectable")
+        .mapColor(global.gregOreBlockProps[block].color)
+        .stoneSoundType()
+        .color(1, global.gregOreBlockProps[block].color)
+        .item((ib) => ib.color(1, global.gregOreBlockProps[block].color))
+      ore.modelJson = {
+        parent: "tfc:block/ore",
+        textures: {
+          all: `tfc:block/rock/raw/${stone}`,
+          particle: `tfc:block/rock/raw/${stone}`,
+          overlay: OVERLAY_MAP[global.gregOreBlockProps[block].overlay]
+        }
+      }
+      ore.lootTable = (loot) => {
+        loot.type = "minecraft:block"
+        loot.customId = Utils.id(`gregitas:ore/${block}/${stone}`)
+        loot.addPool((pool) => {
+          pool.survivesExplosion()
+          pool.addEntry({
+            type: "minecraft:item",
+            name: `gtceu:raw_${block}`,
+            functions: [
+              {
+                function: "minecraft:apply_bonus",
+                enchantment: "minecraft:fortune",
+                formula: "minecraft:ore_drops"
+              },
+              {
+                function: "minecraft:explosion_decay"
+              }
+            ]
+          })
+        })
+      }
+    }
+  }
+  /* TESTING ABOVE IMPLEMENTATION, DO NO DELETE UNTIL CONFIRMED STABILITY
+  let blocks = Object.keys(global.gregOreBlockProps)
   blocks.forEach((block) => {
     global.tfcStone.forEach((stone) => {
-      const ore = event
+      let ore = event
         .create(`gregitas:ore/${block}/${stone}`, "basic")
         .defaultCutout()
         .noDrops()
@@ -73,4 +133,5 @@ const registerGTCOres = (/** @type {Registry.Block} */ event) => {
       }
     })
   })
+  */
 }
