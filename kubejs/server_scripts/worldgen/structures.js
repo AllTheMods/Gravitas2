@@ -107,6 +107,7 @@ const regexArray = [
   [new RegExp(/^stripped_(\w+?)_wood$/), "tfc:wood/stripped_wood/$1"],
   [new RegExp(/^(\w+?)_leaves$/), "tfc:wood/leaves/$1"],
   [new RegExp(/^(\w+?)_wood$/), "tfc:wood/wood/$1"],
+  [new RegExp(/^(\w+?)_sapling$/), "tfc:wood/sapling/$1"],
   [new RegExp(/^(\w+?)_planks$/), "tfc:wood/planks/$1"],
   [new RegExp(/^(\w+?)_stairs$/), "tfc:wood/planks/$1_stairs"],
   [new RegExp(/^(\w+?)_slab$/), "tfc:wood/planks/$1_slab"],

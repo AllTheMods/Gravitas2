@@ -17,11 +17,9 @@ const furnacent = [
   "gtceu:shaped/electric_blast_furnace",
   "enderio:stirling_generator",
   "railcraft:steam_oven",
-  "ad_astra:recipes/fuel_refinery",
   "enderio:primitive_alloy_smelter",
   "ae2:network/blocks/energy_vibration_chamber",
   "railcraft:tunnel_bore",
-  "ad_astra:recipes/coal_generator",
   "integrateddynamics:crafting/coal_generator"
 ]
 

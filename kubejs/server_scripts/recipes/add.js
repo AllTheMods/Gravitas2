@@ -36,7 +36,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     R: "gtceu:wrought_iron_rod",
     S: "gtceu:wrought_iron_screw"
   })
-
+  event.shaped("tfc:bloomery", ["BBB", "B B", "BBB"], {
+    B: "#forge:double_sheets/any_bronze"
+  })
   event.custom({
     type: "tfc:glassworking",
     operations: ["blow", "blow", "roll", "pinch", "saw"],
