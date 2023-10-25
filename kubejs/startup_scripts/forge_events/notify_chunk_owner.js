@@ -2,10 +2,11 @@
 
 const $FTBChunksAPI = Java.loadClass("dev.ftb.mods.ftbchunks.api.FTBChunksAPI").api()
 const $ChunkDimPos = Java.loadClass("dev.ftb.mods.ftblibrary.math.ChunkDimPos")
+const $Player = Java.loadClass("net.minecraft.world.entity.player.Player")
 
 const notifyChunkOwner = (/** @type {Internal.EntityEvent$EnteringSection} */ event) => {
-  if (!event.entity.isPlayer()) return
-  if (event.entity.level().clientSide) return
+  if (!event.didChunkChange()) return
+  if (!(event.entity instanceof $Player)) return
   if (!$FTBChunksAPI.isManagerLoaded()) return
   const chunkManager = $FTBChunksAPI.getManager()
   /** @type {Internal.ServerPlayer} */
@@ -14,7 +15,7 @@ const notifyChunkOwner = (/** @type {Internal.EntityEvent$EnteringSection} */ ev
   const newChunkDimPos = new $ChunkDimPos(player.level().dimensionKey, event.getNewPos().chunk())
   const oldTeam = chunkManager.getChunk(oldChunkDimPos)?.teamData?.team
   const newTeam = chunkManager.getChunk(newChunkDimPos)?.teamData?.team
-  if (newTeam && (!newTeam.equals(oldTeam))) {
+  if (newTeam && !newTeam.equals(oldTeam)) {
     if (newTeam.getRankForPlayer(player.uuid).isAllyOrBetter()) {
       player.statusMessage = Text.green("You entered an allied area owned by ").append(newTeam.coloredName)
     } else {
