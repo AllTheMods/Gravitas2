@@ -50,9 +50,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({id: /^railcraft:.*_gear/, mod: "railcraft" })
   event.remove({id: /^railcraft:.*_shears/, mod: "railcraft" })
 
-  //Ad Astra
-  event.remove({id: /^ad_astra:hammering.*/, mod: "ad_astra" })
-
   //Create
   event.remove({id: "create:crafting/materials/andesite_alloy"})
   event.remove({id: "create:crafting/materials/andesite_alloy_from_zinc" })

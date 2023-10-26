@@ -1,11 +1,6 @@
 {
-  "type": "allthemodium:the_other_orbit",
+  "type": "gcyr:space",
   "generator": {
-    "type": "minecraft:noise",
-    "settings": "ad_astra:orbit",
-    "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "ad_astra:orbit"
-    }
+    "type": "gcyr:space"
   }
 }
