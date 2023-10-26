@@ -1,7 +1,7 @@
 {
   "translation": "biome.allthemodium.the_other",
-  "galaxy": "ad_astra:milky_way",
-  "solar_system": "ad_astra:proxima_centauri",
+  "galaxy": "gcyr:milky_way",
+  "solar_system": "gcyr:proxima_centauri",
   "world": "allthemodium:the_other",
   "orbit_world": "allthemodium:the_other_orbit",
   "rocket_tier": 4,
@@ -12,5 +12,5 @@
   "solar_power": 1,
   "orbit_solar_power": 2,
   "has_oxygen": true,
-  "button_color": "dark_red"
+  "button_color": 4284679172
 }

@@ -1,6 +1,7 @@
 {
-  "replace": true,
-  "values": [
-    "ad_astra:lunar_wastelands"
-      ]
+    "replace": true,
+    "values": [
+      "gcyr:moon"
+    ]
 }
+  
