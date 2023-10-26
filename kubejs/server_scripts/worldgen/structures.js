@@ -140,8 +140,8 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("repurposed_structures") ||
     event.id.startsWith("apotheosis") ||
     event.id.startsWith("waystones") ||
-    event.id.startsWith("ae2") ||
-    event.id.startsWith("ad_astra")
+    event.id.startsWith("ae2")/* ||
+    event.id.startsWith("ad_astra")*/
   ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {
