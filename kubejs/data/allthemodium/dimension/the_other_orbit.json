@@ -1,6 +1,6 @@
 {
-  "type": "allthemodium:the_other_orbit",
+  "type": "gcyr:space",
   "generator": {
-    "type": "gcys:space"
+    "type": "gcyr:space"
   }
 }

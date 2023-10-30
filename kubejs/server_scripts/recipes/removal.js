@@ -60,10 +60,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
-  //Ad Astra
-  event.remove({ id: /^ad_astra:hammering.*/, mod: "ad_astra" })
-  event.remove({ id: "ad_astra:recipes/steel_ingot_from_blasting_iron_ingot" })
-
   //Apotheosis
   event.remove({ id: /^apotheosis:salvaging.*_horse_armor/ })
 
