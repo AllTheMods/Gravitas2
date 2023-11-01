@@ -5,6 +5,7 @@ const strucBlocksReplacementMap = {
   "minecraft:blast_furnace": "minecraft:air",
   "minecraft:smoker": "minecraft:air",
   "minecraft:fletching_table": "minecraft:air",
+  "minecraft:cartography_table": "minecraft:air",
   "minecraft:cobblestone": "tfc:rock/raw/granite",
   "minecraft:gold_ore": "minecraft:water",
   "minecraft:dirt": "tfc:dirt/loam",
@@ -32,7 +33,8 @@ const strucBlocksReplacementMap = {
   "minecraft:attached_melon_stem": "tfc:crop/melon",
   "minecraft:stone": "tfc:rock/hardened/granite",
   "minecraft:deepslate": "tfc:rock/hardened/basalt",
-  "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt"
+  "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt",
+  "minecraft:infested_chiseled_stone_bricks": "tfc:rock/chiseled/granite",
 }
 
 const strucBlocksWithPropertiesMap = {
@@ -79,6 +81,9 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:smooth_stone_slab": "tfc:rock/smooth/granite_slab",
   "minecraft:polished_andesite": 'tfc:rock/smooth/andesite',
   "minecraft:bookshelf": "tfc:wood/planks/spruce_bookshelf",
+  "minecraft:iron_bars": "tfc:metal/bars/copper",
+  "minecraft:barrel": "tfc:wood/barrel/spruce",
+  "minecraft:campfire": "tfc:firepit",
 }
 
 function getState(block, state) {

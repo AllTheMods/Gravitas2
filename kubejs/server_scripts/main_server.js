@@ -56,3 +56,8 @@ ServerEvents.lowPriorityData((event) => {
 NetworkEvents.dataReceived("customTask", (event) => {
   serverObserveGtTask(event) // TODO: needs rework
 })
+
+MoreJSEvents.villagerTrades((event) => {
+  replaceTrades(event)
+
+})

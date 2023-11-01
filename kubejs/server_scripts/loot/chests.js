@@ -183,6 +183,7 @@ const chestReplacementMap = {
   "minecraft:stone_sword": "tfc:stone/javelin/igneous_extrusive",
   "minecraft:sugar_cane": "tfc:seeds/sugarcane",
   "minecraft:suspicious_stew": "tfc:food/green_bean",
+  "minecraft:sweet_berries": "tfc:food/strawberry",
   "minecraft:torch": "tfc:torch",
   "minecraft:water_bucket": "tfc:wooden_bucket",
   "minecraft:wheat": "tfc:food/wheat",
