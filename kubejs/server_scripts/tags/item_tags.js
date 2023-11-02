@@ -120,4 +120,14 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add(`forge:double_sheets/cast_iron`, `gtceu:iron_double_plate`)
   event.add("firmalife:sweetener", "#tfc:sweetener")
   event.add("forge:treated_wood", "firmalife:treated_wood")
+
+  event.add('tfc:any_knapping', ['minecraft:flint', 'gtceu:rubber_plate', 'gtceu:polyethylene_plate', 'gtceu:polytetrafluoroethylene_plate', 'gtceu:polybenzimidazole_plate'])
+  event.add('tfc:flint_knapping', 'minecraft:flint')
+  event.add('tfc:rubber_knapping', ['gtceu:rubber_plate', 'gtceu:polyethylene_plate', 'gtceu:polytetrafluoroethylene_plate', 'gtceu:polybenzimidazole_plate'])
+
+  GTRegistries.MATERIALS.forEach(id => {
+      event.add('tfc:saws', `gtceu:${id}_saw`)
+      event.add('tfc:hammers', `gtceu:${id}_hammer`)
+      event.add('tfc:knives', `gtceu:${id}_knife`)
+  })
 }

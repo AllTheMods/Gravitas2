@@ -6,6 +6,7 @@ ServerEvents.recipes((event) => {
   recipeAdd(event)
   replaceTFCHeatingAndCasting(event)
   addCollapse(event)
+  tfcGregTools(event)
 })
 
 LootJS.modifiers((event) => {
