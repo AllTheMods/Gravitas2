@@ -35,6 +35,10 @@ ServerEvents.tags("block", (event) => {
   addBlockTags(event)
 })
 
+ServerEvents.tags('fluid', (event) => {
+  addFluidTags(event)
+})
+
 ServerEvents.tags("worldgen/configured_feature", (event) => {
   addConfiguredFeaturesTags(event)
 })

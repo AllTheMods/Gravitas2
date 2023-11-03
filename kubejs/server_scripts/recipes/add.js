@@ -132,6 +132,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(40)
       .EUt(LV)
   })
+
+  event.shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
+  event.shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
   //GTCEU End
 
   //Rock and Stone!

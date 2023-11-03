@@ -356,11 +356,6 @@ const gtTFCTools = [
     name: 'Titanium'
   },
   {
-    id: 'bronze',
-    color: 0xFF8000,
-    name: 'Bronze'
-  },
-  {
     id: 'invar',
     color: 0xB4B478,
     name: 'Invar'
@@ -381,19 +376,9 @@ const gtTFCTools = [
     name: 'Stainless Steel'
   },
   {
-    id: 'steel',
-    color: 0x808080,
-    name: 'Steel'
-  },
-  {
     id: 'ultimet',
     color: 0xB4B4E6,
     name: 'Ultimet'
-  },
-  {
-    id: 'wrought_iron',
-    color: 0xC8B4B4,
-    name: 'Wrought Iron'
   },
   {
     id: 'tungsten_carbide',
@@ -419,6 +404,57 @@ const gtTFCTools = [
     id: 'vanadium_steel',
     color: 0xc0c0c0,
     name: 'Vanadium Steel'
+  }
+]
+
+const gtMortars = [
+  {
+    id: 'bronze',
+    color: 0xFF8000,
+    name: 'Bronze'
+  },
+  {
+    id: 'invar',
+    color: 0xB4B478,
+    name: 'Invar'
+  },
+  {
+    id: 'steel',
+    color: 0x808080,
+    name: 'Steel'
+  },
+  {
+    id: 'wrought_iron',
+    color: 0xC8B4B4,
+    name: 'Wrought Iron'
+  },
+  {
+    id: 'damascus_steel',
+    color: 0x6E6E6E,
+    name: 'Damascus Steel'
+  },
+  {
+    id: 'cobalt_brass',
+    color: 0xB4B4A0,
+    name: 'Cobalt Brass'
+  }
+]
+
+const gtTFCtoolsTFC = [
+  {
+    id: 'bronze',
+    color: 0xFF8000,
+    name: 'Bronze'
+  },
+  {
+    id: 'steel',
+    color: 0x808080,
+    name: 'Steel'
+  },
+  {
+    id: 'wrought_iron',
+    color: 0xC8B4B4,
+    name: 'Wrought Iron'
   },
   {
     id: 'red_steel',

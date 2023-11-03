@@ -298,7 +298,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         ).id('gregitas:rubber_knapping/plunger_head')
 
         gtceuToolsTFC.forEach((metal) => {
-            event.shaped(`gtceu:${metal.id}_plunger`, [' P', 'H '], {P:'gregitas:plunger_head', R:`gtceu:${metal.id}_long_rod`}).id(`gregitas:shaped/${metal.id}_plunger`)
+            event.shapeless(`gtceu:${metal.id}_plunger`, ['gregitas:plunger_head', `gtceu:${metal.id}_long_rod`]).id(`gregitas:shapeless/${metal.id}_plunger`)
         })
 
     //Wrench
@@ -369,18 +369,175 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.shaped(`gtceu:${metal.id}_knife`, [' B', 'H '], {B: `gregitas:${metal.id}_knife_blade`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_knife`)
         })
 
-    //Removal
-        GTRegistries.MATERIALS.forEach(id => {
-            event.remove(`gtceu:shaped/file_${id}`)
-            event.remove(`gtceu:shaped/wrench_${id}`)
-            event.remove(`gtceu:shaped/saw_${id}`)
-            event.remove(`gtceu:shaped/plunger_${id}`)
-            event.remove(`gtceu:shaped/hammer_${id}`)
-            event.remove(`gtceu:shaped/knife_${id}`)
-            event.remove(`gtceu:shaped/screwdriver_${id}`)
-            event.remove(`gtceu:shaped/crowbar_${id}`)
-            event.remove(`gtceu:shaped/mortar_${id}`)
-            event.remove(`gtceu:shaped/soft_mallet_${id}`)
-            event.remove(`gtceu:shaped/wire_cutter_${id}`)
+    //Sword
+        gtceuToolsGT.forEach((metal) => {
+            event.custom(
+                {
+                    type: 'tfc:casting',
+                    mold: {
+                        item: 'tfc:ceramic/sword_blade_mold'
+                    },
+                    fluid: {
+                        ingredient: metal.fluid,
+                        amount: 288.0
+                    },
+                    result: {
+                        item: `gregitas:${metal.id}_sword_blade`
+                    },
+                    break_chance: 1
+                }
+            )
+
+            event.shaped(`gtceu:${metal.id}_sword`, [' H', 'R '], {H: `gregitas:${metal.id}_sword_blade`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_sword`)
         })
+
+    //Pickaxe
+        gtceuToolsGT.forEach((metal) => {
+            event.custom(
+                {
+                    type: 'tfc:casting',
+                    mold: {
+                        item: 'tfc:ceramic/pickaxe_head_mold'
+                    },
+                    fluid: {
+                        ingredient: metal.fluid,
+                        amount: 144.0
+                    },
+                    result: {
+                        item: `gregitas:${metal.id}_pickaxe_head`
+                    },
+                    break_chance: 1
+                }
+            )
+
+            event.shaped(`gtceu:${metal.id}_pickaxe`, [' H', 'R '], {H: `gregitas:${metal.id}_pickaxe_head`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_pickaxe`)
+        })
+
+    //Axe
+        gtceuToolsGT.forEach((metal) => {
+            event.custom(
+                {
+                    type: 'tfc:casting',
+                    mold: {
+                        item: 'tfc:ceramic/axe_head_mold'
+                    },
+                    fluid: {
+                        ingredient: metal.fluid,
+                        amount: 144.0
+                    },
+                    result: {
+                        item: `gregitas:${metal.id}_axe_head`
+                    },
+                    break_chance: 1
+                }
+            )
+
+            event.shaped(`gtceu:${metal.id}_axe`, [' H', 'R '], {H: `gregitas:${metal.id}_axe_head`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_axe`)
+        })
+
+    //Shovel
+        gtceuToolsGT.forEach((metal) => {
+            event.custom(
+                {
+                    type: 'tfc:casting',
+                    mold: {
+                        item: 'tfc:ceramic/shovel_head_mold'
+                    },
+                    fluid: {
+                        ingredient: metal.fluid,
+                        amount: 144.0
+                    },
+                    result: {
+                        item: `gregitas:${metal.id}_shovel_head`
+                    },
+                    break_chance: 1
+                }
+            )
+
+            event.shaped(`gtceu:${metal.id}_shovel`, [' H', 'R '], {H: `gregitas:${metal.id}_shovel_head`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_shovel`)
+        })
+
+    //Hoe
+        gtceuToolsGT.forEach((metal) => {
+            event.custom(
+                {
+                    type: 'tfc:casting',
+                    mold: {
+                        item: 'tfc:ceramic/hoe_head_mold'
+                    },
+                    fluid: {
+                        ingredient: metal.fluid,
+                        amount: 144.0
+                    },
+                    result: {
+                        item: `gregitas:${metal.id}_hoe_head`
+                    },
+                    break_chance: 1
+                }
+            )
+
+            event.shaped(`gtceu:${metal.id}_hoe`, [' H', 'R '], {H: `gregitas:${metal.id}_hoe_head`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_hoe`)
+        })
+
+    //Scythe
+        gtceuToolsGT.forEach((metal) => {
+            event.custom(
+                {
+                    type: 'tfc:casting',
+                    mold: {
+                        item: 'tfc:ceramic/scythe_blade_mold'
+                    },
+                    fluid: {
+                        ingredient: metal.fluid,
+                        amount: 144.0
+                    },
+                    result: {
+                        item: `gregitas:${metal.id}_scythe_head`
+                    },
+                    break_chance: 1
+                }
+            )
+
+            event.shaped(`gtceu:${metal.id}_scythe`, [' H', 'R '], {H: `gregitas:${metal.id}_scythe_head`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_scythe`)
+        })
+
+    //Removal & Misc
+    
+    gtceuDrum.forEach((type) => {
+        event.shapeless(`gtceu:${type}_drum`, `gtceu:${type}_drum`).id(`gregitas:shapeless/${type}_drum`)
+    })
+
+    gtceuTank.forEach((type) => {
+        event.shapeless(`gtceu:${type}_tank`, `gtceu:${type}_tank`).id(`gregitas:shapeless/${type}_tank`)
+    })
+
+    event.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/small_tool_handle')
+
+    event.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/wood_long_rod')
+
+    GTRegistries.MATERIALS.forEach(id => {
+        event.remove(`gtceu:shaped/file_${id}`)
+        event.remove(`gtceu:shaped/wrench_${id}`)
+        event.remove(`gtceu:shaped/saw_${id}`)
+        event.remove(`gtceu:shaped/plunger_${id}`)
+        event.remove(`gtceu:shaped/hammer_${id}`)
+        event.remove(`gtceu:shaped/knife_${id}`)
+        event.remove(`gtceu:shaped/screwdriver_${id}`)
+        event.remove(`gtceu:shaped/crowbar_${id}`)
+        event.remove(`gtceu:shaped/mortar_${id}`)
+        event.remove(`gtceu:shaped/soft_mallet_${id}`)
+        event.remove(`gtceu:shaped/wire_cutter_${id}`)
+        event.remove(`gtceu:shaped/sword_${id}`)
+        event.remove(`gtceu:shaped/pickaxe_${id}`)
+        event.remove(`gtceu:shaped/axe_${id}`)
+        event.remove(`gtceu:shaped/shovel_${id}`)
+        event.remove(`gtceu:shaped/hoe_${id}`)
+        event.remove(`gtceu:shaped/scythe_${id}`)
+        event.remove(`gtceu:shaped/butchery_knife_${id}`)
+        event.remove(`gtceu:shaped/plate_${id}`)
+        event.remove(`gtceu:shaped/plate_double_${id}`)
+        event.remove(`gtceu:shaped/stick_${id}`)
+        event.remove(`gtceu:shaped/stick_long_${id}`)
+        event.remove(`gtceu:shaped/stick_long_stick_${id}`)
+    })
 }
