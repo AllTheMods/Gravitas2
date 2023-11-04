@@ -123,20 +123,20 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/hammer_head_mold'
-                    },
-                    fluid: {
-                    ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_hammer_head`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'punch_last',
+                        'shrink_not_last'
+                    ]
                 }
-            ).id(`gregitas:casting/${metal.id}_hammer_head`)
+            )
 
             event.shaped(`gtceu:${metal.id}_hammer`, ['RH'], {H: `gregitas:${metal.id}_hammer_head`, R: 'gtceu:wood_long_rod'}).id(`gregitas:shaped/${metal.id}_hammer`)
         })
@@ -145,20 +145,20 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/saw_blade_mold'
-                    },
-                    fluid: {
-                    ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_saw_blade`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'hit_last',
+                        'hit_second_last'
+                    ]
                 }
-            ).id(`gregitas:casting/${metal.id}_saw_blade`)
+            )
 
             event.shaped(`gtceu:${metal.id}_saw`, ['HR'], {H: `gregitas:${metal.id}_saw_blade`, R: 'gtceu:wood_long_rod'}).id(`gregitas:shaped/${metal.id}_saw`)
         })
@@ -351,18 +351,19 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsTFC.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/knife_blade_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_knife_blade`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'hit_last',
+                        'draw_second_last',
+                        'draw_third_last'
+                    ]
                 }
             )
 
@@ -373,18 +374,19 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/sword_blade_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 288.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:double_ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_sword_blade`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'hit_last',
+                        'bend_second_last',
+                        'bend_third_last'
+                    ]
                 }
             )
 
@@ -395,18 +397,19 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/pickaxe_head_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_pickaxe_head`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'punch_last',
+                        'bend_not_last',
+                        'draw_not_last'
+                    ]
                 }
             )
 
@@ -417,18 +420,19 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/axe_head_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_axe_head`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'punch_last',
+                        'hit_second_last',
+                        'upset_third_last'
+                    ]
                 }
             )
 
@@ -439,18 +443,18 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/shovel_head_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_shovel_head`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'punch_last',
+                        'hit_not_last'
+                    ]
                 }
             )
 
@@ -461,18 +465,19 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/hoe_head_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_hoe_head`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'punch_last',
+                        'hit_not_last',
+                        'bend_not_last'
+                    ]
                 }
             )
 
@@ -483,18 +488,19 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         gtceuToolsGT.forEach((metal) => {
             event.custom(
                 {
-                    type: 'tfc:casting',
-                    mold: {
-                        item: 'tfc:ceramic/scythe_blade_mold'
-                    },
-                    fluid: {
-                        ingredient: metal.fluid,
-                        amount: 144.0
+                    type: 'tfc:anvil',
+                    input: {
+                        tag: `forge:ingots/${metal.id}`
                     },
                     result: {
                         item: `gregitas:${metal.id}_scythe_head`
                     },
-                    break_chance: 1
+                    tier: metal.tier,
+                    rules: [
+                        'bend_third_last',
+                        'draw_second_last',
+                        'bend_third_last'
+                    ]
                 }
             )
 
