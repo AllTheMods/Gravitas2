@@ -48,27 +48,76 @@ const tfcMetal = [
   'steel',
   'black_steel',
   'blue_steel',
-  'red_steel'
-]
-
-const gtceuALLToolMetalsID = [
-  'aluminium',
-  'titanium',
-  'bronze',
-  'invar',
-  'sterling_silver',
-  'rose_gold',
-  'stainless_steel',
-  'steel',
-  'ultimet',
-  'wrought_iron',
+  'red_steel',
   'tungsten_carbide',
   'damascus_steel',
   'tungsten_steel',
   'cobalt_brass',
   'vanadium_steel',
-  'red_steel',
-  'blue_steel'
+  'ultimet',
+  'invar',
+  'aluminium',
+  'titanium'
+]
+
+const tfcRockKnapping = [
+  'igneous_extrusive',
+  'igneous_intrusive',
+  'metamorphic',
+  'sedimentary'
+]
+
+const gtMortars = [
+  {
+    id: 'bronze',
+    tier: 2,
+    double: 'tfc:metal/double_ingot/bronze'
+  },
+  {
+    id: 'invar',
+    tier: 3,
+    double: 'gregitas:double_bronze_ingot'
+  },
+  {
+    id: 'steel',
+    tier: 4,
+    double: 'tfc:metal/double_ingot/steel'
+  },
+  {
+    id: 'wrought_iron',
+    tier: 3,
+    double: 'tfc:metal/double_ingot/wrought_iron'
+  },
+  {
+    id: 'damascus_steel',
+    tier: 5,
+    double: 'gregitas:double_damascus_steel_ingot'
+  },
+  {
+    id: 'cobalt_brass',
+    tier: 3,
+    double: 'gregitas:double_cobalt_brass_ingot'
+  }
+]
+
+const gtceuALLToolMetalsID = [
+    'aluminium',
+    'titanium',
+    'bronze',
+    'invar',
+    'sterling_silver',
+    'rose_gold',
+    'stainless_steel',
+    'steel',
+    'ultimet',
+    'wrought_iron',
+    'tungsten_carbide',
+    'damascus_steel',
+    'tungsten_steel',
+    'cobalt_brass',
+    'vanadium_steel',
+    'red_steel',
+    'blue_steel'
 ]
 
 const gtceuToolsTFC = [
