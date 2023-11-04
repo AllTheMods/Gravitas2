@@ -501,15 +501,29 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.shaped(`gtceu:${metal.id}_scythe`, [' H', 'R '], {H: `gregitas:${metal.id}_scythe_head`, R: '#forge:rods/wood'}).id(`gregitas:shpaed/${metal.id}_scythe`)
         })
 
-    //Removal & Misc
-    
-    gtceuDrum.forEach((type) => {
-        event.shapeless(`gtceu:${type}_drum`, `gtceu:${type}_drum`).id(`gregitas:shapeless/${type}_drum`)
-    })
+    //Buchery Knife
+        gtceuToolsTFC.forEach((metal) => {
+            event.custom({
+                type: 'tfc:anvil',
+                input: { 
+                    item: `gtceu:${metal.id}_double_plate`
+                },
+                result: {
+                    item: `gregitas:${metal.id}_butchery_blade`,
+                    count: 1
+                },
+                tier: metal.tier,
+                rules: [
+                    'hit_third_last', 
+                    'draw_second_last', 
+                    'shrink_last'
+                ]
+            })
 
-    gtceuTank.forEach((type) => {
-        event.shapeless(`gtceu:${type}_tank`, `gtceu:${type}_tank`).id(`gregitas:shapeless/${type}_tank`)
-    })
+            event.shaped(`gtceu:${metal.id}_butchery_knife`, [' B', 'H '], {B: `gregitas:${metal.id}_butchery_blade`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_butchery_knife`)
+        })
+
+    //Removal & Misc
 
     event.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/small_tool_handle')
 
