@@ -135,6 +135,24 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
   event.shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
+
+  event.custom({
+    type: "tfc:barrel_sealed",
+    input_item: {
+      ingredient: {
+        tag: 'tfc:lumber'
+      }
+    },
+    input_fluid: {
+      ingredient: 'gtceu:creosote',
+      amount: 25
+    },
+    output_item: {
+      item: 'gregitas:creosote_treated_lumber'
+    },
+    duration: 6000
+  }).id('gregitas:barrel/creosote_treated_lumber')
+  
   //GTCEU End
 
   //Rock and Stone!
