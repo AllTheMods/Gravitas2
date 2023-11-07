@@ -1,0 +1,23 @@
+{
+  "type": "treetap:tap_extract",
+  "log": {
+    "item": "tfc:wood/log/kapok"
+  },
+  "processing_time": 9600,
+  "metal_result": {
+    "item": "kubejs:raw_resin_bucket"
+  },
+  "wooden_result": {
+    "item": "tfc:wooden_bucket",
+    "nbt": "{fluid: {FluidName: \"kubejs:raw_resin\", Amount: 1000}}"
+  },
+  "life_cycle": [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0],
+  "collect_bucket": true,
+  "fluid_color": "#bb9351",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tfc"
+    }
+  ]
+}

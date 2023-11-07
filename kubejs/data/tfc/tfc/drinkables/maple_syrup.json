@@ -1,0 +1,10 @@
+{
+  "ingredient": [
+    "kubejs:maple_syrup"
+  ],
+  "thirst": 10,
+  "food": {
+    "hunger": 10,
+    "saturation": 10
+  }
+}

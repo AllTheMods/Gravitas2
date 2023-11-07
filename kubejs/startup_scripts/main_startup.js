@@ -30,6 +30,10 @@ StartupEvents.registry("block", (event) => {
   registerGTCOres(event)
 })
 
+StartupEvents.registry("fluid", (event) => {
+  registerFluids(event)
+})
+
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
 })

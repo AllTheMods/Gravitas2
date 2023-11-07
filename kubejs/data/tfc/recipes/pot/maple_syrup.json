@@ -1,0 +1,18 @@
+{
+  "type": "tfc:pot",
+  "ingredients": [
+    {
+      "item": "tfc:powder/salt"
+    }
+  ],
+  "fluid_ingredient": {
+    "ingredient": "kubejs:raw_syrup",
+    "amount": 1000
+  },
+  "duration": 3000,
+  "temperature": 300,
+  "fluid_output": {
+      "fluid": "kubejs:maple_syrup",
+      "amount": 1000
+  }
+}
