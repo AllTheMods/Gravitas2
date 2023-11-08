@@ -6,7 +6,7 @@
     }
   ],
   "fluid_ingredient": {
-    "ingredient": "kubejs:raw_resin",
+    "ingredient": "gregitas:raw_resin",
     "amount": 1000
   },
   "duration": 3000,

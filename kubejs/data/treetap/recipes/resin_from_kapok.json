@@ -5,11 +5,11 @@
   },
   "processing_time": 9600,
   "metal_result": {
-    "item": "kubejs:raw_resin_bucket"
+    "item": "gregitas:raw_resin_bucket"
   },
   "wooden_result": {
     "item": "tfc:wooden_bucket",
-    "nbt": "{fluid: {FluidName: \"kubejs:raw_resin\", Amount: 1000}}"
+    "nbt": "{fluid: {FluidName: \"gregitas:raw_resin\", Amount: 1000}}"
   },
   "life_cycle": [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0],
   "collect_bucket": true,

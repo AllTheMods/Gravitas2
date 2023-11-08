@@ -12,25 +12,25 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
         ]
     )
     event.add('tfc:usable_in_wooden_bucket', [
-        'kubejs:raw_syrup',
-        'kubejs:maple_syrup',
-        'kubejs:raw_resin'
+        'gregitas:raw_syrup',
+        'gregitas:maple_syrup',
+        'gregitas:raw_resin'
     ]
     )
     event.add('tfc:usable_in_barrel', [
-        'kubejs:raw_syrup',
-        'kubejs:maple_syrup',
-        'kubejs:raw_resin'
+        'gregitas:raw_syrup',
+        'gregitas:maple_syrup',
+        'gregitas:raw_resin'
    ]
    )
     event.add('tfc:usable_in_pot', [
-        'kubejs:raw_syrup',
-        'kubejs:maple_syrup',
-        'kubejs:raw_resin'
+        'gregitas:raw_syrup',
+        'gregitas:maple_syrup',
+        'gregitas:raw_resin'
    ]
    )
    event.add('tfc:usable_in_jug', [
-       'kubejs:maple_syrup'
+       'gregitas:maple_syrup'
    ]
    )
 }

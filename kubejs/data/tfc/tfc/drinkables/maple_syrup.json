@@ -1,6 +1,6 @@
 {
   "ingredient": [
-    "kubejs:maple_syrup"
+    "gregitas:maple_syrup"
   ],
   "thirst": 10,
   "food": {

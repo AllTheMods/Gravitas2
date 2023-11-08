@@ -5,11 +5,11 @@
   },
   "processing_time": 12000,
   "metal_result": {
-    "item": "kubejs:raw_syrup_bucket"
+    "item": "gregitas:raw_syrup_bucket"
   },
   "wooden_result": {
     "item": "tfc:wooden_bucket",
-    "nbt": "{fluid: {FluidName: \"kubejs:raw_syrup\", Amount: 1000}}"
+    "nbt": "{fluid: {FluidName: \"gregitas:raw_syrup\", Amount: 1000}}"
   },
   "life_cycle": [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   "collect_bucket": true,
