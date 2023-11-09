@@ -30,5 +30,33 @@
         ],
         "none": [
         ]
+    },
+    "globalBookmarks1": {
+        "fisherman": [
+        ],
+        "none": [
+        ],
+        "toolsmith": [
+        ],
+        "farmer": [
+        ],
+        "cleric": [
+        ],
+        "fletcher": [
+        ]
+    },
+    "globalBookmarks2": {
+        "fisherman": [
+        ],
+        "none": [
+        ],
+        "toolsmith": [
+        ],
+        "farmer": [
+        ],
+        "cleric": [
+        ],
+        "fletcher": [
+        ]
     }
 }

@@ -79,6 +79,9 @@
     "ench": true,
     "spawner": true
   },
+  "lootr": {
+    "info": true
+  },
   "ae2": {
     "part_icon": true,
     "charger": true,
@@ -143,9 +146,9 @@
   },
   "create": {
     "filter": true,
+    "backtank_capacity": true,
     "goggles.requires_goggles": true,
     "goggles": false,
-    "copper_backtank": true,
     "blaze_burner": true,
     "exact_block": true,
     "crafting_blueprint": true,
