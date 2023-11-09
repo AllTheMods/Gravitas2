@@ -716,24 +716,66 @@
 		{
 			dependencies: ["72DDCB9936148388"]
 			description: [
-				"Now that we have access to a &cFirepit&r and some &aFired Molds&r, our next step is to find &aSmall Pieces of Copper&r."
+				"{gravitas.quest.caveman.desc.finding_copper.1}"
 				""
-				"You won't be able to mine anything until you have a pickaxe, so heading into the caves won't work. Instead, your best bet is to head to a &eLimestone&r region to find &a Small Malachite&r pebbles."
+				"{gravitas.quest.caveman.desc.finding_copper.2}"
 				""
-				"Each one of these will net you 10mb of Copper when smelted down, so you'll need 10 Small Malachite per tool head you want to make."
+				"{gravitas.quest.caveman.desc.finding_copper.3}"
+				""
+				"{gravitas.quest.caveman.desc.finding_copper.4}"
 			]
+			icon: {
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:ore/small_native_copper"
+			}
 			id: "6A9592B8BDE532CE"
 			shape: "gear"
 			tasks: [{
-				id: "45AB7A368F769835"
+				id: "2A50B72B4942963C"
 				item: {
 					Count: 1b
-					id: "itemfilters:tag"
+					id: "itemfilters:or"
 					tag: {
-						value: "tfc:small_ore_pieces_copper"
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_native_copper"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_tetrahedrite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_malachite"
+							}
+						]
 					}
 				}
-				title: "Small Ore Pieces of Copper"
 				type: "item"
 			}]
 			title: "&eFinding Copper&r"
@@ -743,13 +785,13 @@
 		{
 			dependencies: ["7CF28D1E8ABAF228"]
 			description: [
-				"You'll notice right away that you can't get any stone blocks from mining with that pickaxe."
+				"{gravitas.quest.caveman.desc.first_anvil.1}"
 				""
-				"To do this, you'll need to find any kind of stone and break away all of the blocks around the block touching each face. Once you do this, the stone will pop out as an item!"
+				"{gravitas.quest.caveman.desc.first_anvil.2}"
 				""
-				"To make our first anvil, we'll need to gather at least one of these blocks: Rhyolite, Basalt, Andesite, Dacite, Granite, Diorite, or Gabbro."
+				"{gravitas.quest.caveman.desc.first_anvil.3}"
 				""
-				"With one of these &aRaw Rocks&r, we can make our first &eAnvil&r by placing it down and right clicking it with a TFC Hammer."
+				"{gravitas.quest.caveman.desc.first_anvil.4}"
 			]
 			id: "59541FF5AD12B13A"
 			min_width: 300
@@ -1238,6 +1280,7 @@
 			dependencies: ["70D78EF128C722A1"]
 			description: [
 				"{gravitas.quest.caveman.desc.composter.1}"
+				"" 
 				"{gravitas.quest.caveman.desc.composter.2}"
 			]
 			id: "2AD5D0FD00A5C4FD"

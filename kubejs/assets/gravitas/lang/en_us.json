@@ -137,6 +137,15 @@
     "gravitas.quest.caveman.desc.small_ship": "Once you have some wool cloth, you can make a small ship, which is quite good for travelling the rivers. They don't get moved around by currents.",
     "gravitas.quest.caveman.desc.composter.1": "You can make compost in a composter. Compost is used to increase the nutrition of farmland, making crops grow faster and bigger. It's also needed for making planters for your Greenhouse.",
     "gravitas.quest.caveman.desc.composter.2": "To make compost, you'll need to add green and brown products to your composter. Check the TFC field guide for tips on what to add! Alternatively, just try putting things in until you put in what you need. &6Don't add meat or bones though, that will kill your compost which will kill your crops.",
+    "gravitas.quest.caveman.desc.finding_copper.1": "Now that we have access to a &cFirepit&r and some &aFired Molds&r, our next step is to find &aSmall Pieces of Copper&r.",
+    "gravitas.quest.caveman.desc.finding_copper.2": "You won't be able to mine anything until you have a pickaxe, so heading into the caves won't work.",
+    "gravitas.quest.caveman.desc.finding_copper.3": "One of your Options is to head to a &eLimestone&r region to find &aSmall Malachite&r pebbles. Or you can also find some &aNative Copper Deposit&r in a &eRiver&r which can be &cPanned&r. There are more Options for Copper which you can learn more about in the TFC Guidebook.",
+    "gravitas.quest.caveman.desc.finding_copper.4": "Each one of these will net you 16mb of Copper when smelted down, so you'll need 9 Small Malachite per tool head you want to make.",
+    "gravitas.quest.caveman.desc.first_anvil.1": "You'll notice right away that you can't get any stone blocks from mining with that pickaxe.",
+    "gravitas.quest.caveman.desc.first_anvil.2": "To do this, you'll need to find any kind of stone and break away all of the blocks around the block touching each face. Once you do this, the stone will pop out as an item!",
+    "gravitas.quest.caveman.desc.first_anvil.3": "To make our first anvil, we'll need to gather at least one of these blocks: Rhyolite, Basalt, Andesite, Dacite, Granite, Diorite, or Gabbro.",
+    "gravitas.quest.caveman.desc.first_anvil.4": "With one of these &aRaw Rocks&r, we can make our first &eAnvil&r by placing it down and right clicking it with a TFC Hammer.",
+
 
 
     "gravitas.quest.copper.desc.flux.1": "You can get flux by crushing certain loose stones in your crafting grid with a hammer.",
