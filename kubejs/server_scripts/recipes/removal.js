@@ -75,6 +75,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:deploying/large_cogwheel" })
   event.remove({ input: "minecraft:saddle", mod: "create" })
   event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
+  event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
+  event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -117,4 +119,21 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
+
+  // Railcraft
+  event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots"})
+
+  //Woodencog
+  event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:rock_knapping\/.*_alloy/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_bloom/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:deploying\/mold_.*/, mod: "woodencog"})
+
+
+  // TreeTap
+  event.remove({ mod: "treetap", output: "treetap:tap"})
 }
