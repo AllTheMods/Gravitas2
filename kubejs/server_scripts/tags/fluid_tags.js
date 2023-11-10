@@ -11,4 +11,26 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
             'gtceu:cobalt_brass'
         ]
     )
+    event.add('tfc:usable_in_wooden_bucket', [
+        'gregitas:raw_syrup',
+        'gregitas:maple_syrup',
+        'gregitas:raw_resin'
+    ]
+    )
+    event.add('tfc:usable_in_barrel', [
+        'gregitas:raw_syrup',
+        'gregitas:maple_syrup',
+        'gregitas:raw_resin'
+   ]
+   )
+    event.add('tfc:usable_in_pot', [
+        'gregitas:raw_syrup',
+        'gregitas:maple_syrup',
+        'gregitas:raw_resin'
+   ]
+   )
+   event.add('tfc:usable_in_jug', [
+       'gregitas:maple_syrup'
+   ]
+   )
 }

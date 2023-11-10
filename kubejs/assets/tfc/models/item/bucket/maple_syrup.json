@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "loader": "forge:fluid_container",
+  "parent": "forge:item/bucket",
+  "fluid": "kubejs:maple_syrup"
+}
