@@ -169,8 +169,7 @@ const tfcWoodVanillaToTFC = {
   // no bamboo
   cherry: "white_cedar"
 }
-const $HashSet = Java.loadClass("java.util.HashSet")
-let jigsawFinalStates = new $HashSet()
+
 const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event) => {
   if (
     event.id.startsWith("sgjourney") ||
