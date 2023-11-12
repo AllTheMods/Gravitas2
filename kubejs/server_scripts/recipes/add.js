@@ -12,6 +12,17 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     rules: ["bend_last", "draw_second_last", "draw_third_last"]
   })
 
+  event.custom({
+    type: "tfc:anvil",
+    input: { tag: "forge:ingots/copper" },
+    result: {
+      item: "treetap:tap",
+      count: 1
+    },
+    tier: 1,
+    rules: ["bend_last", "bend_second_last", "bend_third_last"]
+  })
+
   event.shaped("tfc:bloomery", ["BBB", "B B", "BBB"], {
     B: "#forge:double_sheets/any_bronze"
   })
