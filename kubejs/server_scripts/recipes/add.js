@@ -13,29 +13,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   event.custom({
-    type: "tfc:welding",
-    first_input: { item: "gtceu:wrought_iron_rod" },
-    second_input: { item: "gtceu:wrought_iron_rod" },
-    tier: 3,
-    result: { item: "kubejs:cutter_head" }
+    type: "tfc:anvil",
+    input: { tag: "forge:ingots/copper" },
+    result: {
+      item: "treetap:tap",
+      count: 1
+    },
+    tier: 1,
+    rules: ["bend_last", "bend_second_last", "bend_third_last"]
   })
 
-  event.custom({
-    type: "tfc:welding",
-    first_input: { item: "gtceu:wrought_iron_bolt" },
-    second_input: { item: "gtceu:wrought_iron_bolt" },
-    tier: 3,
-    result: { item: "gtceu:wrought_iron_screw" }
-  })
-
-  event.shaped("gtceu:wrought_iron_wire_cutter", [" F ", "HCD", "RSR"], {
-    F: "#forge:tools/files",
-    H: "#forge:tools/hammers",
-    C: "kubejs:cutter_head",
-    D: "#forge:tools/screwdrivers",
-    R: "gtceu:wrought_iron_rod",
-    S: "gtceu:wrought_iron_screw"
-  })
   event.shaped("tfc:bloomery", ["BBB", "B B", "BBB"], {
     B: "#forge:double_sheets/any_bronze"
   })
@@ -156,6 +143,27 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(40)
       .EUt(LV)
   })
+
+  event.shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
+  event.shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
+
+  event.custom({
+    type: "tfc:barrel_sealed",
+    input_item: {
+      ingredient: {
+        tag: 'tfc:lumber'
+      }
+    },
+    input_fluid: {
+      ingredient: 'gtceu:creosote',
+      amount: 25
+    },
+    output_item: {
+      item: 'gregitas:creosote_treated_lumber'
+    },
+    duration: 6000
+  }).id('gregitas:barrel/creosote_treated_lumber')
+  
   //GTCEU End
 
   //Rock and Stone!

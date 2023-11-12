@@ -1,0 +1,8 @@
+{
+  "galaxy": "gcyr:milky_way",
+  "solar_system": "gcyr:proxima_centauri",
+  "texture": "allthemodium:textures/block/ancient_stone.png",
+  "speed": 720,
+  "scale": 20,
+  "radius": 6.5
+}

@@ -1,0 +1,16 @@
+{
+  "translation": "biome.allthemodium.the_other",
+  "galaxy": "gcyr:milky_way",
+  "solar_system": "gcyr:proxima_centauri",
+  "world": "allthemodium:the_other",
+  "orbit_world": "allthemodium:the_other_orbit",
+  "rocket_tier": 4,
+  "gravity": 9.7,
+  "has_atmosphere": true,
+  "days_in_year": 720,
+  "temperature": 200,
+  "solar_power": 1,
+  "orbit_solar_power": 2,
+  "has_oxygen": true,
+  "button_color": 4284679172
+}

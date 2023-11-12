@@ -5,6 +5,7 @@ const strucBlocksReplacementMap = {
   "minecraft:blast_furnace": "minecraft:air",
   "minecraft:smoker": "minecraft:air",
   "minecraft:fletching_table": "minecraft:air",
+  "minecraft:cartography_table": "minecraft:air",
   "minecraft:cobblestone": "tfc:rock/raw/granite",
   "minecraft:gold_ore": "minecraft:water",
   "minecraft:dirt": "tfc:dirt/loam",
@@ -20,7 +21,7 @@ const strucBlocksReplacementMap = {
   "minecraft:muddy_mangrove_roots": "tfc:muddy_roots/loam",
   "minecraft:stone_bricks": "tfc:rock/smooth/granite",
   "minecraft:red_sandstone": "tfc:raw_sandstone/red",
-  "minecraft:chiseled_red_sandstone": "tfc:chiseled_sandstone/red",
+  // "minecraft:chiseled_red_sandstone": "we don't have a tfc",
   "minecraft:cut_red_sandstone": "tfc:cut_sandstone/red",
   "minecraft:smooth_red_sandstone": "tfc:smooth_sandstone/red",
   "minecraft:sandstone": "tfc:raw_sandstone/yellow",
@@ -32,7 +33,8 @@ const strucBlocksReplacementMap = {
   "minecraft:attached_melon_stem": "tfc:crop/melon",
   "minecraft:stone": "tfc:rock/hardened/granite",
   "minecraft:deepslate": "tfc:rock/hardened/basalt",
-  "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt"
+  "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt",
+  "minecraft:infested_chiseled_stone_bricks": "tfc:rock/chiseled/granite"
 }
 
 const strucBlocksWithPropertiesMap = {
@@ -48,7 +50,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:stone_brick_stairs": "tfc:rock/bricks/granite_stairs",
   "minecraft:stone_brick_wall": "tfc:rock/bricks/granite_wall",
   "minecraft:cut_red_sandstone_slab": "tfc:cut_sandstone/red_slab",
-  "minecraft:cobblestone_wall": "tfc:rock/bricks/granite_wall",
+  "minecraft:red_sandstone_stairs": "tfc:raw_sandstone/red_stairs",
   "minecraft:chiseled_stone_bricks": "tfc:rock/chiseled/granite",
   "minecraft:red_sandstone_wall": "tfc:raw_sandstone/red_wall",
   "minecraft:smooth_red_sandstone_stairs": "tfc:smooth_sandstone/red_stairs",
@@ -79,6 +81,41 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:smooth_stone_slab": "tfc:rock/smooth/granite_slab",
   "minecraft:polished_andesite": 'tfc:rock/smooth/andesite',
   "minecraft:bookshelf": "tfc:wood/planks/spruce_bookshelf",
+  "minecraft:iron_bars": "tfc:metal/bars/copper",
+  "minecraft:barrel": "tfc:wood/barrel/spruce",
+  "minecraft:campfire": "tfc:firepit"
+}
+
+const jigsawReplacementMap = {
+  "minecraft:oak_wood[axis=y]": "tfc:wood/wood/oak[axis=y]",
+  "minecraft:acacia_planks": "tfc:wood/planks/acacia",
+  "minecraft:mangrove_stairs[facing=north]": "tfc:wood/planks/mangrove_stairs[facing=north]",
+  "minecraft:mud": "tfc:mud/loam",
+  "minecraft:acacia_fence[east=true,west=true]": "tfc:wood/planks/acacia_fence[east=true,west=true]",
+  "minecraft:red_tulip": "tfc:plant/tulip_red",
+  "minecraft:dirt": "tfc:dirt/loam",
+  "minecraft:smooth_sandstone": "tfc:smooth_sandstone/yellow",
+  "minecraft:grass_block": "tfc:grass/loam",
+  "minecraft:acacia_fence_gate": "tfc:wood/planks/acacia_fence_gate",
+  "minecraft:mangrove_wood": "tfc:wood/wood/mangrove",
+  "minecraft:smooth_stone_slab[type=bottom]": "tfc:rock/smooth/granite_slab[type=bottom]",
+  "minecraft:muddy_mangrove_roots": "tfc:muddy_roots/loam",
+  "minecraft:acacia_stairs[facing=east]": "tfc:wood/planks/acacia_stairs[facing=east]",
+  "minecraft:stone_bricks": "tfc:rock/smooth/granite",
+  "minecraft:spruce_planks": "tfc:wood/planks/spruce",
+  "minecraft:mangrove_stairs[facing=east]": "tfc:wood/planks/mangrove_stairs[facing=east]",
+  "minecraft:andesite": "tfc:rock/hardened/andesite",
+  "minecraft:acacia_stairs[facing=south]": "tfc:wood/planks/acacia_stairs[facing=south]",
+  "minecraft:dirt_path": "tfc:grass_path/loam",
+  "minecraft:cobblestone": "tfc:rock/raw/granite",
+  "minecraft:acacia_fence[east=false,north=false,south=false,waterlogged=false,west=false]]": "",
+  "minecraft:mangrove_stairs[facing=south]": "tfc:wood/planks/mangrove_stairs[facing=south]",
+  "minecraft:acacia_log": "tfc:wood/log/acacia",
+  "minecraft:stone_slab[type=double]": "tfc:rock/raw/granite_slab[type=double]",
+  "minecraft:sandstone": "tfc:raw_sandstone/yellow",
+  "minecraft:acacia_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]": "tfc:wood/planks/acacia_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]",
+  "minecraft:dark_oak_planks": "tfc:wood/planks/hickory",
+  "minecraft:dark_oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]": "tfc:wood/planks/hickory_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
 }
 
 function getState(block, state) {
@@ -116,7 +153,7 @@ const regexArray = [
   [new RegExp(/^(\w+?)_door$/), "tfc:wood/planks/$1_door"],
   [new RegExp(/^(\w+?)_trapdoor$/), "tfc:wood/planks/$1_trapdoor"],
   [new RegExp(/^(\w+?)_pressure_plate$/), "tfc:wood/planks/$1_pressure_plate"],
-  [new RegExp(/^(\w+?)_button$/), "tfc:wood/planks/$1_button"],
+  [new RegExp(/^(\w+?)_button$/), "tfc:wood/planks/$1_button"]
 ]
 
 const tfcWoodVanillaToTFC = {
@@ -130,7 +167,7 @@ const tfcWoodVanillaToTFC = {
   // no warped
   mangrove: "mangrove",
   // no bamboo
-  cherry: "white_cedar",
+  cherry: "white_cedar"
 }
 
 const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event) => {
@@ -140,11 +177,14 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("repurposed_structures") ||
     event.id.startsWith("apotheosis") ||
     event.id.startsWith("waystones") ||
-    event.id.startsWith("ae2") ||
-    event.id.startsWith("ad_astra")
+    event.id.startsWith("ae2")
   ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {
+        if (struc.block.id == "minecraft:jigsaw") {
+          let nbt = struc.nbt()
+          nbt.final_state = jigsawReplacementMap[nbt.final_state] || nbt.final_state
+        }
         let newBlockWithProp = strucBlocksWithPropertiesMap[struc.block.id]
         if (newBlockWithProp) {
           palette.add(struc.position, getState(newBlockWithProp, struc.state()))

@@ -1,0 +1,8 @@
+{
+    "block.create_new_age.magnetite_block": "Ceramic Ferite Magnet",
+    "block.create_new_age.redstone_magnet": "Permalloy Magnet",
+    "block.create_new_age.layered_magnet": "Alnico Magnet",
+    "block.create_new_age.fluxuated_magnetite": "Neodymium Iron Boron Magnet",
+    "block.create_new_age.netherite_magnet": "Samarium Cobalt Magnet",
+    "block.create_new_age.generator_coil": "Stator Coil"
+}

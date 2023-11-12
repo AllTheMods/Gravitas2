@@ -22,6 +22,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
 
+  event.remove({ id: 'gtceu:shapeless/rubber_wood_planks' })
+
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
     event.remove({ output: `gtceu:${tool}_shovel`, mod: "gtceu" })
@@ -60,10 +62,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
-  //Ad Astra
-  event.remove({ id: /^ad_astra:hammering.*/, mod: "ad_astra" })
-  event.remove({ id: "ad_astra:recipes/steel_ingot_from_blasting_iron_ingot" })
-
   //Apotheosis
   event.remove({ id: /^apotheosis:salvaging.*_horse_armor/ })
 
@@ -77,6 +75,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:deploying/large_cogwheel" })
   event.remove({ input: "minecraft:saddle", mod: "create" })
   event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
+  event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
+  event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -119,4 +119,21 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
+
+  // Railcraft
+  event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots"})
+
+  //Woodencog
+  event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:rock_knapping\/.*_alloy/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_bloom/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog"})
+  event.remove({ id: /^woodencog:deploying\/mold_.*/, mod: "woodencog"})
+
+
+  // TreeTap
+  event.remove({ mod: "treetap", output: "treetap:tap"})
 }

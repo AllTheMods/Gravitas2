@@ -30,6 +30,10 @@ StartupEvents.registry("block", (event) => {
   registerGTCOres(event)
 })
 
+StartupEvents.registry("fluid", (event) => {
+  registerFluids(event)
+})
+
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
 })
@@ -62,8 +66,7 @@ GTCEuStartupEvents.registry("gtceu:material", (event) => {
 })
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityEvent$EnteringSection", event => {
-  if (event.entity.getLevel().isClientSide()) return
-  notifyChunkOwner(event)
+
 })
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
