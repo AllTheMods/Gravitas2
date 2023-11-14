@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-13T21:38:54.396Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="qcxRu9BE5mHCGyEUPjQj" version="22.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-14T15:49:46.208Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="4Lz7nUObDLRBqcu_LIvd" version="22.1.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2074" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -99,19 +99,19 @@
         <mxCell id="7Hfktlou8XyDzRxeF353-64" value="3x AllTheModium-Naquadah Mixture small Dust" style="text;strokeColor=#6F0000;fillColor=#a20025;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
           <mxGeometry y="150" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-55" value="200mb Hydrogen Plasma" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-55" value="2250mb Hydrogen Plasma" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
           <mxGeometry y="200" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-63" value="100mb Helium Plasma" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-63" value="1250mb Helium Plasma" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
           <mxGeometry y="230" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-54" value="10mb Raw Hypogen" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-54" value="1000mb Raw Hypogen" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
           <mxGeometry y="260" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-56" value="1mb Molten Infinity&amp;nbsp;Matter Precursor" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-56" value="250mb Molten Infinity&amp;nbsp;Matter Precursor" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
           <mxGeometry y="290" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-57" value="1mb Molten Spacetime" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-57" value="250mb Molten Spacetime" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-50" vertex="1">
           <mxGeometry y="330" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7Hfktlou8XyDzRxeF353-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="7Hfktlou8XyDzRxeF353-14" target="7Hfktlou8XyDzRxeF353-51" edge="1">
@@ -150,10 +150,10 @@
         <mxCell id="7Hfktlou8XyDzRxeF353-99" value="60s" style="text;strokeColor=#B09500;fillColor=#e3c800;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="7Hfktlou8XyDzRxeF353-96" vertex="1">
           <mxGeometry y="100" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-100" value="10mb Purified Hypogen Solution" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-96" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-100" value="100mb Purified Hypogen Solution" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-96" vertex="1">
           <mxGeometry y="130" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-104" value="990mb Impure Hypogen Solution" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-96" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-104" value="900mb Impure Hypogen Solution" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-96" vertex="1">
           <mxGeometry y="160" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7Hfktlou8XyDzRxeF353-105" value="Large Chemical Reactor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -507,7 +507,7 @@
         <mxCell id="7Hfktlou8XyDzRxeF353-281" value="1966080 eu/t (UHV)" style="text;strokeColor=#B09500;fillColor=#e3c800;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="7Hfktlou8XyDzRxeF353-279" vertex="1">
           <mxGeometry y="150" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7Hfktlou8XyDzRxeF353-282" value="time (s)" style="text;strokeColor=#B09500;fillColor=#e3c800;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="7Hfktlou8XyDzRxeF353-279" vertex="1">
+        <mxCell id="7Hfktlou8XyDzRxeF353-282" value="3s" style="text;strokeColor=#B09500;fillColor=#e3c800;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="7Hfktlou8XyDzRxeF353-279" vertex="1">
           <mxGeometry y="180" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7Hfktlou8XyDzRxeF353-283" value="5184mb Hypogen Solder Catalyst" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="7Hfktlou8XyDzRxeF353-279" vertex="1">
