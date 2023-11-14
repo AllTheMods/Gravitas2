@@ -110,6 +110,9 @@
 	#   RANKINE = Exact degrees Rankine
 	#Allowed Values: COLOR, CELSIUS, FAHRENHEIT, RANKINE, KELVIN
 	climateTooltipStyle = "CELSIUS"
+	#
+	# If true, particles specifically for wind will appear.
+	enableWindParticles = true
 
 [compatibility]
 	#
