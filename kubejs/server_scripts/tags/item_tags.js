@@ -137,4 +137,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add('forge:double_ingots', `gregitas:double_${metal.id}_ingot`)
     event.add(`forge:double_ingots/${metal.id}`, `gregitas:double_${metal.id}_ingot`)
   })
+
+  tfcDusts.forEach((dust) => {
+    event.add(`forge:dusts/${dust}`, `tfc:powder/${dust}`)
+  })
 }
