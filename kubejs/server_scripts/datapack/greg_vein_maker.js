@@ -46,8 +46,12 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
       type: "tfc:cluster_vein",
       config: {
         rarity: chancePerChunk,
-        min_y: minY,
-        max_y: maxY,
+        min_y: {
+            absolute: minY
+        },
+        max_y: {
+            absolute: maxY
+        },
         size: sizeIB,
         density: densityIB,
         blocks: blockarray,
