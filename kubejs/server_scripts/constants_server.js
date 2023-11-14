@@ -251,3 +251,8 @@ const gtceuToolsGT = [
     double: 'gregitas:double_cobalt_brass_ingot'
   }
 ]
+
+//Will be added to later
+let tfcDusts = [
+  'sulfur'
+]
