@@ -9,6 +9,8 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   gtceuAdd(event)
   createAdd(event)
+
+  spaceDustChain(event)
 })
 
 LootJS.modifiers((event) => {

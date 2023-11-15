@@ -54,6 +54,9 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "tombstone": {
+    "graves": true
+  },
   "endertanks": {
     "hud.basic": true,
     "hud": true,
@@ -146,9 +149,9 @@
   },
   "create": {
     "filter": true,
+    "backtank_capacity": true,
     "goggles.requires_goggles": true,
     "goggles": false,
-    "copper_backtank": true,
     "blaze_burner": true,
     "exact_block": true,
     "crafting_blueprint": true,
@@ -158,7 +161,9 @@
   "waystones": {
     "waystone": true
   },
-  "gravestone": {
-    "grave": true
+  "storagedrawers": {
+    "display.stacklimit": true,
+    "display.content": true,
+    "display.status": true
   }
 }

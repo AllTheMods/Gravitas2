@@ -213,4 +213,22 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             )
             .duration(500)
             .EUt(IV)
+
+    // Star Forge Controller Block Recipe
+    event.recipes.gtceu.assembly_line('star_forge')
+        .itemInputs([
+            'gtceu:uhv_machine_hull',
+            '4x #forge:circuits/uhv',
+            '4x gtceu:gravi_star',
+            '4x gtceu:uv_field_generator',
+            '64x gtceu:uhpic_chip',
+            '64x gtceu:ruthenium_trinium_americium_neutronate_single_wire'
+        ])
+        .inputFluids([
+            Fluid.of('gtceu:europium', 2592),
+            Fluid.of('gtceu:soldering_alloy', 1152)
+        ])
+        .itemOutputs('gtceu:star_forge')
+        .duration(2400)
+        .EUt(UV)
 }
