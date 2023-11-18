@@ -12,7 +12,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.gtceu.chemical_reactor("ultra_high_grade_hypogen_separation_agent")
         .itemInputs('4x minecraft:redstone')
         .inputFluids([
-            'gtceu:molten_star_matter 500',
+            'gtceu:star_matter 500',
             'gtceu:fluoroantimonic_acid 1000',
         ])
         .outputFluids('gtceu:ultra_high_grade_hypogen_separation_agent 1500')
