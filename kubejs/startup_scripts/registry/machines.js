@@ -172,14 +172,17 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
         .rotationState(RotationState.NON_Y_AXIS)
         ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("gas_centrifuge", true, true)
         .tankScalingFunction(tier => tier * 3200)
+        .workableTieredHullRenderer(GTCEu.id("block/machines/gas_centrifuge"))
 
     event.create("plasma_centrifuge", "simple", 7, 8, 9, 10, 11, 12, 13)
         .rotationState(RotationState.NON_Y_AXIS)
         ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("plasma_centrifuge", true, true)
         .tankScalingFunction(tier => tier * 3200)
+        .workableTieredHullRenderer(GTCEu.id("block/machines/plasma_centrifuge"))
     
-    event.create("chemical_vapor_depositor", "simple", 7, 8, 9, 10, 11, 12, 13)
+    event.create("chemical_vapor_depositor", "simple", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
         .rotationState(RotationState.NON_Y_AXIS)
         ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("chemical_vapor_deposition", true, true)
         .tankScalingFunction(tier => tier * 4800)
+        .workableTieredHullRenderer(GTCEu.id("block/machines/chemical_vapor_depositor"))
 }

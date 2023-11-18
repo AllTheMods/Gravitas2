@@ -65,7 +65,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
             'gtceu:helium_plasma 1250',
             'gtceu:raw_hypogen 1000',
             'gtceu:infinity_matter_precursor 250',
-            'gtceu:molten_spacetime 250'
+            'gtceu:spacetime 250'
         ])
         .EUt(UHV).duration(200)
 
@@ -242,13 +242,43 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
 
 
     // PLASMA TURBINE
-    event.recipes.gtceu.plasma_turbine("star_matter_plasma")
+    event.recipes.gtceu.plasma_generator("star_matter_plasma")
         .inputFluids('gtceu:star_matter_plasma 1')
         .outputFluids('gtceu:star_matter 1')
         .EUt(-IV).duration(400)
 
-    event.recipes.gtceu.plasma_turbine("weapons_grade_hypogen_plasma")
+    event.recipes.gtceu.plasma_generator("weapons_grade_hypogen_plasma")
         .inputFluids('gtceu:weapons_grade_hypogen_plasma 1')
         .outputFluids('gtceu:weapons_grade_hypogen 1')
         .EUt(-IV).duration(600)
+
+    event.recipes.gtceu.vacuum_freezer("high_grade_hypogen")
+        .itemInputs('1x gtceu:ingot_casting_mold')
+        .inputFluids([
+            'gtceu:molten_high_grade_hypogen 144',
+            'gtceu:liquid_nitrogen 500'
+        ])
+        .outputFluids('gtceu:nitrogen 250')
+        .itemOutputs('1x gtceu:high_grade_hypogen_ingot')
+        .EUt(IV).duration(1200)
+
+    event.recipes.gtceu.vacuum_freezer("low_grade_hypogen")
+        .itemInputs('1x gtceu:ingot_casting_mold')
+        .inputFluids([
+            'gtceu:molten_low_grade_hypogen 144',
+            'gtceu:liquid_nitrogen 500'
+        ])
+        .outputFluids('gtceu:nitrogen 250')
+        .itemOutputs('1x gtceu:low_grade_hypogen_ingot')
+        .EUt(IV).duration(1200)
+
+    event.recipes.gtceu.vacuum_freezer("weapons_grade_hypogen")
+        .itemInputs('1x gtceu:ingot_casting_mold')
+        .inputFluids([
+            'gtceu:molten_weapons_grade_hypogen 144',
+            'gtceu:liquid_nitrogen 500'
+        ])
+        .outputFluids('gtceu:nitrogen 250')
+        .itemOutputs('1x gtceu:weapons_grade_hypogen_ingot')
+        .EUt(IV).duration(1200)
 }

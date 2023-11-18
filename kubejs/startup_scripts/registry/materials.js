@@ -116,11 +116,9 @@ let registerGTCEuUnknownCompositionMaterial = (/** @type {Registry.Material} */ 
         .color(0xd8ed1c)
 
     event.create("infinity_matter_precursor")
-        ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidState)'](GTFluidStorageKeys.MOLTEN, GTFluidState.MOLTEN)
-        .plasma()
+        .fluid()
         .color(0xe39e14)
     event.create("impure_infinity_matter")
-        ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidState)'](GTFluidStorageKeys.MOLTEN, GTFluidState.MOLTEN)
         .plasma()
         .color(0xdcebbe)
     event.create("reactive_infinity_matter")
@@ -155,7 +153,7 @@ let registerGTCEuFirstDegreeMaterial = (/** @type {Registry.Material} */ event) 
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
         .components('1x infinity_matter_precursor', '1x weapons_grade_hypogen')
     event.create("infinity_matter_sulfate")
-        .dust().fluid()
+        .fluid()
         .color(0xf2b988)
         .components('1x infinity_matter', '1x sulfur')
 
@@ -187,6 +185,10 @@ let registerGTCEuFirstDegreeMaterial = (/** @type {Registry.Material} */ event) 
         .fluid()
         .color(0xccede3)
         .components('1x certus', '4x hydrogen')
+    event.create("polycertus")
+        .gem()
+        .color(0xb6f2ee)
+        .components('1x certus')
 }
 
 let registerGTCEuHigherDegreeMaterial = (/** @type {Registry.Material} */ event) => {
