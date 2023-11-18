@@ -46,6 +46,8 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0xebf5eb).secondaryColor(0xf0d3ec).iconSet(GTMaterialIconSet.SHINY)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_DENSE)
         .element('infinity_matter')
+    event.create("time")
+        .element('time')
     
     event.create("allthemodium")
         .ingot(6).fluid()
@@ -65,8 +67,6 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0xc5e3de).iconSet(GTMaterialIconSet.CERTUS)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD)
         .element('certus')
-    event.create("time")
-        .element('time')
 }
 
 let registerGTCEuUnknownCompositionMaterial = (/** @type {Registry.Material} */ event) => {
@@ -166,6 +166,27 @@ let registerGTCEuFirstDegreeMaterial = (/** @type {Registry.Material} */ event) 
         .flags(GTMaterialFlags.GENERATE_PLATE)
         .components('4x nickel', '6x titanium')
         .blastTemp(1583, 'high', GTValues.VA[GTValues.IV], 1200)
+    
+    event.create("trichlorocertane")
+        .fluid()
+        .color(0xb1d9f0)
+        .components('1x certus', '1x hydrogen', '3x chlorine')
+    event.create("dichlorocertane")
+        .fluid()
+        .color(0x90cfd1)
+        .components('2x hydrogen', '1x certus', '2x chlorine')
+    event.create("chlorocertane")
+        .fluid()
+        .color(0xccede3)
+        .components('3x hydrogen', '1x certus', '1x chlorine')
+    event.create("certus_tetrachloride")
+        .fluid()
+        .color(0xccede3)
+        .components('1x certus', '4x chlorine')
+    event.create("certane")
+        .fluid()
+        .color(0xccede3)
+        .components('1x certus', '4x hydrogen')
 }
 
 let registerGTCEuHigherDegreeMaterial = (/** @type {Registry.Material} */ event) => {

@@ -11,6 +11,7 @@ ServerEvents.recipes((event) => {
   createAdd(event)
 
   spaceDustChain(event)
+  certusSemiconductors(event)
 })
 
 LootJS.modifiers((event) => {

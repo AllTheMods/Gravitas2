@@ -27,6 +27,13 @@ let registerRecipeTypes = (/** @type {Registry.Recipe_Type} */ event) => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CENTRIFUGE)
 
+    event.create("chemical_vapor_deposition")
+        .category("gregitas")
+        .setEUIO("in")
+        .setMaxIOSize(2, 1, 2, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.CHEMICAL)
+
 }
 
 let registerMachines = (/** @type {Registry.Machine} */ event) => {
@@ -170,4 +177,9 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
         .rotationState(RotationState.NON_Y_AXIS)
         ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("plasma_centrifuge", true, true)
         .tankScalingFunction(tier => tier * 3200)
+    
+    event.create("chemical_vapor_depositor", "simple", 7, 8, 9, 10, 11, 12, 13)
+        .rotationState(RotationState.NON_Y_AXIS)
+        ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("chemical_vapor_deposition", true, true)
+        .tankScalingFunction(tier => tier * 4800)
 }
