@@ -1,0 +1,21 @@
+{
+    "button_texture": {
+      "type": "item",
+      "res": "thoriumreactors:reactor_controller"
+    },
+    "items": [
+      "thoriumreactors:reactor_controller",
+      "thoriumreactors:reactor_casing",
+      "thoriumreactors:reactor_glass",
+      "thoriumreactors:reactor_valve",
+      "thoriumreactors:reactor_core",
+      "thoriumreactors:reactor_graphite_moderator",
+      "thoriumreactors:reactor_rod_controller"
+    ],
+    "page": "thoriumreactors:multi/reactor",
+    "position": [
+      -150,
+      100
+    ],
+    "section": "thoriumreactors:multi"
+  }
