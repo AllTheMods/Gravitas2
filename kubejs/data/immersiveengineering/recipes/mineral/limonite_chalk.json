@@ -1,0 +1,49 @@
+{
+  "type": "immersiveengineering:mineral_mix",
+  "ores": [
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "tfc:ore/normal_limonite"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "tfc:ore/rich_limonite"
+      }
+    },
+    {
+      "chance": 0.6,
+      "output": {
+        "item": "tfc:ore/poor_limonite"
+      }
+    }
+  ],
+  "spoils": [
+    {
+      "chance": 0.5,
+      "output": {
+        "item": "tfc:rock/raw/chalk"
+      }
+    },
+    {
+      "chance": 0.3,
+      "output": {
+        "item": "tfc:rock/loose/chalk"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "tfc:rock/gravel/chalk"
+      }
+    }
+  ],
+  "dimensions": [
+    "minecraft:overworld"
+  ],
+  "weight": 20,
+  "fail_chance": 0.15,
+  "sample_background": "tfc:rock/raw/chalk"
+}

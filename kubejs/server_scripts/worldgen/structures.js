@@ -21,7 +21,7 @@ const strucBlocksReplacementMap = {
   "minecraft:muddy_mangrove_roots": "tfc:muddy_roots/loam",
   "minecraft:stone_bricks": "tfc:rock/smooth/granite",
   "minecraft:red_sandstone": "tfc:raw_sandstone/red",
-  // "minecraft:chiseled_red_sandstone": "we don't have a tfc",
+  "minecraft:chiseled_red_sandstone": "tfc:cut_sandstone/red",
   "minecraft:cut_red_sandstone": "tfc:cut_sandstone/red",
   "minecraft:smooth_red_sandstone": "tfc:smooth_sandstone/red",
   "minecraft:sandstone": "tfc:raw_sandstone/yellow",

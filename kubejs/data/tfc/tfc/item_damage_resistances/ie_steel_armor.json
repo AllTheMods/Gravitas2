@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "immersiveengineering:armor_steel_chest"
+    },
+    {
+      "item": "immersiveengineering:armor_steel_legs"
+    },
+    {
+      "item": "immersiveengineering:armor_steel_feet"
+    },
+    {
+      "item": "immersiveengineering:armor_steel_head"
+    }
+  ],
+  "piercing": 7,
+  "slashing": 4,
+  "crushing": 6
+}

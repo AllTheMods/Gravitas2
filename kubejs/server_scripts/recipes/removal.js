@@ -52,6 +52,13 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ output: `railcraft:${tool}_chestplate`, mod: "railcraft" })
     event.remove({ output: `railcraft:${tool}_leggings`, mod: "railcraft" })
     event.remove({ output: `railcraft:${tool}_boots`, mod: "railcraft" })
+
+    //GT General
+
+    event.remove({ id: "gtceu:smelting/coke_over_brick", mod: "gtceu" })
+
+
+
   })
 
   //Railcraft
@@ -96,32 +103,20 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "framedblocks:framed_chest" })
   event.remove({ id: "framedblocks:framed_secret_storage" })
 
-  //Functional Storage
-  event.remove({ id: /^functionalstorage:oak_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:spruce_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:birch_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:jungle_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:acacia_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:dark_oak_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:crimson_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:warped_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:mangrove_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:cherry_.*/, mod: "functionalstorage" })
-  event.remove({ id: "functionalstorage:framed_1" })
-  event.remove({ id: "functionalstorage:framed_2" })
-  event.remove({ id: "functionalstorage:framed_4" })
-  event.remove({ id: "functionalstorage:fluid_1" })
-  event.remove({ id: "functionalstorage:fluid_2" })
-  event.remove({ id: "functionalstorage:fluid_4" })
-  event.remove({ id: "functionalstorage:oak_drawer_alternate_x1" })
-  event.remove({ id: "functionalstorage:oak_drawer_alternate_x2" })
-  event.remove({ id: "functionalstorage:oak_drawer_alternate_x4" })
-  event.remove({ id: "functionalstorage:compacting_framed_drawer" })
-  event.remove({ id: "functionalstorage:compacting_drawer" })
-  event.remove({ id: "functionalstorage:simple_compacting_drawer" })
-  event.remove({ id: "functionalstorage:framed_simple_compacting_drawer" })
-  event.remove({ id: "functionalstorage:storage_controller" })
-  event.remove({ id: "functionalstorage:controller_extension" })
+  //Storage Drawers / Framed Drawers
+  event.remove({ id: /^storagedrawers:oak_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:spruce_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:birch_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:jungle_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:acacia_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:dark_oak_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:crimson_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:warped_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:mangrove_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:cherry_.*/, mod: "storagedrawers" })
+
+  event.remove({ id: /^framedcompactdrawers:.*/, mod: "framedcompactdrawers" })
+
 
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
@@ -142,4 +137,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap"})
+
+  // Immersive Engineering
+
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick"})
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick"})
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick"})
 }
