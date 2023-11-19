@@ -6,6 +6,10 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:rubber_lumber').texture('kubejs:item/lumber').color(0x615232)
 
     event.create('gregitas:certus_boule').texture('kubejs:item/certus_boule')
+    event.create('gregitas:certus_wafer').texture('kubejs:item/certus_wafer')
+    event.create('gregitas:engineering_wafer').texture('kubejs:item/engineering_wafer')
+    event.create('gregitas:calculation_wafer').texture('kubejs:item/calculation_wafer')
+    event.create('gregitas:logic_wafer').texture('kubejs:item/logic_wafer')
 
   //Tools
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()
