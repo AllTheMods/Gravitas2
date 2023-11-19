@@ -5,6 +5,13 @@ let registerRecipeTypes = (/** @type {Registry.Recipe_Type} */ event) => {
         .setMaxIOSize(3, 4, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.BATH)
+
+    event.create('improved_coke_oven')
+        .category('gregitas')
+        .setEUIO('in')
+        .setMaxIOSize(1, 1, 0, 1)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.FIRE); 
 }
 
 let registerMachines = (/** @type {Registry.Machine} */ event) => {
@@ -63,6 +70,79 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
         .workableCasingRenderer(
             "gtceu:block/casings/solid/machine_casing_solid_steel", 
             "gtceu:block/multiblock/implosion_compressor", 
+            false
+        )
+
+        event.create('improved_coke_oven', 'multiblock')
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeType('improved_coke_oven')
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('bbb', 'ccc', 'bbb')
+            .aisle('bbb', 'c c', 'bbb')
+            .aisle('bkb', 'ccc', 'bbb')
+            .where('k', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('c', Predicates.blocks(GTBlocks.COIL_CUPRONICKEL.get()))
+            .where(' ', Predicates.any())
+            .where('b', Predicates.blocks('gregitas:bronze_plated_bricks')
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
+            )
+            .build())
+        .workableCasingRenderer(
+            "kubejs:block/casings/bronze_plated_bricks",
+            "gtceu:block/multiblock/coke_oven",
+            false
+        )
+
+    event.create('advanced_large_chemical_reactor', 'multiblock')
+        .rotationState(RotationState.NON_Y_AXIS)
+        .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
+        .recipeTypes('large_chemical_reactor')
+        .recipeModifier(GTRecipeModifiers.PARALLEL_HATCH.apply(OverclockingLogic.PERFECT_OVERCLOCK, GTRecipeModifiers.ELECTRIC_OVERCLOCK))
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('c   c', 'ccccc', 'c   c', 'ccccc', 'c   c')
+            .aisle('ccccc', 'cpppc', 'cwwwc', 'cpppc', 'ccccc')
+            .aisle('c   c', 'cwwwc', 'cpppc', 'cwwwc', 'c   c')
+            .aisle('ccccc', 'cpppc', 'cwwwc', 'cpppc', 'ccccc')
+            .aisle('c   c', 'kcccc', 'c   c', 'ccccc', 'c   c')
+            .where('k', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('w', Predicates.blocks(GTBlocks.COIL_TUNGSTENSTEEL.get())
+                .or(Predicates.blocks(GTBlocks.CASING_POLYTETRAFLUOROETHYLENE_PIPE.get()))
+            )
+            .where('p', Predicates.blocks(GTBlocks.CASING_POLYTETRAFLUOROETHYLENE_PIPE.get())
+                .or(Predicates.blocks(GTBlocks.COIL_TUNGSTENSTEEL.get()))
+            )
+            .where(' ', Predicates.any())
+            .where('c', Predicates.blocks(GTBlocks.CASING_PTFE_INERT.get())
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
+            )
+        .build())
+        .shapeInfo(controller => MultiblockShapeInfo.builder()
+            .aisle('e   e', 'ccccc', 'c   c', 'ccccc', 'c   c')
+            .aisle('ccccc', 'fpppc', 'cwwwc', 'fpppc', 'ccccc')
+            .aisle('c   c', 'cwwwc', 'cpppi', 'cwwwc', 'c   c')
+            .aisle('ccccc', 'fpppc', 'cwwwc', 'fpppc', 'ccccc')
+            .aisle('c   c', 'kcPcm', 'c   c', 'cIcFc', 'c   c')
+            .where('k', controller, Direction.SOUTH)
+            .where('c', GTBlocks.CASING_PTFE_INERT.get())
+            .where('w', GTBlocks.COIL_TUNGSTENSTEEL.get())
+            .where('p', GTBlocks.CASING_POLYTETRAFLUOROETHYLENE_PIPE.get())
+            .where(' ', Block.getBlock('minecraft:air'))
+            .where('e', GTMachines.ENERGY_INPUT_HATCH[5], Direction.NORTH)
+            ["where(char,net.minecraft.world.level.block.state.BlockState)"]('m', 
+                Block.getBlock('gtceu:maintenance_hatch').defaultBlockState().setValue(BlockProperties.FACING, Direction.SOUTH))
+            ["where(char,net.minecraft.world.level.block.state.BlockState)"]('P', 
+                Block.getBlock('gtceu:iv_parallel_hatch').defaultBlockState().setValue(BlockProperties.FACING, Direction.SOUTH))
+            .where('f', GTMachines.FLUID_IMPORT_HATCH[5], Direction.WEST)
+            .where('i', GTMachines.ITEM_IMPORT_BUS[5], Direction.EAST)
+            .where('F', GTMachines.FLUID_EXPORT_HATCH[5], Direction.SOUTH)
+            .where('I', GTMachines.ITEM_EXPORT_BUS[5], Direction.SOUTH)
+        .build())
+        .workableCasingRenderer(
+            "gtceu:block/casings/solid/machine_casing_inert_ptfe",
+            "gtceu:block/multiblock/large_chemical_reactor",
             false
         )
 }

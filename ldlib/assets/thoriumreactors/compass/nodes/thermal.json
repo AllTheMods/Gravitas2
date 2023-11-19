@@ -1,0 +1,21 @@
+{
+    "button_texture": {
+      "type": "item",
+      "res": "thoriumreactors:thermal_controller"
+    },
+    "items": [
+      "thoriumreactors:thermal_controller",
+      "thoriumreactors:thermal_conductor",
+      "thoriumreactors:thermal_valve",
+      "thoriumreactors:thermal_heat_sink"
+    ],
+    "page": "thoriumreactors:multi/thermal",
+    "position": [
+      -100,
+      100
+    ],
+    "section": "thoriumreactors:multi",
+    "pre_nodes": [
+      "thoriumreactors:multi/reactor"
+    ]
+  }

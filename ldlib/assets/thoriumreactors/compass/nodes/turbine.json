@@ -1,0 +1,28 @@
+{
+    "button_texture": {
+      "type": "item",
+      "res": "thoriumreactors:turbine_controller"
+    },
+    "items": [
+      "thoriumreactors:turbine_controller",
+      "thoriumreactors:turbine_casing",
+      "thoriumreactors:turbine_glass",
+      "thoriumreactors:turbine_valve",
+      "thoriumreactors:turbine_power_port",
+      "thoriumreactors:turbine_rotation_mount",
+      "thoriumreactors:turbine_vent",
+      "thoriumreactors:electromagnetic_coil",
+      "thoriumreactors:nickel_block",
+      "thoriumreactors:niob_block",
+      "thoriumreactors:molybdenum_block"
+    ],
+    "page": "thoriumreactors:multi/turbine",
+    "position": [
+      -50,
+      100
+    ],
+    "section": "thoriumreactors:multi",
+    "pre_nodes": [
+      "thoriumreactors:multi/thermal"
+    ]
+  }
