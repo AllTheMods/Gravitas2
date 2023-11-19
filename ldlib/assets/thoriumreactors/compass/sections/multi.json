@@ -1,0 +1,7 @@
+{
+    "button_texture": {
+      "type": "item",
+      "res": "thoriumreactors:reactor_controller"
+    },
+    "priority": 7
+}

@@ -8,6 +8,7 @@ ServerEvents.recipes((event) => {
   addCollapse(event)
   tfcGregTools(event)
   gtceuAdd(event)
+  createAdd(event)
 })
 
 LootJS.modifiers((event) => {

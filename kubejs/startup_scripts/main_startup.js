@@ -28,6 +28,7 @@ StartupEvents.registry("item", (event) => {
 
 StartupEvents.registry("block", (event) => {
   registerGTCOres(event)
+  registerBlocks(event)
 })
 
 StartupEvents.registry("fluid", (event) => {
@@ -53,12 +54,12 @@ global.hideAndRemoveRecipe = [
 ]
 */
 
-GTCEuStartupEvents.registry("gtceu:machine", (event) => {
-  registerMachines(event)
-})
-
 GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
   registerRecipeTypes(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:machine", (event) => {
+  registerMachines(event)
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {

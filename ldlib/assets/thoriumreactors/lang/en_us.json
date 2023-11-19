@@ -1,0 +1,6 @@
+{
+    "compass.section.thoriumreactors.multi": "Multiblocks",
+    "compass.node.thoriumreactors.multi/reactor": "Nuclear Reactor",
+    "compass.node.thoriumreactors.multi/thermal": "Heat Exchanger",
+    "compass.node.thoriumreactors.multi/turbine": "Turbine"
+}

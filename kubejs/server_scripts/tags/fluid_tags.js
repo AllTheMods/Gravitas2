@@ -36,7 +36,8 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
    )
    event.add('tfc:usable_in_ingot_mold',
         [
-            'gtceu:rubber'
+            'gtceu:rubber',
+            'gtceu:igneous_alloy'
         ]
     )
 }

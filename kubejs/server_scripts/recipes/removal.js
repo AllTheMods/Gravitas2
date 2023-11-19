@@ -23,6 +23,12 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
 
   event.remove({ id: 'gtceu:shapeless/rubber_wood_planks' })
+  event.remove(
+    [
+        { id: 'gtceu:shaped/steam_extractor_bronze' },
+        { id: 'gtceu:shaped/steam_extractor_steel' }
+    ]
+)
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
