@@ -1,0 +1,9 @@
+{
+    "tier": 1,
+    "fluid": "gtceu:igneous_alloy",
+    "melt_temperature": 420,
+    "specific_heat_capacity": 0.01429,
+    "ingots": {
+      "item": "create:andesite_alloy"
+    }
+}

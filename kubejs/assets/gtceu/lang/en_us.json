@@ -103,5 +103,11 @@
 	"tagprefix.phyllite_tfc": "%s Phyllite Ore",
 	"tagprefix.schist_tfc": "%s Schist Ore",
 	"tagprefix.gneiss_tfc": "%s Gneiss Ore",
-	"tagprefix.marble_tfc": "%s Marble Ore"
+	"tagprefix.marble_tfc": "%s Marble Ore",
+	"material.igneous_alloy": "Igneous Zinc Alloy",
+	"material.igneous": "Igneous",
+	"block.gtceu.advanced_large_chemical_reactor": "Advanced Large Chemical Reactor",
+	"material.nitinol": "Nitinol",
+	"block.gtceu.improved_coke_oven": "Improved Coke Oven",
+	"gtceu.improved_coke_oven": "Improved Coke Oven"
 }
