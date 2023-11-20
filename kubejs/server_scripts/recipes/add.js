@@ -198,26 +198,26 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //Railcraft End
 
-  //Frunctional Storage Start
-  event.shaped("functionalstorage:framed_1", ["SPS", " C ", "SPS"], {
+  //Drawers Start
+  event.shaped("framedcompactdrawers:framed_full_one", ["SPS", " C ", "SPS"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
     P: "#forge:plates/brass"
   })
 
-  event.shaped("2x functionalstorage:framed_2", ["SPS", "C C", "SPS"], {
+  event.shaped("2x framedcompactdrawers:framed_full_two", ["SPS", "C C", "SPS"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
     P: "#forge:plates/brass"
   })
 
-  event.shaped("4x functionalstorage:framed_4", ["CSC", "SPS", "CSC"], {
+  event.shaped("4x framedcompactdrawers:framed_full_four", ["CSC", "SPS", "CSC"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
     P: "#forge:plates/double/brass"
   })
 
-  event.shaped("functionalstorage:compacting_framed_drawer", ["PSP", "QDQ", "SRS"], {
+  event.shaped("framedcompactdrawers:framed_compact_drawer", ["PSP", "QDQ", "SRS"], {
     P: "#forge:plates/brass",
     S: "#forge:screws/brass",
     Q: "minecraft:piston",
@@ -225,6 +225,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     R: "minecraft:repeater"
   })
 
+  /*
   event.shaped("functionalstorage:framed_simple_compacting_drawer", ["PSP", "TDQ", "SRS"], {
     P: "#forge:plates/brass",
     S: "#forge:screws/brass",
@@ -233,5 +234,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     R: "minecraft:repeater",
     T: "#forge:rods/brass"
   })
-  //Functional Storage End
+  */
+  //Drawers End
 }

@@ -62,8 +62,32 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   registerMachines(event)
 })
 
+GTCEuStartupEvents.registry("gtceu:element", (event) => {
+    registerGTCEuElement(event)
+})
+
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-  registerGTCEuMaterial(event)
+  registerGTCEuMaterialFlags(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:material", (event) => {
+  registerGTCEuElementMaterial(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:material", (event) => {
+    registerGTCEuUnknownCompositionMaterial(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:material", (event) => {
+    registerGTCEuFirstDegreeMaterial(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:material", (event) => {
+    registerGTCEuHigherDegreeMaterial(event)
+})
+
+GTCEuStartupEvents.registry("gtceu:material", (event) => {
+    registerGTCEuOrganicMaterial(event)
 })
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityEvent$EnteringSection", event => {
