@@ -202,17 +202,17 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .EUt(LV)
 
     //ALCR
-        event.recipes.gtceu.assembly_line('advanced_large_chemical_reactor')
-            .itemInputs('gtceu:large_chemical_reactor', '3x #forge:circuits/iv', '15x gtceu:nitinol_plate', '4x gtceu:platinum_single_cable')
-            .itemOutputs('gtceu:advanced_large_chemical_reactor')
-            .inputFluids(
-                Fluid.of('gtceu:copper', 4608),
-                Fluid.of('gtceu:tin', 4608),
-                Fluid.of('gtceu:soldering_alloy', 2304),
-                Fluid.of('gtceu:lubricant', 8000)
-            )
-            .duration(500)
-            .EUt(IV)
+    event.recipes.gtceu.assembly_line('advanced_large_chemical_reactor')
+        .itemInputs('gtceu:large_chemical_reactor', '3x #forge:circuits/iv', '15x gtceu:nitinol_plate', '4x gtceu:platinum_single_cable')
+        .itemOutputs('gtceu:advanced_large_chemical_reactor')
+        .inputFluids(
+            Fluid.of('gtceu:copper', 4608),
+            Fluid.of('gtceu:tin', 4608),
+            Fluid.of('gtceu:soldering_alloy', 2304),
+            Fluid.of('gtceu:lubricant', 8000)
+        )
+        .duration(500)
+        .EUt(IV)
 
     // Star Forge Controller Block Recipe
     event.recipes.gtceu.assembly_line('star_forge')
@@ -231,4 +231,17 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .itemOutputs('gtceu:star_forge')
         .duration(2400)
         .EUt(UV)
+
+    // Machine Recipes
+    GTValues.VN.forEach((tier_name, index, arr) => {
+        if (index >= 1) {
+            event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:stainless_steel_small_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, G: $CraftingComponent.GLASS.getIngredient(index), H: `gtceu:${tier_name.toLowerCase()}_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_gas_centrifuge`)
+        }
+        if (index >= 4) {
+            event.shaped(`gtceu:${tier_name.toLowerCase()}_gas_centrifuge`, ["SCS", "PHP", "FCF"], {S: "gtceu:steel_normal_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, P: `gtceu:${tier_name.toLowerCase()}_pump`, H: `gtceu:${tier_name.toLowerCase()}_hull`, F: "gtceu:fluid_filter"}).id(`gregitas:shaped/${tier_name.toLowerCase()}_gas_centrifuge`)
+        }
+        if (index >= 7) {
+            event.shaped(`gtceu:${tier_name.toLowerCase()}_plasma_centrifuge`, ["SCS", "PHP", "FCF"], {S: "gtceu:tungsten_large_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, P: `gtceu:${tier_name.toLowerCase()}_pump`, H: `gtceu:${tier_name.toLowerCase()}_hull`, F: $CraftingComponent.VOLTAGE_COIL.getIngredient(index)})
+        }
+    })
 }
