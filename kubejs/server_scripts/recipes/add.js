@@ -198,6 +198,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //Railcraft End
 
+
   //Framed Compacting Drawers Start
   event.shaped("framedcompactdrawers:framed_full_one", ["SPS", " C ", "SPS"], {
     S: "#forge:screws/brass",
@@ -234,6 +235,4 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: "#forge:rods/brass"
   })
   //Framed Compacting Drawers End
-
-
 }

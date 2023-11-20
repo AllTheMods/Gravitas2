@@ -12,6 +12,28 @@ let registerRecipeTypes = (/** @type {Registry.Recipe_Type} */ event) => {
         .setMaxIOSize(1, 1, 0, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FIRE); 
+
+    event.create("gas_centrifuge")
+        .category("gregitas")
+        .setEUIO("in")
+        .setMaxIOSize(0, 3, 1, 6)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.CENTRIFUGE)
+
+    event.create("plasma_centrifuge")
+        .category("gregitas")
+        .setEUIO("in")
+        .setMaxIOSize(0, 0, 1, 6)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.CENTRIFUGE)
+
+    event.create("chemical_vapor_deposition")
+        .category("gregitas")
+        .setEUIO("in")
+        .setMaxIOSize(2, 1, 2, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.CHEMICAL)
+
 }
 
 let registerMachines = (/** @type {Registry.Machine} */ event) => {
@@ -66,10 +88,10 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
                 .or(Predicates.blocks("tfc:wood/sapling/willow"))
             )
             .where("G", Predicates.blocks("ae2:quartz_glass"))
-        .build())
+            .build())
         .workableCasingRenderer(
-            "gtceu:block/casings/solid/machine_casing_solid_steel", 
-            "gtceu:block/multiblock/implosion_compressor", 
+            "gtceu:block/casings/solid/machine_casing_solid_steel",
+            "gtceu:block/multiblock/implosion_compressor",
             false
         )
 
@@ -145,4 +167,22 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
             "gtceu:block/multiblock/large_chemical_reactor",
             false
         )
+
+    event.create("gas_centrifuge", "simple", 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+        .rotationState(RotationState.NON_Y_AXIS)
+        ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("gas_centrifuge", true, true)
+        .tankScalingFunction(tier => tier * 3200)
+        .workableTieredHullRenderer(GTCEu.id("block/machines/gas_centrifuge"))
+
+    event.create("plasma_centrifuge", "simple", 7, 8, 9, 10, 11, 12, 13)
+        .rotationState(RotationState.NON_Y_AXIS)
+        ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("plasma_centrifuge", true, true)
+        .tankScalingFunction(tier => tier * 3200)
+        .workableTieredHullRenderer(GTCEu.id("block/machines/plasma_centrifuge"))
+    
+    event.create("chemical_vapor_depositor", "simple", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+        .rotationState(RotationState.NON_Y_AXIS)
+        ['recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)']("chemical_vapor_deposition", true, true)
+        .tankScalingFunction(tier => tier * 4800)
+        .workableTieredHullRenderer(GTCEu.id("block/machines/chemical_vapor_depositor"))
 }
