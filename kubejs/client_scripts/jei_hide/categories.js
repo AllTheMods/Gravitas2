@@ -17,5 +17,5 @@ let hideCats = (event) => {
    event.remove("immersiveengineering:refinery")
    event.remove("immersiveengineering:sawmill")
    event.remove("immersiveengineering:squeezer")
-   
+
 }

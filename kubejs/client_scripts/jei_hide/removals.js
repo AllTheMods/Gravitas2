@@ -70,8 +70,5 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:reinforced_crate")
     event.hide("immersiveengineering:coal_coke")
     event.hide("immersiveengineering:dust_coke")
-    event.hide("immersiveengineering:cokebrick")
     event.hide("immersiveengineering:coke")
-    event.hide("immersiveengineering:slab_cokebrick")
-    event.hide("immersiveengineering:slab_coke")
 }
