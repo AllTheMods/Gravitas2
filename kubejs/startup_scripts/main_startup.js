@@ -96,3 +96,9 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityEvent$EnteringSection
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
   addTooltipIngots(event)
 })
+
+ForgeEvents.onEvent("blusunrize.immersiveengineering.api.multiblocks.MultiblockHandler$MultiblockFormEvent", event => {
+ if(event.getMultiblock().getUniqueName().namespace == "immersiveengineering") {
+    event.setCanceled(true)
+ }
+})
