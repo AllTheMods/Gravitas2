@@ -198,7 +198,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //Railcraft End
 
-  //Drawers Start
+
+  //Framed Compacting Drawers Start
   event.shaped("framedcompactdrawers:framed_full_one", ["SPS", " C ", "SPS"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
@@ -221,19 +222,17 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     P: "#forge:plates/brass",
     S: "#forge:screws/brass",
     Q: "minecraft:piston",
-    D: "#functionalstorage:drawer",
+    D: "#forge:chests/wooden",
     R: "minecraft:repeater"
   })
 
-  /*
-  event.shaped("functionalstorage:framed_simple_compacting_drawer", ["PSP", "TDQ", "SRS"], {
+  event.shaped("framedcompactdrawers:framed_drawer_controller", ["PSP", "TDQ", "SRS"], {
     P: "#forge:plates/brass",
     S: "#forge:screws/brass",
     Q: "minecraft:piston",
-    D: "#functionalstorage:drawer",
+    D: "framedcompactdrawers:framed_compact_drawer",
     R: "minecraft:repeater",
     T: "#forge:rods/brass"
   })
-  */
-  //Drawers End
+  //Framed Compacting Drawers End
 }

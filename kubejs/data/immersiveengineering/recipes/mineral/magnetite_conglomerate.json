@@ -1,0 +1,49 @@
+{
+  "type": "immersiveengineering:mineral_mix",
+  "ores": [
+    {
+      "chance": 0.6,
+      "output": {
+        "item": "tfc:ore/normal_magnetite"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "tfc:ore/rich_magnetite"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "tfc:ore/poor_magnetite"
+      }
+    }
+  ],
+  "spoils": [
+    {
+      "chance": 0.5,
+      "output": {
+        "item": "tfc:rock/raw/conglomerate"
+      }
+    },
+    {
+      "chance": 0.3,
+      "output": {
+        "item": "tfc:rock/loose/conglomerate"
+      }
+    },
+    {
+      "chance": 0.2,
+      "output": {
+        "item": "tfc:rock/gravel/conglomerate"
+      }
+    }
+  ],
+  "dimensions": [
+    "minecraft:overworld"
+  ],
+  "weight": 20,
+  "fail_chance": 0.15,
+  "sample_background": "tfc:rock/raw/conglomerate"
+}

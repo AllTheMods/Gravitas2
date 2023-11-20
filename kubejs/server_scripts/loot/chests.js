@@ -191,6 +191,7 @@ const chestReplacementMap = {
   "minecraft:white_tulip": "tfc:plant/tulip_white",
   "minecraft:wooden_axe": "tfc:stone/axe/sedimentary",
   "minecraft:wooden_pickaxe": "tfc:stone/hammer/sedimentary",
+  "minecraft:chiseled_red_sandstone": "tfc:cut_sandstone/red",
 }
 
 let modifyAndRemoveChestLoot = (/** @type {Internal.LootModificationEventJS} */ event) => {

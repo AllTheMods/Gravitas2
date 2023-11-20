@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "fluid": "immersiveengineering:creosote",
+  "burn_rate": 4000,
+  "valid_lamps": {
+    "type": "tfc:tag",
+    "tag": "tfc:lamps"
+  }
+}

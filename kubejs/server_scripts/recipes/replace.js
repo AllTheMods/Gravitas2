@@ -61,4 +61,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
       `#forge:plates/double/${metal}`
     )
   })
+
+  //Immersive Engineering
+  event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
 }

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "gtceu:compressed_coke_clay"
+  },
+  "result_item": {
+    "item": "gtceu:coke_oven_brick"
+  },
+  "temperature": 400
+}
