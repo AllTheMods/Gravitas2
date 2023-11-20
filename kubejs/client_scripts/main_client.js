@@ -12,6 +12,9 @@ JEIEvents.hideItems(event => {
   hidePotions(event)
 })
 
+JEIEvents.removeCategories(event => {
+  hideCats(event)
+})
 ClientEvents.lang("en_us", (event) => {
   addGregOresLang(event)
   addGregitasName(event)
