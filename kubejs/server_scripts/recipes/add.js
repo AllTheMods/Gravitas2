@@ -38,10 +38,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   //Create Start
-  event.shaped("create:andesite_alloy", ["SZ ", "ZS ", "   "], {
-    S: "#tfc:igneous_extrusive_rock",
-    Z: "#forge:nuggets/zinc"
-  })
 
   event.shaped("create:millstone", [" M ", " G ", " Q "], {
     M: "tfc:handstone",
@@ -49,12 +45,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     Q: "tfc:quern"
   })
   
-  event.custom({
-    type: "create:mixing",
-    ingredients: [{ tag: "tfc:igneous_extrusive_rock" }, { tag: "forge:nuggets/zinc" }],
-    results: [{ item: "create:andesite_alloy" }]
-  })
-
   event.custom({
     type: "create:pressing",
     ingredients: [{ item: "tfc:raw_iron_bloom" }],
