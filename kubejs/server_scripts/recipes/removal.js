@@ -162,8 +162,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:reinforced_crate"})
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coal_coke"})
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dust_coke"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick"})
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coke"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick"})
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_coke"})
 }
