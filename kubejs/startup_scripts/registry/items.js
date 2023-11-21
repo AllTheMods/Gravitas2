@@ -236,6 +236,19 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:calculation_wafer').texture('kubejs:item/calculation_wafer')
     event.create('gregitas:logic_wafer').texture('kubejs:item/logic_wafer')
 
+    event.create('gregitas:bioware_processor').texture('kubejs/item/circuits/bioware_processor')
+    event.create('gregitas:bioware_processor_computer').texture('kubejs/item/circuits/bioware_processor_computer')
+    event.create('gregitas:bioware_processor_assembly').texture('kubejs/item/circuits/bioware_processor_assembly')
+    event.create('gregitas:bioware_processor_mainframe').texture('kubejs/item/circuits/bioware_processor_mainframe')
+    event.create('gregitas:optical_processor').texture('kubejs/item/circuits/optical_processor')
+    event.create('gregitas:optical_processor_computer').texture('kubejs/item/circuits/optical_processor_computer')
+    event.create('gregitas:optical_processor_assembly').texture('kubejs/item/circuits/optical_processor_assembly')
+    event.create('gregitas:optical_processor_mainframe').texture('kubejs/item/circuits/optical_processor_mainframe')
+    event.create('gregitas:cosmic_processor').texture('kubejs/item/circuits/cosmic_processor')
+    event.create('gregitas:cosmic_processor_computer').texture('kubejs/item/circuits/cosmic_processor_computer')
+    event.create('gregitas:cosmic_processor_assembly').texture('kubejs/item/circuits/cosmic_processor_assembly')
+    event.create('gregitas:cosmic_processor_mainframe').texture('layer0', 'kubejs/item/circuits/cosmic_processor_mainframe').texture('layer1', 'kubejs/item/circuits/cosmic_processor_mainframe_overlay')
+
   //Tools
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()
     event.create('gregitas:stone_bowl').texture('kubejs:item/tools/stone_bowl').unstackable()
