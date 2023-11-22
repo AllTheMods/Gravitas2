@@ -1,6 +1,6 @@
 // priority 10
 
-const gtceuIngots = [
+let gtceuIngots = [
   "aluminium",
   "americium",
   "annealed_copper",
@@ -87,6 +87,84 @@ const gtceuIngots = [
   "yttrium_barium_cuprate"
 ]
 
+let tfcStonei = [
+  "granite",
+  "diorite",
+  "gabbro",
+  "shale",
+  "claystone",
+  "limestone",
+  "conglomerate",
+  "dolomite",
+  "chert",
+  "chalk",
+  "rhyolite",
+  "basalt",
+  "andesite",
+  "dacite",
+  "quartzite",
+  "slate",
+  "phyllite",
+  "schist",
+  "gneiss",
+  "marble"
+]
+let tfcSaplingz = [
+  "acacia",
+  "ash",
+  "aspen",
+  "birch",
+  "blackwood",
+  "chestnut",
+  "douglas_fir",
+  "hickory",
+  "kapok",
+  "mangrove",
+  "maple",
+  "oak",
+  "palm",
+  "pine",
+  "rosewood",
+  "sequoia",
+  "spruce",
+  "sycamore",
+  "white_cedar",
+  "willow"
+]
+
+let tfcMetalz = [
+  'bismuth',
+  'bismuth_bronze',
+  'black_bronze',
+  'bronze',
+  'brass',
+  'copper',
+  'gold',
+  'nickel',
+  'rose_gold',
+  'silver',
+  'tin',
+  'zinc',
+  'sterling_silver',
+  'wrought_iron',
+  'steel',
+  'black_steel',
+  'blue_steel',
+  'red_steel',
+  'tungsten_carbide',
+  'damascus_steel',
+  'tungsten_steel',
+  'cobalt_brass',
+  'vanadium_steel',
+  'ultimet',
+  'invar',
+  'aluminium',
+  'titanium'
+]
+//Will be added to later
+let tfcDusts = [
+  'sulfur'
+]
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:ingots/iron", "tfc:metal/ingot/cast_iron")
   event.add("forge:rods/iron", "tfc:metal/rod/cast_iron")
@@ -97,15 +175,15 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
 
-  global.tfcStone.forEach((stone) => {
+  tfcStonei.forEach((stone) => {
     event.add("forge:slabs/cobblestone", `tfc:rock/cobble/${stone}_slab`)
   })
 
-  tfcSaplings.forEach((sapling) => {
+  tfcSaplingz.forEach((sapling) => {
     event.add("forge:saplings", `tfc:wood/sapling/${sapling}`)
   })
 
-  tfcMetal.forEach((metal) => {
+  tfcMetalz.forEach((metal) => {
     event.add(`forge:plates/${metal}`, `tfc:metal/sheet/${metal}`)
     event.add(`forge:plates/double/${metal}`, `tfc:metal/double_sheet/${metal}`)
 

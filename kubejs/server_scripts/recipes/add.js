@@ -1,5 +1,48 @@
 // priority 10
-
+const tfcStone = [
+  "granite",
+  "diorite",
+  "gabbro",
+  "shale",
+  "claystone",
+  "limestone",
+  "conglomerate",
+  "dolomite",
+  "chert",
+  "chalk",
+  "rhyolite",
+  "basalt",
+  "andesite",
+  "dacite",
+  "quartzite",
+  "slate",
+  "phyllite",
+  "schist",
+  "gneiss",
+  "marble"
+]
+const tfcSaplings = [
+  "acacia",
+  "ash",
+  "aspen",
+  "birch",
+  "blackwood",
+  "chestnut",
+  "douglas_fir",
+  "hickory",
+  "kapok",
+  "mangrove",
+  "maple",
+  "oak",
+  "palm",
+  "pine",
+  "rosewood",
+  "sequoia",
+  "spruce",
+  "sycamore",
+  "white_cedar",
+  "willow"
+]
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.custom({
     type: "tfc:anvil",
@@ -157,7 +200,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //GTCEU End
 
   //Rock and Stone!
-  global.tfcStone.forEach((stone) => {
+  tfcStone.forEach((stone) => {
     event.recipes.gtceu
       .rock_breaker(`loose_${stone}`)
       .notConsumable(`tfc:rock/raw/${stone}`)
