@@ -289,13 +289,13 @@
 		{
 			dependencies: ["6360E6403A8BB4EE"]
 			description: [
-				"Using our newly crafted tools, we can now grab some vital resources for our survival."
+				"{gravitas.quest.caveman.desc.starting_somewhere.1}"
 				""
-				"With the &aAxe&r, you can cut down trees. You won't be getting the standard logs, though."
+				"{gravitas.quest.caveman.desc.starting_somewhere.2}"
 				""
-				"With the &eKnife&r, you can cut &2grass&r or &2plants&r to get &aStraw&r."
+				"{gravitas.quest.caveman.desc.starting_somewhere.3}"
 				""
-				"The &3Hammer&r is used for Forging, and the &eJavelin&r is great as a weapon!"
+				"{gravitas.quest.caveman.desc.starting_somewhere.4}"
 			]
 			id: "297C2E9EF534A201"
 			tasks: [
@@ -329,13 +329,11 @@
 		{
 			dependencies: ["1CD5C4226B41ACCE"]
 			description: [
-				"It doesn't make much sense to make wooden tools first when there are literally stones all over the ground, right?"
+				"{gravitas.quest.caveman.desc.pebbles.1}"
 				""
-				"Pick up some &3Pebbles&r you see along the ground. You'll get different types of stones and even small ores depending on the geological region you are in."
+				"{gravitas.quest.caveman.desc.pebbles.2}"
 				""
-				"To help you locate which region you are in, make sure to open up the &cBlaze Map&r and select &aGeology&r on the left side! You might have to set a keybind for this as well."
-				""
-				"Make sure to check out the TFC guidebook on different areas to learn what you can gather!"
+				"{gravitas.quest.caveman.desc.pebbles.3}"
 			]
 			hide_dependency_lines: false
 			id: "237587BDC90B1D64"
@@ -365,29 +363,17 @@
 				"237587BDC90B1D64"
 			]
 			description: [
-				"With enough Pebbles, we can create our starter tools by &eKnapping&r the rocks into the shape of the tool head we want."
+				"{gravitas.quest.caveman.desc.stone_tools.1}"
 				""
-				"To do this, hold &aat least 2&r pebbles in your hand and right click. From here, you can carve out the desired shape to get the tool head you want. Combine the tool head with a twig to get your first tool!"
+				"{gravitas.quest.caveman.desc.stone_tools.2}"
 				""
-				"Tip: All of the knapping recipes can be found in JEI!"
+				"{gravitas.quest.caveman.desc.stone_tools.3}"
 				""
 				"{image:gravitas:textures/quests/knapping.png width:200 height:150 align:1}"
 			]
 			id: "6360E6403A8BB4EE"
 			min_width: 400
 			tasks: [
-				{
-					id: "2A253FDE8C99D5EA"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:hammers"
-						}
-					}
-					title: "{gravitas.quest.caveman.stone_hammer}"
-					type: "item"
-				}
 				{
 					id: "4641E1711390F96F"
 					item: {
@@ -415,15 +401,25 @@
 					type: "item"
 				}
 				{
-					id: "00419104F5F7FA5E"
+					id: "2B9EAAC4EAF1A542"
 					item: {
 						Count: 1b
 						id: "itemfilters:tag"
 						tag: {
-							value: "tfc:stone_javelins"
+							value: "tfc:hammers"
 						}
 					}
-					title: "Stone Javelin"
+					type: "item"
+				}
+				{
+					id: "3A2AF703FCD7021F"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:javelins"
+						}
+					}
 					type: "item"
 				}
 			]
@@ -434,9 +430,9 @@
 		{
 			dependencies: ["1CD5C4226B41ACCE"]
 			description: [
-				"Can you chop down a tree with your hand in real life? No?"
+				"{gravitas.quest.caveman.desc.sticks.1}"
 				""
-				"Just like IRL, you'll need to gather &aTwigs&r from the ground. These make great handles for the tools we'll make."
+				"{gravitas.quest.caveman.desc.sticks.2}"
 			]
 			id: "5CB48C20D61478AD"
 			tasks: [{
@@ -472,6 +468,7 @@
 			dependencies: ["0DD3F3EDB709A4E6"]
 			description: [
 				"{gravitas.quest.caveman.desc.raw_hide.1}"
+				""
 				"{gravitas.quest.caveman.desc.raw_hide.2}"
 			]
 			id: "3D5D15DB0546D915"
@@ -556,6 +553,7 @@
 			dependencies: ["5E783B279FD57C33"]
 			description: [
 				"{gravitas.quest.caveman.desc.leather.1}"
+				""
 				"{gravitas.quest.caveman.desc.leather.2}"
 			]
 			id: "2B6349519D07FEE8"
@@ -638,13 +636,13 @@
 			]
 			dependency_requirement: "one_completed"
 			description: [
-				"Now that we have access to fire, we can fire our clay molds in a &cPit Kiln&r."
+				"{gravitas.quest.caveman.desc.pit_kilns.1}"
 				""
-				"To create one, make a 1x1 hole and press &aV&r while holding a mold you want to fire up. You can place up to 4 small molds, or one large mold like a Vessel."
+				"{gravitas.quest.caveman.desc.pit_kilns.2}"
 				""
-				"Now right click on the items with 8 pieces of straw, then right click with 8 logs to place them down. Now you can sneak-right click on it to use the &cFirestarter&r to light it on fire."
+				"{gravitas.quest.caveman.desc.pit_kilns.3}"
 				""
-				"It does take a little bit to fire up the molds, roughly 8 in-game hours."
+				"{gravitas.quest.caveman.desc.pit_kilns.4}"
 			]
 			id: "72DDCB9936148388"
 			min_width: 300
@@ -692,10 +690,14 @@
 		}
 		{
 			dependencies: ["7C2E28402F918FEA"]
-			description: ["&aVessels&r are great for early game storage. They are also used for creating our first metal tools!"]
+			description: [
+				"{gravitas.quest.caveman.desc.early_metal_storage.1}"
+				""
+				"{gravitas.quest.caveman.desc.early_metal_storage.2}"
+			]
 			id: "31DC96A27D8FC91C"
 			tasks: [{
-				count: 4L
+				count: 2L
 				id: "53987150CA61D080"
 				item: {
 					Count: 1b
@@ -716,24 +718,66 @@
 		{
 			dependencies: ["72DDCB9936148388"]
 			description: [
-				"Now that we have access to a &cFirepit&r and some &aFired Molds&r, our next step is to find &aSmall Pieces of Copper&r."
+				"{gravitas.quest.caveman.desc.finding_copper.1}"
 				""
-				"You won't be able to mine anything until you have a pickaxe, so heading into the caves won't work. Instead, your best bet is to head to a &eLimestone&r region to find &a Small Malachite&r pebbles."
+				"{gravitas.quest.caveman.desc.finding_copper.2}"
 				""
-				"Each one of these will net you 10mb of Copper when smelted down, so you'll need 10 Small Malachite per tool head you want to make."
+				"{gravitas.quest.caveman.desc.finding_copper.3}"
+				""
+				"{gravitas.quest.caveman.desc.finding_copper.4}"
 			]
+			icon: {
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:ore/small_native_copper"
+			}
 			id: "6A9592B8BDE532CE"
 			shape: "gear"
 			tasks: [{
-				id: "45AB7A368F769835"
+				id: "2A50B72B4942963C"
 				item: {
 					Count: 1b
-					id: "itemfilters:tag"
+					id: "itemfilters:or"
 					tag: {
-						value: "tfc:small_ore_pieces_copper"
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_native_copper"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_tetrahedrite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_malachite"
+							}
+						]
 					}
 				}
-				title: "Small Ore Pieces of Copper"
 				type: "item"
 			}]
 			title: "&eFinding Copper&r"
@@ -743,13 +787,13 @@
 		{
 			dependencies: ["7CF28D1E8ABAF228"]
 			description: [
-				"You'll notice right away that you can't get any stone blocks from mining with that pickaxe."
+				"{gravitas.quest.caveman.desc.first_anvil.1}"
 				""
-				"To do this, you'll need to find any kind of stone and break away all of the blocks around the block touching each face. Once you do this, the stone will pop out as an item!"
+				"{gravitas.quest.caveman.desc.first_anvil.2}"
 				""
-				"To make our first anvil, we'll need to gather at least one of these blocks: Rhyolite, Basalt, Andesite, Dacite, Granite, Diorite, or Gabbro."
+				"{gravitas.quest.caveman.desc.first_anvil.3}"
 				""
-				"With one of these &aRaw Rocks&r, we can make our first &eAnvil&r by placing it down and right clicking it with a TFC Hammer."
+				"{gravitas.quest.caveman.desc.first_anvil.4}"
 			]
 			id: "59541FF5AD12B13A"
 			min_width: 300
@@ -1128,9 +1172,9 @@
 		{
 			dependencies: ["16BB7334ACB35025"]
 			description: [
-				"The &bLoom&r can be used to turn 16 Wool Yarn into &aWool Cloth&r."
+				"{gravitas.quest.caveman.desc.loom.1}"
 				""
-				"To do this, place the Loom down and right click on it with Wool Yarn. Once it has enough, you can hold right click to begin working the yarn. When finished, right click to get your Wool Cloth!"
+				"{gravitas.quest.caveman.desc.loom.2}"
 			]
 			id: "154A9384B22C1FC2"
 			tasks: [
@@ -1158,7 +1202,7 @@
 		}
 		{
 			dependencies: ["7CF28D1E8ABAF228"]
-			description: ["&aSpindles&r are used to break down Wool into &eWool Yarn&r, which can eventually be turned into the Wool in vanilla!"]
+			description: ["{gravitas.quest.caveman.desc.spindle}"]
 			id: "3BD7DB417DDE94D0"
 			tasks: [
 				{
@@ -1197,7 +1241,7 @@
 		}
 		{
 			dependencies: ["3BD7DB417DDE94D0"]
-			description: ["Gather up some &aWool&r from the local wildlife. Using your Spindle, turn the Wool into &aWool Yarn&r."]
+			description: ["{gravitas.quest.caveman.desc.wool}"]
 			id: "16BB7334ACB35025"
 			tasks: [
 				{
@@ -1238,6 +1282,7 @@
 			dependencies: ["70D78EF128C722A1"]
 			description: [
 				"{gravitas.quest.caveman.desc.composter.1}"
+				""
 				"{gravitas.quest.caveman.desc.composter.2}"
 			]
 			id: "2AD5D0FD00A5C4FD"
@@ -1252,9 +1297,9 @@
 		}
 		{
 			description: [
-				"TerraFirmaCraft (TFC) adds a completely different experience from the standard Minecraft journey."
+				"{gravitas.quest.caveman.desc.getting_started.1}"
 				""
-				"It's easy to get lost, but you've been equipped with a guidebook in your inventory! If you ever need help, click on the TFC guidebook tab on the right side of your inventory screen!"
+				"{gravitas.quest.caveman.desc.getting_started.2}"
 			]
 			icon: {
 				Count: 1b
@@ -1278,11 +1323,11 @@
 		{
 			dependencies: ["297C2E9EF534A201"]
 			description: [
-				"Using 2 Twigs, you can craft a &cFirestarter&r, which will help us make a &cFirepit&r!"
+				"{gravitas.quest.caveman.desc.we_have_fire.1}"
 				""
-				"Campfires are made by throwing down these items all on one block: 1 log, 3 Sticks, and up to 5 pieces of Kindling (Straw is great for this!)"
+				"{gravitas.quest.caveman.desc.we_have_fire.2}"
 				""
-				"Once all items are thrown down, use the Firestarter on the items to try and light it. If successful, you will make your first &cFirepit&r!"
+				"{gravitas.quest.caveman.desc.we_have_fire.3}"
 			]
 			icon: "tfc:firepit"
 			id: "180277183EB60B6D"
@@ -1316,13 +1361,13 @@
 		{
 			dependencies: ["6A9592B8BDE532CE"]
 			description: [
-				"Once you've found at least 10 pebbles that make copper, we can use a Pit Kiln to cast some tool parts."
+				"{gravitas.quest.caveman.desc.copper_tools.1}"
 				""
-				"To do this, make a &eVessel&r and fill it with enough copper pebbles, then fire it up using a Pit Kiln."
+				"{gravitas.quest.caveman.desc.copper_tools.2}"
 				""
-				"Once the Kiln is done, pick up the Vessel and place your pickaxe mold inside. Be quick about this! The contents can solidify if you take too long. If this does happen, you can run it back through the Kiln to melt it back down."
+				"{gravitas.quest.caveman.desc.copper_tools.3}"
 				""
-				"Once the mold has solidified, you can sneak-right click it to get your first Copper pickaxe head! You'll want to make a Prospector's pick as well."
+				"{gravitas.quest.caveman.desc.copper_tools.4}"
 			]
 			id: "7CF28D1E8ABAF228"
 			min_width: 300
