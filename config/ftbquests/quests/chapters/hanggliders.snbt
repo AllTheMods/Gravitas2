@@ -1,0 +1,64 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hanggliders"
+	group: "095899370DDF48CB"
+	icon: {
+		Count: 1b
+		id: "hangglider:hang_glider"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "068A7B40DE5F65C9"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Welcome to Hangliders! The first one you'll make is just the normal Hanglider. By combing 2 Hanglider Wings and a Hanglider Frame you'll make your very own Hanglider. Use it by right clicking with it to activate it. Now whenever your off the ground you'll glide."]
+			id: "30B2B1CEB12737B1"
+			rewards: [{
+				id: "39D6DE4C5D173100"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [{
+				id: "22AB22945F2AD0C9"
+				item: {
+					Count: 1b
+					id: "hangglider:hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["30B2B1CEB12737B1"]
+			description: ["By combining a Hanglider and Elytra you'll make a Reinforced Hanglider. More Durability and slightly faster (don't quote me on that). Enjoy your gliding! Also gliding doesn't get you kicked for flying."]
+			id: "216A514F3CB3B5DB"
+			rewards: [{
+				id: "0406B34B0D3EFE58"
+				type: "xp_levels"
+				xp_levels: 20
+			}]
+			tasks: [{
+				id: "2097E67794BA916F"
+				item: {
+					Count: 1b
+					id: "hangglider:reinforced_hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+	]
+	title: "{gravitas.chapters.14.title}"
+}

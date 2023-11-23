@@ -1,0 +1,48 @@
+
+#This is the config for Precision Prospecting
+[molds]
+	#Tank capacity of a Prospector's Hammer head mold (in mB).
+	#Range: 0 ~ 2147483645
+	moldProsHammerCapacity = 200
+	#Tank capacity of a Prospector's Drill head mold (in mB).
+	#Range: 0 ~ 2147483645
+	moldProsDrillCapacity = 400
+	#Tank capacity of a Mineral Prospector head mold (in mB).
+	#Range: 0 ~ 2147483645
+	moldMineralProspectorCapacity = 200
+
+[tools]
+
+	[tools.prosHammer]
+		#The distance the Prospector's Hammer will scan in non-axial directions
+		#Range: 0 ~ 25
+		prosHammerPrimaryRadius = 6
+		#The distance the Prospector's Hammer will scan in the axial directions
+		#Range: 0 ~ 25
+		prosHammerSecondaryRadius = 6
+		#The distance to offset the Prospector's Hammer's scan along the axial direction
+		#Range: 0 ~ 25
+		prosHammerDisplacement = 0
+
+	[tools.prosDrill]
+		#The distance the Prospector's Drill will scan in non-axial directions
+		#Range: 0 ~ 25
+		prosDrillPrimaryRadius = 3
+		#The distance the Prospector's Drill will scan in the axial directions
+		#Range: 0 ~ 25
+		prosDrillSecondaryRadius = 12
+		#The distance to offset the Prospector's Drill's scan along the axial direction
+		#Range: 0 ~ 25
+		prosDrillDisplacement = 10
+
+	[tools.minPros]
+		#The distance the Mineral Prospector will scan in non-axial directions
+		#Range: 0 ~ 25
+		minProspectorPrimaryRadius = 22
+		#The distance the Mineral Prospector will scan in the axial directions
+		#Range: 0 ~ 25
+		minProspectorSecondaryRadius = 22
+		#The distance to offset the Mineral Prospector's scan along the axial direction
+		#Range: 0 ~ 25
+		minProspectorDisplacement = 0
+

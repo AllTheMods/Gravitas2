@@ -1,0 +1,369 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_copper_stage"
+	group: "4B728CAFC5748917"
+	icon: {
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "tfc:metal/ingot/copper"
+	}
+	id: "0C39D0EE2BB6E590"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Copper is our main metal for all things liquid and electricity moving."]
+			id: "48C8D0CB8C53A8A4"
+			rewards: [{
+				count: 3
+				id: "6AAA57DBDD78B362"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3183CF05DC3CA174"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.copper_ingot}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["48C8D0CB8C53A8A4"]
+			description: ["This will be your main source of moving fluids. Can be edited with a Wrench to give a window."]
+			id: "27C77CC41F85409A"
+			rewards: [{
+				count: 3
+				id: "31E0E1B29F114FEC"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "675EAD621F3D760E"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.fluid_pipe}"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["27C77CC41F85409A"]
+			description: ["The Fluid Valve works as a way of filtering fluids or just stopping the movement of fluids. It will need a valve handle to actually change it."]
+			id: "2BF7D2D871FB5F51"
+			rewards: [{
+				count: 3
+				id: "55E64C938CA07860"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1D3ABCBAB441F601"
+				item: "create:fluid_valve"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.fluid_valve}"
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["27C77CC41F85409A"]
+			description: ["Mechanical Pump is how to get fluid moving into and through the pipes. It needs to be powered to move fluids and it will move them based on the direction it is moved."]
+			id: "0853FD8082A505A2"
+			rewards: [{
+				id: "53B7AE83B5079605"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "240ABE3DC56274E2"
+				item: "create:mechanical_pump"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.mechanioal_pump}"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["27C77CC41F85409A"]
+			description: ["The Copper Valve Handle will be needed to use a Fluid Valve. It can also be used on Mechnical Bearings to move contaptions."]
+			id: "20F27736412A205A"
+			tasks: [{
+				id: "58BAC1392D35F4E0"
+				item: "create:copper_valve_handle"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.copper_valve_handle}"
+			x: 0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["48C8D0CB8C53A8A4"]
+			description: ["Fluid Tanks do as the name suggests, hold fluids ready for use."]
+			id: "31C52FC411A15844"
+			rewards: [{
+				id: "44E7C863124CF616"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "765C65D7931205A4"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.fluid_tank}"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["31C52FC411A15844"]
+			description: ["The Spout when used in an assembly line will drop whatever liquid is in it to process an item in a depot below."]
+			id: "04DB900EDD1FFFF9"
+			rewards: [{
+				id: "49FE1ADD774111D9"
+				item: "minecraft:lava_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0E365F577185F5BF"
+				item: "create:spout"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.spout}"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["31C52FC411A15844"]
+			description: ["The Item Drain works either by itself or with automation to take liquids out of other items. Like taking water from a water bucket. "]
+			id: "0826086F14498A9E"
+			rewards: [{
+				id: "05D319ED996582A0"
+				item: "minecraft:water_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "24D08BCB009EF688"
+				item: "create:item_drain"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.item_drain}"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["31C52FC411A15844"]
+			description: ["The Hose Pulley is quite a destructive fellow. It can be used to create oceans or drain oceans. It will go to the level it is lowered to and drains or fills depending on the way its rotated."]
+			id: "3F2F1DDADC196B59"
+			rewards: [{
+				id: "2FB34AFDD0F410AE"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1E0B139E7205045D"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.hose_pulley}"
+			x: 0.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["04DB900EDD1FFFF9"]
+			description: ["By filling a Blaze Cake Base with lava from a spout you get a Blaze Cake. This can be used to get your captive Blaze slave to fire up hotter than ever."]
+			id: "604D6431D206B274"
+			rewards: [{
+				id: "70F78F667CE14321"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "4EBC44C6FA138AFF"
+				item: "create:blaze_cake"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.blaze_cake}"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6ED05B4615C473EC"]
+			description: ["These machines are your portal between Forge Energy (FE) and Create momentum. The Alternator creates FE from momentum and the Electric Motor uses FE to make momentum."]
+			id: "69C770A6CD924347"
+			tasks: [
+				{
+					id: "6E5F2E601DF3BAEF"
+					item: "createaddition:alternator"
+					type: "item"
+				}
+				{
+					id: "3B1CCA5D84475F05"
+					item: "createaddition:electric_motor"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.create_copper.alternator}"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			description: ["The Rolling Mill will make wires from plates. It needs to be powered to work."]
+			id: "5F432D056516C7E8"
+			rewards: [{
+				count: 5
+				id: "672952EB84322BDA"
+				item: "createaddition:copper_wire"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7447B10931178D4B"
+				item: "createaddition:rolling_mill"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.rolling_mill}"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			description: ["To actually use wires you'll need a Spool. "]
+			id: "787D0A5C25350A84"
+			rewards: [{
+				count: 5
+				id: "2745628E32EBEF81"
+				item: "createaddition:spool"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7CB499371F5AFFC7"
+				item: "createaddition:spool"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.empty_spool}"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"787D0A5C25350A84"
+				"48C8D0CB8C53A8A4"
+				"5F432D056516C7E8"
+			]
+			description: ["The Copper Spool is made by combing Copper Wires and an Empty Spool. These can be used to connect energy using machines or to make more machines."]
+			id: "6ED05B4615C473EC"
+			rewards: [{
+				count: 5
+				id: "13B79FB6DFE6ACD3"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3263770252C06B87"
+				item: "createaddition:copper_spool"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.copper_spool}"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6ED05B4615C473EC"]
+			description: ["Wires are how you move FE to Create machines. Connectors are how you actually get the FE to the machines."]
+			id: "280D2DD0B985DB7B"
+			rewards: [{
+				count: 4
+				id: "747673429996E574"
+				item: "createaddition:electrum_spool"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "6BB7F231F559B062"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "createaddition:connector"
+								}
+								{
+									Count: 1b
+									id: "createaddition:large_connector"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "06B8F1E7CD29CFD1"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "createaddition:copper_wire"
+								}
+								{
+									Count: 1b
+									id: "createaddition:iron_wire"
+								}
+								{
+									Count: 1b
+									id: "createaddition:gold_wire"
+								}
+								{
+									Count: 1b
+									id: "createaddition:electrum_wire"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.create_copper.copper_wires}"
+			x: -3.0d
+			y: 1.0d
+		}
+	]
+	title: "{gravitas.chapters.10.title}"
+}
