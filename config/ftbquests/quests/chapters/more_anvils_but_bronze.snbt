@@ -196,16 +196,7 @@
 				}
 				{
 					id: "1B7BB0F23E04AF1B"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:kaolin_clay"
-					}
+					item: "tfc:ore/kaolinite"
 					type: "item"
 				}
 			]
