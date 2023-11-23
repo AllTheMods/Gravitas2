@@ -1,0 +1,470 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_beginning"
+	group: "4B728CAFC5748917"
+	icon: "create:andesite_alloy"
+	id: "08C451A973B94BC6"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Where the Create Mod starts is in this little metal object. You can create it by combing rocks and zinc nuggets. Or a much easier way would be knapping."]
+			id: "0F1D52151DC0470B"
+			rewards: [{
+				count: 3
+				id: "1122FA23CBDCC274"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			tasks: [{
+				id: "01C17EB990474DD2"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.igneous_zinc_alloy.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F1D52151DC0470B"]
+			description: ["The Shaft will be your most useful way of moving Kinetic Energy and creating machines."]
+			id: "1966BDA6A4C93D06"
+			rewards: [{
+				count: 3
+				id: "4D34329900628719"
+				item: "create:shaft"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7A4EF29709FC910A"
+				item: "create:shaft"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.shaft}"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1966BDA6A4C93D06"]
+			description: ["The Water Wheel will be your first machine to create Kinetic Energy which is represented by Stress Units (SU). Create works off Kinetic Energy as its energy. The Water Wheel needs water flowing over it to create Kinetic Energy that can be moved from shafts connected to it."]
+			id: "4E8D7F89699F4A8D"
+			rewards: [{
+				id: "29971AD2808E1530"
+				item: "minecraft:water_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "390A03AA2BBABEC8"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.water_wheel}"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4E8D7F89699F4A8D"]
+			description: ["To power your machines you'll need to move the Kinetic Energy around to different machines."]
+			id: "226BFC3D1E0C48D4"
+			rewards: [{
+				count: 10
+				id: "2174E0AA0996D90D"
+				item: "gtceu:treated_wood_planks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2F282FE03E90C1E9"
+				title: "Moving Stress"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.igneous.moving_stress}"
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["226BFC3D1E0C48D4"]
+			description: ["The cogs keep momentum moving on a different axis. Will be helpful to keep multiple machines moving. They will also be necessary for some machines like the millstone."]
+			id: "2B1CEF9E7A01F816"
+			rewards: [
+				{
+					count: 3
+					id: "5906370D6F10BD5E"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "5FCB467D6200E194"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1EAD4ED82769F86A"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "73E0C74BFDDFED5D"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.igneous.cogwheel}"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["226BFC3D1E0C48D4"]
+			description: ["The different Gearboxes and other blocks able to be used here for this quest effect how shafts and Kinetic Energy move. The Gearboxes move the Kinetic Energy in different directions. The Gearshift when given redstone will make the Kinetic Energy switch ways. The Chain effects speed. And when powered the Clutch stops Kinetic Energy."]
+			id: "2A91F572B1E9636A"
+			rewards: [{
+				count: 4
+				id: "293E937C4CD5599D"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4A6E220520796136"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create:gearbox"
+							}
+							{
+								Count: 1b
+								id: "create:vertical_gearbox"
+							}
+							{
+								Count: 1b
+								id: "create:gearshift"
+							}
+							{
+								Count: 1b
+								id: "create:adjustable_chain_gearshift"
+							}
+							{
+								Count: 1b
+								id: "create:clutch"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.changing_direction}"
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["4E8D7F89699F4A8D"]
+			description: ["These are the most basic and cheap machines in Create. Some will be necessary to move forward in the mod."]
+			id: "3E5E415565A744CE"
+			rewards: [{
+				count: 4
+				id: "3F7E18364B22D3AD"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "33DD85D63A14A78D"
+				title: "Small Machines"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.igneous.small_machines}"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["02D053C7ADA0C55C"]
+			description: ["The Mechanical Press is a veru useful machine for lots of automatic crafting. With a Basin it can pack and compact items, like into ignots or blocks. Without a Basin it will press items, like sugarcane to paper or ignots to sheets."]
+			id: "7B7C7F707BD90FF3"
+			rewards: [{
+				count: 3
+				id: "12AABD759C2026FB"
+				item: "minecraft:sugar_cane"
+				type: "item"
+			}]
+			tasks: [{
+				id: "70F6079543A437E9"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.mechanical_press}"
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["02D053C7ADA0C55C"]
+			description: ["The Mechanical Mixer is a machine that can be used for Brewing, Mixing, or Shapeless Crafting. You can make potions or booze with it. And crafting recipes that don't need a specific shape can be created with this. It needs a lot of speed to power!"]
+			id: "38311AA253AF8A8C"
+			rewards: [
+				{
+					count: 4
+					id: "4BC9EC856BFAABF9"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+				{
+					id: "3417342553F2567B"
+					item: "minecraft:water_bucket"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "25D49FB23378AE59"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.mechanical_mixer}"
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4E8D7F89699F4A8D"]
+			description: ["You'll need to be careful and keep watch of the Stress and Speed of your systems. Different machines need and can only handle some amounts of SU."]
+			id: "2426CEED740DD84C"
+			rewards: [{
+				id: "4FE6363E7DF96418"
+				item: "minecraft:compass"
+				type: "item"
+			}]
+			tasks: [{
+				id: "31BEED00AD60CDAD"
+				title: "Testing Stress and Speed"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.igneous.testing_stress_and_speed}"
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2426CEED740DD84C"]
+			description: ["The Speedometer shows the speed of the system its attached to."]
+			id: "0CDA1D2981C64323"
+			rewards: [{
+				id: "33FCD478A688CFFA"
+				item: "create:shaft"
+				type: "item"
+			}]
+			tasks: [{
+				id: "50C51C41E221EF4F"
+				item: "create:speedometer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.speedometer}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2426CEED740DD84C"]
+			description: ["The Stressometer tells the current Stress of a system its attached to. Very important for the health of the system."]
+			id: "61C7329189BE34C9"
+			rewards: [{
+				id: "0C2EFDAD1F008F79"
+				item: "create:shaft"
+				type: "item"
+			}]
+			tasks: [{
+				id: "13B1227C3FE1FB23"
+				item: "create:stressometer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.stressometer}"
+			x: 1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3E5E415565A744CE"]
+			description: ["The Basin will be needed for a lot of the machines. It must be located 2 blocks beneath the machine (1 block gap between them). It can hold items and liquids."]
+			id: "02D053C7ADA0C55C"
+			rewards: [{
+				id: "59A8317059C277BE"
+				item: "create:basin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "34DD78096EA439E3"
+				item: "create:basin"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.basin}"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3E5E415565A744CE"]
+			description: ["The Millstone will crush some items that are thrown into it. To get the new items you have to right click it. It needs a cog or large cog next to it to power it."]
+			id: "642891A17019C70C"
+			rewards: [{
+				id: "117FC39778D7A6D2"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "572BA1EDB6E30F1E"
+				item: "create:millstone"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.millstone}"
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4E8D7F89699F4A8D"]
+			description: ["The Windmill is a very useful machine for generating SU. Its SU is dependent on how big the windmill is. It needs atleast 8 windmill sails and can be as big as you want. Right click the Windmill Bearing to start it!"]
+			id: "2C4E8D6F5F9F76A9"
+			rewards: [{
+				count: 8
+				id: "5BE884CBC52C029F"
+				item: "create:white_sail"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "0548B0690566473E"
+					item: "create:windmill_bearing"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "49A6DB7B38DD67F3"
+					item: "create:white_sail"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.igneous.windmill}"
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4E8D7F89699F4A8D"]
+			description: ["To get automation from Create you will need to move items. To move items you'll need these bad boys."]
+			id: "4B5693E15D5A9FA3"
+			rewards: [{
+				count: 3
+				id: "0D8AE37AD318178A"
+				item: "minecraft:leather"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6562B5A6E3064223"
+				title: "Moving items"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.igneous.moving_items}"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4B5693E15D5A9FA3"]
+			description: ["The Mechanical Belt goes around shafts and will move according to how the shafts are moving. Items can be dropped onto it and will be moved with it."]
+			id: "2FA1AEB40F55EE04"
+			rewards: [{
+				count: 10
+				id: "3D1729EBCA73E6E9"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0907F490C5E3FB5B"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.mechanical_belt}"
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["4B5693E15D5A9FA3"]
+			description: ["The Depot (not the Home Depot) is a block that holds items for processing. It will be needed for the Mixer and Press."]
+			id: "189144799E04699F"
+			rewards: [{
+				count: 3
+				id: "681C26F7DA8BF36D"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2E5D8122B16A51CA"
+				item: "create:depot"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.depot}"
+			x: 4.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["4B5693E15D5A9FA3"]
+			description: ["The Chute is the create version of the hopper. Like the hopper though it requires iron."]
+			id: "20F7A484B0CAC126"
+			rewards: [{
+				count: 10
+				id: "42BAFB12E7D2E0B0"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 1218000L
+							traits: [ ]
+						}
+					}
+					id: "tfc:food/cooked_beef"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "26A8A9E0D00DF13A"
+				item: "create:chute"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.chute}"
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3E5E415565A744CE"]
+			description: ["The Encased Fan, when powered will blow air infront of it. This can be used to do many things. With lava in front of it, it will smelt ores or burn things. With fire infront of it, it will cook food. With water in front of it, it will wash items."]
+			id: "610D028DED85805B"
+			rewards: [{
+				id: "0C1DFB103ECCEC2F"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			tasks: [{
+				id: "293AE0BDCC88615B"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.encased_fan}"
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["610D028DED85805B"]
+			description: ["By rightclicking a Blaze with an Empty Blaze Burner you can make it no longer empty! This will be needed to heat some machines for different processes."]
+			id: "4363A85AA84102B8"
+			rewards: [{
+				count: 16
+				id: "5F7BE86A148B99AC"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "458AB70F699320CE"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.blaze_burner}"
+			x: 5.0d
+			y: 3.0d
+		}
+	]
+	title: "{gravitas.chapters.8.title}"
+}

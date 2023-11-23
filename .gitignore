@@ -25,7 +25,7 @@ usernamecache.json
 /XaeroWaypoints*
 /XaeroWorldMap
 .vscode
-/config
+
 /defaultconfigs
 kubejs/server_scripts/debug/
 kubejs/startup_scripts/debug/

@@ -1,0 +1,614 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_new_age"
+	group: "4B728CAFC5748917"
+	icon: "create_new_age:overcharged_diamond"
+	id: "7064603779F35B9E"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["I recommend you go through Create Crafts and Additions before Create New Age. Some work together but it also just helps you get the basic idea of Energy and Create."]
+			id: "161A461EF4072877"
+			optional: true
+			tasks: [{
+				id: "7F5F79A27EDC57D2"
+				title: "Go through Create Crafts and Additions"
+				type: "checkmark"
+			}]
+			title: "Create Crafts and Additions"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"711E0E0B0315D90E"
+				"1CDDA789D2EC2118"
+			]
+			description: ["The Basic Motor is a lot like the Electric Motor from Create Crafts and Additions. It can turn Energy into Kinetic Energy. Its speed can be configured with a Wrench."]
+			id: "7DA0E0142A7853C9"
+			rewards: [{
+				count: 2
+				id: "2601022D35A69CA7"
+				item: "create_new_age:copper_circuit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0C874018AB0A4C13"
+				item: "create_new_age:basic_motor"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["161A461EF4072877"]
+			description: ["Connectors and Wires are how you move Energy to and from Create machines. The Connectors need to be attached to the machines, and the wires go between them. The type of wire determines the amount of energy it transfers. (Create Crafts and Additions connectors and wires do the same)."]
+			id: "711E0E0B0315D90E"
+			rewards: [{
+				count: 5
+				id: "43E08CE9F38CB61E"
+				item: "create_new_age:copper_wire"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "6807D225B7341C7E"
+					item: "create_new_age:electrical_connector"
+					type: "item"
+				}
+				{
+					id: "1869AB5D8193DB51"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "create_new_age:copper_wire"
+								}
+								{
+									Count: 1b
+									id: "create_new_age:overcharged_iron_wire"
+								}
+								{
+									Count: 1b
+									id: "create_new_age:overcharged_golden_wire"
+								}
+								{
+									Count: 1b
+									id: "create_new_age:overcharged_diamond_wire"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Moving Energy with Create"
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7DA0E0142A7853C9"]
+			description: ["The Energizer will be needed to make the Materials needed for progressing into Create New Age. When powered with Energy and Kinetic Energy it will ZAP the items beneath it."]
+			id: "34DD3F7BE2C6D7FC"
+			rewards: [
+				{
+					id: "4D80636BB6F52992"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/ingot/cast_iron"
+					}
+					type: "item"
+				}
+				{
+					id: "1A6078E04EC8ACC5"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0D23EB2EEE38B5"
+					item: "tfc:gem/diamond"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2E56A07A17107A18"
+				item: "create_new_age:energiser_t1"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["161A461EF4072877"]
+			description: ["A good way of making power through Create New Age is the Magnets. You need a Generator Coil spinning at a certain speed, with a Carbon Brush attached. The Carbon Brush is where the Energy will go. But you also need..."]
+			id: "4765781833CE1888"
+			tasks: [
+				{
+					id: "7B834A494F456CEE"
+					item: "create_new_age:generator_coil"
+					type: "item"
+				}
+				{
+					id: "31E11ADA4F76D9CA"
+					item: "create_new_age:carbon_brushes"
+					type: "item"
+				}
+			]
+			title: "Power from Magnets"
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["34DD3F7BE2C6D7FC"]
+			description: ["By using 1k of Forge Energy or 250 EU you can ZAP a cast iron ingot into an Overcharged Iron Ingot."]
+			id: "2F61AEB27357B362"
+			rewards: [{
+				count: 3
+				id: "2EBAF415D211BA75"
+				item: "create_new_age:overcharged_iron"
+				type: "item"
+			}]
+			tasks: [{
+				id: "56837C39EC61F93D"
+				item: "create_new_age:overcharged_iron"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["34DD3F7BE2C6D7FC"]
+			description: ["By using 2k Forge Energy or 500 EU you can ZAP a Gold Ingot into an Overcharged Gold Ingot."]
+			id: "7F60AA3D226CF4C3"
+			rewards: [{
+				count: 3
+				id: "6F79AD6BE46ABCB6"
+				item: "create_new_age:overcharged_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "76B6C9AC7328DB87"
+				item: "create_new_age:overcharged_gold"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["34DD3F7BE2C6D7FC"]
+			description: ["With 10K Forge Energy or 2500 EU you can ZAP a Cut Diamond to get an Overcharged Diamond."]
+			id: "1B5F6CDB02587D6D"
+			rewards: [{
+				count: 3
+				id: "6C39667F9753F191"
+				item: "create_new_age:overcharged_diamond"
+				type: "item"
+			}]
+			tasks: [{
+				id: "00D16D288197DBAF"
+				item: "create_new_age:overcharged_diamond"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["161A461EF4072877"]
+			id: "1CDDA789D2EC2118"
+			tasks: [{
+				id: "7F9E3D829C3C8318"
+				item: "create_new_age:magnetite_block"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4765781833CE1888"]
+			description: ["To actually use Magnets to make Energy the Generator Coil will need to be surrounded by some form of Magnets. The first magnets you can make is the Redstone Magnet. They have 1 Magnet Power."]
+			id: "5E3ECB5F0B65B0F1"
+			rewards: [{
+				count: 4
+				id: "77B92C50C665879E"
+				item: "create_new_age:redstone_magnet"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2AA3A3E260222572"
+				item: "create_new_age:redstone_magnet"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"4765781833CE1888"
+				"2F61AEB27357B362"
+				"7F60AA3D226CF4C3"
+			]
+			description: ["Layered Magnets are twice the power of a Redstone Magnet at 4 Magnet Power. You'll need 6 Overcharged Iron Ingots and 3 Overcharged Gold Ingots."]
+			id: "035405FABB4BBEE0"
+			rewards: [{
+				count: 4
+				id: "06DC974512135500"
+				item: "create_new_age:layered_magnet"
+				type: "item"
+			}]
+			tasks: [{
+				id: "65AA4D918D62BFEE"
+				item: "create_new_age:layered_magnet"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"4765781833CE1888"
+				"1B5F6CDB02587D6D"
+				"7F60AA3D226CF4C3"
+			]
+			id: "4473011A7FEFE7F2"
+			rewards: [{
+				count: 4
+				id: "0391D687F1F05622"
+				item: "create_new_age:fluxuated_magnetite"
+				type: "item"
+			}]
+			tasks: [{
+				id: "72BE4B33898B4D66"
+				item: "create_new_age:fluxuated_magnetite"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"4765781833CE1888"
+				"1B5F6CDB02587D6D"
+			]
+			id: "499E4BCDA5EDC540"
+			rewards: [{
+				count: 4
+				id: "4FCF3D30294B54A2"
+				item: "create_new_age:netherite_magnet"
+				type: "item"
+			}]
+			tasks: [{
+				id: "21097C8942D6E4A9"
+				item: "create_new_age:netherite_magnet"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"2F61AEB27357B362"
+				"29AFD1F176B9B9C7"
+			]
+			description: ["The Boiler Heater does the same a Blaze Burner does but instead uses Heat to heat it. I know its confusing just go with it."]
+			id: "7784D240696594A0"
+			rewards: [{
+				id: "30C95C599BE2153C"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "2F6DCF444306EDCD"
+				item: "create_new_age:heater"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.5d
+		}
+		{
+			description: [
+				""
+				"Heat is a Unit of Create New Age. It can be used to get more Kinetic Energy, Forge Energy, or Heat for mixing and processing. Be careful not to overheat!"
+			]
+			id: "6AFC2297D03EB64F"
+			rewards: [{
+				count: 9
+				id: "402D1616ED34356A"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "minecraft:terracotta"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "12038E2649361493"
+				title: "Is it Hot in here?"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6AFC2297D03EB64F"]
+			description: ["Heat Pipes are your main man for moving Heat. "]
+			id: "29AFD1F176B9B9C7"
+			rewards: [{
+				count: 4
+				id: "6405E4D330595BDB"
+				item: "create_new_age:heat_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "04815CC37E1EAEBF"
+				item: "create_new_age:heat_pipe"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["29AFD1F176B9B9C7"]
+			description: ["The Heat Pump is an upgraded version of the Heat Pipes. They push more heat toward other machines."]
+			id: "20E94B842E96F58D"
+			tasks: [{
+				id: "7AFD86F3D2203A9A"
+				item: "create_new_age:heat_pump"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["29AFD1F176B9B9C7"]
+			description: ["The Reactor Vent is where the Heat will leave the Reactor. Attach Heat Pumps to move the heat away. Make sure the heat gets out so you don't have a meltdown."]
+			id: "5D5993BDAFFC6F6C"
+			tasks: [{
+				id: "675A6A6C6C93A340"
+				item: "create_new_age:reactor_heat_vent"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["29AFD1F176B9B9C7"]
+			description: ["The Solar Plates automatically create Heat when in the Sun. Your main automatic source of heat!"]
+			id: "0111ABBF8FF9A62A"
+			rewards: [{
+				count: 4
+				id: "26ECFF7E480AFEEA"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/cast_iron"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "527C134433386552"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create_new_age:basic_solar_heating_plate"
+							}
+							{
+								Count: 1b
+								id: "create_new_age:advanced_solar_heating_plate"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Solar Plates"
+			x: 1.0d
+			y: 6.0d
+		}
+		{
+			description: ["The Reactor Fuel Inserter will be on the front of your reactor. You'll need a funnel to bring the Reactor Fuel into it. Once Fuel is in it'll automatically start."]
+			id: "2AED53502F5B9B12"
+			rewards: [{
+				count: 5
+				id: "7FFAB522F8438F37"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "4695F61C8811DE38"
+					item: "create_new_age:reactor_fuel_acceptor"
+					type: "item"
+				}
+				{
+					id: "6CE7A36A39A098E2"
+					item: "create:andesite_funnel"
+					type: "item"
+				}
+			]
+			title: "Getting Reactor Fuel into the Reactor"
+			x: 4.0d
+			y: 9.0d
+		}
+		{
+			description: ["Reactor Fuel is needed to start and use the Reactor. The Fuel Rods will be the middle of the Reactor and is where the Fuel will be moved to process. They will light up when active."]
+			id: "631CD91E20A188ED"
+			rewards: [{
+				count: 10
+				id: "3EDBA2DB468356ED"
+				item: "create_new_age:nuclear_fuel"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "3340E7B5CDF24720"
+					item: { Count: 64b, id: "create_new_age:nuclear_fuel" }
+					type: "item"
+				}
+				{
+					id: "08708797BD46D7D3"
+					item: "create_new_age:reactor_rod"
+					type: "item"
+				}
+			]
+			title: "Powering your Reactor"
+			x: 5.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"2AED53502F5B9B12"
+				"5D5993BDAFFC6F6C"
+				"631CD91E20A188ED"
+			]
+			description: ["The Reactor Casing and Reactor Glass is what makes up the frame of your reactor. The floor of the reactor and corners must be Reactor Casings. For the smallest Reactor use 3x3x3. For the middle layer the Heat Vent and Fuel Inserter must be opposite sides of each other with a Reactor Rod between them. You can use Glass next to the other sides of the Reactor Rod but the corners must be Casings. And for top layer it will be 3 Reactor Casings, 3 Reactor Glass, then 3 Reactor Casings."]
+			id: "4166F9C86941AC7E"
+			rewards: [
+				{
+					id: "58D3C81E97158F07"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "6006230EDF06A90C"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:food": {
+								creationDate: -2L
+								foodData: {
+									dairy: 0.0f
+									decay: 0.0f
+									food: 0
+									fruit: 0.0f
+									grain: 0.0f
+									meat: 0.0f
+									sat: 0.0f
+									veg: 0.0f
+									water: 0.0f
+								}
+								ingredients: [ ]
+								traits: [ ]
+							}
+						}
+						id: "tfc:food/barley_bread_jam_sandwich"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 19L
+					id: "7350E39D2A0C89E2"
+					item: "create_new_age:reactor_casing"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "349D292CCA3CB16C"
+					item: "create_new_age:reactor_glass"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"4166F9C86941AC7E"
+				"0111ABBF8FF9A62A"
+			]
+			dependency_requirement: "one_completed"
+			description: ["The Stirling Engine uses Heat to create Kinetic Energy. It all comes back in a circle!"]
+			id: "307062426E000211"
+			rewards: [{
+				count: 3
+				id: "746FE41B1D47B54D"
+				item: "create:shaft"
+				type: "item"
+			}]
+			tasks: [{
+				id: "60161C7031E2F23B"
+				item: "create_new_age:stirling_engine"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4166F9C86941AC7E"]
+			description: ["Congrats you broke it. Make sure to clean up the lava and hopefully retrieve the Corium before it enters the core of the Earth!"]
+			hide: true
+			id: "19FE3EBF7B744F8F"
+			rewards: [{
+				id: "3DAA994402654049"
+				item: {
+					Count: 1b
+					id: "minecraft:potion"
+					tag: {
+						Potion: "minecraft:fire_resistance"
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "33A1992891D55CE8"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create_new_age:corium"
+							}
+							{
+								Count: 1b
+								id: "create_new_age:solid_corium"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "MELTDOWN!!!"
+			x: 2.5d
+			y: 9.0d
+		}
+	]
+	title: "{gravitas.chapters.12.title}"
+}

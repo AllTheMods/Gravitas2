@@ -1,0 +1,1205 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "railcraft"
+	group: "095899370DDF48CB"
+	icon: {
+		Count: 1b
+		id: "railcraft:steam_locomotive"
+		tag: { }
+	}
+	id: "0A9242151C0AB475"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["RailCraft is the perfect mod for transportation or just those who hyperfocus on trains! A great place to start is with the normal Minecraft rails."]
+			id: "1FD4C83A45724F37"
+			tasks: [{
+				id: "7CB5AD275E57A40B"
+				item: "minecraft:rail"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1FD4C83A45724F37"]
+			description: ["In RailCraft normal rails won't suffice for everything. You're gonna need new better rails!"]
+			id: "3F3DE2CE9676EB1E"
+			tasks: [{
+				id: "3A429C81E18477B6"
+				title: "Types of Tracks"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1FD4C83A45724F37"]
+			description: ["Track Kits are used to craft with rails to make special rails. These rails will be helpful for everything Train wise like: stopping the train, moving the train, and emitting redstone."]
+			id: "03DF939800D749DF"
+			tasks: [{
+				id: "39656813AA1D728D"
+				title: "Types of Track kits"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3F3DE2CE9676EB1E"]
+			description: ["Abandoned Tracks are good for the cheapskates and aesthetic. They can be used to bridge accross a few blocks without support. They can only be 2 blocks away from blocks going the same direction, or one block from the opposite direction. They come at the risk of derailment though, basically your cart will be thrown off the rails."]
+			id: "12A67032FD55398E"
+			rewards: [{
+				count: 32
+				id: "1CF622A2F046F788"
+				item: "railcraft:abandoned_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5EEAF01DEAD6C76E"
+				item: "railcraft:abandoned_track"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3F3DE2CE9676EB1E"]
+			description: ["The Electric Tracks are used for the Electric Locomotives. They'll need to be powered by Frames and yes it will hurt you if you touch it."]
+			id: "1B0573E497A9F04A"
+			rewards: [{
+				count: 32
+				id: "3AF74AFAF158338B"
+				item: "railcraft:electric_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0534168BEF485D56"
+				item: "railcraft:electric_track"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3F3DE2CE9676EB1E"]
+			description: ["Reinforced Tracks are the upgraded version of normal rails! They're slighter faster and don't blow up."]
+			id: "2CD636F6077FE695"
+			rewards: [{
+				count: 32
+				id: "7338824F164C5388"
+				item: "railcraft:reinforced_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0887654CA68B13BB"
+				item: "railcraft:reinforced_track"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3F3DE2CE9676EB1E"]
+			description: ["The Strap Iron Tracks, like the abandoned tracks, are perfect for the cheapskates. They go much slower than the other tracks but no risk of derailment."]
+			id: "06DA4C7C2738D0B0"
+			rewards: [{
+				count: 32
+				id: "533DEC0E2C9FF918"
+				item: "railcraft:strap_iron_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1AA75AD7F0ED5864"
+				item: "railcraft:strap_iron_track"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3F3DE2CE9676EB1E"]
+			description: ["High Speed Iron Tracks are like Reinforced Tracks but obviously faster. They'll need kits to help build up speed though! And careful around corners."]
+			id: "01179E58503AE9DD"
+			rewards: [{
+				count: 32
+				id: "73D70A0F52B039B2"
+				item: "railcraft:high_speed_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3AD6DD9EF70E9275"
+				item: "railcraft:high_speed_track"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3F3DE2CE9676EB1E"]
+			description: ["The High Speed Electric Tracks are like the Electric Tracks but faster! They also require what the normal high speed tracks require and what the Electric Tracks require. Speed Boosts and Frames to power them. And again careful around corners!"]
+			id: "74615CE61EE7EBCD"
+			rewards: [{
+				count: 32
+				id: "173C2A205E7B1B2D"
+				item: "railcraft:high_speed_electric_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0B1B699CCEA26F1C"
+				item: "railcraft:high_speed_electric_track"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			id: "0938DBC3D637DC56"
+			tasks: [{
+				id: "71B7926A98AEA64F"
+				title: "Machines!"
+				type: "checkmark"
+			}]
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["Railcraft has it's own smelter to make Steel but its disabled in this modpack, you'll have to use the Gregtech Primitive Blast Furnace to get steel now!"]
+			id: "197119AAE56E222D"
+			rewards: [{
+				count: 5
+				id: "013F8CB8C6B70201"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "77C07403D2BA2CE4"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			title: "How to get Steel"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["Like with making Steel Railcrafts Coke Oven is disabled. You'll need to use the Gregtech Coke Oven to get Coke and Creosote."]
+			id: "642D21D54A9B9325"
+			rewards: [
+				{
+					count: 16
+					id: "55A921BA74BA223C"
+					item: "gtceu:coke_gem"
+					type: "item"
+				}
+				{
+					id: "3D49D32BCA5C8836"
+					item: "gtceu:creosote_bucket"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "58951241B9971714"
+				item: "gtceu:coke_gem"
+				type: "item"
+			}]
+			title: "How to make (coal) Coke"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["The Water Boilers are some of the most helpful machines from RailCraft. They need a Fuel Firebox and some sort of boiler on top. The Fueled Firebox can be 1x1 2x2 or 3x3. The size of the Firebox changes how big the Boiler on top can be. For 1x1 Firebox it can only have 1x1 Boiler. For 2x2 Firebox it can be a 2x2x3 Boiler. For 3x3 Firebox it can be 3x3x4. The Liquid Fuel will take Lava or Creosote to heat up. For Solid Firebox it'll use anything a furnace can use."]
+			id: "302C27B3E947EC2F"
+			rewards: [
+				{
+					count: 32
+					id: "22EAE92549B23108"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4BD2040BFE90A76A"
+					item: "minecraft:water_bucket"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "332699E2DCE5CB88"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "railcraft:solid_fueled_firebox"
+								}
+								{
+									Count: 1b
+									id: "railcraft:fluid_fueled_firebox"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6088DE4C5E7AD1A3"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "railcraft:low_pressure_steam_boiler_tank"
+								}
+								{
+									Count: 1b
+									id: "railcraft:high_pressure_steam_boiler_tank"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Making Steam"
+			x: 5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["The Crusher is just as the name suggests. It can crush blocks to get the crafting materials, like bricks from a brick staircase, or dusts from ingots. It needs power to work though! To build one it's 3x2x2 of Crusher blocks."]
+			id: "5E5165BD2575E880"
+			rewards: [{
+				count: 32
+				id: "288486493DF95B3F"
+				item: "minecraft:gravel"
+				type: "item"
+			}]
+			tasks: [{
+				count: 12L
+				id: "6A0432CBE31BFD3F"
+				item: "railcraft:crusher"
+				type: "item"
+			}]
+			title: "Crusher"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["The Water Tank is like having a barrel outside. Just this barrel is much bigger. It collects water and can hold water for Steam Locomotives. The amount of water is makes is dependent on the biome and visible to the sky. It's made by a 3x3x3 Water Tank blocks with the center being hollow."]
+			id: "73201DA5C818B565"
+			rewards: [{
+				id: "42CD6C574DD7A93F"
+				item: "minecraft:water_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				count: 26L
+				id: "0EDADEAC1B76AAD7"
+				item: "railcraft:water_tank_siding"
+				type: "item"
+			}]
+			title: "Water Tank"
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["302C27B3E947EC2F"]
+			description: ["The Steam Oven is another machine that uses Steam for something useful. By putting Steam into the Steam Oven it will act as a furnace to any items in it. Making Ingots from Ores and cooking food items. It's a 2x2x2 machine of Steam Oven blocks."]
+			id: "4DA77FB15F75C830"
+			rewards: [{
+				count: 15
+				id: "6AB47A4754672EE6"
+				item: "gtceu:iron_ore"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "5B9C45EF69947390"
+				item: "railcraft:steam_oven"
+				type: "item"
+			}]
+			title: "Using Steam as a Furnace"
+			x: 5.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["302C27B3E947EC2F"]
+			description: ["The Steam Turbine uses Steam to make FE and EU energy. It's 3x2x2 building of only Steam Turbine Housing, it'll need a Turbine Motor in it, and Steam piped in."]
+			id: "3F1D7B7C4B14E704"
+			rewards: [{
+				id: "5612E9783840A158"
+				item: "railcraft:turbine_blade"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 6L
+					id: "547189E334B153B0"
+					item: "railcraft:steam_turbine"
+					type: "item"
+				}
+				{
+					id: "742CB4E32C19D9A0"
+					item: {
+						Count: 1b
+						id: "railcraft:turbine_rotor"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Using Steam to make Energy"
+			x: 4.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["The Manual Rolling Machine will be your little crafting machine for many things material for railcraft! When you put the recipe in and it can make more than 1 it will autocraft while you're still looking at it. When you leave the Rolling Machine while crafting it will abort the crafting and put it in your inventory. You must manually build the last recipe!"]
+			id: "027F78A41813D436"
+			rewards: [{
+				count: 3
+				id: "0437EC58568BC757"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5B31AAD0B6F66880"
+				item: "railcraft:manual_rolling_machine"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["027F78A41813D436"]
+			description: ["The Powered Rolling Machine is much better version of the Manual Rolling Machine. You don't have to keep looking in the machine to craft things and it will automatically craft all of them. The only problem is it needs power!"]
+			id: "59348B6131C57A1F"
+			rewards: [{
+				count: 9
+				id: "12A692B9FA72658F"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6124B2B653F84DA5"
+				item: "railcraft:powered_rolling_machine"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1FD4C83A45724F37"]
+			description: ["The Crowbar is the main tool of RailCraft. When used on a Locomotive it will change the direction it's facing. When shift clicked you can connect Locomotives and Carts. When just used on carts they give them a slight push. And when used on special tracks they change their mode."]
+			id: "5F8DBCC1A33B6B6F"
+			rewards: [{
+				id: "59DCE8CF66706092"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "2E80B7BBA24B714A"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "railcraft:iron_crowbar"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:steel_crowbar"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:diamond_crowbar"
+								tag: {
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Crowbars"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5F8DBCC1A33B6B6F"]
+			hide: true
+			hide_dependency_lines: true
+			id: "73DE896A75A95B6D"
+			rewards: [{
+				id: "0DC29DA5FBB0C0A7"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [{
+				id: "1A24EDEF90D13776"
+				item: {
+					Count: 1b
+					id: "railcraft:seasons_crowbar"
+					tag: {
+						Damage: 0
+						season: 1
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1FD4C83A45724F37"]
+			description: ["The Spike Mauls are used on normal tracks to switch their modes. Very helpful for trying to make intersections!"]
+			id: "581B2CC1D6A63DFD"
+			rewards: [{
+				count: 16
+				id: "60221DA8FC3E6940"
+				item: "railcraft:reinforced_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "508109BCA683A87B"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "railcraft:iron_spike_maul"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:steel_spike_maul"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:diamond_spike_maul"
+								tag: {
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Spike Maul"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["These Tracks Kits are for changing momentum with your carts. The Transition Kits change the speed of the passing Locomotive, needs redstone power. The Booster Kits will speed up the cart if powered and slow down the cart if not powered. The Control Kit gives the carts a little push, when powered it'll change the direction it pushes it in. The Throttle Kit will change the speed of a passing Locomotive to whatever speed is configured, needs to be powered with redstone. The Launcher Kit will quite literally throw your cart!"]
+			id: "43CA923B2DCB612C"
+			rewards: [
+				{
+					id: "5F5AC3A8CD15877D"
+					item: "railcraft:track_parts"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "135C26E7061EB6C7"
+					item: "railcraft:high_speed_track"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2DE62BA36DD48352"
+					item: "railcraft:transition_track_kit"
+					type: "item"
+				}
+				{
+					id: "3C4694BA1454755D"
+					item: "railcraft:booster_track_kit"
+					type: "item"
+				}
+				{
+					id: "128AE21EC623C70B"
+					item: "railcraft:control_track_kit"
+					type: "item"
+				}
+				{
+					id: "646A88BB173CEE0B"
+					item: "railcraft:throttle_track_kit"
+					type: "item"
+				}
+				{
+					id: "2EB6F0DAF2EF9417"
+					item: "railcraft:launcher_track_kit"
+					type: "item"
+				}
+			]
+			title: "Track Kits for moving carts"
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["These Tracks are made for stopping the Locomotives and Carts. The Locking Kit stops carts and only starts them when given a redstone pulse. The Buffer Kit is for the end of your tracks, will stop them and not start. The Gated Kit just deploys a Fence Gate connected with the track."]
+			id: "5C736CBD5D28549D"
+			rewards: [{
+				count: 2
+				id: "62509F02E0C561BD"
+				item: "railcraft:track_parts"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "006C8F10B3BEC9B4"
+					item: "railcraft:locking_track_kit"
+					type: "item"
+				}
+				{
+					id: "48417D87162239B6"
+					item: "railcraft:buffer_stop_track_kit"
+					type: "item"
+				}
+				{
+					id: "52DC6A4B80FEC502"
+					item: "railcraft:gated_track_kit"
+					type: "item"
+				}
+			]
+			title: "Track Kits for stopping carts"
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["These 2 Track Kits are for using Carts and Redstone. The Activator Kit will activate whatever cart goes over it. The Detector Kit will activate a redstone signal whenever a cart passes over it. Both are similar to their vanilla counters for regular tracks."]
+			id: "22DCF11D8FA06939"
+			rewards: [
+				{
+					count: 11
+					id: "5516D0EA35D8A844"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "470F903100847BB1"
+					item: "railcraft:track_parts"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5A7376046606701E"
+					item: "railcraft:activator_track_kit"
+					type: "item"
+				}
+				{
+					id: "7FF4E6CF3DC9F759"
+					item: "railcraft:detector_track_kit"
+					type: "item"
+				}
+			]
+			title: "Track Kits for redstone"
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["The Coupler is for connecting or disconnecting carts. Coupling is the phrase for connecting Carts. It can be configured with a Crowbar to couple, decouple, or auto couple. Needs Redstone to work."]
+			id: "69A93989B23F4505"
+			rewards: [{
+				id: "2E9FFD841584AF65"
+				item: {
+					Count: 1b
+					id: "railcraft:iron_crowbar"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2C8622068BE6690F"
+				item: "railcraft:coupler_track_kit"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["These Track Kits are for using entities with your carts (Entities like mobs). The Embarking Kit will pick up any mobs nearby and put them in a cart. The Disembarking Kit unloads mobs from the carts. The Dumping Kit will drop the mobs in the carts below the tracks its on."]
+			id: "3AE5C9CD89D70F77"
+			rewards: [
+				{
+					id: "244BC8F5F657D84B"
+					item: "railcraft:track_parts"
+					type: "item"
+				}
+				{
+					id: "3F1A3BCA53590BA2"
+					item: "minecraft:lead"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "56DDEB6B6E92B2D4"
+					item: "railcraft:embarking_track_kit"
+					type: "item"
+				}
+				{
+					id: "3052816E0096705A"
+					item: "railcraft:disembarking_track_kit"
+					type: "item"
+				}
+				{
+					id: "0E0FA0E4595FA094"
+					item: "railcraft:dumping_track_kit"
+					type: "item"
+				}
+			]
+			title: "Track Kits for moving entities"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["The One Way Track Kit is quite simple. Carts can only go where the arrow is facing."]
+			id: "27A7CAC69C578CEC"
+			rewards: [{
+				id: "28F64965A39F3719"
+				item: "minecraft:oak_sign"
+				type: "item"
+			}]
+			tasks: [{
+				id: "325922D14B2C4343"
+				item: "railcraft:one_way_track_kit"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["The Whistle Kit when active with Redstone will cause the Locomotives to set off their whistles."]
+			id: "629961F7AAD56F4A"
+			rewards: [{
+				id: "124FD1607DDB25FA"
+				item: {
+					Count: 1b
+					id: "railcraft:whistle_tuner"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6A0AC0B5BB1D76F4"
+				item: "railcraft:whistle_track_kit"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["03DF939800D749DF"]
+			description: ["The Routing Kit is used with the passing tickets."]
+			id: "3B87099542BE6932"
+			rewards: [{
+				id: "2EA77FC002CF8B83"
+				item: "railcraft:ticket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2C72A7092B228585"
+				item: "railcraft:routing_track_kit"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["581B2CC1D6A63DFD"]
+			description: ["The Turnout track is the first from hitting a track with a Spike Maul. It can help go two directions, forward and to a side. It can be switched with a Switch next to the track."]
+			id: "0534F5CA071B6FCD"
+			tasks: [{
+				id: "26F098C4690EA0FF"
+				observe_type: 0
+				timer: 0L
+				to_observe: "railcraft:iron_turnout_track"
+				type: "observation"
+			}]
+			title: "Turnout Track"
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["581B2CC1D6A63DFD"]
+			description: ["The Wye Track is the second track made by using a Spike Maul. It directs two tracks into one. If you have one track intersected by another the Wye will move carts on the first track into the intersecting one. "]
+			id: "2AE0775C2CB4B553"
+			tasks: [{
+				id: "374A7639F8A2BDA6"
+				observe_type: 0
+				timer: 0L
+				to_observe: "railcraft:iron_wye_track"
+				type: "observation"
+			}]
+			title: "Wye Track"
+			x: 0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["581B2CC1D6A63DFD"]
+			description: ["The Junction is the last track made by the Spike Maul. It acts as a normal intersection for tracks. Carts keep going the same way as before but now tracks can intersect. What happens if 2 carts hit each other on it? THEY EXPLODE!!! I'm kidding but Electric Locomotives will though."]
+			id: "5FFB1032DA1CBCA0"
+			tasks: [{
+				id: "497816D81F657121"
+				observe_type: 0
+				timer: 0L
+				to_observe: "railcraft:iron_junction_track"
+				type: "observation"
+			}]
+			title: "Junction Track"
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0CB074A02EE4283E"]
+			description: ["In order to power your Electric Rails and your Electric Locomotive you'll need Frames. Frames need to be powered and will move power to each connected to Frame."]
+			id: "629F06190975FAAE"
+			tasks: [{
+				id: "5AD43A059FD7588D"
+				item: "railcraft:frame"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"629F06190975FAAE"
+				"1B0573E497A9F04A"
+			]
+			description: ["Unlike the Steam Locomotive you won't need to put anything into the Electric Locomotive. It runs off the power from the Frames beneath the Electric Tracks. Yes, it can only be runned off Electric Tracks."]
+			id: "50B7BB3EEFE00408"
+			rewards: [{
+				id: "46D7B495875FF6F5"
+				item: "railcraft:zinc_carbon_battery"
+				type: "item"
+			}]
+			tasks: [{
+				id: "51999B0113C01326"
+				item: {
+					Count: 1b
+					id: "railcraft:electric_locomotive"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.5d
+		}
+		{
+			description: ["The reason we're all here, trains. The mod is called RailCraft don't act surprised. There's 2 different main trains and 1 special mining train."]
+			id: "0CB074A02EE4283E"
+			tasks: [{
+				id: "49B01C68ADE2622D"
+				title: "Trains!"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"0CB074A02EE4283E"
+				"1FD4C83A45724F37"
+			]
+			description: ["The Steam Locomotive is the most basic Locomotive. It can be powered by giving it water, furnance fuel, and waiting. It'll need constant water to keep working."]
+			id: "1EBA4F40AD02F3E0"
+			rewards: [{
+				count: 32
+				id: "012E65156CA39B9D"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "431EC0383D8F537B"
+				item: {
+					Count: 1b
+					id: "railcraft:steam_locomotive"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0CB074A02EE4283E"]
+			description: ["To actually use a Tunnel Bore you'll need a Tunnel Bore Head. They come in 4 different styles and it mines dependent on the Bore Head. It can be enchanted and has durability so you'll want to enchant it!"]
+			id: "53C8A71ABFE529E1"
+			rewards: [{
+				id: "5DD6B1679819564D"
+				item: {
+					Count: 1b
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7CE6962D2439E3A5"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "railcraft:iron_tunnel_bore_head"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:bronze_tunnel_bore_head"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:steel_tunnel_bore_head"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								id: "railcraft:diamond_tunnel_bore_head"
+								tag: {
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Bore Heads"
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0CB074A02EE4283E"]
+			description: ["Minecart!!!"]
+			id: "59519D358EA863C3"
+			rewards: [{
+				count: 10
+				id: "72757F9FEAB8EC43"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_plate"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "51BBDA297B2F7B7F"
+				item: "minecraft:minecart"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["59519D358EA863C3"]
+			description: ["These new carts are similar to the special vanilla carts. Obviously the Track with a workbench gives you a movable crafting table. The Jukebox Cart gives you a movable Jukebox. And the Tank Cart gives you a movable storage for liquids."]
+			id: "0B17ECC15E911A55"
+			rewards: [{
+				id: "4F9F10865D6B28B3"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "4FC1C55D3320AA2C"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "railways:benchcart"
+							}
+							{
+								Count: 1b
+								id: "railways:jukeboxcart"
+							}
+							{
+								Count: 1b
+								id: "railcraft:tank_minecart"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "New Carts!"
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["59519D358EA863C3"]
+			description: ["These new carts are mostly for laying down tracks. The Track Layer places down Tracks while the Track Remover removes Tracks. The Track Relayer replaces the tracks with different ones and the Track UnderCutter replaces the blocks beneath the tracks."]
+			id: "7DD8A1613A5ECB40"
+			rewards: [{
+				count: 64
+				id: "3679BEE54F385DC7"
+				item: "railcraft:abandoned_track"
+				type: "item"
+			}]
+			tasks: [{
+				id: "45620A01FB424298"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "railcraft:track_layer"
+							}
+							{
+								Count: 1b
+								id: "railcraft:track_relayer"
+							}
+							{
+								Count: 1b
+								id: "railcraft:track_remover"
+							}
+							{
+								Count: 1b
+								id: "railcraft:track_undercutter"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Track Carts!"
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["59519D358EA863C3"]
+			description: ["The Item Loader is the most basic dispenser from RailCraft. It has to be above the track and can be configured to what you'll want loaded onto your carts below. "]
+			id: "448BB5F53AE1B987"
+			tasks: [{
+				id: "497669C282A08CF1"
+				item: "railcraft:item_loader"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["59519D358EA863C3"]
+			description: ["The Item Unloader is the opposite of the Item Loader. It will take items from the carts. This one must also be above the track."]
+			id: "38D178573D0273AC"
+			tasks: [{
+				id: "3D81FC82270CDDB1"
+				item: "railcraft:item_unloader"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["59519D358EA863C3"]
+			description: ["The Fluid Loader will be helpful to keeping your Steam Locomotives up and running. It has to be placed a few blocks above the tracks and it will deploy fluids into either the Locomotive or carts."]
+			id: "7281623F2F834AB8"
+			tasks: [{
+				id: "0AF6CE3D38F9FAC9"
+				item: "railcraft:fluid_loader"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["59519D358EA863C3"]
+			description: ["The Cart Dispenser will do as the name suggests. It can dispense any carts onto the tracks in front of it. Needs a Redstone signal to dispense."]
+			id: "55665C248D8F5F5E"
+			tasks: [{
+				id: "341E044AECFFA493"
+				item: "railcraft:cart_dispenser"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["448BB5F53AE1B987"]
+			description: ["The Advanced Item Loader is everything the regular one is but can be used from anywhere near the track. Next to, above, next to on the other side. Use the Crowbar to change its direction."]
+			id: "324690E5EB620BCC"
+			tasks: [{
+				id: "45F6BBFBB7F6845F"
+				item: "railcraft:advanced_item_loader"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["38D178573D0273AC"]
+			description: ["The Advanced Item Unloader is just like the normal part but can be used from any direction. Nothing different besides direction."]
+			id: "372370A354253721"
+			tasks: [{
+				id: "78241A237C550458"
+				item: "railcraft:advanced_item_unloader"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["7281623F2F834AB8"]
+			description: ["The Fluid Unloader is the exact opposite of the Fluid Loader. Instead of being over the track its under. Instead of giving Steam Locomotives water it takes their water. I don't know why you'd want to do that but you can!"]
+			id: "113B372172841780"
+			tasks: [{
+				id: "60832B8C4F28EF63"
+				item: "railcraft:fluid_unloader"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["55665C248D8F5F5E"]
+			description: ["The Train Dispenser is a better version of the Cart Dispenser. It can Dispense the whole Locomotive and more! Set a pattern for what you want to be deployed then give it a redstone signal."]
+			id: "08AC966DEED98A92"
+			tasks: [{
+				id: "0646FD7422B755F1"
+				item: "railcraft:train_dispenser"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["53C8A71ABFE529E1"]
+			description: ["The Tunnel Bore is perfect for automatically placing rails especially under mountains or hills. It'll need 3 things to start working: Bore Head, fuel like Coal, and Rails. Once it has all 3 just let it go! Careful as cave collaspings can still happen with the Tunnel Bore."]
+			id: "441D6219A1E98B26"
+			rewards: [{
+				count: 32
+				id: "03CE94111ED04A5D"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5F847FB837BB4B37"
+				item: "railcraft:tunnel_bore"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"5FFB1032DA1CBCA0"
+				"0534F5CA071B6FCD"
+				"2AE0775C2CB4B553"
+			]
+			dependency_requirement: "one_completed"
+			description: ["The Switch Track will be needed for moving lanes between the different Special Tracks. The Arrows on it show which goes where."]
+			id: "033470BABD82FFF1"
+			tasks: [{
+				id: "46A4ED0ACA5A3446"
+				item: "railcraft:switch_track_lever"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+	]
+	title: "{gravitas.chapters.13.title}"
+}

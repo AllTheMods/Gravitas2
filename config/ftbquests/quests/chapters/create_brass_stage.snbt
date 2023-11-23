@@ -1,0 +1,539 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_brass_stage"
+	group: "4B728CAFC5748917"
+	icon: {
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "create:brass_ingot"
+	}
+	id: "439BF9ADD466B4B0"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Brass will be needed for the next steps of Create. It's made by combining copper dust and zinc dust to get brass dust which can be smelted for brass ingots."]
+			id: "0FD5DA8C55745B05"
+			rewards: [{
+				count: 3
+				id: "339D75DEE5D2E212"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:brass_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "61C8E83F56304C8F"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:brass_ingot"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.brass_ingot}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FD5DA8C55745B05"]
+			description: ["The Brass Casing will be needed for the machines in the Brass Stage. It can be made from rightclicking a Brass Ingot onto a placed down log. Or can be automated by Deployers doing the same."]
+			id: "07F2692B488525A9"
+			rewards: [{
+				count: 5
+				id: "3187CBEC8663330C"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "417A3F9C39BD6740"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.brass_casing}"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0FD5DA8C55745B05"]
+			description: ["The Brass Hand is only really used for the Deployer. You can also put it in an item frame I guess. I'm out of ideas for this one."]
+			id: "14AFCD444BFA910C"
+			rewards: [
+				{
+					id: "4CD71E0199517195"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+				{
+					id: "5F5482CD368F8ADB"
+					item: "minecraft:item_frame"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6B4A1CFB3068F1F9"
+				item: "create:brass_hand"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.brass_hand}"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"14AFCD444BFA910C"
+				"3ACC52D613F497A2"
+			]
+			description: ["The Deployer is a machine that can replicates Steve's touch. You can add items to the hand to replicate Steve using them. "]
+			id: "331EA5A3201884D1"
+			rewards: [
+				{
+					id: "228A49AE32F4F7D4"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/chisel/wrought_iron"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 5
+					id: "2866A3E2A693077B"
+					item: "minecraft:iron_nugget"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2D1810C2A821CBC5"
+				item: "create:deployer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.deployer}"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["498D71964F6D9BB8"]
+			description: ["By crafting Polished Rose Quartz and a Wrought Iron Plate you make a Primitive Electron Tube. This will be needed for many Brass Stage machines."]
+			id: "3ACC52D613F497A2"
+			rewards: [{
+				count: 2
+				id: "73E64E5A4854199F"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0D6BF63ACEC729F2"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.primitve_electron_tube}"
+			x: 1.0d
+			y: -3.0d
+		}
+		{
+			description: ["By combining Redstone Dust and Quarts you get Rose Quartz. And if you combine sand and paper you get sandpaper (It's hard to follow I know). Use them together to get polished Rose Quartz."]
+			id: "498D71964F6D9BB8"
+			rewards: [{
+				count: 4
+				id: "2703482090DC5DFB"
+				item: "create:polished_rose_quartz"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "0613383BA54401EE"
+					item: "create:rose_quartz"
+					type: "item"
+				}
+				{
+					id: "329CD5038624CE7D"
+					item: {
+						Count: 1b
+						id: "create:sand_paper"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.brass.rose_quartz}"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["331EA5A3201884D1"]
+			description: ["To make 1 Precision Mechanism you will need to process a Gold Plate with a small cogwheel, a large cogwheel, then an iron nugget 5 times. And it might not even work!"]
+			id: "79C15B7A64CE99CB"
+			rewards: [{
+				id: "5B7DA35C59D38EFF"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0D4EE73E53DD52CC"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.precision_mechanism}"
+			x: 3.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["79C15B7A64CE99CB"]
+			description: ["The Mechanical Hand is the next step to full automation. They can be configured with a Wrench and will do all your work for you. A Deployer on steriods."]
+			id: "33150A607035D5C6"
+			rewards: [{
+				id: "3F120650B8763A83"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [{
+				id: "77AC3E73C032FC95"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_arm}"
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["07F2692B488525A9"]
+			description: ["The Mechanical Crafter is the most important machine in Create. It will be needed for the tools, next machines, and most likely end game items. It's pattern is configured with the Wrench."]
+			id: "1764A3635A95D162"
+			rewards: [{
+				count: 6
+				id: "249BE440F489A1D7"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			tasks: [{
+				id: "12406A8C54F12327"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_crafter}"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1764A3635A95D162"]
+			description: ["The Crusher will be needed to get many more things necessary for Create. To set up a crushing machine you need 2 crushing wheels a block away from each other. The left one must be rotating clockwise and the right counterclockwise. Then just toss items in the top. It will hurt anything in it."]
+			id: "7F8C6F7EA5F4CC8F"
+			rewards: [{
+				id: "7C5CACEC3B7990CB"
+				item: "gtceu:diamond_ore"
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "7F2CFE8877CA3F03"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.crushing_wheel}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1764A3635A95D162"]
+			description: ["These are extra tools that will either help you or not really do anything. Your choice."]
+			id: "73F337C36FFAD26C"
+			tasks: [{
+				id: "7CB32E3CEDA23A60"
+				title: "tools"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.brass.tools}"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0FD5DA8C55745B05"]
+			description: ["The Wrench is the most important tool for Create and will be necessary. It's used for configuring your machines."]
+			id: "63D8DBEDD545D82A"
+			rewards: [{
+				id: "69D16B1557CDE092"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "2C5D43EB23B578BB"
+				item: "create:wrench"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.wrench}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["73F337C36FFAD26C"]
+			description: ["The Extendo Grip when put in your offhand will give you extended reach. Normally you can only reach 5 blocks away, with the Extendo Grip you can now reach 9."]
+			id: "6E211C310933CD56"
+			rewards: [{
+				id: "6423B2E3E5F3A034"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 1290000L
+							traits: [ ]
+						}
+					}
+					id: "tfc:food/melon_slice"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C7CD3FFBDA41E77"
+				item: {
+					Count: 1b
+					id: "create:extendo_grip"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.extendo_grip}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["73F337C36FFAD26C"]
+			description: ["The Wand of Symmetry is useful for the Pro-Builders. When right clicked it will place a mirror. When shift rightclicked it will open up a menu to change the direction and use. When a mirror is placed any blocks placed near it will also place on the other side of the mirror. "]
+			id: "161DA9F0AEA9CC45"
+			rewards: [{
+				id: "011F5D021C307E90"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 2256000L
+							traits: [ ]
+						}
+					}
+					id: "tfc:food/cooked_beef"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "383B9901644DB8FE"
+				item: "create:wand_of_symmetry"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.wand_of_symmetry}"
+			x: 4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["73F337C36FFAD26C"]
+			description: ["The Potato Canon uses... well potatos, as ammunition. Only the Minecraft Potato variants though! No TFC potatos work."]
+			id: "20C21B17C869C540"
+			rewards: [{
+				count: 32
+				id: "05C674CA588C8D67"
+				item: "minecraft:potato"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7EE0BDF5CD8DD2B8"
+				item: {
+					Count: 1b
+					id: "create:potato_cannon"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.potato_cannon}"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			description: ["To make a contraption you'll need a Mechanical Bearing, to move it, and Super Glue, to get blocks to stick to it."]
+			id: "3A591067EF0E092C"
+			tasks: [
+				{
+					id: "2B50DCC7FF20DAE5"
+					item: "create:mechanical_bearing"
+					type: "item"
+				}
+				{
+					id: "1928F07DD3C3FE2E"
+					item: {
+						Count: 1b
+						id: "create:super_glue"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.brass.mechanical_bearing}"
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A591067EF0E092C"]
+			description: ["These items will automatically stick to the Mechanical Bearing and each other for a contraption."]
+			id: "75957CAF5518D07C"
+			rewards: [{
+				count: 5
+				id: "54A8408032051B24"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0109FECB1CD6CC0A"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create:linear_chassis"
+							}
+							{
+								Count: 1b
+								id: "create:secondary_linear_chassis"
+							}
+							{
+								Count: 1b
+								id: "create:radial_chassis"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.chasis}"
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"75957CAF5518D07C"
+				"7F8C6F7EA5F4CC8F"
+			]
+			description: ["Rollers break blocks that are in the way of the contraption. When configured they can also place blocks beneath them."]
+			id: "420E7E1C1E244F43"
+			rewards: [{
+				id: "2DF6E4D6AA83131C"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "232D632DDCAE9370"
+				item: "create:mechanical_roller"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_roller}"
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["75957CAF5518D07C"]
+			description: ["The Ploughs are very helpful as they can either, make farmland or destroy items without a solid collision hitbox. Items like that are ones that will break with water flowing over it like: torches, rails, snow."]
+			id: "240B8B7B61448358"
+			rewards: [{
+				id: "4E7DC97570A7EF73"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "7063A48696BB8624"
+				item: "create:mechanical_plough"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_plough}"
+			x: 5.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["75957CAF5518D07C"]
+			description: ["The Mechanical Harvester when used over fully grown crops will take and replace them. Perfect for autofarms!"]
+			id: "44450E9CD8923A0E"
+			rewards: [{
+				id: "6F691EE5EA107350"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "1450746182C554B1"
+				item: "create:mechanical_harvester"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_harvester}"
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["75957CAF5518D07C"]
+			description: ["The Saw can be used to either process items or cut down trees. If the bottom of the tree is broken by the saw the entire tree will fall. When items are processed through it, it can do the same as a stone cutter would."]
+			id: "71F5F1F5933ED116"
+			rewards: [{
+				id: "01E77A27825BAFC6"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "286087F08524340C"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_saw}"
+			x: 7.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["75957CAF5518D07C"]
+			description: ["The Drill will break any block in its way when powered. Its breaking speed is dependent on the rotation speed."]
+			id: "24BEDDAF50E3EF7A"
+			rewards: [{
+				id: "1767D615989576EE"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "4B409D4FC1FCFDBE"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_drill}"
+			x: 8.0d
+			y: 3.0d
+		}
+	]
+	title: "{gravitas.chapters.9.title}"
+}
