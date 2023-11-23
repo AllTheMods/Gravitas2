@@ -3,7 +3,16 @@
 	default_quest_shape: ""
 	filename: "create_beginning"
 	group: "4B728CAFC5748917"
-	icon: "create:andesite_alloy"
+	icon: {
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "create:andesite_alloy"
+	}
 	id: "08C451A973B94BC6"
 	order_index: 0
 	quest_links: [ ]
