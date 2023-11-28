@@ -247,6 +247,16 @@ const gregVeins = [
       ["sapphire", 1],
       ["green_sapphire", 1]
     ]
+  },
+  {
+      name: "thorium",
+      weight: 60,
+      minY: -50,
+      maxY: 25,
+      validStones: ["basalt", "granite", "diorite", "andesite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
+      oreAndWeight: [
+        ["thorium", 2]
+      ]
   }
 ]
 

@@ -224,7 +224,13 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       ore: "gtceu:raw_granitic_mineral_sand",
       liquid: "tfc:metal/cast_iron",
       amount: 72
+    },
+    {
+      ore: "gtceu:raw_thorium",
+      liquid: "tfc:thorium",
+      amount: 72
     }
+
   ]
 
   oreToMolten.forEach((ore) => {

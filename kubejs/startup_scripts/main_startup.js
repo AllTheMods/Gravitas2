@@ -59,9 +59,6 @@ GTCEuStartupEvents.registry("gtceu:material", (event) => {
     registerGTCEuOrganicMaterial(event)
 })
 
-ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityEvent$EnteringSection", event => {
-})
-
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
   addTooltipIngots(event)
 })
