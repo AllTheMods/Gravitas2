@@ -248,6 +248,17 @@ let gregVeinz = [
       ["sapphire", 1],
       ["green_sapphire", 1]
     ]
+  },
+  {
+    name: "thorium",
+    weight: 380,
+    minY: -50,
+    maxY: 65,
+    validStones: ["basalt", "granite", "diorite", "andesite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
+    oreAndWeight: [
+      ["thorium", 2],
+      ["cinnabar", 1]
+    ]
   }
 ]
 

@@ -232,7 +232,8 @@ const gregVeins = [
     oreAndWeight: [
       ["redstone", 2],
       ["ruby", 1],
-      ["cinnabar", 1]
+      ["cinnabar", 1],
+      ["thorium", 1]
     ]
   },
   {
@@ -249,14 +250,15 @@ const gregVeins = [
     ]
   },
   {
-      name: "thorium",
-      weight: 60,
-      minY: -50,
-      maxY: 25,
-      validStones: ["basalt", "granite", "diorite", "andesite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
-      oreAndWeight: [
-        ["thorium", 2]
-      ]
+    name: "thorium",
+    weight: 380,
+    minY: -50,
+    maxY: 65,
+    validStones: ["basalt", "granite", "diorite", "andesite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
+    oreAndWeight: [
+      ["thorium", 2],
+      ["cinnabar", 1]
+    ]
   }
 ]
 

@@ -29,7 +29,8 @@
     "forge:storage_blocks/raw_{material}",
     "forge:double_ingots/{material}",
     "forge:double_sheets/{material}",
-    "forge:sheets/{material}"
+    "forge:sheets/{material}",
+    "forge:thorium"
   ],
   "materials": [
     "aeternium",
