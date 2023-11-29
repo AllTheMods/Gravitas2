@@ -151,6 +151,8 @@ let tfcMetalz = [
   'black_steel',
   'blue_steel',
   'red_steel',
+  'chromite',
+  'thorium',
   'tungsten_carbide',
   'damascus_steel',
   'tungsten_steel',

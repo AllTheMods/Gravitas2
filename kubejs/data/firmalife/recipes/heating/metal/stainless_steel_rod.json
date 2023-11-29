@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "tag": "forge:rods/stainless_steel"
+  },
+  "result_fluid": {
+    "fluid": "gtceu:stainless_steel",
+    "amount": 72
+  },
+  "temperature": 1540
+}

@@ -254,10 +254,21 @@ let gregVeinz = [
     weight: 380,
     minY: -50,
     maxY: 65,
-    validStones: ["basalt", "granite", "diorite", "andesite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
+    validStones: ["basalt", "rhyolite", "diorite", "andesite"],
     oreAndWeight: [
       ["thorium", 2],
       ["cinnabar", 1]
+    ]
+  },
+  {
+    name: "chromite",
+    weight: 80,
+    minY: -50,
+    maxY: 55,
+    validStones: ["granite", "diorite", "gabbro", "schist", "phyllite"],
+    oreAndWeight: [
+      ["chromite", 2],
+      ["thorium", 1]
     ]
   }
 ]

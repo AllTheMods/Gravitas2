@@ -83,7 +83,8 @@ const gregVeins = [
       ["goethite", 5],
       ["yellow_limonite", 2],
       ["hematite", 2],
-      ["malachite", 1]
+      ["malachite", 1],
+      ["chromite", 1]
     ]
   },
   {
@@ -254,10 +255,22 @@ const gregVeins = [
     weight: 80,
     minY: -50,
     maxY: 25,
-    validStones: ["basalt", "granite", "diorite", "andesite"],
+    validStones: ["basalt", "rhyolite", "dacite", "andesite"],
     oreAndWeight: [
       ["thorium", 2],
-      ["cinnabar", 1]
+      ["cinnabar", 1],
+      ["chromite", 1]
+    ]
+  },
+  {
+    name: "chromite",
+    weight: 80,
+    minY: -50,
+    maxY: 55,
+    validStones: ["granite", "diorite", "gabbro", "schist", "phyllite"],
+    oreAndWeight: [
+      ["chromite", 2],
+      ["thorium", 1]
     ]
   }
 ]

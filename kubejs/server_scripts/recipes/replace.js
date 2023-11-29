@@ -90,6 +90,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     )
   })
 
+  //Firmalife
+  event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot" )
   //Immersive Engineering
   event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
 }

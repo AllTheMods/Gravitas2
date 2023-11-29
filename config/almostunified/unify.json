@@ -1,5 +1,6 @@
 {
   "modPriorities": [
+    "firmalife",
     "gtceu",
     "tfc",
     "minecraft",
@@ -46,6 +47,7 @@
     "brass",
     "bronze",
     "charcoal",
+    "chromium",
     "chrome",
     "cinnabar",
     "coal",
