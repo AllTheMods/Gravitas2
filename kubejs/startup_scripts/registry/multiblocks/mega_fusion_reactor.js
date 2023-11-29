@@ -33,7 +33,7 @@ let MAX = 14
 
 let VA = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920]
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create('mega_fusion_reactor', 'multiblock', (holder) => new $FusionReactorMachine(holder, VA[UHV]))
+    event.create('mega_fusion_reactor', 'multiblock', (holder) => new $FusionReactorMachine(holder, UHV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes(GTRecipeTypes.get('mega_fusion_reactor'))
         .recipeModifier(GTRecipeModifiers.PARALLEL_HATCH.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.ELECTRIC_OVERCLOCK))
