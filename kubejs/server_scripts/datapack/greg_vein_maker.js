@@ -254,7 +254,7 @@ const gregVeins = [
     weight: 80,
     minY: -50,
     maxY: 25,
-    validStones: ["basalt", "granite", "diorite", "andesite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"],
+    validStones: ["basalt", "granite", "diorite", "andesite"],
     oreAndWeight: [
       ["thorium", 2],
       ["cinnabar", 1]
