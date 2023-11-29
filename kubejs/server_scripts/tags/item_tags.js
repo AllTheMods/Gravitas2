@@ -174,6 +174,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
   event.add('tfc:copper_pieces', ["tfc:ore/small_native_copper", "tfc:ore/small_malachite", "tfc:ore/small_tetrahedrite"])
   event.add('forge:thorium', ["gtceu:raw_thorium", "thoriumreactors:thorium", "create_new_age:thorium"])
+  event.add('forge:ingots/niobium', ["thoriumreactors:niob_ingot"])
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
