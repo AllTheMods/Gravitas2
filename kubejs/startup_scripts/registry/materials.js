@@ -7,6 +7,22 @@ let registerGTCEuMaterialFlags = (/** @type {Registry.Material} */ event) => {
     GTMaterials.CertusQuartz.setFormula('CtO2', true)
 }
 
+let ULV = 0
+let LV = 1
+let MV = 2
+let HV = 3
+let EV = 4
+let IV = 5
+let LuV = 6
+let ZPM = 7
+let UV = 8
+let UHV = 9
+let UEV = 10
+let UIV = 11
+let UXV = 12
+let OpV = 13
+let MAX = 14
+
 // TODO tweak blast temps, times
 let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
     event.create("weapons_grade_naquadah")
@@ -14,7 +30,7 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0x586357).iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FRAME)
         .element('weapons_grade_naquadah')
-        .blastTemp(8000, 'HIGH', GTValues.VA[GTValues.ZPM], 1500)
+        .blastTemp(8000, 'HIGH', ZPM, 1500)
     
     event.create("low_grade_hypogen")
         .ingot(5)
@@ -23,7 +39,7 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0xed6f15).secondaryColor(0xc98642).iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD)
         .element('hypogen_422')
-        .blastTemp(10062, 'HIGHER', GTValues.VA[GTValues.UHV], 1800)
+        .blastTemp(10062, 'HIGHER', UHV, 1800)
     event.create("high_grade_hypogen")
         .ingot(5)
         ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(16100))
@@ -31,7 +47,7 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0xf55d00).secondaryColor(0xbf670d).iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD)
         .element('hypogen_414')
-        .blastTemp(10062, 'HIGHER', GTValues.VA[GTValues.UHV], 1800)
+        .blastTemp(10062, 'HIGHER', UHV, 1800)
     event.create("weapons_grade_hypogen")
         .ingot(6)
         ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(16100))
@@ -39,7 +55,7 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0xf04f0a).secondaryColor(0xedad09).iconSet(GTMaterialIconSet.SHINY)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD)
         .element('hypogen_403')
-        .blastTemp(10062, 'HIGHEST', GTValues.VA[GTValues.UHV], 2200)
+        .blastTemp(10062, 'HIGHEST', UHV, 2200)
 
     event.create("infinity_matter")
         .ingot(7).fluid()
@@ -54,13 +70,13 @@ let registerGTCEuElementMaterial = (/** @type {Registry.Material} */ event) => {
         .color(0xf5c414).secondaryColor(0xf2ac0a).iconSet(GTMaterialIconSet.SHINY)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD)
         .element('allthemodium')
-        .blastTemp(3000, 'HIGHEST', GTValues.VA[GTValues.ZPM], 1800)
+        .blastTemp(3000, 'HIGHEST', ZPM, 1800)
     event.create("unobtainium")
         .ingot(7).fluid()
         .color(0xa62be0).secondaryColor(0x7d28a6).iconSet(GTMaterialIconSet.SHINY)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD)
         .element('unobtainium')
-        .blastTemp(3000, 'HIGHEST', GTValues.VA[GTValues.UHV], 1800)
+        .blastTemp(3000, 'HIGHEST', UHV, 1800)
 
     event.create("certus")
         .gem()
@@ -163,7 +179,7 @@ let registerGTCEuFirstDegreeMaterial = (/** @type {Registry.Material} */ event) 
         .colorAverage()
         .flags(GTMaterialFlags.GENERATE_PLATE)
         .components('4x nickel', '6x titanium')
-        .blastTemp(1583, 'high', GTValues.VA[GTValues.IV], 1200)
+        .blastTemp(1583, 'high', IV, 1200)
     
     event.create("trichlorocertane")
         .fluid()

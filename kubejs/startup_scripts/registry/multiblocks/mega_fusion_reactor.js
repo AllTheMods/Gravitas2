@@ -15,9 +15,23 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
             .save(provider);
     });
 })
-
+let ULV = 0
+let LV = 1
+let MV = 2
+let HV = 3
+let EV = 4
+let IV = 5
+let LuV = 6
+let ZPM = 7
+let UV = 8
+let UHV = 9
+let UEV = 10
+let UIV = 11
+let UXV = 12
+let OpV = 13
+let MAX = 14
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create('mega_fusion_reactor', 'multiblock', (holder) => new $FusionReactorMachine(holder, GTValues.UHV))
+    event.create('mega_fusion_reactor', 'multiblock', (holder) => new $FusionReactorMachine(holder, UHV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes(GTRecipeTypes.get('mega_fusion_reactor'))
         .recipeModifier(GTRecipeModifiers.PARALLEL_HATCH.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.ELECTRIC_OVERCLOCK))
