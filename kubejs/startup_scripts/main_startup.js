@@ -6,7 +6,7 @@ StartupEvents.registry("item", (event) => {
 })
 
 StartupEvents.registry("block", (event) => {
-  registerGTCOres(event)
+
   registerBlocks(event)
 })
 

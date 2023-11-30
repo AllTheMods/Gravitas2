@@ -138,14 +138,6 @@ const registerGTCOres = (/** @type {Registry.Block} */ event) => {
         .stoneSoundType()
         .color(1, gregOreBlockProps[block].color)
         .item((ib) => ib.color(1, gregOreBlockProps[block].color))
-      ore.modelJson = {
-        parent: "tfc:block/ore",
-        textures: {
-          all: `tfc:block/rock/raw/${stone}`,
-          particle: `tfc:block/rock/raw/${stone}`,
-          overlay: OVERLAY_MAP[gregOreBlockProps[block].overlay]
-        }
-      }
       ore.lootTable = (loot) => {
         loot.type = "minecraft:block"
         loot.customId = Utils.id(`gregitas:ore/${block}/${stone}`)

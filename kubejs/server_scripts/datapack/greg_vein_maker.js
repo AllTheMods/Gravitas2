@@ -313,7 +313,7 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
             block:
               replacementMap[subArray[0]] != null
                 ? `${replacementMap[subArray[0]]}${stone}`
-                : `gregitas:ore/${subArray[0]}/${stone}`
+                : `gtceu:tfc_${stone}_${subArray[0]}_ore`
           })
         )
       }
@@ -331,12 +331,12 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
         random_name: veinName
       }
     })
-    event.addJson(`gregitas:worldgen/configured_feature/vein/${veinName}.json`, json)
+    event.addJson(`gtceu:worldgen/configured_feature/vein/${veinName}.json`, json)
     let json2 = JsonIO.toObject({
-      feature: `gregitas:vein/${veinName}`,
+      feature: `gtceu:vein/${veinName}`,
       placement: []
     })
-    event.addJson(`gregitas:worldgen/placed_feature/vein/${veinName}.json`, json2)
+    event.addJson(`gtceu:worldgen/placed_feature/vein/${veinName}.json`, json2)
   }
   //Make sure to add anything you add here to `greg_vein_tags.js`
   //Below is an example of how to add a new vein.
