@@ -313,7 +313,7 @@ const addGregVeinData = (/** @type {Internal.DataPackEventJS} */ event) => {
             block:
               replacementMap[subArray[0]] != null
                 ? `${replacementMap[subArray[0]]}${stone}`
-                : `gtceu:tfc_${stone}_${subArray[0]}_ore`
+                : `gtceu:${stone}_${subArray[0]}_ore`
           })
         )
       }
