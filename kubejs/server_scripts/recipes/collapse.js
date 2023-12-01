@@ -99,7 +99,7 @@ const addCollapse = (/** @type {Internal.RecipesEventJS} */ event) => {
   tfcStones.forEach(stone => {
     const rockArray = []
     Object.keys(gregOreBlockProps).forEach(block => {
-      rockArray.push(`gregitas:ore/${block}/${stone}`)
+      rockArray.push(`gtceu:tfc_${stone}_${block}_ore`)
     })
     add(rockArray, `tfc:rock/cobble/${stone}`)
     add([`tfc:rock/cobble/${stone}_slab`], `tfc:rock/cobble/${stone}_slab`)

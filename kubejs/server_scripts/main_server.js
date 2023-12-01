@@ -6,11 +6,11 @@ ServerEvents.recipes((event) => {
   recipeAdd(event)
   replaceTFCHeatingAndCasting(event)
   addCollapse(event)
-  tfcGregTools(event)
+  //tfcGregTools(event)
   gtceuAdd(event)
   createAdd(event)
-  spaceDustChain(event)
-  certusSemiconductors(event)
+  //spaceDustChain(event)
+  //certusSemiconductors(event)
 })
 
 LootJS.modifiers((event) => {

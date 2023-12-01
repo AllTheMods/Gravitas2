@@ -2,7 +2,7 @@
 
 
 StartupEvents.registry("item", (event) => {
-  registerItems(event)
+  //registerItems(event)
 })
 
 StartupEvents.registry("block", (event) => {
@@ -16,6 +16,7 @@ StartupEvents.registry("fluid", (event) => {
 
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
+  Platform.setModName("gregitas-core", "Gravitas²")
 })
 
 StartupEvents.postInit((event) => {
