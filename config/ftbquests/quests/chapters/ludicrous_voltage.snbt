@@ -11,6 +11,7 @@
 		{
 			id: "46BC1B0780348264"
 			size: 1.5d
+			subtitle: "Welcome to &dLuV&r"
 			tasks: [{
 				id: "2AC505B61F6CE043"
 				item: "gtceu:nano_processor_mainframe"
@@ -59,6 +60,94 @@
 			}]
 			x: 11.5d
 			y: 0.0d
+		}
+		{
+			id: "7ABB92924841BD09"
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{
+				id: "7F9C62C16037F99A"
+				item: "gtceu:rhodium_plated_palladium_ingot"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			id: "7AF4D35314964B1A"
+			tasks: [{
+				id: "268C8873EB1C587C"
+				item: "gtceu:hssg_coil_block"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			id: "2AD8768749F96761"
+			tasks: [{
+				id: "2C872E4744FAE26A"
+				item: "gtceu:hssg_ingot"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 3.0d
+		}
+		{
+			id: "35A13D29744D18B3"
+			tasks: [{
+				id: "6690B9B89A5038DD"
+				item: "gtceu:hssg_dust"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			id: "7F81ED6B31315533"
+			tasks: [{
+				id: "5A7A74CBCCA66FCF"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/rhodium"
+					}
+				}
+				title: "Rhodium Dust"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -4.5d
+		}
+		{
+			icon: "gtceu:assembly_line"
+			id: "7E168AFCF43A78E0"
+			tasks: [
+				{
+					id: "59B214DACA1498B6"
+					item: "gtceu:assembly_line"
+					type: "item"
+				}
+				{
+					icon: "ftbquests:barrier"
+					id: "3A649065602C876C"
+					title: "Observe complete Assembly Line"
+					type: "custom"
+				}
+			]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			id: "748AE7ABD0715EA3"
+			tasks: [{
+				id: "176BCC39B604EA82"
+				item: "gtceu:rare_earth_dust"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -5.5d
 		}
 	]
 	title: "Ludicrous Voltage"

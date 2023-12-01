@@ -22,6 +22,7 @@
 		{
 			id: "2DF1F40CA3CB7320"
 			size: 1.5d
+			subtitle: "The final frontier - &4UHV&r"
 			tasks: [{
 				id: "37B9AC182C12464B"
 				item: "gtceu:wetware_processor_mainframe"
@@ -31,9 +32,14 @@
 			y: 0.0d
 		}
 		{
+			description: [
+				"&l&eLore:&r&r Some say it was first made by the &d&nCertified Not A Noob&r&r &bArochio&r"
+				""
+				"Want to wear this on your head as a cosmetic? Just hold it in your hand and then type &c/coshat&r"
+			]
 			id: "3FBCB5EAA61C27A1"
 			optional: true
-			subtitle: "This will take 10 days of nonstop crafting"
+			subtitle: "This will take a loooong time to craft"
 			tasks: [{
 				id: "70FB4A184AABB12D"
 				item: "gtceu:nan_certificate"
@@ -41,6 +47,36 @@
 			}]
 			x: 3.0d
 			y: 1.5d
+		}
+		{
+			id: "0520CDEC01E6F326"
+			tasks: [{
+				id: "08057AD3B2C7DF11"
+				item: "gtceu:neutronium_ingot"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.5d
+		}
+		{
+			id: "6D94D61C3BB66285"
+			tasks: [{
+				id: "1B75819782057287"
+				item: "gtceu:tritanium_coil_block"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.5d
+		}
+		{
+			id: "2E5271774685C17D"
+			tasks: [{
+				id: "46D72B1185D42FAA"
+				item: "gtceu:tritanium_ingot"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 2.5d
 		}
 	]
 	title: "Ultra High Voltage"
