@@ -11,6 +11,7 @@
 		{
 			id: "3611DE59BE9C6350"
 			size: 1.5d
+			subtitle: "Welcome to &cZPM&r"
 			tasks: [{
 				id: "2898B1F33C914414"
 				item: "gtceu:quantum_processor_mainframe"
@@ -59,6 +60,36 @@
 			}]
 			x: 2.0d
 			y: 1.0d
+		}
+		{
+			id: "1B113FC5C1EDE185"
+			tasks: [{
+				id: "33344696D961EA23"
+				item: "gtceu:naquadah_alloy_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -2.0d
+		}
+		{
+			id: "68A26B83A559929F"
+			tasks: [{
+				id: "7A36EA5EE89A1AD6"
+				item: "gtceu:naquadah_coil_block"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 2.5d
+		}
+		{
+			id: "232CB49AA39BEAF0"
+			tasks: [{
+				id: "55B23E929F732961"
+				item: "gtceu:naquadah_ingot"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.5d
 		}
 	]
 	title: "Zero Point Module"
