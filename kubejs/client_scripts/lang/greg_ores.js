@@ -94,8 +94,8 @@ const addGregOresLang = (event) => {
   const blocks = Object.keys(gregOreBlockProps)
   blocks.forEach((block) => {
     tfcStoneL.forEach((stone) => {
-      event.add(`block.gtceu.tfc_${stone}_${block}_ore`, Utils.snakeCaseToTitleCase(`${stone}_${block}`))
-      event.add(`block.gtceu.tfc_${stone}_${block}_ore.prospected`, Utils.snakeCaseToTitleCase(`${block}`))
+      event.add(`block.gtceu.${stone}_${block}_ore`, Utils.snakeCaseToTitleCase(`${stone}_${block}`))
+      event.add(`block.gtceu.${stone}_${block}_ore.prospected`, Utils.snakeCaseToTitleCase(`${block}`))
     })
   })
 }

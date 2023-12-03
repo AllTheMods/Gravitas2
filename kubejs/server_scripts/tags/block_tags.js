@@ -98,7 +98,7 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
     event.add('tfc:not_solid_supporting', [`tfc:rock/cobble/${stone}_slab`])
     event.add('tfc:can_collapse', [`tfc:rock/cobble/${stone}_slab`])
     blocksA.forEach((ore) =>{
-            event.add('tfc:prospectable', [`gtceu:tfc_${stone}_${ore}_ore`])
+            event.add('tfc:prospectable', [`gtceu:${stone}_${ore}_ore`])
     })
   })
 }
