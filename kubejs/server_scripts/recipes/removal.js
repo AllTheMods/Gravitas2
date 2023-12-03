@@ -11,8 +11,7 @@ const toolsToRemove = [
   "red_steel"
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
-
-  event.remove({ id: "tfc:crafting/bloomery"})
+  event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/stick_long_wrought_iron" })
@@ -22,13 +21,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
 
-  event.remove({ id: 'gtceu:shapeless/rubber_wood_planks' })
-  event.remove(
-    [
-        { id: 'gtceu:shaped/steam_extractor_bronze' },
-        { id: 'gtceu:shaped/steam_extractor_steel' }
-    ]
-)
+  event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
+  event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -56,9 +50,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     //GT General
 
     event.remove({ id: "gtceu:smelting/coke_over_brick", mod: "gtceu" })
-
-
-
   })
 
   //Railcraft
@@ -118,50 +109,48 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: /^framedcompactdrawers:.*/, mod: "framedcompactdrawers" })
 
-
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
 
   // Railcraft
-  event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots"})
+  event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
 
   //Woodencog
-  event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:rock_knapping\/.*_alloy/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_bloom/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:deploying\/mold_.*/, mod: "woodencog"})
-
+  event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:rock_knapping\/.*_alloy/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_bloom/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:deploying\/.*/, mod: "woodencog" })
 
   // TreeTap
-  event.remove({ mod: "treetap", output: "treetap:tap"})
+  event.remove({ mod: "treetap", output: "treetap:tap" })
 
   // Immersive Engineering
 
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick_reinforced"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastfurnace_preheater"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick_reinforced"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:fertilizer"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cloche"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:waterwheel_segment"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill_base"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:watermill"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:sample_drill"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dynamo"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:wooden_barrel"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crafting_table"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crate"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:reinforced_crate"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coal_coke"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dust_coke"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coke"})
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_coke"})
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick_reinforced" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastfurnace_preheater" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick_reinforced" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:fertilizer" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cloche" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:waterwheel_segment" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill_base" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:watermill" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:sample_drill" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dynamo" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:wooden_barrel" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crafting_table" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crate" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:reinforced_crate" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coal_coke" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dust_coke" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coke" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_coke" })
 }
