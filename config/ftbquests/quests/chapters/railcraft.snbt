@@ -9,47 +9,50 @@
 		tag: { }
 	}
 	id: "0A9242151C0AB475"
-	order_index: 0
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["RailCraft is the perfect mod for transportation or just those who hyperfocus on trains! A great place to start is with the normal Minecraft rails."]
+			description: ["{gravitas.quest.railcraft.desc.rail}"]
 			id: "1FD4C83A45724F37"
 			tasks: [{
 				id: "7CB5AD275E57A40B"
 				item: "minecraft:rail"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.rail}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1FD4C83A45724F37"]
-			description: ["In RailCraft normal rails won't suffice for everything. You're gonna need new better rails!"]
+			description: ["{gravitas.quest.railcraft.desc.types_tracks}"]
 			id: "3F3DE2CE9676EB1E"
 			tasks: [{
 				id: "3A429C81E18477B6"
 				title: "Types of Tracks"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.railcraft.types_tracks}"
 			x: -1.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["1FD4C83A45724F37"]
-			description: ["Track Kits are used to craft with rails to make special rails. These rails will be helpful for everything Train wise like: stopping the train, moving the train, and emitting redstone."]
+			description: ["{gravitas.quest.railcraft.desc.track_kits}"]
 			id: "03DF939800D749DF"
 			tasks: [{
 				id: "39656813AA1D728D"
 				title: "Types of Track kits"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.railcraft.track_kits}"
 			x: 1.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["3F3DE2CE9676EB1E"]
-			description: ["Abandoned Tracks are good for the cheapskates and aesthetic. They can be used to bridge accross a few blocks without support. They can only be 2 blocks away from blocks going the same direction, or one block from the opposite direction. They come at the risk of derailment though, basically your cart will be thrown off the rails."]
+			description: ["{gravitas.quest.railcraft.desc.abandoned}"]
 			id: "12A67032FD55398E"
 			rewards: [{
 				count: 32
@@ -62,12 +65,13 @@
 				item: "railcraft:abandoned_track"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.abandoned}"
 			x: -2.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["3F3DE2CE9676EB1E"]
-			description: ["The Electric Tracks are used for the Electric Locomotives. They'll need to be powered by Frames and yes it will hurt you if you touch it."]
+			description: ["{gravitas.quest.railcraft.desc.electric}"]
 			id: "1B0573E497A9F04A"
 			rewards: [{
 				count: 32
@@ -80,12 +84,13 @@
 				item: "railcraft:electric_track"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.electric}"
 			x: -2.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["3F3DE2CE9676EB1E"]
-			description: ["Reinforced Tracks are the upgraded version of normal rails! They're slighter faster and don't blow up."]
+			description: ["{gravitas.quest.railcraft.desc.reinforced}"]
 			id: "2CD636F6077FE695"
 			rewards: [{
 				count: 32
@@ -98,12 +103,13 @@
 				item: "railcraft:reinforced_track"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.reinforced}"
 			x: -2.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["3F3DE2CE9676EB1E"]
-			description: ["The Strap Iron Tracks, like the abandoned tracks, are perfect for the cheapskates. They go much slower than the other tracks but no risk of derailment."]
+			description: ["{gravitas.quest.railcraft.desc.strap_iron}"]
 			id: "06DA4C7C2738D0B0"
 			rewards: [{
 				count: 32
@@ -116,12 +122,13 @@
 				item: "railcraft:strap_iron_track"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.strap_iron}"
 			x: -2.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["3F3DE2CE9676EB1E"]
-			description: ["High Speed Iron Tracks are like Reinforced Tracks but obviously faster. They'll need kits to help build up speed though! And careful around corners."]
+			description: ["{gravitas.quest.railcraft.desc.high_speed}"]
 			id: "01179E58503AE9DD"
 			rewards: [{
 				count: 32
@@ -134,12 +141,13 @@
 				item: "railcraft:high_speed_track"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.high_speed}"
 			x: -3.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["3F3DE2CE9676EB1E"]
-			description: ["The High Speed Electric Tracks are like the Electric Tracks but faster! They also require what the normal high speed tracks require and what the Electric Tracks require. Speed Boosts and Frames to power them. And again careful around corners!"]
+			description: ["{gravitas.quest.railcraft.desc.high_speed_electric}"]
 			id: "74615CE61EE7EBCD"
 			rewards: [{
 				count: 32
@@ -152,22 +160,25 @@
 				item: "railcraft:high_speed_electric_track"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.high_speed_electric}"
 			x: -3.0d
 			y: 1.5d
 		}
 		{
+			description: ["{gravitas.quest.railcraft.desc.machines}"]
 			id: "0938DBC3D637DC56"
 			tasks: [{
 				id: "71B7926A98AEA64F"
 				title: "Machines!"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.railcraft.machines}"
 			x: 5.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
-			description: ["Railcraft has it's own smelter to make Steel but its disabled in this modpack, you'll have to use the Gregtech Primitive Blast Furnace to get steel now!"]
+			description: ["{gravitas.quest.railcraft.desc.steel}"]
 			id: "197119AAE56E222D"
 			rewards: [{
 				count: 5
@@ -198,13 +209,13 @@
 				}
 				type: "item"
 			}]
-			title: "How to get Steel"
+			title: "{gravitas.quest.railcraft.steel}"
 			x: 4.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
-			description: ["Like with making Steel Railcrafts Coke Oven is disabled. You'll need to use the Gregtech Coke Oven to get Coke and Creosote."]
+			description: ["{gravitas.quest.railcraft.desc.coke}"]
 			id: "642D21D54A9B9325"
 			rewards: [
 				{
@@ -224,13 +235,13 @@
 				item: "gtceu:coke_gem"
 				type: "item"
 			}]
-			title: "How to make (coal) Coke"
+			title: "{gravitas.quest.railcraft.coke}"
 			x: 4.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
-			description: ["The Water Boilers are some of the most helpful machines from RailCraft. They need a Fuel Firebox and some sort of boiler on top. The Fueled Firebox can be 1x1 2x2 or 3x3. The size of the Firebox changes how big the Boiler on top can be. For 1x1 Firebox it can only have 1x1 Boiler. For 2x2 Firebox it can be a 2x2x3 Boiler. For 3x3 Firebox it can be 3x3x4. The Liquid Fuel will take Lava or Creosote to heat up. For Solid Firebox it'll use anything a furnace can use."]
+			description: ["{gravitas.quest.railcraft.desc.making_steam}"]
 			id: "302C27B3E947EC2F"
 			rewards: [
 				{
@@ -288,13 +299,13 @@
 					type: "item"
 				}
 			]
-			title: "Making Steam"
+			title: "{gravitas.quest.railcraft.making_steam}"
 			x: 5.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
-			description: ["The Crusher is just as the name suggests. It can crush blocks to get the crafting materials, like bricks from a brick staircase, or dusts from ingots. It needs power to work though! To build one it's 3x2x2 of Crusher blocks."]
+			description: ["{gravitas.quest.railcraft.desc.crusher}"]
 			id: "5E5165BD2575E880"
 			rewards: [{
 				count: 32
@@ -308,13 +319,13 @@
 				item: "railcraft:crusher"
 				type: "item"
 			}]
-			title: "Crusher"
+			title: "{gravitas.quest.railcraft.crusher}"
 			x: 6.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
-			description: ["The Water Tank is like having a barrel outside. Just this barrel is much bigger. It collects water and can hold water for Steam Locomotives. The amount of water is makes is dependent on the biome and visible to the sky. It's made by a 3x3x3 Water Tank blocks with the center being hollow."]
+			description: ["{gravitas.quest.railcraft.desc.water_tank}"]
 			id: "73201DA5C818B565"
 			rewards: [{
 				id: "42CD6C574DD7A93F"
@@ -327,13 +338,13 @@
 				item: "railcraft:water_tank_siding"
 				type: "item"
 			}]
-			title: "Water Tank"
+			title: "{gravitas.quest.railcraft.water_tank}"
 			x: 6.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["302C27B3E947EC2F"]
-			description: ["The Steam Oven is another machine that uses Steam for something useful. By putting Steam into the Steam Oven it will act as a furnace to any items in it. Making Ingots from Ores and cooking food items. It's a 2x2x2 machine of Steam Oven blocks."]
+			description: ["{gravitas.quest.railcraft.desc.steam_furnace}"]
 			id: "4DA77FB15F75C830"
 			rewards: [{
 				count: 15
@@ -347,13 +358,13 @@
 				item: "railcraft:steam_oven"
 				type: "item"
 			}]
-			title: "Using Steam as a Furnace"
+			title: "{gravitas.quest.railcraft.steam_furnace}"
 			x: 5.5d
 			y: -0.5d
 		}
 		{
 			dependencies: ["302C27B3E947EC2F"]
-			description: ["The Steam Turbine uses Steam to make FE and EU energy. It's 3x2x2 building of only Steam Turbine Housing, it'll need a Turbine Motor in it, and Steam piped in."]
+			description: ["{gravitas.quest.railcraft.desc.steam_energy}"]
 			id: "3F1D7B7C4B14E704"
 			rewards: [{
 				id: "5612E9783840A158"
@@ -379,13 +390,13 @@
 					type: "item"
 				}
 			]
-			title: "Using Steam to make Energy"
+			title: "{gravitas.quest.railcraft.steam_energy}"
 			x: 4.5d
 			y: -0.5d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
-			description: ["The Manual Rolling Machine will be your little crafting machine for many things material for railcraft! When you put the recipe in and it can make more than 1 it will autocraft while you're still looking at it. When you leave the Rolling Machine while crafting it will abort the crafting and put it in your inventory. You must manually build the last recipe!"]
+			description: ["{gravitas.quest.railcraft.desc.manual_roller}"]
 			id: "027F78A41813D436"
 			rewards: [{
 				count: 3
@@ -407,12 +418,13 @@
 				item: "railcraft:manual_rolling_machine"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.manual_roller}"
 			x: 5.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["027F78A41813D436"]
-			description: ["The Powered Rolling Machine is much better version of the Manual Rolling Machine. You don't have to keep looking in the machine to craft things and it will automatically craft all of them. The only problem is it needs power!"]
+			description: ["{gravitas.quest.railcraft.desc.powered_roller}"]
 			id: "59348B6131C57A1F"
 			rewards: [{
 				count: 9
@@ -434,12 +446,13 @@
 				item: "railcraft:powered_rolling_machine"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.powered_roller}"
 			x: 5.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["1FD4C83A45724F37"]
-			description: ["The Crowbar is the main tool of RailCraft. When used on a Locomotive it will change the direction it's facing. When shift clicked you can connect Locomotives and Carts. When just used on carts they give them a slight push. And when used on special tracks they change their mode."]
+			description: ["{gravitas.quest.railcraft.desc.crowbars}"]
 			id: "5F8DBCC1A33B6B6F"
 			rewards: [{
 				id: "59DCE8CF66706092"
@@ -479,12 +492,13 @@
 				}
 				type: "item"
 			}]
-			title: "Crowbars"
+			title: "{gravitas.quest.railcraft.crowbars}"
 			x: -1.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["5F8DBCC1A33B6B6F"]
+			description: ["{gravitas.quest.railcraft.desc.seasonal_crowbar}"]
 			hide: true
 			hide_dependency_lines: true
 			id: "73DE896A75A95B6D"
@@ -505,12 +519,13 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.seasonal_crowbar}"
 			x: -1.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["1FD4C83A45724F37"]
-			description: ["The Spike Mauls are used on normal tracks to switch their modes. Very helpful for trying to make intersections!"]
+			description: ["{gravitas.quest.railcraft.desc.spike_maul}"]
 			id: "581B2CC1D6A63DFD"
 			rewards: [{
 				count: 16
@@ -551,13 +566,13 @@
 				}
 				type: "item"
 			}]
-			title: "Spike Maul"
+			title: "{gravitas.quest.railcraft.spike_maul}"
 			x: 1.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["These Tracks Kits are for changing momentum with your carts. The Transition Kits change the speed of the passing Locomotive, needs redstone power. The Booster Kits will speed up the cart if powered and slow down the cart if not powered. The Control Kit gives the carts a little push, when powered it'll change the direction it pushes it in. The Throttle Kit will change the speed of a passing Locomotive to whatever speed is configured, needs to be powered with redstone. The Launcher Kit will quite literally throw your cart!"]
+			description: ["{gravitas.quest.railcraft.desc.move}"]
 			id: "43CA923B2DCB612C"
 			rewards: [
 				{
@@ -599,13 +614,13 @@
 					type: "item"
 				}
 			]
-			title: "Track Kits for moving carts"
+			title: "{gravitas.quest.railcraft.move}"
 			x: 2.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["These Tracks are made for stopping the Locomotives and Carts. The Locking Kit stops carts and only starts them when given a redstone pulse. The Buffer Kit is for the end of your tracks, will stop them and not start. The Gated Kit just deploys a Fence Gate connected with the track."]
+			description: ["{gravitas.quest.railcraft.desc.stop}"]
 			id: "5C736CBD5D28549D"
 			rewards: [{
 				count: 2
@@ -630,13 +645,13 @@
 					type: "item"
 				}
 			]
-			title: "Track Kits for stopping carts"
+			title: "{gravitas.quest.railcraft.stop}"
 			x: 2.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["These 2 Track Kits are for using Carts and Redstone. The Activator Kit will activate whatever cart goes over it. The Detector Kit will activate a redstone signal whenever a cart passes over it. Both are similar to their vanilla counters for regular tracks."]
+			description: ["{gravitas.quest.railcraft.desc.redstone}"]
 			id: "22DCF11D8FA06939"
 			rewards: [
 				{
@@ -663,13 +678,13 @@
 					type: "item"
 				}
 			]
-			title: "Track Kits for redstone"
+			title: "{gravitas.quest.railcraft.redstone}"
 			x: 2.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["The Coupler is for connecting or disconnecting carts. Coupling is the phrase for connecting Carts. It can be configured with a Crowbar to couple, decouple, or auto couple. Needs Redstone to work."]
+			description: ["{gravitas.quest.railcraft.desc.coupler}"]
 			id: "69A93989B23F4505"
 			rewards: [{
 				id: "2E9FFD841584AF65"
@@ -687,12 +702,13 @@
 				item: "railcraft:coupler_track_kit"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.coupler}"
 			x: 3.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["These Track Kits are for using entities with your carts (Entities like mobs). The Embarking Kit will pick up any mobs nearby and put them in a cart. The Disembarking Kit unloads mobs from the carts. The Dumping Kit will drop the mobs in the carts below the tracks its on."]
+			description: ["{gravitas.quest.railcraft.desc.entities}"]
 			id: "3AE5C9CD89D70F77"
 			rewards: [
 				{
@@ -723,13 +739,13 @@
 					type: "item"
 				}
 			]
-			title: "Track Kits for moving entities"
+			title: "{gravitas.quest.railcraft.entities}"
 			x: 2.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["The One Way Track Kit is quite simple. Carts can only go where the arrow is facing."]
+			description: ["{gravitas.quest.railcraft.desc.one_way}"]
 			id: "27A7CAC69C578CEC"
 			rewards: [{
 				id: "28F64965A39F3719"
@@ -741,12 +757,13 @@
 				item: "railcraft:one_way_track_kit"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.one_way}"
 			x: 3.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["The Whistle Kit when active with Redstone will cause the Locomotives to set off their whistles."]
+			description: ["{gravitas.quest.railcraft.desc.whitsle}"]
 			id: "629961F7AAD56F4A"
 			rewards: [{
 				id: "124FD1607DDB25FA"
@@ -764,12 +781,13 @@
 				item: "railcraft:whistle_track_kit"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.whitsle}"
 			x: 3.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["03DF939800D749DF"]
-			description: ["The Routing Kit is used with the passing tickets."]
+			description: ["{gravitas.quest.railcraft.desc.routing}"]
 			id: "3B87099542BE6932"
 			rewards: [{
 				id: "2EA77FC002CF8B83"
@@ -781,12 +799,13 @@
 				item: "railcraft:routing_track_kit"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.routing}"
 			x: 3.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["581B2CC1D6A63DFD"]
-			description: ["The Turnout track is the first from hitting a track with a Spike Maul. It can help go two directions, forward and to a side. It can be switched with a Switch next to the track."]
+			description: ["{gravitas.quest.railcraft.desc.turnout}"]
 			id: "0534F5CA071B6FCD"
 			tasks: [{
 				id: "26F098C4690EA0FF"
@@ -795,13 +814,13 @@
 				to_observe: "railcraft:iron_turnout_track"
 				type: "observation"
 			}]
-			title: "Turnout Track"
+			title: "{gravitas.quest.railcraft.turnout}"
 			x: -0.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["581B2CC1D6A63DFD"]
-			description: ["The Wye Track is the second track made by using a Spike Maul. It directs two tracks into one. If you have one track intersected by another the Wye will move carts on the first track into the intersecting one. "]
+			description: ["{gravitas.quest.railcraft.desc.wye}"]
 			id: "2AE0775C2CB4B553"
 			tasks: [{
 				id: "374A7639F8A2BDA6"
@@ -810,13 +829,13 @@
 				to_observe: "railcraft:iron_wye_track"
 				type: "observation"
 			}]
-			title: "Wye Track"
+			title: "{gravitas.quest.railcraft.wye}"
 			x: 0.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["581B2CC1D6A63DFD"]
-			description: ["The Junction is the last track made by the Spike Maul. It acts as a normal intersection for tracks. Carts keep going the same way as before but now tracks can intersect. What happens if 2 carts hit each other on it? THEY EXPLODE!!! I'm kidding but Electric Locomotives will though."]
+			description: ["{gravitas.quest.railcraft.desc.junction}"]
 			id: "5FFB1032DA1CBCA0"
 			tasks: [{
 				id: "497816D81F657121"
@@ -825,19 +844,26 @@
 				to_observe: "railcraft:iron_junction_track"
 				type: "observation"
 			}]
-			title: "Junction Track"
+			title: "{gravitas.quest.railcraft.junction}"
 			x: 1.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["0CB074A02EE4283E"]
-			description: ["In order to power your Electric Rails and your Electric Locomotive you'll need Frames. Frames need to be powered and will move power to each connected to Frame."]
+			description: ["{gravitas.quest.railcraft.desc.frame}"]
 			id: "629F06190975FAAE"
+			rewards: [{
+				count: 32
+				id: "4D347311767DA826"
+				item: "railcraft:frame"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5AD43A059FD7588D"
 				item: "railcraft:frame"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.frame}"
 			x: -1.0d
 			y: 3.5d
 		}
@@ -846,7 +872,7 @@
 				"629F06190975FAAE"
 				"1B0573E497A9F04A"
 			]
-			description: ["Unlike the Steam Locomotive you won't need to put anything into the Electric Locomotive. It runs off the power from the Frames beneath the Electric Tracks. Yes, it can only be runned off Electric Tracks."]
+			description: ["{gravitas.quest.railcraft.desc.electric_locomotive}"]
 			id: "50B7BB3EEFE00408"
 			rewards: [{
 				id: "46D7B495875FF6F5"
@@ -862,17 +888,19 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.electric_locomotive}"
 			x: -2.0d
 			y: 3.5d
 		}
 		{
-			description: ["The reason we're all here, trains. The mod is called RailCraft don't act surprised. There's 2 different main trains and 1 special mining train."]
+			description: ["{gravitas.quest.railcraft.desc.trains}"]
 			id: "0CB074A02EE4283E"
 			tasks: [{
 				id: "49B01C68ADE2622D"
 				title: "Trains!"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.railcraft.trains}"
 			x: 0.0d
 			y: 3.5d
 		}
@@ -881,7 +909,7 @@
 				"0CB074A02EE4283E"
 				"1FD4C83A45724F37"
 			]
-			description: ["The Steam Locomotive is the most basic Locomotive. It can be powered by giving it water, furnance fuel, and waiting. It'll need constant water to keep working."]
+			description: ["{gravitas.quest.railcraft.desc.steam_locomotive}"]
 			id: "1EBA4F40AD02F3E0"
 			rewards: [{
 				count: 32
@@ -898,12 +926,13 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.steam_locomotive}"
 			x: 0.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["0CB074A02EE4283E"]
-			description: ["To actually use a Tunnel Bore you'll need a Tunnel Bore Head. They come in 4 different styles and it mines dependent on the Bore Head. It can be enchanted and has durability so you'll want to enchant it!"]
+			description: ["{gravitas.quest.railcraft.desc.bore_head}"]
 			id: "53C8A71ABFE529E1"
 			rewards: [{
 				id: "5DD6B1679819564D"
@@ -959,13 +988,13 @@
 				}
 				type: "item"
 			}]
-			title: "Bore Heads"
+			title: "{gravitas.quest.railcraft.bore_head}"
 			x: 1.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["0CB074A02EE4283E"]
-			description: ["Minecart!!!"]
+			description: ["{gravitas.quest.railcraft.desc.minecart}"]
 			id: "59519D358EA863C3"
 			rewards: [{
 				count: 10
@@ -987,12 +1016,13 @@
 				item: "minecraft:minecart"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.minecart}"
 			x: 0.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["59519D358EA863C3"]
-			description: ["These new carts are similar to the special vanilla carts. Obviously the Track with a workbench gives you a movable crafting table. The Jukebox Cart gives you a movable Jukebox. And the Tank Cart gives you a movable storage for liquids."]
+			description: ["{gravitas.quest.railcraft.desc.new_carts}"]
 			id: "0B17ECC15E911A55"
 			rewards: [{
 				id: "4F9F10865D6B28B3"
@@ -1023,13 +1053,13 @@
 				}
 				type: "item"
 			}]
-			title: "New Carts!"
+			title: "{gravitas.quest.railcraft.new_carts}"
 			x: -1.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["59519D358EA863C3"]
-			description: ["These new carts are mostly for laying down tracks. The Track Layer places down Tracks while the Track Remover removes Tracks. The Track Relayer replaces the tracks with different ones and the Track UnderCutter replaces the blocks beneath the tracks."]
+			description: ["{gravitas.quest.railcraft.desc.carts_and_tracks}"]
 			id: "7DD8A1613A5ECB40"
 			rewards: [{
 				count: 64
@@ -1065,109 +1095,179 @@
 				}
 				type: "item"
 			}]
-			title: "Track Carts!"
+			title: "{gravitas.quest.railcraft.carts_and_tracks}"
 			x: 1.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["59519D358EA863C3"]
-			description: ["The Item Loader is the most basic dispenser from RailCraft. It has to be above the track and can be configured to what you'll want loaded onto your carts below. "]
+			description: ["{gravitas.quest.railcraft.desc.item_loader}"]
 			id: "448BB5F53AE1B987"
+			rewards: [{
+				id: "70E4CE668003B83F"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/cast_iron"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "497669C282A08CF1"
 				item: "railcraft:item_loader"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.item_loader}"
 			x: -1.5d
 			y: 5.5d
 		}
 		{
 			dependencies: ["59519D358EA863C3"]
-			description: ["The Item Unloader is the opposite of the Item Loader. It will take items from the carts. This one must also be above the track."]
+			description: ["{gravitas.quest.railcraft.desc.item_unloader}"]
 			id: "38D178573D0273AC"
+			rewards: [{
+				id: "5E565FE35ACE1746"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/cast_iron"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "3D81FC82270CDDB1"
 				item: "railcraft:item_unloader"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.item_unloader}"
 			x: -0.5d
 			y: 5.5d
 		}
 		{
 			dependencies: ["59519D358EA863C3"]
-			description: ["The Fluid Loader will be helpful to keeping your Steam Locomotives up and running. It has to be placed a few blocks above the tracks and it will deploy fluids into either the Locomotive or carts."]
+			description: ["{gravitas.quest.railcraft.desc.fluid_loader}"]
 			id: "7281623F2F834AB8"
+			rewards: [{
+				id: "0A8ADC85788FE381"
+				item: "minecraft:water_bucket"
+				type: "item"
+			}]
 			tasks: [{
 				id: "0AF6CE3D38F9FAC9"
 				item: "railcraft:fluid_loader"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.fluid_loader}"
 			x: 0.5d
 			y: 5.5d
 		}
 		{
 			dependencies: ["59519D358EA863C3"]
-			description: ["The Cart Dispenser will do as the name suggests. It can dispense any carts onto the tracks in front of it. Needs a Redstone signal to dispense."]
+			description: ["{gravitas.quest.railcraft.desc.cart_dispenser}"]
 			id: "55665C248D8F5F5E"
+			rewards: [{
+				id: "1EA1F50C08CF2AA4"
+				item: "minecraft:minecart"
+				type: "item"
+			}]
 			tasks: [{
 				id: "341E044AECFFA493"
 				item: "railcraft:cart_dispenser"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.cart_dispenser}"
 			x: 1.5d
 			y: 5.5d
 		}
 		{
 			dependencies: ["448BB5F53AE1B987"]
-			description: ["The Advanced Item Loader is everything the regular one is but can be used from anywhere near the track. Next to, above, next to on the other side. Use the Crowbar to change its direction."]
+			description: ["{gravitas.quest.railcraft.desc.advanced_item_loader}"]
 			id: "324690E5EB620BCC"
+			rewards: [{
+				id: "73149A0F53AA34A7"
+				item: "tfc:gem/diamond"
+				type: "item"
+			}]
 			tasks: [{
 				id: "45F6BBFBB7F6845F"
 				item: "railcraft:advanced_item_loader"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.advanced_item_loader}"
 			x: -1.5d
 			y: 6.5d
 		}
 		{
 			dependencies: ["38D178573D0273AC"]
-			description: ["The Advanced Item Unloader is just like the normal part but can be used from any direction. Nothing different besides direction."]
+			description: ["{gravitas.quest.railcraft.desc.advanced_item_unloader}"]
 			id: "372370A354253721"
+			rewards: [{
+				id: "3E540EBF7E811BA2"
+				item: "tfc:gem/diamond"
+				type: "item"
+			}]
 			tasks: [{
 				id: "78241A237C550458"
 				item: "railcraft:advanced_item_unloader"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.advanced_item_unloader}"
 			x: -0.5d
 			y: 6.5d
 		}
 		{
 			dependencies: ["7281623F2F834AB8"]
-			description: ["The Fluid Unloader is the exact opposite of the Fluid Loader. Instead of being over the track its under. Instead of giving Steam Locomotives water it takes their water. I don't know why you'd want to do that but you can!"]
+			description: ["{gravitas.quest.railcraft.desc.fluid_unloader}"]
 			id: "113B372172841780"
+			rewards: [{
+				id: "32A101916CC4EDD6"
+				item: "minecraft:bucket"
+				type: "item"
+			}]
 			tasks: [{
 				id: "60832B8C4F28EF63"
 				item: "railcraft:fluid_unloader"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.fluid_unloader}"
 			x: 0.5d
 			y: 6.5d
 		}
 		{
 			dependencies: ["55665C248D8F5F5E"]
-			description: ["The Train Dispenser is a better version of the Cart Dispenser. It can Dispense the whole Locomotive and more! Set a pattern for what you want to be deployed then give it a redstone signal."]
+			description: ["{gravitas.quest.railcraft.desc.train_dispenser}"]
 			id: "08AC966DEED98A92"
+			rewards: [{
+				id: "18A7D8025C8597EA"
+				item: {
+					Count: 1b
+					id: "railcraft:steam_locomotive"
+					tag: { }
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "0646FD7422B755F1"
 				item: "railcraft:train_dispenser"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.train_dispenser}"
 			x: 1.5d
 			y: 6.5d
 		}
 		{
 			dependencies: ["53C8A71ABFE529E1"]
-			description: ["The Tunnel Bore is perfect for automatically placing rails especially under mountains or hills. It'll need 3 things to start working: Bore Head, fuel like Coal, and Rails. Once it has all 3 just let it go! Careful as cave collaspings can still happen with the Tunnel Bore."]
+			description: ["{gravitas.quest.railcraft.desc.tunnel_bore}"]
 			id: "441D6219A1E98B26"
 			rewards: [{
 				count: 32
@@ -1180,6 +1280,7 @@
 				item: "railcraft:tunnel_bore"
 				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.tunnel_bore}"
 			x: 2.0d
 			y: 3.5d
 		}
@@ -1190,16 +1291,17 @@
 				"2AE0775C2CB4B553"
 			]
 			dependency_requirement: "one_completed"
-			description: ["The Switch Track will be needed for moving lanes between the different Special Tracks. The Arrows on it show which goes where."]
+			description: ["{gravitas.quest.railcraft.desc.track_switch}"]
 			id: "033470BABD82FFF1"
 			tasks: [{
 				id: "46A4ED0ACA5A3446"
 				item: "railcraft:switch_track_lever"
 				type: "item"
 			}]
-			x: 0.0d
+			title: "{gravitas.quest.railcraft.track_switch}"
+			x: 0.5d
 			y: -3.0d
 		}
 	]
-	title: "{gravitas.chapters.13.title}"
+	title: "{gravitas.chapters.15.}"
 }

@@ -9,6 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: ["{gravitas.quest.rails.desc.tracks}"]
 			id: "1AF6257D135F8FBE"
 			rewards: [{
 				count: 10
@@ -90,7 +91,7 @@
 		}
 		{
 			dependencies: ["1AF6257D135F8FBE"]
-			description: ["The Wide Tracks can only be used by some Train Contraptions. Only the Standard: Invisible, Standard, and Comically Large can be used on Wide Tracks. Wide Tracks are made by cutting a normal track with a saw, then deploying a slab onto it, and finally pressing it."]
+			description: ["{gravitas.quest.rails.desc.wide_tracks}"]
 			id: "671CF803ABB5C8D6"
 			rewards: [{
 				count: 10
@@ -168,7 +169,7 @@
 		}
 		{
 			dependencies: ["1AF6257D135F8FBE"]
-			description: ["The Narrow can only be used by Standard: Invisible, Standard, and Narrow Double Scotch Yoke. Narrow Tracks are made by cutting a Slab with a Saw, deploying an iron nugget on it, then pressing it."]
+			description: ["{gravitas.quest.rails.desc.narrow_tracks}"]
 			id: "051DEE2A6787E6FA"
 			rewards: [{
 				count: 5
@@ -246,7 +247,7 @@
 		}
 		{
 			dependencies: ["1AF6257D135F8FBE"]
-			description: ["The Train Casing is how you make all of the train items in Create. It's made by applying an obsidian plate to a Brass Casing. This can be automated via Deployers."]
+			description: ["{gravitas.quest.rails.desc.train_casing}"]
 			id: "416C9022FF3D465A"
 			rewards: [{
 				count: 5
@@ -265,8 +266,13 @@
 		}
 		{
 			dependencies: ["416C9022FF3D465A"]
-			description: ["You'll need a railroad track before using this. When you have a railroad track you can rightclick it with the Station in hand then place it next to where you right clicked."]
+			description: ["{gravitas.quest.rails.desc.train_station}"]
 			id: "29161281729B14B2"
+			rewards: [{
+				id: "48193CC8BD36FBF7"
+				item: "create:track_station"
+				type: "item"
+			}]
 			tasks: [{
 				id: "51318A3BC8930EDC"
 				item: "create:track_station"
@@ -278,9 +284,14 @@
 		}
 		{
 			dependencies: ["416C9022FF3D465A"]
-			description: ["This little device is how you'll control your train. Basically forward or back, not too complicated for movement. Needs to be placed on the direction you want forward. "]
+			description: ["{gravitas.quest.rails.desc.train_controls}"]
 			hide_dependency_lines: true
 			id: "2057282CDD87219F"
+			rewards: [{
+				id: "048CE783EB4EF4C6"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
 			tasks: [{
 				id: "65C1C2CACFE4B198"
 				item: "create:controls"
@@ -291,7 +302,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["The Glue that holds us together! Superglue! You'll need to glue your entire train together so that everything moves together. We don't want floating seats."]
+			description: ["{gravitas.quest.rails.desc.glue_tube}"]
 			id: "493487DCFAAC185B"
 			tasks: [{
 				id: "3573C1A38B2F2B46"
@@ -316,7 +327,7 @@
 				"493487DCFAAC185B"
 				"29161281729B14B2"
 			]
-			description: ["Once everything is put together and glued you can go to your railroad station and create your train. The controls will finally have the sticks come out when activated. If it says there's something that must be fixed read what the Station says and go back through the quests to fix it."]
+			description: ["{gravitas.quest.rails.desc.make_a_train!}"]
 			id: "046ACD0FEBC76604"
 			tasks: [{
 				id: "46825FB022EE3E5D"
@@ -329,9 +340,15 @@
 		}
 		{
 			dependencies: ["416C9022FF3D465A"]
-			description: ["To make a train you'll need to set up a Bogey. A Bogey is the wheel part of the train. To select one hold a Train Casing in your hand and hold alt. It'll bring up a menu full of different axels. Then leftclick the one you want and choose which style you'll want. Once you did that place a Train Casing on the highlighted part of the track by the Train Station."]
+			description: ["{gravitas.quest.rails.desc.train_casings}"]
 			hide_dependency_lines: true
 			id: "19C703ECCC78C31E"
+			rewards: [{
+				count: 10
+				id: "263007C2C8C032B8"
+				item: "create:railway_casing"
+				type: "item"
+			}]
 			tasks: [{
 				id: "3EC0DAB86F9496A5"
 				item: "create:railway_casing"
@@ -342,7 +359,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["The Seat is not needed to make and work a train but its recommended for logical and aesthetics purposes."]
+			description: ["{gravitas.quest.rails.desc.seat}"]
 			id: "66425A38F5EBC012"
 			optional: true
 			rewards: [{
@@ -362,7 +379,7 @@
 		}
 		{
 			dependencies: ["046ACD0FEBC76604"]
-			description: ["The Train Coupler is how you attach and detach different trains. You have to right click a track with the Coupler to set it then place it down in block form next to it. Depending on where the green line is facing is where the other Coupler will be placed. You have to use a Wrench to change where the second Coupler will be. By rightclicking the base of the Coupler you can change its mode. When powered by redstone it will activate dependent on it's config."]
+			description: ["{gravitas.quest.rails.desc.train_coupler}"]
 			id: "77DFC5776FCD2475"
 			rewards: [{
 				id: "3ACE4C982F87DB15"
@@ -380,7 +397,7 @@
 		}
 		{
 			dependencies: ["1AF6257D135F8FBE"]
-			description: ["The Track Switch, like a station, must be binded to a track. By an intersection of course. It will show green line for where the track goes, and a red line where it can but doesn't. You can either right click, shoot a projectile, or use a Conductor to switch them."]
+			description: ["{gravitas.quest.rails.desc.track_switch}"]
 			id: "10D6E24C7AC3D34D"
 			rewards: [{
 				id: "05A295F3E9291969"
@@ -413,7 +430,7 @@
 		}
 		{
 			dependencies: ["046ACD0FEBC76604"]
-			description: ["The Train Signal is like a Detector Rail on steriods. When rightclicked on a track it will place the tripping device. The actual block can be placed farther up the track than the tripping device. When your train goes over the tripping device the Signal will emit a redstone signal. This can be used for many other devices in stopping trains."]
+			description: ["{gravitas.quest.rails.desc.train_signal}"]
 			id: "78B712975C9E588D"
 			rewards: [{
 				count: 9
@@ -432,7 +449,7 @@
 		}
 		{
 			dependencies: ["78B712975C9E588D"]
-			description: ["The Nixie Tubes have many uses but for trains they work well with the Train Signal. When put above a Train Signal and its activated the Nixie tubes will light up. Similar to the lights by railroad crossings. The Semaphore is a much more physical train stopper. When you put one with a Train Signal it will move the Semaphore arm into the way of the train. It won't stop the train, but it'll be hard for the Conductor to miss it."]
+			description: ["{gravitas.quest.rails.desc.nixie_tube}"]
 			id: "5099FD6D9D1FCF68"
 			rewards: [
 				{
@@ -464,7 +481,7 @@
 		}
 		{
 			dependencies: ["66425A38F5EBC012"]
-			description: ["The Conductors Hat will be used to make a Conductor mob. The hat is made by using a deployer set up to process the color wool into the color hat. Whatever color hat you wear will make it so only the Conductors the same color respond to you."]
+			description: ["{gravitas.quest.rails.desc.conductors_hat}"]
 			id: "38D2CF7281AF67E8"
 			rewards: [{
 				id: "285B8C71DB77687A"
@@ -553,7 +570,7 @@
 		}
 		{
 			dependencies: ["38D2CF7281AF67E8"]
-			description: ["The Conductor is the train lover's bestfriend. They're made by rightclicking a Conductors Hat onto Igneous Casing. They have 2 main uses, redstone and trains. You can attach a lead to them and click the lead onto the seat of your train and they'll drive it. For redstone they'll activate closest redstone device when looked at. Helpful for automatically switching lanes."]
+			description: ["{gravitas.quest.rails.desc.making_a_conductor}"]
 			id: "1DCA0D04A859D73D"
 			rewards: [{
 				id: "7B93D959D9148360"
@@ -571,7 +588,7 @@
 		}
 		{
 			dependencies: ["66425A38F5EBC012"]
-			description: ["The Conductor mobs aren't the only ones that can drive trains. Any animal that can get attached to a lead can be put in the driver seat! Try giving them a Train Schedule!"]
+			description: ["{gravitas.quest.rails.desc.lead}"]
 			id: "0927C733DB0CCD0E"
 			rewards: [{
 				id: "476F874C7AC37711"
@@ -592,7 +609,7 @@
 				"0927C733DB0CCD0E"
 				"1DCA0D04A859D73D"
 			]
-			description: ["The Train Schedule is good for all non-human Conductors. When given to whatever is on the seat they will follow whatever told (and given a cool hat!)."]
+			description: ["{gravitas.quest.rails.desc.train_schedule}"]
 			id: "3A4A3CF397B40DDB"
 			rewards: [{
 				id: "2E083E66DBD0CF1F"
@@ -610,7 +627,7 @@
 		}
 		{
 			dependencies: ["1DCA0D04A859D73D"]
-			description: ["If you like security cameras you'll love this. By giving a Conductor Engineers Goggles they'll wear it, and then you can bind the Remote Lens to them by right clicking. Then anytime anywhere you can rightclick with the Remote Lens to see what the Conductor is seeing."]
+			description: ["{gravitas.quest.rails.desc.remote_lens}"]
 			id: "4180CDC2A3683A60"
 			rewards: [{
 				id: "370CE083B38B115E"
@@ -635,7 +652,7 @@
 		}
 		{
 			dependencies: ["1DCA0D04A859D73D"]
-			description: ["It's a whistle"]
+			description: ["{gravitas.quest.rails.desc.conductor_whistle}"]
 			id: "3956D0B31AA4E367"
 			tasks: [{
 				id: "747C1B7C2C2FAEB4"
