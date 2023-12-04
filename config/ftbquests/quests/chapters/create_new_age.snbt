@@ -17,7 +17,7 @@
 				title: "Go through Create Crafts and Additions"
 				type: "checkmark"
 			}]
-			title: "Create Crafts and Additions"
+			title: "{gravitas.quest.new_age.crafts}"
 			x: 1.0d
 			y: 0.0d
 		}
@@ -39,6 +39,7 @@
 				item: "create_new_age:basic_motor"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.motor}"
 			x: 4.0d
 			y: 0.0d
 		}
@@ -88,7 +89,7 @@
 					type: "item"
 				}
 			]
-			title: "Moving Energy with Create"
+			title: "{gravitas.quest.new_age.connector}"
 			x: 2.5d
 			y: -1.0d
 		}
@@ -136,6 +137,7 @@
 				item: "create_new_age:energiser_t1"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.energizer}"
 			x: 6.0d
 			y: 0.0d
 		}
@@ -155,7 +157,7 @@
 					type: "item"
 				}
 			]
-			title: "Power from Magnets"
+			title: "{gravitas.quest.new_age.magnet}"
 			x: 1.0d
 			y: 3.0d
 		}
@@ -174,6 +176,7 @@
 				item: "create_new_age:overcharged_iron"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.overcharged_iron}"
 			x: 4.0d
 			y: 1.5d
 		}
@@ -192,6 +195,7 @@
 				item: "create_new_age:overcharged_gold"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.overcharged_gold}"
 			x: 6.0d
 			y: 1.5d
 		}
@@ -210,6 +214,7 @@
 				item: "create_new_age:overcharged_diamond"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.overcharged_diamond}"
 			x: 8.0d
 			y: 1.5d
 		}
@@ -322,6 +327,7 @@
 				item: "create_new_age:heater"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.boiler_heater}"
 			x: 4.0d
 			y: 4.5d
 		}
@@ -351,6 +357,7 @@
 				title: "Is it Hot in here?"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.new_age.heat}"
 			x: 1.0d
 			y: 4.5d
 		}
@@ -369,6 +376,7 @@
 				item: "create_new_age:heat_pipe"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.heat_pipe}"
 			x: 2.5d
 			y: 4.5d
 		}
@@ -381,6 +389,7 @@
 				item: "create_new_age:heat_pump"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.heat_pump}"
 			x: 2.5d
 			y: 6.0d
 		}
@@ -393,6 +402,7 @@
 				item: "create_new_age:reactor_heat_vent"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.heat_vent}"
 			x: 4.0d
 			y: 6.0d
 		}
@@ -435,7 +445,7 @@
 				}
 				type: "item"
 			}]
-			title: "Solar Plates"
+			title: "{gravitas.quest.new_age.solar_plates}"
 			x: 1.0d
 			y: 6.0d
 		}
@@ -460,7 +470,7 @@
 					type: "item"
 				}
 			]
-			title: "Getting Reactor Fuel into the Reactor"
+			title: "{gravitas.quest.new_age.inputting_fuel}"
 			x: 4.0d
 			y: 9.0d
 		}
@@ -485,7 +495,7 @@
 					type: "item"
 				}
 			]
-			title: "Powering your Reactor"
+			title: "{gravitas.quest.new_age.fuel}"
 			x: 5.5d
 			y: 7.5d
 		}
@@ -544,6 +554,7 @@
 					type: "item"
 				}
 			]
+			title: "{gravitas.quest.new_age.reactor}"
 			x: 4.0d
 			y: 7.5d
 		}
@@ -566,6 +577,7 @@
 				item: "create_new_age:stirling_engine"
 				type: "item"
 			}]
+			title: "{gravitas.quest.new_age.stirling_engine}"
 			x: 1.0d
 			y: 7.5d
 		}
@@ -605,7 +617,7 @@
 				}
 				type: "item"
 			}]
-			title: "MELTDOWN!!!"
+			title: "{gravitas.quest.new_age.meltdown}"
 			x: 2.5d
 			y: 9.0d
 		}

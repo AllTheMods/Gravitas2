@@ -11,7 +11,7 @@
 		}
 	}
 	id: "068A7B40DE5F65C9"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
@@ -33,8 +33,9 @@
 				}
 				type: "item"
 			}]
-			x: 1.0d
-			y: 0.0d
+			title: "In the Air: Hang Gliders"
+			x: 10.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["30B2B1CEB12737B1"]
@@ -56,9 +57,120 @@
 				}
 				type: "item"
 			}]
-			x: 2.0d
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			id: "2C14B2E5050FBD65"
+			tasks: [{
+				id: "6F0369C255FAE37F"
+				item: "astikorcarts:wheel"
+				type: "item"
+			}]
+			title: "On the ground: Astikor Carts"
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			id: "69F58BED11E0E580"
+			tasks: [{
+				id: "074FD87445BF243C"
+				item: "astikorcarts:animal_cart"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			id: "4F9BA390A628FFFD"
+			tasks: [{
+				id: "5C83BB19E829411F"
+				item: "astikorcarts:supply_cart"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			id: "78B50A4EBDF90621"
+			tasks: [{
+				id: "54D5EFB3E284BB33"
+				item: "astikorcarts:plow"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "7CD5D8B39710B37F"
+			tasks: [{
+				id: "4D2ADB5BAD37F632"
+				item: "firmaciv:kayak"
+				type: "item"
+			}]
+			title: "On the water: Kayaks"
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7CD5D8B39710B37F"]
+			id: "03980D70A4206A85"
+			tasks: [{
+				id: "397BCE88949AEF9F"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmaciv:kayak_paddle"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:canoe_paddle"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CD5D8B39710B37F"]
+			id: "298CA22763986127"
+			tasks: [{
+				id: "70CBBD531DED0AE8"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmaciv:sextant"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:barometer"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:nav_clock"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 8.5d
 			y: 0.0d
 		}
 	]
-	title: "{gravitas.chapters.14.title}"
+	title: "{gravitas.chapters.13.}"
 }

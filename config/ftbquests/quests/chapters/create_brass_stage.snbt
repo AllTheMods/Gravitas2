@@ -297,20 +297,6 @@
 			dependencies: ["73F337C36FFAD26C"]
 			description: ["The Extendo Grip when put in your offhand will give you extended reach. Normally you can only reach 5 blocks away, with the Extendo Grip you can now reach 9."]
 			id: "6E211C310933CD56"
-			rewards: [{
-				id: "6423B2E3E5F3A034"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 1290000L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/melon_slice"
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "4C7CD3FFBDA41E77"
 				item: {
@@ -330,20 +316,6 @@
 			dependencies: ["73F337C36FFAD26C"]
 			description: ["The Wand of Symmetry is useful for the Pro-Builders. When right clicked it will place a mirror. When shift rightclicked it will open up a menu to change the direction and use. When a mirror is placed any blocks placed near it will also place on the other side of the mirror. "]
 			id: "161DA9F0AEA9CC45"
-			rewards: [{
-				id: "011F5D021C307E90"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 2256000L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/cooked_beef"
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "383B9901644DB8FE"
 				item: "create:wand_of_symmetry"

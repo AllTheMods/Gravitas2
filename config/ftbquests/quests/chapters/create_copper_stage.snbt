@@ -18,7 +18,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Copper is our main metal for all things liquid and electricity moving."]
+			description: ["{gravitas.quest.create_copper.desc.copper_ingot}"]
 			id: "48C8D0CB8C53A8A4"
 			rewards: [{
 				count: 3
@@ -55,7 +55,7 @@
 		}
 		{
 			dependencies: ["48C8D0CB8C53A8A4"]
-			description: ["This will be your main source of moving fluids. Can be edited with a Wrench to give a window."]
+			description: ["{gravitas.quest.create_copper.desc.fluid_pipe}"]
 			id: "27C77CC41F85409A"
 			rewards: [{
 				count: 3
@@ -74,7 +74,7 @@
 		}
 		{
 			dependencies: ["27C77CC41F85409A"]
-			description: ["The Fluid Valve works as a way of filtering fluids or just stopping the movement of fluids. It will need a valve handle to actually change it."]
+			description: ["{gravitas.quest.create_copper.desc.fluid_valve}"]
 			id: "2BF7D2D871FB5F51"
 			rewards: [{
 				count: 3
@@ -93,7 +93,7 @@
 		}
 		{
 			dependencies: ["27C77CC41F85409A"]
-			description: ["Mechanical Pump is how to get fluid moving into and through the pipes. It needs to be powered to move fluids and it will move them based on the direction it is moved."]
+			description: ["{gravitas.quest.create_copper.desc.mechanioal_pump}"]
 			id: "0853FD8082A505A2"
 			rewards: [{
 				id: "53B7AE83B5079605"
@@ -111,7 +111,7 @@
 		}
 		{
 			dependencies: ["27C77CC41F85409A"]
-			description: ["The Copper Valve Handle will be needed to use a Fluid Valve. It can also be used on Mechnical Bearings to move contaptions."]
+			description: ["{gravitas.quest.create_copper.desc.copper_valve_handle}"]
 			id: "20F27736412A205A"
 			tasks: [{
 				id: "58BAC1392D35F4E0"
@@ -124,7 +124,7 @@
 		}
 		{
 			dependencies: ["48C8D0CB8C53A8A4"]
-			description: ["Fluid Tanks do as the name suggests, hold fluids ready for use."]
+			description: ["{gravitas.quest.create_copper.desc.fluid_tank}"]
 			id: "31C52FC411A15844"
 			rewards: [{
 				id: "44E7C863124CF616"
@@ -142,7 +142,7 @@
 		}
 		{
 			dependencies: ["31C52FC411A15844"]
-			description: ["The Spout when used in an assembly line will drop whatever liquid is in it to process an item in a depot below."]
+			description: ["{gravitas.quest.create_copper.desc.spout}"]
 			id: "04DB900EDD1FFFF9"
 			rewards: [{
 				id: "49FE1ADD774111D9"
@@ -160,7 +160,7 @@
 		}
 		{
 			dependencies: ["31C52FC411A15844"]
-			description: ["The Item Drain works either by itself or with automation to take liquids out of other items. Like taking water from a water bucket. "]
+			description: ["{gravitas.quest.create_copper.desc.item_drain}"]
 			id: "0826086F14498A9E"
 			rewards: [{
 				id: "05D319ED996582A0"
@@ -178,7 +178,7 @@
 		}
 		{
 			dependencies: ["31C52FC411A15844"]
-			description: ["The Hose Pulley is quite a destructive fellow. It can be used to create oceans or drain oceans. It will go to the level it is lowered to and drains or fills depending on the way its rotated."]
+			description: ["{gravitas.quest.create_copper.desc.hose_pulley}"]
 			id: "3F2F1DDADC196B59"
 			rewards: [{
 				id: "2FB34AFDD0F410AE"
@@ -196,7 +196,7 @@
 		}
 		{
 			dependencies: ["04DB900EDD1FFFF9"]
-			description: ["By filling a Blaze Cake Base with lava from a spout you get a Blaze Cake. This can be used to get your captive Blaze slave to fire up hotter than ever."]
+			description: ["{gravitas.quest.create_copper.desc.blaze_cake}"]
 			id: "604D6431D206B274"
 			rewards: [{
 				id: "70F78F667CE14321"
@@ -214,7 +214,7 @@
 		}
 		{
 			dependencies: ["6ED05B4615C473EC"]
-			description: ["These machines are your portal between Forge Energy (FE) and Create momentum. The Alternator creates FE from momentum and the Electric Motor uses FE to make momentum."]
+			description: ["{gravitas.quest.create_copper.desc.alternator}"]
 			id: "69C770A6CD924347"
 			tasks: [
 				{
@@ -233,7 +233,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["The Rolling Mill will make wires from plates. It needs to be powered to work."]
+			description: ["{gravitas.quest.create_copper.desc.rolling_mill}"]
 			id: "5F432D056516C7E8"
 			rewards: [{
 				count: 5
@@ -251,7 +251,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["To actually use wires you'll need a Spool. "]
+			description: ["{gravitas.quest.create_copper.desc.empty_spool}"]
 			id: "787D0A5C25350A84"
 			rewards: [{
 				count: 5
@@ -274,7 +274,7 @@
 				"48C8D0CB8C53A8A4"
 				"5F432D056516C7E8"
 			]
-			description: ["The Copper Spool is made by combing Copper Wires and an Empty Spool. These can be used to connect energy using machines or to make more machines."]
+			description: ["{gravitas.quest.create_copper.desc.copper_spool}"]
 			id: "6ED05B4615C473EC"
 			rewards: [{
 				count: 5
@@ -302,7 +302,7 @@
 		}
 		{
 			dependencies: ["6ED05B4615C473EC"]
-			description: ["Wires are how you move FE to Create machines. Connectors are how you actually get the FE to the machines."]
+			description: ["{gravitas.quest.create_copper.desc.copper_wires}"]
 			id: "280D2DD0B985DB7B"
 			rewards: [{
 				count: 4
