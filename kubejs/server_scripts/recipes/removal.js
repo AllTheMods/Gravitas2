@@ -48,8 +48,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ output: `railcraft:${tool}_boots`, mod: "railcraft" })
 
     //GT General
-
-    event.remove({ id: "gtceu:smelting/coke_over_brick", mod: "gtceu" })
+    event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
+    event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
+    event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
   })
 
   //Railcraft
@@ -154,4 +155,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dust_coke" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coke" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_coke" })
+
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:.*_hammering/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/raw_hammercrushing.*/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
+
+  event.remove({ id: "immersiveengineering:crafting/survey_tools"})
 }

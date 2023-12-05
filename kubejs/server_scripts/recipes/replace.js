@@ -54,6 +54,8 @@ const tfcMetallics = [
 let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
 
+  event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
+  event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:anvil", "tfc:metal/anvil/wrought_iron")
   event.replaceInput({ type: "minecraft:crafting_shapeless" }, "minecraft:slime_ball", "tfc:glue")
 
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:slime_ball", "tfc:glue")
@@ -63,6 +65,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.replaceInput(furnace, "minecraft:furnace", "tfc:crucible")
   })
 
+  //Corail
+
+  event.replaceInput({ mod: "tombstone"}, "minecraft:stone", "tfc:rock/raw/marble")
   //Create
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")

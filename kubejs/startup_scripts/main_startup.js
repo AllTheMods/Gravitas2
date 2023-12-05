@@ -2,7 +2,7 @@
 
 
 StartupEvents.registry("item", (event) => {
-  //registerItems(event)
+  registerItems(event)
 })
 
 StartupEvents.registry("block", (event) => {

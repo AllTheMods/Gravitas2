@@ -130,6 +130,49 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     D: "#forge:tools/screwdrivers"
   })
 
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+        type: "minecraft:crafting_shapeless",
+        ingredients: [
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "forge:tools/saws"
+        }
+        ],
+        result: {
+            item: "gtceu:empty_wooden_form"
+        }
+    }
+  })
+    event.custom({
+      type: "tfc:damage_inputs_shapeless_crafting",
+      recipe: {
+          type: "minecraft:crafting_shapeless",
+          ingredients: [
+          {
+              item: "gtceu:empty_wooden_form"
+          },
+          {
+              tag: "forge:tools/knives"
+          }
+          ],
+          result: {
+              item: "gtceu:brick_wooden_form"
+          }
+      }
+    })
   tfcSaplings.forEach((sapling) => {
     //Greenhouse
     event.recipes.gtceu
