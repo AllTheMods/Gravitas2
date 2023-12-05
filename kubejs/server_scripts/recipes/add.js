@@ -111,7 +111,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                   item: `tfc:ore\/${gemStone}`
               },
               {
-                  tag: "forge:tools/chisels"
+                  tag: "tfc:chisels"
               },
               {
                   tag: "forge:tools/hammers"
