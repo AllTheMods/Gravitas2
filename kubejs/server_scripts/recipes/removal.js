@@ -82,6 +82,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
   event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
+  event.remove({ id: "create:crafting/appliances/copper_backtank"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
