@@ -21,6 +21,17 @@ const tfcStone = [
   "gneiss",
   "marble"
 ]
+const gemStonesA = [
+ "amethyst",
+ "diamond",
+ "emerald",
+ "lapis_lazuli",
+ "opal",
+ "pyrite",
+ "ruby",
+ "sapphire",
+ "topaz"
+]
 const tfcSaplings = [
   "acacia",
   "ash",
@@ -87,7 +98,32 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     G: "create:cogwheel",
     Q: "tfc:quern"
   })
-  
+  gemStonesA.forEach((gemStone) => {
+      event.custom({
+          type: "tfc:damage_inputs_shapeless_crafting",
+          recipe: {
+              type: "minecraft:crafting_shapeless",
+              ingredients: [
+              {
+                  tag: "create:sandpaper"
+              },
+              {
+                  item: `tfc:ore\/${gemStone}`
+              },
+              {
+                  tag: "forge:tools/chisels"
+              },
+              {
+                  tag: "forge:tools/hammers"
+              }
+              ],
+              result: {
+                  item: `tfc:gem\/${gemStone}`
+              }
+          }
+        })
+    })
+
   event.custom({
     type: "create:pressing",
     ingredients: [{ item: "tfc:raw_iron_bloom" }],
