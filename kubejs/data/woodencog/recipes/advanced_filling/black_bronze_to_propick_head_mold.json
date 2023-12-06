@@ -1,0 +1,25 @@
+{
+    "type": "create:filling",
+    "ingredients": [
+        {
+            "item": "tfc:ceramic/propick_head_mold"
+        },
+        {
+            "fluid": "tfc:metal/black_bronze",
+            "nbt": {},
+            "amount": 144
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:ceramic/propick_head_mold",
+            "nbt": {
+                "tank": {
+                    "Amount": 144,
+                    "FluidName": "tfc:metal/black_bronze"
+                }
+            },
+            "count": 1
+        }
+    ]
+}

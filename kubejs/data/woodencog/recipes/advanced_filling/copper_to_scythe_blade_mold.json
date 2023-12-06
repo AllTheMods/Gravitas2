@@ -1,0 +1,25 @@
+{
+    "type": "create:filling",
+    "ingredients": [
+        {
+            "item": "tfc:ceramic/scythe_blade_mold"
+        },
+        {
+            "fluid": "tfc:metal/copper",
+            "nbt": {},
+            "amount": 144
+        }
+    ],
+    "results": [
+        {
+                "item": "tfc:ceramic/scythe_blade_mold",
+                "nbt": {
+                    "tank": {
+                        "Amount": 144,
+                        "FluidName": "tfc:metal/copper"
+                    }
+                },
+                "count": 1
+        }
+    ]
+}
