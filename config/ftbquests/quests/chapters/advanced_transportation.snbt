@@ -3,6 +3,15 @@
 	default_quest_shape: ""
 	filename: "advanced_transportation"
 	group: "095899370DDF48CB"
+	icon: {
+		Count: 1b
+		id: "simpleplanes:plane"
+		tag: {
+			EntityTag: {
+				material: "minecraft:oak_planks"
+			}
+		}
+	}
 	id: "25E353C10F07EBDA"
 	order_index: 1
 	quest_links: [ ]
@@ -14,6 +23,7 @@
 				item: "smallships:sail"
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.sail}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -68,6 +78,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.cog}"
 			x: -1.0d
 			y: 1.0d
 		}
@@ -122,6 +133,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.brigg}"
 			x: 0.0d
 			y: 1.0d
 		}
@@ -176,6 +188,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.galley}"
 			x: 1.0d
 			y: 1.0d
 		}
@@ -199,6 +212,7 @@
 					type: "item"
 				}
 			]
+			title: "{gravitas.quest.adv_transportation.cannon}"
 			x: 0.0d
 			y: 2.0d
 		}
@@ -209,6 +223,7 @@
 				item: "simpleplanes:plane_workbench"
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.workbench}"
 			x: 5.0d
 			y: 0.0d
 		}
@@ -220,6 +235,7 @@
 				title: "Floaty things"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.adv_transportation.flying_things}"
 			x: 5.0d
 			y: 2.0d
 		}
@@ -231,6 +247,7 @@
 				item: "simpleplanes:charging_station"
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.energy}"
 			x: 4.0d
 			y: 1.0d
 		}
@@ -242,6 +259,7 @@
 				title: "Upgrades!"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.adv_transportation.upgrades}"
 			x: 6.0d
 			y: 1.0d
 		}
@@ -253,6 +271,7 @@
 				item: "simpleplanes:furnace_engine"
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.furnace}"
 			x: 3.0d
 			y: 0.0d
 		}
@@ -264,6 +283,7 @@
 				item: "simpleplanes:electric_engine"
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.electric}"
 			x: 3.0d
 			y: 1.0d
 		}
@@ -275,6 +295,7 @@
 				item: "simpleplanes:liquid_engine"
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.liquid}"
 			x: 3.0d
 			y: 2.0d
 		}
@@ -392,6 +413,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.small}"
 			x: 4.0d
 			y: 3.0d
 		}
@@ -509,6 +531,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.big}"
 			x: 5.0d
 			y: 3.0d
 		}
@@ -626,72 +649,64 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.adv_transportation.heli}"
 			x: 6.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["3E31D05E653A92F1"]
 			id: "636D8D0253B8BD77"
-			tasks: [{
-				id: "156A9022CEA0B817"
-				item: "simpleplanes:armor"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "156A9022CEA0B817"
+					item: "simpleplanes:armor"
+					type: "item"
+				}
+				{
+					id: "23E2536F27359347"
+					item: "simpleplanes:solar_panel"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.adv_transportation.armor}"
 			x: 7.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["3E31D05E653A92F1"]
 			id: "6038799E9DA85DDD"
-			tasks: [{
-				id: "79C20C00B1CC84D9"
-				item: "simpleplanes:floaty_bedding"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "79C20C00B1CC84D9"
+					item: "simpleplanes:floaty_bedding"
+					type: "item"
+				}
+				{
+					id: "2053CB4200DC0FE2"
+					item: "simpleplanes:folding"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.adv_transportation.extras}"
 			x: 7.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["3E31D05E653A92F1"]
-			id: "2A257895508B7384"
-			tasks: [{
-				id: "5D57EFED577EEC7E"
-				item: "simpleplanes:booster"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["3E31D05E653A92F1"]
-			id: "05B6AC053BE6712D"
-			tasks: [{
-				id: "3D9CDDE961F155FD"
-				item: "simpleplanes:solar_panel"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["3E31D05E653A92F1"]
-			id: "626EE021BCC7DB69"
-			tasks: [{
-				id: "582AF6691DD572D0"
-				item: "simpleplanes:folding"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["3E31D05E653A92F1"]
 			id: "27B0DEB6F2AE18B0"
-			tasks: [{
-				id: "7BD96787E32702BA"
-				item: "simpleplanes:shooter"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7BD96787E32702BA"
+					item: "simpleplanes:shooter"
+					type: "item"
+				}
+				{
+					id: "472D186642B8EC1B"
+					item: "simpleplanes:booster"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.adv_transportation.shooting}"
 			x: 7.0d
 			y: 2.0d
 		}

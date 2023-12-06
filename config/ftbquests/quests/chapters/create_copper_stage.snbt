@@ -145,8 +145,8 @@
 			description: ["{gravitas.quest.create_copper.desc.spout}"]
 			id: "04DB900EDD1FFFF9"
 			rewards: [{
-				id: "49FE1ADD774111D9"
-				item: "minecraft:lava_bucket"
+				id: "5A933DD4E1B0EA6F"
+				item: "tfc:wooden_bucket"
 				type: "item"
 			}]
 			tasks: [{
@@ -163,8 +163,8 @@
 			description: ["{gravitas.quest.create_copper.desc.item_drain}"]
 			id: "0826086F14498A9E"
 			rewards: [{
-				id: "05D319ED996582A0"
-				item: "minecraft:water_bucket"
+				id: "44EFEF4D85F3A91E"
+				item: "tfc:wooden_bucket"
 				type: "item"
 			}]
 			tasks: [{

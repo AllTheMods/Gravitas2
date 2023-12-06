@@ -236,12 +236,8 @@
 
     "gravitas.quest.moon.desc.silicon_press": "Search around on the Moon for the Presses. It will also be worth picking up a bunch of skystone while getting the presses.",
     "gravitas.quest.moon.desc.fluix_crystal": "Fluix Crystals are formed by dropping &3Nether Quartz, &3Redstone and &3Charged Certus Crystals &finto water.",
-<<<<<<< Updated upstream
-
-=======
 	
 	
->>>>>>> Stashed changes
 	"gravitas.chapters.group.3.": "Create",
 	"gravitas.chapters.8.title": "Create Beginning",
 	"gravitas.chapters.9.title": "Create Brass Stage",
@@ -249,10 +245,7 @@
 	"gravitas.chapters.11.title": "Create Rails",
 	"gravitas.chapters.12.title": "Create New Age",
 	
-<<<<<<< Updated upstream
-=======
 	
->>>>>>> Stashed changes
 	"gravitas.quest.igneous.igneous_zinc_alloy.title": "Start",
 	"gravitas.quest.igneous.shaft": "Shaft",
 	"gravitas.quest.igneous.water_wheel": "Water Wheel",
@@ -275,8 +268,6 @@
 	"gravitas.quest.igneous.mechanical_mixer": "Mixer",
 	"gravitas.quest.igneous.windmill": "Windmill",
 	
-<<<<<<< Updated upstream
-=======
 	
 	"gravitas.quest.igneous.desc.igneous_zinc_alloy": "Where the Create Mod starts is in this little metal object. You can create it by combing igneous rocks and zinc!",
 	"gravitas.quest.igneous.desc.shaft": "The Shaft will be your most useful way of moving Kinetic Energy and creating machines.",
@@ -301,7 +292,6 @@
 	"gravitas.quest.igneous.desc.windmill": "The Windmill is a very useful machine for generating SU. Its SU is dependent on how big the windmill is. It needs atleast 8 windmill sails and can be as big as you want. Right click the Windmill Bearing to start it!",
 	
 	
->>>>>>> Stashed changes
 	"gravitas.quest.brass.brass_ingot": "Start to Brass Stage",
 	"gravitas.quest.brass.wrench": "The Main Tool: Wrench",
 	"gravitas.quest.brass.brass_hand": "Pointing is rude",
@@ -325,8 +315,6 @@
 	"gravitas.quest.brass.mechanical_saw": "Saw",
 	"gravitas.quest.brass.mechanical_drill": "Drill",
 	
-<<<<<<< Updated upstream
-=======
 	
 	"gravitas.quest.brass.desc.brass_ingot": "Brass will be needed for the next steps of Create. It's made by combining copper dust and zinc dust to get brass dust which can be smelted for brass ingots.",
 	"gravitas.quest.brass.desc.wrench": "The Wrench is the most important tool for Create and will be necessary. It's used for configuring your machines.",
@@ -352,7 +340,6 @@
 	"gravitas.quest.brass.desc.mechanical_drill": "The Drill will break any block in its way when powered. Its breaking speed is dependent on the rotation speed.",
 	
 	
->>>>>>> Stashed changes
 	"gravitas.quest.create_copper.copper_ingot": "Start of Copper Stage",
 	"gravitas.quest.create_copper.fluid_pipe": "Pipes with an S",
 	"gravitas.quest.create_copper.copper_valve_handle": "Valve Handle",
@@ -369,8 +356,6 @@
 	"gravitas.quest.create_copper.alternator": "Making FE or Kinetic Energy",
 	"gravitas.quest.create_copper.copper_wires": "Moving FE with Create",
 	
-<<<<<<< Updated upstream
-=======
 	
 	"gravitas.quest.create_copper.desc.copper_ingot": "Copper is our main metal for all things liquid and electricity within Create.",
 	"gravitas.quest.create_copper.desc.fluid_pipe": "This will be your main source of moving fluids. Can be edited with a Wrench to give a window.",
@@ -389,7 +374,6 @@
 	"gravitas.quest.create_copper.desc.copper_wires": "Wires are how you move FE to Create machines. Connectors are how you actually get the FE to the machines.",
 	
 	
->>>>>>> Stashed changes
 	"gravitas.quest.rails.tracks": "Train Tracks",
 	"gravitas.quest.rails.wide_tracks": "Wide Train Tracks",
 	"gravitas.quest.rails.narrow_tracks": "Narrow Train Tracks",
@@ -411,8 +395,6 @@
 	"gravitas.quest.rails.remote_lens": "A second set of eyes",
 	"gravitas.quest.rails.train_schedule": "Directing the Conductors",
 	
-<<<<<<< Updated upstream
-=======
 	
 	"gravitas.quest.rails.desc.tracks": "The place it all starts, tracks. You'll need Train Tracks to actually use and run trains. Standard tracks can be used with most Bogeys. Careful with corners and inclines!",
 	"gravitas.quest.rails.desc.wide_tracks": "The Wide Tracks can only be used by some Train Contraptions. Only the Standard: Invisible, Standard, and Comically Large can be used on Wide Tracks. Wide Tracks are made by cutting a normal track with a saw, then deploying a slab onto it, and finally pressing it.",
@@ -436,7 +418,6 @@
 	"gravitas.quest.rails.desc.train_schedule": "The Train Schedule is good for all non-human Conductors. When given to whatever is on the seat they will follow whatever told (and given a cool hat!).",
 	
 	
->>>>>>> Stashed changes
 	"gravitas.quest.new_age.crafts": "Complete Crafts and Additions",
 	"gravitas.quest.new_age.connector": "Moving Energy with New Age",
 	"gravitas.quest.new_age.magnetite": "Magnetite Block",
@@ -449,13 +430,6 @@
 	"gravitas.quest.new_age.redstone_magnet": "Redstone Magnet",
 	"gravitas.quest.new_age.layered_magnet": "Layered Magnet",
 	"gravitas.quest.new_age.fluxuated_magnetite": "Fluxuated Magnetite",
-<<<<<<< Updated upstream
-	"gravitas.quest.new_age.netherite_magnet": "Netherite Magnet"
-	
-	
-}
-
-=======
 	"gravitas.quest.new_age.netherite_magnet": "Netherite Magnet",
 	"gravitas.quest.new_age.heat": "Is it hot in here?",
 	"gravitas.quest.new_age.heat_pipe": "Heat Pipe",
@@ -474,6 +448,49 @@
 	"gravitas.chapters.13.": "Simple Transportation",
 	"gravitas.chapters.14.": "Advanced Transportation",
 	"gravitas.chapters.15.": "RailCraft",
+	
+	
+	"gravitas.quest.simple_transportation.carts": "On the ground: Astikor Carts",
+	"gravitas.quest.simple_transportation.animal": "Animal Carts",
+	"gravitas.quest.simple_transportation.supply": "A Moving Chest?",
+	"gravitas.quest.simple_transportation.plow": "Plow",
+	"gravitas.quest.simple_transportation.kayak": "On the water: Kayaks",
+	"gravitas.quest.simple_transportation.paddles": "A good arm workout",
+	"gravitas.quest.simple_transportation.tools": "Tools necessary for all buccaneers",
+	"gravitas.quest.simple_transportation.hang_glider": "In the air: Hang Gliders",
+	"gravitas.quest.simple_transportation.reinforced": "A better Hang Glider?",
+	
+	
+	"gravitas.quest.simple_transportation.desc.carts": "Astikor Carts is a nice little mod added to help you out in the early game. They can either be used by you or with a horse. To equip a cart you need to look at the handles while pressing the buttton (default is R make sure to change it because R also reloads shaders). To equip the cart to a horse, ride the horse then do the same you'd do to equip the cart.",
+	"gravitas.quest.simple_transportation.desc.animal": "The Animal Cart is pretty simple, it holds animals. It can hold 2 small animals or 1 big animal or hold players.",
+	"gravitas.quest.simple_transportation.desc.supply": "The Supply Cart is like the title suggests, a moving chest. It has the same storage as a double chest and to access the storage you need to shift right click the cart. Just right clicking the cart will let you ride on the back of it.",
+	"gravitas.quest.simple_transportation.desc.plow": "The Plow was the most confusing to me, but it's not that hard to understand with a guide. To use the Plow you'll need to shift right click the back to give it tools. Hoes for making farmland, shovels for making paths. Then right click it to set the plow arms down. And finally use it like the other carts to work it!",
+	"gravitas.quest.simple_transportation.desc.kayak": "Kayaks are a great way for moving with water, and much more fun than stinky boats! They move pretty slow by themselves but with some paddles we can change that.",
+	"gravitas.quest.simple_transportation.desc.paddles": "There are 2 paddles you can use with the kayaks: the canoe paddle and the kayak paddle. (Sorry there isn't any canoes, only kayaks). The Canoe paddle gets the kayak to the same speed as a regular boat. While the Kayak Paddle makes you faster than a normal boat. To use them you just need to have them in your hands while in the Kayak.",
+	"gravitas.quest.simple_transportation.desc.tools": "These tools will be helpful to all wanna be pirates. The Sextant shows your latitude, how many degrees north or south you are. The Navigators Timepiece shows your longitude, how many degrees east or west you are. And the Barometer shows your altitude, how much higher or below you are to sea level (Y=60).",
+	"gravitas.quest.simple_transportation.desc.hang_glider": "Welcome to Hangliders! The first one you'll make is just the normal Hanglider. By combing 2 Hanglider Wings and a Hanglider Frame you'll make your very own Hanglider. Use it by right clicking with it to activate it. Now whenever your off the ground you'll glide.",
+	"gravitas.quest.simple_transportation.desc.reinforced": "By combining a Hanglider and Elytra you'll make a Reinforced Hanglider. More Durability and slightly faster (don't quote me on that). Enjoy your gliding! Also gliding doesn't get you kicked for flying.",
+	
+	
+	"gravitas.quest.adv_transportation.sail": "On the Water: Small Ships",
+	"gravitas.quest.adv_transportation.cog": "Cog (Small Ship)",
+	"gravitas.quest.adv_transportation.brigg": "Brigg (Big Ship)",
+	"gravitas.quest.adv_transportation.galley": "Galley (Viking Ship)",
+	"gravitas.quest.adv_transportation.cannon": "These Ships get guns?",
+	"gravitas.quest.adv_transportation.workbench": "In the air: Simple Planes",
+	"gravitas.quest.adv_transportation.energy": "Powering your Plane",
+	"gravitas.quest.adv_transportation.furnace": "Furnace Engine",
+	"gravitas.quest.adv_transportation.electric": "Electric Engine",
+	"gravitas.quest.adv_transportation.liquid": "Liquid Engine",
+	"gravitas.quest.adv_transportation.flying_things": "Flying Things",
+	"gravitas.quest.adv_transportation.small": "Small Planes",
+	"gravitas.quest.adv_transportation.big": "Big Planes",
+	"gravitas.quest.adv_transportation.heli": "Helicopter",
+	"gravitas.quest.adv_transportation.upgrades": "Upgrading your planes",
+	"gravitas.quest.adv_transportation.armor": "Armor and Solar Panels",
+	"gravitas.quest.adv_transportation.extras": "Floaty Beddings and Folding Upgrade",
+	"gravitas.quest.adv_transportation.shooting": "Shooter Upgrade and Rocket Boosts",
+	
 	
 	
 	"gravitas.quest.railcraft.rail": "RailCraft!",
@@ -582,4 +599,3 @@
 	"gravitas.quest.railcraft.desc.powered_roller": "The Powered Rolling Machine is much better version of the Manual Rolling Machine. You don't have to keep looking in the machine to craft things and it will automatically craft all of them. The only problem is it needs power!"
 	
 }
->>>>>>> Stashed changes

@@ -730,11 +730,7 @@
 					Count: 1b
 					id: "itemfilters:tag"
 					tag: {
-<<<<<<< Updated upstream
-						value: "tfc:small_ore_pieces_copper"
-=======
 						value: "tfc:copper_pieces"
->>>>>>> Stashed changes
 					}
 				}
 				title: "Small Ore Pieces of Copper"

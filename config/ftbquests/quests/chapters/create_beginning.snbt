@@ -3,7 +3,16 @@
 	default_quest_shape: ""
 	filename: "create_beginning"
 	group: "4B728CAFC5748917"
-	icon: "create:andesite_alloy"
+	icon: {
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "create:andesite_alloy"
+	}
 	id: "08C451A973B94BC6"
 	order_index: 0
 	quest_links: [ ]
@@ -50,8 +59,8 @@
 			description: ["{gravitas.quest.igneous.desc.water_wheel}"]
 			id: "4E8D7F89699F4A8D"
 			rewards: [{
-				id: "29971AD2808E1530"
-				item: "minecraft:water_bucket"
+				id: "5E4BB797D57409ED"
+				item: "tfc:wooden_bucket"
 				type: "item"
 			}]
 			tasks: [{
@@ -187,8 +196,17 @@
 			id: "7B7C7F707BD90FF3"
 			rewards: [{
 				count: 3
-				id: "12AABD759C2026FB"
-				item: "minecraft:sugar_cane"
+				id: "0DB69532D7CB3A58"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 4854000L
+							traits: [ ]
+						}
+					}
+					id: "tfc:food/sugarcane"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -206,14 +224,13 @@
 			id: "38311AA253AF8A8C"
 			rewards: [
 				{
-					count: 4
-					id: "4BC9EC856BFAABF9"
-					item: "minecraft:dirt"
+					id: "2A1C256B05EFE825"
+					item: "tfc:wooden_bucket"
 					type: "item"
 				}
 				{
-					id: "3417342553F2567B"
-					item: "minecraft:water_bucket"
+					id: "53421E1FB2FBC223"
+					item: "tfc:jute"
 					type: "item"
 				}
 			]
@@ -442,8 +459,8 @@
 			id: "4363A85AA84102B8"
 			rewards: [{
 				count: 16
-				id: "5F7BE86A148B99AC"
-				item: "minecraft:coal"
+				id: "56358A42D8E6C9D1"
+				item: "tfc:ore/bituminous_coal"
 				type: "item"
 			}]
 			tasks: [{
