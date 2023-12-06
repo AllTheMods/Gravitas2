@@ -161,9 +161,17 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
 
   event.remove({ id: "immersiveengineering:crafting/survey_tools"})
-  event.remove({ id: `/^immersiveengineering:crafting/pickaxe_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting/axe_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting/shovel_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting/sword_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting/hoe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/pickaxe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/axe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/shovel_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
+
+  //AE2
+
+  event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
+  event.remove({ id: `/^ae2:tools\/.*_axe/`})
+  event.remove({ id: `/^ae2:tools\/.*_shovel/`})
+  event.remove({ id: `/^ae2:tools\/.*_sword/`})
+  event.remove({ id: `/^ae2:tools\/.*_hoe/`})
 }
