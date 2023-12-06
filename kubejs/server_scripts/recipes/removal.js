@@ -161,4 +161,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
 
   event.remove({ id: "immersiveengineering:crafting/survey_tools"})
+  event.remove({ id: `/^immersiveengineering:crafting/pickaxe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting/axe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting/shovel_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting/sword_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting/hoe_.*/`})
 }
