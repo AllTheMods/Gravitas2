@@ -126,7 +126,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
   event.remove({ id: /^woodencog:deploying\/.*/, mod: "woodencog" })
-  event.remove({ id: /^woodencog:advanced_filling\/.*/, mod: "woodencog" })
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap" })

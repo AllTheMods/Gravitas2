@@ -46,28 +46,44 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
     recipe.save()
   })
   //This is *technically* a replacement, but needs meltMap, so.
-  event.forEachRecipe({ id: /^woodencog:advanced_filling\/.*/ }, (recipe) => {
-    const ing = recipe.json.getAsJsonArray("ingredients")
-    if (!ing) return
-    ing.forEach((mayfluid) => {
-      if (!mayfluid.has("amount") || !meltMap[mayfluid.get("amount")]) {
-        return
-      }
-      mayfluid.asMap().put("amount", meltMap[mayfluid.get("amount")])
+    event.forEachRecipe({ id: /^woodencog:advanced_filling\/.*/ }, (recipe) => {
+      const ing = recipe.json.getAsJsonArray("ingredients")
+      const outinputs = []
+      const outoutputs = []
+      if (!ing) return
+      ing.forEach((mayfluid) => {
+        if (!mayfluid.has("amount")) {
+          outinputs.push(mayfluid)
+          return
+        }
+        if (!meltMap[mayfluid.get("amount")]) return
+        outinputs.push({
+          fluid: mayfluid.get("fluid"),
+          nbt: {},
+          amount: meltMap[mayfluid.get("amount")]
+        })
+      })
+      const results = recipe.json.getAsJsonArray("results")
+      if (!results) return
+      results.forEach((output) => {
+        const nbt = output.get("nbt")
+        if (!nbt) return
+        const tank = nbt.get("tank")
+        if (!tank || !tank.has("Amount") || !meltMap[tank.get("Amount")]) return
+        var bootleg = Fluid.of(tank.get("FluidName"), meltMap[tank.get("Amount")]).toJson() //I hate this. But its the first way I could get it to not put a double in the amount...
+        outoutputs.push({
+          item: output.get("item"),
+          nbt: {
+            tank: { Amount: bootleg.get("amount"), FluidName: tank.get("FluidName") }
+          },
+          count: 1
+        })
+      })
+      console.log(outinputs)
+      console.log(outoutputs)
+      event.custom({ type: "create:filling", ingredients: outinputs, results: outoutputs })
+      recipe.remove()
     })
-    const results = recipe.json.getAsJsonArray("results")
-    if (!results) return
-    results.forEach((output) => {
-      const nbt = output.get("nbt")
-      if (!nbt) return
-      const tank = nbt.get("tank")
-      if (!tank || !tank.has("Amount") || !meltMap[tank.get("Amount")]) return
-      var bootleg = Fluid.of(tank.get("FluidName"), meltMap[tank.get("Amount")]).toJson() //I hate this. But its the first way I could get it to not put a double in the amount...
-      tank.asMap().put("Amount", bootleg.get("amount"))
-    })
-    recipe.save()
-    console.log(recipe.json)
-  })
   const castMap = {
     100: JsonIO.primitiveOf(144),
     200: JsonIO.primitiveOf(288)
