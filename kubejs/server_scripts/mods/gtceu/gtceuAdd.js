@@ -236,7 +236,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     GTValues.VN.forEach((tier_name, index, arr) => {
     if (index >= 14) { return; }
         if (index >= 1) {
-           event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:stainless_steel_small_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, G: $CraftingComponent.GLASS.getIngredient(index), H: `gtceu:${tier_name.toLowerCase()}_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_gas_centrifuge`)
+           event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:stainless_steel_small_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, G: $CraftingComponent.GLASS.getIngredient(index), H: `gtceu:${tier_name.toLowerCase()}_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_chemical_vapor_depositor`)
         }
         if (index >= 4) {
            event.shaped(`gtceu:${tier_name.toLowerCase()}_gas_centrifuge`, ["SCS", "PHP", "FCF"], {S: "gtceu:steel_normal_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, P: `gtceu:${tier_name.toLowerCase()}_pump`, H: `gtceu:${tier_name.toLowerCase()}_hull`, F: "gtceu:fluid_filter"}).id(`gregitas:shaped/${tier_name.toLowerCase()}_gas_centrifuge`)

@@ -41,23 +41,23 @@ GTCEuStartupEvents.registry("gtceu:material", (event) => {
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-  registerGTCEuElementMaterial(event)
+  //registerGTCEuElementMaterial(event)
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    registerGTCEuUnknownCompositionMaterial(event)
+    //registerGTCEuUnknownCompositionMaterial(event)
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    registerGTCEuFirstDegreeMaterial(event)
+    //registerGTCEuFirstDegreeMaterial(event)
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    registerGTCEuHigherDegreeMaterial(event)
+    //registerGTCEuHigherDegreeMaterial(event)
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    registerGTCEuOrganicMaterial(event)
+    //registerGTCEuOrganicMaterial(event)
 })
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
