@@ -71,3 +71,12 @@ MoreJSEvents.villagerTrades((event) => {
 
 })
 
+let replaceItemEntity = {
+  "minecraft:chest": "tfc:wood/chest/oak"
+}
+EntityEvents.spawned("item", event => {
+  let replacement = replaceItemEntity[event.entity.item.id]
+  if (replacement) {
+    event.entity.setItem(Item.of(replacement, event.entity.item.count))
+  }
+})

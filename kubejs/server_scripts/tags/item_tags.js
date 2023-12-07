@@ -168,9 +168,7 @@ let tfcDusts = [
   'sulfur'
 ]
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
-  event.add("forge:ingots/iron", "tfc:metal/ingot/cast_iron")
-  event.add("forge:rods/iron", "tfc:metal/rod/cast_iron")
-  event.add("forge:plates/iron", "tfc:metal/sheet/cast_iron")
+
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
   event.add('tfc:copper_pieces', ["tfc:ore/small_native_copper", "tfc:ore/small_malachite", "tfc:ore/small_tetrahedrite"])
   event.add('forge:thorium', ["gtceu:raw_thorium", "thoriumreactors:thorium", "create_new_age:thorium"])
