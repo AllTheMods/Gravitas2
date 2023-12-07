@@ -79,8 +79,6 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
           count: 1
         })
       })
-      console.log(outinputs)
-      console.log(outoutputs)
       event.custom({ type: "create:filling", ingredients: outinputs, results: outoutputs })
       recipe.remove()
     })
