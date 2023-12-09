@@ -51,6 +51,31 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
     event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
+    event.remove(
+        [
+            {
+                id: 'gtceu:compressor/sandstone'
+            },
+            {
+                id: 'gtceu:centrifuge/red_sand_separation'
+            },
+            {
+                id: 'gtceu:forge_hammer/smooth_sandstone_to_sand'
+            },
+            {
+                id: 'gtceu:forge_hammer/chiseled_sandstone_to_sand'
+            },
+            {
+                id: 'gtceu:forge_hammer/sandstone_to_sand'
+            },
+            {
+                output: 'minecraft:gravel'
+            },
+            {
+                id: 'gtceu:alloy_smelter/alloy_smelt_glass_tube'
+            }
+        ]
+    )
   })
 
   //Railcraft
@@ -178,4 +203,16 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^ae2:tools\/.*_shovel/`})
   event.remove({ id: `/^ae2:tools\/.*_sword/`})
   event.remove({ id: `/^ae2:tools\/.*_hoe/`})
+
+  //Ender tanks & chests
+  event.remove(
+    [
+      {
+        mod: 'enderchests'
+      },
+      {
+        mod: 'endertanks'
+      }
+    ]
+  )
 }

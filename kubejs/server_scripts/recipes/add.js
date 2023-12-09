@@ -347,4 +347,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: "#forge:rods/brass"
   })
   //Framed Compacting Drawers End
+
+  //Ender Tanks & Chests
+  event.shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
+    e: 'gtceu:mv_emitter', 
+    O: 'gtceu:obsidian_plate', 
+    s: 'gtceu:mv_sensor', 
+    c: 'gtceu:mv_conveyor_module', 
+    C: 'gtceu:lv_super_chest', 
+    f: 'gtceu:lv_field_generator'
+  })
+
+  event.shaped('endertanks:ender_tank', ['eOs', 'pTp', 'OfO'], {
+    e: 'gtceu:mv_emitter', 
+    O: 'gtceu:obsidian_plate', 
+    s: 'gtceu:mv_sensor', 
+    p: 'gtceu:mv_electric_pump', 
+    T: 'gtceu:lv_super_tank', 
+    f: 'gtceu:lv_field_generator'
+  })
 }
