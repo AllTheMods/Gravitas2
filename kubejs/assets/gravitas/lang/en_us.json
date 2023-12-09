@@ -492,6 +492,25 @@
 	"gravitas.quest.adv_transportation.shooting": "Shooter Upgrade and Rocket Boosts",
 	
 	
+	"gravitas.quest.adv_transportation.desc.sail": "Welcome to Small Ships! Before you start sailing the 7 seas you'll need to know how to operate these ships. They're placed like regular boats and you get in them just the same. To start moving them you'll need to use the Sails (default keybind is R I recommend changing that}. They move by the wind and by using W key the sail comes out more and your ship goes faster. S does the opposite. They also have storage which can be Shift Rightclicked from out of it or pressing E while in it.",
+	"gravitas.quest.adv_transportation.desc.cog": "The Cog is the smallest ship. It works the same as the others but only goes to 32km/h. It can hold 4 cannons and I'm not sure how many people. I do these quests in singleplayer.",
+	"gravitas.quest.adv_transportation.desc.brigg": "The Brigg is the biggest and fastest ship. It can go up to 37km/h and holds 6 cannons. No more storage than the other ships though.",
+	"gravitas.quest.adv_transportation.desc.galley": "The Galley is easily the coolest ship. It is the same speed as a Cog and has the same storage as the others. It only holds 2 cannons but that's okay as it has cool oars. Don't worry you don't need to manually row they do it themselves.",
+	"gravitas.quest.adv_transportation.desc.cannon": "To fight other ships you'll need Cannons! Right click the Cannons on the ship to add them. Then put Cannon Balls into the ship Storage. To shoot look at the cannons direction and press space to fire!",
+	"gravitas.quest.adv_transportation.desc.workbench": "Simple Planes is definitley the most fun transportation mod and it all starts with the Plane Workbench. You'll need it to make your planes and helicopters.",
+	"gravitas.quest.adv_transportation.desc.energy": "Planes don't fly on their own, they need propellers. To make them propellers move you'll need energy and Simple Planes has 3 different ways of powering your planes. Go into your plane, select the engine you want to use, and press X.",
+	"gravitas.quest.adv_transportation.desc.furnace": "The Furnace Engine allows you to power your Plane with items that can power a furnace like coal, charcoal,or wood. It's a little old school but it works!",
+	"gravitas.quest.adv_transportation.desc.electric": "The Electric Engine doesn't power the Plane but rather allows the Charging Station to power it. The Charging Station can hold 1.5KFE and the Plane will hold 1.5MFE.",
+	"gravitas.quest.adv_transportation.desc.liquid": "The Liquid Engine uses liquid fuels to power the Planes. Right now it just uses Lava but that'll be changed.",
+	"gravitas.quest.adv_transportation.desc.flying_things": "The reason you are here, the planes and helicopter! Once the Plane is powered you will use the Up Arrow Key to start and go forward. The Arrow Keys move the Plane and WASD change the direction. Careful landing as too hard of a landing will blow it up.",
+	"gravitas.quest.adv_transportation.desc.small": "The Plane is the most basic flying machine. It has one seat on default and 1 propeller in the front. it can be made of any wood.",
+	"gravitas.quest.adv_transportation.desc.big": "The Large Plane is the bigger and better version of the normal Plane. It has 2 seats and 2 propellers. It has the same upgrades as the normal Plane though.",
+	"gravitas.quest.adv_transportation.desc.heli": "The Helicopter is a little different. When you use the Up Arrow to start you might notice only the propellers work when doing so. To get the Heli to move you need to hold space to go up. Once in the air you can use WASD to move the Helicopter. With S bringing the Heli down.",
+	"gravitas.quest.adv_transportation.desc.upgrades": "Simple Planes doesn't end there, of course there's upgrades! There are upgrades added via the mod and you can add some default minecraft items to add to your planes. Like Banners, chests, and TNT. To add any upgrades just right click them onto the planes.",
+	"gravitas.quest.adv_transportation.desc.armor": "The basic upgrades are Armor Plates and Solar Panels. Armor Panels help protect the plane by giving it more durability. It does not protect against plane crashes though. Solar Panels help give the Planes more Energy. Only works with Electric Engine.",
+	"gravitas.quest.adv_transportation.desc.extras": "The Floaty Bedding helps so your plane can safely land on water. By themselves they aren't too bouant. The Folding Upgrade makes it so you can easily add your plane to your inventory.",
+	"gravitas.quest.adv_transportation.desc.shooting": "Shooting upgrade allowsa your plane to fight well pretty much anything. Add it to your plane then press X to add arrows to its inventory. Then when flying left click to fire. Rocket Boosters help your plane to fly faster!",
+	
 	
 	"gravitas.quest.railcraft.rail": "RailCraft!",
 	"gravitas.quest.railcraft.types_tracks": "Types of Tracks",

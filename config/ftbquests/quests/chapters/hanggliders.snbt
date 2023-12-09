@@ -18,9 +18,9 @@
 			description: ["{gravitas.quest.simple_transportation.desc.hang_glider}"]
 			id: "30B2B1CEB12737B1"
 			rewards: [{
-				id: "39D6DE4C5D173100"
+				id: "4211FC0B7CF431CA"
 				type: "xp_levels"
-				xp_levels: 10
+				xp_levels: 5
 			}]
 			tasks: [{
 				id: "22AB22945F2AD0C9"
@@ -42,9 +42,9 @@
 			description: ["{gravitas.quest.simple_transportation.desc.reinforced}"]
 			id: "216A514F3CB3B5DB"
 			rewards: [{
-				id: "0406B34B0D3EFE58"
+				id: "070DAD81B947F787"
 				type: "xp_levels"
-				xp_levels: 20
+				xp_levels: 10
 			}]
 			tasks: [{
 				id: "2097E67794BA916F"
@@ -64,6 +64,12 @@
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.carts}"]
 			id: "2C14B2E5050FBD65"
+			rewards: [{
+				count: 3
+				id: "2874056F507EAB2D"
+				item: "astikorcarts:wheel"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6F0369C255FAE37F"
 				item: "astikorcarts:wheel"
@@ -77,6 +83,11 @@
 			dependencies: ["2C14B2E5050FBD65"]
 			description: ["{gravitas.quest.simple_transportation.desc.animal}"]
 			id: "69F58BED11E0E580"
+			rewards: [{
+				id: "051615542F9D609A"
+				item: "minecraft:lead"
+				type: "item"
+			}]
 			tasks: [{
 				id: "074FD87445BF243C"
 				item: "astikorcarts:animal_cart"
@@ -90,6 +101,11 @@
 			dependencies: ["2C14B2E5050FBD65"]
 			description: ["{gravitas.quest.simple_transportation.desc.supply}"]
 			id: "4F9BA390A628FFFD"
+			rewards: [{
+				id: "628817255C71CDFE"
+				item: "tfc:wood/chest/oak"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5C83BB19E829411F"
 				item: "astikorcarts:supply_cart"
@@ -103,6 +119,17 @@
 			dependencies: ["2C14B2E5050FBD65"]
 			description: ["{gravitas.quest.simple_transportation.desc.plow}"]
 			id: "78B50A4EBDF90621"
+			rewards: [{
+				id: "02F047AA01494B0B"
+				item: {
+					Count: 1b
+					id: "tfc:stone/hoe/sedimentary"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "54D5EFB3E284BB33"
 				item: "astikorcarts:plow"
@@ -115,6 +142,11 @@
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.kayak}"]
 			id: "7CD5D8B39710B37F"
+			rewards: [{
+				id: "45F82887BF5FE987"
+				item: "tfc:wood/boat/oak"
+				type: "item"
+			}]
 			tasks: [{
 				id: "4D2ADB5BAD37F632"
 				item: "firmaciv:kayak"
@@ -128,6 +160,11 @@
 			dependencies: ["7CD5D8B39710B37F"]
 			description: ["{gravitas.quest.simple_transportation.desc.paddles}"]
 			id: "03980D70A4206A85"
+			rewards: [{
+				id: "5C5C1D341F60BB16"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
 			tasks: [{
 				id: "397BCE88949AEF9F"
 				item: {
@@ -156,6 +193,11 @@
 			dependencies: ["7CD5D8B39710B37F"]
 			description: ["{gravitas.quest.simple_transportation.desc.tools}"]
 			id: "298CA22763986127"
+			rewards: [{
+				id: "2850841E469753BB"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
 			tasks: [{
 				id: "70CBBD531DED0AE8"
 				item: {
