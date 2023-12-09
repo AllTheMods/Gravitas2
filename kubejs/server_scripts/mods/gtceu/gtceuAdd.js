@@ -245,4 +245,27 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
            event.shaped(`gtceu:${tier_name.toLowerCase()}_plasma_centrifuge`, ["SCS", "PHP", "FCF"], {S: "gtceu:tungsten_large_fluid_pipe", C: `#forge:circuits/${tier_name.toLowerCase()}`, P: `gtceu:${tier_name.toLowerCase()}_pump`, H: `gtceu:${tier_name.toLowerCase()}_hull`, F: $CraftingComponent.VOLTAGE_COIL.getIngredient(index)})
         }
     })
+
+    //Modification
+    event.replaceInput({ mod: 'gtceu', }, 'minecraft:sand', '#forge:sand')
+    event.replaceInput({ mod: 'gtceu', },'minecraft:red_sand', '#forge:sand')
+    event.replaceOutput({ mod: 'gtceu' }, 'minecraft:sand', 'tfc:sand/yellow')  
+    event.replaceInput({ mod: 'gtceu' }, 'minecraft:dirt', '#minecraft:dirt')
+    event.replaceOutput({ mod: 'gtceu' }, 'minecraft:dirt', 'tfc:dirt/loam')
+
+    enderTC.forEach((ender) => {
+        event.recipes.gtceu.chemical_bath(`ender_chest_${ender.id}`)
+            .itemInputs('enderchests:ender_chest')
+            .inputFluids(Fluid.of(`gtceu:${ender.id}_dye`, 216))
+            .itemOutputs(Item.of('enderchests:ender_chest', `{code:"${ender.colour}",owner:"all"}`))
+            .duration(500)
+            .EUt(LV)
+
+        event.recipes.gtceu.chemical_bath(`ender_tank_${ender.id}`)
+            .itemInputs('endertanks:ender_tank')
+            .inputFluids(Fluid.of(`gtceu:${ender.id}_dye`, 216))
+            .itemOutputs(Item.of('endertanks:ender_tank', `{code:"${ender.colour}",owner:"all"}`))
+            .duration(500)
+            .EUt(LV)
+    })
 }
