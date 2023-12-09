@@ -161,7 +161,7 @@ machines:
 
   # Block to replace mined ores with in the miner and multiblock miner.
   # Default: minecraft:cobblestone
-  replaceMinedBlocksWith: minecraft:cobblestone
+  replaceMinedBlocksWith: tfc:rock/hardened/granite
 
   # Whether to enable the Maintenance Hatch, required for Multiblocks.
   # Default: true
