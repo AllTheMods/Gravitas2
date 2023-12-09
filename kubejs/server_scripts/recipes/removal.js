@@ -67,6 +67,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
+  //ATM
+  event.remove({ id: "allthemodium:teleport_pad"})
+
+
   //Apotheosis
   event.remove({ id: /^apotheosis:salvaging.*_horse_armor/ })
 
