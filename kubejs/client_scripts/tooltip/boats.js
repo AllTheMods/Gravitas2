@@ -116,7 +116,7 @@ const boats = [
         }
 ]
 
-const boatTooltips = (/** @type {Internal.ItemTooltipEventJS} */ event) => {
+const boatToolTips = (/** @type {Internal.ItemTooltipEventJS} */ event) => {
     boats.forEach((boat) => {
         event.add(boat.id,
                 [
