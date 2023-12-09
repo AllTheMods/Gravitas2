@@ -3,13 +3,13 @@
 [molds]
 	#Tank capacity of a Prospector's Hammer head mold (in mB).
 	#Range: 0 ~ 2147483645
-	moldProsHammerCapacity = 200
+	moldProsHammerCapacity = 288
 	#Tank capacity of a Prospector's Drill head mold (in mB).
 	#Range: 0 ~ 2147483645
-	moldProsDrillCapacity = 400
+	moldProsDrillCapacity = 576
 	#Tank capacity of a Mineral Prospector head mold (in mB).
 	#Range: 0 ~ 2147483645
-	moldMineralProspectorCapacity = 200
+	moldMineralProspectorCapacity = 288
 
 [tools]
 
