@@ -191,7 +191,8 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     "tfc:metal/tin": 230,
     "tfc:metal/cast_iron": 1535,
     "tfc:metal/zinc": 420,
-    "tfc:metal/nickel": 1453
+    "tfc:metal/nickel": 1453,
+    "firmalife:metal/chromium": 1250
   }
 
   let oreToMolten = [

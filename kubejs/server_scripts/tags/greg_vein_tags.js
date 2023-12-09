@@ -257,7 +257,8 @@ let gregVeinz = [
     validStones: ["basalt", "rhyolite", "diorite", "andesite"],
     oreAndWeight: [
       ["thorium", 2],
-      ["cinnabar", 1]
+      ["cinnabar", 1],
+      ["uranium", 1]
     ]
   },
   {
@@ -268,7 +269,7 @@ let gregVeinz = [
     validStones: ["granite", "diorite", "gabbro", "schist", "phyllite"],
     oreAndWeight: [
       ["chromite", 2],
-      ["thorium", 1]
+      ["nickel", 1]
     ]
   }
 ]

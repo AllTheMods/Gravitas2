@@ -259,7 +259,7 @@ const gregVeins = [
     oreAndWeight: [
       ["thorium", 2],
       ["cinnabar", 1],
-      ["chromite", 1]
+      ["uranium", 1]
     ]
   },
   {
@@ -270,7 +270,7 @@ const gregVeins = [
     validStones: ["granite", "diorite", "gabbro", "schist", "phyllite"],
     oreAndWeight: [
       ["chromite", 2],
-      ["thorium", 1]
+      ["nickel", 1]
     ]
   }
 ]
