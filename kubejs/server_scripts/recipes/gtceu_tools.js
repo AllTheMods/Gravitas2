@@ -512,6 +512,23 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 ]
             })
 
+            event.custom({
+                type: 'tfc:anvil',
+                input: { 
+                    item: `gtceu:${metal.id}_plate`
+                },
+                result: {
+                    item: `gregitas:${metal.id}_wrench_claw`,
+                    count: 1
+                },
+                tier: metal.tier,
+                rules: [
+                    'hit_third_last', 
+                    'shrink_second_last', 
+                    'bend_last'
+                ]
+            })
+
             event.shaped(`gtceu:${metal.id}_wrench`, ['Ls', 'SB'], {L: `gregitas:${metal.id}_wrench_claw`, B: `gregitas:${metal.id}_wrench_base`, S: `gtceu:${metal.id}_screw`, s: '#forge:tools/screwdrivers'})
         })
 
