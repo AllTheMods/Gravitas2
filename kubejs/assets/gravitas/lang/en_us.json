@@ -13,7 +13,6 @@
     "gravitas.chapters.10.title": "Create Bronze Age",
     "gravitas.chapters.11.title": "Create Rails",
     "gravitas.chapters.12.title": "Create New Age",
-
     "gravitas.quest.caveman.start_somewhere": "Gotta Start Somewhere!",
     "gravitas.quest.caveman.logpile": "Any #tfc:log_pile_logs",
     "gravitas.quest.caveman.pebbles": "Pebbles All Around",
@@ -244,6 +243,7 @@
 	"gravitas.chapters.10.title": "Create Copper Stage",
 	"gravitas.chapters.11.title": "Create Rails",
 	"gravitas.chapters.12.title": "Create New Age",
+	"gravitas.chapters.group.5.": "Gregtech",
 
 	"gravitas.quest.igneous.igneous_zinc_alloy.title": "Start",
 	"gravitas.quest.igneous.shaft": "Shaft",
