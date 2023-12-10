@@ -1,0 +1,6 @@
+
+[General]
+	#Modifier of turbine energy generation. 1.0 is default and means normal generation 2.0 means doubled, 0.5 half!
+	#Range: 0.0 ~ 100.0
+	turbine_energy_generation_modifier = 1.0
+

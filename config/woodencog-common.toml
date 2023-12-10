@@ -1,0 +1,7 @@
+
+[woodencog]
+
+	[woodencog.temperature]
+		#Should create handle temperature ?
+		handle_temperature = true
+
