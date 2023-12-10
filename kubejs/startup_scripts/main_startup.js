@@ -37,7 +37,7 @@ GTCEuStartupEvents.registry("gtceu:element", (event) => {
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
-  registerGTCEuMaterialFlags(event)
+  //registerGTCEuMaterialFlags(event)
 })
 
 GTCEuStartupEvents.registry("gtceu:material", (event) => {
