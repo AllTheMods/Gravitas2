@@ -258,7 +258,7 @@ let gregVeinz = [
     oreAndWeight: [
       ["thorium", 2],
       ["cinnabar", 1],
-      ["uranium", 1]
+      ["uraninite", 1]
     ]
   },
   {

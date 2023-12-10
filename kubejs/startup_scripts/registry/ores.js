@@ -107,7 +107,7 @@ const gregOreBlockProps = {
   green_sapphire: { color: 0x64c882, overlay: "gem_horizontal" },
   thorium: { color: 0xc65500, overlay: "metallic"},
   chromite: { color: 0xdbe2e9, overlay: "flint"},
-  uranium: { color: 0xe0ff66, overlay: "dull"}
+  uraninite: { color: 0xe0ff66, overlay: "dull"}
 }
 
 const registerGTCOres = (/** @type {Registry.Block} */ event) => {
