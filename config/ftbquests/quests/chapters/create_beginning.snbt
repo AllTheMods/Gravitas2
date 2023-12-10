@@ -3,7 +3,16 @@
 	default_quest_shape: ""
 	filename: "create_beginning"
 	group: "4B728CAFC5748917"
-	icon: "create:andesite_alloy"
+	icon: {
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "create:andesite_alloy"
+	}
 	id: "08C451A973B94BC6"
 	order_index: 0
 	quest_links: [ ]
@@ -50,8 +59,9 @@
 			description: ["{gravitas.quest.igneous.desc.water_wheel}"]
 			id: "4E8D7F89699F4A8D"
 			rewards: [{
+				count: 5
 				id: "29971AD2808E1530"
-				item: "minecraft:water_bucket"
+				item: "create:shaft"
 				type: "item"
 			}]
 			tasks: [{
@@ -204,19 +214,12 @@
 			dependencies: ["02D053C7ADA0C55C"]
 			description: ["{gravitas.quest.igneous.desc.mechanical_mixer}"]
 			id: "38311AA253AF8A8C"
-			rewards: [
-				{
-					count: 4
-					id: "4BC9EC856BFAABF9"
-					item: "minecraft:dirt"
-					type: "item"
-				}
-				{
-					id: "3417342553F2567B"
-					item: "minecraft:water_bucket"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 5
+				id: "3417342553F2567B"
+				item: "create:shaft"
+				type: "item"
+			}]
 			tasks: [{
 				id: "25D49FB23378AE59"
 				item: "create:mechanical_mixer"

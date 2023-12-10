@@ -4,7 +4,7 @@
 	filename: "rock_anvils"
 	group: "20028FE0986EEEC1"
 	icon: "tfc:rock/anvil/basalt"
-	id: "44544D44D2E68336"
+	id: "40AD7C8144A10187"
 	images: [
 		{
 			click: ""
@@ -96,7 +96,7 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "tfc:textures/item/wood/twig/acacia.png"
+			image: "minecraft:item/stick"
 			rotation: -15.0d
 			width: 0.5d
 			x: 6.8d
@@ -108,7 +108,7 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "tfc:textures/item/wood/twig/pine.png"
+			image: "tfc:item/wood/twig"
 			rotation: -15.0d
 			width: 0.5d
 			x: 7.0d
@@ -120,7 +120,7 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "tfc:textures/item/wood/twig/aspen.png"
+			image: "tfc:item/stick_bunch"
 			rotation: -15.0d
 			width: 0.5d
 			x: 7.0d
@@ -168,7 +168,7 @@
 			dev: false
 			height: 3.25d
 			hover: [ ]
-			image: "thermal:textures/block/dynamos/dynamo_magmatic.png"
+			image: "apotheosis:textures/advancements/bg/apoth.png"
 			rotation: 0.0d
 			width: 3.25d
 			x: 4.0d
@@ -1227,7 +1227,7 @@
 						value: "smallships:cogs"
 					}
 				}
-				title: "Any #smallships:cogs"
+				title: "Any #tfships:ship"
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.small_ship}"

@@ -143,11 +143,12 @@
 		{
 			dependencies: ["31C52FC411A15844"]
 			description: ["{gravitas.quest.create_copper.desc.spout}"]
+			hide_text_until_complete: false
 			id: "04DB900EDD1FFFF9"
 			rewards: [{
-				id: "49FE1ADD774111D9"
-				item: "minecraft:lava_bucket"
-				type: "item"
+				id: "2834EA07B63CA180"
+				type: "xp_levels"
+				xp_levels: 5
 			}]
 			tasks: [{
 				id: "0E365F577185F5BF"
@@ -164,7 +165,7 @@
 			id: "0826086F14498A9E"
 			rewards: [{
 				id: "05D319ED996582A0"
-				item: "minecraft:water_bucket"
+				item: "create:fluid_pipe"
 				type: "item"
 			}]
 			tasks: [{

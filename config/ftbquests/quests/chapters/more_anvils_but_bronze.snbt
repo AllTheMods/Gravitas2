@@ -166,10 +166,7 @@
 			y: -0.5d
 		}
 		{
-			dependencies: [
-				"7C2E28402F918FEA"
-				"4BE45051E0122411"
-			]
+			dependencies: ["4BE45051E0122411"]
 			description: ["{gravitas.quest.bronze.desc.fire_clay}"]
 			hide_dependency_lines: false
 			id: "3651110B0E67D615"
@@ -196,7 +193,16 @@
 				}
 				{
 					id: "1B7BB0F23E04AF1B"
-					item: "tfc:ore/kaolinite"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:kaolin_clay"
+					}
 					type: "item"
 				}
 			]
@@ -504,10 +510,7 @@
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"01AEE4D1B74F76FD"
-				"2AD5D0FD00A5C4FD"
-			]
+			dependencies: ["01AEE4D1B74F76FD"]
 			description: ["{gravitas.quest.bronze.desc.large}"]
 			id: "4A1256625CB03450"
 			tasks: [{
@@ -519,10 +522,7 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"01AEE4D1B74F76FD"
-				"2AD5D0FD00A5C4FD"
-			]
+			dependencies: ["01AEE4D1B74F76FD"]
 			description: ["{gravitas.quest.bronze.desc.quad}"]
 			id: "76E9E4DA7E6BF9B2"
 			tasks: [{
@@ -534,10 +534,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"01AEE4D1B74F76FD"
-				"2AD5D0FD00A5C4FD"
-			]
+			dependencies: ["01AEE4D1B74F76FD"]
 			description: ["{gravitas.quest.bronze.desc.hydro}"]
 			id: "52B0681ECF09FF20"
 			tasks: [{
@@ -549,10 +546,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"01AEE4D1B74F76FD"
-				"2AD5D0FD00A5C4FD"
-			]
+			dependencies: ["01AEE4D1B74F76FD"]
 			description: ["{gravitas.quest.bronze.desc.bonsai}"]
 			id: "7CBA72F03604CB46"
 			tasks: [{
@@ -564,10 +558,7 @@
 			y: 5.0d
 		}
 		{
-			dependencies: [
-				"01AEE4D1B74F76FD"
-				"2AD5D0FD00A5C4FD"
-			]
+			dependencies: ["01AEE4D1B74F76FD"]
 			description: ["{gravitas.quest.bronze.desc.hanging}"]
 			id: "4CDEA957976BB720"
 			tasks: [{
@@ -579,10 +570,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"01AEE4D1B74F76FD"
-				"2AD5D0FD00A5C4FD"
-			]
+			dependencies: ["01AEE4D1B74F76FD"]
 			description: ["{gravitas.quest.bronze.desc.trellis}"]
 			id: "278885E9030C84F5"
 			tasks: [{

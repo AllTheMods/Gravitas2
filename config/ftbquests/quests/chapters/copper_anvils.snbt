@@ -97,10 +97,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"543CB2FB24387CF0"
-				"558C90FFC7FA976D"
-			]
+			dependencies: ["543CB2FB24387CF0"]
 			description: [
 				"{gravitas.quest.copper.desc.bellows.1}"
 				"{gravitas.quest.copper.desc.bellows.2}"
