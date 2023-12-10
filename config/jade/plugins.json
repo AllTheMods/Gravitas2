@@ -63,6 +63,9 @@
     "hud.status": true,
     "hud.contents": true
   },
+  "immersiveengineering": {
+    "multiblock_icon": true
+  },
   "gtceu": {
     "recipe_logic_provider": true,
     "workable_provider": true,
@@ -96,6 +99,20 @@
     "power_storage": true,
     "crafting_monitor": true,
     "part_name": true
+  },
+  "firmalife": {
+    "oven_top": true,
+    "solar_drier": true,
+    "string": true,
+    "vat": true,
+    "oven_bottom": true,
+    "fruit_tree_sapling": true,
+    "jarbnet": true,
+    "drying_mat": true,
+    "tumbler": true,
+    "hanger": true,
+    "cheese": true,
+    "shelf": true
   },
   "tfc": {
     "bloomery": true,
@@ -160,6 +177,9 @@
   },
   "waystones": {
     "waystone": true
+  },
+  "treetap": {
+    "tap": true
   },
   "storagedrawers": {
     "display.stacklimit": true,
