@@ -11,7 +11,6 @@
 		{
 			id: "0B73851C0744C118"
 			size: 1.5d
-			subtitle: "Welcome to &3UV&r"
 			tasks: [{
 				id: "3C6A49DF8741F1BE"
 				item: "gtceu:crystal_processor_mainframe"
@@ -60,36 +59,6 @@
 			}]
 			x: 4.0d
 			y: 0.5d
-		}
-		{
-			id: "71A0A1CCA39A5F61"
-			tasks: [{
-				id: "4D38A27453533CC9"
-				item: "gtceu:darmstadtium_ingot"
-				type: "item"
-			}]
-			x: -9.0d
-			y: -2.5d
-		}
-		{
-			id: "12BF69BF563CF5F3"
-			tasks: [{
-				id: "1D50E3EA004A734B"
-				item: "gtceu:trinium_coil_block"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 3.0d
-		}
-		{
-			id: "11C3848E9D90C8D1"
-			tasks: [{
-				id: "22166B85996A7C56"
-				item: "gtceu:trinium_ingot"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 3.0d
 		}
 	]
 	title: "Ultimate Voltage"

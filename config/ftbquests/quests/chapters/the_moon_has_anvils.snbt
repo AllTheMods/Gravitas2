@@ -3,7 +3,11 @@
 	default_quest_shape: ""
 	filename: "the_moon_has_anvils"
 	group: "20028FE0986EEEC1"
-	icon: "gcyr:gps_satellite"
+	icon: {
+		Count: 1b
+		id: "ad_astra:tier_1_rocket"
+		tag: { }
+	}
 	id: "3BE4D5CA7BA9EB50"
 	order_index: 6
 	quest_links: [ ]
