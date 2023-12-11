@@ -60,6 +60,7 @@ ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
+  convertMeltValuesFromWoodencog(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {
