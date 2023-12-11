@@ -1,3 +1,5 @@
+// priority 10
+
 let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
     // PROCESSING THE CERTUS
     event.recipes.gtceu.electric_blast_furnace("certus_separation")
@@ -21,7 +23,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.gtceu.chemical_reactor("dichlorocertane")
         .inputFluids('gtceu:trichlorocertane 2000')
         .outputFluids('gtceu:dichlorocertane 1000')
-        .itemOutputs('1x gtceu:polycertus_gem')
+        .itemOutputs('1x gtceu:certus_gem') // it was 1x gtceu:polycertus_gem, certus_gem as placeholder so it don't crash
         .EUt(MV).duration(40)
 
     event.recipes.gtceu.chemical_reactor("chlorocertane")
