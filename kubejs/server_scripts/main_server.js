@@ -9,9 +9,8 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   gtceuAdd(event)
   createAdd(event)
-
-  spaceDustChain(event)
-  certusSemiconductors(event)
+  //spaceDustChain(event)
+  //certusSemiconductors(event)
 })
 
 LootJS.modifiers((event) => {
@@ -61,6 +60,7 @@ ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
+  convertMeltValuesFromWoodencog(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {
@@ -72,3 +72,12 @@ MoreJSEvents.villagerTrades((event) => {
 
 })
 
+let replaceItemEntity = {
+  "minecraft:chest": "tfc:wood/chest/oak"
+}
+EntityEvents.spawned("item", event => {
+  let replacement = replaceItemEntity[event.entity.item.id]
+  if (replacement) {
+    event.entity.setItem(Item.of(replacement, event.entity.item.count))
+  }
+})

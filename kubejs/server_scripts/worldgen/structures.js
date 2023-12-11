@@ -93,6 +93,8 @@ const jigsawReplacementMap = {
   "minecraft:mud": "tfc:mud/loam",
   "minecraft:acacia_fence[east=true,west=true]": "tfc:wood/planks/acacia_fence[east=true,west=true]",
   "minecraft:red_tulip": "tfc:plant/tulip_red",
+  "minecraft:gold_ore": "minecraft:water",
+  "minecraft:stone": "tfc:rock/hardened/granite",
   "minecraft:dirt": "tfc:dirt/loam",
   "minecraft:smooth_sandstone": "tfc:smooth_sandstone/yellow",
   "minecraft:grass_block": "tfc:grass/loam",

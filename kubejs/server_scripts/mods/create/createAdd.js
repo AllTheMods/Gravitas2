@@ -18,7 +18,22 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             break_chance: 0.1
         }
     )
-
+    event.custom(
+        {
+            type: 'tfc:casting',
+            mold: {
+                item: 'tfc:ceramic/fire_ingot_mold'
+            },
+            fluid: {
+                ingredient: 'gtceu:igneous_alloy',
+                amount: 144.0
+            },
+            result: {
+                item: 'create:andesite_alloy'
+            },
+            break_chance: 0.01
+        }
+    )
     event.custom(
         {
             type: 'tfc:heating',
@@ -91,4 +106,31 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             ]
         }
     )
+        event.custom(
+            {
+                type: 'create:filling',
+                ingredients: [
+                    {
+                        item: 'tfc:ceramic/fire_ingot_mold'
+                    },
+                    {
+                        fluid: 'gtceu:igneous_alloy',
+                        nbt: {},
+                        amount: 144
+                    }
+                ],
+                results: [
+                    {
+                        item: 'tfc:ceramic/fire_ingot_mold',
+                        nbt: {
+                            tank: {
+                                Amount: 144,
+                                FluidName: 'gtceu:igneous_alloy'
+                            }
+                        },
+                        count: 1
+                    }
+                ]
+            }
+        )
 }

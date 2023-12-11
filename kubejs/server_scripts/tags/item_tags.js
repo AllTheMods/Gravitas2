@@ -1,6 +1,6 @@
 // priority 10
 
-const gtceuIngots = [
+let gtceuIngots = [
   "aluminium",
   "americium",
   "annealed_copper",
@@ -87,25 +87,108 @@ const gtceuIngots = [
   "yttrium_barium_cuprate"
 ]
 
-const addItemTags = (/** @type {TagEvent.Item} */ event) => {
-  event.add("forge:ingots/iron", "tfc:metal/ingot/cast_iron")
-  event.add("forge:rods/iron", "tfc:metal/rod/cast_iron")
-  event.add("forge:plates/iron", "tfc:metal/sheet/cast_iron")
-  event.add("forge:dusts/diamond", "tfc:powder/diamond")
+let tfcStonei = [
+  "granite",
+  "diorite",
+  "gabbro",
+  "shale",
+  "claystone",
+  "limestone",
+  "conglomerate",
+  "dolomite",
+  "chert",
+  "chalk",
+  "rhyolite",
+  "basalt",
+  "andesite",
+  "dacite",
+  "quartzite",
+  "slate",
+  "phyllite",
+  "schist",
+  "gneiss",
+  "marble"
+]
+let tfcSaplingz = [
+  "acacia",
+  "ash",
+  "aspen",
+  "birch",
+  "blackwood",
+  "chestnut",
+  "douglas_fir",
+  "hickory",
+  "kapok",
+  "mangrove",
+  "maple",
+  "oak",
+  "palm",
+  "pine",
+  "rosewood",
+  "sequoia",
+  "spruce",
+  "sycamore",
+  "white_cedar",
+  "willow"
+]
 
+let tfcMetalz = [
+  'bismuth',
+  'bismuth_bronze',
+  'black_bronze',
+  'bronze',
+  'brass',
+  'copper',
+  'gold',
+  'nickel',
+  'rose_gold',
+  'silver',
+  'tin',
+  'zinc',
+  'sterling_silver',
+  'wrought_iron',
+  'steel',
+  'black_steel',
+  'blue_steel',
+  'red_steel',
+  'chromite',
+  'thorium',
+  'tungsten_carbide',
+  'damascus_steel',
+  'tungsten_steel',
+  'cobalt_brass',
+  'vanadium_steel',
+  'ultimet',
+  'invar',
+  'aluminium',
+  'titanium'
+]
+//Will be added to later
+let tfcDusts = [
+  'sulfur'
+]
+const addItemTags = (/** @type {TagEvent.Item} */ event) => {
+
+  event.add("forge:dusts/diamond", "tfc:powder/diamond")
+  event.add('tfc:copper_pieces', ["tfc:ore/small_native_copper", "tfc:ore/small_malachite", "tfc:ore/small_tetrahedrite"])
+  event.add('forge:thorium', ["gtceu:raw_thorium", "thoriumreactors:thorium", "create_new_age:thorium"])
+  event.add('forge:ingots/niobium', ["thoriumreactors:niob_ingot"])
+  event.add('forge:tools/saws', ["#tfc:saws"])
+
+  event.add('forge:tools/knives', ["#tfc:knives"])
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
 
-  global.tfcStone.forEach((stone) => {
+  tfcStonei.forEach((stone) => {
     event.add("forge:slabs/cobblestone", `tfc:rock/cobble/${stone}_slab`)
   })
 
-  tfcSaplings.forEach((sapling) => {
+  tfcSaplingz.forEach((sapling) => {
     event.add("forge:saplings", `tfc:wood/sapling/${sapling}`)
   })
 
-  tfcMetal.forEach((metal) => {
+  tfcMetalz.forEach((metal) => {
     event.add(`forge:plates/${metal}`, `tfc:metal/sheet/${metal}`)
     event.add(`forge:plates/double/${metal}`, `tfc:metal/double_sheet/${metal}`)
 
@@ -131,6 +214,24 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       event.add('tfc:saws', `gtceu:${id}_saw`)
       event.add('tfc:hammers', `gtceu:${id}_hammer`)
       event.add('tfc:knives', `gtceu:${id}_knife`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_file`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_wrench`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_saw`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_plunger`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_hammer`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_knife`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_screwdriver`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_crowbar`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_mortar`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_soft_mallet`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_wire_cutter`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_sword`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_pickaxe`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_axe`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_shovel`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_hoe`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_scythe`)
+      event.add('tfc:usable_on_tool_rack',`gtceu:${id}_butchery_knife`)
   })
 
   gtceuToolsGT.forEach((metal) => {
@@ -140,5 +241,10 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   tfcDusts.forEach((dust) => {
     event.add(`forge:dusts/${dust}`, `tfc:powder/${dust}`)
+  })
+
+  event.get("smallships:cogs").removeAll()
+  tfcSaplingz.forEach((wood) => {
+    event.add("smallships:cogs", `tfships:${wood}_cog`)
   })
 }

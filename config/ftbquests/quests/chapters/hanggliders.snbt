@@ -1,0 +1,176 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hanggliders"
+	group: "095899370DDF48CB"
+	icon: {
+		Count: 1b
+		id: "hangglider:hang_glider"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "068A7B40DE5F65C9"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Welcome to Hangliders! The first one you'll make is just the normal Hanglider. By combing 2 Hanglider Wings and a Hanglider Frame you'll make your very own Hanglider. Use it by right clicking with it to activate it. Now whenever your off the ground you'll glide."]
+			id: "30B2B1CEB12737B1"
+			rewards: [{
+				id: "39D6DE4C5D173100"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [{
+				id: "22AB22945F2AD0C9"
+				item: {
+					Count: 1b
+					id: "hangglider:hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "In the Air: Hang Gliders"
+			x: 10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["30B2B1CEB12737B1"]
+			description: ["By combining a Hanglider and Elytra you'll make a Reinforced Hanglider. More Durability and slightly faster (don't quote me on that). Enjoy your gliding! Also gliding doesn't get you kicked for flying."]
+			id: "216A514F3CB3B5DB"
+			rewards: [{
+				id: "0406B34B0D3EFE58"
+				type: "xp_levels"
+				xp_levels: 20
+			}]
+			tasks: [{
+				id: "2097E67794BA916F"
+				item: {
+					Count: 1b
+					id: "hangglider:reinforced_hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			id: "2C14B2E5050FBD65"
+			tasks: [{
+				id: "6F0369C255FAE37F"
+				item: "astikorcarts:wheel"
+				type: "item"
+			}]
+			title: "On the ground: Astikor Carts"
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			id: "69F58BED11E0E580"
+			tasks: [{
+				id: "074FD87445BF243C"
+				item: "astikorcarts:animal_cart"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			id: "4F9BA390A628FFFD"
+			tasks: [{
+				id: "5C83BB19E829411F"
+				item: "astikorcarts:supply_cart"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			id: "78B50A4EBDF90621"
+			tasks: [{
+				id: "54D5EFB3E284BB33"
+				item: "astikorcarts:plow"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "7CD5D8B39710B37F"
+			tasks: [{
+				id: "4D2ADB5BAD37F632"
+				item: "firmaciv:kayak"
+				type: "item"
+			}]
+			title: "On the water: Kayaks"
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7CD5D8B39710B37F"]
+			id: "03980D70A4206A85"
+			tasks: [{
+				id: "397BCE88949AEF9F"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmaciv:kayak_paddle"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:canoe_paddle"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CD5D8B39710B37F"]
+			id: "298CA22763986127"
+			tasks: [{
+				id: "70CBBD531DED0AE8"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmaciv:sextant"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:barometer"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:nav_clock"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+	]
+	title: "{gravitas.chapters.13.}"
+}
