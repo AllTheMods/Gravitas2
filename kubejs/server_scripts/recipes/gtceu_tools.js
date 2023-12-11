@@ -15,7 +15,7 @@ const gtMortars = [
   {
     id: 'invar',
     tier: 3,
-    double: 'gregitas:double_bronze_ingot'
+    double: 'tfc:metal/double_ingot/bronze'
   },
   {
     id: 'steel',
@@ -61,7 +61,7 @@ const gtceuToolsTFC = [
     id: 'invar',
     fluid: 'gtceu:invar',
     tier: 3,
-    double: 'gregitas:double_bronze_ingot'
+    double: 'tfc:metal/double_ingot/bronze'
   },
   {
     id: 'sterling_silver',
@@ -136,7 +136,7 @@ const gtceuToolsGT = [
     id: 'invar',
     fluid: 'gtceu:invar',
     tier: 3,
-    double: 'gregitas:double_bronze_ingot'
+    double: 'tfc:metal/double_ingot/bronze'
   },
   {
     id: 'sterling_silver',
@@ -277,6 +277,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         })
     //Screwdriver
         gtceuToolsTFC.forEach((metal) => {
+            if (["damascus_steel", "red_steel", "blue_steel"].includes(metal.id)) return
             event.custom({
                 type: 'tfc:welding',
                 first_input: { 
@@ -490,6 +491,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         ).id('gregitas:rubber_knapping/plunger_head')
 
         gtceuToolsTFC.forEach((metal) => {
+            if (["damascus_steel", "red_steel", "blue_steel"].includes(metal.id)) return
             event.shapeless(`gtceu:${metal.id}_plunger`, ['gregitas:plunger_head', `gtceu:${metal.id}_long_rod`]).id(`gregitas:shapeless/${metal.id}_plunger`)
         })
 
@@ -558,6 +560,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     //Knife
         
         gtceuToolsTFC.forEach((metal) => {
+            if (["bronze", "steel", "wrought_iron", "red_steel", "blue_steel"].includes(metal.id)) return
             event.custom(
                 {
                     type: 'tfc:anvil',
