@@ -199,6 +199,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
 
+  //Firmalife
+  event.remove({ id: "firmalife:alloy/stainless_steel"})
   //AE2
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
