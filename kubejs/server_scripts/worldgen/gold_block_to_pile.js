@@ -1,5 +1,5 @@
 // priority: 10
-const pileMetals = ['tfc:metal/ingot/gold', 'tfc:metal/ingot/copper', 'tfc:metal/ingot/wrought_iron']
+const pileMetals = ['tfc:metal/ingot/gold', 'tfc:metal/ingot/copper', 'tfc:metal/ingot/bismuth']
 
 const replaceGoldBlocksWithPiles = (event) => {
   const level = event.worldGenLevel
@@ -8,7 +8,7 @@ const replaceGoldBlocksWithPiles = (event) => {
     BlockPos.betweenClosed(bb.minX(), bb.minY(), bb.minZ(), bb.maxX(), bb.maxY(), bb.maxZ()).forEach((pos) => {
       if (level.getBlockState(pos).block.id === 'minecraft:gold_block') {
         metal = pileMetals[Utils.random.nextInt(0, pileMetals.length)]
-        count = Utils.random.nextInt(1, 65) // inclusive to exclusive, so 65
+        count = Utils.random.nextInt(1, 33) // inclusive to exclusive, so 33 gives 1-32
         nbt = generateNbt(metal, count)
         pileBlockState = Block.getBlock('tfc:ingot_pile')
           .defaultBlockState()

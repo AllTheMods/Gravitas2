@@ -184,6 +184,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add('forge:ingots/niobium', ["thoriumreactors:niob_ingot"])
   event.add('forge:tools/saws', ["#tfc:saws"])
 
+  event.add("forge:tools/hammers", "#tfc:hammers")
+  
   event.add('forge:tools/knives', ["#tfc:knives"])
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
