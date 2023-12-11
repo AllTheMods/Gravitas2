@@ -1,0 +1,17 @@
+{
+    "com.lowdragmc.lowdraglib.gui.modular.ModularUIGuiContainer": {
+        "ignore": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 140,
+                "top": -10,
+                "hide": true
+            },
+            "SETTINGS": {
+                "horizontalOffset": 151,
+                "top": -25,
+                "hide": true
+            }
+        }
+    }
+}
