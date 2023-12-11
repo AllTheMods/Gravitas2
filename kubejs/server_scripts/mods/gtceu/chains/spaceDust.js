@@ -48,7 +48,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
         .itemInputs('6x gtceu:trace_minerals_dust')
         .itemOutputs([
             '1x gtceu:iron_dust',
-            // '1x gtceu:iodine_dust',
+            '1x gtceu:iodine_dust',
             '1x gtceu:chromium_dust',
             '1x gtceu:manganese_dust',
             '1x gtceu:rare_earth_tiny_dust'
@@ -228,7 +228,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
             'gtceu:radon 4000'
         ])
         .itemOutputs([
-            // '2x gtceu:astatine_dust',
+            '2x gtceu:astatine_dust',
             '1x gtceu:darmstadtium_dust'
         ])
         .EUt(UHV).duration(400)
