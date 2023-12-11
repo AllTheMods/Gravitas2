@@ -86,7 +86,16 @@ let gtceuIngots = [
   "yttrium",
   "yttrium_barium_cuprate"
 ]
-
+const gemPowders = [
+ "amethyst",
+ "emerald",
+ "lapis_lazuli",
+ "opal",
+ "pyrite",
+ "ruby",
+ "sapphire",
+ "topaz"
+]
 let tfcStonei = [
   "granite",
   "diorite",
@@ -246,5 +255,9 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.get("smallships:cogs").removeAll()
   tfcSaplingz.forEach((wood) => {
     event.add("smallships:cogs", `tfships:${wood}_cog`)
+  })
+
+  gemPowders.forEach((gem) => {
+    event.add(`forge:dusts/${gem}`, `tfc:/powder/${gem}`)
   })
 }
