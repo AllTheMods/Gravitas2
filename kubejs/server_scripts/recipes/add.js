@@ -165,7 +165,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "gtceu:firebricks",
     D: "#forge:tools/screwdrivers"
   })
-
+  event.shaped("2x gtceu:coke_oven_bricks", ["BMB","MBM","BMB"], {
+    M: "tfc:mortar",
+    B: "gtceu:coke_oven_brick"
+  })
   event.custom({
     type: "tfc:damage_inputs_shapeless_crafting",
     recipe: {
