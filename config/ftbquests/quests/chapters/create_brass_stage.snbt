@@ -297,6 +297,11 @@
 			dependencies: ["73F337C36FFAD26C"]
 			description: ["The Extendo Grip when put in your offhand will give you extended reach. Normally you can only reach 5 blocks away, with the Extendo Grip you can now reach 9."]
 			id: "6E211C310933CD56"
+			rewards: [{
+				id: "6E37A953D10E2460"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			tasks: [{
 				id: "4C7CD3FFBDA41E77"
 				item: {
@@ -316,6 +321,11 @@
 			dependencies: ["73F337C36FFAD26C"]
 			description: ["The Wand of Symmetry is useful for the Pro-Builders. When right clicked it will place a mirror. When shift rightclicked it will open up a menu to change the direction and use. When a mirror is placed any blocks placed near it will also place on the other side of the mirror. "]
 			id: "161DA9F0AEA9CC45"
+			rewards: [{
+				id: "5A45AA239F915AC9"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			tasks: [{
 				id: "383B9901644DB8FE"
 				item: "create:wand_of_symmetry"

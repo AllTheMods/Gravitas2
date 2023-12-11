@@ -13,6 +13,7 @@
     "gravitas.chapters.10.title": "Create Bronze Age",
     "gravitas.chapters.11.title": "Create Rails",
     "gravitas.chapters.12.title": "Create New Age",
+
     "gravitas.quest.caveman.start_somewhere": "Gotta Start Somewhere!",
     "gravitas.quest.caveman.logpile": "Any #tfc:log_pile_logs",
     "gravitas.quest.caveman.pebbles": "Pebbles All Around",
@@ -235,16 +236,16 @@
 
     "gravitas.quest.moon.desc.silicon_press": "Search around on the Moon for the Presses. It will also be worth picking up a bunch of skystone while getting the presses.",
     "gravitas.quest.moon.desc.fluix_crystal": "Fluix Crystals are formed by dropping &3Nether Quartz, &3Redstone and &3Charged Certus Crystals &finto water.",
-
-
+	
+	
 	"gravitas.chapters.group.3.": "Create",
 	"gravitas.chapters.8.title": "Create Beginning",
 	"gravitas.chapters.9.title": "Create Brass Stage",
 	"gravitas.chapters.10.title": "Create Copper Stage",
 	"gravitas.chapters.11.title": "Create Rails",
 	"gravitas.chapters.12.title": "Create New Age",
-	"gravitas.chapters.group.5.": "Gregtech",
-
+	
+	
 	"gravitas.quest.igneous.igneous_zinc_alloy.title": "Start",
 	"gravitas.quest.igneous.shaft": "Shaft",
 	"gravitas.quest.igneous.water_wheel": "Water Wheel",
@@ -266,7 +267,7 @@
 	"gravitas.quest.igneous.mechanical_press": "Press",
 	"gravitas.quest.igneous.mechanical_mixer": "Mixer",
 	"gravitas.quest.igneous.windmill": "Windmill",
-
+	
 	
 	"gravitas.quest.igneous.desc.igneous_zinc_alloy": "Where the Create Mod starts is in this little metal object. You can create it by combing igneous rocks and zinc!",
 	"gravitas.quest.igneous.desc.shaft": "The Shaft will be your most useful way of moving Kinetic Energy and creating machines.",
@@ -290,7 +291,7 @@
 	"gravitas.quest.igneous.desc.mechanical_mixer": "The Mechanical Mixer is a machine that can be used for Brewing, Mixing, or Shapeless Crafting. You can make potions or booze with it. And crafting recipes that don't need a specific shape can be created with this. It needs a lot of speed to power!",
 	"gravitas.quest.igneous.desc.windmill": "The Windmill is a very useful machine for generating SU. Its SU is dependent on how big the windmill is. It needs atleast 8 windmill sails and can be as big as you want. Right click the Windmill Bearing to start it!",
 	
-
+	
 	"gravitas.quest.brass.brass_ingot": "Start to Brass Stage",
 	"gravitas.quest.brass.wrench": "The Main Tool: Wrench",
 	"gravitas.quest.brass.brass_hand": "Pointing is rude",
@@ -313,7 +314,7 @@
 	"gravitas.quest.brass.mechanical_harvester": "Harvester",
 	"gravitas.quest.brass.mechanical_saw": "Saw",
 	"gravitas.quest.brass.mechanical_drill": "Drill",
-
+	
 	
 	"gravitas.quest.brass.desc.brass_ingot": "Brass will be needed for the next steps of Create. It's made by combining copper dust and zinc dust to get brass dust which can be smelted for brass ingots.",
 	"gravitas.quest.brass.desc.wrench": "The Wrench is the most important tool for Create and will be necessary. It's used for configuring your machines.",
@@ -338,7 +339,7 @@
 	"gravitas.quest.brass.desc.mechanical_saw": "The Saw can be used to either process items or cut down trees. If the bottom of the tree is broken by the saw the entire tree will fall. When items are processed through it, it can do the same as a stone cutter would.",
 	"gravitas.quest.brass.desc.mechanical_drill": "The Drill will break any block in its way when powered. Its breaking speed is dependent on the rotation speed.",
 	
-
+	
 	"gravitas.quest.create_copper.copper_ingot": "Start of Copper Stage",
 	"gravitas.quest.create_copper.fluid_pipe": "Pipes with an S",
 	"gravitas.quest.create_copper.copper_valve_handle": "Valve Handle",
@@ -354,7 +355,8 @@
 	"gravitas.quest.create_copper.copper_spool": "Copper Spool",
 	"gravitas.quest.create_copper.alternator": "Making FE or Kinetic Energy",
 	"gravitas.quest.create_copper.copper_wires": "Moving FE with Create",
-
+	
+	
 	"gravitas.quest.create_copper.desc.copper_ingot": "Copper is our main metal for all things liquid and electricity within Create.",
 	"gravitas.quest.create_copper.desc.fluid_pipe": "This will be your main source of moving fluids. Can be edited with a Wrench to give a window.",
 	"gravitas.quest.create_copper.desc.copper_valve_handle": "The Copper Valve Handle will be needed to use a Fluid Valve. It can also be used on Mechnical Bearings to move contaptions.",
@@ -371,7 +373,7 @@
 	"gravitas.quest.create_copper.desc.alternator": "These machines are your portal between Forge Energy (FE) and Create kinetic energy. The Alternator creates FE from kinetic energy and the Electric Motor uses FE to make kinetic energy.",
 	"gravitas.quest.create_copper.desc.copper_wires": "Wires are how you move FE to Create machines. Connectors are how you actually get the FE to the machines.",
 	
-
+	
 	"gravitas.quest.rails.tracks": "Train Tracks",
 	"gravitas.quest.rails.wide_tracks": "Wide Train Tracks",
 	"gravitas.quest.rails.narrow_tracks": "Narrow Train Tracks",
@@ -392,7 +394,7 @@
 	"gravitas.quest.rails.conductor_whistle": "Conductor Whistle",
 	"gravitas.quest.rails.remote_lens": "A second set of eyes",
 	"gravitas.quest.rails.train_schedule": "Directing the Conductors",
-
+	
 	
 	"gravitas.quest.rails.desc.tracks": "The place it all starts, tracks. You'll need Train Tracks to actually use and run trains. Standard tracks can be used with most Bogeys. Careful with corners and inclines!",
 	"gravitas.quest.rails.desc.wide_tracks": "The Wide Tracks can only be used by some Train Contraptions. Only the Standard: Invisible, Standard, and Comically Large can be used on Wide Tracks. Wide Tracks are made by cutting a normal track with a saw, then deploying a slab onto it, and finally pressing it.",
@@ -414,7 +416,8 @@
 	"gravitas.quest.rails.desc.conductor_whistle": "It's a whistle.",
 	"gravitas.quest.rails.desc.remote_lens": "If you like security cameras you'll love this. By giving a Conductor Engineers Goggles they'll wear it, and then you can bind the Remote Lens to them by right clicking. Then anytime anywhere you can rightclick with the Remote Lens to see what the Conductor is seeing.",
 	"gravitas.quest.rails.desc.train_schedule": "The Train Schedule is good for all non-human Conductors. When given to whatever is on the seat they will follow whatever told (and given a cool hat!).",
-
+	
+	
 	"gravitas.quest.new_age.crafts": "Complete Crafts and Additions",
 	"gravitas.quest.new_age.connector": "Moving Energy with New Age",
 	"gravitas.quest.new_age.magnetite": "Magnetite Block",
@@ -427,10 +430,6 @@
 	"gravitas.quest.new_age.redstone_magnet": "Redstone Magnet",
 	"gravitas.quest.new_age.layered_magnet": "Layered Magnet",
 	"gravitas.quest.new_age.fluxuated_magnetite": "Fluxuated Magnetite",
-	"gravitas.quest.new_age.netherite_magnet": "Netherite Magnet",
-	
-	
-
 	"gravitas.quest.new_age.netherite_magnet": "Netherite Magnet",
 	"gravitas.quest.new_age.heat": "Is it hot in here?",
 	"gravitas.quest.new_age.heat_pipe": "Heat Pipe",
@@ -449,6 +448,68 @@
 	"gravitas.chapters.13.": "Simple Transportation",
 	"gravitas.chapters.14.": "Advanced Transportation",
 	"gravitas.chapters.15.": "RailCraft",
+	
+	
+	"gravitas.quest.simple_transportation.carts": "On the ground: Astikor Carts",
+	"gravitas.quest.simple_transportation.animal": "Animal Carts",
+	"gravitas.quest.simple_transportation.supply": "A Moving Chest?",
+	"gravitas.quest.simple_transportation.plow": "Plow",
+	"gravitas.quest.simple_transportation.kayak": "On the water: Kayaks",
+	"gravitas.quest.simple_transportation.paddles": "A good arm workout",
+	"gravitas.quest.simple_transportation.tools": "Tools necessary for all buccaneers",
+	"gravitas.quest.simple_transportation.hang_glider": "In the air: Hang Gliders",
+	"gravitas.quest.simple_transportation.reinforced": "A better Hang Glider?",
+	
+	
+	"gravitas.quest.simple_transportation.desc.carts": "Astikor Carts is a nice little mod added to help you out in the early game. They can either be used by you or with a horse. To equip a cart you need to look at the handles while pressing the buttton (default is R make sure to change it because R also reloads shaders). To equip the cart to a horse, ride the horse then do the same you'd do to equip the cart.",
+	"gravitas.quest.simple_transportation.desc.animal": "The Animal Cart is pretty simple, it holds animals. It can hold 2 small animals or 1 big animal or hold players.",
+	"gravitas.quest.simple_transportation.desc.supply": "The Supply Cart is like the title suggests, a moving chest. It has the same storage as a double chest and to access the storage you need to shift right click the cart. Just right clicking the cart will let you ride on the back of it.",
+	"gravitas.quest.simple_transportation.desc.plow": "The Plow was the most confusing to me, but it's not that hard to understand with a guide. To use the Plow you'll need to shift right click the back to give it tools. Hoes for making farmland, shovels for making paths. Then right click it to set the plow arms down. And finally use it like the other carts to work it!",
+	"gravitas.quest.simple_transportation.desc.kayak": "Kayaks are a great way for moving with water, and much more fun than stinky boats! They move pretty slow by themselves but with some paddles we can change that.",
+	"gravitas.quest.simple_transportation.desc.paddles": "There are 2 paddles you can use with the kayaks: the canoe paddle and the kayak paddle. (Sorry there isn't any canoes, only kayaks). The Canoe paddle gets the kayak to the same speed as a regular boat. While the Kayak Paddle makes you faster than a normal boat. To use them you just need to have them in your hands while in the Kayak.",
+	"gravitas.quest.simple_transportation.desc.tools": "These tools will be helpful to all wanna be pirates. The Sextant shows your latitude, how many degrees north or south you are. The Navigators Timepiece shows your longitude, how many degrees east or west you are. And the Barometer shows your altitude, how much higher or below you are to sea level (Y=60).",
+	"gravitas.quest.simple_transportation.desc.hang_glider": "Welcome to Hangliders! The first one you'll make is just the normal Hanglider. By combing 2 Hanglider Wings and a Hanglider Frame you'll make your very own Hanglider. Use it by right clicking with it to activate it. Now whenever your off the ground you'll glide.",
+	"gravitas.quest.simple_transportation.desc.reinforced": "By combining a Hanglider and Elytra you'll make a Reinforced Hanglider. More Durability and slightly faster (don't quote me on that). Enjoy your gliding! Also gliding doesn't get you kicked for flying.",
+	
+	
+	"gravitas.quest.adv_transportation.sail": "On the Water: Small Ships",
+	"gravitas.quest.adv_transportation.cog": "Cog (Small Ship)",
+	"gravitas.quest.adv_transportation.brigg": "Brigg (Big Ship)",
+	"gravitas.quest.adv_transportation.galley": "Galley (Viking Ship)",
+	"gravitas.quest.adv_transportation.cannon": "These Ships get guns?",
+	"gravitas.quest.adv_transportation.workbench": "In the air: Simple Planes",
+	"gravitas.quest.adv_transportation.energy": "Powering your Plane",
+	"gravitas.quest.adv_transportation.furnace": "Furnace Engine",
+	"gravitas.quest.adv_transportation.electric": "Electric Engine",
+	"gravitas.quest.adv_transportation.liquid": "Liquid Engine",
+	"gravitas.quest.adv_transportation.flying_things": "Flying Things",
+	"gravitas.quest.adv_transportation.small": "Small Planes",
+	"gravitas.quest.adv_transportation.big": "Big Planes",
+	"gravitas.quest.adv_transportation.heli": "Helicopter",
+	"gravitas.quest.adv_transportation.upgrades": "Upgrading your planes",
+	"gravitas.quest.adv_transportation.armor": "Armor and Solar Panels",
+	"gravitas.quest.adv_transportation.extras": "Floaty Beddings and Folding Upgrade",
+	"gravitas.quest.adv_transportation.shooting": "Shooter Upgrade and Rocket Boosts",
+	
+	
+	"gravitas.quest.adv_transportation.desc.sail": "Welcome to Small Ships! Before you start sailing the 7 seas you'll need to know how to operate these ships. They're placed like regular boats and you get in them just the same. To start moving them you'll need to use the Sails (default keybind is R I recommend changing that}. They move by the wind and by using W key the sail comes out more and your ship goes faster. S does the opposite. They also have storage which can be Shift Rightclicked from out of it or pressing E while in it.",
+	"gravitas.quest.adv_transportation.desc.cog": "The Cog is the smallest ship. It works the same as the others but only goes to 32km/h. It can hold 4 cannons and I'm not sure how many people. I do these quests in singleplayer.",
+	"gravitas.quest.adv_transportation.desc.brigg": "The Brigg is the biggest and fastest ship. It can go up to 37km/h and holds 6 cannons. No more storage than the other ships though.",
+	"gravitas.quest.adv_transportation.desc.galley": "The Galley is easily the coolest ship. It is the same speed as a Cog and has the same storage as the others. It only holds 2 cannons but that's okay as it has cool oars. Don't worry you don't need to manually row they do it themselves.",
+	"gravitas.quest.adv_transportation.desc.cannon": "To fight other ships you'll need Cannons! Right click the Cannons on the ship to add them. Then put Cannon Balls into the ship Storage. To shoot look at the cannons direction and press space to fire!",
+	"gravitas.quest.adv_transportation.desc.workbench": "Simple Planes is definitley the most fun transportation mod and it all starts with the Plane Workbench. You'll need it to make your planes and helicopters.",
+	"gravitas.quest.adv_transportation.desc.energy": "Planes don't fly on their own, they need propellers. To make them propellers move you'll need energy and Simple Planes has 3 different ways of powering your planes. Go into your plane, select the engine you want to use, and press X.",
+	"gravitas.quest.adv_transportation.desc.furnace": "The Furnace Engine allows you to power your Plane with items that can power a furnace like coal, charcoal,or wood. It's a little old school but it works!",
+	"gravitas.quest.adv_transportation.desc.electric": "The Electric Engine doesn't power the Plane but rather allows the Charging Station to power it. The Charging Station can hold 1.5KFE and the Plane will hold 1.5MFE.",
+	"gravitas.quest.adv_transportation.desc.liquid": "The Liquid Engine uses liquid fuels to power the Planes. Right now it just uses Lava but that'll be changed.",
+	"gravitas.quest.adv_transportation.desc.flying_things": "The reason you are here, the planes and helicopter! Once the Plane is powered you will use the Up Arrow Key to start and go forward. The Arrow Keys move the Plane and WASD change the direction. Careful landing as too hard of a landing will blow it up.",
+	"gravitas.quest.adv_transportation.desc.small": "The Plane is the most basic flying machine. It has one seat on default and 1 propeller in the front. it can be made of any wood.",
+	"gravitas.quest.adv_transportation.desc.big": "The Large Plane is the bigger and better version of the normal Plane. It has 2 seats and 2 propellers. It has the same upgrades as the normal Plane though.",
+	"gravitas.quest.adv_transportation.desc.heli": "The Helicopter is a little different. When you use the Up Arrow to start you might notice only the propellers work when doing so. To get the Heli to move you need to hold space to go up. Once in the air you can use WASD to move the Helicopter. With S bringing the Heli down.",
+	"gravitas.quest.adv_transportation.desc.upgrades": "Simple Planes doesn't end there, of course there's upgrades! There are upgrades added via the mod and you can add some default minecraft items to add to your planes. Like Banners, chests, and TNT. To add any upgrades just right click them onto the planes.",
+	"gravitas.quest.adv_transportation.desc.armor": "The basic upgrades are Armor Plates and Solar Panels. Armor Panels help protect the plane by giving it more durability. It does not protect against plane crashes though. Solar Panels help give the Planes more Energy. Only works with Electric Engine.",
+	"gravitas.quest.adv_transportation.desc.extras": "The Floaty Bedding helps so your plane can safely land on water. By themselves they aren't too bouant. The Folding Upgrade makes it so you can easily add your plane to your inventory.",
+	"gravitas.quest.adv_transportation.desc.shooting": "Shooting upgrade allowsa your plane to fight well pretty much anything. Add it to your plane then press X to add arrows to its inventory. Then when flying left click to fire. Rocket Boosters help your plane to fly faster!",
 	
 	
 	"gravitas.quest.railcraft.rail": "RailCraft!",
