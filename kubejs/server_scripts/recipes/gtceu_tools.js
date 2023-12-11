@@ -15,7 +15,7 @@ const gtMortars = [
   {
     id: 'invar',
     tier: 3,
-    double: 'tfc:metal/double_ingot/bronze'
+    double: 'gregitas:double_invar_ingot'
   },
   {
     id: 'steel',
@@ -61,7 +61,7 @@ const gtceuToolsTFC = [
     id: 'invar',
     fluid: 'gtceu:invar',
     tier: 3,
-    double: 'tfc:metal/double_ingot/bronze'
+    double: 'gregitas:double_invar_ingot'
   },
   {
     id: 'sterling_silver',
@@ -136,7 +136,7 @@ const gtceuToolsGT = [
     id: 'invar',
     fluid: 'gtceu:invar',
     tier: 3,
-    double: 'tfc:metal/double_ingot/bronze'
+    double: 'gregitas:double_invar_ingot'
   },
   {
     id: 'sterling_silver',
