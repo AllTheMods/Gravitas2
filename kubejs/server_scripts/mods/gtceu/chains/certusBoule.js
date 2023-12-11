@@ -23,7 +23,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.gtceu.chemical_reactor("dichlorocertane")
         .inputFluids('gtceu:trichlorocertane 2000')
         .outputFluids('gtceu:dichlorocertane 1000')
-        .itemOutputs('1x gtceu:certus_gem') // it was 1x gtceu:polycertus_gem, certus_gem as placeholder so it don't crash
+        .itemOutputs('1x gtceu:certus_gem')
         .EUt(MV).duration(40)
 
     event.recipes.gtceu.chemical_reactor("chlorocertane")

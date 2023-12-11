@@ -101,4 +101,5 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
             event.add('tfc:prospectable', [`gtceu:${stone}_${ore}_ore`])
     })
   })
+  event.add("tfc:blast_furnace_insulation", ["gtceu:firebricks"])
 }

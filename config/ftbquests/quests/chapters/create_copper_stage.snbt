@@ -143,12 +143,11 @@
 		{
 			dependencies: ["31C52FC411A15844"]
 			description: ["{gravitas.quest.create_copper.desc.spout}"]
-			hide_text_until_complete: false
 			id: "04DB900EDD1FFFF9"
 			rewards: [{
-				id: "2834EA07B63CA180"
-				type: "xp_levels"
-				xp_levels: 5
+				id: "5A933DD4E1B0EA6F"
+				item: "tfc:wooden_bucket"
+				type: "item"
 			}]
 			tasks: [{
 				id: "0E365F577185F5BF"
@@ -164,8 +163,8 @@
 			description: ["{gravitas.quest.create_copper.desc.item_drain}"]
 			id: "0826086F14498A9E"
 			rewards: [{
-				id: "05D319ED996582A0"
-				item: "create:fluid_pipe"
+				id: "44EFEF4D85F3A91E"
+				item: "tfc:wooden_bucket"
 				type: "item"
 			}]
 			tasks: [{

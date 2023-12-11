@@ -15,12 +15,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Welcome to Hangliders! The first one you'll make is just the normal Hanglider. By combing 2 Hanglider Wings and a Hanglider Frame you'll make your very own Hanglider. Use it by right clicking with it to activate it. Now whenever your off the ground you'll glide."]
+			description: ["{gravitas.quest.simple_transportation.desc.hang_glider}"]
 			id: "30B2B1CEB12737B1"
 			rewards: [{
-				id: "39D6DE4C5D173100"
+				id: "4211FC0B7CF431CA"
 				type: "xp_levels"
-				xp_levels: 10
+				xp_levels: 5
 			}]
 			tasks: [{
 				id: "22AB22945F2AD0C9"
@@ -33,18 +33,18 @@
 				}
 				type: "item"
 			}]
-			title: "In the Air: Hang Gliders"
+			title: "{gravitas.quest.simple_transportation.hang_glider}"
 			x: 10.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["30B2B1CEB12737B1"]
-			description: ["By combining a Hanglider and Elytra you'll make a Reinforced Hanglider. More Durability and slightly faster (don't quote me on that). Enjoy your gliding! Also gliding doesn't get you kicked for flying."]
+			description: ["{gravitas.quest.simple_transportation.desc.reinforced}"]
 			id: "216A514F3CB3B5DB"
 			rewards: [{
-				id: "0406B34B0D3EFE58"
+				id: "070DAD81B947F787"
 				type: "xp_levels"
-				xp_levels: 20
+				xp_levels: 10
 			}]
 			tasks: [{
 				id: "2097E67794BA916F"
@@ -57,67 +57,114 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.simple_transportation.reinforced}"
 			x: 10.0d
 			y: 0.0d
 		}
 		{
+			description: ["{gravitas.quest.simple_transportation.desc.carts}"]
 			id: "2C14B2E5050FBD65"
+			rewards: [{
+				count: 3
+				id: "2874056F507EAB2D"
+				item: "astikorcarts:wheel"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6F0369C255FAE37F"
 				item: "astikorcarts:wheel"
 				type: "item"
 			}]
-			title: "On the ground: Astikor Carts"
+			title: "{gravitas.quest.simple_transportation.carts}"
 			x: 5.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["2C14B2E5050FBD65"]
+			description: ["{gravitas.quest.simple_transportation.desc.animal}"]
 			id: "69F58BED11E0E580"
+			rewards: [{
+				id: "051615542F9D609A"
+				item: "minecraft:lead"
+				type: "item"
+			}]
 			tasks: [{
 				id: "074FD87445BF243C"
 				item: "astikorcarts:animal_cart"
 				type: "item"
 			}]
+			title: "{gravitas.quest.simple_transportation.animal}"
 			x: 4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["2C14B2E5050FBD65"]
+			description: ["{gravitas.quest.simple_transportation.desc.supply}"]
 			id: "4F9BA390A628FFFD"
+			rewards: [{
+				id: "628817255C71CDFE"
+				item: "tfc:wood/chest/oak"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5C83BB19E829411F"
 				item: "astikorcarts:supply_cart"
 				type: "item"
 			}]
+			title: "{gravitas.quest.simple_transportation.supply}"
 			x: 5.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["2C14B2E5050FBD65"]
+			description: ["{gravitas.quest.simple_transportation.desc.plow}"]
 			id: "78B50A4EBDF90621"
+			rewards: [{
+				id: "02F047AA01494B0B"
+				item: {
+					Count: 1b
+					id: "tfc:stone/hoe/sedimentary"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "54D5EFB3E284BB33"
 				item: "astikorcarts:plow"
 				type: "item"
 			}]
+			title: "{gravitas.quest.simple_transportation.plow}"
 			x: 6.0d
 			y: 0.0d
 		}
 		{
+			description: ["{gravitas.quest.simple_transportation.desc.kayak}"]
 			id: "7CD5D8B39710B37F"
+			rewards: [{
+				id: "45F82887BF5FE987"
+				item: "tfc:wood/boat/oak"
+				type: "item"
+			}]
 			tasks: [{
 				id: "4D2ADB5BAD37F632"
 				item: "firmaciv:kayak"
 				type: "item"
 			}]
-			title: "On the water: Kayaks"
+			title: "{gravitas.quest.simple_transportation.kayak}"
 			x: 8.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["7CD5D8B39710B37F"]
+			description: ["{gravitas.quest.simple_transportation.desc.paddles}"]
 			id: "03980D70A4206A85"
+			rewards: [{
+				id: "5C5C1D341F60BB16"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
 			tasks: [{
 				id: "397BCE88949AEF9F"
 				item: {
@@ -138,12 +185,19 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.simple_transportation.paddles}"
 			x: 7.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7CD5D8B39710B37F"]
+			description: ["{gravitas.quest.simple_transportation.desc.tools}"]
 			id: "298CA22763986127"
+			rewards: [{
+				id: "2850841E469753BB"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
 			tasks: [{
 				id: "70CBBD531DED0AE8"
 				item: {
@@ -168,6 +222,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.simple_transportation.tools}"
 			x: 8.5d
 			y: 0.0d
 		}

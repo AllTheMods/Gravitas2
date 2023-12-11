@@ -74,4 +74,7 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     //ATM
     event.hide("allthemodium:teleport_pad")
+
+    //Railcraft
+    event.hide(`/^railcraft:.*coke.*/`)
 }

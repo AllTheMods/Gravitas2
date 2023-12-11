@@ -18,7 +18,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shaped/screw_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
-
+  event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
+  event.remove({ id: "gtceu:shaped/casing_coke_bricks"})
+  event.remove({ id: "gtceu:smelting/fireclay_brick"})
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
 
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
@@ -145,6 +147,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
+  event.remove({ mod: "railcraft", id: `/^railcraft:.*coke.*/`})
 
   //Woodencog
   event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog" })

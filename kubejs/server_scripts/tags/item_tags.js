@@ -242,7 +242,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   tfcDusts.forEach((dust) => {
     event.add(`forge:dusts/${dust}`, `tfc:powder/${dust}`)
   })
-
+  event.add("tfc:pickaxe_tier6", ["tfc:metal/pickaxe/red_steel", "tfc:metal/pickaxe/blue_steel"])
   event.get("smallships:cogs").removeAll()
   tfcSaplingz.forEach((wood) => {
     event.add("smallships:cogs", `tfships:${wood}_cog`)
