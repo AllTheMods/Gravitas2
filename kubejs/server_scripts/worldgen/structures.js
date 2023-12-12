@@ -179,6 +179,7 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("repurposed_structures") ||
     event.id.startsWith("apotheosis") ||
     event.id.startsWith("waystones") ||
+    event.id.startsWith("immersiveengineering") ||
     event.id.startsWith("ae2")
   ) {
     event.forEachPalettes((palette) => {
