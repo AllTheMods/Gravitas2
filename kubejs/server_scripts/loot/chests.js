@@ -50,6 +50,7 @@ const chestBanList = [
   "minecraft:furnace_minecart",
   "minecraft:netherite_hoe",
   "minecraft:netherite_ingot",
+  "minecraft:stone",
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
