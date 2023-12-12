@@ -71,8 +71,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
-  event.replaceInput({ output: "create:cogwheel" }, "#minecraft:planks", "#forge:treated_wood")
-  event.replaceInput({ output: "create:large_cogwheel" }, "#minecraft:planks", "#forge:treated_wood")
+  event.replaceInput({ mod: "create" }, "#minecraft:planks", "#forge:treated_wood")
+
 
   //Functional Storage
   event.replaceInput(

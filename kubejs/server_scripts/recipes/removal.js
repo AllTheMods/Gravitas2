@@ -71,9 +71,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
                 id: 'gtceu:forge_hammer/sandstone_to_sand'
             },
             {
-                output: 'minecraft:gravel'
-            },
-            {
                 id: 'gtceu:alloy_smelter/alloy_smelt_glass_tube'
             }
         ]
