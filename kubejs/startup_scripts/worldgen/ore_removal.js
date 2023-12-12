@@ -25,7 +25,8 @@ WorldgenEvents.remove(event => {
       "alltheores:nickel_ore",
       "alltheores:uranium_ore",
       "alltheores:iridium_ore",
-      "alltheores:osmium_ore"
+      "alltheores:osmium_ore",
+      "allthemodium:vibranium_ore"
     ];
   });
 });

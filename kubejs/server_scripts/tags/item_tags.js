@@ -185,7 +185,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add('forge:tools/saws', ["#tfc:saws"])
 
   event.add("forge:tools/hammers", "#tfc:hammers")
-  
+
   event.add('forge:tools/knives', ["#tfc:knives"])
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
@@ -214,6 +214,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add(`forge:sheets/cast_iron`, `gtceu:iron_plate`)
   event.add(`forge:double_sheets/cast_iron`, `gtceu:iron_double_plate`)
+
   event.add("firmalife:sweetener", "#tfc:sweetener")
   event.add("forge:treated_wood", "firmalife:treated_wood")
 

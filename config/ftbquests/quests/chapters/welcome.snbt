@@ -10,13 +10,13 @@
 			click: ""
 			corner: true
 			dev: false
-			height: 5.0d
+			height: 8.0d
 			hover: [ ]
-			image: "packmenu:textures/gui/logo.png"
-			rotation: 8.0d
-			width: 5.0d
+			image: "atm:textures/logo.png"
+			rotation: 0.0d
+			width: 14.222222222222221d
 			x: 0.0d
-			y: -4.5d
+			y: -5.0d
 		}
 		{
 			click: ""

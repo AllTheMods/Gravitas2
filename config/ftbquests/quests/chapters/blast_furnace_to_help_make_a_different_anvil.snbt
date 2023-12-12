@@ -45,14 +45,14 @@
 								ticks: 0L
 							}
 						}
-						id: "tfc:metal/sheet/wrought_iron"
+						id: "gtceu:wrought_iron_plate"
 					}
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "38BBB45AE5DA35CF"
-					item: "tfc:fire_bricks"
+					item: "gtceu:firebricks"
 					type: "item"
 				}
 				{
@@ -131,6 +131,25 @@
 			dependencies: ["19C25C233BCCF44C"]
 			description: ["{gravitas.quest.steel.desc.steel_anvil}"]
 			id: "568F95FC508BA84A"
+			rewards: [
+				{
+					id: "19FC350DD0B3E73E"
+					item: "integratedterminals:part_terminal_storage"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1B012F8BBA00D9A8"
+					item: "integrateddynamics:cable"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "5257E2C11DDFE580"
+					item: "integratedtunnels:part_interface_item"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "742BF1EDAA186BEE"
 				item: {
@@ -389,10 +408,17 @@
 				id: "117EA80A47637FFD"
 				item: {
 					Count: 1b
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:kelp"
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 90000L
+							traits: [ ]
+						}
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "tfc:food/dried_kelp"
 				}
 				title: "Any #forge:kelp"
 				type: "item"
@@ -409,13 +435,7 @@
 			tasks: [
 				{
 					id: "07ABA221C4DFF0AF"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:electron_tube"
-						}
-					}
+					item: "create:electron_tube"
 					title: "Any #forge:electron_tube"
 					type: "item"
 				}
@@ -488,8 +508,8 @@
 					type: "item"
 				}
 				{
-					id: "2235EB33A258C83A"
-					item: "thermal:sawdust"
+					id: "683A69E07E9C5A80"
+					item: "gtceu:wood_dust"
 					type: "item"
 				}
 			]
