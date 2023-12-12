@@ -226,6 +226,26 @@
 			x: 8.5d
 			y: 0.0d
 		}
+		{
+			id: "3B59D8A8DEBF97BF"
+			rewards: [{
+				id: "38A716176FC235C0"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "5238428C11650ADB"
+				observe_type: 6
+				optional_task: true
+				timer: 0L
+				title: "Build a Firma Civilization Canoe"
+				to_observe: "gravitas:canoes"
+				type: "observation"
+			}]
+			title: "DugOut Canoes"
+			x: 8.0d
+			y: 1.5d
+		}
 	]
 	title: "{gravitas.chapters.13.}"
 }
