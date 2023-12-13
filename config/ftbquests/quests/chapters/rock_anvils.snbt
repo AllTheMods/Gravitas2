@@ -408,7 +408,7 @@
 						Count: 1b
 						id: "itemfilters:tag"
 						tag: {
-							value: "tfc:stone_javelins"
+							value: "tfc:javelins"
 						}
 					}
 					title: "Stone Javelin"
