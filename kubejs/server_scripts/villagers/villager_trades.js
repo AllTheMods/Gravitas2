@@ -76,7 +76,7 @@ const replaceTrades = ((event) => {
     event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/sapphire",1,4),TradeItem.of("tfc:gem/opal",1,4)], TradeItem.of("firmalife:plant/oregano",6,12));
     event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/sapphire",1,4),TradeItem.of("tfc:gem/opal",1,4)], TradeItem.of("firmalife:plant/pimento",6,12));
     event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/sapphire",1,4),TradeItem.of("tfc:gem/opal",1,4)], TradeItem.of("firmalife:plant/cumin",6,12));
-    event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/opal",1,4),TradeItem.of("tfc:gem/emerald",1,4)], TradeItem.of("tfc:food/tofu",6,12));
+    event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/opal",1,4),TradeItem.of("tfc:gem/emerald",1,4)], TradeItem.of("firmalife:food/tofu",6,12));
     event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/emerald",1,4),TradeItem.of("tfc:gem/diamond",1,4)], TradeItem.of("firmalife:plant/cocoa_sapling",1,2));
     event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/emerald",1,4),TradeItem.of("tfc:gem/diamond",1,4)], TradeItem.of("firmalife:plant/fig_sapling",1,2));
     event.addTrade("minecraft:farmer",5, [TradeItem.of("tfc:gem/emerald",1,4),TradeItem.of("tfc:gem/diamond",1,4)], TradeItem.of("firmalife:plant/pineapple_bush",1,2));
@@ -143,7 +143,6 @@ const replaceTrades = ((event) => {
     event.addTrade("minecraft:toolsmith",5, [TradeItem.of("tfc:gem/emerald",2,6),TradeItem.of("tfc:metal/ingot/red_steel",2,2)], TradeItem.of("tfc:metal/fish_hook/red_steel",1,1));
 
 
-
     /* Butcher */
     event.addTrade("minecraft:butcher",1, [TradeItem.of("tfc:gem/pyrite",1,2),TradeItem.of("tfc:gem/topaz",1,2)], TradeItem.of("tfc:food/pork",2,4));
     event.addTrade("minecraft:butcher",1, [TradeItem.of("tfc:gem/pyrite",1,2),TradeItem.of("tfc:gem/topaz",1,2)], TradeItem.of("tfc:food/chicken",2,4));
@@ -174,5 +173,6 @@ const replaceTrades = ((event) => {
     event.addTrade("minecraft:butcher",5, [TradeItem.of("tfc:gem/opal",1,1),TradeItem.of("tfc:gem/sapphire",1,2)], TradeItem.of("tfc:food/cooked_pheasant",6,20));
     event.addTrade("minecraft:butcher",5, [TradeItem.of("tfc:gem/opal",1,1),TradeItem.of("tfc:gem/sapphire",1,2)], TradeItem.of("tfc:food/cooked_beef",6,20));
     event.addTrade("minecraft:butcher",5, [TradeItem.of("tfc:gem/opal",1,1),TradeItem.of("tfc:gem/sapphire",1,2)], TradeItem.of("tfc:food/cooked_turkey",6,20));
+
 
 })
