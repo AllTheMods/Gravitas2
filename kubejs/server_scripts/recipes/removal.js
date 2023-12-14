@@ -25,6 +25,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
+  event.remove({ id: "gtceu:shaped/treated_wood_planks"})
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -195,6 +196,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^immersiveengineering:crafting\/shovel_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
+
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
@@ -217,4 +220,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
       }
     ]
   )
+  //Vanilla
+  event.rempve({ output: "minecraft:dirt"})
+  event.rempve({ output: "minecraft:coarse_dirt"})
+  event.rempve({ output: "minecraft:gravel"})
+  event.rempve({ output: "minecraft:mud"})
 }

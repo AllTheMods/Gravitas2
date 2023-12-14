@@ -71,6 +71,7 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:coal_coke")
     event.hide("immersiveengineering:dust_coke")
     event.hide("immersiveengineering:coke")
+    event.hide(`/^immersiveengineering:.*treated_.*/`)
 
     //ATM
     event.hide("allthemodium:teleport_pad")
