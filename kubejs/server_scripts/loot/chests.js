@@ -54,7 +54,9 @@ const chestBanList = [
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
-  "railcraft:steel_plate"
+  "railcraft:steel_plate",
+  "immersiveengineering:seed"
+
 ]
 
 const chestReplacementMap = {

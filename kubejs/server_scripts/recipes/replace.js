@@ -105,4 +105,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Firebricks/Cokebricks etc
   event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
+
+  //IE
+  event.replaceInput({ mod: "immersiveengineering"}, "immersiveengineering:hemp_fiber", "minecraft:string")
+
 }

@@ -191,11 +191,13 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
 
   event.remove({ id: "immersiveengineering:crafting/survey_tools"})
+  event.remove({ id: "immersiveengineering:crafting/string"})
   event.remove({ id: `/^immersiveengineering:crafting\/pickaxe_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/axe_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/shovel_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
 
 
@@ -221,8 +223,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     ]
   )
   //Vanilla
-  event.rempve({ output: "minecraft:dirt"})
-  event.rempve({ output: "minecraft:coarse_dirt"})
-  event.rempve({ output: "minecraft:gravel"})
-  event.rempve({ output: "minecraft:mud"})
+  event.remove({ output: "minecraft:dirt"})
+  event.remove({ output: "minecraft:coarse_dirt"})
+  event.remove({ output: "minecraft:gravel"})
+  event.remove({ output: "minecraft:mud"})
 }

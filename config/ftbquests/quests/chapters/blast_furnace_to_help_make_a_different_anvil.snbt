@@ -526,42 +526,46 @@
 			dependencies: ["3047ACD6E16944B8"]
 			id: "376F1F47067E2622"
 			tasks: [{
-				icon: "immersiveengineering:metal_press"
+				icon: "advancedtfctech:beamhouse"
 				id: "67986CF20EE499BB"
 				observe_type: 0
 				timer: 0L
 				title: "{gravitas.quest.steel.metal_press}"
-				to_observe: "immersiveengineering:metal_press"
+				to_observe: "advancedtfctech:beamhouse"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.beam_house}"
 			x: 4.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
+			icon: "advancedtfctech:power_loom"
 			id: "5A248CD0C63BC119"
 			tasks: [{
-				icon: "immersiveengineering:crusher"
+				icon: "advancedtfctech:power_loom"
 				id: "2F4F2ED865610043"
 				observe_type: 0
 				timer: 0L
 				title: "{gravitas.quest.steel.crusher}"
-				to_observe: "immersiveengineering:crusher"
+				to_observe: "advancedtfctech:power_loom"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.power_loom}"
 			x: 5.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
+			icon: "advancedtfctech:thresher"
 			id: "6B15223880624B0B"
 			tasks: [{
-				icon: "immersiveengineering:squeezer"
+				icon: "advancedtfctech:thresher"
 				id: "1DCA8B804EADB662"
 				observe_type: 0
 				timer: 0L
-				title: "{gravitas.quest.steel.squeezer}"
-				to_observe: "immersiveengineering:squeezer"
+				title: "{gravitas.quest.steel.thresher}"
+				to_observe: "advancedtfctech:thresher"
 				type: "observation"
 			}]
 			x: 6.0d
@@ -571,14 +575,15 @@
 			dependencies: ["3047ACD6E16944B8"]
 			id: "04927E70A3D89ADD"
 			tasks: [{
-				icon: "immersiveengineering:fermenter"
+				icon: "advancedtfctech:grist_mill"
 				id: "6BBEC58C850E2FB4"
 				observe_type: 0
 				timer: 0L
 				title: "{gravitas.quest.steel.fermenter}"
-				to_observe: "immersiveengineering:fermenter"
+				to_observe: "advancedtfctech:grist_mill"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.grist_mill}"
 			x: 5.5d
 			y: 4.0d
 		}
@@ -592,40 +597,6 @@
 			}]
 			x: 4.5d
 			y: 2.5d
-		}
-		{
-			dependencies: ["376F1F47067E2622"]
-			id: "0EBCB470229F3207"
-			tasks: [
-				{
-					id: "2D61A5074B0012B9"
-					item: "immersiveengineering:mold_plate"
-					type: "item"
-				}
-				{
-					id: "7769B4E4D238BBA3"
-					item: "immersiveengineering:mold_gear"
-					type: "item"
-				}
-				{
-					id: "14250626FF4F97DD"
-					item: "immersiveengineering:mold_rod"
-					type: "item"
-				}
-				{
-					id: "781C3DF1D3A2EC11"
-					item: "immersiveengineering:mold_bullet_casing"
-					type: "item"
-				}
-				{
-					id: "0C2512130FB226F7"
-					item: "immersiveengineering:mold_wire"
-					type: "item"
-				}
-			]
-			title: "{gravitas.quest.bronze.press}"
-			x: 4.5d
-			y: -0.5d
 		}
 	]
 	title: "{gravitas.chapters.5.title}"

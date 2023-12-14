@@ -377,8 +377,8 @@
 			image: "atm:textures/questpics/welcome/signs/mutant_name.png"
 			rotation: 0.0d
 			width: 5.209677419354839d
-			x: -7.535714285714285d
-			y: 8.20923043351759d
+			x: -7.595238095238095d
+			y: 8.274706623993787d
 		}
 		{
 			click: ""
@@ -437,8 +437,8 @@
 			image: "atm:textures/questpics/welcome/signs/uncandango.png"
 			rotation: 0.0d
 			width: 3.4803149606299213d
-			x: -12.476190476190489d
-			y: 16.62589710018426d
+			x: -12.476190476190474d
+			y: 16.567563766850938d
 		}
 		{
 			click: ""
@@ -449,8 +449,8 @@
 			image: "atm:textures/questpics/welcome/signs/kurama.png"
 			rotation: 0.0d
 			width: 2.894230769230769d
-			x: -7.476190476190489d
-			y: 16.578278052565217d
+			x: -7.595238095238095d
+			y: 16.508039957327128d
 		}
 		{
 			click: ""
@@ -535,8 +535,6 @@
 				"In this modpack, Quests are optional. Mods are not gated behind completing any quests!"
 				""
 				"The individual questlines outside of the Main questline are meant to serve as mod guides. If you want to follow the progression, make sure to check out the Main Questline!"
-				""
-				"Most of the quests in the pack are also made by &2AlfredGG&r. Quests are hard work, so if you'd like to support him, you can click on his player image below!"
 			]
 			icon: "ftbquests:book"
 			id: "3708A4780ACEB34E"
