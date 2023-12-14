@@ -154,8 +154,8 @@
 			image: "ftbchunks:textures/waypoint_default.png"
 			rotation: 0.0d
 			width: 1.0d
-			x: 0.0d
-			y: 1.5d
+			x: -2.5d
+			y: -0.5d
 		}
 		{
 			click: ""
@@ -555,46 +555,6 @@
 			}]
 			title: "Quests"
 			x: 2.5d
-			y: -0.5d
-		}
-		{
-			description: [
-				"There are plenty of helpful commands within ATM. Here are a few:"
-				""
-				"&e/sethome&r (name of home) | Let's you set a home that you can teleport back to using /home (name). Example: /sethome farm - then teleport with /home farm"
-				""
-				"&e/spawn&r | This will teleport you to the spawn of your overworld."
-				""
-				"&e/rtp&r | \"Random Teleport\" will teleport you to a random location in the world."
-				""
-				"Note: These commands have cooldowns and limits. If you'd like to change them, you can edit the config file which can be found here:"
-				""
-				"- For Singleplayer | &osaves/(name of save)/serverconfig/ftbessentials.snbt&r"
-				""
-				"- For Servers | &oworld/serverconfig/ftbessentials.snbt&r"
-			]
-			icon: {
-				Count: 1b
-				id: "ftbquests:custom_icon"
-				tag: {
-					Icon: "ftbteams:textures/settings.png"
-				}
-			}
-			id: "7658C1C663394E85"
-			min_width: 350
-			rewards: [{
-				id: "5007C73E170C4FF6"
-				type: "xp"
-				xp: 10
-			}]
-			shape: "rsquare"
-			size: 1.5d
-			tasks: [{
-				id: "10A16F89D4AD238D"
-				title: "Useful Commands"
-				type: "checkmark"
-			}]
-			x: -2.5d
 			y: -0.5d
 		}
 		{

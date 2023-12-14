@@ -11,6 +11,18 @@
 		}
 	}
 	id: "068A7B40DE5F65C9"
+	images: [{
+		click: "custom:patchouli:tfc/firmaciv/canoe"
+		corner: false
+		dev: false
+		height: 1.0d
+		hover: ["Click For Info!"]
+		image: "firmaciv:item/canoe_with_paddle_icon"
+		rotation: 0.0d
+		width: 1.0d
+		x: 7.5d
+		y: 1.5d
+	}]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -225,6 +237,31 @@
 			title: "{gravitas.quest.simple_transportation.tools}"
 			x: 8.5d
 			y: 0.0d
+		}
+		{
+			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
+			id: "36731C807BA975C4"
+			rewards: [{
+				id: "6E5A2181FC8976AE"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					id: "62F4B9B589CEEA55"
+					item: "firmaciv:canoe_paddle"
+					type: "item"
+				}
+				{
+					advancement: "firmaciv:canoe"
+					criterion: ""
+					id: "2639ED3AE25EBD9E"
+					type: "advancement"
+				}
+			]
+			x: 8.5d
+			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.13.}"

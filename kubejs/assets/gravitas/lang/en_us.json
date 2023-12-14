@@ -14,6 +14,9 @@
     "gravitas.chapters.11.title": "Create Rails",
     "gravitas.chapters.12.title": "Create New Age",
 
+	"gravitas.chapters.group.2": "Navigation Aids",
+	"gravitas.shop.chapter.1": "Adventurers Pathfinding Area",
+
     "gravitas.quest.caveman.start_somewhere": "Gotta Start Somewhere!",
     "gravitas.quest.caveman.logpile": "Any #tfc:log_pile_logs",
     "gravitas.quest.caveman.pebbles": "Pebbles All Around",
@@ -470,7 +473,7 @@
 	"gravitas.quest.simple_transportation.desc.tools": "These tools will be helpful to all wanna be pirates. The Sextant shows your latitude, how many degrees north or south you are. The Navigators Timepiece shows your longitude, how many degrees east or west you are. And the Barometer shows your altitude, how much higher or below you are to sea level (Y=60).",
 	"gravitas.quest.simple_transportation.desc.hang_glider": "Welcome to Hangliders! The first one you'll make is just the normal Hanglider. By combing 2 Hanglider Wings and a Hanglider Frame you'll make your very own Hanglider. Use it by right clicking with it to activate it. Now whenever your off the ground you'll glide.",
 	"gravitas.quest.simple_transportation.desc.reinforced": "By combining a Hanglider and Elytra you'll make a Reinforced Hanglider. More Durability and slightly faster (don't quote me on that). Enjoy your gliding! Also gliding doesn't get you kicked for flying.",
-	
+	"gravitas.quest.simple_transportation.desc.dugout_canoe": "A Kayak is great for one person to quickly get around, but what if you want to bring stuff along? A canoe has space for storage or a friend!",
 	
 	"gravitas.quest.adv_transportation.sail": "On the Water: Small Ships",
 	"gravitas.quest.adv_transportation.cog": "Cog (Small Ship)",

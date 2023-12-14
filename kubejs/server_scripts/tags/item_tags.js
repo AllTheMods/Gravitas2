@@ -178,6 +178,7 @@ let tfcDusts = [
 ]
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
+  event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
   event.add('tfc:copper_pieces', ["tfc:ore/small_native_copper", "tfc:ore/small_malachite", "tfc:ore/small_tetrahedrite"])
   event.add('forge:thorium', ["gtceu:raw_thorium", "thoriumreactors:thorium", "create_new_age:thorium"])

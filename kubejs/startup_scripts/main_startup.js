@@ -1,4 +1,8 @@
 // priority 0
+StartupEvents.init((e) => {
+  if (!Platform.isClientEnvironment()) return
+  $CustomClickEvent.register($UtilsJS.makeFunctionProxy("startup", $EventActor, handleFTBCustomClick))
+})
 
 StartupEvents.registry("item", (event) => {
   registerItems(event)
@@ -48,3 +52,4 @@ ForgeEvents.onEvent(
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.PlayerEvent$Clone", (event) => {
   runsDeathPenalty(event)
 })
+
