@@ -53,3 +53,11 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.PlayerEvent$Clone", 
   runsDeathPenalty(event)
 })
 
+StartupEvents.recipeSchemaRegistry((event) => {
+  loadComponents(event)
+  registerTFCHeatingSchema(event)
+  registerTFCCastingSchema(event)
+  registerTFCAnvilSchema(event)
+  registerWoodencogFillingSchema(event)
+  registerCreateMixingSchema(event)
+})

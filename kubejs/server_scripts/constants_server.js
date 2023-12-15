@@ -7,6 +7,8 @@ const $FluidHelper = Java.loadClass("com.lowdragmc.lowdraglib.side.fluid.FluidHe
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition")
 const $CraftingComponent = Java.loadClass("com.gregtechceu.gtceu.data.recipe.CraftingComponent")
+const $Fluid = Java.loadClass("net.minecraft.world.level.material.Fluid")
+const $UnboundFluidStackJS = Java.loadClass("dev.latvian.mods.kubejs.fluid.UnboundFluidStackJS")
 
 let enderTC = [
   {
@@ -75,29 +77,54 @@ let enderTC = [
   }
 ]
 
-const meltMap = {
-  6: JsonIO.primitiveOf(9),
-  25: JsonIO.primitiveOf(36),
-  50: JsonIO.primitiveOf(72),
-  75: JsonIO.primitiveOf(108),
-  100: JsonIO.primitiveOf(JsonIO.parse("144")),
-  200: JsonIO.primitiveOf(JsonIO.parse("288")),
-  400: JsonIO.primitiveOf(576),
-  600: JsonIO.primitiveOf(864),
-  800: JsonIO.primitiveOf(1152),
-  1200: JsonIO.primitiveOf(1728),
-  1400: JsonIO.primitiveOf(2016),
-  10: JsonIO.primitiveOf(16),
-  15: JsonIO.primitiveOf(24),
-  35: JsonIO.primitiveOf(48),
-  20: JsonIO.primitiveOf(24),
-  30: JsonIO.primitiveOf(48),
-  90: JsonIO.primitiveOf(128),
-  60: JsonIO.primitiveOf(86),
-  40: JsonIO.primitiveOf(58),
-  70: JsonIO.primitiveOf(96)
+const getJsonPath = (/** @type {Internal.JsonElement} */ jsonElement, /** @type {string} */ path) => {
+  return path.split(".").reduce((acc, cur) => (acc != null ? acc.asJsonObject.get(cur) : null), jsonElement)
 }
 
-const getJsonPath = (/** @type {Internal.JsonElement} */jsonElement, /** @type {string} */ path) => {
-  return path.split(".").reduce((acc, cur) => (acc != null ? acc.asJsonObject.get(cur) : null), jsonElement)
+function unwrapEither(/** @type { Internal.Either } */ value) {
+  return value.left().orElseGet(() => value.right().get())
+}
+
+function unwrapMapBuilder(/** @type { Internal.RecipeComponentBuilderMap } */ mapBuilder) {
+  let map = Utils.newMap()
+  mapBuilder.entrySet().forEach((entry) => {
+    let val = unwrapValue(entry.getValue())
+    let key = entry.getKey().name
+    map.put(key, val)
+  })
+  return map
+}
+
+function unwrapArray(/** @type { Internal.ArrayList } */ array) {
+  let changed = false
+  let newArray = Utils.newList()
+  array.forEach((element) => {
+    let newElement = unwrapValue(element)
+    if (element != newElement || element.getClass() != newElement.getClass()) {
+      changed = true
+    }
+    newArray.push(newElement)
+  })
+  return changed ? newArray : array
+}
+
+function unwrapValue(value) {
+  if (value == null) return
+  let newValue = value
+  if (value.getClass().getSuperclass().simpleName == "Either") {
+    newValue = unwrapEither(value)
+  } else if (value.getClass().simpleName == "RecipeComponentBuilderMap") {
+    newValue = unwrapMapBuilder(value)
+  } else if (value.getClass().isArray()) {
+    newValue = unwrapArray(value)
+  } else if (value.getClass().isEnum()) {
+    newValue = value.toString().toLowerCase()
+  }
+  if (value == newValue && value.getClass() == newValue.getClass()) {
+    if (value instanceof InputItem) return value.toJson()
+    if (value instanceof OutputItem) return value.item.toJson()
+    if (value instanceof $Fluid) return value.arch$registryName()
+    return value
+  }
+  return unwrapValue(newValue)
 }
