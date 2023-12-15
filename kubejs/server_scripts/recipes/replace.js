@@ -107,6 +107,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
 
   //IE
-  event.replaceInput({ mod: "immersiveengineering"}, "immersiveengineering:hemp_fiber", "minecraft:string")
+  event.replaceInput({ mod: "immersiveengineering"}, "immersiveengineering:hemp_fiber", "tfc:jute_fiber")
 
 }
