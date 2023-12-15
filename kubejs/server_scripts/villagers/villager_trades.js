@@ -176,9 +176,10 @@ const replaceTrades = ((event) => {
 
     event.addTrade("minecraft:leatherworker",1, [TradeItem.of("tfc:gem/lapis_lazuli",4,6)], TradeItem.of("waterflasks:leather_flask",1,1));
     event.addTrade("minecraft:leatherworker",1, [TradeItem.of("tfc:gem/lapis_lazuli",4,6)], TradeItem.of("minecraft:leather",2,4));
+    event.addTrade("minecraft:leatherworker",1, [TradeItem.of("tfc:small_raw_hide",4,5)], TradeItem.of("tfc:gem/ruby",1,2));
 
     event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:gem/amethyst",2,4)], TradeItem.of("minecraft:leather_helmet",1,1));
-    event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:small_raw_hide",4,5)], TradeItem.of("tfc:gem/ruby",1,2));
+    event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:small_raw_hide",4,5)], TradeItem.of("tfc:gem/ruby",1,1));
     event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:gem/ruby",3,4)], TradeItem.of("tfcambiental:leather_apron",1,1));
 
     event.addTrade("minecraft:leatherworker",3, [TradeItem.of("tfc:gem/sapphire",2,6)], TradeItem.of("minecraft:leather_chestplate",1,1));
