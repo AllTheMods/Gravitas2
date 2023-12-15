@@ -172,5 +172,26 @@ const replaceTrades = ((event) => {
     event.addTrade("minecraft:butcher",5, [TradeItem.of("tfc:gem/opal",1,1),TradeItem.of("tfc:gem/sapphire",1,2)], TradeItem.of("tfc:food/cooked_beef",6,20));
     event.addTrade("minecraft:butcher",5, [TradeItem.of("tfc:gem/opal",1,1),TradeItem.of("tfc:gem/sapphire",1,2)], TradeItem.of("tfc:food/cooked_turkey",6,20));
 
+    /* Leatherworker */
+
+    event.addTrade("minecraft:leatherworker",1, [TradeItem.of("tfc:gem/lapis_lazuli",4,6)], TradeItem.of("waterflasks:leather_flask",1,1));
+    event.addTrade("minecraft:leatherworker",1, [TradeItem.of("tfc:gem/lapis_lazuli",4,6)], TradeItem.of("minecraft:leather",2,4));
+
+    event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:gem/amethyst",2,4)], TradeItem.of("minecraft:leather_helmet",1,1));
+    event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:small_raw_hide",4,5)], TradeItem.of("tfc:gem/ruby",1,2));
+    event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:gem/ruby",3,4)], TradeItem.of("tfcambiental:leather_apron",1,1));
+
+    event.addTrade("minecraft:leatherworker",3, [TradeItem.of("tfc:gem/sapphire",2,6)], TradeItem.of("minecraft:leather_chestplate",1,1));
+    event.addTrade("minecraft:leatherworker",3, [TradeItem.of("tfc:gem/sapphire",2,6)], TradeItem.of("minecraft:leather_leggings",1,1));
+    event.addTrade("minecraft:leatherworker",3, [TradeItem.of("tfc:gem/sapphire",2,6)], TradeItem.of("minecraft:leather_boots",1,1));
+    event.addTrade("minecraft:leatherworker",2, [TradeItem.of("tfc:medium_raw_hide",2,4)], TradeItem.of("tfc:gem/opal",2,4));
+
+    event.addTrade("minecraft:leatherworker",4, [TradeItem.of("tfc:gem/opal",2,6)], TradeItem.of("tfcambiental:insulated_leather_hat",1,1));
+    event.addTrade("minecraft:leatherworker",4, [TradeItem.of("tfc:gem/opal",2,6)], TradeItem.of("tfcambiental:insulated_leather_boots",1,1));
+    event.addTrade("minecraft:leatherworker",4, [TradeItem.of("tfc:large_raw_hide",1,3)], TradeItem.of("tfc:gem/emerald",1,1));
+
+    event.addTrade("minecraft:leatherworker",5, [TradeItem.of("tfc:gem/emerald",2,6)], TradeItem.of("tfcambiental:insulated_leather_tunic",1,1));
+    event.addTrade("minecraft:leatherworker",5, [TradeItem.of("tfc:gem/emerald",2,6)], TradeItem.of("tfcambiental:insulated_leather_pants",1,1));
+    event.addTrade("minecraft:leatherworker",5, [TradeItem.of("minecraft:leather",5,10)], TradeItem.of("tfc:gem/emerald",1,3));
 
 })
