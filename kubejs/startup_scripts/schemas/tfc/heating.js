@@ -11,19 +11,19 @@ let registerTFCHeatingSchema = (/** @type {Internal.RecipeSchemaRegistryEventJS}
     keys.chance
   )
     .constructor(keys.input_item, keys.temperature)
-    .constructor(fluidOrItem, keys.input_item, keys.temperature, keys.fluid_or_item_output)
+    .constructor(fluidOrItem, keys.fluid_or_item_output, keys.input_item, keys.temperature)
     .constructor(
       fluidOrItemWithModifier,
+      keys.fluid_or_item_output,
       keys.input_item,
       keys.temperature,
-      keys.fluid_or_item_output,
       keys.modifiers
     )
     .constructor(
       fluidOrItemWithModifier,
+      keys.fluid_or_item_output,
       keys.input_item,
       keys.temperature,
-      keys.fluid_or_item_output,
       keys.modifiers,
       keys.chance,
       keys.use_durability
@@ -31,54 +31,63 @@ let registerTFCHeatingSchema = (/** @type {Internal.RecipeSchemaRegistryEventJS}
   event.namespace("tfc").register("heating", heatingSchema)
 }
 
-/** @type {Custom.RecipeSchemaFactory} */
-function fluidOrItem(recipe, schemaType, keys, from) {
-  const schemaKeys = global.schemas.keys
-  for (const key of keys) {
-    if (key == schemaKeys.fluid_or_item_output) {
-      let output = from.getValue(recipe, key)
-      output.ifLeft((val) => recipe.setValue(schemaKeys.result_fluid, val))
-      output.ifRight((val) => writeToParent(recipe, schemaKeys.result_item, [schemaKeys.stack.name], [val]))
-      continue
-    }
-    recipe.setValue(key, from.getValue(recipe, key))
-  }
-}
+/* Signatures:
 
-/** @type {Custom.RecipeSchemaFactory} */
-function fluidOrItemWithModifier(recipe, schemaType, keys, from) {
-  const schemaKeys = global.schemas.keys
-  for (const key of keys) {
-    if (key == schemaKeys.modifiers) continue
-    if (key == schemaKeys.fluid_or_item_output) {
-      let output = from.getValue(recipe, key)
-      output.ifLeft((val) => recipe.setValue(schemaKeys.result_fluid, val))
-      output.ifRight((val) => {
-        let modifiers = from.getValue(recipe, schemaKeys.modifiers)
-        if (!modifiers) {
-          writeToParent(recipe, schemaKeys.result_item, [schemaKeys.stack.name], [val])
-        } else {
-          writeToParent(
-            recipe,
-            schemaKeys.result_item,
-            [schemaKeys.stack.name, schemaKeys.modifiers.name],
-            [val, modifiers]
-          )
-        }
-      })
-      continue
-    }
-    recipe.setValue(key, from.getValue(recipe, key))
-  }
-}
+    ItemStackModifier[]: (https://terrafirmacraft.github.io/Documentation/1.20.x/data/item-stack-modifiers/)
 
-function writeToParent(recipe, parentKey, childKeyNameArray, childKeyValueArray) {
-  const parentCV = recipe.getAllValueMap().get(parentKey.name)
-  const childMap = Utils.newMap()
-  for (let index = 0; index < childKeyNameArray.length; index++) {
-    childMap.put(childKeyNameArray[index], childKeyValueArray[index])
-  }
-  const map = Utils.newMap().of(parentKey.name, childMap)
-  parentKey.component.readFromMap(recipe, parentCV, map)
-  parentCV.write()
-}
+    heating(
+      ingredient: InputItem_,
+      temperature: number
+    )
+      .resultItem(...)
+      .resultFluid(...)
+      .useDurability(...)
+      .chance(...)
+
+    heating(
+      result: Internal.OutputFluid_ | OutputItem_
+      ingredient: InputItem_,
+      temperature: number,
+    )
+      .useDurability(...)
+      .chance(...)
+
+    heating(
+      result: Internal.OutputFluid_ | OutputItem_,
+      ingredient: InputItem_,
+      temperature: number,
+      modifiers?: ItemStackModifier[]
+    )
+      .useDurability(...)
+      .chance(...)
+
+    heating(
+      result: Internal.OutputFluid_ | OutputItem_,
+      ingredient: InputItem_,
+      temperature: number,
+      modifiers?: ItemStackModifier[],
+      chance?: number,
+      useDurability?: boolean
+    )
+
+    Tests used:
+
+    let tfc = event.recipes.tfc
+    tfc.heating("#tfc:foods/raw_meats", 1500)
+      .id("gregitas:heating/test/0")
+    tfc.heating({ type: "tfc:not_rotten", ingredient: { tag: "tfc:foods/raw_meats" } }, 1153).resultItem({ modifiers: [{ trait: "tfc:wood_grilled", type: "tfc:add_trait" }, "tfc:copy_food", "tfc:copy_input"] })
+      .id("gregitas:heating/test/1")
+    tfc.heating("tfc:food/salmon", 850).resultFluid("lava 1000")
+      .id("gregitas:heating/test/2")
+    tfc.heating("tfc:metal/black_steel 144", "tfc:metal/axe/black_steel", 674).useDurability(true)
+      .id("gregitas:heating/test/3")
+    tfc.heating("#tfc:foods/raw_meats", 1030).chance(0.35)
+      .id("gregitas:heating/test/4")
+    tfc.heating("tfc:metal/wrought_iron 144", "#forge:ingots/iron", 975)
+      .id("gregitas:heating/test/5")
+    tfc.heating(Item.empty, "#tfc:foods/raw_meats", 1245, ["tfc:copy_input"])
+      .id("gregitas:heating/test/6")
+    tfc.heating("tfc:metal/black_bronze 576", "tfc:metal/mace/black_bronze", 666, null, 0.5, true)
+      .id("gregitas:heating/test/7")
+
+*/
