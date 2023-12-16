@@ -7,6 +7,7 @@ const $FluidHelper = Java.loadClass("com.lowdragmc.lowdraglib.side.fluid.FluidHe
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition")
 const $CraftingComponent = Java.loadClass("com.gregtechceu.gtceu.data.recipe.CraftingComponent")
+const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
 const $Fluid = Java.loadClass("net.minecraft.world.level.material.Fluid")
 const $UnboundFluidStackJS = Java.loadClass("dev.latvian.mods.kubejs.fluid.UnboundFluidStackJS")
 
