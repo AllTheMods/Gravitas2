@@ -9,6 +9,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
         ])
         .itemOutputs('1x gtceu:certus_dust')
         .outputFluids('gtceu:carbon_dioxide 1000')
+        .blastFurnaceTemp(1000)
         .EUt(MV).duration(100)
 
     event.recipes.gtceu.chemical_reactor("trichlorocertane")
