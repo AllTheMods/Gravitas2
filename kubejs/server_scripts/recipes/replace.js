@@ -115,4 +115,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //IE
   event.replaceInput({ mod: "immersiveengineering"}, "immersiveengineering:hemp_fiber", "tfc:jute_fiber")
 
+  //Misc
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
+
 }
