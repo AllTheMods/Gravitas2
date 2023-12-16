@@ -49,17 +49,6 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
     let ingredients = unwrapValue(r.get("ingredients"))
     let modifiedIngredients = convertFluidsFromArray(ingredients)
     r.ingredients(modifiedIngredients)
-    let results = unwrapValue(r.get("results"))
-    let modifiedOutput
-    results.forEach((result) =>
-      result.computeIfPresent("stack", (key, val) =>
-        (modifiedOutput = Item.of(val)) || modifiedOutput.hasNBT()
-          ? modifiedOutput.nbt.tank.putInt("Amount", convertFluidValues(modifiedOutput.nbt.tank.Amount)) ||
-            modifiedOutput.toJson()
-          : val
-      )
-    )
-    r.results(results)
   })
 
   event.forEachRecipe({ type: "tfc:casting" }, (/** @type {Special.Recipes.CastingTfc}**/ r) => {
