@@ -234,6 +234,8 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.shapeless('gtceu:flint_mortar', ['gregitas:stone_bowl', 'gregitas:flint_pestle'])
 
         gtMortars.forEach((metal) => {
+            event.recipes.tfc.anvil(`gregitas:${metal.id}_pestle`, metal.double, ['hit_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            /*
             event.custom({
                 type: 'tfc:anvil',
                 input: { 
@@ -250,12 +252,14 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'shrink_last'
                 ]
               })
-        
+            */
             event.shapeless(`gtceu:${metal.id}_mortar`, ['gregitas:stone_bowl', `gregitas:${metal.id}_pestle`]).id(`gregitas:shapeless/${metal.id}_mortar`)
         }) 
     
     //File
         gtceuToolsTFC.forEach((metal) => {
+            event.recipes.tfc.anvil(`gregitas:${metal.id}_file_head`, metal.double, ['hit_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            /*
             event.custom({
                 type: 'tfc:anvil',
                 input: { 
@@ -272,7 +276,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'shrink_last'
                 ]
             })
-
+            */
             event.shaped(`gtceu:${metal.id}_file`, ['F', 'H'], {F: `gregitas:${metal.id}_file_head`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_file`)
         })
     //Screwdriver
@@ -291,7 +295,8 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     item: `gtceu:${metal.id}_long_rod`  
                 }
             })
-    
+            event.recipes.tfc.anvil(`gtceu:${metal.id}_screwdriver_tip`, `gtceu:${metal.id}_long_rod`, ['draw_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            /*
             event.custom({
                 type: "tfc:anvil",
                 input: { 
@@ -308,7 +313,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'shrink_last'
                 ]
             })
-
+            */
             event.shaped(`gtceu:${metal.id}_screwdriver`, ['S', 'H'], {S: `gtceu:${metal.id}_screwdriver_tip`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_screwdriver`)
         })
         
