@@ -264,5 +264,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   gemPowders.forEach((gem) => {
     event.add(`forge:dusts/${gem}`, `tfc:powder/${gem}`)
+    event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
   })
 }

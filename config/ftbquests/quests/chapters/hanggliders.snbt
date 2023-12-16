@@ -239,6 +239,10 @@
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"298CA22763986127"
+				"03980D70A4206A85"
+			]
 			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
 			id: "36731C807BA975C4"
 			rewards: [{
