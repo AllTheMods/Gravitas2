@@ -68,24 +68,18 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
         .duration(300).EUt(48)
 
     event.recipes.gtceu.laser_engraver("engrave_engineering_certus")
-        .itemInputs([
-            '1x gregitas:certus_wafer',
-            '1x #forge:lenses/blue'
-        ])
+        .itemInputs('1x gregitas:certus_wafer')
+        .notConsumable('1x #forge:lenses/blue')
         .itemOutputs('1x gregitas:engineering_wafer')
         .duration(900).EUt(MV)
     event.recipes.gtceu.laser_engraver("engrave_calculation_certus")
-        .itemInputs([
-            '1x gregitas:certus_wafer',
-            '1x #forge:lenses/light_blue'
-        ])
+        .itemInputs('1x gregitas:certus_wafer')
+        .notConsumable('1x #forge:lenses/light_blue')
         .itemOutputs('1x gregitas:calculation_wafer')
         .duration(900).EUt(MV)
     event.recipes.gtceu.laser_engraver("engrave_logic_certus")
-        .itemInputs([
-            '1x gregitas:certus_wafer',
-            '1x #forge:lenses/red'
-        ])
+        .itemInputs('1x gregitas:certus_wafer')
+        .notConsumable('1x #forge:lenses/red')
         .itemOutputs('1x gregitas:logic_wafer')
         .duration(900).EUt(MV)
 
@@ -202,4 +196,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
           item: "ae2:logic_processor"
         }
     }).id("gregitas:inscriber/logic_processor")
+
+
+    event.replaceInput({mod: "ae2"}, 'ae2:certus_quartz_crystal', '#forge:gems/certus_quartz')
 }
