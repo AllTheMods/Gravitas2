@@ -11,18 +11,21 @@ const toolsToRemove = [
   "red_steel"
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
-
-  event.remove({ id: "tfc:crafting/bloomery"})
+  event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/stick_long_wrought_iron" })
   event.remove({ id: "gtceu:shaped/screw_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
-
+  event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
+  event.remove({ id: "gtceu:shaped/casing_coke_bricks"})
+  event.remove({ id: "gtceu:smelting/fireclay_brick"})
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
 
-  event.remove({ id: 'gtceu:shapeless/rubber_wood_planks' })
+  event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
+  event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
+  event.remove({ id: "gtceu:shaped/treated_wood_planks"})
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -46,6 +49,33 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ output: `railcraft:${tool}_chestplate`, mod: "railcraft" })
     event.remove({ output: `railcraft:${tool}_leggings`, mod: "railcraft" })
     event.remove({ output: `railcraft:${tool}_boots`, mod: "railcraft" })
+
+    //GT General
+    event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
+    event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
+    event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
+    event.remove(
+        [
+            {
+                id: 'gtceu:compressor/sandstone'
+            },
+            {
+                id: 'gtceu:centrifuge/red_sand_separation'
+            },
+            {
+                id: 'gtceu:forge_hammer/smooth_sandstone_to_sand'
+            },
+            {
+                id: 'gtceu:forge_hammer/chiseled_sandstone_to_sand'
+            },
+            {
+                id: 'gtceu:forge_hammer/sandstone_to_sand'
+            },
+            {
+                id: 'gtceu:alloy_smelter/alloy_smelt_glass_tube'
+            }
+        ]
+    )
   })
 
   //Railcraft
@@ -62,12 +92,17 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
+  //ATM
+  event.remove({ id: "allthemodium:teleport_pad"})
+
+
   //Apotheosis
   event.remove({ id: /^apotheosis:salvaging.*_horse_armor/ })
 
   //Create
   event.remove({ id: "create:crafting/materials/andesite_alloy" })
   event.remove({ id: "create:crafting/materials/andesite_alloy_from_zinc" })
+  event.remove({ id: "create:crafting/materials/andesite_alloy_from_block" })
   event.remove({ id: "create:crafting/kinetics/millstone" })
   event.remove({ id: "create:mixing/andesite_alloy" })
   event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
@@ -77,6 +112,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
   event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
+  event.remove({ id: "create:crafting/appliances/copper_backtank"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -90,50 +126,105 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "framedblocks:framed_chest" })
   event.remove({ id: "framedblocks:framed_secret_storage" })
 
-  //Functional Storage
-  event.remove({ id: /^functionalstorage:oak_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:spruce_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:birch_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:jungle_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:acacia_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:dark_oak_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:crimson_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:warped_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:mangrove_.*/, mod: "functionalstorage" })
-  event.remove({ id: /^functionalstorage:cherry_.*/, mod: "functionalstorage" })
-  event.remove({ id: "functionalstorage:framed_1" })
-  event.remove({ id: "functionalstorage:framed_2" })
-  event.remove({ id: "functionalstorage:framed_4" })
-  event.remove({ id: "functionalstorage:fluid_1" })
-  event.remove({ id: "functionalstorage:fluid_2" })
-  event.remove({ id: "functionalstorage:fluid_4" })
-  event.remove({ id: "functionalstorage:oak_drawer_alternate_x1" })
-  event.remove({ id: "functionalstorage:oak_drawer_alternate_x2" })
-  event.remove({ id: "functionalstorage:oak_drawer_alternate_x4" })
-  event.remove({ id: "functionalstorage:compacting_framed_drawer" })
-  event.remove({ id: "functionalstorage:compacting_drawer" })
-  event.remove({ id: "functionalstorage:simple_compacting_drawer" })
-  event.remove({ id: "functionalstorage:framed_simple_compacting_drawer" })
-  event.remove({ id: "functionalstorage:storage_controller" })
-  event.remove({ id: "functionalstorage:controller_extension" })
+  //Storage Drawers / Framed Drawers
+  event.remove({ id: /^storagedrawers:oak_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:spruce_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:birch_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:jungle_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:acacia_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:dark_oak_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:crimson_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:warped_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:mangrove_.*/, mod: "storagedrawers" })
+  event.remove({ id: /^storagedrawers:cherry_.*/, mod: "storagedrawers" })
+
+  event.remove({ id: /^framedcompactdrawers:.*/, mod: "framedcompactdrawers" })
 
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
 
   // Railcraft
-  event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots"})
+  event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
+  event.remove({ mod: "railcraft", id: `/^railcraft:.*coke.*/`})
 
   //Woodencog
-  event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:rock_knapping\/.*_alloy/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_bloom/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog"})
-  event.remove({ id: /^woodencog:deploying\/mold_.*/, mod: "woodencog"})
-
+  event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:rock_knapping\/.*_alloy/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_bloom/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:deploying\/.*/, mod: "woodencog" })
 
   // TreeTap
-  event.remove({ mod: "treetap", output: "treetap:tap"})
+  event.remove({ mod: "treetap", output: "treetap:tap" })
+
+  // Immersive Engineering
+
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick_reinforced" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastfurnace_preheater" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick_reinforced" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:fertilizer" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cloche" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:waterwheel_segment" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill_base" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:watermill" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:sample_drill" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dynamo" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:wooden_barrel" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crafting_table" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crate" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:reinforced_crate" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coal_coke" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dust_coke" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coke" })
+  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_coke" })
+
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:.*_hammering/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/raw_hammercrushing.*/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
+
+  event.remove({ id: "immersiveengineering:crafting/survey_tools"})
+  event.remove({ id: "immersiveengineering:crafting/string"})
+  event.remove({ id: `/^immersiveengineering:crafting\/pickaxe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/axe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/shovel_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
+
+
+  //Firmalife
+  event.remove({ id: "firmalife:alloy/stainless_steel"})
+  //AE2
+
+  event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
+  event.remove({ id: `/^ae2:tools\/.*_axe/`})
+  event.remove({ id: `/^ae2:tools\/.*_shovel/`})
+  event.remove({ id: `/^ae2:tools\/.*_sword/`})
+  event.remove({ id: `/^ae2:tools\/.*_hoe/`})
+
+  //Ender tanks & chests
+  event.remove(
+    [
+      {
+        mod: 'enderchests'
+      },
+      {
+        mod: 'endertanks'
+      }
+    ]
+  )
+  //Vanilla
+  event.remove({ output: "minecraft:dirt"})
+  event.remove({ output: "minecraft:coarse_dirt"})
+  event.remove({ output: "minecraft:gravel"})
+  event.remove({ output: "minecraft:mud"})
 }

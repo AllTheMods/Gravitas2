@@ -1,0 +1,13 @@
+{
+    "type": "create:compacting",
+    "ingredients": [
+        {
+            "tag": "tfc:leather_knapping"
+        }
+    ],
+    "results": [
+        {
+            "item": "minecraft:leather_boots"
+        }
+    ]
+}

@@ -1,9 +1,139 @@
 // priority 10
+const gtTFCTools = [
+  {
+    id: 'aluminium',
+    color: 0x80C8F0,
+    name: 'Aluminium'
+  },
+  {
+    id: 'titanium',
+    color: 0xDCA0F0,
+    name: 'Titanium'
+  },
+  {
+    id: 'invar',
+    color: 0xB4B478,
+    name: 'Invar'
+  },
+  {
+    id: 'sterling_silver',
+    color: 0xFADCE1,
+    name: 'Sterling Silver'
+  },
+  {
+    id: 'rose_gold',
+    color: 0xFFE61E,
+    name: 'Rose Gold'
+  },
+  {
+    id: 'stainless_steel',
+    color: 0xC8C8DC,
+    name: 'Stainless Steel'
+  },
+  {
+    id: 'ultimet',
+    color: 0xB4B4E6,
+    name: 'Ultimet'
+  },
+  {
+    id: 'tungsten_carbide',
+    color: 0x330066,
+    name: 'Tungsten Carbide'
+  },
+  {
+    id: 'damascus_steel',
+    color: 0x6E6E6E,
+    name: 'Damascus Steel'
+  },
+  {
+    id: 'tungsten_steel',
+    color: 0x6464A0,
+    name: 'Tungsten Steel'
+  },
+  {
+    id: 'cobalt_brass',
+    color: 0xB4B4A0,
+    name: 'Cobalt Brass'
+  },
+  {
+    id: 'vanadium_steel',
+    color: 0xc0c0c0,
+    name: 'Vanadium Steel'
+  }
+]
+
+
+const gtMortars = [
+  {
+    id: 'bronze',
+    color: 0xFF8000,
+    name: 'Bronze'
+  },
+  {
+    id: 'invar',
+    color: 0xB4B478,
+    name: 'Invar'
+  },
+  {
+    id: 'steel',
+    color: 0x808080,
+    name: 'Steel'
+  },
+  {
+    id: 'wrought_iron',
+    color: 0xC8B4B4,
+    name: 'Wrought Iron'
+  },
+  {
+    id: 'damascus_steel',
+    color: 0x6E6E6E,
+    name: 'Damascus Steel'
+  },
+  {
+    id: 'cobalt_brass',
+    color: 0xB4B4A0,
+    name: 'Cobalt Brass'
+  }
+]
+
+const gtTFCtoolsTFC = [
+  {
+    id: 'bronze',
+    color: 0xFF8000,
+    name: 'Bronze'
+  },
+  {
+    id: 'steel',
+    color: 0x808080,
+    name: 'Steel'
+  },
+  {
+    id: 'wrought_iron',
+    color: 0xC8B4B4,
+    name: 'Wrought Iron'
+  },
+  {
+    id: 'red_steel',
+    color: 0x8C6464,
+    name: 'Red Steel'
+  },
+  {
+    id: 'blue_steel',
+    color: 0x64648C,
+    name: 'Blue Steel'
+  }
+]
 
 let registerItems = (/** @type {Registry.Item} */ event) => {
   //GTCEu
     event.create('gregitas:creosote_treated_lumber').texture('kubejs:item/lumber').color(0x502800)
     event.create('gregitas:rubber_lumber').texture('kubejs:item/lumber').color(0x615232)
+
+    event.create('gregitas:certus_boule').texture('kubejs:item/certus_boule')
+    event.create('gregitas:certus_wafer').texture('kubejs:item/certus_wafer')
+    event.create('gregitas:engineering_wafer').texture('kubejs:item/engineering_wafer')
+    event.create('gregitas:calculation_wafer').texture('kubejs:item/calculation_wafer')
+    event.create('gregitas:logic_wafer').texture('kubejs:item/logic_wafer')
 
   //Tools
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()

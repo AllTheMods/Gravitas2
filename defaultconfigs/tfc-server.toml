@@ -1,7 +1,7 @@
 
 [general]
 	#Enable nether portal creation
-	enableNetherPortals = false
+	enableNetherPortals = true
 	#Forces a number of game rules to specific values.
 	#  naturalRegeneration = false (Health regen is much slower and not tied to extra saturation)
 	#  doInsomnia = false (No phantoms)
@@ -558,7 +558,7 @@
 		# Setting this to zero will cause decay not to apply.
 		# Note that if you set this to zero **food items will lose their creation dates!!**. This is not reversible!
 		#Range: 0.0 ~ 1000.0
-		foodDecayModifier = 1.0
+		foodDecayModifier = 0.3
 		#Enables negative effects from carrying too many very heavy items, including potion effects.
 		enableOverburdening = true
 		#A multiplier for the minimum health that the player will obtain, based on their nutrition

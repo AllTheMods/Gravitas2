@@ -15,12 +15,12 @@
                 "bottom": 8
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -40,12 +40,12 @@
                 "bottom": 8
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -65,12 +65,12 @@
                 "bottom": 7
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -78,12 +78,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             },
             "SORT": {
                 "horizontalOffset": 10,
@@ -103,12 +103,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             },
             "SORT": {
                 "horizontalOffset": 20,
@@ -128,12 +128,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             },
             "SORT": {
                 "horizontalOffset": 10,

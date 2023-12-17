@@ -12,6 +12,9 @@ JEIEvents.hideItems(event => {
   hidePotions(event)
 })
 
+JEIEvents.removeCategories(event => {
+  hideCats(event)
+})
 ClientEvents.lang("en_us", (event) => {
   addGregOresLang(event)
   addGregitasName(event)
@@ -20,4 +23,6 @@ ClientEvents.lang("en_us", (event) => {
 
 ItemEvents.tooltip(event => {
   addModNameTooltipToCreativeTab(event)
+  circuitTooltips(event)
+  boatToolTips(event)
 })

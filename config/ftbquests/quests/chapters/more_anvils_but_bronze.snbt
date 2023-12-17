@@ -335,7 +335,16 @@
 		}
 		{
 			description: ["{gravitas.quest.bronze.desc.zinc_alloy}"]
-			icon: "create:andesite_alloy"
+			icon: {
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "create:andesite_alloy"
+			}
 			id: "35CBA8F8B07B6F2A"
 			tasks: [
 				{

@@ -1,5 +1,90 @@
 // priority 10
-
+let gtceuIngots1 = [
+  "aluminium",
+  "americium",
+  "annealed_copper",
+  "antimony",
+  "battery_alloy",
+  "beryllium",
+  "blue_alloy",
+  "chromium",
+  "cobalt",
+  "cobalt_brass",
+  "cupronickel",
+  "damascus_steel",
+  "darmstadtium",
+  "duranium",
+  "electrum",
+  "enriched_naquadah",
+  "enriched_naquadah_trinium_europium_duranide",
+  "europium",
+  "gallium",
+  "gallium_arsenide",
+  // "graphene", no fluid
+  "hsse",
+  "hssg",
+  "hsss",
+  "indium",
+  "indium_gallium_phosphide",
+  "indium_tin_barium_titanium_cuprate",
+  "invar",
+  "iridium",
+  "kanthal",
+  "lead",
+  "magnalium",
+  "magnesium_diboride",
+  "manganese",
+  "manganese_phosphide",
+  "mercury_barium_calcium_cuprate",
+  "molybdenum",
+  "naquadah",
+  "naquadah_alloy",
+  "naquadria",
+  "neodymium",
+  "neutronium",
+  "nichrome",
+  "nickel_zinc_ferrite",
+  "niobium",
+  "niobium_nitride",
+  "niobium_titanium",
+  "osmiridium",
+  "osmium",
+  "palladium",
+  "platinum",
+  "plutonium",
+  "plutonium_241",
+  "potin",
+  "red_alloy",
+  "rhodium",
+  "rhodium_plated_palladium",
+  // "ruridit", no fluid
+  "ruthenium",
+  "ruthenium_trinium_americium_neutronate",
+  "samarium",
+  "samarium_iron_arsenic_oxide",
+  "silicon",
+  "soldering_alloy",
+  "stainless_steel",
+  "tantalum",
+  "thorium",
+  "tin_alloy",
+  "titanium",
+  "trinium",
+  "tritanium",
+  "tungsten",
+  "tungsten_carbide",
+  "tungsten_steel",
+  "ultimet",
+  "uranium",
+  "uranium_235",
+  "uranium_rhodium_dinaquadide",
+  "uranium_triplatinum",
+  "vanadium",
+  "vanadium_gallium",
+  "vanadium_steel",
+  "yttrium",
+  "yttrium_barium_cuprate"
+]
 let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => {
   /**
    * @param {string} item
@@ -87,7 +172,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     event.addJson(`tfc:recipes/casting/${itemLocation.path}.json`, json)
   }
 
-  gtceuIngots.forEach((id) => {
+  gtceuIngots1.forEach((id) => {
     let fluid = Utils.id("gtceu:" + id)
     let ingot = Utils.id("gtceu:" + id + "_ingot")
     let temp = $FluidHelper.getTemperature(Fluid.of(fluid)) - 273 // Kelvin to Celcius
@@ -106,7 +191,8 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     "tfc:metal/tin": 230,
     "tfc:metal/cast_iron": 1535,
     "tfc:metal/zinc": 420,
-    "tfc:metal/nickel": 1453
+    "tfc:metal/nickel": 1453,
+    "firmalife:metal/chromium": 1250
   }
 
   let oreToMolten = [
@@ -224,7 +310,19 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       ore: "gtceu:raw_granitic_mineral_sand",
       liquid: "tfc:metal/cast_iron",
       amount: 72
+    },
+    {
+      ore: "gtceu:raw_thorium",
+      liquid: "gtceu:thorium",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_chromite",
+      liquid: "gtceu:chromium",
+      amount: 72
     }
+
+
   ]
 
   oreToMolten.forEach((ore) => {
@@ -236,8 +334,8 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     addTFCHeatingRecipe(ore.ore, ore.liquid, temp, ore.amount)
   })
 
-  addTFCHeatCapability("gtceu:double_invar_ingot", 2.857, 921, 1228)
+  addTFCHeatCapability("gregitas:double_invar_ingot", 2.857, 921, 1228)
   addTFCHeatCapability("gtceu:wrought_iron_bolt", 1.429, 921, 1228)
 
-  addTFCSize("gtceu:double_invar_ingot", "large", "heavy")
+  addTFCSize("gregitas:double_invar_ingot", "large", "heavy")
 }

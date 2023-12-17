@@ -21,7 +21,7 @@ const strucBlocksReplacementMap = {
   "minecraft:muddy_mangrove_roots": "tfc:muddy_roots/loam",
   "minecraft:stone_bricks": "tfc:rock/smooth/granite",
   "minecraft:red_sandstone": "tfc:raw_sandstone/red",
-  // "minecraft:chiseled_red_sandstone": "we don't have a tfc",
+  "minecraft:chiseled_red_sandstone": "tfc:cut_sandstone/red",
   "minecraft:cut_red_sandstone": "tfc:cut_sandstone/red",
   "minecraft:smooth_red_sandstone": "tfc:smooth_sandstone/red",
   "minecraft:sandstone": "tfc:raw_sandstone/yellow",
@@ -93,6 +93,8 @@ const jigsawReplacementMap = {
   "minecraft:mud": "tfc:mud/loam",
   "minecraft:acacia_fence[east=true,west=true]": "tfc:wood/planks/acacia_fence[east=true,west=true]",
   "minecraft:red_tulip": "tfc:plant/tulip_red",
+  "minecraft:gold_ore": "minecraft:water",
+  "minecraft:stone": "tfc:rock/hardened/granite",
   "minecraft:dirt": "tfc:dirt/loam",
   "minecraft:smooth_sandstone": "tfc:smooth_sandstone/yellow",
   "minecraft:grass_block": "tfc:grass/loam",
@@ -177,6 +179,7 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("repurposed_structures") ||
     event.id.startsWith("apotheosis") ||
     event.id.startsWith("waystones") ||
+    event.id.startsWith("immersiveengineering") ||
     event.id.startsWith("ae2")
   ) {
     event.forEachPalettes((palette) => {

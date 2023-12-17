@@ -1,0 +1,272 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hanggliders"
+	group: "095899370DDF48CB"
+	icon: {
+		Count: 1b
+		id: "hangglider:hang_glider"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "068A7B40DE5F65C9"
+	images: [{
+		click: "custom:patchouli:tfc/firmaciv/canoe"
+		corner: false
+		dev: false
+		height: 1.0d
+		hover: ["Click For Info!"]
+		image: "firmaciv:item/canoe_with_paddle_icon"
+		rotation: 0.0d
+		width: 1.0d
+		x: 7.5d
+		y: 1.5d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["{gravitas.quest.simple_transportation.desc.hang_glider}"]
+			id: "30B2B1CEB12737B1"
+			rewards: [{
+				id: "4211FC0B7CF431CA"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "22AB22945F2AD0C9"
+				item: {
+					Count: 1b
+					id: "hangglider:hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.hang_glider}"
+			x: 10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["30B2B1CEB12737B1"]
+			description: ["{gravitas.quest.simple_transportation.desc.reinforced}"]
+			id: "216A514F3CB3B5DB"
+			rewards: [{
+				id: "070DAD81B947F787"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [{
+				id: "2097E67794BA916F"
+				item: {
+					Count: 1b
+					id: "hangglider:reinforced_hang_glider"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.reinforced}"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			description: ["{gravitas.quest.simple_transportation.desc.carts}"]
+			id: "2C14B2E5050FBD65"
+			rewards: [{
+				count: 3
+				id: "2874056F507EAB2D"
+				item: "astikorcarts:wheel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6F0369C255FAE37F"
+				item: "astikorcarts:wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.carts}"
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			description: ["{gravitas.quest.simple_transportation.desc.animal}"]
+			id: "69F58BED11E0E580"
+			rewards: [{
+				id: "051615542F9D609A"
+				item: "minecraft:lead"
+				type: "item"
+			}]
+			tasks: [{
+				id: "074FD87445BF243C"
+				item: "astikorcarts:animal_cart"
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.animal}"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			description: ["{gravitas.quest.simple_transportation.desc.supply}"]
+			id: "4F9BA390A628FFFD"
+			rewards: [{
+				id: "628817255C71CDFE"
+				item: "tfc:wood/chest/oak"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5C83BB19E829411F"
+				item: "astikorcarts:supply_cart"
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.supply}"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C14B2E5050FBD65"]
+			description: ["{gravitas.quest.simple_transportation.desc.plow}"]
+			id: "78B50A4EBDF90621"
+			rewards: [{
+				id: "02F047AA01494B0B"
+				item: {
+					Count: 1b
+					id: "tfc:stone/hoe/sedimentary"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "54D5EFB3E284BB33"
+				item: "astikorcarts:plow"
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.plow}"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			description: ["{gravitas.quest.simple_transportation.desc.kayak}"]
+			id: "7CD5D8B39710B37F"
+			rewards: [{
+				id: "45F82887BF5FE987"
+				item: "tfc:wood/boat/oak"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4D2ADB5BAD37F632"
+				item: "firmaciv:kayak"
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.kayak}"
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7CD5D8B39710B37F"]
+			description: ["{gravitas.quest.simple_transportation.desc.paddles}"]
+			id: "03980D70A4206A85"
+			rewards: [{
+				id: "5C5C1D341F60BB16"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "397BCE88949AEF9F"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmaciv:kayak_paddle"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:canoe_paddle"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.paddles}"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CD5D8B39710B37F"]
+			description: ["{gravitas.quest.simple_transportation.desc.tools}"]
+			id: "298CA22763986127"
+			rewards: [{
+				id: "2850841E469753BB"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "70CBBD531DED0AE8"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmaciv:sextant"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:barometer"
+							}
+							{
+								Count: 1b
+								id: "firmaciv:nav_clock"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.tools}"
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"298CA22763986127"
+				"03980D70A4206A85"
+			]
+			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
+			id: "36731C807BA975C4"
+			rewards: [{
+				id: "6E5A2181FC8976AE"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					id: "62F4B9B589CEEA55"
+					item: "firmaciv:canoe_paddle"
+					type: "item"
+				}
+				{
+					advancement: "firmaciv:canoe"
+					criterion: ""
+					id: "2639ED3AE25EBD9E"
+					type: "advancement"
+				}
+			]
+			x: 8.5d
+			y: 1.5d
+		}
+	]
+	title: "{gravitas.chapters.13.}"
+}

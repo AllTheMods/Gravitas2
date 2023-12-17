@@ -21,7 +21,8 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
     event.add('tfc:usable_in_barrel', [
         'gregitas:raw_syrup',
         'gregitas:maple_syrup',
-        'gregitas:raw_resin'
+        'gregitas:raw_resin',
+        'gtceu:creosote'
    ]
    )
     event.add('tfc:usable_in_pot', [
@@ -36,7 +37,9 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
    )
    event.add('tfc:usable_in_ingot_mold',
         [
-            'gtceu:rubber'
+            'gtceu:rubber',
+            'gtceu:igneous_alloy',
+            "gtceu:invar"
         ]
     )
 }

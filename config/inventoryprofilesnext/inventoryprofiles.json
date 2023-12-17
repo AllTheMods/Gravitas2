@@ -13,11 +13,6 @@
         },
         "continuous_crafting_saved_value": false
     },
-    "LockedSlotsSettings": {
-        "locked_slots_empty_hotbar_as_semi_locked": {
-            "value": false
-        }
-    },
     "AutoRefillSettings": {
         "tool_damage_threshold": 1,
         "type_visual_durability_notification": "CHAT",
@@ -32,6 +27,11 @@
         "type_visual_replace_failed_notification": "CHAT"
     },
     "Hotkeys": {
+        "reload_custom_configs": {
+            "main": {
+                "keys": "LEFT_SHIFT,R,Y"
+            }
+        },
         "sort_inventory": {
             "main": {
                 "keys": "BUTTON_3"

@@ -50,10 +50,13 @@ const chestBanList = [
   "minecraft:furnace_minecart",
   "minecraft:netherite_hoe",
   "minecraft:netherite_ingot",
+  "minecraft:stone",
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
-  "railcraft:steel_plate"
+  "railcraft:steel_plate",
+  "immersiveengineering:seed"
+
 ]
 
 const chestReplacementMap = {
@@ -191,6 +194,7 @@ const chestReplacementMap = {
   "minecraft:white_tulip": "tfc:plant/tulip_white",
   "minecraft:wooden_axe": "tfc:stone/axe/sedimentary",
   "minecraft:wooden_pickaxe": "tfc:stone/hammer/sedimentary",
+  "minecraft:chiseled_red_sandstone": "tfc:cut_sandstone/red",
 }
 
 let modifyAndRemoveChestLoot = (/** @type {Internal.LootModificationEventJS} */ event) => {

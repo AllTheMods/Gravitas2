@@ -1,0 +1,6 @@
+<page>
+    <h1>Turbine</h1>
+    <compass range="5" tick-scene="true">
+        
+    </compass>
+</page>

@@ -96,7 +96,7 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "tfc:textures/item/wood/twig/acacia.png"
+			image: "tfc:item/wood/twig"
 			rotation: -15.0d
 			width: 0.5d
 			x: 6.8d
@@ -108,7 +108,7 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "tfc:textures/item/wood/twig/pine.png"
+			image: "tfc:item/wood/twig"
 			rotation: -15.0d
 			width: 0.5d
 			x: 7.0d
@@ -120,7 +120,7 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "tfc:textures/item/wood/twig/aspen.png"
+			image: "tfc:item/wood/twig"
 			rotation: -15.0d
 			width: 0.5d
 			x: 7.0d
@@ -166,25 +166,13 @@
 			click: ""
 			corner: false
 			dev: false
-			height: 3.25d
-			hover: [ ]
-			image: "thermal:textures/block/dynamos/dynamo_magmatic.png"
-			rotation: 0.0d
-			width: 3.25d
-			x: 4.0d
-			y: 3.5d
-		}
-		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
 			hover: [ ]
-			image: "gravitas:textures/items/gravitas_icon.png"
+			image: "atm:textures/logo.png"
 			rotation: 0.0d
-			width: 3.0d
+			width: 5.333333333333333d
 			x: 4.0d
-			y: 3.5d
+			y: 2.5d
 		}
 		{
 			click: ""
@@ -420,7 +408,7 @@
 						Count: 1b
 						id: "itemfilters:tag"
 						tag: {
-							value: "tfc:stone_javelins"
+							value: "tfc:javelins"
 						}
 					}
 					title: "Stone Javelin"
@@ -730,7 +718,7 @@
 					Count: 1b
 					id: "itemfilters:tag"
 					tag: {
-						value: "tfc:small_ore_pieces_copper"
+						value: "tfc:copper_pieces"
 					}
 				}
 				title: "Small Ore Pieces of Copper"
@@ -890,7 +878,7 @@
 				}
 				{
 					id: "31DF626D3F0ED54F"
-					item: "firmalife:empty_jar"
+					item: "tfc:empty_jar"
 					type: "item"
 				}
 			]
