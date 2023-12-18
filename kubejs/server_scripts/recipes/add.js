@@ -345,7 +345,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   shaped("4x framedcompactdrawers:framed_full_four", ["CSC", "SPS", "CSC"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
-    P: "#forge:plates/double/brass"
+    P: "gtceu:brass_double_plate"
   })
 
   shaped("framedcompactdrawers:framed_compact_drawer", ["PSP", "QDQ", "SRS"], {
