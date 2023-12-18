@@ -227,4 +227,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "minecraft:coarse_dirt"})
   event.remove({ output: "minecraft:gravel"})
   event.remove({ output: "minecraft:mud"})
+
+  //EnderIO
+  event.remove({ id: "enderio:stick"})
 }
