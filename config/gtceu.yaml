@@ -161,7 +161,7 @@ machines:
 
   # Block to replace mined ores with in the miner and multiblock miner.
   # Default: minecraft:cobblestone
-  replaceMinedBlocksWith: minecraft:cobblestone
+  replaceMinedBlocksWith: tfc:rock/hardened/granite
 
   # Whether to enable the Maintenance Hatch, required for Multiblocks.
   # Default: true
@@ -193,6 +193,13 @@ machines:
   # Minimum distance betweeb Long Distance Fluid Pipe Endpoints
   # Default: 50
   ldFluidPipeMinDistance: 50
+
+  # If High Tier (>UV-tier) GT content should be registered.
+  # Items and Machines enabled with this config will have missing recipes by default.
+  # This is intended for modpack developers only, and is not playable without custom tweaks or addons.
+  # Other mods can override this to true, regardless of the config file.
+  # Default: false
+  highTierContent: true
 
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
@@ -247,4 +254,8 @@ dev:
   # Dump all registered GT recipes?
   # Default: false
   dumpRecipes: false
+
+  # Dump all registered GT models/blockstates/etc?
+  # Default: false
+  dumpAssets: false
 

@@ -1,7 +1,7 @@
 {
     "type": "tfc:heating",
     "ingredient": {
-      "item": "gtceu:double_invar_ingot"
+      "item": "gregitas:double_invar_ingot"
     },
     "result_fluid": {
       "fluid": "gtceu:invar",

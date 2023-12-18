@@ -31,16 +31,19 @@
                 "top": 5
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "org.cyclops.integratedcrafting.inventory.container.ContainerPartInterfaceCrafting": {
+        "ignore": true
+    },
+    "org.cyclops.integrateddynamics.core.client.gui.container.ContainerScreenAspectSettings": {
         "ignore": true
     },
     "org.cyclops.integrateddynamics.client.gui.container.ContainerScreenCoalGenerator": {
@@ -56,12 +59,12 @@
                 "bottom": 39
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -81,12 +84,12 @@
                 "bottom": -8
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -94,12 +97,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -107,12 +110,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -132,12 +135,12 @@
                 "bottom": -40
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -157,12 +160,12 @@
                 "bottom": -40
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -182,12 +185,12 @@
                 "bottom": -37
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -211,8 +214,8 @@
                 "top": -10
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -232,12 +235,12 @@
                 "bottom": -9
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -245,12 +248,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -258,48 +261,48 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "org.cyclops.integrateddynamics.client.gui.container.ContainerScreenPartWriter": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "org.cyclops.integrateddynamics.client.gui.container.ContainerScreenPartReader": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "org.cyclops.integrateddynamics.client.gui.container.ContainerScreenPartDisplay": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -310,12 +313,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -326,12 +329,12 @@
     "org.cyclops.integratedterminals.client.gui.container.ContainerScreenTerminalCraftingJobs": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -339,12 +342,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -352,12 +355,12 @@
         "ignore": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -368,12 +371,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     }

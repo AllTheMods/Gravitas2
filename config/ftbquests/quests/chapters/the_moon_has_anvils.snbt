@@ -3,11 +3,7 @@
 	default_quest_shape: ""
 	filename: "the_moon_has_anvils"
 	group: "20028FE0986EEEC1"
-	icon: {
-		Count: 1b
-		id: "ad_astra:tier_1_rocket"
-		tag: { }
-	}
+	icon: "gcyr:gps_satellite"
 	id: "3BE4D5CA7BA9EB50"
 	order_index: 6
 	quest_links: [ ]
@@ -56,21 +52,18 @@
 		{
 			dependencies: ["782836C39D00C73C"]
 			dependency_requirement: "one_completed"
+			icon: "gcyr:gps_satellite"
 			id: "5530739138438C6F"
 			tasks: [
 				{
 					id: "0844EC9ACEE5A5BC"
-					item: {
-						Count: 1b
-						id: "ad_astra:tier_1_rocket"
-						tag: { }
-					}
+					item: "gcyr:seat"
 					type: "item"
 				}
 				{
 					count: 9L
 					id: "32A3E3118D7E3D2C"
-					item: "ad_astra:launch_pad"
+					item: "gcyr:launch_pad"
 					type: "item"
 				}
 			]

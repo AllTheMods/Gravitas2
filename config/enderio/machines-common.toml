@@ -108,10 +108,6 @@
 		#Range: > 1
 		usage = 64
 
-	[energy.mob_generator]
-		#Range: > 1
-		capacity = 100000
-
 	[energy.drain]
 		#The base energy capacity in uI.
 		#Range: > 1
@@ -119,6 +115,16 @@
 		#The base energy consumption in uI/t.
 		#Range: > 1
 		usage = 10
+
+	[energy.soul_engine]
+		#Range: > 1
+		capacity = 100000
+		#The base burn-rate the soul engine.
+		#Range: > 1
+		burnSpeed = 1
+		#Percentage increase in uI produced.
+		#Range: 0.001 ~ 1.7976931348623157E308
+		generation = 1.0
 
 [enchanter]
 	#The lapis cost is enchant level multiplied by this value.
@@ -130,9 +136,14 @@
 
 [poweredSpawner]
 	#The amount of entities that will turn off powered spawner if in range.
+	#Range: > 0
 	maxentities = 2
 	#The way a powered spawner spawns an entity. Possible options: 'ENTITYPE' Spawns the same entity types as the soul vial. 'COPY' Spawns an exact copy of the mob in the soul vial
 	"Spawn Type" = "ENTITYTYPE"
 	#The maximum amount of spawners before the spawners suffers a loss of efficiency
+	#Range: > 0
 	maxspawners = 10
+	#The amount of mobs that spawn from the spawner
+	#Range: > 0
+	spawn_amount = 4
 

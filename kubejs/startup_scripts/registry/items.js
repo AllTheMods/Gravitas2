@@ -1,9 +1,139 @@
 // priority 10
+const gtTFCTools = [
+  {
+    id: 'aluminium',
+    color: 0x80C8F0,
+    name: 'Aluminium'
+  },
+  {
+    id: 'titanium',
+    color: 0xDCA0F0,
+    name: 'Titanium'
+  },
+  {
+    id: 'invar',
+    color: 0xB4B478,
+    name: 'Invar'
+  },
+  {
+    id: 'sterling_silver',
+    color: 0xFADCE1,
+    name: 'Sterling Silver'
+  },
+  {
+    id: 'rose_gold',
+    color: 0xFFE61E,
+    name: 'Rose Gold'
+  },
+  {
+    id: 'stainless_steel',
+    color: 0xC8C8DC,
+    name: 'Stainless Steel'
+  },
+  {
+    id: 'ultimet',
+    color: 0xB4B4E6,
+    name: 'Ultimet'
+  },
+  {
+    id: 'tungsten_carbide',
+    color: 0x330066,
+    name: 'Tungsten Carbide'
+  },
+  {
+    id: 'damascus_steel',
+    color: 0x6E6E6E,
+    name: 'Damascus Steel'
+  },
+  {
+    id: 'tungsten_steel',
+    color: 0x6464A0,
+    name: 'Tungsten Steel'
+  },
+  {
+    id: 'cobalt_brass',
+    color: 0xB4B4A0,
+    name: 'Cobalt Brass'
+  },
+  {
+    id: 'vanadium_steel',
+    color: 0xc0c0c0,
+    name: 'Vanadium Steel'
+  }
+]
+
+
+const gtMortars = [
+  {
+    id: 'bronze',
+    color: 0xFF8000,
+    name: 'Bronze'
+  },
+  {
+    id: 'invar',
+    color: 0xB4B478,
+    name: 'Invar'
+  },
+  {
+    id: 'steel',
+    color: 0x808080,
+    name: 'Steel'
+  },
+  {
+    id: 'wrought_iron',
+    color: 0xC8B4B4,
+    name: 'Wrought Iron'
+  },
+  {
+    id: 'damascus_steel',
+    color: 0x6E6E6E,
+    name: 'Damascus Steel'
+  },
+  {
+    id: 'cobalt_brass',
+    color: 0xB4B4A0,
+    name: 'Cobalt Brass'
+  }
+]
+
+const gtTFCtoolsTFC = [
+  {
+    id: 'bronze',
+    color: 0xFF8000,
+    name: 'Bronze'
+  },
+  {
+    id: 'steel',
+    color: 0x808080,
+    name: 'Steel'
+  },
+  {
+    id: 'wrought_iron',
+    color: 0xC8B4B4,
+    name: 'Wrought Iron'
+  },
+  {
+    id: 'red_steel',
+    color: 0x8C6464,
+    name: 'Red Steel'
+  },
+  {
+    id: 'blue_steel',
+    color: 0x64648C,
+    name: 'Blue Steel'
+  }
+]
 
 let registerItems = (/** @type {Registry.Item} */ event) => {
   //GTCEu
     event.create('gregitas:creosote_treated_lumber').texture('kubejs:item/lumber').color(0x502800)
     event.create('gregitas:rubber_lumber').texture('kubejs:item/lumber').color(0x615232)
+
+    event.create('gregitas:certus_boule').texture('kubejs:item/certus_boule')
+    event.create('gregitas:certus_wafer').texture('kubejs:item/certus_wafer')
+    event.create('gregitas:engineering_wafer').texture('kubejs:item/engineering_wafer')
+    event.create('gregitas:calculation_wafer').texture('kubejs:item/calculation_wafer')
+    event.create('gregitas:logic_wafer').texture('kubejs:item/logic_wafer')
 
   //Tools
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()
@@ -31,6 +161,7 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
       event.create(`gregitas:${metal.id}_scythe_head`).texture('kubejs:item/tools/scythe').color(0, metal.color).unstackable()
       event.create(`gregitas:${metal.id}_shovel_head`).texture('kubejs:item/tools/shovel').color(0, metal.color).unstackable()
       event.create(`gregitas:${metal.id}_sword_blade`).texture('kubejs:item/tools/sword').color(0, metal.color).unstackable()
+      event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
   })
 
   gtMortars.forEach((metal) => {
@@ -43,6 +174,6 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create(`gregitas:${metal.id}_cutter_blade`).texture('layer0', 'kubejs:item/tools/cutter_handle').texture('layer1', 'kubejs:item/tools/cutter_blade').color(1, metal.color).unstackable()
     event.create(`gregitas:${metal.id}_wrench_base`).texture('kubejs:item/tools/wrench_base').color(0, metal.color).unstackable()
     event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
-    
+    event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
   })
 }

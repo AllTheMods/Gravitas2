@@ -1,5 +1,59 @@
 // priority 10
-
+const tfcStone = [
+  "granite",
+  "diorite",
+  "gabbro",
+  "shale",
+  "claystone",
+  "limestone",
+  "conglomerate",
+  "dolomite",
+  "chert",
+  "chalk",
+  "rhyolite",
+  "basalt",
+  "andesite",
+  "dacite",
+  "quartzite",
+  "slate",
+  "phyllite",
+  "schist",
+  "gneiss",
+  "marble"
+]
+const gemStonesA = [
+ "amethyst",
+ "diamond",
+ "emerald",
+ "lapis_lazuli",
+ "opal",
+ "pyrite",
+ "ruby",
+ "sapphire",
+ "topaz"
+]
+const tfcSaplings = [
+  "acacia",
+  "ash",
+  "aspen",
+  "birch",
+  "blackwood",
+  "chestnut",
+  "douglas_fir",
+  "hickory",
+  "kapok",
+  "mangrove",
+  "maple",
+  "oak",
+  "palm",
+  "pine",
+  "rosewood",
+  "sequoia",
+  "spruce",
+  "sycamore",
+  "white_cedar",
+  "willow"
+]
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.custom({
     type: "tfc:anvil",
@@ -10,6 +64,17 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     },
     tier: 3,
     rules: ["bend_last", "draw_second_last", "draw_third_last"]
+  })
+
+  event.custom({
+    type: "tfc:anvil",
+    input: { tag: "forge:ingots/copper" },
+    result: {
+      item: "treetap:tap",
+      count: 1
+    },
+    tier: 1,
+    rules: ["bend_last", "bend_second_last", "bend_third_last"]
   })
 
   event.shaped("tfc:bloomery", ["BBB", "B B", "BBB"], {
@@ -27,22 +92,37 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   //Create Start
-  event.shaped("create:andesite_alloy", ["SZ ", "ZS ", "   "], {
-    S: "#tfc:igneous_extrusive_rock",
-    Z: "#forge:nuggets/zinc"
-  })
 
   event.shaped("create:millstone", [" M ", " G ", " Q "], {
     M: "tfc:handstone",
     G: "create:cogwheel",
     Q: "tfc:quern"
   })
-  
-  event.custom({
-    type: "create:mixing",
-    ingredients: [{ tag: "tfc:igneous_extrusive_rock" }, { tag: "forge:nuggets/zinc" }],
-    results: [{ item: "create:andesite_alloy" }]
-  })
+  gemStonesA.forEach((gemStone) => {
+      event.custom({
+          type: "tfc:damage_inputs_shapeless_crafting",
+          recipe: {
+              type: "minecraft:crafting_shapeless",
+              ingredients: [
+              {
+                  tag: "create:sandpaper"
+              },
+              {
+                  item: `tfc:ore\/${gemStone}`
+              },
+              {
+                  tag: "tfc:chisels"
+              },
+              {
+                  tag: "forge:tools/hammers"
+              }
+              ],
+              result: {
+                  item: `tfc:gem\/${gemStone}`
+              }
+          }
+        })
+    })
 
   event.custom({
     type: "create:pressing",
@@ -85,7 +165,53 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "gtceu:firebricks",
     D: "#forge:tools/screwdrivers"
   })
-
+  event.shaped("2x gtceu:coke_oven_bricks", ["BMB","MBM","BMB"], {
+    M: "tfc:mortar",
+    B: "gtceu:coke_oven_brick"
+  })
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+        type: "minecraft:crafting_shapeless",
+        ingredients: [
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "tfc:lumber"
+        },
+        {
+            tag: "forge:tools/saws"
+        }
+        ],
+        result: {
+            item: "gtceu:empty_wooden_form"
+        }
+    }
+  })
+    event.custom({
+      type: "tfc:damage_inputs_shapeless_crafting",
+      recipe: {
+          type: "minecraft:crafting_shapeless",
+          ingredients: [
+          {
+              item: "gtceu:empty_wooden_form"
+          },
+          {
+              tag: "forge:tools/knives"
+          }
+          ],
+          result: {
+              item: "gtceu:brick_wooden_form"
+          }
+      }
+    })
   tfcSaplings.forEach((sapling) => {
     //Greenhouse
     event.recipes.gtceu
@@ -135,10 +261,28 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
   event.shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
+
+  event.custom({
+    type: "tfc:barrel_sealed",
+    input_item: {
+      ingredient: {
+        tag: 'tfc:lumber'
+      }
+    },
+    input_fluid: {
+      ingredient: 'gtceu:creosote',
+      amount: 25
+    },
+    output_item: {
+      item: 'gregitas:creosote_treated_lumber'
+    },
+    duration: 6000
+  }).id('gregitas:barrel/creosote_treated_lumber')
+  
   //GTCEU End
 
   //Rock and Stone!
-  global.tfcStone.forEach((stone) => {
+  tfcStone.forEach((stone) => {
     event.recipes.gtceu
       .rock_breaker(`loose_${stone}`)
       .notConsumable(`tfc:rock/raw/${stone}`)
@@ -169,40 +313,60 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //Railcraft End
 
-  //Frunctional Storage Start
-  event.shaped("functionalstorage:framed_1", ["SPS", " C ", "SPS"], {
+
+  //Framed Compacting Drawers Start
+  event.shaped("framedcompactdrawers:framed_full_one", ["SPS", " C ", "SPS"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
     P: "#forge:plates/brass"
   })
 
-  event.shaped("2x functionalstorage:framed_2", ["SPS", "C C", "SPS"], {
+  event.shaped("2x framedcompactdrawers:framed_full_two", ["SPS", "C C", "SPS"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
     P: "#forge:plates/brass"
   })
 
-  event.shaped("4x functionalstorage:framed_4", ["CSC", "SPS", "CSC"], {
+  event.shaped("4x framedcompactdrawers:framed_full_four", ["CSC", "SPS", "CSC"], {
     S: "#forge:screws/brass",
     C: "#forge:chests/wooden",
     P: "#forge:plates/double/brass"
   })
 
-  event.shaped("functionalstorage:compacting_framed_drawer", ["PSP", "QDQ", "SRS"], {
+  event.shaped("framedcompactdrawers:framed_compact_drawer", ["PSP", "QDQ", "SRS"], {
     P: "#forge:plates/brass",
     S: "#forge:screws/brass",
     Q: "minecraft:piston",
-    D: "#functionalstorage:drawer",
+    D: "#forge:chests/wooden",
     R: "minecraft:repeater"
   })
 
-  event.shaped("functionalstorage:framed_simple_compacting_drawer", ["PSP", "TDQ", "SRS"], {
+  event.shaped("framedcompactdrawers:framed_drawer_controller", ["PSP", "TDQ", "SRS"], {
     P: "#forge:plates/brass",
     S: "#forge:screws/brass",
     Q: "minecraft:piston",
-    D: "#functionalstorage:drawer",
+    D: "framedcompactdrawers:framed_compact_drawer",
     R: "minecraft:repeater",
     T: "#forge:rods/brass"
   })
-  //Functional Storage End
+  //Framed Compacting Drawers End
+
+  //Ender Tanks & Chests
+  event.shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
+    e: 'gtceu:mv_emitter', 
+    O: 'gtceu:obsidian_plate', 
+    s: 'gtceu:mv_sensor', 
+    c: 'gtceu:mv_conveyor_module', 
+    C: 'gtceu:lv_super_chest', 
+    f: 'gtceu:lv_field_generator'
+  })
+
+  event.shaped('endertanks:ender_tank', ['eOs', 'pTp', 'OfO'], {
+    e: 'gtceu:mv_emitter', 
+    O: 'gtceu:obsidian_plate', 
+    s: 'gtceu:mv_sensor', 
+    p: 'gtceu:mv_electric_pump', 
+    T: 'gtceu:lv_super_tank', 
+    f: 'gtceu:lv_field_generator'
+  })
 }

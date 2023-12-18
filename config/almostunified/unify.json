@@ -1,5 +1,6 @@
 {
   "modPriorities": [
+    "firmalife",
     "gtceu",
     "tfc",
     "minecraft",
@@ -29,7 +30,8 @@
     "forge:storage_blocks/raw_{material}",
     "forge:double_ingots/{material}",
     "forge:double_sheets/{material}",
-    "forge:sheets/{material}"
+    "forge:sheets/{material}",
+    "forge:thorium"
   ],
   "materials": [
     "aeternium",
@@ -45,6 +47,7 @@
     "brass",
     "bronze",
     "charcoal",
+    "chromium",
     "chrome",
     "cinnabar",
     "coal",
@@ -66,14 +69,18 @@
     "lapis",
     "lead",
     "lumium",
+    "manganese",
     "mithril",
+    "molybdenum",
     "netherite",
     "nickel",
+    "niobium",
     "obsidian",
     "osmium",
     "peridot",
     "platinum",
     "potassium_nitrate",
+    "pyrochlore",
     "red_steel",
     "ruby",
     "rose_gold",
@@ -85,6 +92,7 @@
     "steel",
     "sulfur",
     "tin",
+    "titanium",
     "tungsten",
     "uranium",
     "wrought_iron",

@@ -12,12 +12,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -25,12 +25,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -38,12 +38,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -60,12 +60,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -73,12 +73,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -86,12 +86,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -99,12 +99,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -121,12 +121,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -134,12 +134,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -147,12 +147,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -160,12 +160,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -173,12 +173,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -186,12 +186,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -199,12 +199,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -221,12 +221,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -243,12 +243,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -265,12 +265,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -287,12 +287,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -309,12 +309,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -331,12 +331,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -353,12 +353,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -375,12 +375,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -397,12 +397,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -419,12 +419,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -441,12 +441,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -463,12 +463,12 @@
                 "horizontalOffset": 17
             },
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -476,12 +476,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -489,12 +489,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -502,12 +502,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -515,12 +515,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -528,12 +528,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -541,12 +541,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -554,12 +554,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -567,60 +567,60 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "cofh.thermal.core.client.gui.device.DeviceComposterScreen": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "cofh.thermal.expansion.client.gui.machine.MachineCrystallizerScreen": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "cofh.thermal.dynamics.client.gui.ItemBufferScreen": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
     "cofh.thermal.core.client.gui.storage.SatchelScreen": {
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -628,12 +628,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -641,12 +641,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     },
@@ -654,12 +654,12 @@
         "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
-                "horizontalOffset": 20,
-                "top": -10
+                "horizontalOffset": 28,
+                "top": -5
             },
             "SETTINGS": {
-                "horizontalOffset": 30,
-                "top": -25
+                "horizontalOffset": 44,
+                "top": -20
             }
         }
     }

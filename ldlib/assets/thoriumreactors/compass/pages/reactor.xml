@@ -1,0 +1,272 @@
+<page>
+    <h1>Nuclear Reactor</h1>
+    <compass range="5" tick-scene="true">
+        // Layer 1
+        <frame>
+            <scene start-before-last="true">
+                <rotation degree="0"/>
+                /* Layer 1 */
+                    //-2
+                        <add pos="-2 0 -2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="-1 0 -2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="0 0 -2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="1 0 -2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 0 -2" block="thoriumreactors:reactor_casing"/>
+                    //-1
+                        <add pos="-2 0 -1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="-1 0 -1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="0 0 -1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="1 0 -1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 0 -1" block="thoriumreactors:reactor_casing"/>
+                    // 0
+                        <add pos="-2 0 0" block="thoriumreactors:reactor_casing"/>
+                        <add pos="-1 0 0" block="thoriumreactors:reactor_casing"/>
+                        <add pos="0 0 0" block="thoriumreactors:reactor_casing"/>
+                        <add pos="1 0 0" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 0 0" block="thoriumreactors:reactor_casing"/>
+                    // 1
+                        <add pos="-2 0 1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="-1 0 1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="0 0 1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="1 0 1" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 0 1" block="thoriumreactors:reactor_casing"/>
+                    // 2
+                        <add pos="-2 0 2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="-1 0 2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="0 0 2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="1 0 2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 0 2" block="thoriumreactors:reactor_casing"/> 
+            </scene>
+            <scene>
+                <tooltip pos="0 0 0" duration="50" screen-offset="0.2 0.6">
+                    Layer 1 consists of a 5 x 5 of Reactor Casings.
+                </tooltip>
+            </scene>
+        </frame>
+        // Layer 2
+        <frame>
+            <scene>
+                /* Layer 2 */
+                    //-2
+                        <add pos="-2 1 -2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 1 -2" block="thoriumreactors:reactor_casing"/>
+                    // 2
+                        <add pos="-2 1 2" block="thoriumreactors:reactor_casing"/>
+                        <add pos="2 1 2" block="thoriumreactors:reactor_casing"/> 
+            </scene>
+            <scene>
+                <tooltip pos="0 0 0" duration="50" screen-offset="0.2 0.55">
+                    For layer 2 start with 4 more Reactor Casings, one in each corner.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                /* Layer 2 */
+                    //-1
+                        <add pos="-2 1 -1" block="thoriumreactors:reactor_valve" facing="south">
+                            <properties name="facing" value="west"/>
+                        </add>
+                        <add pos="2 1 -1" block="thoriumreactors:reactor_valve">
+                            <properties name="facing" value="east"/>
+                        </add>
+                    // 1
+                        <add pos="-2 1 1" block="thoriumreactors:reactor_valve">
+                            <properties name="facing" value="west"/>
+                        </add>
+                        <add pos="2 1 1" block="thoriumreactors:reactor_valve">
+                            <properties name="facing" value="east"/>
+                        </add>
+            </scene>
+            <scene>
+                <tooltip pos="0 1 1" duration="50" screen-offset="0.3 0.45">
+                    Next add 4 Reactor Valves.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                /* Layer 2 */
+                    // -2
+                        <add pos="0 1 -2" block="thoriumreactors:reactor_controller"/>
+            </scene>
+            <scene>
+                <tooltip pos="2 1 0" duration="50" screen-offset="0.3 0.45">
+                    Place the Controller in the centre of the front row.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                /* Layer 2 */
+                    // 0
+                        <add pos="0 1 0" block="thoriumreactors:reactor_core"/>
+            </scene>
+            <scene>
+                <tooltip pos="1.5 1 1.5" duration="50" screen-offset="0.15 0.35">
+                    Place the Reactor Core in the centre leaving the blocks around it empty.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                /* Layer 2 */
+                    // 2
+                        <add pos="1 1 2" block="thoriumreactors:reactor_glass"/> 
+                        <add pos="0 1 2" block="thoriumreactors:reactor_glass"/>
+                        <add pos="-1 1 2" block="thoriumreactors:reactor_glass"/> 
+                    // 0
+                        <add pos="2 1 0" block="thoriumreactors:reactor_glass"/> 
+                        <add pos="-2 1 0" block="thoriumreactors:reactor_glass"/>
+                    // -2
+                        <add pos="1 1 -2" block="thoriumreactors:reactor_glass"/>
+                        <add pos="-1 1 -2" block="thoriumreactors:reactor_glass"/> 
+            </scene>
+            <scene>
+                <tooltip pos="1 1 0" duration="50" screen-offset="0.3 0.45">
+                    Finish layer 2 off with filling the walls with Reactor Glass.
+                </tooltip>
+            </scene>
+        </frame>
+        // Layer 3
+        <frame>
+            <scene>
+                    // 0
+                        <add pos="0 2 0" block="thoriumreactors:reactor_graphite_moderator"/>
+            </scene>
+            <scene>
+                <tooltip pos="1.5 2 1.5" duration="50" screen-offset="0.15 0.3">
+                    Start layer 3 by placing the Graphite Moderator on top of the Reactor Core.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                // 2
+                    <add pos="2 2 2" block="thoriumreactors:reactor_casing"/> 
+                    <add pos="1 2 2" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="0 2 2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-1 2 2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-2 2 2" block="thoriumreactors:reactor_casing"/>
+                // 1
+                    <add pos="2 2 1" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="-2 2 1" block="thoriumreactors:reactor_glass"/>
+                // 0
+                    <add pos="2 2 0" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="-2 2 0" block="thoriumreactors:reactor_glass"/>
+                // -1
+                    <add pos="2 2 -1" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="-2 2 -1" block="thoriumreactors:reactor_glass"/>
+                // -2 
+                    <add pos="2 2 -2" block="thoriumreactors:reactor_casing"/> 
+                    <add pos="1 2 -2" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="0 2 -2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-1 2 -2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-2 2 -2" block="thoriumreactors:reactor_casing"/>
+            </scene>
+            <scene>
+                <tooltip pos="2 2 0" duration="50" screen-offset="0.15 0.2">
+                    Finish layer 3 off by building the walls up with glass and casings.
+                </tooltip>
+            </scene>
+        </frame>
+        // Layer 4
+        <frame>
+            <scene>
+                // 2
+                    <add pos="2 3 2" block="thoriumreactors:reactor_casing"/> 
+                    <add pos="1 3 2" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="0 3 2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-1 3 2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-2 3 2" block="thoriumreactors:reactor_casing"/>
+                // 1
+                    <add pos="2 3 1" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="-2 3 1" block="thoriumreactors:reactor_glass"/>
+                // 0
+                    <add pos="2 3 0" block="thoriumreactors:reactor_glass"/>
+                    <add pos="0 3 0" block="thoriumreactors:reactor_graphite_moderator"/> 
+                    <add pos="-2 3 0" block="thoriumreactors:reactor_glass"/>
+                // -1
+                    <add pos="2 3 -1" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="-2 3 -1" block="thoriumreactors:reactor_glass"/>
+                // -2 
+                    <add pos="2 3 -2" block="thoriumreactors:reactor_casing"/> 
+                    <add pos="1 3 -2" block="thoriumreactors:reactor_glass"/> 
+                    <add pos="0 3 -2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-1 3 -2" block="thoriumreactors:reactor_glass"/>
+                    <add pos="-2 3 -2" block="thoriumreactors:reactor_casing"/>
+            </scene>
+            <scene>
+                <tooltip pos="2 3 0" duration="50" screen-offset="0.15 0.2">
+                    Repeat the steps of layer 3 for layer 4.
+                </tooltip>
+            </scene>
+        </frame>
+        // Layer 5
+        <frame>
+            <scene>
+                // 0
+                    <add pos="0 4 0" block="thoriumreactors:reactor_rod_controller"/> 
+            </scene>
+            <scene>
+                <tooltip pos="1.5 4 1.5" duration="50" screen-offset="0.15 0.2">
+                    Start layer 5 by placing a Reactor Rod Controller on top of the Graphite Moderator.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                // 2
+                    <add pos="-2 4 2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="-1 4 2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="0 4 2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="1 4 2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="2 4 2" block="thoriumreactors:reactor_casing"/>
+                // 1
+                    <add pos="-2 4 1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="-1 4 1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="0 4 1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="1 4 1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="2 4 1" block="thoriumreactors:reactor_casing"/>
+                // 0
+                    <add pos="-2 4 0" block="thoriumreactors:reactor_casing"/>
+                    <add pos="-1 4 0" block="thoriumreactors:reactor_casing"/>
+                    <add pos="1 4 0" block="thoriumreactors:reactor_casing"/>
+                    <add pos="2 4 0" block="thoriumreactors:reactor_casing"/>
+                // -1
+                    <add pos="-2 4 -1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="-1 4 -1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="0 4 -1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="1 4 -1" block="thoriumreactors:reactor_casing"/>
+                    <add pos="2 4 -1" block="thoriumreactors:reactor_casing"/>
+                // -2 
+                    <add pos="-2 4 -2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="-1 4 -2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="0 4 -2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="1 4 -2" block="thoriumreactors:reactor_casing"/>
+                    <add pos="2 4 -2" block="thoriumreactors:reactor_casing"/>     
+            </scene>
+            <scene>
+                <tooltip pos="0 4 0" duration="50" screen-offset="0.15 0.35">
+                    Finish layer 5 by making a 5 x 5 of Reactor Casings with the Rod Controller as the centre.
+                </tooltip>
+            </scene>
+        </frame>
+        <frame>
+            <scene>
+                <tooltip pos="2 1 0" duration="50" screen-offset="0.3 0.45">
+                    To form your reactor you simply need to right click the Reactor Controller.
+                </tooltip>
+            </scene>
+        </frame>
+    </compass>
+    // Direction Key
+        //North
+            /* 0 0 -1 */
+        //East 
+            /* -1 0 0 */
+        //South 
+            /* 0 0 1 */
+        //West 
+            /* 1 0 0 */
+</page>

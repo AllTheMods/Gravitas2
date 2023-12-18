@@ -4,250 +4,100 @@ const $IngotPileBlock = Java.loadClass("net.dries007.tfc.common.blocks.devices.I
 const $Integer = Java.loadClass("java.lang.Integer")
 const $Registries = Java.loadClass("net.minecraft.core.registries.Registries")
 const $FluidHelper = Java.loadClass("com.lowdragmc.lowdraglib.side.fluid.FluidHelper")
-const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV] = GTValues.VA
-const RockBreakerCondition = Java.loadClass('com.gregtechceu.gtceu.common.recipe.RockBreakerCondition')
+const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition")
+const $CraftingComponent = Java.loadClass("com.gregtechceu.gtceu.data.recipe.CraftingComponent")
 
-const tfcSaplings = [
-  "acacia",
-  "ash",
-  "aspen",
-  "birch",
-  "blackwood",
-  "chestnut",
-  "douglas_fir",
-  "hickory",
-  "kapok",
-  "mangrove",
-  "maple",
-  "oak",
-  "palm",
-  "pine",
-  "rosewood",
-  "sequoia",
-  "spruce",
-  "sycamore",
-  "white_cedar",
-  "willow"
-]
-
-const tfcMetal = [
-  'bismuth',
-  'bismuth_bronze',
-  'black_bronze',
-  'bronze',
-  'brass',
-  'copper',
-  'gold',
-  'nickel',
-  'rose_gold',
-  'silver',
-  'tin',
-  'zinc',
-  'sterling_silver',
-  'wrought_iron',
-  'steel',
-  'black_steel',
-  'blue_steel',
-  'red_steel',
-  'tungsten_carbide',
-  'damascus_steel',
-  'tungsten_steel',
-  'cobalt_brass',
-  'vanadium_steel',
-  'ultimet',
-  'invar',
-  'aluminium',
-  'titanium'
-]
-
-const tfcRockKnapping = [
-  'igneous_extrusive',
-  'igneous_intrusive',
-  'metamorphic',
-  'sedimentary'
-]
-
-const gtMortars = [
+let enderTC = [
   {
-    id: 'bronze',
-    tier: 2,
-    double: 'tfc:metal/double_ingot/bronze'
+    id: "white",
+    colour: "000"
   },
   {
-    id: 'invar',
-    tier: 3,
-    double: 'gregitas:double_bronze_ingot'
+    id: "orange",
+    colour: "111"
   },
   {
-    id: 'steel',
-    tier: 4,
-    double: 'tfc:metal/double_ingot/steel'
+    id: "magenta",
+    colour: "222"
   },
   {
-    id: 'wrought_iron',
-    tier: 3,
-    double: 'tfc:metal/double_ingot/wrought_iron'
+    id: "light_blue",
+    colour: "333"
   },
   {
-    id: 'damascus_steel',
-    tier: 5,
-    double: 'gregitas:double_damascus_steel_ingot'
+    id: "yellow",
+    colour: "444"
   },
   {
-    id: 'cobalt_brass',
-    tier: 3,
-    double: 'gregitas:double_cobalt_brass_ingot'
+    id: "lime",
+    colour: "555"
+  },
+  {
+    id: "pink",
+    colour: "666"
+  },
+  {
+    id: "gray",
+    colour: "777"
+  },
+  {
+    id: "light_gray",
+    colour: "888"
+  },
+  {
+    id: "cyan",
+    colour: "999"
+  },
+  {
+    id: "purple",
+    colour: "AAA"
+  },
+  {
+    id: "blue",
+    colour: "BBB"
+  },
+  {
+    id: "brown",
+    colour: "CCC"
+  },
+  {
+    id: "green",
+    colour: "DDD"
+  },
+  {
+    id: "red",
+    colour: "EEE"
+  },
+  {
+    id: "black",
+    colour: "FFF"
   }
 ]
 
-const gtceuALLToolMetalsID = [
-    'aluminium',
-    'titanium',
-    'bronze',
-    'invar',
-    'sterling_silver',
-    'rose_gold',
-    'stainless_steel',
-    'steel',
-    'ultimet',
-    'wrought_iron',
-    'tungsten_carbide',
-    'damascus_steel',
-    'tungsten_steel',
-    'cobalt_brass',
-    'vanadium_steel',
-    'red_steel',
-    'blue_steel'
-]
+const meltMap = {
+  6: JsonIO.primitiveOf(9),
+  25: JsonIO.primitiveOf(36),
+  50: JsonIO.primitiveOf(72),
+  75: JsonIO.primitiveOf(108),
+  100: JsonIO.primitiveOf(JsonIO.parse("144")),
+  200: JsonIO.primitiveOf(JsonIO.parse("288")),
+  400: JsonIO.primitiveOf(576),
+  600: JsonIO.primitiveOf(864),
+  800: JsonIO.primitiveOf(1152),
+  1200: JsonIO.primitiveOf(1728),
+  1400: JsonIO.primitiveOf(2016),
+  10: JsonIO.primitiveOf(16),
+  15: JsonIO.primitiveOf(24),
+  35: JsonIO.primitiveOf(48),
+  20: JsonIO.primitiveOf(24),
+  30: JsonIO.primitiveOf(48),
+  90: JsonIO.primitiveOf(128),
+  60: JsonIO.primitiveOf(86),
+  40: JsonIO.primitiveOf(58),
+  70: JsonIO.primitiveOf(96)
+}
 
-const gtceuToolsTFC = [
-  {
-    id: 'aluminium',
-    fluid: 'gtceu:aluminium',
-    tier: 3,
-    double: 'gregitas:double_aluminium_ingot'
-  },
-  {
-    id: 'titanium',
-    fluid: 'gtceu:titanium',
-    tier: 6,
-    double: 'gregitas:double_titanium_ingot'
-  },
-  {
-    id: 'bronze',
-    fluid: 'tfc:metal/bronze',
-    tier: 2,
-    double: 'tfc:metal/double_ingot/bronze'
-  },
-  {
-    id: 'invar',
-    fluid: 'gtceu:invar',
-    tier: 3,
-    double: 'gregitas:double_bronze_ingot'
-  },
-  {
-    id: 'sterling_silver',
-    fluid: 'tfc:metal/sterling_silver',
-    tier: 4,
-    double: 'tfc:metal/double_ingot/sterling_silver'
-  },
-  {
-    id: 'rose_gold',
-    fluid: 'tfc:metal/rose_gold',
-    tier: 4,
-    double: 'tfc:metal/double_ingot/rose_gold'
-  },
-  {
-    id: 'stainless_steel',
-    fluid: 'firmalife:metal/stainless_steel',
-    tier: 5,
-    double: 'firmalife:metal/double_ingot/stainless_steel'
-  },
-  {
-    id: 'steel',
-    fluid: 'tfc:metal/steel',
-    tier: 4,
-    double: 'tfc:metal/double_ingot/steel'
-  },
-  {
-    id: 'wrought_iron',
-    fluid: 'tfc:metal/wrought_iron',
-    tier: 3,
-    double: 'tfc:metal/double_ingot/wrought_iron'
-  },
-  {
-    id: 'damascus_steel',
-    fluid: 'gtceu:damascus_steel',
-    tier: 5,
-    double: 'gregitas:double_damascus_steel_ingot'
-  },
-  {
-    id: 'cobalt_brass',
-    fluid: 'gtceu:cobalt_brass',
-    tier: 3,
-    double: 'gregitas:double_cobalt_brass_ingot'
-  },
-  {
-    id: 'red_steel',
-    fluid: 'tfc:metal/red_steel',
-    tier: 6,
-    double: 'tfc:metal/double_ingot/red_steel'
-  },
-  {
-    id: 'blue_steel',
-    fluid: 'tfc:metal/blue_steel',
-    tier: 6,
-    double: 'tfc:metal/double_ingot/blue_steel'
-  }
-]
-
-const gtceuToolsGT = [
-  {
-    id: 'aluminium',
-    fluid: 'gtceu:aluminium',
-    tier: 3,
-    double: 'gregitas:double_aluminium_ingot'
-  },
-  {
-    id: 'titanium',
-    fluid: 'gtceu:titanium',
-    tier: 6,
-    double: 'gregitas:double_titanium_ingot'
-  },
-  {
-    id: 'invar',
-    fluid: 'gtceu:invar',
-    tier: 3,
-    double: 'gregitas:double_bronze_ingot'
-  },
-  {
-    id: 'sterling_silver',
-    fluid: 'tfc:metal/sterling_silver',
-    tier: 4,
-    double: 'tfc:metal/double_ingot/sterling_silver'
-  },
-  {
-    id: 'rose_gold',
-    fluid: 'tfc:metal/rose_gold',
-    tier: 4,
-    double: 'tfc:metal/double_ingot/rose_gold'
-  },
-  {
-    id: 'stainless_steel',
-    fluid: 'firmalife:metal/stainless_steel',
-    tier: 5,
-    double: 'firmalife:metal/double_ingot/stainless_steel'
-  },
-  {
-    id: 'damascus_steel',
-    fluid: 'gtceu:damascus_steel',
-    tier: 5,
-    double: 'gregitas:double_damascus_steel_ingot'
-  },
-  {
-    id: 'cobalt_brass',
-    fluid: 'gtceu:cobalt_brass',
-    tier: 3,
-    double: 'gregitas:double_cobalt_brass_ingot'
-  }
-]
+const getJsonPath = (/** @type {Internal.JsonElement} */jsonElement, /** @type {string} */ path) => {
+  return path.split(".").reduce((acc, cur) => (acc != null ? acc.asJsonObject.get(cur) : null), jsonElement)
+}

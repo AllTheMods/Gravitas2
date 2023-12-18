@@ -1,0 +1,25 @@
+{
+    "type": "create:compacting",
+    "ingredients": [
+        {
+            "tag": "tfc:clay_knapping"
+        },
+        {
+            "tag": "tfc:clay_knapping"
+        },
+        {
+            "tag": "tfc:clay_knapping"
+        },
+        {
+            "tag": "tfc:clay_knapping"
+        },
+        {
+            "tag": "tfc:clay_knapping"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:ceramic/unfired_sword_blade_mold"
+        }
+    ]
+}

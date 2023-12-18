@@ -45,14 +45,14 @@
 								ticks: 0L
 							}
 						}
-						id: "tfc:metal/sheet/wrought_iron"
+						id: "gtceu:wrought_iron_plate"
 					}
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "38BBB45AE5DA35CF"
-					item: "tfc:fire_bricks"
+					item: "gtceu:firebricks"
 					type: "item"
 				}
 				{
@@ -118,7 +118,7 @@
 								ticks: 0L
 							}
 						}
-						id: "tfc:metal/ingot/steel"
+						id: "gtceu:steel_ingot"
 					}
 					type: "item"
 				}
@@ -131,6 +131,25 @@
 			dependencies: ["19C25C233BCCF44C"]
 			description: ["{gravitas.quest.steel.desc.steel_anvil}"]
 			id: "568F95FC508BA84A"
+			rewards: [
+				{
+					id: "19FC350DD0B3E73E"
+					item: "integratedterminals:part_terminal_storage"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1B012F8BBA00D9A8"
+					item: "integrateddynamics:cable"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "5257E2C11DDFE580"
+					item: "integratedtunnels:part_interface_item"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "742BF1EDAA186BEE"
 				item: {
@@ -231,28 +250,6 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["2F917443D6FE3081"]
-			id: "7503CFC31F970927"
-			tasks: [{
-				id: "21A2A42B370CCC98"
-				item: "immersiveengineering:craftingtable"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["7503CFC31F970927"]
-			id: "5DD8A4A919AF644C"
-			tasks: [{
-				id: "023D3F70F9EAD415"
-				item: "immersiveengineering:workbench"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 4.0d
-		}
-		{
 			dependencies: ["7EC4991C351C49AC"]
 			id: "2D871E3A9A87DAC0"
 			tasks: [
@@ -300,7 +297,7 @@
 			tasks: [{
 				count: 8L
 				id: "417E47D6C3A4DDBF"
-				item: "immersiveengineering:treated_wood_horizontal"
+				item: "gtceu:treated_wood_planks"
 				type: "item"
 			}]
 			x: -2.0d
@@ -345,12 +342,19 @@
 			dependencies: ["4170701E508D58B5"]
 			hide_dependency_lines: false
 			id: "679D7B1E110BE18E"
-			tasks: [{
-				count: 27L
-				id: "4D221A36C8F952DF"
-				item: "immersiveengineering:cokebrick"
-				type: "item"
-			}]
+			tasks: [
+				{
+					count: 25L
+					id: "4D221A36C8F952DF"
+					item: "gtceu:coke_oven_bricks"
+					type: "item"
+				}
+				{
+					id: "518F4E383C006EDB"
+					item: "gtceu:coke_oven"
+					type: "item"
+				}
+			]
 			x: -0.5d
 			y: 1.0d
 		}
@@ -358,12 +362,19 @@
 			dependencies: ["679D7B1E110BE18E"]
 			description: ["{gravitas.quest.steel.desc.blast_brick}"]
 			id: "584E1EADFF9DB1FC"
-			tasks: [{
-				count: 27L
-				id: "371BDAFC059C182F"
-				item: "immersiveengineering:blastbrick"
-				type: "item"
-			}]
+			tasks: [
+				{
+					count: 25L
+					id: "371BDAFC059C182F"
+					item: "gtceu:firebricks"
+					type: "item"
+				}
+				{
+					id: "1D7E21D3E7EF4BC3"
+					item: "gtceu:primitive_blast_furnace"
+					type: "item"
+				}
+			]
 			x: -0.5d
 			y: 2.5d
 		}
@@ -389,10 +400,17 @@
 				id: "117EA80A47637FFD"
 				item: {
 					Count: 1b
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:kelp"
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 90000L
+							traits: [ ]
+						}
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "tfc:food/dried_kelp"
 				}
 				title: "Any #forge:kelp"
 				type: "item"
@@ -409,13 +427,7 @@
 			tasks: [
 				{
 					id: "07ABA221C4DFF0AF"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:electron_tube"
-						}
-					}
+					item: "create:electron_tube"
 					title: "Any #forge:electron_tube"
 					type: "item"
 				}
@@ -488,8 +500,8 @@
 					type: "item"
 				}
 				{
-					id: "2235EB33A258C83A"
-					item: "thermal:sawdust"
+					id: "683A69E07E9C5A80"
+					item: "gtceu:wood_dust"
 					type: "item"
 				}
 			]
@@ -514,106 +526,66 @@
 			dependencies: ["3047ACD6E16944B8"]
 			id: "376F1F47067E2622"
 			tasks: [{
-				icon: "immersiveengineering:metal_press"
+				icon: "advancedtfctech:beamhouse"
 				id: "67986CF20EE499BB"
 				observe_type: 0
 				timer: 0L
 				title: "{gravitas.quest.steel.metal_press}"
-				to_observe: "immersiveengineering:metal_press"
+				to_observe: "advancedtfctech:beamhouse"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.beam_house}"
 			x: 4.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
+			icon: "advancedtfctech:power_loom"
 			id: "5A248CD0C63BC119"
 			tasks: [{
-				icon: "immersiveengineering:crusher"
+				icon: "advancedtfctech:power_loom"
 				id: "2F4F2ED865610043"
 				observe_type: 0
 				timer: 0L
 				title: "{gravitas.quest.steel.crusher}"
-				to_observe: "immersiveengineering:crusher"
+				to_observe: "advancedtfctech:power_loom"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.power_loom}"
 			x: 5.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
-			id: "0FE5ADCC2CA2EFEC"
-			tasks: [{
-				icon: "immersiveengineering:sawmill"
-				id: "5E956B7FA14C1891"
-				observe_type: 0
-				timer: 0L
-				title: "{gravitas.quest.steel.sawmill}"
-				to_observe: "immersiveengineering:sawmill"
-				type: "observation"
-			}]
-			x: 6.5d
-			y: 2.0d
-		}
-		{
-			dependencies: ["3047ACD6E16944B8"]
+			icon: "advancedtfctech:thresher"
 			id: "6B15223880624B0B"
 			tasks: [{
-				icon: "immersiveengineering:squeezer"
+				icon: "advancedtfctech:thresher"
 				id: "1DCA8B804EADB662"
 				observe_type: 0
 				timer: 0L
-				title: "{gravitas.quest.steel.squeezer}"
-				to_observe: "immersiveengineering:squeezer"
+				title: "{gravitas.quest.steel.thresher}"
+				to_observe: "advancedtfctech:thresher"
 				type: "observation"
 			}]
-			x: 6.5d
-			y: 3.0d
+			x: 6.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
 			id: "04927E70A3D89ADD"
 			tasks: [{
-				icon: "immersiveengineering:fermenter"
+				icon: "advancedtfctech:grist_mill"
 				id: "6BBEC58C850E2FB4"
 				observe_type: 0
 				timer: 0L
 				title: "{gravitas.quest.steel.fermenter}"
-				to_observe: "immersiveengineering:fermenter"
+				to_observe: "advancedtfctech:grist_mill"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.grist_mill}"
 			x: 5.5d
 			y: 4.0d
-		}
-		{
-			dependencies: ["3047ACD6E16944B8"]
-			id: "64F55A708F5DCF13"
-			tasks: [{
-				icon: "immersiveengineering:refinery"
-				id: "1B2A58B6691A5918"
-				observe_type: 0
-				timer: 0L
-				title: "{gravitas.quest.steel.refinery}"
-				to_observe: "immersiveengineering:refinery"
-				type: "observation"
-			}]
-			x: 6.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["3047ACD6E16944B8"]
-			id: "14762EB8E1F28014"
-			tasks: [{
-				icon: "immersiveengineering:arc_furnace"
-				id: "11D0A2B392623A27"
-				observe_type: 0
-				timer: 0L
-				title: "{gravitas.quest.steel.arc_furnace}"
-				to_observe: "immersiveengineering:arc_furnace"
-				type: "observation"
-			}]
-			x: 6.5d
-			y: 1.0d
 		}
 		{
 			dependencies: ["7EC4991C351C49AC"]
@@ -625,98 +597,6 @@
 			}]
 			x: 4.5d
 			y: 2.5d
-		}
-		{
-			dependencies: ["5D2DB3C9AE40FC3D"]
-			id: "5FE587C58E99982B"
-			tasks: [{
-				id: "25EDECCD6EFBDE82"
-				item: "immersiveengineering:sample_drill"
-				type: "item"
-			}]
-			x: 3.0d
-			y: 5.5d
-		}
-		{
-			dependencies: ["7EC4991C351C49AC"]
-			hide_dependency_lines: true
-			id: "5D2DB3C9AE40FC3D"
-			tasks: [{
-				id: "67E88D66AFA01992"
-				item: {
-					Count: 1b
-					id: "immersiveengineering:survey_tools"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: 3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"3047ACD6E16944B8"
-				"5D2DB3C9AE40FC3D"
-			]
-			id: "1BCD9BCCCAF95A9E"
-			tasks: [
-				{
-					icon: "immersiveengineering:excavator"
-					id: "498CA4C1386AA5B5"
-					observe_type: 0
-					timer: 0L
-					title: "{gravitas.quest.steel.excavator}"
-					to_observe: "immersiveengineering:excavator"
-					type: "observation"
-				}
-				{
-					icon: "immersiveengineering:bucket_wheel"
-					id: "3DEB7DEA3E0AC48E"
-					observe_type: 0
-					timer: 0L
-					title: "{gravitas.quest.steel.bucket_wheel}"
-					to_observe: "immersiveengineering:bucket_wheel"
-					type: "observation"
-				}
-			]
-			x: 4.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["376F1F47067E2622"]
-			id: "0EBCB470229F3207"
-			tasks: [
-				{
-					id: "2D61A5074B0012B9"
-					item: "immersiveengineering:mold_plate"
-					type: "item"
-				}
-				{
-					id: "7769B4E4D238BBA3"
-					item: "immersiveengineering:mold_gear"
-					type: "item"
-				}
-				{
-					id: "14250626FF4F97DD"
-					item: "immersiveengineering:mold_rod"
-					type: "item"
-				}
-				{
-					id: "781C3DF1D3A2EC11"
-					item: "immersiveengineering:mold_bullet_casing"
-					type: "item"
-				}
-				{
-					id: "0C2512130FB226F7"
-					item: "immersiveengineering:mold_wire"
-					type: "item"
-				}
-			]
-			title: "{gravitas.quest.bronze.press}"
-			x: 4.5d
-			y: -0.5d
 		}
 	]
 	title: "{gravitas.chapters.5.title}"
