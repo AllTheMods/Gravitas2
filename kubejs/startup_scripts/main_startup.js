@@ -60,4 +60,5 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerTFCAnvilSchema(event)
   registerWoodencogFillingSchema(event)
   registerCreateMixingSchema(event)
+  registerAe2ChargerSchema(event)
 })
