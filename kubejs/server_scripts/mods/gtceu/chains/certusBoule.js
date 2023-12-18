@@ -199,4 +199,10 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
 
 
     event.replaceInput({mod: "ae2"}, 'ae2:certus_quartz_crystal', '#forge:gems/certus_quartz')
+    event.forEachRecipe({ mod: "ae2"}, (r) => {
+        let ingredient = r.json.asMap()?.ingredient
+        if (!ingredient || ingredient.get("item") != 'ae2:certus_quartz_crystal') return
+        ingredient.asMap().put("item", "#forge:gems/certus_quartz")
+        r.save()
+    })
 }
