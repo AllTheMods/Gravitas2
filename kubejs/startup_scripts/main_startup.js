@@ -61,4 +61,5 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerWoodencogFillingSchema(event)
   registerCreateMixingSchema(event)
   registerAe2ChargerSchema(event)
+  registerAe2InscriberSchema(event)
 })
