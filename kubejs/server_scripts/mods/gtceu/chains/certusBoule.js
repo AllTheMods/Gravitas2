@@ -197,5 +197,5 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     }).id("gregitas:inscriber/logic_processor")
 
-    event.replaceInput({ mod: "ae2" }, 'ae2:certus_quartz_crystal', '#forge:gems/certus_quartz')
+    event.replaceInput({ mod: "ae2" }, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
 }
