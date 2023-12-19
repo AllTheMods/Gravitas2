@@ -71,6 +71,8 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
     .key("modifiers")
     .defaultOptional()
   keys.stack = Component("outputItem").key("stack").defaultOptional()
+  keys.ingredient = Component("inputItem").key("ingredient")
+  keys.result = Component("outputItem").key("result")
 
   comps.item_stack_provider = Component("outputItem").or(builder(keys.stack, keys.modifiers).outputRole())
   keys.result_item = comps.item_stack_provider.key("result_item").defaultOptional().preferred("resultItem").allowEmpty()
