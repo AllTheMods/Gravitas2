@@ -389,4 +389,25 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: 'gtceu:lv_super_tank', 
     f: 'gtceu:lv_field_generator'
   })
+
+  const gemPowders = [
+    "amethyst",
+    "emerald",
+    "lapis_lazuli",
+    "opal",
+    "pyrite",
+    "ruby",
+    "sapphire",
+    "topaz"
+   ]
+
+   gemPowders.forEach(powder => {
+    event.recipes.gtceu.centrifuge("tfc_powder_to_dust/" + powder)
+    .itemInputs([`4x tfc:powder/${powder}`])
+    .itemOutputs([`gtceu:${powder.replace("_lazuli", "")}_impure_dust`])
+    .EUt(ULV).duration(200)
+   })
+
+
+
 }
