@@ -7,5 +7,5 @@ polarExpressEnabled = true
 #Range: 0 ~ 15
 locomotiveLightLevel = 14
 #Set to false to disable the message that informs you that you are using a beta version.
-showMessageBeta = true
+showMessageBeta = false
 
