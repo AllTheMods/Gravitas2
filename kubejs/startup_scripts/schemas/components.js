@@ -82,7 +82,7 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
   keys.apply_forge_bonus = Component("bool").key("apply_forging_bonus").preferred("applyBonus").defaultOptional()
   keys.result_fluid = Component("outputFluid").key("result_fluid").defaultOptional().preferred("resultFluid").allowEmpty()
   keys.use_durability = Component("bool").key("use_durability").optional(false).preferred("useDurability")
-  keys.chance = Component("doubleNumberRange", { min: 0, max: 1 }).key("chance").optional(1)
+  keys.chance = Component("floatNumberRange", { min: 0, max: 1 }).key("chance").optional(1)
   keys.fluid_or_item_output = Component("outputFluidOrItem").key("result")
   comps.fluid_tag = Component("tag", {
     registry: "fluid",
