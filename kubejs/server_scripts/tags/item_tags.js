@@ -266,4 +266,5 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add(`forge:dusts/${gem}`, `tfc:powder/${gem}`)
     event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
   })
+  event.add("forge:plates/aluminium", "#forge:plates/aluminum")
 }

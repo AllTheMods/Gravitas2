@@ -89,6 +89,10 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Simpleplanes
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_axe", "tfc:metal/axe/steel")
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/steel")
+  event.replaceOutput({ id: "simpleplanes:furnace_engine" }, "minecraft:blast_furnace", "railcraft:solid_fueled_firebox")
+  event.replaceOutput({ id: "simpleplanes:liquid_engine" }, "minecraft:blast_furnace", "railcraft:liquid_fueled_firebox")
+  event.replaceOutput({ id: "simpleplanes:electric_engine" }, "#forge:ingots/copper", "immersiveengineering:coil_lv")
+
   //Corail
 
   event.replaceInput({ mod: "tombstone"}, "minecraft:stone", "tfc:rock/raw/marble")

@@ -389,4 +389,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: 'gtceu:lv_super_tank', 
     f: 'gtceu:lv_field_generator'
   })
+  //ImmersiveEngineering
+  shaped('immersiveengineering:wirecutter', ['k k', ' b ', 's s'], {
+    k: 'tfc:metal/knife_blade/wrought_iron',
+    b: 'gtceu:brass_screw',
+    s: '#forge:rods/invar'
+  })
 }
