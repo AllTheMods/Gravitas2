@@ -200,7 +200,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
-
+  event.remove({ id: "immersiveengineering:crafting/wirecutter"})
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
@@ -228,6 +228,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "minecraft:coarse_dirt"})
   event.remove({ output: "minecraft:gravel"})
   event.remove({ output: "minecraft:mud"})
+  event.remove({ output: "minecraft:furnace"})
+  event.remove({ output: "minecraft:blast_furnace"})
 
   //EnderIO
   event.remove({ id: "enderio:stick"})

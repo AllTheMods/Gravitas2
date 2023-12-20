@@ -249,4 +249,5 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.remove("forge:dusts/iron", ["tfc:powder/hematite", "tfc:powder/magnetite", "tfc:powder/limonite"])
   event.remove("forge:dusts/copper", ["tfc:powder/malachite", "tfc:powder/tetrahedrite", "tfc:powder/native_copper"])
+  event.add("forge:plates/aluminium", "#forge:plates/aluminum")
 }
