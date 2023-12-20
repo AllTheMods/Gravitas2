@@ -228,6 +228,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       }
     })
   tfcSaplings.forEach((sapling) => {
+    shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
+               P: `tfc:wood/planks/${sapling}`,
+               S: `tfc:wood/planks/${sapling}_slab`,
+               L: `tfc:wood/stripped_log/${sapling}`
+     })
     //Greenhouse
     event.recipes.gtceu
       .greenhouse(`gregitas:${sapling}`)

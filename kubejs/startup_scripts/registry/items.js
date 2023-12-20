@@ -221,7 +221,7 @@ const tfcWoodTypes = [
   },
   {
     id: 'willow',
-    color: 0x313a09,
+    color: 0x3a430b,
     name: 'Willow'
   }
 ]
