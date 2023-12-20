@@ -93,6 +93,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.replaceInput({ mod: "tombstone"}, "minecraft:stone", "tfc:rock/raw/marble")
   //Apotheosis
+  event.replaceInput({ mod: "apotheosis"}, "minecraft:smooth_stone", "#forge:smooth_stone")
+  event.replaceInput({ mod: "apotheosis"}, "minecraft:honeycomb_block", "firmalife:jar/honey")
   event.replaceInput({ mod: "apotheosis"}, "minecraft:iron_axe", "tfc:metal/axe/red_steel")
   event.replaceInput({ mod: "apotheosis"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/blue_steel")
   //Create
