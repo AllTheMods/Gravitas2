@@ -51,7 +51,28 @@ const tfcMetallics = [
   'aluminium',
   'titanium'
 ]
-
+const tfcShipTypes = [
+  "acacia",
+  "ash",
+  "aspen",
+  "birch",
+  "blackwood",
+  "chestnut",
+  "douglas_fir",
+  "hickory",
+  "kapok",
+  "mangrove",
+  "maple",
+  "oak",
+  "palm",
+  "pine",
+  "rosewood",
+  "sequoia",
+  "spruce",
+  "sycamore",
+  "white_cedar",
+  "willow"
+]
 let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
 
@@ -118,4 +139,10 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Misc
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
 
+  //TFShips
+  tfcShipTypes.forEach((wood) => {
+    event.replaceInput({ id: `tfships:${wood}_cog`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
+    event.replaceInput({ id: `tfships:${wood}_brigg`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
+    event.replaceInput({ id: `tfships:${wood}_galley`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
+  })
 }
