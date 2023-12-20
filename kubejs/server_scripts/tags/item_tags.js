@@ -86,16 +86,7 @@ let gtceuIngots = [
   "yttrium",
   "yttrium_barium_cuprate"
 ]
-const gemPowders = [
- "amethyst",
- "emerald",
- "lapis_lazuli",
- "opal",
- "pyrite",
- "ruby",
- "sapphire",
- "topaz"
-]
+
 let tfcStonei = [
   "granite",
   "diorite",
@@ -172,10 +163,7 @@ let tfcMetalz = [
   'aluminium',
   'titanium'
 ]
-//Will be added to later
-let tfcDusts = [
-  'sulfur'
-]
+
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
@@ -253,17 +241,12 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add(`forge:double_ingots/${metal.id}`, `gregitas:double_${metal.id}_ingot`)
   })
 
-  tfcDusts.forEach((dust) => {
-    event.add(`forge:dusts/${dust}`, `tfc:powder/${dust}`)
-  })
   event.add("tfc:pickaxe_tier6", ["tfc:metal/pickaxe/red_steel", "tfc:metal/pickaxe/blue_steel"])
   event.get("smallships:cogs").removeAll()
   tfcSaplingz.forEach((wood) => {
     event.add("smallships:cogs", `tfships:${wood}_cog`)
   })
 
-  gemPowders.forEach((gem) => {
-    event.add(`forge:dusts/${gem}`, `tfc:powder/${gem}`)
-    event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
-  })
+  event.remove("forge:dusts/iron", ["tfc:powder/hematite", "tfc:powder/magnetite", "tfc:powder/limonite"])
+  event.remove("forge:dusts/copper", ["tfc:powder/malachite", "tfc:powder/tetrahedrite", "tfc:powder/native_copper"])
 }
