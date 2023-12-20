@@ -24,5 +24,4 @@ ClientEvents.lang("en_us", (event) => {
 ItemEvents.tooltip(event => {
   addModNameTooltipToCreativeTab(event)
   circuitTooltips(event)
-  boatToolTips(event)
 })

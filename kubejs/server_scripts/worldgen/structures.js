@@ -78,6 +78,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:brown_bed": "tfc:thatch_bed",
   "minecraft:magenta_bed": "tfc:thatch_bed",
   "minecraft:stone_slab": "tfc:rock/raw/granite_slab",
+  "minecraft:stone_brick_slab": "tfc:rock/bricks/granite_slab",
   "minecraft:smooth_stone_slab": "tfc:rock/smooth/granite_slab",
   "minecraft:polished_andesite": 'tfc:rock/smooth/andesite',
   "minecraft:bookshelf": "tfc:wood/planks/spruce_bookshelf",

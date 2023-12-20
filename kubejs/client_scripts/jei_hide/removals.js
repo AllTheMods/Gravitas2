@@ -47,6 +47,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^gtceu:${tool}_leggings/`)
     event.hide(`/^gtceu:${tool}_boots/`)
   })
+    event.hide(`/^minecraft:.*_boat/`)
+    event.hide(`/^tfc:wood/boat/.*/`)
 
     //IE
     event.hide("immersiveengineering:cokebrick")

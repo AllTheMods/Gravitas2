@@ -11,6 +11,7 @@ const toolsToRemove = [
   "red_steel"
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
+  event.remove({ id: "minecraft:andesite"})
   event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
