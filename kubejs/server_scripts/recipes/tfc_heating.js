@@ -31,7 +31,7 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
   event.forEachRecipe({ type: "tfc:heating" }, (/** @type {Special.Recipes.HeatingTfc}**/ r) => {
     let fluid = r.allValueMap.result_fluid.value
     if (!fluid) return
-    fluid.setAmount(convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("_sheet") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
     r.resultFluid(fluid)
   })
 
