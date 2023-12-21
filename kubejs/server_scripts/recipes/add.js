@@ -333,44 +333,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //Railcraft End
 
-
-  //Framed Compacting Drawers Start
-  shaped("framedcompactdrawers:framed_full_one", ["SPS", " C ", "SPS"], {
-    S: "#forge:screws/brass",
-    C: "#forge:chests/wooden",
-    P: "#forge:plates/brass"
-  })
-
-  shaped("2x framedcompactdrawers:framed_full_two", ["SPS", "C C", "SPS"], {
-    S: "#forge:screws/brass",
-    C: "#forge:chests/wooden",
-    P: "#forge:plates/brass"
-  })
-
-  shaped("4x framedcompactdrawers:framed_full_four", ["CSC", "SPS", "CSC"], {
-    S: "#forge:screws/brass",
-    C: "#forge:chests/wooden",
-    P: "gtceu:brass_double_plate"
-  })
-
-  shaped("framedcompactdrawers:framed_compact_drawer", ["PSP", "QDQ", "SRS"], {
-    P: "#forge:plates/brass",
-    S: "#forge:screws/brass",
-    Q: "minecraft:piston",
-    D: "#forge:chests/wooden",
-    R: "minecraft:repeater"
-  })
-
-  shaped("framedcompactdrawers:framed_drawer_controller", ["PSP", "TDQ", "SRS"], {
-    P: "#forge:plates/brass",
-    S: "#forge:screws/brass",
-    Q: "minecraft:piston",
-    D: "framedcompactdrawers:framed_compact_drawer",
-    R: "minecraft:repeater",
-    T: "#forge:rods/brass"
-  })
-  //Framed Compacting Drawers End
-
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
     e: 'gtceu:mv_emitter', 
