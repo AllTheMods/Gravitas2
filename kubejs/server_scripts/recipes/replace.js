@@ -151,4 +151,13 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.replaceInput({ id: `tfships:${wood}_brigg`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
     event.replaceInput({ id: `tfships:${wood}_galley`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
   })
+
+  //Storage Drawers
+  event.replaceInput({ id: "storagedrawers:controller"}, "minecraft:stone", "#forge:stone")
+  event.replaceInput({ id: "storagedrawers:controller"}, "minecraft:diamond", "create:pulse_repeater")
+  event.replaceInput({ id: "storagedrawers:controller_slave"}, "minecraft:stone", "#forge:stone")
+  event.replaceInput({ id: "storagedrawers:controller_slave"}, "minecraft:gold_ingot", "minecraft:repeater")
+  event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "minecraft:stone", "#forge:stone")
+  event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "#forge:ingots/iron", "#forge:plates/wrought_iron")
+
 }

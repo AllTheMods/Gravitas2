@@ -82,6 +82,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     //Railcraft
     event.hide(`/^railcraft:.*coke.*/`)
     
-    //FramedCompactingDrawers
-    event.hide(`/^framedcompactdrawers:.*_half_.*/`)
+    //Storage Drawers
+    event.hide(`/^storagedrawers:.*_trim/`)
+    event.hide(`/^storagedrawers:.*_full_.*/`)
+    event.hide(`/^storagedrawers:.*_half_.*/`)
 }
