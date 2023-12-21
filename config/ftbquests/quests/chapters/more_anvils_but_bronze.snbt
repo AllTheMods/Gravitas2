@@ -30,7 +30,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/bismuth_bronze"
+					id: "gtceu:bismuth_bronze_ingot"
 				}
 				type: "item"
 			}]
@@ -50,7 +50,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/black_bronze"
+					id: "gtceu:black_bronze_ingot"
 				}
 				type: "item"
 			}]
@@ -74,7 +74,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/bronze"
+					id: "gtceu:bronze_ingot"
 				}
 				type: "item"
 			}]
@@ -196,7 +196,16 @@
 				}
 				{
 					id: "1B7BB0F23E04AF1B"
-					item: "tfc:ore/kaolinite"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:kaolin_clay"
+					}
 					type: "item"
 				}
 			]
@@ -425,21 +434,6 @@
 			}]
 			x: -3.5d
 			y: -1.5d
-		}
-		{
-			dependencies: ["6C3A96EFF44E71A2"]
-			description: [
-				"{gravitas.quest.bronze.desc.drawers.1}"
-				"{gravitas.quest.bronze.desc.drawers.2}"
-			]
-			id: "44AF5291A8F8D02E"
-			tasks: [{
-				id: "7C322EC71BD4E8A4"
-				item: "framedcompactdrawers:framed_full_four"
-				type: "item"
-			}]
-			x: -0.5d
-			y: -3.0d
 		}
 		{
 			dependencies: ["29642302C9284C5F"]
