@@ -209,7 +209,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
   event.remove({ id: `/^ae2:tools\/.*_axe/`})
-  event.remove({ id: `/^ae2:tools\/.*_shovel/`})
+  event.remove({ id: `/^ae2:tools\/.*_spade/`})
   event.remove({ id: `/^ae2:tools\/.*_sword/`})
   event.remove({ id: `/^ae2:tools\/.*_hoe/`})
 
@@ -234,4 +234,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //EnderIO
   event.remove({ id: "enderio:stick"})
+
+  //Waystones
+  event.remove({ id: `/^waystones:.*/`})
 }
