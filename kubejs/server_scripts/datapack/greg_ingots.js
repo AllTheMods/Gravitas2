@@ -338,4 +338,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
   addTFCHeatCapability("gtceu:wrought_iron_bolt", 1.429, 921, 1228)
 
   addTFCSize("gregitas:double_invar_ingot", "large", "heavy")
+  
+  addTFCSize("gtceu:long_distance_fluid_pipeline", "large", "very_light")
+  addTFCSize("gtceu:long_distance_item_pipeline", "large", "very_light")
 }
