@@ -80,6 +80,9 @@
     "registry_name": "OFF",
     "mod_name": true
   },
+  "expatternprovider": {
+    "jade_wireless": true
+  },
   "apotheosis": {
     "adventure": true,
     "ench": true,
