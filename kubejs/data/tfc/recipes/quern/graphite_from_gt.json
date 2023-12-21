@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "gtceu:raw_graphite"
+  },
+  "result": {
+    "item": "tfc:powder/graphite",
+    "count": 4
+  }
+}
