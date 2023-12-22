@@ -243,6 +243,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //EnderIO
   event.remove({ id: "enderio:stick"})
+  event.remove({ id: "enderio:sag_milling/blaze_powder"})
 
   //Waystones
   event.remove({ id: `/^waystones:.*/`})
