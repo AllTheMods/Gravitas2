@@ -254,4 +254,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.remove("forge:ingots/iron", "tfc:metal/ingot/wrought_iron")
   event.add("forge:ingots/iron", "tfc:metal/ingot/cast_iron")
+
+  event.remove("tfc:unfired_pottery", "woodencog:unfired_fireclay_crucible")
 }
