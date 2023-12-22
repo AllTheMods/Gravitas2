@@ -748,9 +748,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     //Removal & Misc
 
-    event.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/small_tool_handle')
+    event.recipes.kubejs.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/small_tool_handle')
 
-    event.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/wood_long_rod')
+    event.recipes.kubejs.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/wood_long_rod')
 
     GTRegistries.MATERIALS.forEach(id => {
         event.remove(`gtceu:shaped/file_${id}`)
