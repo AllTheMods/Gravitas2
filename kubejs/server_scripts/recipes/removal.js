@@ -56,6 +56,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ id: "gtceu:shapeless/blaze_rod_to_powder"})
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
     event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
+    event.remove({ id: "gtceu:macerator/macerate_blaze_rod"})
     event.remove(
         [
             {
