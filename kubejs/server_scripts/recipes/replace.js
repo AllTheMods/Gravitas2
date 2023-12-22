@@ -106,7 +106,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceInput({ mod: "create" }, "#minecraft:planks", "#forge:treated_wood")
 
-
   //Functional Storage
   event.replaceInput(
     { id: "functionalstorage:framed_storage_controller" },
@@ -144,6 +143,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Misc
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
+  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
+
 
   //TFShips
   tfcShipTypes.forEach((wood) => {

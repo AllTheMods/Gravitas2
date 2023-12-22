@@ -138,6 +138,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
           }
         })
     })
+    event.shapeless('2x minecraft:blaze_powder', [
+      '#forge:tools/mortars',
+      "minecraft:blaze_rod"
+    ])
 
   event.custom({
     type: "create:pressing",

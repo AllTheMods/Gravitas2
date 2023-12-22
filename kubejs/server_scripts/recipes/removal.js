@@ -53,6 +53,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     //GT General
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
+    event.remove({ id: "gtceu:shapeless/blaze_rod_to_powder"})
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
     event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
     event.remove(
@@ -114,7 +115,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
-
+  event.remove({ id: "create:crushing/blaze_rod"})
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
@@ -143,6 +144,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
+  event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
@@ -234,6 +236,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "minecraft:blast_furnace"})
   event.remove({ id: "minecraft:andesite" })
   event.remove({ id: "minecraft:brick" })
+  event.remove({ id: "minecraft:blaze_powder"})
+
+  //PM
+  event.remove({ id: "potionsmaster:blaze_powder"})
 
   //EnderIO
   event.remove({ id: "enderio:stick"})
