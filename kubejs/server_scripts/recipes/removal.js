@@ -11,7 +11,6 @@ const toolsToRemove = [
   "red_steel"
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
-  event.remove({ id: "minecraft:andesite"})
   event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
@@ -27,6 +26,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
+  event.remove({ id: "gtceu:alloy_smelter/form_brick" })
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -232,6 +232,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "minecraft:mud"})
   event.remove({ output: "minecraft:furnace"})
   event.remove({ output: "minecraft:blast_furnace"})
+  event.remove({ id: "minecraft:andesite" })
+  event.remove({ id: "minecraft:brick" })
 
   //EnderIO
   event.remove({ id: "enderio:stick"})
