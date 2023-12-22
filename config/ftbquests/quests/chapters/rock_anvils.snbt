@@ -1318,28 +1318,24 @@
 					id: "3375A5CA9F1B1FF3"
 					item: {
 						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:castable_pickaxe_heads"
 						}
-						id: "tfc:metal/pickaxe_head/copper"
 					}
+					title: "Any #tfc:castable_pickaxe_heads"
 					type: "item"
 				}
 				{
 					id: "158CE6F45E6BCB20"
 					item: {
 						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:castable_propick_heads"
 						}
-						id: "tfc:metal/propick_head/copper"
 					}
+					title: "Any #tfc:castable_propick_heads"
 					type: "item"
 				}
 			]

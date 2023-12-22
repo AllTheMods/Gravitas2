@@ -242,6 +242,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   })
 
   event.add("tfc:pickaxe_tier6", ["tfc:metal/pickaxe/red_steel", "tfc:metal/pickaxe/blue_steel"])
+  event.add("tfc:castable_pickaxe_heads", ["tfc:metal/pickaxe_head/copper", "tfc:metal/pickaxe_head/bronze", "tfc:metal/pickaxe_head/black_bronze", "tfc:metal/pickaxe_head/bismuth_bronze"])
+  event.add("tfc:castable_propick_heads", ["tfc:metal/propick_head/copper", "tfc:metal/propick_head/bronze", "tfc:metal/propick_head/black_bronze", "tfc:metal/propick_head/bismuth_bronze"])
   event.get("smallships:cogs").removeAll()
   tfcSaplingz.forEach((wood) => {
     event.add("smallships:cogs", `tfships:${wood}_cog`)
