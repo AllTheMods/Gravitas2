@@ -777,4 +777,23 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.remove(`gtceu:shaped/stick_long_${id}`)
         event.remove(`gtceu:shaped/stick_long_stick_${id}`)
     })
+
+    event.forEachRecipe({id: /gtceu:shaped\//}, r => {
+        let isTool = false
+        r.originalRecipeIngredients.forEach(ingredient => {
+            if (Ingredient.of(["#forge:tools/hammers", "#forge:tools/saws", "#forge:tools/knives"]).test(ingredient)) {
+                isTool = true
+            }
+        })
+        isTool && event.recipes.kubejs.shaped(r.json.asMap().result, r.json.asMap().pattern,r.json.asMap().key).damageIngredient(["#forge:tools"]).id(r.getId())
+    })
+    event.forEachRecipe({id: /gtceu:shapeless\//}, r => {
+        let isTool = false
+        r.originalRecipeIngredients.forEach(ingredient => {
+            if (Ingredient.of(["#forge:tools/hammers", "#forge:tools/saws", "#forge:tools/knives"]).test(ingredient)) {
+                isTool = true
+            }
+        })
+        isTool && event.recipes.kubejs.shapeless(r.json.asMap().result, r.json.asMap().ingredients).damageIngredient(["#forge:tools"]).id(r.getId())
+    })
 }
