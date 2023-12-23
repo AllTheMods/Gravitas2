@@ -147,11 +147,13 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
           palette.add(struc.position, getState(newBlock))
           return
         }
-        // let newWoodBlock = getWoodReplacement(struc.block.idLocation)
-        // if (newWoodBlock) {
-        //   palette.add(struc.position, getState(newWoodBlock, struc.state()))
-        //   return
-        // }
+        if (!struc.id.includes("village")) {
+          let newWoodBlock = getWoodReplacement(struc.block.idLocation)
+          if (newWoodBlock) {
+            palette.add(struc.position, getState(newWoodBlock, struc.state()))
+            return
+          }
+        }
       })
     })
   }
