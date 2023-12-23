@@ -171,11 +171,13 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add('tfc:copper_pieces', ["tfc:ore/small_native_copper", "tfc:ore/small_malachite", "tfc:ore/small_tetrahedrite"])
   event.add('forge:thorium', ["gtceu:raw_thorium", "thoriumreactors:thorium", "create_new_age:thorium"])
   event.add('forge:ingots/niobium', ["thoriumreactors:niob_ingot"])
-  // event.add('forge:tools/saws', ["#tfc:saws"])
-
-  // event.add("forge:tools/hammers", "#tfc:hammers")
-
+  
+  event.add('forge:tools/saws', ["#tfc:saws"])
+  event.add("forge:tools/hammers", "#tfc:hammers")
   event.add('forge:tools/knives', ["#tfc:knives"])
+
+  event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/knives", "#forge:tools/files"])
+
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })

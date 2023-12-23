@@ -117,6 +117,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
   event.remove({ id: "create:crushing/blaze_rod"})
+  event.remove({ id: "create:crafting/kinetics/fluid_tank"})
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
