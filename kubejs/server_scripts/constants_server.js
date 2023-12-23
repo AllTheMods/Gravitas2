@@ -10,6 +10,11 @@ const $CraftingComponent = Java.loadClass("com.gregtechceu.gtceu.data.recipe.Cra
 const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
 const $Fluid = Java.loadClass("net.minecraft.world.level.material.Fluid")
 const $UnboundFluidStackJS = Java.loadClass("dev.latvian.mods.kubejs.fluid.UnboundFluidStackJS")
+const $Class = Java.loadClass("java.lang.Class")
+const $ChunkProvider = Java.loadClass("net.dries007.tfc.world.chunkdata.ChunkDataProvider")
+const $ForestConfig = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestConfig")
+const $ForestFeature = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestFeature")
+// const $BlockContainerJS = Java.loadClass("dev.latvian.mods.kubejs.level.BlockContainerJS")
 
 let enderTC = [
   {
@@ -128,4 +133,62 @@ function unwrapValue(value) {
     return value
   }
   return unwrapValue(newValue)
+}
+
+function getState(block, state) {
+  if (state == null) return Block.getBlock(block).defaultBlockState()
+  return Block.getBlock(block).withPropertiesOf(state)
+}
+
+function getWoodReplacement(block, tfcTree) {
+  let item = block
+  if (!item.namespace.equals("minecraft")) return
+  for (let i = 0; i < regexArray.length; i++) {
+    let regExp = regexArray[i][0]
+    let tfcString = regexArray[i][1]
+    let match = item.path.match(regExp)
+    if (!match) continue
+    if (tfcTree) {
+      let newPath = new String(item.path).replace(match[1], tfcTree.path.replace("tree/", ""))
+      let newItem = newPath.replace(regExp, tfcString)
+      return newItem
+    } else {
+      if (!tfcWoodVanillaToTFC[match[1]]) return
+      let newPath = new String(item.path).replace(match[1], tfcWoodVanillaToTFC[match[1]])
+      let newItem = newPath.replace(regExp, tfcString)
+      return newItem
+    }
+  }
+}
+
+const regexArray = [
+  [new RegExp(/^stripped_(\w+?)_log$/), "tfc:wood/stripped_log/$1"],
+  [new RegExp(/^(\w+?)_log$/), "tfc:wood/log/$1"],
+  [new RegExp(/^stripped_(\w+?)_wood$/), "tfc:wood/stripped_wood/$1"],
+  [new RegExp(/^(\w+?)_leaves$/), "tfc:wood/leaves/$1"],
+  [new RegExp(/^(\w+?)_wood$/), "tfc:wood/wood/$1"],
+  [new RegExp(/^(\w+?)_sapling$/), "tfc:wood/sapling/$1"],
+  [new RegExp(/^(\w+?)_planks$/), "tfc:wood/planks/$1"],
+  [new RegExp(/^(\w+?)_stairs$/), "tfc:wood/planks/$1_stairs"],
+  [new RegExp(/^(\w+?)_slab$/), "tfc:wood/planks/$1_slab"],
+  [new RegExp(/^(\w+?)_fence$/), "tfc:wood/planks/$1_fence"],
+  [new RegExp(/^(\w+?)_fence_gate$/), "tfc:wood/planks/$1_fence_gate"],
+  [new RegExp(/^(\w+?)_door$/), "tfc:wood/planks/$1_door"],
+  [new RegExp(/^(\w+?)_trapdoor$/), "tfc:wood/planks/$1_trapdoor"],
+  [new RegExp(/^(\w+?)_pressure_plate$/), "tfc:wood/planks/$1_pressure_plate"],
+  [new RegExp(/^(\w+?)_button$/), "tfc:wood/planks/$1_button"]
+]
+
+const tfcWoodVanillaToTFC = {
+  oak: "oak",
+  spruce: "spruce",
+  birch: "birch",
+  jungle: "palm",
+  acacia: "acacia",
+  dark_oak: "hickory",
+  // no crimson
+  // no warped
+  mangrove: "mangrove",
+  // no bamboo
+  cherry: "white_cedar"
 }
