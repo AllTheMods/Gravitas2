@@ -51,7 +51,28 @@ const tfcMetallics = [
   'aluminium',
   'titanium'
 ]
-
+const tfcShipTypes = [
+  "acacia",
+  "ash",
+  "aspen",
+  "birch",
+  "blackwood",
+  "chestnut",
+  "douglas_fir",
+  "hickory",
+  "kapok",
+  "mangrove",
+  "maple",
+  "oak",
+  "palm",
+  "pine",
+  "rosewood",
+  "sequoia",
+  "spruce",
+  "sycamore",
+  "white_cedar",
+  "willow"
+]
 let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
 
@@ -68,16 +89,25 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Simpleplanes
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_axe", "tfc:metal/axe/steel")
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/steel")
+  event.replaceOutput({ id: "simpleplanes:furnace_engine" }, "minecraft:blast_furnace", "railcraft:solid_fueled_firebox")
+  event.replaceOutput({ id: "simpleplanes:liquid_engine" }, "minecraft:blast_furnace", "railcraft:liquid_fueled_firebox")
+  event.replaceOutput({ id: "simpleplanes:electric_engine" }, "#forge:ingots/copper", "immersiveengineering:coil_lv")
+
   //Corail
 
   event.replaceInput({ mod: "tombstone"}, "minecraft:stone", "tfc:rock/raw/marble")
   //Apotheosis
+  event.replaceInput({ mod: "apotheosis"}, "minecraft:smooth_stone", "#forge:smooth_stone")
+  event.replaceInput({ mod: "apotheosis"}, "minecraft:honeycomb_block", "firmalife:jar/honey")
   event.replaceInput({ mod: "apotheosis"}, "minecraft:iron_axe", "tfc:metal/axe/red_steel")
   event.replaceInput({ mod: "apotheosis"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/blue_steel")
   //Create
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceInput({ mod: "create" }, "#minecraft:planks", "#forge:treated_wood")
+  event.forEachRecipe({id: "woodencog:crafting/kinetics/fluid_tank"}, r => {
+    event.recipes.kubejs.shaped("create:fluid_tank", r.json.asMap().pattern, r.json.asMap().key).replaceIngredient("#tfc:barrels", Item.empty).id(r.getId())
+  })
 
 
   //Functional Storage
@@ -117,5 +147,27 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Misc
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
+  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
 
+
+  //TFShips
+  tfcShipTypes.forEach((wood) => {
+    event.replaceInput({ id: `tfships:${wood}_cog`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
+    event.replaceInput({ id: `tfships:${wood}_brigg`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
+    event.replaceInput({ id: `tfships:${wood}_galley`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
+  })
+
+  //Storage Drawers
+  event.replaceInput({ id: "storagedrawers:controller"}, "minecraft:stone", "#forge:stone")
+  event.replaceInput({ id: "storagedrawers:controller"}, "minecraft:diamond", "create:pulse_repeater")
+  event.replaceInput({ id: "storagedrawers:controller_slave"}, "minecraft:stone", "#forge:stone")
+  event.replaceInput({ id: "storagedrawers:controller_slave"}, "minecraft:gold_ingot", "minecraft:repeater")
+  event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "minecraft:stone", "#forge:stone")
+  event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "#forge:ingots/iron", "#forge:plates/wrought_iron")
+
+
+  //Integrated Dynamics
+  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:iron_block", "tfc:metal/anvil/wrought_iron")
+  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:stick", "#forge:rods/wrought_iron")
 }

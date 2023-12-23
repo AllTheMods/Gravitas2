@@ -55,6 +55,11 @@ const tfcSaplings = [
   "willow"
 ]
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
+  const tfc = event.recipes.tfc
+  const shaped = event.recipes.minecraft.crafting_shaped
+
+  // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
+  /*
   event.custom({
     type: "tfc:anvil",
     input: { tag: "forge:ingots/wrought_iron" },
@@ -65,7 +70,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     tier: 3,
     rules: ["bend_last", "draw_second_last", "draw_third_last"]
   })
-
+  */
+  event.recipes.tfc.anvil(
+    "treetap:tap",
+    "#forge:ingots/copper",
+    ["bend_last", "bend_second_last", "bend_third_last"])
+    .tier(1)
+    .applyBonus(false)
+    .id("gregitas:anvil/treetap")
+  /*
   event.custom({
     type: "tfc:anvil",
     input: { tag: "forge:ingots/copper" },
@@ -76,10 +89,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     tier: 1,
     rules: ["bend_last", "bend_second_last", "bend_third_last"]
   })
+  */
 
-  event.shaped("tfc:bloomery", ["BBB", "B B", "BBB"], {
+  shaped("tfc:bloomery", ["BBB", "B B", "BBB"], {
     B: "#forge:double_sheets/any_bronze"
   })
+
   event.custom({
     type: "tfc:glassworking",
     operations: ["blow", "blow", "roll", "pinch", "saw"],
@@ -93,7 +108,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Create Start
 
-  event.shaped("create:millstone", [" M ", " G ", " Q "], {
+  shaped("create:millstone", [" M ", " G ", " Q "], {
     M: "tfc:handstone",
     G: "create:cogwheel",
     Q: "tfc:quern"
@@ -123,6 +138,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
           }
         })
     })
+    event.shapeless('2x minecraft:blaze_powder', [
+      '#forge:tools/mortars',
+      "minecraft:blaze_rod"
+    ])
 
   event.custom({
     type: "create:pressing",
@@ -157,7 +176,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create End
 
   //GTCEU Start
-  event.shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
+  shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
     H: "#forge:tools/hammers",
     R: "#forge:rods/steel",
     S: "#forge:screws/steel",
@@ -165,7 +184,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "gtceu:firebricks",
     D: "#forge:tools/screwdrivers"
   })
-  event.shaped("2x gtceu:coke_oven_bricks", ["BMB","MBM","BMB"], {
+  shaped("2x gtceu:coke_oven_bricks", ["BMB","MBM","BMB"], {
     M: "tfc:mortar",
     B: "gtceu:coke_oven_brick"
   })
@@ -213,6 +232,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       }
     })
   tfcSaplings.forEach((sapling) => {
+    shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
+               P: `tfc:wood/planks/${sapling}`,
+               S: `tfc:wood/planks/${sapling}_slab`,
+               L: `tfc:wood/stripped_log/${sapling}`
+     })
     //Greenhouse
     event.recipes.gtceu
       .greenhouse(`gregitas:${sapling}`)
@@ -259,8 +283,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .EUt(LV)
   })
 
-  event.shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
-  event.shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
+  shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
+  shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
 
   event.custom({
     type: "tfc:barrel_sealed",
@@ -294,65 +318,27 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .addCondition(RockBreakerCondition.INSTANCE)
   })
   //Railcraft Start
-  event.shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {
+  shaped("railcraft:solid_fueled_firebox", ["BBB", "BCB", "BFB"], {
     B: "minecraft:brick",
     C: "minecraft:fire_charge",
     F: "tfc:crucible"
   })
 
-  event.shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
+  shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "#forge:chests/wooden"
   })
 
-  event.shaped("framedblocks:framed_secret_storage", ["RFR", "FCF", "RFR"], {
+  shaped("framedblocks:framed_secret_storage", ["RFR", "FCF", "RFR"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "framedblocks:framed_chest"
   })
   //Railcraft End
 
-
-  //Framed Compacting Drawers Start
-  event.shaped("framedcompactdrawers:framed_full_one", ["SPS", " C ", "SPS"], {
-    S: "#forge:screws/brass",
-    C: "#forge:chests/wooden",
-    P: "#forge:plates/brass"
-  })
-
-  event.shaped("2x framedcompactdrawers:framed_full_two", ["SPS", "C C", "SPS"], {
-    S: "#forge:screws/brass",
-    C: "#forge:chests/wooden",
-    P: "#forge:plates/brass"
-  })
-
-  event.shaped("4x framedcompactdrawers:framed_full_four", ["CSC", "SPS", "CSC"], {
-    S: "#forge:screws/brass",
-    C: "#forge:chests/wooden",
-    P: "#forge:plates/double/brass"
-  })
-
-  event.shaped("framedcompactdrawers:framed_compact_drawer", ["PSP", "QDQ", "SRS"], {
-    P: "#forge:plates/brass",
-    S: "#forge:screws/brass",
-    Q: "minecraft:piston",
-    D: "#forge:chests/wooden",
-    R: "minecraft:repeater"
-  })
-
-  event.shaped("framedcompactdrawers:framed_drawer_controller", ["PSP", "TDQ", "SRS"], {
-    P: "#forge:plates/brass",
-    S: "#forge:screws/brass",
-    Q: "minecraft:piston",
-    D: "framedcompactdrawers:framed_compact_drawer",
-    R: "minecraft:repeater",
-    T: "#forge:rods/brass"
-  })
-  //Framed Compacting Drawers End
-
   //Ender Tanks & Chests
-  event.shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
+  shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
     e: 'gtceu:mv_emitter', 
     O: 'gtceu:obsidian_plate', 
     s: 'gtceu:mv_sensor', 
@@ -361,7 +347,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     f: 'gtceu:lv_field_generator'
   })
 
-  event.shaped('endertanks:ender_tank', ['eOs', 'pTp', 'OfO'], {
+  shaped('endertanks:ender_tank', ['eOs', 'pTp', 'OfO'], {
     e: 'gtceu:mv_emitter', 
     O: 'gtceu:obsidian_plate', 
     s: 'gtceu:mv_sensor', 
@@ -369,4 +355,31 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: 'gtceu:lv_super_tank', 
     f: 'gtceu:lv_field_generator'
   })
+  //ImmersiveEngineering
+  shaped('immersiveengineering:wirecutter', ['k k', ' b ', 's s'], {
+    k: 'tfc:metal/knife_blade/wrought_iron',
+    b: 'gtceu:brass_screw',
+    s: '#forge:rods/invar'
+  })
+
+  const gemPowders = [
+    "amethyst",
+    "emerald",
+    "lapis_lazuli",
+    "opal",
+    "pyrite",
+    "ruby",
+    "sapphire",
+    "topaz"
+   ]
+
+   gemPowders.forEach(powder => {
+    event.recipes.gtceu.centrifuge("tfc_powder_to_dust/" + powder)
+    .itemInputs([`4x tfc:powder/${powder}`])
+    .itemOutputs([`gtceu:${powder.replace("_lazuli", "")}_impure_dust`])
+    .EUt(ULV).duration(200)
+   })
+
+
+
 }

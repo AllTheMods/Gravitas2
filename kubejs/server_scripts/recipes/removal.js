@@ -26,6 +26,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
+  event.remove({ id: "gtceu:alloy_smelter/form_brick" })
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -52,8 +53,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     //GT General
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
+    event.remove({ id: "gtceu:shapeless/blaze_rod_to_powder"})
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
     event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
+    event.remove({ id: "gtceu:macerator/macerate_blaze_rod"})
     event.remove(
         [
             {
@@ -113,7 +116,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
-
+  event.remove({ id: "create:crushing/blaze_rod"})
+  event.remove({ id: "create:crafting/kinetics/fluid_tank"})
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
@@ -142,10 +146,12 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Integrated Dynamics
   event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
+  event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
   event.remove({ mod: "railcraft", id: `/^railcraft:.*coke.*/`})
+  event.remove({ mod: "railcraft", id: `/^railcraft:crusher\/.*cobbleston.*/`})
 
   //Woodencog
   event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog" })
@@ -197,9 +203,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^immersiveengineering:crafting\/shovel_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
+  event.remove({ id: `/^immersiveengineering:crafting\/stick_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
-
+  event.remove({ id: "immersiveengineering:crafting/wirecutter"})
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
@@ -207,7 +214,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
   event.remove({ id: `/^ae2:tools\/.*_axe/`})
-  event.remove({ id: `/^ae2:tools\/.*_shovel/`})
+  event.remove({ id: `/^ae2:tools\/.*_spade/`})
   event.remove({ id: `/^ae2:tools\/.*_sword/`})
   event.remove({ id: `/^ae2:tools\/.*_hoe/`})
 
@@ -227,4 +234,25 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "minecraft:coarse_dirt"})
   event.remove({ output: "minecraft:gravel"})
   event.remove({ output: "minecraft:mud"})
+  event.remove({ output: "minecraft:furnace"})
+  event.remove({ output: "minecraft:blast_furnace"})
+  event.remove({ id: "minecraft:andesite" })
+  event.remove({ id: "minecraft:brick" })
+  event.remove({ id: "minecraft:blaze_powder"})
+
+  //PM
+  event.remove({ id: "potionsmaster:blaze_powder"})
+
+  //EnderIO
+  event.remove({ id: "enderio:stick"})
+  event.remove({ id: "enderio:sag_milling/blaze_powder"})
+
+  //Waystones
+  event.remove({ id: `/^waystones:.*/`})
+
+  //Astikorcarts
+  event.remove({ id: "astikorcarts:plow"})
+  event.remove({ id: "astikorcarts:animal_cart"})
+  event.remove({ id: "astikorcarts:supply_cart"})
+  event.remove({ id: "astikorcarts:wheel"})
 }

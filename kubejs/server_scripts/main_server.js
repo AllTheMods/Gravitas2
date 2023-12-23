@@ -56,13 +56,13 @@ MoreJSEvents.structureLoad((event) => {
 MoreJSEvents.structureAfterPlace((event) => {
   replaceGoldBlocksWithPiles(event)
   runErosionFeature(event)
+  replaceVillagesWoodAccordingToClimate(event)
 })
 
 ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
-  convertMeltValuesFromWoodencog(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {

@@ -234,6 +234,8 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.shapeless('gtceu:flint_mortar', ['gregitas:stone_bowl', 'gregitas:flint_pestle'])
 
         gtMortars.forEach((metal) => {
+            event.recipes.tfc.anvil(`gregitas:${metal.id}_pestle`, metal.double, ['hit_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            /*
             event.custom({
                 type: 'tfc:anvil',
                 input: { 
@@ -250,12 +252,14 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'shrink_last'
                 ]
               })
-        
+            */
             event.shapeless(`gtceu:${metal.id}_mortar`, ['gregitas:stone_bowl', `gregitas:${metal.id}_pestle`]).id(`gregitas:shapeless/${metal.id}_mortar`)
         }) 
     
     //File
         gtceuToolsTFC.forEach((metal) => {
+            event.recipes.tfc.anvil(`gregitas:${metal.id}_file_head`, metal.double, ['hit_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            /*
             event.custom({
                 type: 'tfc:anvil',
                 input: { 
@@ -272,7 +276,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'shrink_last'
                 ]
             })
-
+            */
             event.shaped(`gtceu:${metal.id}_file`, ['F', 'H'], {F: `gregitas:${metal.id}_file_head`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_file`)
         })
     //Screwdriver
@@ -291,7 +295,8 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     item: `gtceu:${metal.id}_long_rod`  
                 }
             })
-    
+            event.recipes.tfc.anvil(`gtceu:${metal.id}_screwdriver_tip`, `gtceu:${metal.id}_long_rod`, ['draw_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            /*
             event.custom({
                 type: "tfc:anvil",
                 input: { 
@@ -308,7 +313,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'shrink_last'
                 ]
             })
-
+            */
             event.shaped(`gtceu:${metal.id}_screwdriver`, ['S', 'H'], {S: `gtceu:${metal.id}_screwdriver_tip`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_screwdriver`)
         })
         
@@ -743,9 +748,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     //Removal & Misc
 
-    event.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/small_tool_handle')
+    event.recipes.kubejs.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/small_tool_handle')
 
-    event.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/wood_long_rod')
+    event.recipes.kubejs.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/wood_long_rod')
 
     GTRegistries.MATERIALS.forEach(id => {
         event.remove(`gtceu:shaped/file_${id}`)
@@ -771,5 +776,24 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.remove(`gtceu:shaped/stick_${id}`)
         event.remove(`gtceu:shaped/stick_long_${id}`)
         event.remove(`gtceu:shaped/stick_long_stick_${id}`)
+    })
+
+    event.forEachRecipe({id: /gtceu:shaped\//}, r => {
+        let isTool = false
+        r.originalRecipeIngredients.forEach(ingredient => {
+            if (Ingredient.of(["#forge:tools/hammers", "#forge:tools/saws", "#forge:tools/knives"]).test(ingredient)) {
+                isTool = true
+            }
+        })
+        isTool && event.recipes.kubejs.shaped(r.json.asMap().result, r.json.asMap().pattern,r.json.asMap().key).damageIngredient(["#forge:tools"]).id(r.getId())
+    })
+    event.forEachRecipe({id: /gtceu:shapeless\//}, r => {
+        let isTool = false
+        r.originalRecipeIngredients.forEach(ingredient => {
+            if (Ingredient.of(["#forge:tools/hammers", "#forge:tools/saws", "#forge:tools/knives"]).test(ingredient)) {
+                isTool = true
+            }
+        })
+        isTool && event.recipes.kubejs.shapeless(r.json.asMap().result, r.json.asMap().ingredients).damageIngredient(["#forge:tools"]).id(r.getId())
     })
 }

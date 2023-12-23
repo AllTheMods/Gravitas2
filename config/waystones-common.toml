@@ -56,7 +56,7 @@
 	#Allowed Values: ALLOW, GLOBAL_ONLY, DENY
 	dimensionalWarp = "ALLOW"
 	#List of dimensions that players are allowed to warp cross-dimension from and to. If left empty, all dimensions except those in dimensionalWarpDenyList are allowed.
-	dimensionalWarpAllowList = []
+	dimensionalWarpAllowList = ["minecraft:overworld", "minecraft:the_nether"]
 	#List of dimensions that players are not allowed to warp cross-dimension from and to. Only used if dimensionalWarpAllowList is empty.
 	dimensionalWarpDenyList = []
 	#Set to true if players should be able to teleport between waystones by simply right-clicking a waystone.
@@ -108,7 +108,7 @@
 	#Range: > -2147483648
 	frequency = 25
 	#List of dimensions that waystones are allowed to spawn in through world gen. If left empty, all dimensions except those in worldGenDimensionDenyList are used.
-	dimensionAllowList = ["minecraft:overworld", "minecraft:the_nether", "minecraft:the_end"]
+	dimensionAllowList = ["minecraft:overworld", "minecraft:the_nether"]
 	#List of dimensions that waystones are not allowed to spawn in through world gen. Only used if worldGenDimensionAllowList is empty.
 	dimensionDenyList = []
 	#Set to 'PRESET_FIRST' to first use names from the custom names list. Set to 'PRESET_ONLY' to use only those custom names. Set to 'MIXED' to have some waystones use custom names, and others random names.

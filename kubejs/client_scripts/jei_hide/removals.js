@@ -47,6 +47,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^gtceu:${tool}_leggings/`)
     event.hide(`/^gtceu:${tool}_boots/`)
   })
+    event.hide(`/^minecraft:.*_boat/`)
+    event.hide(`/^tfc:wood/boat/.*/`)
 
     //IE
     event.hide("immersiveengineering:cokebrick")
@@ -79,4 +81,15 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     //Railcraft
     event.hide(`/^railcraft:.*coke.*/`)
+    
+    //Storage Drawers
+    event.hide(`/^storagedrawers:.*_trim/`)
+    event.hide(`/^storagedrawers:.*_full_.*/`)
+    event.hide(`/^storagedrawers:.*_half_.*/`)
+
+    //Astikor Carts
+    event.hide("astikorcarts:plow")
+    event.hide("astikorcarts:animal_cart")
+    event.hide("astikorcarts:supply_cart")
+    event.hide("astikorcarts:wheel")
 }
