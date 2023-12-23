@@ -162,4 +162,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "minecraft:stone", "#forge:stone")
   event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "#forge:ingots/iron", "#forge:plates/wrought_iron")
 
+
+  //Integrated Dynamics
+  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:iron_block", "tfc:metal/anvil/wrought_iron")
+  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:stick", "#forge:rods/wrought_iron")
 }
