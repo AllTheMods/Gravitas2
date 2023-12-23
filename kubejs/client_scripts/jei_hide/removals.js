@@ -86,4 +86,10 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^storagedrawers:.*_trim/`)
     event.hide(`/^storagedrawers:.*_full_.*/`)
     event.hide(`/^storagedrawers:.*_half_.*/`)
+
+    //Astikor Carts
+    event.hide("astikorcarts:plow")
+    event.hide("astikorcarts:animal_cart")
+    event.hide("astikorcarts:supply_cart")
+    event.hide("astikorcarts:wheel")
 }

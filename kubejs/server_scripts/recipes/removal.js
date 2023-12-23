@@ -248,4 +248,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Waystones
   event.remove({ id: `/^waystones:.*/`})
+
+  //Astikorcarts
+  event.remove({ id: "astikorcarts:plow"})
+  event.remove({ id: "astikorcarts:animal_cart"})
+  event.remove({ id: "astikorcarts:supply_cart"})
+  event.remove({ id: "astikorcarts:wheel"})
 }
