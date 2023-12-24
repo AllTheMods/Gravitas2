@@ -24,7 +24,7 @@
 	#List of dimensions to generate ores: lithium, platinum, thorium, tin, magnesium, silver, cobalt, uranium, zinc, boron, lead
 	dimensions = [[0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848], [0, -4848]]
 	#Enable ore registration: lithium, platinum, thorium, tin, magnesium, silver, cobalt, uranium, zinc, boron, lead
-	register_ore = [true, true, true, true, true, true, true, true, true, true, true]
+	register_ore = [false, false, false, false, false, false, false, false, false, false, false]
 	#Ore blocks per vein. Order: lithium, platinum, thorium, tin, magnesium, silver, cobalt, uranium, zinc, boron, lead
 	vein_size = [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
 	#Veins in chunk. Order: lithium, platinum, thorium, tin, magnesium, silver, cobalt, uranium, zinc, boron, lead
@@ -264,7 +264,7 @@
 #Forge Tag priority
 [forge_tag_priority]
 	#Priority of mods to resolve forge tags to itemstack.
-	mods_priority = ["nuclearcraft", "mekanism", "immersiveengineering", "tconstruct"]
+	mods_priority = ["gtceu", "nuclearcraft", "mekanism", "immersiveengineering", "tconstruct"]
 
 #Settings for In situ leaching
 [in_situ_leaching]
