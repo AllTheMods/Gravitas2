@@ -18,4 +18,5 @@ let hideCats = (event) => {
    event.remove("immersiveengineering:sawmill")
    event.remove("immersiveengineering:squeezer")
 
+   event.remove("railcraft:crusher")
 }

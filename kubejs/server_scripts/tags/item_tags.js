@@ -86,16 +86,7 @@ let gtceuIngots = [
   "yttrium",
   "yttrium_barium_cuprate"
 ]
-const gemPowders = [
- "amethyst",
- "emerald",
- "lapis_lazuli",
- "opal",
- "pyrite",
- "ruby",
- "sapphire",
- "topaz"
-]
+
 let tfcStonei = [
   "granite",
   "diorite",
@@ -172,10 +163,7 @@ let tfcMetalz = [
   'aluminium',
   'titanium'
 ]
-//Will be added to later
-let tfcDusts = [
-  'sulfur'
-]
+
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
@@ -183,11 +171,13 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add('tfc:copper_pieces', ["tfc:ore/small_native_copper", "tfc:ore/small_malachite", "tfc:ore/small_tetrahedrite"])
   event.add('forge:thorium', ["gtceu:raw_thorium", "thoriumreactors:thorium", "create_new_age:thorium"])
   event.add('forge:ingots/niobium', ["thoriumreactors:niob_ingot"])
+  
   event.add('forge:tools/saws', ["#tfc:saws"])
-
   event.add("forge:tools/hammers", "#tfc:hammers")
-
   event.add('forge:tools/knives', ["#tfc:knives"])
+
+  event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/knives", "#forge:tools/files"])
+
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
@@ -253,17 +243,23 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add(`forge:double_ingots/${metal.id}`, `gregitas:double_${metal.id}_ingot`)
   })
 
-  tfcDusts.forEach((dust) => {
-    event.add(`forge:dusts/${dust}`, `tfc:powder/${dust}`)
-  })
   event.add("tfc:pickaxe_tier6", ["tfc:metal/pickaxe/red_steel", "tfc:metal/pickaxe/blue_steel"])
+  event.add("tfc:castable_pickaxe_heads", ["tfc:metal/pickaxe_head/copper", "tfc:metal/pickaxe_head/bronze", "tfc:metal/pickaxe_head/black_bronze", "tfc:metal/pickaxe_head/bismuth_bronze"])
+  event.add("tfc:castable_propick_heads", ["tfc:metal/propick_head/copper", "tfc:metal/propick_head/bronze", "tfc:metal/propick_head/black_bronze", "tfc:metal/propick_head/bismuth_bronze"])
   event.get("smallships:cogs").removeAll()
   tfcSaplingz.forEach((wood) => {
     event.add("smallships:cogs", `tfships:${wood}_cog`)
   })
 
-  gemPowders.forEach((gem) => {
-    event.add(`forge:dusts/${gem}`, `tfc:powder/${gem}`)
-    event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
-  })
+  event.remove("forge:dusts/iron", ["tfc:powder/hematite", "tfc:powder/magnetite", "tfc:powder/limonite"])
+  event.remove("forge:dusts/copper", ["tfc:powder/malachite", "tfc:powder/tetrahedrite", "tfc:powder/native_copper"])
+  event.add("forge:plates/aluminium", "#forge:plates/aluminum")
+  event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block","gtceu:coke_chipped_gem","gtceu:coke_flawed_gem"])
+
+  event.remove("forge:ingots/iron", "tfc:metal/ingot/wrought_iron")
+  event.add("forge:ingots/iron", "tfc:metal/ingot/cast_iron")
+
+  event.remove("tfc:unfired_pottery", "woodencog:unfired_fireclay_crucible")
+  //WOODENCLOG
+  event.remove("forge:plates/obsidian", "tfc:metal/sheet/steel")
 }

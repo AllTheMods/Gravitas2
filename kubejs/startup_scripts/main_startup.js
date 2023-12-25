@@ -38,7 +38,7 @@ GTCEuStartupEvents.registry("gtceu:element", (event) => {
   registerGTCEuElement(event)
 })
 
-ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", (event) => {
+ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
   addTooltipIngots(event)
 })
 
@@ -60,4 +60,6 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerTFCAnvilSchema(event)
   registerWoodencogFillingSchema(event)
   registerCreateMixingSchema(event)
+  registerAe2ChargerSchema(event)
+  registerAe2InscriberSchema(event)
 })

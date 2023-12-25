@@ -56,6 +56,7 @@ MoreJSEvents.structureLoad((event) => {
 MoreJSEvents.structureAfterPlace((event) => {
   replaceGoldBlocksWithPiles(event)
   runErosionFeature(event)
+  replaceVillagesWoodAccordingToClimate(event)
 })
 
 ServerEvents.lowPriorityData((event) => {

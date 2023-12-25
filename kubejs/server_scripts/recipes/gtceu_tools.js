@@ -748,9 +748,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     //Removal & Misc
 
-    event.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/small_tool_handle')
+    event.recipes.kubejs.shaped('gregitas:small_tool_handle', ['Ls'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/small_tool_handle')
 
-    event.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).id('gregitas:shaped/wood_long_rod')
+    event.recipes.kubejs.shaped('2x gtceu:wood_long_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/wood_long_rod')
 
     GTRegistries.MATERIALS.forEach(id => {
         event.remove(`gtceu:shaped/file_${id}`)
@@ -776,5 +776,24 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.remove(`gtceu:shaped/stick_${id}`)
         event.remove(`gtceu:shaped/stick_long_${id}`)
         event.remove(`gtceu:shaped/stick_long_stick_${id}`)
+    })
+
+    event.forEachRecipe({id: /gtceu:shaped\//}, r => {
+        let isTool = false
+        r.originalRecipeIngredients.forEach(ingredient => {
+            if (Ingredient.of(["#forge:tools/hammers", "#forge:tools/saws", "#forge:tools/knives"]).test(ingredient)) {
+                isTool = true
+            }
+        })
+        isTool && event.recipes.kubejs.shaped(r.json.asMap().result, r.json.asMap().pattern,r.json.asMap().key).damageIngredient(["#forge:tools"]).id(r.getId())
+    })
+    event.forEachRecipe({id: /gtceu:shapeless\//}, r => {
+        let isTool = false
+        r.originalRecipeIngredients.forEach(ingredient => {
+            if (Ingredient.of(["#forge:tools/hammers", "#forge:tools/saws", "#forge:tools/knives"]).test(ingredient)) {
+                isTool = true
+            }
+        })
+        isTool && event.recipes.kubejs.shapeless(r.json.asMap().result, r.json.asMap().ingredients).damageIngredient(["#forge:tools"]).id(r.getId())
     })
 }

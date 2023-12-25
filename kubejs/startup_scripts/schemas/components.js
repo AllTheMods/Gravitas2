@@ -82,7 +82,7 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
   keys.apply_forge_bonus = Component("bool").key("apply_forging_bonus").preferred("applyBonus").defaultOptional()
   keys.result_fluid = Component("outputFluid").key("result_fluid").defaultOptional().preferred("resultFluid").allowEmpty()
   keys.use_durability = Component("bool").key("use_durability").optional(false).preferred("useDurability")
-  keys.chance = Component("doubleNumberRange", { min: 0, max: 1 }).key("chance").optional(1)
+  keys.chance = Component("floatNumberRange", { min: 0, max: 1 }).key("chance").optional(1)
   keys.fluid_or_item_output = Component("outputFluidOrItem").key("result")
   comps.fluid_tag = Component("tag", {
     registry: "fluid",
@@ -108,4 +108,12 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
   keys.heat_requirement = new $EnumComponent($HeatCondition).key("heatRequirement").defaultOptional()
   comps.create_fluid_ingredient = builder(comps.fluid_tag.key("fluidTag"), keys.fluid_amount)
   keys.fluid_or_item_input_array = comps.create_fluid_ingredient.or(Component("inputFluid").or(Component("inputItem"))).asArray().key("ingredients")
+
+  keys.ingredient = Component("inputItem").key("ingredient")
+  keys.inscriber_bottom = Component("inputItem").key("bottom").defaultOptional().allowEmpty()
+  keys.inscriber_middle = Component("inputItem").key("middle")
+  keys.inscriber_top = Component("inputItem").key("top").defaultOptional().allowEmpty()
+  keys.inscriber_mode = new $EnumComponent($InscriberProcessType).key("mode").optional("inscribe").alwaysWrite()
+  keys.result = Component("outputItem").key("result")
+  keys.inscriber_ingredients = builder(keys.inscriber_bottom, keys.inscriber_middle, keys.inscriber_top).key("ingredients")
 }

@@ -3,7 +3,7 @@
 const $RecipeSchema = Java.loadClass("dev.latvian.mods.kubejs.recipe.schema.RecipeSchema")
 const $RegistryComponent = Java.loadClass("dev.latvian.mods.kubejs.recipe.component.RegistryComponent")
 const $EnumComponent = Java.loadClass("dev.latvian.mods.kubejs.recipe.component.EnumComponent")
-
+const $InscriberProcessType = Java.loadClass("appeng.recipes.handlers.InscriberProcessType")
 const $ForgeRule = Java.loadClass("net.dries007.tfc.common.capabilities.forge.ForgeRule")
 const $HeatCondition = Java.loadClass("com.simibubi.create.content.processing.recipe.HeatCondition")
 
@@ -83,4 +83,12 @@ function writeToParent(recipe, parentKey, childKeyNameArray, childKeyValueArray)
   const map = Utils.newMap().of(parentKey.name, childMap)
   parentKey.component.readFromMap(recipe, parentCV, map)
   parentCV.write()
+}
+
+/** @type {Custom.RecipeSchemaFactory} */
+function breakdownInput(recipe, schemaType, keys, from) {
+  recipe.set("ingredients", $Stream.of(keys).reduce(Utils.newMap(),
+    (acc, cur) => ["middle", "bottom", "top"].includes(cur.name)
+      ? acc.putIfAbsent(cur.name, from.getValue(recipe, cur)) || acc
+      : recipe.setValue(cur, from.getValue(recipe, cur)) && acc))
 }

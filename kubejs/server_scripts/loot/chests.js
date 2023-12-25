@@ -60,6 +60,7 @@ const chestBanList = [
 ]
 
 const chestReplacementMap = {
+  "minecraft:amethyst": "tfc:gem/amethyst",
   "minecraft:allium": "tfc:plant/allium",
   "minecraft:apple": "tfc:food/red_apple",
   "minecraft:baked_potato": "tfc:food/potato",
