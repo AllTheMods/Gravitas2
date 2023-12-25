@@ -63,8 +63,8 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
             '3x gtceu:allthemodium_naquadah_mixture_small_dust'
         ])
         .outputFluids([
-            'gtceu:hydrogen_plasma 2250',
-            'gtceu:helium_plasma 1250',
+            'gtceu:helium_plasma 2250',
+            'gtceu:nitrogen_plasma 1250',
             'gtceu:raw_hypogen 1000',
             'gtceu:infinity_matter_precursor 250',
             'gtceu:spacetime 250'

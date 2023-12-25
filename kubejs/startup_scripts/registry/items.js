@@ -225,6 +225,7 @@ const tfcWoodTypes = [
     name: 'Willow'
   }
 ]
+
 let registerItems = (/** @type {Registry.Item} */ event) => {
   //GTCEu
     event.create('gregitas:creosote_treated_lumber').texture('kubejs:item/lumber').color(0x502800)
@@ -236,6 +237,7 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:calculation_wafer').texture('kubejs:item/calculation_wafer')
     event.create('gregitas:logic_wafer').texture('kubejs:item/logic_wafer')
 
+  //Circuits
     event.create('gregitas:bioware_processor').texture('kubejs:item/circuits/bioware_processor').tag("forge:circuits/uhv")
     event.create('gregitas:bioware_processor_computer').texture('kubejs:item/circuits/bioware_processor_computer').tag("forge:circuits/uhv")
     event.create('gregitas:bioware_processor_assembly').texture('kubejs:item/circuits/bioware_processor_assembly').tag("forge:circuits/uhv")
@@ -257,6 +259,28 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:antimatter_processor_assembly').texture('kubejs:item/circuits/antimatter_processor_assembly').tag("forge:circuits/opv")
     event.create('gregitas:antimatter_processor_mainframe').texture('kubejs:item/circuits/antimatter_processor_mainframe').tag("forge:circuits/max")
 
+  //Circuit Components
+    event.create('gregitas:highly_advanced_smd_transistor').texture('kubejs:item/highly_advanced_smd_transistor')
+    event.create('gregitas:highly_advanced_smd_resistor').texture('kubejs:item/highly_advanced_smd_resistor')
+    event.create('gregitas:highly_advanced_smd_capacitor').texture('kubejs:item/highly_advanced_smd_capacitor')
+    event.create('gregitas:highly_advanced_smd_diode').texture('kubejs:item/highly_advanced_smd_diode')
+    event.create('gregitas:highly_advanced_smd_inductor').texture('kubejs:item/highly_advanced_smd_inductor')
+    
+    event.create('gregitas:life_crystal').texture('kubejs:item/life_crystal')
+    event.create('gregitas:bio_cells').texture('kubejs:item/bio_cells')
+    event.create('gregitas:bio_processor').texture('kubejs:item/bio_processor')
+
+    event.create('gregitas:bioware_circuit_board').texture('kubejs:item/bioware_circuit_board').displayName("Living Circuit Board")
+    event.create('gregitas:bioware_printed_circuit_board').texture('kubejs:item/bioware_printed_circuit_board').displayName("Living Printed Circuit Board")
+    event.create('gregitas:optical_circuit_board').texture('kubejs:item/optical_circuit_board').displayName("Optical Circuit Board")
+    event.create('gregitas:optical_printed_circuit_board').texture('kubejs:item/optical_printed_circuit_board').displayName("Optical Printed Circuit Board")
+    event.create('gregitas:cosmic_circuit_board').texture('kubejs:item/cosmic_circuit_board').displayName("Cosmic Circuit Board")
+    event.create('gregitas:cosmic_printed_circuit_board').texture('kubejs:item/cosmic_printed_circuit_board').displayName("Cosmic Printed Circuit Board")
+    event.create('gregitas:exotic_circuit_board').texture('kubejs:item/exotic_circuit_board').displayName("Exotic Circuit Board")
+    event.create('gregitas:exotic_printed_circuit_board').texture('kubejs:item/exotic_printed_circuit_board').displayName("Exotic Printed Circuit Board")
+    event.create('gregitas:antimatter_circuit_board').texture('kubejs:item/antimatter_circuit_board').displayName("Antimatter Circuit Board")
+    event.create('gregitas:antimatter_printed_circuit_board').texture('kubejs:item/antimatter_printed_circuit_board').displayName("Antimatter Printed Circuit Board")
+
   //Tools
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()
     event.create('gregitas:stone_bowl').texture('kubejs:item/tools/stone_bowl').unstackable()
@@ -268,36 +292,36 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:polybenzimidazole_mallet_head').texture('kubejs:item/tools/mallet').color(0, 0x2D2D2D).unstackable()
 
     gtTFCTools.forEach((metal) => {
-      event.create(`gregitas:${metal.id}_saw_blade`).texture('kubejs:item/tools/saw').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_file_head`).texture('kubejs:item/tools/file').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_hammer_head`).texture('kubejs:item/tools/hammer').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_knife_blade`).texture('kubejs:item/tools/knife').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_crowbar_base`).texture('kubejs:item/tools/crowbar').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_cutter_blade`).texture('layer0', 'kubejs:item/tools/cutter_handle').texture('layer1', 'kubejs:item/tools/cutter_blade').color(1, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_wrench_base`).texture('kubejs:item/tools/wrench_base').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
-      event.create(`gregitas:double_${metal.id}_ingot`).displayName(`${metal.name} Double Ingot`).texture('tfc:item/metal/double_ingot/wrought_iron').color(0, metal.color)
-      event.create(`gregitas:${metal.id}_axe_head`).texture('kubejs:item/tools/axe').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_hoe_head`).texture('kubejs:item/tools/hoe').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_pickaxe_head`).texture('kubejs:item/tools/pickaxe').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_scythe_head`).texture('kubejs:item/tools/scythe').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_shovel_head`).texture('kubejs:item/tools/shovel').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_sword_blade`).texture('kubejs:item/tools/sword').color(0, metal.color).unstackable()
-      event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
-  })
-    tfcWoodTypes.forEach((wood) => {
-      event.create(`gregitas:${wood.id}_hull_segment`).texture('gregitas:item/ship/hull').color(0, wood.color).unstackable()
+        event.create(`gregitas:${metal.id}_saw_blade`).texture('kubejs:item/tools/saw').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_file_head`).texture('kubejs:item/tools/file').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_hammer_head`).texture('kubejs:item/tools/hammer').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_knife_blade`).texture('kubejs:item/tools/knife').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_crowbar_base`).texture('kubejs:item/tools/crowbar').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_cutter_blade`).texture('layer0', 'kubejs:item/tools/cutter_handle').texture('layer1', 'kubejs:item/tools/cutter_blade').color(1, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_wrench_base`).texture('kubejs:item/tools/wrench_base').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
+        event.create(`gregitas:double_${metal.id}_ingot`).displayName(`${metal.name} Double Ingot`).texture('tfc:item/metal/double_ingot/wrought_iron').color(0, metal.color)
+        event.create(`gregitas:${metal.id}_axe_head`).texture('kubejs:item/tools/axe').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_hoe_head`).texture('kubejs:item/tools/hoe').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_pickaxe_head`).texture('kubejs:item/tools/pickaxe').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_scythe_head`).texture('kubejs:item/tools/scythe').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_shovel_head`).texture('kubejs:item/tools/shovel').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_sword_blade`).texture('kubejs:item/tools/sword').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
     })
-  gtMortars.forEach((metal) => {
-    event.create(`gregitas:${metal.id}_pestle`).texture('kubejs:item/tools/pestle').color(0, metal.color).unstackable()
-  })
+    tfcWoodTypes.forEach((wood) => {
+        event.create(`gregitas:${wood.id}_hull_segment`).texture('gregitas:item/ship/hull').color(0, wood.color).unstackable()
+    })
+    gtMortars.forEach((metal) => {
+        event.create(`gregitas:${metal.id}_pestle`).texture('kubejs:item/tools/pestle').color(0, metal.color).unstackable()
+    })
 
-  gtTFCtoolsTFC.forEach((metal) => {
-    event.create(`gregitas:${metal.id}_file_head`).texture('kubejs:item/tools/file').color(0, metal.color).unstackable()
-    event.create(`gregitas:${metal.id}_crowbar_base`).texture('kubejs:item/tools/crowbar').color(0, metal.color).unstackable()
-    event.create(`gregitas:${metal.id}_cutter_blade`).texture('layer0', 'kubejs:item/tools/cutter_handle').texture('layer1', 'kubejs:item/tools/cutter_blade').color(1, metal.color).unstackable()
-    event.create(`gregitas:${metal.id}_wrench_base`).texture('kubejs:item/tools/wrench_base').color(0, metal.color).unstackable()
-    event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
-    event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
-  })
+    gtTFCtoolsTFC.forEach((metal) => {
+        event.create(`gregitas:${metal.id}_file_head`).texture('kubejs:item/tools/file').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_crowbar_base`).texture('kubejs:item/tools/crowbar').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_cutter_blade`).texture('layer0', 'kubejs:item/tools/cutter_handle').texture('layer1', 'kubejs:item/tools/cutter_blade').color(1, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_wrench_base`).texture('kubejs:item/tools/wrench_base').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
+        event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
+    })
 }

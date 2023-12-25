@@ -18,7 +18,7 @@ StartupEvents.registry("fluid", (event) => {
 
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
-  Platform.setModName("gregitas-core", "Gravitas²")
+  Platform.setModName("gregitas_core", "Gravitas²")
 })
 
 StartupEvents.postInit((event) => {
