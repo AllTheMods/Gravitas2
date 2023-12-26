@@ -785,7 +785,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 isTool = true
             }
         })
-        isTool && event.recipes.kubejs.shaped(r.json.asMap().result, r.json.asMap().pattern,r.json.asMap().key).damageIngredient(["#forge:tools"]).id(r.getId())
+        isTool && event.recipes.kubejs.shaped(r.json.asMap().result, r.json.asMap().pattern,r.json.asMap().key).damageIngredient(["#forge:tools"]).noShrink().noMirror().id(r.getId())
     })
     event.forEachRecipe({id: /gtceu:shapeless\//}, r => {
         let isTool = false
