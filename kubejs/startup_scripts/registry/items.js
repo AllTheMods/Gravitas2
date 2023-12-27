@@ -235,6 +235,7 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:engineering_wafer').texture('kubejs:item/engineering_wafer')
     event.create('gregitas:calculation_wafer').texture('kubejs:item/calculation_wafer')
     event.create('gregitas:logic_wafer').texture('kubejs:item/logic_wafer')
+    event.create('gregitas:crafting_core').displayName('Crafting Simulation Core').texture('kubejs:item/crafting_core')
 
   //Tools
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()
