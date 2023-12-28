@@ -27,6 +27,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
   event.remove({ id: "gtceu:alloy_smelter/form_brick" })
+  event.remove({ id: "gtceu:assembler/chest"})
+  event.remove({ id: "gtceu:assembler/enchanting_table"})
+  event.remove({ id: "gtceu:assembler/wool_from_string"})
+
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -119,6 +123,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
   event.remove({ id: "create:crafting/kinetics/mechanical_press"})
+  event.remove({ id: "create:crafting/kinetics/basin"})
+  event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
+
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
