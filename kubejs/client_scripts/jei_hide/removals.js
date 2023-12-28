@@ -92,4 +92,18 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("astikorcarts:animal_cart")
     event.hide("astikorcarts:supply_cart")
     event.hide("astikorcarts:wheel")
+
+    event.hide(`/^.*deepslate.*/`)
+    event.hide(`/^minecraft:.*dark_oak.*/`)
+    event.hide(`/^minecraft:.*oak.*/`)
+    event.hide(`/^minecraft:.*acacia.*/`)
+    event.hide(`/^minecraft:.*birch.*/`)
+    event.hide(`/^minecraft:.*mangrove.*/`)
+    event.hide(`/^minecraft:.*cherry.*/`)
+    event.hide(`/^minecraft:.*spruce.*/`)
+    event.hide(`/^minecraft:.*andesite.*/`)
+    event.hide(`/^minecraft:.*diorite.*/`)
+    event.hide(`/^minecraft:.*granite.*/`)
+
+
 }

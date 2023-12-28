@@ -118,6 +118,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
+  event.remove({ id: "create:crafting/kinetics/mechanical_press"})
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
@@ -239,6 +240,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:andesite" })
   event.remove({ id: "minecraft:brick" })
   event.remove({ id: "minecraft:blaze_powder"})
+  event.remove({ id: "minecraft:diorite"})
+  event.remove({ id: "minecraft:stone"})
 
   //PM
   event.remove({ id: "potionsmaster:blaze_powder"})
@@ -246,6 +249,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //EnderIO
   event.remove({ id: "enderio:stick"})
   event.remove({ id: "enderio:sag_milling/blaze_powder"})
+  event.remove({ id: "enderio:primitive_alloy_smelter"})
 
   //Waystones
   event.remove({ id: `/^waystones:.*/`})
