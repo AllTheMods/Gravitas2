@@ -11,8 +11,9 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     nbt: {},
                     amount: 1000
                 },
-                {
-                    tag: 'tfc:foods/dough'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    tag: 'tfc:foods/dough'}
                 },
                 {
                     item: 'tfc:powder/salt'
@@ -68,17 +69,21 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 {
                     tag: 'firmalife:sweetener'
                 },
-                {
-                    tag: 'firmalife:feeds_yeast'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    tag: 'firmalife:feeds_yeast'}
                 },
-                {
-                    item: 'minecraft:egg'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'minecraft:egg'}
                 },
-                {
-                    item: 'tfc:food/pumpkin_chunks'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'tfc:food/pumpkin_chunks'}
                 },
-                {
-                    item: 'tfc:food/pumpkin_chunks'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'tfc:food/pumpkin_chunks'}
                 },
             ],
             results: [
@@ -122,11 +127,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 {
                     tag: 'firmalife:sweetener'
                 },
-                {
-                    tag: 'firmalife:feeds_yeast'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    tag: 'firmalife:feeds_yeast'}
                 },
-                {
-                    item: 'firmalife:food/butter'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/butter'}
                 },
             ],
             results: [
@@ -141,20 +148,23 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         {
             type: 'create:mixing',
             ingredients: [
-                {
-                    item: 'minecraft:egg'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'minecraft:egg'}
                 },
                 {
                     item: 'firmalife:spice/vanilla'
                 },
-                {
-                    item: 'firmalife:food/butter'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/butter'}
                 },
                 {
                     tag: 'firmalife:sweetener'
                 },
-                {
-                    tag: 'firmalife:feeds_yeast'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    tag: 'firmalife:feeds_yeast'}
                 },
             ],
             results: [
@@ -174,8 +184,9 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     nbt: {},
                     amount: 1000
                 },
-                {
-                    tag: 'firmalife:feeds_yeast'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    tag: 'firmalife:feeds_yeast'}
                 },
                 {
                     item: 'tfc:powder/salt'
@@ -198,8 +209,9 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     nbt: {},
                     amount: 1000
                 },
-                {
-                    item: 'firmalife:food/vanilla_ice_cream'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/vanilla_ice_cream'}
                 },
             ],
             results: [
@@ -222,11 +234,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 {
                     tag: 'firmalife:sweetener'
                 },
-                {
-                    item: 'firmalife:food/cocoa_butter'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/cocoa_butter'}
                 },
-                {
-                    item: 'firmalife:food/cocoa_butter'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/cocoa_butter'}
                 },
             ],
             results: [
@@ -249,11 +263,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 {
                     tag: 'firmalife:sweetener'
                 },
-                {
-                    item: 'firmalife:food/cocoa_powder'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/cocoa_powder'}
                 },
-                {
-                    item: 'firmalife:food/cocoa_powder'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/cocoa_powder'}
                 },
             ],
             results: [
@@ -269,20 +285,35 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
-                    tag: 'firmalife:foods/chocolate'
-                },
+                    "type": "tfc:not_rotten",
+                    "ingredient": {
+                      "tag": "firmalife:foods/chocolate"
+                    }
+                  },
                 {
-                    item: 'firmalife:food/cookie_dough'
-                },
-                {
-                    item: 'firmalife:food/cookie_dough'
-                },
-                {
-                    item: 'firmalife:food/cookie_dough'
-                },
-                {
-                    item: 'firmalife:food/cookie_dough'
-                },
+                    "type": "tfc:not_rotten",
+                    "ingredient": {
+                      "item": "firmalife:food/cookie_dough"
+                    }
+                  },
+                  {
+                    "type": "tfc:not_rotten",
+                    "ingredient": {
+                      "item": "firmalife:food/cookie_dough"
+                    }
+                  },
+                  {
+                    "type": "tfc:not_rotten",
+                    "ingredient": {
+                      "item": "firmalife:food/cookie_dough"
+                    }
+                  },
+                  {
+                    "type": "tfc:not_rotten",
+                    "ingredient": {
+                      "item": "firmalife:food/cookie_dough"
+                    }
+                  },
             ],
             results: [
                 {
@@ -304,11 +335,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 {
                     tag: 'firmalife:sweetener'
                 },
-                {
-                    item: 'firmalife:food/cocoa_butter'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/cocoa_butter'}
                 },
-                {
-                    item: 'firmalife:food/cocoa_powder'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/cocoa_powder'}
                 },
             ],
             results: [
@@ -323,14 +356,17 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         {
             type: 'create:mixing',
             ingredients: [
-                {
-                    item: 'firmalife:food/vanilla_ice_cream'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'firmalife:food/vanilla_ice_cream'}
                 },
-                {
-                    item: 'tfc:food/strawberry'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'tfc:food/strawberry'}
                 },
-                {
-                    item: 'tfc:food/strawberry'
+                {"type": "tfc:not_rotten",
+                "ingredient": {
+                    item: 'tfc:food/strawberry'}
                 },
             ],
             results: [
@@ -341,43 +377,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             ],
         }
     )
-    ///fixing firmalife cocoa powder recipe
-    event.remove({ id: "firmalife:crafting/cocoa_butter_powder" })
-    event.custom({
-        type: "tfc:damage_inputs_shapeless_crafting",
-        recipe: {
-            type: "minecraft:crafting_shapeless",
-            ingredients: [
-            {
-                item: "firmalife:food/roasted_cocoa_beans"
-            },
-            {
-                tag: "forge:tools/hammers"
-            }
-            ],
-            result: {
-                item: "firmalife:food/cocoa_powder"
-            }
-        }
-      })
 
-    event.custom({
-        type: "tfc:damage_inputs_shapeless_crafting",
-        recipe: {
-            type: "minecraft:crafting_shapeless",
-            ingredients: [
-            {
-                item: "firmalife:food/roasted_cocoa_beans"
-            },
-            {
-                tag: "forge:tools/knives"
-            }
-            ],
-            result: {
-                item: "firmalife:food/cocoa_butter"
-            }
-        }
-      })
 
     event.custom(
         {
@@ -387,8 +387,11 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 tag: 'firmalife:sweetener'
             },
             {
-                tag: 'firmalife:foods/chocolate'
-            },
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "firmalife:foods/chocolate"
+                }
+              },
             {
                 fluidTag: 'tfc:milks',
                 nbt: {},
