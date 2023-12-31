@@ -18,14 +18,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:logic_processor'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:red_alloy',
-                    144
-                )
+                Fluid.of('gtceu:red_alloy',144)
             )
-            .itemOutputs(
-                '2x ae2:formation_core'
-            )
+            .itemOutputs('2x ae2:formation_core')
             .duration(100)
             .EUt(MV)
 
@@ -36,10 +31,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:logic_processor'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:red_alloy',
-                    144
-                )
+                Fluid.of('gtceu:red_alloy',144)
             )
             .itemOutputs(
                 '2x ae2:annihilation_core'
@@ -52,9 +44,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemInputs(
                 'gtceu:certus_quartz_gem'
             )
-            .itemOutputs(
-                'ae2:charged_certus_quartz_crystal'
-            )
+            .itemOutputs('ae2:charged_certus_quartz_crystal')
             .duration(50)
             .EUt(LV)
 
@@ -65,10 +55,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'minecraft:quartz'
             )
             .inputFluids(
-                Fluid.of(
-                    'minecraft:water',
-                    500
-                )
+                Fluid.of('minecraft:water',500)
             )
             .itemOutputs(
                 '2x ae2:fluix_crystal'
@@ -120,22 +107,14 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         //Quartz Fiber
             event.recipes.gtceu.wiremill('gregitas:certus_quartz_fiber')
-                .itemInputs(
-                    'gtceu:certus_quartz_gem'
-                )
-                .itemOutputs(
-                    '2x ae2:quartz_fiber'
-                )
+                .itemInputs('gtceu:certus_quartz_gem')
+                .itemOutputs('2x ae2:quartz_fiber')
                 .duration(50)
                 .EUt(LV)
 
             event.recipes.gtceu.wiremill('gregitas:quartz_fiber')
-                .itemInputs(
-                    'minecraft:quartz'
-                )
-                .itemOutputs(
-                    '2x ae2:quartz_fiber'
-                )
+                .itemInputs('minecraft:quartz')
+                .itemOutputs('2x ae2:quartz_fiber')
                 .duration(50)
                 .EUt(LV)
         //ME Cables
@@ -145,14 +124,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '2x ae2:fluix_crystal'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:glass',
-                        144
-                    )
+                    Fluid.of('gtceu:glass',144)
                 )
-                .itemOutputs(
-                    '2x ae2:fluix_glass_cable'
-                )
+                .itemOutputs('2x ae2:fluix_glass_cable')
                 .duration(50)
                 .EUt(LV)
 
@@ -162,14 +136,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '2x ae2:fluix_crystal'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:borosilicate_glass',
-                        72
-                    )
+                    Fluid.of('gtceu:borosilicate_glass',72)
                 )
-                .itemOutputs(
-                    '4x ae2:fluix_glass_cable'
-                )
+                .itemOutputs('4x ae2:fluix_glass_cable')
                 .duration(100)
                 .EUt(MV)
 
@@ -179,10 +148,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '2x ae2:fluix_crystal'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:fiberglass',
-                        36
-                    )
+                    Fluid.of('gtceu:fiberglass',36)
                 )
                 .itemOutputs(
                     '8x ae2:fluix_glass_cable'
@@ -195,10 +161,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#ae2:glass_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'minecraft:water',
-                        250
-                    )
+                    Fluid.of('minecraft:water',250)
                 )
                 .itemOutputs(
                     'ae2:fluix_glass_cable'
@@ -211,14 +174,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'ae2:fluix_glass_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:rubber',
-                        144
-                    )
+                    Fluid.of('gtceu:rubber',144)
                 )
-                .itemOutputs(
-                    'ae2:fluix_covered_cable'
-                )
+                .itemOutputs('ae2:fluix_covered_cable')
                 .duration(50)
                 .EUt(LV)
 
@@ -227,14 +185,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'ae2:fluix_glass_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:silicone_rubber',
-                        72
-                    )
+                    Fluid.of('gtceu:silicone_rubber',72)
                 )
-                .itemOutputs(
-                    'ae2:fluix_covered_cable'
-                )
+                .itemOutputs('ae2:fluix_covered_cable')
                 .duration(50)
                 .EUt(LV)
 
@@ -243,25 +196,16 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#ae2:covered_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'minecraft:water',
-                        250
-                    )
+                    Fluid.of('minecraft:water',250)
                 )
-                .itemOutputs(
-                    'ae2:fluix_covered_cable'
-                )
+                .itemOutputs('ae2:fluix_covered_cable')
                 .duration(50)
                 .EUt(LV)
 
             event.recipes.gtceu.assembler('gregitas:me_dense_covered_fluix')
                 .circuit(4)
-                .itemInputs(
-                    '4x ae2:fluix_covered_cable'
-                )
-                .itemOutputs(
-                    'ae2:fluix_covered_dense_cable'
-                )
+                .itemInputs('4x ae2:fluix_covered_cable')
+                .itemOutputs('ae2:fluix_covered_dense_cable')
                 .duration(50)
                 .EUt(LV)
 
@@ -270,14 +214,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#ae2:covered_dense_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'minecraft:water',
-                        250
-                    )
+                    Fluid.of('minecraft:water',250)
                 )
-                .itemOutputs(
-                    'ae2:fluix_covered_dense_cable'
-                )
+                .itemOutputs('ae2:fluix_covered_dense_cable')
                 .duration(50)
                 .EUt(LV)
         //Smart Cables
@@ -286,14 +225,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#ae2:smart_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'minecraft:water',
-                        250
-                    )
+                    Fluid.of('minecraft:water',250)
                 )
-                .itemOutputs(
-                    'ae2:fluix_smart_cable'
-                )
+                .itemOutputs('ae2:fluix_smart_cable')
                 .duration(50)
                 .EUt(LV)
 
@@ -313,10 +247,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#ae2:smart_dense_cable'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'minecraft:water',
-                        250
-                    )
+                    Fluid.of('minecraft:water',250)
                 )
                 .itemOutputs(
                     'ae2:fluix_smart_dense_cable'
@@ -330,10 +261,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '32x gtceu:red_alloy_fine_wire'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:glowstone',
-                        2304
-                    )
+                    Fluid.of('gtceu:glowstone',2304)
                 )
                 .itemOutputs(
                     '16x ae2:fluix_smart_cable'
@@ -347,10 +275,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '16x gtceu:red_alloy_fine_wire'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:glowstone',
-                        1152
-                    )
+                    Fluid.of('gtceu:glowstone',1152)
                 )
                 .itemOutputs(
                     '4x ae2:fluix_smart_dense_cable'
@@ -383,10 +308,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                             '8x ae2:fluix_glass_cable'
                         )
                         .inputFluids(
-                            Fluid.of(
-                                `gtceu:${colour}_dye`,
-                                144
-                            )
+                            Fluid.of(`gtceu:${colour}_dye`,144)
                         )
                         .itemOutputs(
                             `8x ae2:${colour}_glass_cable`
@@ -399,10 +321,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                             '8x ae2:fluix_covered_cable'
                         )
                         .inputFluids(
-                            Fluid.of(
-                                `gtceu:${colour}_dye`,
-                                144
-                            )
+                            Fluid.of(`gtceu:${colour}_dye`,144)
                         )
                         .itemOutputs(
                             `8x ae2:${colour}_covered_cable`
@@ -415,10 +334,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                             '8x ae2:fluix_smart_cable'
                         )
                         .inputFluids(
-                            Fluid.of(
-                                `gtceu:${colour}_dye`,
-                                144
-                            )
+                            Fluid.of(`gtceu:${colour}_dye`,144)
                         )
                         .itemOutputs(
                             `8x ae2:${colour}_smart_cable`
@@ -431,10 +347,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                             '8x ae2:fluix_covered_dense_cable'
                         )
                         .inputFluids(
-                            Fluid.of(
-                                `gtceu:${colour}_dye`,
-                                144
-                            )
+                            Fluid.of(`gtceu:${colour}_dye`,144)
                         )
                         .itemOutputs(
                             `8x ae2:${colour}_covered_dense_cable`
@@ -447,10 +360,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                             '8x ae2:fluix_smart_dense_cable'
                         )
                         .inputFluids(
-                            Fluid.of(
-                                `gtceu:${colour}_dye`,
-                                144
-                            )
+                            Fluid.of(`gtceu:${colour}_dye`,144)
                         )
                         .itemOutputs(
                             `8x ae2:${colour}_smart_dense_cable`
@@ -520,9 +430,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 '2x gtceu:glass_plate'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:red_alloy',
-                    144
+                Fluid.of('gtceu:red_alloy',144
                 )
             )
             .itemOutputs(
@@ -678,10 +586,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '5x gtceu:certus_quartz_dust'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:glass',
-                        576
-                    )
+                    Fluid.of('gtceu:glass',576)
                 )
                 .itemOutputs(
                     '4x ae2:quartz_glass'
@@ -710,10 +615,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '2x #forge:circuits/lv'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:red_alloy',
-                        144
-                    )
+                    Fluid.of('gtceu:red_alloy',144)
                 )
                 .itemOutputs(
                     'ae2:cell_component_1k'
@@ -728,10 +630,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#forge:circuits/mv'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:red_alloy',
-                        144
-                    )
+                    Fluid.of('gtceu:red_alloy',144)
                 )
                 .itemOutputs(
                     'ae2:cell_component_4k'
@@ -746,10 +645,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#forge:circuits/hv'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:red_alloy',
-                        144
-                    )
+                    Fluid.of('gtceu:red_alloy',144)
                 )
                 .itemOutputs(
                     'ae2:cell_component_16k'
@@ -764,10 +660,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#forge:circuits/hv'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:red_alloy',
-                        288
-                    )
+                    Fluid.of('gtceu:red_alloy',288)
                 )
                 .itemOutputs(
                     'ae2:cell_component_64k'
@@ -782,10 +675,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '#forge:circuits/ev'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:red_alloy',
-                        288
-                    )
+                    Fluid.of('gtceu:red_alloy',288)
                 )
                 .itemOutputs(
                     'ae2:cell_component_256k'
@@ -914,10 +804,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 '16x gtceu:red_alloy_fine_wire'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:soldering_alloy',
-                    144
-                )
+                Fluid.of('gtceu:soldering_alloy',144)
             )
             .itemOutputs(
                 'ae2:controller'
@@ -1224,10 +1111,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'gtceu:steel_bolt'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        cut.fluid,
-                        cut.amount
-                    )
+                    Fluid.of(cut.fluid,cut.amount)
                 )
                 .itemOutputs(
                     '2x ae2:cable_anchor'
@@ -1240,10 +1124,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'gtceu:aluminium_bolt'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        cut.fluid,
-                        cut.amount
-                    )
+                     Fluid.of(cut.fluid,cut.amount)
                 )
                 .itemOutputs(
                     '4x ae2:cable_anchor'
@@ -1256,10 +1137,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'gtceu:stainless_steel_bolt'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        cut.fluid,
-                        cut.amount
-                    )
+                     Fluid.of(cut.fluid,cut.amount)
                 )
                 .itemOutputs(
                     '8x ae2:cable_anchor'
@@ -1272,10 +1150,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'gtceu:titanium_bolt'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        cut.fluid,
-                        cut.amount
-                    )
+                     Fluid.of(cut.fluid,cut.amount)
                 )
                 .itemOutputs(
                     '16x ae2:cable_anchor'
@@ -1305,10 +1180,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:quartz_glass'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:glowstone',
-                    144
-                )
+                Fluid.of('gtceu:glowstone',144)
             )
             .itemOutputs(
                 'ae2:quartz_vibrant_glass'
@@ -1362,10 +1234,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:calculation_processor'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:soldering_alloy',
-                    144
-                )
+                Fluid.of('gtceu:soldering_alloy',144)
             )
             .itemOutputs(
                 'ae2:memory_card'
@@ -1480,10 +1349,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:soldering_alloy',
-                    144
-                )
+                Fluid.of('gtceu:soldering_alloy',144)
             )
             .itemOutputs(
                 'ae2:wireless_terminal'
@@ -1498,10 +1364,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:calculation_processor'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:soldering_alloy',
-                    144
-                )
+                Fluid.of('gtceu:soldering_alloy',144)
             )
             .itemOutputs(
                 'ae2:wireless_crafting_terminal'
@@ -1517,10 +1380,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:engineering_processor'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:soldering_alloy',
-                    144
-                )
+                Fluid.of('gtceu:soldering_alloy',144)
             )
             .itemOutputs(
                 'ae2wtlib:wireless_pattern_encoding_terminal'
@@ -1536,10 +1396,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 '#ae2:pattern_provider'
             )
             .inputFluids(
-                Fluid.of(
-                    'gtceu:soldering_alloy',
-                    144
-                )
+                Fluid.of('gtceu:soldering_alloy',144)
             )
             .itemOutputs(
                 'ae2wtlib:wireless_pattern_access_terminal'
@@ -1683,10 +1540,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'ae2:annihilation_core'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:soldering_alloy',
-                        72
-                    )
+                    Fluid.of('gtceu:soldering_alloy',72)
                 )
                 .itemOutputs(
                     'ae2:storage_bus'
@@ -1704,10 +1558,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'gtceu:lv_electric_pump'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:soldering_alloy',
-                        72
-                    )
+                    Fluid.of('gtceu:soldering_alloy',72)
                 )
                 .itemOutputs(
                     'ae2:export_bus'
@@ -1725,10 +1576,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     'gtceu:lv_electric_pump'
                 )
                 .inputFluids(
-                    Fluid.of(
-                        'gtceu:soldering_alloy',
-                        72
-                    )
+                    Fluid.of('gtceu:soldering_alloy',72)
                 )
                 .itemOutputs(
                     'ae2:import_bus'
