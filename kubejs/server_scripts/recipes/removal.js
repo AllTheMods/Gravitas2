@@ -215,6 +215,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: "immersiveengineering:crafting/wirecutter"})
+  event.remove({ id: "immersiveengineering:crafting/craftingtable"})
+  event.remove({ id: "immersiveengineering:crafting/workbench"})
+  event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})

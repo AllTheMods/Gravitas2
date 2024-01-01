@@ -361,6 +361,20 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     b: 'gtceu:brass_screw',
     s: '#forge:rods/invar'
   })
+  shaped('immersiveengineering:craftingtable', ['ppp', 'rfr', 'rwr'], {
+    p: '#forge:treated_wood',
+    r: '#forge:rods/treated_wood',
+    f: '#forge:frames/treated_wood',
+    w: '#tfc:workbenches'
+  })
+  shaped('immersiveengineering:workbench', [' dq', 'pff', 'crf'], {
+    q: '#forge:feathers',
+    d: '#forge:dyes/black',
+    p: '#forge:plates/wrought_iron',
+    r: '#forge:rods/treated_wood',
+    f: '#forge:frames/treated_wood',
+    c: 'immersiveengineering:craftingtable'
+  })
 
   const gemPowders = [
     "amethyst",
