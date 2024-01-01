@@ -547,4 +547,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          )
          .duration(750)
          .EUt(MV)
+
+     shaped("computercraft:turtle_normal", ["www", "wpw","wcw"], {
+        w: "tfc:metal/ingot/cast_iron",
+        p: "computercraft:computer_normal",
+        c: "#forge:chests"
+     })
+
+     shaped("tombstone:familiar_receptacle", ["twt", "wdw","twt"], {
+        w: "tfc:metal/ingot/cast_iron",
+        d: "tombstone:impregnated_diamond",
+        t: "minecraft:ghast_tear"
+     })
 }

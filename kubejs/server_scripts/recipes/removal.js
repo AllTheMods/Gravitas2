@@ -276,4 +276,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "astikorcarts:animal_cart"})
   event.remove({ id: "astikorcarts:supply_cart"})
   event.remove({ id: "astikorcarts:wheel"})
+
+  //Computercraft
+  event.remove({ id: "computercraft:turtle_normal"})
+
+  //Corail
+  event.remove({ id: "tombstone:familiar_receptacle"})
 }
