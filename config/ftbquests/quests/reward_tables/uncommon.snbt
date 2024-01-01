@@ -2,7 +2,7 @@
 	icon: "ftbquests:lootcrate"
 	id: "3A3BDBA4E9AD13C4"
 	loot_size: 1
-	order_index: 11
+	order_index: 10
 	rewards: [
 		{
 			item: {

@@ -95,7 +95,7 @@
 								ticks: 0L
 							}
 						}
-						id: "tfc:metal/ingot/wrought_iron"
+						id: "gtceu:wrought_iron_ingot"
 					}
 					type: "item"
 				}

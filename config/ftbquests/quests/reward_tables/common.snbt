@@ -8,7 +8,7 @@
 	}
 	id: "06C4634E81851A6C"
 	loot_size: 1
-	order_index: 10
+	order_index: 9
 	rewards: [
 		{ item: "botanypots:terracotta_hopper_botany_pot", weight: 5.0f }
 		{ item: "mysticalagriculture:imperium_essence" }

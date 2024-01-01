@@ -257,7 +257,9 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block","gtceu:coke_chipped_gem","gtceu:coke_flawed_gem"])
 
   event.remove("forge:ingots/iron", "tfc:metal/ingot/wrought_iron")
-  event.add("forge:ingots/iron", "tfc:metal/ingot/cast_iron")
+
 
   event.remove("tfc:unfired_pottery", "woodencog:unfired_fireclay_crucible")
+  //WOODENCLOG
+  event.remove("forge:plates/obsidian", "tfc:metal/sheet/steel")
 }

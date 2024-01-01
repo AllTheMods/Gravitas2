@@ -2,7 +2,7 @@
 	icon: "lootr:trophy"
 	id: "639509C7B28C90DF"
 	loot_size: 1
-	order_index: 14
+	order_index: 13
 	rewards: [
 		{ item: "apotheosis:library" }
 		{ item: "apotheosis:mythic_material", random_bonus: 5, weight: 2.0f }

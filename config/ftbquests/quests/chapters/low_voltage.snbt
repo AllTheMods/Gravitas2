@@ -91,7 +91,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "6E917EAC6D910F41"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "Cheaper wires"
@@ -114,7 +113,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "611C4B513D3D1ADF"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "Cheaper plates"
@@ -137,7 +135,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "52F68D22D0F72D31"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "More rubber more better"
@@ -156,7 +153,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "3D8FA55D8F428E7B"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "Need that fluid to be solid?"
@@ -181,7 +177,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "6435CAC26D2AE960"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			tasks: [{
@@ -199,7 +194,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "2C6B38D702FD7813"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "Good ol' rod"
@@ -218,7 +212,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "2611E3D86AEBB72F"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "You spin me right round"
@@ -262,7 +255,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "6E15475C8EC7E18A"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			tasks: [{
@@ -288,7 +280,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "731C849551B7E97E"
-					table_id: 4804065436311136435L
 					type: "loot"
 				}
 			]
@@ -559,7 +550,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "0B35E2C6F42DFF49"
-					table_id: 4804065436311136435L
 					type: "loot"
 				}
 				{
@@ -667,7 +657,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "7275D97C107F982C"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "The basics"
@@ -770,7 +759,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "597248294BEF3E6F"
-				table_id: 4804065436311136435L
 				type: "loot"
 			}]
 			subtitle: "Liquidizing your assets"
@@ -891,7 +879,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "7BC86ED902460525"
-					table_id: 4804065436311136435L
 					type: "loot"
 				}
 				{

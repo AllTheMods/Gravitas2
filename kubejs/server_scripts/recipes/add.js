@@ -361,6 +361,20 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     b: 'gtceu:brass_screw',
     s: '#forge:rods/invar'
   })
+  shaped('immersiveengineering:craftingtable', ['ppp', 'rfr', 'rwr'], {
+    p: '#forge:treated_wood',
+    r: '#forge:rods/treated_wood',
+    f: '#forge:frames/treated_wood',
+    w: '#tfc:workbenches'
+  })
+  shaped('immersiveengineering:workbench', [' dq', 'pff', 'crf'], {
+    q: '#forge:feathers',
+    d: '#forge:dyes/black',
+    p: '#forge:plates/wrought_iron',
+    r: '#forge:rods/treated_wood',
+    f: '#forge:frames/treated_wood',
+    c: 'immersiveengineering:craftingtable'
+  })
 
   const gemPowders = [
     "amethyst",
@@ -379,7 +393,158 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs([`gtceu:${powder.replace("_lazuli", "")}_impure_dust`])
     .EUt(ULV).duration(200)
    })
+    event.recipes.gtceu.alloy_smelter('copper_alloy')
+        .itemInputs(
+            '#forge:silicon',
+            '#forge:ingots/copper'
+        )
+        .itemOutputs(
+            'enderio:copper_alloy_ingot'
+        )
+        .duration(500)
+        .EUt(LV)
+
+    event.recipes.gtceu.alloy_smelter('redstone_alloy')
+        .itemInputs(
+            '#forge:silicon',
+            '#forge:dusts/redstone'
+        )
+        .itemOutputs(
+            'enderio:redstone_alloy_ingot'
+        )
+        .duration(500)
+        .EUt(LV)
+
+    event.recipes.gtceu.alloy_smelter('energetic_alloy')
+        .itemInputs(
+            'minecraft:redstone_block',
+            '#forge:ingots/gold'
+        )
+        .itemOutputs(
+            'enderio:energetic_alloy_ingot'
+        )
+        .duration(750)
+        .EUt(MV)
+
+    event.recipes.gtceu.alloy_smelter('conductive_alloy')
+        .itemInputs(
+            'enderio:copper_alloy_ingot',
+            '#forge:ingots/wrought_iron'
+        )
+        .itemOutputs(
+            'enderio:conductive_alloy_ingot'
+        )
+        .duration(750)
+        .EUt(LV)
+
+    event.recipes.gtceu.alloy_smelter('vibrant_alloy')
+        .itemInputs(
+            'enderio:energetic_alloy_ingot',
+            '#forge:ender_pearls'
+        )
+        .itemOutputs(
+            'enderio:vibrant_alloy_ingot'
+        )
+        .duration(750)
+        .EUt(MV)
+
+    event.recipes.gtceu.alloy_smelter('pulsating_alloy')
+        .itemInputs(
+            'enderio:vibrant_alloy_ingot',
+            'enderio:energetic_alloy_ingot'
+        )
+        .itemOutputs(
+            'enderio:pulsating_alloy_ingot'
+        )
+        .duration(750)
+        .EUt(MV)
 
 
+    event.recipes.gtceu.alloy_smelter('dark_steel')
+        .itemInputs(
+            '#forge:ingots/steel',
+            '#forge:dusts/coal'
+        )
+        .itemOutputs(
+            'enderio:dark_steel_ingot'
+        )
+        .duration(750)
+        .EUt(MV)
 
+    event.recipes.gtceu.alloy_smelter('soularium')
+        .itemInputs(
+            '#forge:ingots/gold',
+            '#minecraft:soul_fire_base_blocks'
+        )
+        .itemOutputs(
+            'enderio:soularium_ingot'
+        )
+        .duration(750)
+        .EUt(LV)
+
+    event.recipes.gtceu.alloy_smelter('clear_glass')
+        .itemInputs(
+            '#forge:glass/colorless',
+            '#tfc:flux'
+        )
+        .itemOutputs(
+            'enderio:clear_glass'
+        )
+        .duration(500)
+        .EUt(LV)
+
+    event.recipes.gtceu.alloy_smelter('dark_clear_glass')
+        .itemInputs(
+            '#forge:glass/colorless',
+            '4x tfc:gem/amethyst'
+        )
+        .itemOutputs(
+            'enderio:clear_glass_d'
+        )
+        .duration(500)
+        .EUt(LV)
+
+    event.recipes.gtceu.alloy_smelter('fused_quartz')
+        .itemInputs(
+            'minecraft:quartz_block',
+            '#tfc:flux'
+        )
+        .itemOutputs(
+            'enderio:fused_quartz'
+        )
+        .duration(500)
+        .EUt(MV)
+
+    event.recipes.gtceu.alloy_smelter('dark_fused_quartz')
+        .itemInputs(
+            'enderio:fused_quartz',
+            '4x tfc:gem/amethyst'
+        )
+        .itemOutputs(
+            'enderio:fused_quartz_d'
+        )
+        .duration(500)
+        .EUt(MV)
+
+    event.recipes.gtceu.alloy_smelter('enlightened_clear_glass')
+        .itemInputs(
+            'enderio:clear_glass',
+            'minecraft:glowstone'
+        )
+        .itemOutputs(
+            'enderio:clear_glass_e'
+        )
+        .duration(750)
+        .EUt(MV)
+
+     event.recipes.gtceu.alloy_smelter('enlightened_fused_quartz')
+         .itemInputs(
+             'enderio:fused_quartz',
+             'minecraft:glowstone'
+         )
+         .itemOutputs(
+             'enderio:fused_quartz_e'
+         )
+         .duration(750)
+         .EUt(MV)
 }

@@ -27,6 +27,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
   event.remove({ id: "gtceu:alloy_smelter/form_brick" })
+  event.remove({ id: "gtceu:assembler/chest"})
+  event.remove({ id: "gtceu:assembler/enchanting_table"})
+  event.remove({ id: "gtceu:assembler/wool_from_string"})
+
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
@@ -118,6 +122,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
+  event.remove({ id: "create:crafting/kinetics/mechanical_press"})
+  event.remove({ id: "create:crafting/kinetics/basin"})
+  event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
+
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
@@ -207,6 +215,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: `/^immersiveengineering:crafting\/treated_.*/`})
   event.remove({ id: "immersiveengineering:crafting/wirecutter"})
+  event.remove({ id: "immersiveengineering:crafting/craftingtable"})
+  event.remove({ id: "immersiveengineering:crafting/workbench"})
+  event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
@@ -239,6 +250,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:andesite" })
   event.remove({ id: "minecraft:brick" })
   event.remove({ id: "minecraft:blaze_powder"})
+  event.remove({ id: "minecraft:diorite"})
+  event.remove({ id: "minecraft:stone"})
 
   //PM
   event.remove({ id: "potionsmaster:blaze_powder"})
@@ -246,6 +259,14 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //EnderIO
   event.remove({ id: "enderio:stick"})
   event.remove({ id: "enderio:sag_milling/blaze_powder"})
+  event.remove({ id: "enderio:primitive_alloy_smelter"})
+  event.remove({ id: "enderio:sag_mill"})
+  event.remove({ id: "enderio:alloy_smelter"})
+  event.remove({ id: "enderio:alloy_smelting/dark_steel_ingot"})
+  event.remove({ id: "enderio:stirling_generator"})
+  event.remove({ id: "enderio:fluid_tank"})
+  event.remove({ id: "enderio:pressurized_fluid_tank"})
+
 
   //Waystones
   event.remove({ id: `/^waystones:.*/`})
