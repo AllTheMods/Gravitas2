@@ -247,9 +247,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last',
+                    'shrink_last',
                     'draw_second_last', 
-                    'shrink_last'
+                    'hit_third_last'
                 ]
               })
             */
@@ -271,9 +271,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last', 
+                    'shrink_last', 
                     'draw_second_last', 
-                    'shrink_last'
+                    'hit_third_last'
                 ]
             })
             */
@@ -308,9 +308,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'draw_third_last',
+                    'shrink_last',
                     'draw_second_last', 
-                    'shrink_last'
+                    'draw_third_last'
                 ]
             })
             */
@@ -374,9 +374,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last', 
+                    'bend_last', 
                     'draw_second_last', 
-                    'bend_last'
+                    'hit_third_last'
                 ]
             })
 
@@ -513,9 +513,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last', 
+                    'bend_last', 
                     'shrink_second_last', 
-                    'bend_last'
+                    'hit_third_last'
                 ]
             })
 
@@ -530,9 +530,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last', 
+                    'bend_last', 
                     'shrink_second_last', 
-                    'bend_last'
+                    'hit_third_last'
                 ]
             })
 
@@ -553,9 +553,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last', 
+                    'bend_last', 
                     'draw_second_last', 
-                    'bend_last'
+                    'hit_third_last'
                 ]
             })
 
@@ -737,9 +737,9 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 tier: metal.tier,
                 rules: [
-                    'hit_third_last', 
+                    'shrink_last', 
                     'draw_second_last', 
-                    'shrink_last'
+                    'hit_third_last'
                 ]
             })
 
