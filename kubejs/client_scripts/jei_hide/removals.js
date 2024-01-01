@@ -105,4 +105,7 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^minecraft:.*granite.*/`)
 
 
+    // EnderIO
+    event.hide(`/^enderio:end_steel.*/`)
+
 }

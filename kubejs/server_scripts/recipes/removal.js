@@ -260,6 +260,13 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "enderio:stick"})
   event.remove({ id: "enderio:sag_milling/blaze_powder"})
   event.remove({ id: "enderio:primitive_alloy_smelter"})
+  event.remove({ id: "enderio:sag_mill"})
+  event.remove({ id: "enderio:alloy_smelter"})
+  event.remove({ id: "enderio:alloy_smelting/dark_steel_ingot"})
+  event.remove({ id: "enderio:stirling_generator"})
+  event.remove({ id: "enderio:fluid_tank"})
+  event.remove({ id: "enderio:pressurized_fluid_tank"})
+
 
   //Waystones
   event.remove({ id: `/^waystones:.*/`})
