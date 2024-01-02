@@ -79,7 +79,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:anvil", "tfc:metal/anvil/wrought_iron")
   event.replaceInput({ type: "minecraft:crafting_shapeless" }, "minecraft:slime_ball", "tfc:glue")
-
+  event.replaceInput({},"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceOutput({},"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:slime_ball", "tfc:glue")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:cobblestone_slab", "#forge:slabs/cobblestone")
   //remove furnace existance

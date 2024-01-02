@@ -32,6 +32,13 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
     let fluid = r.allValueMap.result_fluid.value
     if (!fluid) return
     fluid.setAmount(r.getId().includes("_sheet") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("boots") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("greaves") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("chestplate") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("helmet") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("fish_hook") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("bars") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+
     r.resultFluid(fluid)
   })
 
