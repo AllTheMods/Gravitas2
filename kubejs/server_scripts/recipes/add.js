@@ -214,6 +214,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     }
   })
+  event.custom({
+   type: "create:filling",
+   ingredients: [
+       {
+         tag: "tfc:foods/breads"
+       },
+       {
+         "amount": 250,
+         "fluidTag": "forge:milk"
+       }
+     ],
+     results: [
+       {
+         item: "create:sweet_roll"
+       }
+     ]
+  })
     event.custom({
       type: "tfc:damage_inputs_shapeless_crafting",
       recipe: {

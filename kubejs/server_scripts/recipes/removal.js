@@ -125,10 +125,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/mechanical_press"})
   event.remove({ id: "create:crafting/kinetics/basin"})
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
+  event.remove({ id: "create:filling/sweet_roll"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
-  event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
   event.remove({ id: "create:pressing/iron_ingot" })
   event.remove({ id: "railcraft:rolling/iron_plate" })
 
