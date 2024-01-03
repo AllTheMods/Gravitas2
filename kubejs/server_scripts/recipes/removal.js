@@ -220,7 +220,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
 
   //Firmalife
-  event.remove({ id: "firmalife:alloy/stainless_steel"})
+  event.remove({ id: "firmalife:anvil/stainless_steel_rod"})
+  event.remove({ id: "firmalife:crafting/vat"})
+  event.remove({ id: "firmalife:crafting/jarring_station"})
   //AE2
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
