@@ -163,6 +163,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     results: [{ item: "create:cogwheel" }]
   })
+  shaped("3x create:belt_connector", ["   ", "LLL", "MRM"], {
+    L: "#tfc:leather_knapping",
+    M: "tfc:brass_mechanisms",
+    R: "#forge:rods/wrought_iron"
+  })
+  shaped("6x create:belt_connector", ["   ", "LLL", "MRM"], {
+    L: "#tfc:leather_knapping",
+    M: "#forge:gears/wrought_iron",
+    R: "#forge:rods/steel"
+  })
   event.custom({
     type: "create:deploying",
     ingredients: [
