@@ -166,25 +166,13 @@
 			click: ""
 			corner: false
 			dev: false
-			height: 3.25d
-			hover: [ ]
-			image: "framedcompactdrawers:block/drawers_comp_raw_open_1"
-			rotation: 0.0d
-			width: 3.25d
-			x: 4.0d
-			y: 3.5d
-		}
-		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
 			hover: [ ]
-			image: "gravitas:textures/items/gravitas_icon.png"
+			image: "atm:textures/logo.png"
 			rotation: 0.0d
-			width: 3.0d
+			width: 5.333333333333333d
 			x: 4.0d
-			y: 3.5d
+			y: 2.5d
 		}
 		{
 			click: ""
@@ -333,7 +321,6 @@
 				""
 				"Pick up some &3Pebbles&r you see along the ground. You'll get different types of stones and even small ores depending on the geological region you are in."
 				""
-				"To help you locate which region you are in, make sure to open up the &cBlaze Map&r and select &aGeology&r on the left side! You might have to set a keybind for this as well."
 				""
 				"Make sure to check out the TFC guidebook on different areas to learn what you can gather!"
 			]
@@ -420,7 +407,7 @@
 						Count: 1b
 						id: "itemfilters:tag"
 						tag: {
-							value: "tfc:stone_javelins"
+							value: "tfc:javelins"
 						}
 					}
 					title: "Stone Javelin"
@@ -1331,28 +1318,24 @@
 					id: "3375A5CA9F1B1FF3"
 					item: {
 						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:castable_pickaxe_heads"
 						}
-						id: "tfc:metal/pickaxe_head/copper"
 					}
+					title: "Any #tfc:castable_pickaxe_heads"
 					type: "item"
 				}
 				{
 					id: "158CE6F45E6BCB20"
 					item: {
 						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:castable_propick_heads"
 						}
-						id: "tfc:metal/propick_head/copper"
 					}
+					title: "Any #tfc:castable_propick_heads"
 					type: "item"
 				}
 			]

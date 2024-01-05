@@ -486,7 +486,7 @@
 			tasks: [
 				{
 					id: "3340E7B5CDF24720"
-					item: { Count: 64b, id: "create_new_age:nuclear_fuel" }
+					item: "create_new_age:nuclear_fuel"
 					type: "item"
 				}
 				{

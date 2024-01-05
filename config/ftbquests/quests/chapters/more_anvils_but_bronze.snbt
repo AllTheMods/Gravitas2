@@ -30,7 +30,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/bismuth_bronze"
+					id: "gtceu:bismuth_bronze_ingot"
 				}
 				type: "item"
 			}]
@@ -50,7 +50,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/black_bronze"
+					id: "gtceu:black_bronze_ingot"
 				}
 				type: "item"
 			}]
@@ -74,7 +74,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/bronze"
+					id: "gtceu:bronze_ingot"
 				}
 				type: "item"
 			}]
@@ -196,7 +196,16 @@
 				}
 				{
 					id: "1B7BB0F23E04AF1B"
-					item: "tfc:ore/kaolinite"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:kaolin_clay"
+					}
 					type: "item"
 				}
 			]
@@ -427,21 +436,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["6C3A96EFF44E71A2"]
-			description: [
-				"{gravitas.quest.bronze.desc.drawers.1}"
-				"{gravitas.quest.bronze.desc.drawers.2}"
-			]
-			id: "44AF5291A8F8D02E"
-			tasks: [{
-				id: "7C322EC71BD4E8A4"
-				item: "framedcompactdrawers:framed_full_four"
-				type: "item"
-			}]
-			x: -0.5d
-			y: -3.0d
-		}
-		{
 			dependencies: ["29642302C9284C5F"]
 			description: [
 				"{gravitas.quest.bronze.desc.climate_station.1}"
@@ -643,59 +637,12 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/brass"
+					id: "gtceu:brass_ingot"
 				}
 				type: "item"
 			}]
 			x: 1.0d
 			y: 2.0d
-		}
-		{
-			dependencies: ["3651110B0E67D615"]
-			id: "5C4E0FABBA11E06E"
-			tasks: [
-				{
-					id: "21331FC42F3460C6"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfcchannelcasting:unfired_channel"
-					}
-					type: "item"
-				}
-				{
-					id: "4142BE5A2CEAE5A2"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfcchannelcasting:unfired_mold_table"
-					}
-					type: "item"
-				}
-				{
-					id: "6FA44A51A2C7D116"
-					item: "tfcchannelcasting:channel"
-					type: "item"
-				}
-				{
-					id: "79FD6C632D2D31D2"
-					item: "tfcchannelcasting:mold_table"
-					type: "item"
-				}
-			]
-			title: "{gravitas.quest.bronze.channel}"
-			x: -5.0d
-			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.3.title}"

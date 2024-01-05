@@ -98,7 +98,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "42AECA3A8E8FE1E2"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "Cheaper circuits!"
@@ -229,7 +228,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "266B8E9D3694AAA1"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "Greggers, ASSEMBLE!"
@@ -253,7 +251,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "71B383C6E1AE918A"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "The cutting edge"
@@ -342,7 +339,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "50742DF1F39731AC"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			tasks: [{
@@ -384,7 +380,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "49C7CE1D4F1883BC"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			tasks: [{
@@ -463,7 +458,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "77EA140702841EC6"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			tasks: [{
@@ -730,7 +724,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "6E623304DC884B9A"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			tasks: [{
@@ -747,7 +740,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "498F5EA3939A2A64"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "Not that kind of brewery"
@@ -851,7 +843,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "3CB7824290DDD795"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "Magnetizing!"
@@ -875,7 +866,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "1922767923C7B993"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			tasks: [{
@@ -969,7 +959,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "2C3CE24B38434A44"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "A good source of silicon too"
@@ -1192,7 +1181,6 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "617745FCC8063446"
-				table_id: 7083859357644513434L
 				type: "loot"
 			}]
 			subtitle: "Arcing electricity!"

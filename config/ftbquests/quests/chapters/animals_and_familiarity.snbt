@@ -1,0 +1,11 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "animals_and_familiarity"
+	group: "4D27B882A1217B68"
+	id: "33C365D401551057"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "Animals and familiarity"
+}

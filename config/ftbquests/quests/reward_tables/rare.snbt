@@ -8,7 +8,7 @@
 	}
 	id: "4D37FFAF33DF678A"
 	loot_size: 1
-	order_index: 12
+	order_index: 11
 	rewards: [
 		{ item: "sophisticatedbackpacks:everlasting_upgrade" }
 		{ item: "sophisticatedbackpacks:stack_upgrade_tier_2", weight: 5.0f }

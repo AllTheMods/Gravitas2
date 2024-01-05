@@ -2,7 +2,7 @@
 	icon: "minecraft:nether_star"
 	id: "481E10AEAC95C550"
 	loot_size: 1
-	order_index: 15
+	order_index: 14
 	rewards: [
 		{ item: "allthemodium:unobtainium_allthemodium_alloy_ingot", random_bonus: 2, weight: 3.0f }
 		{ item: "allthemodium:unobtainium_vibranium_alloy_ingot", random_bonus: 2, weight: 3.0f }
