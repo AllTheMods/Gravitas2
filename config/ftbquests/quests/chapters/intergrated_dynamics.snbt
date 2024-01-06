@@ -1,0 +1,11 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "intergrated_dynamics"
+	group: "3CB58C688DD23BD2"
+	id: "00DBCE867CC100E0"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "Intergrated Dynamics"
+}

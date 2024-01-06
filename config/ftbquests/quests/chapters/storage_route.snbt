@@ -1,0 +1,11 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage_route"
+	group: "3CB58C688DD23BD2"
+	id: "76FAFC4D099AA2F8"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "Storage Route"
+}
