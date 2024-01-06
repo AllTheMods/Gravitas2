@@ -286,5 +286,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Corail
   event.remove({ id: "tombstone:familiar_receptacle"})
 
-
+  //SimplePlanes
+  event.remove({ id: "simpleplanes:liquid_engine"})
 }
