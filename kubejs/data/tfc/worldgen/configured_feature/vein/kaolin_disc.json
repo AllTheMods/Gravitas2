@@ -1,0 +1,25 @@
+{
+  "type": "tfc:kaolin_disc_vein",
+  "config": {
+    "rarity": 16,
+    "min_y": 67,
+    "max_y": 110,
+    "size": 28,
+    "height": 6,
+    "density": 1.0,
+    "random_name": "kaolin",
+    "biomes": "#tfc:kaolin_clay_spawns_in",
+    "blocks": [],
+    "indicator": {
+      "rarity": 12,
+      "depth": 5,
+      "underground_rarity": 1,
+      "underground_count": 3,
+      "blocks": [
+        {
+          "block": "tfc:rock/loose/marble"
+        }
+      ]
+    }
+  }
+}

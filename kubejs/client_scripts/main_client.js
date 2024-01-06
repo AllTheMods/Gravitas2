@@ -1,11 +1,9 @@
 // priority 0
 
 ClientEvents.tick((event) => {
-  observeGtQuest(event) // TODO: needs rework
 })
 
 NetworkEvents.dataReceived('customTask', event => {
-  clientObserveGtTask(event) // TODO: needs rework
 })
 
 JEIEvents.hideItems(event => {
@@ -24,5 +22,5 @@ ClientEvents.lang("en_us", (event) => {
 ItemEvents.tooltip(event => {
   addModNameTooltipToCreativeTab(event)
   circuitTooltips(event)
-  boatToolTips(event)
+  addMetalRatioToVessels(event)
 })

@@ -482,7 +482,8 @@
 	"gravitas.quest.simple_transportation.desc.rowboat1": "Welcome to TFC something as simple as a rowboat can't be made on some crafting table. No, you gotta be a man and make it like our forefathers did. To start place down 6 ship scaffoling in a 2 by 3 design. Then fill each with planks of a strong wood. Each will take 4 planks so you'll need 24 planks total.",
 	"gravitas.quest.simple_transportation.desc.rowboat2": "Once you have a filled out frame, to make it sea worthy it'll need to be bolted together. To bolt them together you'll need a hammer in your offhand and the Copper bolts in your main hand then right click the filled frames. Each scaffolding takes 4 bolts.",
 	"gravitas.quest.simple_transportation.desc.rowboat3": "You'll notice the Rowboat only goes with the flow for now, in order for it to move to your command you'll need Oars. Use the Oarlocks on the rowboat to set them up and then put the Oars in the locks. Now its sea worthy!",
-	
+	"gravitas.quest.simple_transportation.desc.paddles": "There are 2 paddles you can use with the kayaks: the canoe paddle and the kayak paddle. (Sorry there isn't any canoes, only kayaks). The Canoe paddle gets the kayak to the same speed as a regular boat. While the Kayak Paddle makes you faster than a normal boat. To use them you just need to have them in your hands while in the Kayak.",
+
 	
 	"gravitas.quest.adv_transportation.sail": "On the Water: Small Ships",
 	"gravitas.quest.adv_transportation.cog": "Cog (Small Ship)",

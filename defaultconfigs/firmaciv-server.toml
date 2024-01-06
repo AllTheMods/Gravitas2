@@ -7,5 +7,5 @@
 	#Force reduceDebugInfo gamerule.
 	forceReducedDebugInfo = false
 	#Disables vanilla boats and base TFC boats from working.
-	disableVanillaBoatFunctionality = true
+	disableVanillaBoatFunctionality = false
 

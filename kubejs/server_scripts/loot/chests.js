@@ -50,13 +50,17 @@ const chestBanList = [
   "minecraft:furnace_minecart",
   "minecraft:netherite_hoe",
   "minecraft:netherite_ingot",
+  "minecraft:stone",
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
-  "railcraft:steel_plate"
+  "railcraft:steel_plate",
+  "immersiveengineering:seed"
+
 ]
 
 const chestReplacementMap = {
+  "minecraft:amethyst": "tfc:gem/amethyst",
   "minecraft:allium": "tfc:plant/allium",
   "minecraft:apple": "tfc:food/red_apple",
   "minecraft:baked_potato": "tfc:food/potato",

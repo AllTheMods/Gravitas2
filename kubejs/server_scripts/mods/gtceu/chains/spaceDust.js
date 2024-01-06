@@ -1,3 +1,5 @@
+// priority 10
+
 let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
     // CATALYSTS (etc)
     event.recipes.gtceu.alloy_blast_smelter("hypogen_solder_catalyst")

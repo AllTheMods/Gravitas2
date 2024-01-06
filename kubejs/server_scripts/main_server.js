@@ -9,8 +9,9 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   gtceuAdd(event)
   createAdd(event)
-  //spaceDustChain(event)
-  //certusSemiconductors(event)
+  spaceDustChain(event)
+  certusSemiconductors(event)
+  gregifyAE2(event)
 })
 
 LootJS.modifiers((event) => {
@@ -34,7 +35,9 @@ ServerEvents.tags("worldgen/placed_feature", (event) => {
 ServerEvents.tags("item", (event) => {
   addItemTags(event)
 })
-
+ServerEvents.tags("entity", (event) => {
+  entityTags(event)
+})
 ServerEvents.tags("block", (event) => {
   addBlockTags(event)
 })
@@ -54,6 +57,7 @@ MoreJSEvents.structureLoad((event) => {
 MoreJSEvents.structureAfterPlace((event) => {
   replaceGoldBlocksWithPiles(event)
   runErosionFeature(event)
+  replaceVillagesWoodAccordingToClimate(event)
 })
 
 ServerEvents.lowPriorityData((event) => {
@@ -68,15 +72,12 @@ NetworkEvents.dataReceived("customTask", (event) => {
 
 MoreJSEvents.villagerTrades((event) => {
   replaceTrades(event)
-
 })
 
-let replaceItemEntity = {
-  "minecraft:chest": "tfc:wood/chest/oak"
-}
 EntityEvents.spawned("item", event => {
-  let replacement = replaceItemEntity[event.entity.item.id]
-  if (replacement) {
-    event.entity.setItem(Item.of(replacement, event.entity.item.count))
-  }
+  replaceSpawnedItem(event)
+})
+
+EntityEvents.death("player", (event) => {
+  addsTimeOfDeathToPlayer(event)
 })

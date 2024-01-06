@@ -12,7 +12,7 @@
 [general]
 	#The duration of the Ghostly Shape effect in seconds [0..MAX|default:120]
 	#Range: > 0
-	ghostly_shape_duration = 120
+	ghostly_shape_duration = 0
 	#The chance that a player receives an already enchanted Grave's Key on death [-1..100|default:0|disabled:-1]
 	#Range: -1 ~ 100
 	chance_enchanted_grave_key = 0
@@ -94,15 +94,15 @@
 	#Scroll of Knowledge [false/true|default:true]
 	allow_scroll_of_knowledge = true
 	#Tablet of Recall [false/true|default:true]
-	allow_tablet_of_recall = true
+	allow_tablet_of_recall = false
 	#Tablet of Home [false/true|default:true]
-	allow_tablet_of_home = true
+	allow_tablet_of_home = false
 	#Tablet of Assistance [false/true|default:true]
-	allow_tablet_of_assistance = true
+	allow_tablet_of_assistance = false
 	#Tablet of Cupidity [false/true|default:true]
-	allow_tablet_of_cupidity = true
+	allow_tablet_of_cupidity = false
 	#Scroll of Unstable Intangibility [false/true|default:true]
-	allow_scroll_of_unstable_intangibility = true
+	allow_scroll_of_unstable_intangibility = false
 	#Scroll of Feather Fall [false/true|default:true]
 	allow_scroll_of_feather_fall = true
 	#Scroll of Purification [false/true|default:true]
@@ -110,7 +110,7 @@
 	#Scroll of True Sight [false/true|default:true]
 	allow_scroll_of_true_sight = true
 	#Lost Tablet [false/true|default:true]
-	allow_lost_tablet = true
+	allow_lost_tablet = false
 	#Scroll of Reach [false/true|default:true]
 	allow_scroll_of_reach = true
 	#Scroll of Lightning Resistance [false/true|default:true]
@@ -120,15 +120,15 @@
 	#Scroll of Aquatic Life [false/true|default:true]
 	allow_scroll_of_aquatic_life = true
 	#Scroll of Mercy [false/true|default:true]
-	allow_scroll_of_mercy = true
+	allow_scroll_of_mercy = false
 	#Dust of Vanishing [false/true|default:true]
 	allow_dust_of_vanishing = true
 	#Dust of Frost [false/true|default:true]
 	allow_dust_of_frost = true
 	#Enchanted Bundle [false/true|default:true]
-	allow_enchanted_bundle = true
+	allow_enchanted_bundle = false
 	#Book of Recycling [false/true|default:true]
-	allow_book_of_recycling = true
+	allow_book_of_recycling = false
 	#Book of Repairing [false/true|default:true]
 	allow_book_of_repairing = true
 	#Book of Magic Impregnation [false/true|default:true]
@@ -140,13 +140,13 @@
 	#Christmas Hat [false/true|default:true]
 	allow_christmas_hat = true
 	#Bag of Seeds [false/true|default:true]
-	allow_bag_of_seeds = true
+	allow_bag_of_seeds = false
 	#Magic Scroll [false/true|default:true]
 	allow_magic_scroll = true
 	#Familiar Stone [false/true|default:true]
-	allow_familiar_stone = true
+	allow_familiar_stone = false
 	#Merchant Stone [false/true|default:true]
-	allow_merchant_stone = true
+	allow_merchant_stone = false
 
 #Allows to enable some features related to others mods
 [compatibility]

@@ -1,12 +1,14 @@
 // priority 0
-
+StartupEvents.init((e) => {
+  if (!Platform.isClientEnvironment()) return
+  $CustomClickEvent.register($UtilsJS.makeFunctionProxy("startup", $EventActor, handleFTBCustomClick))
+})
 
 StartupEvents.registry("item", (event) => {
   registerItems(event)
 })
 
 StartupEvents.registry("block", (event) => {
-
   registerBlocks(event)
 })
 
@@ -33,39 +35,31 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
 })
 
 GTCEuStartupEvents.registry("gtceu:element", (event) => {
-    registerGTCEuElement(event)
-})
-
-GTCEuStartupEvents.registry("gtceu:material", (event) => {
-  //registerGTCEuMaterialFlags(event)
-})
-
-GTCEuStartupEvents.registry("gtceu:material", (event) => {
-  //registerGTCEuElementMaterial(event)
-})
-
-GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    //registerGTCEuUnknownCompositionMaterial(event)
-})
-
-GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    //registerGTCEuFirstDegreeMaterial(event)
-})
-
-GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    //registerGTCEuHigherDegreeMaterial(event)
-})
-
-GTCEuStartupEvents.registry("gtceu:material", (event) => {
-    //registerGTCEuOrganicMaterial(event)
+  registerGTCEuElement(event)
 })
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
   addTooltipIngots(event)
 })
 
-ForgeEvents.onEvent("blusunrize.immersiveengineering.api.multiblocks.MultiblockHandler$MultiblockFormEvent", event => {
- if(event.getMultiblock().getUniqueName().namespace == "immersiveengineering") {
-    event.setCanceled(true)
- }
+ForgeEvents.onEvent(
+  "blusunrize.immersiveengineering.api.multiblocks.MultiblockHandler$MultiblockFormEvent",
+  (event) => {
+    event.getMultiblock().getUniqueName().namespace == "immersiveengineering" && event.setCanceled(true)
+  }
+)
+
+ForgeEvents.onEvent("net.minecraftforge.event.entity.player.PlayerEvent$Clone", (event) => {
+  runsDeathPenalty(event)
+})
+
+StartupEvents.recipeSchemaRegistry((event) => {
+  loadComponents(event)
+  registerTFCHeatingSchema(event)
+  registerTFCCastingSchema(event)
+  registerTFCAnvilSchema(event)
+  registerWoodencogFillingSchema(event)
+  registerCreateMixingSchema(event)
+  registerAe2ChargerSchema(event)
+  registerAe2InscriberSchema(event)
 })

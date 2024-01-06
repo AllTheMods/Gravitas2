@@ -173,7 +173,7 @@ const gregVeins = [
     ]
   },
   {
-    name: "diamond",
+    name: "lapis_lazuli",
     weight: 40,
     minY: -65,
     maxY: -30,
@@ -184,6 +184,18 @@ const gregVeins = [
       ["lapis", 2],
       ["calcite", 1]
     ]
+  },
+  {
+      name: "diamond",
+      weight: 40,
+      minY: -65,
+      maxY: 10,
+      validStones: ["gabbro"],
+      oreAndWeight: [
+        ["graphite", 3],
+        ["diamond", 2],
+        ["coal", 1]
+      ]
   },
   {
     name: "manganese",

@@ -47,6 +47,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^gtceu:${tool}_leggings/`)
     event.hide(`/^gtceu:${tool}_boots/`)
   })
+    event.hide(`/^minecraft:.*_boat/`)
+    event.hide(`/^tfc:wood/boat/.*/`)
 
     //IE
     event.hide("immersiveengineering:cokebrick")
@@ -71,7 +73,39 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:coal_coke")
     event.hide("immersiveengineering:dust_coke")
     event.hide("immersiveengineering:coke")
+    event.hide(`/^immersiveengineering:.*hemp_seed.*/`)
 
     //ATM
     event.hide("allthemodium:teleport_pad")
+
+    //Railcraft
+    event.hide(`/^railcraft:.*coke.*/`)
+    
+    //Storage Drawers
+    event.hide(`/^storagedrawers:.*_trim/`)
+    event.hide(`/^storagedrawers:.*_full_.*/`)
+    event.hide(`/^storagedrawers:.*_half_.*/`)
+
+    //Astikor Carts
+    event.hide("astikorcarts:plow")
+    event.hide("astikorcarts:animal_cart")
+    event.hide("astikorcarts:supply_cart")
+    event.hide("astikorcarts:wheel")
+
+    event.hide(`/^.*deepslate.*/`)
+    event.hide(`/^minecraft:.*dark_oak.*/`)
+    event.hide(`/^minecraft:.*oak.*/`)
+    event.hide(`/^minecraft:.*acacia.*/`)
+    event.hide(`/^minecraft:.*birch.*/`)
+    event.hide(`/^minecraft:.*mangrove.*/`)
+    event.hide(`/^minecraft:.*cherry.*/`)
+    event.hide(`/^minecraft:.*spruce.*/`)
+    event.hide(`/^minecraft:.*andesite.*/`)
+    event.hide(`/^minecraft:.*diorite.*/`)
+    event.hide(`/^minecraft:.*granite.*/`)
+
+
+    // EnderIO
+    event.hide(`/^enderio:end_steel.*/`)
+
 }

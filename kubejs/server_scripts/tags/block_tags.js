@@ -101,4 +101,8 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
             event.add('tfc:prospectable', [`gtceu:${stone}_${ore}_ore`])
     })
   })
+  event.add("tfc:blast_furnace_insulation", ["gtceu:firebricks"])
+  event.add("forge:ores", ["tfc:white_kaolin_clay", "tfc:kaolin_clay_grass", "tfc:pink_kaolin_clay", "tfc:red_kaolin_clay"])
+  event.add("forge:ores/kaolin",["tfc:white_kaolin_clay", "tfc:kaolin_clay_grass", "tfc:pink_kaolin_clay", "tfc:red_kaolin_clay"])
+
 }

@@ -39,3 +39,4 @@ package-lock.json
 .eslintrc
 package.json
 node-tail.js
+/icon-exports-x32

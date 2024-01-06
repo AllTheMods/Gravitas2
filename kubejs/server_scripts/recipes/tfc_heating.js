@@ -1,95 +1,66 @@
 // priority 10
+
 const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ event) => {
-  const meltMap = {
-    6: JsonIO.primitiveOf(9),
-    25: JsonIO.primitiveOf(36),
-    50: JsonIO.primitiveOf(72),
-    75: JsonIO.primitiveOf(108),
-    100: JsonIO.primitiveOf(144),
-    200: JsonIO.primitiveOf(288),
-    400: JsonIO.primitiveOf(576),
-    600: JsonIO.primitiveOf(864),
-    800: JsonIO.primitiveOf(1152),
-    1200: JsonIO.primitiveOf(1728),
-    1400: JsonIO.primitiveOf(2016),
-    10: JsonIO.primitiveOf(16),
-    15: JsonIO.primitiveOf(24),
-    35: JsonIO.primitiveOf(48),
-    20: JsonIO.primitiveOf(24),
-    30: JsonIO.primitiveOf(48),
-    90: JsonIO.primitiveOf(128),
-    60: JsonIO.primitiveOf(86),
-    40: JsonIO.primitiveOf(58),
-    70: JsonIO.primitiveOf(96)
+  const convertMap = {
+    6: 9,
+    10: 16,
+    15: 24,
+    35: 48,
+    25: 36,
+    50: 72,
+    40: 58,
+    60: 86,
+    90: 128,
+    20: 24,
+    30: 48,
+    70: 96
+  }
+  let convertFluidValues = (oldValue) => {
+    let newValue = convertMap[oldValue]
+    if (!newValue) {
+      return oldValue % 25 ? oldValue : oldValue * 1.44
+    } else return newValue
+  }
+  let convertFluidsFromArray = (array) => {
+    return array
+      .stream()
+      .map((val) => (val instanceof $UnboundFluidStackJS ? val.setAmount(convertFluidValues(val.amount)) || val : val))
+      .toList()
   }
 
-  event.forEachRecipe({ type: "tfc:heating" }, (recipe) => {
-    const fluid = recipe.json.asMap()?.result_fluid
-    if (!fluid || !meltMap[fluid.get("amount")]) return
-    fluid.asMap().put("amount", meltMap[fluid.get("amount")])
-    recipe.save()
+  event.forEachRecipe({ type: "tfc:heating" }, (/** @type {Special.Recipes.HeatingTfc}**/ r) => {
+    let fluid = r.allValueMap.result_fluid.value
+    if (!fluid) return
+    fluid.setAmount(r.getId().includes("_sheet") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("boots") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("greaves") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("chestplate") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("helmet") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("fish_hook") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    fluid.setAmount(r.getId().includes("bars") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+
+    r.resultFluid(fluid)
   })
 
-  event.forEachRecipe({ id: /^woodencog:mixing\/.*/ }, (recipe) => {
-    const ingredients = recipe.json.getAsJsonArray("ingredients")
-    if (!ingredients) return
-    ingredients.forEach((input) => {
-      if (!input.has("amount") || !meltMap[input.get("amount")]) return
-      input.asMap().put("amount", meltMap[input.get("amount")])
-    })
-    const results = recipe.json.getAsJsonArray("results")
-    if (!results) return
-    results.forEach((output) => {
-      if (!output.has("amount") || !meltMap[output.get("amount")]) return
-      output.asMap().put("amount", meltMap[output.get("amount")])
-    })
-    recipe.save()
+  event.forEachRecipe({ id: /^woodencog:mixing/ }, (/** @type {Special.Recipes.MixingCreate}**/ r) => {
+    if (r.getId().includes("/barrel")) return
+    let ingredients = unwrapValue(r.get("ingredients"))
+    let modifiedIngredients = convertFluidsFromArray(ingredients)
+    r.ingredients(modifiedIngredients)
+    let results = unwrapValue(r.get("results"))
+    let modifiedResults = convertFluidsFromArray(results)
+    r.results(modifiedResults)
   })
-  //This is *technically* a replacement, but needs meltMap, so.
-    event.forEachRecipe({ id: /^woodencog:advanced_filling\/.*/ }, (recipe) => {
-      const ing = recipe.json.getAsJsonArray("ingredients")
-      const outinputs = []
-      const outoutputs = []
-      if (!ing) return
-      ing.forEach((mayfluid) => {
-        if (!mayfluid.has("amount")) {
-          outinputs.push(mayfluid)
-          return
-        }
-        if (!meltMap[mayfluid.get("amount")]) return
-        outinputs.push({
-          fluid: mayfluid.get("fluid"),
-          nbt: {},
-          amount: meltMap[mayfluid.get("amount")]
-        })
-      })
-      const results = recipe.json.getAsJsonArray("results")
-      if (!results) return
-      results.forEach((output) => {
-        const nbt = output.get("nbt")
-        if (!nbt) return
-        const tank = nbt.get("tank")
-        if (!tank || !tank.has("Amount") || !meltMap[tank.get("Amount")]) return
-        var bootleg = Fluid.of(tank.get("FluidName"), meltMap[tank.get("Amount")]).toJson() //I hate this. But its the first way I could get it to not put a double in the amount...
-        outoutputs.push({
-          item: output.get("item"),
-          nbt: {
-            tank: { Amount: bootleg.get("amount"), FluidName: tank.get("FluidName") }
-          },
-          count: 1
-        })
-      })
-      event.custom({ type: "create:filling", ingredients: outinputs, results: outoutputs })
-      recipe.remove()
-    })
-  const castMap = {
-    100: JsonIO.primitiveOf(144),
-    200: JsonIO.primitiveOf(288)
-  }
-  event.forEachRecipe({ type: "tfc:casting" }, (recipe) => {
-    const fluid = recipe.json.asMap()?.fluid
-    if (!fluid || !castMap[fluid.get("amount")]) return
-    fluid.asMap().put("amount", castMap[fluid.get("amount")])
-    recipe.save()
+
+  event.forEachRecipe({ type: "woodencog:filling" }, (/** @type {Special.Recipes.FillingWoodencog}**/ r) => {
+    let ingredients = unwrapValue(r.get("ingredients"))
+    let modifiedIngredients = convertFluidsFromArray(ingredients)
+    r.ingredients(modifiedIngredients)
+  })
+
+  event.forEachRecipe({ type: "tfc:casting" }, (/** @type {Special.Recipes.CastingTfc}**/ r) => {
+    let fluidIngredient = unwrapValue(r.get("fluid"))
+    fluidIngredient.computeIfPresent("amount", (key, val) => convertFluidValues(val))
+    r.fluid(fluidIngredient)
   })
 }

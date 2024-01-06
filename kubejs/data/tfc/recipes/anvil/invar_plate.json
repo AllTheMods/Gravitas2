@@ -1,7 +1,7 @@
 {
     "type": "tfc:anvil",
     "input": {
-        "item": "gtceu:double_invar_ingot"
+        "item": "gregitas:double_invar_ingot"
     },
     "result": {
         "item": "gtceu:invar_plate"
