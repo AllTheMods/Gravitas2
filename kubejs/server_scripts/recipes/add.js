@@ -262,7 +262,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .cutter(`gregitas:${sapling}_lumber_water`)
       .itemInputs(`tfc:wood/log/${sapling}`)
       .inputFluids(Fluid.of("minecraft:water", 4))
-      .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+      .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(120)
       .EUt(LV)
 
@@ -270,7 +270,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .cutter(`gregitas:${sapling}_lumber_distilled_water`)
       .itemInputs(`tfc:wood/log/${sapling}`)
       .inputFluids(Fluid.of("gtceu:distilled_water", 3))
-      .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+      .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(80)
       .EUt(LV)
 
@@ -278,7 +278,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .cutter(`gregitas:${sapling}_lumber_lubricant`)
       .itemInputs(`tfc:wood/log/${sapling}`)
       .inputFluids(Fluid.of("gtceu:lubricant", 1))
-      .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+      .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(40)
       .EUt(LV)
   })
