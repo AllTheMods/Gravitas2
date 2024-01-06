@@ -256,6 +256,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.replaceOutput({ mod: 'gtceu' }, 'minecraft:sand', 'tfc:sand/yellow')  
     event.replaceInput({ mod: 'gtceu' }, 'minecraft:dirt', '#minecraft:dirt')
     event.replaceOutput({ mod: 'gtceu' }, 'minecraft:dirt', 'tfc:dirt/loam')
+    event.remove({ id: 'gtceu:compressor/red_sandstone' })
 
     enderTC.forEach((ender) => {
         event.recipes.gtceu.chemical_bath(`ender_chest_${ender.id}`)

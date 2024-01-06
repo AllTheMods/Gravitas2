@@ -30,6 +30,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:assembler/chest"})
   event.remove({ id: "gtceu:assembler/enchanting_table"})
   event.remove({ id: "gtceu:assembler/wool_from_string"})
+  event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
 
 
   //GT / Railcraft Tool Specific
