@@ -133,4 +133,29 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 ]
             }
         )
+
+        tfcCobbleToSand.forEach((type) => {
+            event.recipes.create.crushing([
+                `tfc:sand/${type.sand}`,
+                 Item.of('minecraft:flint').withChance(0.1),
+                 Item.of('minecraft:clay_ball').withChance(0.05)
+                ],
+                `tfc:rock/gravel/${type.stone}` , 250)
+    
+            event.recipes.create.milling(`tfc:rock/gravel/${type.stone}`, `tfc:rock/cobble/${type.stone}`, 250)
+        })
+    
+        event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
+    
+        event.recipes.create.milling('gtceu:igneous_dust', '#tfc:igneous_extrusive_rock', 250)
+    
+        event.recipes.create.milling('gtceu:zinc_dust', 'gtceu:zinc_ingot', 250)
+    
+        event.recipes.create.mixing(['gtceu:sticky_resin', Item.of('gtceu:sticky_resin').withChance(0.25)], ['#forge:small_dusts/sulfur', Fluid.of('gregitas:raw_resin', 1000)], 250, 'heated')
+    
+        tfcSaplings.forEach(wood => {
+            event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
+            event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
+            event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_log/${wood}`, 150)
+        })
 }
