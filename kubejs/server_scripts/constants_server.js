@@ -192,3 +192,86 @@ const tfcWoodVanillaToTFC = {
   // no bamboo
   cherry: "white_cedar"
 }
+
+const tfcCobbleToSand = [
+  {
+      stone: 'granite',
+      sand: 'white'
+  },
+  {
+      stone: 'diorite',
+      sand: 'white'
+  },
+  {
+      stone: 'gabbro',
+      sand: 'black'
+  },
+  {
+      stone: 'shale',
+      sand: 'black'
+  },
+  {
+      stone: 'claystone',
+      sand: 'brown'
+  },
+  {
+      stone: 'limestone',
+      sand: 'white'
+  },
+  {
+      stone: 'conglomerate',
+      sand: 'green'
+  },
+  {
+      stone: 'dolomite',
+      sand: 'black'
+  },
+  {
+      stone: 'chert',
+      sand: 'yellow'
+  },
+  {
+      stone: 'chalk',
+      sand: 'white'
+  },
+  {
+      stone: 'rhyolite',
+      sand: 'red'
+  },
+  {
+      stone: 'basalt',
+      sand: 'red'
+  },
+  {
+      stone: 'andesite',
+      sand: 'red'
+  },
+  {
+      stone: 'dacite',
+      sand: 'yellow'
+  },
+  {
+      stone: 'quartzite',
+      sand: 'white'
+  },
+  {
+      stone: 'slate',
+      sand: 'yellow'
+  },
+  {
+      stone: 'phyllite',
+      sand: 'brown'
+  },
+  {
+      stone: 'schist',
+      sand: 'green'
+  },
+  {
+      stone: 'gneiss',
+      sand: 'green'
+  },
+  {
+      stone: 'marble',
+      sand: 'yellow'
+  }
+]
