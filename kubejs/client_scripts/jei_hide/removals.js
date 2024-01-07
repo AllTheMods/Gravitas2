@@ -108,4 +108,7 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     // EnderIO
     event.hide(`/^enderio:end_steel.*/`)
 
+    //SFM
+    event.hide("sfm:water_tank")
+
 }

@@ -595,4 +595,58 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          c: "#forge:ingots/copper"
      })
 
+    shaped("create_new_age:magnetite_block", ["PCP", "CRC", "PCP"], {
+        C: "immersiveengineering:coil_hv",
+        R: "#forge:rods/steel",
+        P: "#forge:plates/magnetic_iron"
+
+    })
+
+    //SFM
+    shaped("sfm:manager", ["PPP", "BVI", "CCC"], {
+        P: "#forge:plates/wrought_iron",
+        B: "gtceu:basic_electronic_circuit",
+        V: "gtceu:vacuum_tube",
+        I: "gtceu:basic_integrated_circuit",
+        C: "gtceu:resin_printed_circuit_board"
+    })
+    shaped("8x sfm:cable", ["ppp", "bcb", "ppp"], {
+        p: "#forge:plates/rubber",
+        b: "gtceu:brass_small_item_pipe",
+        c: "minecraft:comparator"
+    })
+
+    shaped("sfm:disk", ["RGB", "PDP", "XTX"], {
+        R: "#forge:dyes/red",
+        G: "#forge:dyes/green",
+        B: "#forge:dyes/blue",
+        P: "minecraft:paper",
+        D: "computercraft:disk",
+        X: "#forge:dusts/redstone",
+        T: "minecraft:repeater"
+    })
+    shaped("sfm:labelgun", ["rr ", "ipg", "h  "],{
+        h: "gregitas:small_tool_handle",
+        r: "#forge:rods/wrought_iron",
+        i: "#forge:dyes/black",
+        p: "minecraft:paper",
+        g: "tfc:glue"
+
+    })
+    shaped("sfm:network_tool", [" LS", " IW", "h  "],{
+        h: "gregitas:small_tool_handle",
+        L: "minecraft:redstone_lamp",
+        S: "gtceu:resin_printed_circuit_board",
+        I: "gtceu:basic_integrated_circuit",
+        W: "gtceu:copper_octal_wire"
+    })
+    shaped("sfm:printing_press", ["RGB", "PDP", "XTX"], {
+        R: "#forge:dyes/red",
+        G: "#forge:dyes/green",
+        B: "#forge:dyes/blue",
+        P: "#forge:plates/rubber",
+        D: "tfc:metal/anvil/wrought_iron",
+        X: "#forge:dusts/redstone",
+        T: "minecraft:piston"
+    })
 }

@@ -288,4 +288,15 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //SimplePlanes
   event.remove({ id: "simpleplanes:liquid_engine"})
+
+  //SFM
+
+  event.remove({ id: "sfm:manager"})
+  event.remove({ id: "sfm:cable"})
+  event.remove({ id: "sfm:water_tank"})
+  event.remove({ id: "sfm:disk"})
+  event.remove({ id: "sfm:labelgun"})
+  event.remove({ id: "sfm:network_tool"})
+  event.remove({ id: "sfm:printing_press"})
+  event.remove({ id: "sfm:printing_form"})
 }
