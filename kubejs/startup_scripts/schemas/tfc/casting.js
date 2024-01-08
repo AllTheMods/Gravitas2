@@ -3,9 +3,9 @@
 let registerTFCCastingSchema = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event) => {
   const keys = global.schemas.keys
   const castingSchema = new $RecipeSchema(keys.result_casting, keys.fluid_stack_ingredient, keys.break_chance, keys.mold)
-    .constructor(itemWithModifier, keys.stack, keys.fluid_stack_ingredient)
-    .constructor(itemWithModifier, keys.stack, keys.fluid_stack_ingredient, keys.modifiers)
-    .constructor(keys.result_casting, keys.fluid_stack_ingredient, keys.mold, keys.break_chance)
+    .addConstructor(itemWithModifier, keys.stack, keys.fluid_stack_ingredient)
+    .addConstructor(itemWithModifier, keys.stack, keys.fluid_stack_ingredient, keys.modifiers)
+    .addConstructor(keys.result_casting, keys.fluid_stack_ingredient, keys.mold, keys.break_chance)
 
   event.namespace("tfc").register("casting", castingSchema)
 }
