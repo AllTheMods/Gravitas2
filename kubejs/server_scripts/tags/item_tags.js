@@ -185,6 +185,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   tfcStonei.forEach((stone) => {
     event.add("forge:slabs/cobblestone", `tfc:rock/cobble/${stone}_slab`)
     event.add("tfc:bricks", `tfc:brick/${stone}`)
+    event.add("minecraft:stone_buttons", `tfc:rock/button/${stone}`)
   })
 
   tfcSaplingz.forEach((sapling) => {

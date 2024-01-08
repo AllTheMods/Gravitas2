@@ -224,14 +224,12 @@
 					id: "76A81F53AA16C28B"
 					item: {
 						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:rods/wrought_iron"
 						}
-						id: "tfc:metal/rod/wrought_iron"
 					}
+					title: "Any #forge:rods/wrought_iron"
 					type: "item"
 				}
 				{
@@ -400,19 +398,12 @@
 				id: "117EA80A47637FFD"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 90000L
-							traits: [ ]
-						}
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:leather"
 					}
-					id: "tfc:food/dried_kelp"
 				}
-				title: "Any #forge:kelp"
+				title: "Any #forge:leather"
 				type: "item"
 			}]
 			title: "{gravitas.quest.steel.kelp}"

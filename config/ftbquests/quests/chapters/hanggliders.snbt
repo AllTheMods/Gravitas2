@@ -22,7 +22,6 @@
 		width: 1.0d
 		x: 9.5d
 		y: -1.0d
-
 	}]
 	order_index: 0
 	quest_links: [ ]
@@ -721,28 +720,24 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"298CA22763986127"
-				"03980D70A4206A85"
-			]
 			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
-			id: "36731C807BA975C4"
+			id: "0C8B7ED76773A4E3"
 			rewards: [{
-				id: "6E5A2181FC8976AE"
+				id: "7605548D88F0C439"
 				type: "xp_levels"
 				xp_levels: 5
 			}]
 			shape: "octagon"
 			tasks: [
 				{
-					id: "62F4B9B589CEEA55"
+					id: "59F36BC712099275"
 					item: "firmaciv:canoe_paddle"
 					type: "item"
 				}
 				{
 					advancement: "firmaciv:canoe"
 					criterion: ""
-					id: "2639ED3AE25EBD9E"
+					id: "45BB0DDC3A2AF736"
 					type: "advancement"
 				}
 			]
