@@ -263,4 +263,19 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.remove("tfc:unfired_pottery", "woodencog:unfired_fireclay_crucible")
   //WOODENCLOG
   event.remove("forge:plates/obsidian", "tfc:metal/sheet/steel")
+
+  event.add('tfc:usable_on_tool_rack',
+    [
+      'mininggadgets:mininggadget',
+      'mininggadgets:mininggadget_fancy',
+      'mininggadgets:mininggadget_simple',
+      'create:wrench',
+      'buildinggadgets2:gadget_building',
+      'buildinggadgets2:gadget_exchanging',
+      'buildinggadgets2:gadget_copy_paste',
+      'buildinggadgets2:gadget_cut_paste',
+      'buildinggadgets2:gadget_destruction',
+      'expatternprovider:fishbig'
+    ]
+  )
 }
