@@ -174,7 +174,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.replaceInput({}, "#forge:nuggets/iron", "#forge:nuggets/wrought_iron")
   event.replaceOutput({}, "#forge:nuggets/iron", "#forge:nuggets/wrought_iron")
-
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "#forge:rods/iron", "#forge:rods/wrought_iron")
+  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "#forge:rods/iron", "#forge:rods/wrought_iron")
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
 
