@@ -894,9 +894,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         {
             type: 'create:filling',
             ingredients: [
-                {
-                    item: 'tfc:ceramic/ingot_mold'
-                },
+                Item.of('tfc:ceramic/ingot_mold').strongNBT(),
                 {
                     fluid: 'gtceu:igneous_alloy',
                     nbt: {},
@@ -921,9 +919,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             {
                 type: 'create:filling',
                 ingredients: [
-                    {
-                        item: 'tfc:ceramic/fire_ingot_mold'
-                    },
+                    Item.of('tfc:ceramic/fire_ingot_mold').strongNBT(),
                     {
                         fluid: 'gtceu:igneous_alloy',
                         nbt: {},
