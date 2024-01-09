@@ -185,6 +185,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   tfcStonei.forEach((stone) => {
     event.add("forge:slabs/cobblestone", `tfc:rock/cobble/${stone}_slab`)
     event.add("tfc:bricks", `tfc:brick/${stone}`)
+    event.add("minecraft:stone_buttons", `tfc:rock/button/${stone}`)
   })
 
   tfcSaplingz.forEach((sapling) => {
@@ -253,7 +254,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.remove("forge:dusts/iron", ["tfc:powder/hematite", "tfc:powder/magnetite", "tfc:powder/limonite"])
   event.remove("forge:dusts/copper", ["tfc:powder/malachite", "tfc:powder/tetrahedrite", "tfc:powder/native_copper"])
-  event.add("forge:plates/aluminium", "#forge:plates/aluminum")
+  event.add("forge:plates/aluminum", "#forge:plates/aluminium")
+  event.add("forge:nuggets/aluminum", "#forge:nuggets/aluminium")
   event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block","gtceu:coke_chipped_gem","gtceu:coke_flawed_gem"])
   event.add("forge:dusts/sulfur", "tfc:powder/sulfur")
   event.remove("forge:ingots/iron", "tfc:metal/ingot/wrought_iron")
@@ -262,4 +264,19 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.remove("tfc:unfired_pottery", "woodencog:unfired_fireclay_crucible")
   //WOODENCLOG
   event.remove("forge:plates/obsidian", "tfc:metal/sheet/steel")
+
+  event.add('tfc:usable_on_tool_rack',
+    [
+      'mininggadgets:mininggadget',
+      'mininggadgets:mininggadget_fancy',
+      'mininggadgets:mininggadget_simple',
+      'create:wrench',
+      'buildinggadgets2:gadget_building',
+      'buildinggadgets2:gadget_exchanging',
+      'buildinggadgets2:gadget_copy_paste',
+      'buildinggadgets2:gadget_cut_paste',
+      'buildinggadgets2:gadget_destruction',
+      'expatternprovider:fishbig'
+    ]
+  )
 }

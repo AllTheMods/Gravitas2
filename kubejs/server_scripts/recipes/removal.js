@@ -30,6 +30,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:assembler/chest"})
   event.remove({ id: "gtceu:assembler/enchanting_table"})
   event.remove({ id: "gtceu:assembler/wool_from_string"})
+  event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
 
 
   //GT / Railcraft Tool Specific
@@ -125,10 +126,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/mechanical_press"})
   event.remove({ id: "create:crafting/kinetics/basin"})
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
+  event.remove({ id: "create:filling/sweet_roll"})
+  event.remove({ id: "create:crafting/kinetics/belt_connector"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
-  event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" })
   event.remove({ id: "create:pressing/iron_ingot" })
   event.remove({ id: "railcraft:rolling/iron_plate" })
 
@@ -170,6 +172,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
   event.remove({ id: /^woodencog:deploying\/.*/, mod: "woodencog" })
+  event.remove({ id: "woodencog:crafting/kinetics/belt_connector"})
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap" })
@@ -282,4 +285,18 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Corail
   event.remove({ id: "tombstone:familiar_receptacle"})
+
+  //SimplePlanes
+  event.remove({ id: "simpleplanes:liquid_engine"})
+
+  //SFM
+
+  event.remove({ id: "sfm:manager"})
+  event.remove({ id: "sfm:cable"})
+  event.remove({ id: "sfm:water_tank"})
+  event.remove({ id: "sfm:disk"})
+  event.remove({ id: "sfm:labelgun"})
+  event.remove({ id: "sfm:network_tool"})
+  event.remove({ id: "sfm:printing_press"})
+  event.remove({ id: "sfm:printing_form"})
 }

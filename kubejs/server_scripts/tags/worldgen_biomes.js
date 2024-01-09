@@ -58,6 +58,7 @@ const removeBiomesFromStructures = (/** @type {TagEvent.Biome} */ event) => {
   event.get("minecraft:has_structure/mineshaft").removeAll()
   event.get("minecraft:has_structure/mineshaft_mesa").removeAll()
   event.get("ad_astra:has_structure/oil_well_biomes").removeAll()
+  event.get("repurposedstructures:has_structure/strongholds/nether").removeAll()
 }
 
 const addBiomesToStructures = (/** @type {TagEvent.Biome} */ event) => {

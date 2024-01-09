@@ -163,6 +163,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     results: [{ item: "create:cogwheel" }]
   })
+  shaped("3x create:belt_connector", ["   ", "LLL", "MRM"], {
+    L: "#tfc:leather_knapping",
+    M: "tfc:brass_mechanisms",
+    R: "#forge:rods/wrought_iron"
+  })
+  shaped("6x create:belt_connector", ["   ", "LLL", "MRM"], {
+    L: "#tfc:leather_knapping",
+    M: "#forge:gears/wrought_iron",
+    R: "#forge:rods/steel"
+  })
   event.custom({
     type: "create:deploying",
     ingredients: [
@@ -214,6 +224,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     }
   })
+  event.custom({
+   type: "create:filling",
+   ingredients: [
+       {
+         tag: "tfc:foods/breads"
+       },
+       {
+         "amount": 250,
+         "fluidTag": "forge:milk"
+       }
+     ],
+     results: [
+       {
+         item: "create:sweet_roll"
+       }
+     ]
+  })
     event.custom({
       type: "tfc:damage_inputs_shapeless_crafting",
       recipe: {
@@ -262,7 +289,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .cutter(`gregitas:${sapling}_lumber_water`)
       .itemInputs(`tfc:wood/log/${sapling}`)
       .inputFluids(Fluid.of("minecraft:water", 4))
-      .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+      .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(120)
       .EUt(LV)
 
@@ -270,7 +297,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .cutter(`gregitas:${sapling}_lumber_distilled_water`)
       .itemInputs(`tfc:wood/log/${sapling}`)
       .inputFluids(Fluid.of("gtceu:distilled_water", 3))
-      .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+      .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(80)
       .EUt(LV)
 
@@ -278,7 +305,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .cutter(`gregitas:${sapling}_lumber_lubricant`)
       .itemInputs(`tfc:wood/log/${sapling}`)
       .inputFluids(Fluid.of("gtceu:lubricant", 1))
-      .itemOutputs(`12x tfc:wood/lumber/${sapling}`)
+      .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(40)
       .EUt(LV)
   })
@@ -559,4 +586,67 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         d: "tombstone:impregnated_diamond",
         t: "minecraft:ghast_tear"
      })
+     shaped("simpleplanes:liquid_engine", ["iOi","BLB","HcH"], {
+         i: "tfc:metal/ingot/cast_iron",
+         O: "simpleplanes:propeller",
+         B: "minecraft:bucket",
+         L: "railcraft:fluid_fueled_firebox",
+         H: "minecraft:heavy_weighted_pressure_plate",
+         c: "#forge:ingots/copper"
+     })
+
+    shaped("create_new_age:magnetite_block", ["PCP", "CRC", "PCP"], {
+        C: "immersiveengineering:coil_hv",
+        R: "#forge:rods/steel",
+        P: "#forge:plates/magnetic_iron"
+
+    })
+
+    //SFM
+    shaped("sfm:manager", ["PPP", "BVI", "CCC"], {
+        P: "#forge:plates/wrought_iron",
+        B: "gtceu:basic_electronic_circuit",
+        V: "gtceu:vacuum_tube",
+        I: "gtceu:basic_integrated_circuit",
+        C: "gtceu:resin_printed_circuit_board"
+    })
+    shaped("8x sfm:cable", ["ppp", "bcb", "ppp"], {
+        p: "#forge:plates/rubber",
+        b: "gtceu:brass_small_item_pipe",
+        c: "minecraft:comparator"
+    })
+
+    shaped("sfm:disk", ["RGB", "PDP", "XTX"], {
+        R: "#forge:dyes/red",
+        G: "#forge:dyes/green",
+        B: "#forge:dyes/blue",
+        P: "minecraft:paper",
+        D: "computercraft:disk",
+        X: "#forge:dusts/redstone",
+        T: "minecraft:repeater"
+    })
+    shaped("sfm:labelgun", ["rr ", "ipg", "h  "],{
+        h: "gregitas:small_tool_handle",
+        r: "#forge:rods/wrought_iron",
+        i: "#forge:dyes/black",
+        p: "minecraft:paper",
+        g: "tfc:glue"
+
+    })
+    shaped("sfm:network_tool", [" LS", " IW", "h  "],{
+        h: "gregitas:small_tool_handle",
+        L: "minecraft:redstone_lamp",
+        S: "gtceu:resin_printed_circuit_board",
+        I: "gtceu:basic_integrated_circuit",
+        W: "gtceu:copper_octal_wire"
+    })
+    shaped("sfm:printing_press", ["RGB", "PDP", "XTX"], {
+        R: "#forge:dyes/red",
+        G: "#forge:dyes/green",
+        B: "#forge:dyes/blue",
+        P: "#forge:plates/rubber",
+        D: "tfc:metal/anvil/wrought_iron",
+        X: "#forge:dusts/redstone",
+        T: "minecraft:piston"
+    })
 }

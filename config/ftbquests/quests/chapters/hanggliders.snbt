@@ -20,8 +20,8 @@
 		image: "firmaciv:item/canoe_with_paddle_icon"
 		rotation: 0.0d
 		width: 1.0d
-		x: 7.5d
-		y: 1.5d
+		x: 9.5d
+		y: -1.0d
 	}]
 	order_index: 0
 	quest_links: [ ]
@@ -46,7 +46,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.hang_glider}"
-			x: 10.0d
+			x: 5.0d
 			y: -1.0d
 		}
 		{
@@ -70,25 +70,121 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.reinforced}"
-			x: 10.0d
+			x: 5.0d
 			y: 0.0d
 		}
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.carts}"]
 			id: "2C14B2E5050FBD65"
 			rewards: [{
-				count: 3
-				id: "2874056F507EAB2D"
-				item: "astikorcarts:wheel"
+				count: 16
+				id: "4E1EB13ED91EB86D"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:wood/twig/douglas_fir"
+				}
 				type: "item"
 			}]
 			tasks: [{
-				id: "6F0369C255FAE37F"
-				item: "astikorcarts:wheel"
+				id: "33C0522C953F5347"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/acacia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/ash"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/aspen"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/birch"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/blackwood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/chestnut"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/douglas_fir"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/hickory"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/kapok"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/mangrove"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/maple"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/oak"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/palm"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/pine"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/rosewood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/sequoia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/spruce"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/sycamore"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/white_cedar"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:wheel/willow"
+							}
+						]
+					}
+				}
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.carts}"
-			x: 5.0d
+			x: 7.5d
 			y: -1.0d
 		}
 		{
@@ -101,12 +197,99 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "074FD87445BF243C"
-				item: "astikorcarts:animal_cart"
+				id: "4AE4D93861F1B0AE"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/acacia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/ash"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/aspen"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/birch"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/blackwood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/chestnut"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/douglas_fir"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/hickory"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/kapok"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/mangrove"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/maple"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/oak"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/palm"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/pine"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/rosewood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/sequoia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/spruce"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/sycamore"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/white_cedar"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:animal_cart/willow"
+							}
+						]
+					}
+				}
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.animal}"
-			x: 4.0d
+			x: 6.5d
 			y: 0.0d
 		}
 		{
@@ -119,12 +302,99 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "5C83BB19E829411F"
-				item: "astikorcarts:supply_cart"
+				id: "1F77CEC83A0FD913"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/acacia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/ash"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/aspen"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/birch"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/blackwood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/chestnut"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/douglas_fir"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/hickory"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/kapok"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/mangrove"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/maple"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/oak"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/palm"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/pine"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/rosewood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/sequoia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/spruce"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/sycamore"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/white_cedar"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:supply_cart/willow"
+							}
+						]
+					}
+				}
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.supply}"
-			x: 5.0d
+			x: 7.5d
 			y: 0.0d
 		}
 		{
@@ -143,106 +413,102 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "54D5EFB3E284BB33"
-				item: "astikorcarts:plow"
+				id: "7FAB018BCB922C06"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/acacia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/ash"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/aspen"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/birch"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/blackwood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/chestnut"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/douglas_fir"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/hickory"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/kapok"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/mangrove"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/maple"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/oak"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/palm"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/pine"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/rosewood"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/sequoia"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/spruce"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/sycamore"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/white_cedar"
+							}
+							{
+								Count: 1b
+								id: "tfcastikorcarts:plow/willow"
+							}
+						]
+					}
+				}
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.plow}"
-			x: 6.0d
-			y: 0.0d
-		}
-		{
-			description: ["{gravitas.quest.simple_transportation.desc.kayak}"]
-			id: "7CD5D8B39710B37F"
-			rewards: [{
-				id: "45F82887BF5FE987"
-				item: "tfc:wood/boat/oak"
-				type: "item"
-			}]
-			tasks: [{
-				id: "4D2ADB5BAD37F632"
-				item: "firmaciv:kayak"
-				type: "item"
-			}]
-			title: "{gravitas.quest.simple_transportation.kayak}"
-			x: 8.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["7CD5D8B39710B37F"]
-			description: ["{gravitas.quest.simple_transportation.desc.paddles}"]
-			id: "03980D70A4206A85"
-			rewards: [{
-				id: "5C5C1D341F60BB16"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
-			tasks: [{
-				id: "397BCE88949AEF9F"
-				item: {
-					Count: 1b
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "firmaciv:kayak_paddle"
-							}
-							{
-								Count: 1b
-								id: "firmaciv:canoe_paddle"
-							}
-						]
-					}
-				}
-				type: "item"
-			}]
-			title: "{gravitas.quest.simple_transportation.paddles}"
-			x: 7.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["7CD5D8B39710B37F"]
-			description: ["{gravitas.quest.simple_transportation.desc.tools}"]
-			id: "298CA22763986127"
-			rewards: [{
-				id: "2850841E469753BB"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
-			tasks: [{
-				id: "70CBBD531DED0AE8"
-				item: {
-					Count: 1b
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "firmaciv:sextant"
-							}
-							{
-								Count: 1b
-								id: "firmaciv:barometer"
-							}
-							{
-								Count: 1b
-								id: "firmaciv:nav_clock"
-							}
-						]
-					}
-				}
-				type: "item"
-			}]
-			title: "{gravitas.quest.simple_transportation.tools}"
 			x: 8.5d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"298CA22763986127"
-				"03980D70A4206A85"
-			]
 			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
 			id: "36731C807BA975C4"
 			rewards: [{
@@ -261,6 +527,217 @@
 					advancement: "firmaciv:canoe"
 					criterion: ""
 					id: "2639ED3AE25EBD9E"
+					type: "advancement"
+				}
+			]
+			title: "{gravitas.quest.simple_transportation.dugout_canoe}"
+			x: 10.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["36731C807BA975C4"]
+			description: ["{gravitas.quest.simple_transportation.desc.kayak}"]
+			icon: "firmaciv:kayak"
+			id: "78FB40D61FB91F38"
+			rewards: [{
+				id: "289BDDF6BDAB9957"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [
+				{
+					id: "0150CBE2D60EE39E"
+					item: "firmaciv:kayak"
+					type: "item"
+				}
+				{
+					id: "2F301E181F422242"
+					item: "firmaciv:kayak_paddle"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.simple_transportation.kayak}"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36731C807BA975C4"]
+			description: ["{gravitas.quest.simple_transportation.desc.tools}"]
+			id: "59398C0E72B0BE61"
+			rewards: [{
+				id: "0E8F622A3AD1C3CD"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [
+				{
+					id: "641E1B5769661B64"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "firmaciv:sextant"
+					}
+					type: "item"
+				}
+				{
+					id: "27369E3505CC7798"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "firmaciv:barometer"
+					}
+					type: "item"
+				}
+				{
+					id: "09AC50AD1A2E5C50"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "firmaciv:nav_clock"
+					}
+					type: "item"
+				}
+				{
+					id: "50ECF236F04A9AE7"
+					item: "firmaciv:firmaciv_compass"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.simple_transportation.tools}"
+			x: 11.0d
+			y: 0.0d
+		}
+		{
+			description: ["{gravitas.quest.simple_transportation.desc.rowboat1}"]
+			id: "4105E42ADCA71D92"
+			rewards: [{
+				count: 12
+				id: "2AA5AA94D4074FD5"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "firmaciv:copper_bolt"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 6L
+				id: "4BD3CCF75E3DE968"
+				item: { Count: 32b, id: "firmaciv:watercraft_frame_angled" }
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.rowboat1}"
+			x: 9.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4105E42ADCA71D92"]
+			description: ["{gravitas.quest.simple_transportation.desc.rowboat2}"]
+			id: "366151FAF15BEC3E"
+			rewards: [{
+				count: 2
+				id: "4A8854468C81CA41"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/double_ingot/wrought_iron"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 24L
+				id: "58A9C964E845D4AF"
+				item: {
+					Count: 16b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "firmaciv:copper_bolt"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.simple_transportation.rowboat2}"
+			x: 10.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["366151FAF15BEC3E"]
+			description: ["{gravitas.quest.simple_transportation.desc.rowboat3}"]
+			id: "2B1AD10D741E4221"
+			tasks: [
+				{
+					count: 2L
+					id: "1D354C14BE1228C4"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "firmaciv:oarlock"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "75A77C3C8800A25E"
+					item: "firmaciv:oar"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.simple_transportation.rowboat3}"
+			x: 11.5d
+			y: 1.0d
+		}
+		{
+			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
+			id: "0C8B7ED76773A4E3"
+			rewards: [{
+				id: "7605548D88F0C439"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					id: "59F36BC712099275"
+					item: "firmaciv:canoe_paddle"
+					type: "item"
+				}
+				{
+					advancement: "firmaciv:canoe"
+					criterion: ""
+					id: "45BB0DDC3A2AF736"
 					type: "advancement"
 				}
 			]

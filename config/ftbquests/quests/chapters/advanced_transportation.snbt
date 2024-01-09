@@ -52,7 +52,7 @@
 				}
 			]
 			tasks: [{
-				id: "39819843EFFFD455"
+				id: "7155AC8769ECD7E5"
 				item: {
 					Count: 1b
 					id: "itemfilters:or"
@@ -60,39 +60,83 @@
 						items: [
 							{
 								Count: 1b
-								id: "smallships:oak_cog"
+								id: "tfships:acacia_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:spruce_cog"
+								id: "tfships:ash_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:birch_cog"
+								id: "tfships:aspen_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:jungle_cog"
+								id: "tfships:birch_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:acacia_cog"
+								id: "tfships:blackwood_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:cherry_cog"
+								id: "tfships:chestnut_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:dark_oak_cog"
+								id: "tfships:douglas_fir_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:mangrove_cog"
+								id: "tfships:hickory_cog"
 							}
 							{
 								Count: 1b
-								id: "smallships:bamboo_cog"
+								id: "tfships:kapok_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:mangrove_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:maple_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:oak_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:palm_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:pine_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:rosewood_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:sequoia_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:spruce_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:sycamore_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:white_cedar_cog"
+							}
+							{
+								Count: 1b
+								id: "tfships:willow_cog"
 							}
 						]
 					}
@@ -121,7 +165,7 @@
 				}
 			]
 			tasks: [{
-				id: "78941F3CFB438556"
+				id: "10EA6F086BDC32BA"
 				item: {
 					Count: 1b
 					id: "itemfilters:or"
@@ -129,39 +173,83 @@
 						items: [
 							{
 								Count: 1b
-								id: "smallships:oak_brigg"
+								id: "tfships:acacia_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:spruce_brigg"
+								id: "tfships:ash_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:birch_brigg"
+								id: "tfships:aspen_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:jungle_brigg"
+								id: "tfships:birch_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:acacia_brigg"
+								id: "tfships:blackwood_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:cherry_brigg"
+								id: "tfships:chestnut_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:dark_oak_brigg"
+								id: "tfships:douglas_fir_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:mangrove_brigg"
+								id: "tfships:hickory_brigg"
 							}
 							{
 								Count: 1b
-								id: "smallships:bamboo_brigg"
+								id: "tfships:kapok_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:mangrove_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:maple_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:oak_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:palm_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:pine_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:rosewood_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:sequoia_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:spruce_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:sycamore_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:white_cedar_brigg"
+							}
+							{
+								Count: 1b
+								id: "tfships:willow_brigg"
 							}
 						]
 					}
@@ -196,7 +284,7 @@
 				}
 			]
 			tasks: [{
-				id: "3F29C294F5ECB107"
+				id: "329F005595C4C649"
 				item: {
 					Count: 1b
 					id: "itemfilters:or"
@@ -204,39 +292,83 @@
 						items: [
 							{
 								Count: 1b
-								id: "smallships:oak_galley"
+								id: "tfships:acacia_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:spruce_galley"
+								id: "tfships:ash_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:birch_galley"
+								id: "tfships:aspen_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:jungle_galley"
+								id: "tfships:birch_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:acacia_galley"
+								id: "tfships:blackwood_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:cherry_galley"
+								id: "tfships:chestnut_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:dark_oak_galley"
+								id: "tfships:douglas_fir_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:mangrove_galley"
+								id: "tfships:hickory_galley"
 							}
 							{
 								Count: 1b
-								id: "smallships:bamboo_galley"
+								id: "tfships:kapok_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:mangrove_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:maple_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:oak_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:palm_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:pine_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:rosewood_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:sequoia_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:spruce_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:sycamore_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:white_cedar_galley"
+							}
+							{
+								Count: 1b
+								id: "tfships:willow_galley"
 							}
 						]
 					}

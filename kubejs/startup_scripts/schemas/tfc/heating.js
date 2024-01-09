@@ -10,16 +10,16 @@ let registerTFCHeatingSchema = (/** @type {Internal.RecipeSchemaRegistryEventJS}
     keys.use_durability,
     keys.chance
   )
-    .constructor(keys.input_item, keys.temperature)
-    .constructor(fluidOrItem, keys.fluid_or_item_output, keys.input_item, keys.temperature)
-    .constructor(
+    .addConstructor(keys.input_item, keys.temperature)
+    .addConstructor(fluidOrItem, keys.fluid_or_item_output, keys.input_item, keys.temperature)
+    .addConstructor(
       fluidOrItemWithModifier,
       keys.fluid_or_item_output,
       keys.input_item,
       keys.temperature,
       keys.modifiers
     )
-    .constructor(
+    .addConstructor(
       fluidOrItemWithModifier,
       keys.fluid_or_item_output,
       keys.input_item,

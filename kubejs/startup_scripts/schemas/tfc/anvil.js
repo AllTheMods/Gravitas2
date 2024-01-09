@@ -9,9 +9,9 @@ let registerTFCAnvilSchema = (/** @type {Internal.RecipeSchemaRegistryEventJS} *
     keys.tier_anvil,
     keys.apply_forge_bonus
   )
-    .constructor(itemWithModifier, keys.stack, keys.input_item_anvil, keys.rules_anvil)
-    .constructor(itemWithModifier, keys.stack, keys.input_item_anvil, keys.rules_anvil, keys.modifiers)
-    .constructor(keys.result_casting, keys.input_item_anvil, keys.rules_anvil, keys.tier_anvil, keys.apply_forge_bonus)
+    .addConstructor(itemWithModifier, keys.stack, keys.input_item_anvil, keys.rules_anvil)
+    .addConstructor(itemWithModifier, keys.stack, keys.input_item_anvil, keys.rules_anvil, keys.modifiers)
+    .addConstructor(keys.result_casting, keys.input_item_anvil, keys.rules_anvil, keys.tier_anvil, keys.apply_forge_bonus)
 
   event.namespace("tfc").register("anvil", anvilSchema)
 }
