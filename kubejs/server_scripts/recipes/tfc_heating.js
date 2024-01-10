@@ -21,10 +21,19 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
       return oldValue % 25 ? oldValue : oldValue * 1.44
     } else return newValue
   }
+  let convertFluidToKJS = (inputFluid) => {
+    if (inputFluid instanceof $CreateInputFluid) {
+      return inputFluid.copy(inputFluid.getAmount())
+    }
+    return inputFluid
+  }
   let convertFluidsFromArray = (array) => {
+    var newVal;
     return array
       .stream()
-      .map((val) => (val instanceof $UnboundFluidStackJS ? val.setAmount(convertFluidValues(val.amount)) || val : val))
+      .map((val) => (
+        newVal = convertFluidToKJS(val),
+        newVal instanceof $UnboundFluidStackJS ? newVal.setAmount(convertFluidValues(newVal.amount)) || newVal : newVal))
       .toList()
   }
 
