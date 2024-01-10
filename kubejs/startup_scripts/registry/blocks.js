@@ -28,9 +28,5 @@ let registerBlocks = (/** @type {Registry.Block} */ event) => {
           .soundType('stone')
           .textureAll('kubejs:block/casings/bronze_plated_bricks')
 
-    tfcWoodTracks.forEach((wood) => {
-    event.create(`railways:track_tfc_${wood}`).model(`railways:block/track/compat/tfc/track_tfc_${wood}`)
-    event.create(`railways:track_tfc_${wood}_narrow`).model(`railways:block/track/compat/tfc/track_tfc_${wood}_narrow`)
-    event.create(`railways:track_tfc_${wood}_wide`).model(`railways:block/track/compat/tfc/track_tfc_${wood}_wide`)
-    })
+
 }

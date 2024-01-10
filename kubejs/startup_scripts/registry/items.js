@@ -267,9 +267,7 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
   })
     tfcWoodTypes.forEach((wood) => {
       event.create(`gregitas:${wood.id}_hull_segment`).texture('gregitas:item/ship/hull').color(0, wood.color).unstackable()
-      event.create(`railways:track_incomplete_tfc_${wood.id}`)
-      event.create(`railways:track_incomplete_tfc_${wood.id}_narrow`)
-      event.create(`railways:track_incomplete_tfc_${wood.id}_wide`)
+
     })
   gtMortars.forEach((metal) => {
     event.create(`gregitas:${metal.id}_pestle`).texture('kubejs:item/tools/pestle').color(0, metal.color).unstackable()

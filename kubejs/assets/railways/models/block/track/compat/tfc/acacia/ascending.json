@@ -1,8 +1,0 @@
-{
-  "parent": "create:block/track/ascending",
-  "textures": {
-    "0": "tfc:block/track/acacia/standard_track_acacia",
-    "1": "tfc:block/track/acacia/standard_track_mip_acacia",
-    "particle": "tfc:block/track/acacia/standard_track_crossing_acacia"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "create:block/track/cross_diag",
-  "textures": {
-    "0": "tfc:block/track/douglas_fir/standard_track_douglas_fir",
-    "1": "tfc:block/track/douglas_fir/standard_track_mip_douglas_fir",
-    "2": "tfc:block/track/douglas_fir/standard_track_crossing_douglas_fir",
-    "particle": "tfc:block/track/douglas_fir/standard_track_crossing_douglas_fir"
-  }
-}
