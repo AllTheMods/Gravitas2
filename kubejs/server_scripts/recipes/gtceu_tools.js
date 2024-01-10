@@ -497,7 +497,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         gtceuToolsTFC.forEach((metal) => {
             if (["damascus_steel", "red_steel", "blue_steel"].includes(metal.id)) return
-            event.shapeless(`gtceu:${metal.id}_plunger`, ['gregitas:plunger_head', `gtceu:${metal.id}_long_rod`]).id(`gregitas:shapeless/${metal.id}_plunger`)
+            //event.shapeless(`gtceu:${metal.id}_plunger`, ['gregitas:plunger_head', `gtceu:${metal.id}_long_rod`]).id(`gregitas:shapeless/${metal.id}_plunger`)
         })
 
     //Wrench
