@@ -267,7 +267,6 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
   })
     tfcWoodTypes.forEach((wood) => {
       event.create(`gregitas:${wood.id}_hull_segment`).texture('gregitas:item/ship/hull').color(0, wood.color).unstackable()
-
     })
   gtMortars.forEach((metal) => {
     event.create(`gregitas:${metal.id}_pestle`).texture('kubejs:item/tools/pestle').color(0, metal.color).unstackable()
