@@ -42,4 +42,6 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
             "gtceu:invar"
         ]
     )
+
+    event.add('forge:salt_water', 'tfc:salt_water')
 }

@@ -111,4 +111,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     //SFM
     event.hide("sfm:water_tank")
 
+    //GTCEu
+    event.hide('gtceu:lp_steam_extractor')
+    event.hide('gtceu:hp_steam_extractor')
+    event.hide('gtceu:lv_extruder')
 }
