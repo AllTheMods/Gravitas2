@@ -128,6 +128,12 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
   event.remove({ id: "create:filling/sweet_roll"})
   event.remove({ id: "create:crafting/kinetics/belt_connector"})
+  event.remove({ id: "create:crushing/crimsite_recycling"})
+  event.remove({ id: "create:crushing/ochrum_recycling"})
+  event.remove({ id: "create:crushing/veridium"})
+  event.remove({ id: "create:crushing/tuff"})
+  event.remove({ id: "create:crushing/gravel"})
+  event.remove({ id: "create:crushing/asurine_recycling"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })

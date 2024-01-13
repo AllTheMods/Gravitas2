@@ -179,4 +179,5 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
 
+  event.replaceInput({ mod: "railways"}, "#railways:internal/plates/iron_plates", "#forge:plates/wrought_iron")
 }
