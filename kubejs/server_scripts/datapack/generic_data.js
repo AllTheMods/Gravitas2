@@ -141,4 +141,39 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
 
     addTFCKnappingTypes('flint', 'tfc:flint_knapping', 1, 'tfc:item.knapping.stone', false, false, false, 'minecraft:flint')
     addTFCKnappingTypes('rubber', 'tfc:rubber_knapping', 3, 'tfc:item.knapping.leather', false, false, false, 'gtceu:rubber_plate')
+
+    let addTFCLampFuels = (id, fuel, duration) => {
+        let json = JsonIO.toObject(
+            {
+                "fluid": fuel,
+                "burn_rate": duration,
+                "valid_lamps": {
+                    "type": "tfc:tag",
+                    "tag": "tfc:lamps"
+                }
+            }
+        )
+
+        event.addJson(`tfc:tfc/lamp_fuels/${id}.json`, json)
+    }
+
+    addTFCLampFuels('creosote', 'gtceu:creosote', 4000)
+
+    let addTFCMetals = (id, tier, fluid, meltTemp, heatCapacity, item) => {
+        let json = JsonIO.toObject(
+            {
+                "tier": tier,
+                "fluid": fluid,
+                "melt_temperature": meltTemp,
+                "specific_heat_capacity": heatCapacity,
+                "ingots": {
+                  "item": item
+                }
+            }
+        )
+
+        event.addJson(`tfc:tfc/metals/${id}.json`, json)
+    }
+
+    addTFCMetals('igneous_alloy', 1, 'gtceu:igneous_alloy', 420, 0.01429, 'create:andesite_alloy')
 }
