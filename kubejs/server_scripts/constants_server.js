@@ -276,3 +276,24 @@ const tfcCobbleToSand = [
       sand: 'yellow'
   }
 ]
+
+let tfcMetalFluids = [
+  'bismuth',
+  'bismuth_bronze',
+  'black_bronze',
+  'black_steel',
+  'blue_steel',
+  'bronze',
+  'brass',
+  'copper',
+  'gold',
+  'nickel',
+  'red_steel',
+  'rose_gold',
+  'silver',
+  'steel',
+  'sterling_silver',
+  'tin',
+  'wrought_iron',
+  'zinc'
+]
