@@ -915,33 +915,33 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             ]
         }
     )
-        event.custom(
-            {
-                type: 'create:filling',
-                ingredients: [
-                    Item.of('tfc:ceramic/fire_ingot_mold').strongNBT(),
-                    {
-                        fluid: 'gtceu:igneous_alloy',
-                        nbt: {},
-                        amount: 144
-                    }
-                ],
-                results: [
-                    {
-                        item: 'tfc:ceramic/fire_ingot_mold',
-                        nbt: {
-                            tank: {
-                                Amount: 144,
-                                FluidName: 'gtceu:igneous_alloy'
-                            }
-                        },
-                        count: 1
-                    }
-                ]
-            }
-        )
+    event.custom(
+        {
+            type: 'create:filling',
+            ingredients: [
+                Item.of('tfc:ceramic/fire_ingot_mold').strongNBT(),
+                {
+                    fluid: 'gtceu:igneous_alloy',
+                    nbt: {},
+                    amount: 144
+                }
+            ],
+            results: [
+                {
+                    item: 'tfc:ceramic/fire_ingot_mold',
+                    nbt: {
+                        tank: {
+                            Amount: 144,
+                            FluidName: 'gtceu:igneous_alloy'
+                        }
+                    },
+                    count: 1
+                }
+            ]
+        }
+    )
 
-        tfcCobbleToSand.forEach((type) => {
+    tfcCobbleToSand.forEach((type) => {
             event.recipes.create.crushing([
                 `tfc:sand/${type.sand}`,
                 Item.of('minecraft:flint').withChance(0.1),
@@ -950,19 +950,40 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 `tfc:rock/gravel/${type.stone}` , 250)
 
             event.recipes.create.milling(`tfc:rock/gravel/${type.stone}`, `tfc:rock/cobble/${type.stone}`, 250)
-        })
+    })
 
-        event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
+    event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
 
-        event.recipes.create.milling('gtceu:igneous_dust', '#tfc:igneous_extrusive_rock', 250)
+    event.recipes.create.milling('gtceu:igneous_dust', '#tfc:igneous_extrusive_rock', 250)
 
-        event.recipes.create.milling('gtceu:zinc_dust', 'gtceu:zinc_ingot', 250)
+    event.recipes.create.milling('gtceu:zinc_dust', 'gtceu:zinc_ingot', 250)
 
-        event.recipes.create.mixing(['gtceu:sticky_resin', Item.of('gtceu:sticky_resin').withChance(0.25)], ['#forge:small_dusts/sulfur', Fluid.of('gregitas:raw_resin', 1000)], 250, 'heated')
+    event.recipes.create.mixing(['gtceu:sticky_resin', Item.of('gtceu:sticky_resin').withChance(0.25)], ['#forge:small_dusts/sulfur', Fluid.of('gregitas:raw_resin', 1000)], 250, 'heated')
 
-        tfcSaplings.forEach(wood => {
-            event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
-            event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
-            event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_log/${wood}`, 150)
-        })
+    tfcSaplings.forEach(wood => {
+        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
+        event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
+        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_log/${wood}`, 150)
+    })
+
+    
+    event.recipes.create.sequenced_assembly('tfc:metal/ingot/high_carbon_steel', 'tfc:metal/ingot/pig_iron', 
+        event.recipes.create.pressing('tfc:metal/ingot/pig_iron', 'tfc:metal/ingot/pig_iron')
+    ).transitionalItem('tfc:metal/ingot/pig_iron').loops(3)
+
+    event.recipes.create.sequenced_assembly('gtceu:steel_ingot', 'tfc:metal/ingot/high_carbon_steel', 
+        event.recipes.create.pressing('tfc:metal/ingot/high_carbon_steel', 'tfc:metal/ingot/high_carbon_steel')
+    ).transitionalItem('tfc:metal/ingot/high_carbon_steel').loops(3)
+
+    event.recipes.create.sequenced_assembly('gtceu:black_steel_ingot', 'tfc:metal/ingot/high_carbon_black_steel', 
+        event.recipes.create.pressing('tfc:metal/ingot/high_carbon_black_steel', 'tfc:metal/ingot/high_carbon_black_steel')
+    ).transitionalItem('tfc:metal/ingot/high_carbon_black_steel').loops(3)
+
+    event.recipes.create.sequenced_assembly('gtceu:blue_steel_ingot', 'tfc:metal/ingot/high_carbon_blue_steel', 
+        event.recipes.create.pressing('tfc:metal/ingot/high_carbon_blue_steel', 'tfc:metal/ingot/high_carbon_blue_steel')
+    ).transitionalItem('tfc:metal/ingot/high_carbon_blue_steel').loops(3)
+
+    event.recipes.create.sequenced_assembly('gtceu:red_steel_ingot', 'tfc:metal/ingot/high_carbon_red_steel', 
+        event.recipes.create.pressing('tfc:metal/ingot/high_carbon_red_steel', 'tfc:metal/ingot/high_carbon_red_steel')
+    ).transitionalItem('tfc:metal/ingot/high_carbon_red_steel').loops(3)
 }
