@@ -1404,6 +1404,45 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(500)
             .EUt(EV)
 
+        event.recipes.gtceu.assembler('gregitas:wireless_access_point')
+            .itemInputs(
+                '16x gtceu:red_alloy_fine_wire',
+                '2x #forge:circuits/hv',
+                '2x gtceu:mpic_chip',
+                'gtceu:epoxy_printed_circuit_board',
+                'ae2:calculation_processor',
+                '#ae2:glass_cable',
+                'gtceu:ev_field_generator',
+                'gtceu:ev_machine_hull',
+                'ae2:wireless_receiver'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 288)
+            )
+            .itemOutputs(
+                'ae2:wireless_access_point'
+            )
+            .duration(500)
+            .EUt(EV)
+
+        event.recipes.gtceu.assembler('gregitas:wireless_booster')
+            .itemInputs(
+                '16x gtceu:red_alloy_fine_wire',
+                '3x gtceu:ender_pearl_dust',
+                'gtceu:epoxy_printed_circuit_board',
+                '#forge:circuits/hv',
+                'gtceu:hv_field_generator',
+                'gtceu:vanadium_steel_double_plate'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 144)
+            )
+            .itemOutputs(
+                '2x ae2:wireless_booster'
+            )
+            .duration(250)
+            .EUt(EV)
+
     //Bits and Bobs
 
         event.remove(

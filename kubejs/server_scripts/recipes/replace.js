@@ -150,7 +150,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
   event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
-
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:iron_bars", "tfc:metal/bars/wrought_iron")
 
   //TFShips
   tfcShipTypes.forEach((wood) => {
