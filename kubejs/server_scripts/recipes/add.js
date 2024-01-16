@@ -54,10 +54,18 @@ const tfcSaplings = [
   "white_cedar",
   "willow"
 ]
+const TFCGrains = [
+ "oat",
+ "barley",
+ "maize",
+ "rye",
+ "rice",
+ "wheat"
+]
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
-
+  const smoking = event.recipes.minecraft.smoking
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
   event.custom({
@@ -648,5 +656,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         D: "tfc:metal/anvil/wrought_iron",
         X: "#forge:dusts/redstone",
         T: "minecraft:piston"
+    })
+
+    TFCGrains.forEach((grain) => {
+    smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
+    smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
     })
 }
