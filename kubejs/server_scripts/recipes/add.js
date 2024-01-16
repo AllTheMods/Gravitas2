@@ -266,6 +266,34 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
           }
       }
     })
+
+    event.recipes.gtceu.assembler("enchanting")
+              .circuit(3)
+              .itemInputs(
+              {
+                "type": "forge:partial_nbt",
+                "item": "apotheosis:gem",
+                "nbt": "{\"affix_data\":{\"rarity\":\"apotheosis:mythic\"}}"
+              },
+              {
+                "type": "forge:partial_nbt",
+                "item": "apotheosis:gem",
+                "nbt": "{\"affix_data\":{\"rarity\":\"apotheosis:mythic\"}}"
+              },
+              {
+                  tag: "forge:obsidian"
+              },
+              {
+                  tag: "forge:double_plates/red_steel"
+              },
+              {
+                  tag: "forge:plates/blue_steel"
+              },
+              )
+              .itemOutputs("minecraft:enchanting_table")
+              .duration(2500)
+              .EUt(HV)
+
   tfcSaplings.forEach((sapling) => {
     shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
                P: `tfc:wood/planks/${sapling}`,
@@ -662,4 +690,5 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
     smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
     })
+
 }
