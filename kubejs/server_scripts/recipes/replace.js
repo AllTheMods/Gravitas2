@@ -180,4 +180,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
 
   event.replaceInput({ mod: "railways"}, "#railways:internal/plates/iron_plates", "#forge:plates/wrought_iron")
+
+  event.replaceInput({ id: "woodencog:crafting/schematics/schematicannon"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
 }

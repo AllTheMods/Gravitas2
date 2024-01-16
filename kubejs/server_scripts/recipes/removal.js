@@ -135,6 +135,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crushing/tuff"})
   event.remove({ id: "create:crushing/gravel"})
   event.remove({ id: "create:crushing/asurine_recycling"})
+  event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -181,6 +182,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "woodencog:crafting/kinetics/belt_connector"})
 
   event.remove({ id: /^woodencog:heating\/.*_dough/, mod: "woodencog" })
+
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap" })
