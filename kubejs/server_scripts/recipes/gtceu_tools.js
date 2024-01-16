@@ -487,18 +487,81 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     ' XXX '
                 ],
                 result: {
-                    item: 'gregitas:plunger_head'
+                    item: 'gregitas:rubber_plunger_head'
                 },
                 ingredient: {
                     item: 'gtceu:rubber_plate'
                 }
             }
-        ).id('gregitas:rubber_knapping/plunger_head')
+        ).id('gregitas:rubber_knapping/rubber_plunger_head')
 
-        gtceuToolsTFC.forEach((metal) => {
-            if (["damascus_steel", "red_steel", "blue_steel"].includes(metal.id)) return
-            //event.shapeless(`gtceu:${metal.id}_plunger`, ['gregitas:plunger_head', `gtceu:${metal.id}_long_rod`]).id(`gregitas:shapeless/${metal.id}_plunger`)
-        })
+        event.custom(
+            {
+                type: 'tfc:knapping',
+                knapping_type: 'tfc:rubber',
+                outside_slot_required: false,
+                pattern: [
+                    ' X   ',
+                    'XXX  ',
+                    'XXXX ',
+                    'XXXXX',
+                    ' XXX '
+                ],
+                result: {
+                    item: 'gregitas:polyethylene_plunger_head'
+                },
+                ingredient: {
+                    item: 'gtceu:polyethylene_plate'
+                }
+            }
+        ).id('gregitas:rubber_knapping/polyethylene_plunger_head')
+
+        event.custom(
+            {
+                type: 'tfc:knapping',
+                knapping_type: 'tfc:rubber',
+                outside_slot_required: false,
+                pattern: [
+                    ' X   ',
+                    'XXX  ',
+                    'XXXX ',
+                    'XXXXX',
+                    ' XXX '
+                ],
+                result: {
+                    item: 'gregitas:polytetrafluoroethylene_plunger_head'
+                },
+                ingredient: {
+                    item: 'gtceu:polytetrafluoroethylene_plate'
+                }
+            }
+        ).id('gregitas:rubber_knapping/polytetrafluoroethylene_plunger_head')
+
+        event.custom(
+            {
+                type: 'tfc:knapping',
+                knapping_type: 'tfc:rubber',
+                outside_slot_required: false,
+                pattern: [
+                    ' X   ',
+                    'XXX  ',
+                    'XXXX ',
+                    'XXXXX',
+                    ' XXX '
+                ],
+                result: {
+                    item: 'gregitas:polybenzimidazole_plunger_head'
+                },
+                ingredient: {
+                    item: 'gtceu:polybenzimidazole_plate'
+                }
+            }
+        ).id('gregitas:rubber_knapping/polybenzimidazole_plunger_head')
+        
+        event.recipes.kubejs.shapeless('gtceu:rubber_plunger', ['gtceu:wood_long_rod', 'gregitas:rubber_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:polyethylene_plunger', ['gtceu:wood_long_rod', 'gregitas:polyethylene_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:polytetrafluoroethylene_plunger', ['gtceu:wood_long_rod', 'gregitas:polytetrafluoroethylene_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:polybenzimidazole_plunger', ['gtceu:wood_long_rod', 'gregitas:polybenzimidazole_plunger_head'])
 
     //Wrench
         gtceuToolsTFC.forEach((metal) => {
@@ -743,7 +806,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 ]
             })
 
-            event.shaped(`gtceu:${metal.id}_butchery_knife`, [' B', 'H '], {B: `gregitas:${metal.id}_butchery_blade`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_butchery_knife`)
+            event.shaped(Item.of(`gtceu:${metal.id}_butchery_knife`).enchant('looting', 3), [' B', 'H '], {B: `gregitas:${metal.id}_butchery_blade`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_butchery_knife`)
         })
 
     //Removal & Misc
