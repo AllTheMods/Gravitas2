@@ -22,7 +22,10 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
     "tfc:vinegar",
     "tfc:charcoal_grilled",
     "tfc:wood_grilled",
-    "tfc:burnt_to_a_crisp"
+    "tfc:burnt_to_a_crisp",
+    "tfcchannelcasting:romantic",
+    "tfcchannelcasting:scary",
+    "tfcchannelcasting:festive"
   ])
   global.schemas.constants.modifiers_set = Utils.newList()
   global.schemas.constants.modifiers_set.addAll([
@@ -52,6 +55,21 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
     filter: (string) => string == "tfc:add_trait"
   })
 
+  comps.tfccc_conditional = Component("filteredString", {
+    error: `invalid type, valid type is: "tfcchannelcasting:conditional"`,
+    filter: (string) => string == "tfcchannelcasting:conditional"
+  })
+
+  comps.tfccc_date_range = Component("filteredString", {
+    error: `invalid type, valid type is: "tfcchannelcasting:date_range"`,
+    filter: (string) => string == "tfcchannelcasting:date_range"
+  })
+
+  comps.tfccc_food_data = Component("filteredString", {
+    error: `invalid type, valid type is: "tfcchannelcasting:set_food_data"`,
+    filter: (string) => string == "tfcchannelcasting:set_food_data"
+  })
+
   keys.add_trait = comps.add_trait.key("type")
   keys.trait = comps.trait.key("trait")
   comps.add_trait_modifier = builder(keys.add_trait, keys.trait)
@@ -61,12 +79,46 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
     filter: (string) => string == "tfc:add_heat"
   })
 
+  keys.tfcc_date_condition = builder(
+    comps.tfccc_date_range.key("type"),
+    Component("intNumberRange", { min: 1 }).key("min_day"),
+    Component("intNumberRange", { min: 1 }).key("max_day"),
+    Component("intNumberRange", { min: 1, max: 12 }).key("max_month"),
+    Component("intNumberRange", { min: 1, max: 12 }).key("min_month")
+  ).key("condition")
+
+  comps.tfcc_food_data_map = builder(
+    comps.tfccc_food_data.key("type"),
+    Component("intNumber").key("hunger").optional(4).alwaysWrite(),
+    Component("floatNumber").key("saturation").optional(0).alwaysWrite(),
+    Component("floatNumber").key("water").optional(0).alwaysWrite(),
+    Component("floatNumber").key("decay_modifier").optional(1).alwaysWrite(),
+    Component("floatNumber").key("grain").optional(0).alwaysWrite(),
+    Component("floatNumber").key("veg").optional(0).alwaysWrite(),
+    Component("floatNumber").key("fruit").optional(0).alwaysWrite(),
+    Component("floatNumber").key("meat").optional(0).alwaysWrite(),
+    Component("floatNumber").key("dairy").optional(0).alwaysWrite()
+  )
+
   keys.add_heat = comps.add_heat.key("type")
   keys.temperature = Component("intNumber").key("temperature")
   comps.add_heat_modifier = builder(keys.add_heat, keys.temperature)
 
+  keys.inner_modifiers = comps.add_trait_modifier
+    .or(comps.modifier.or(comps.add_heat_modifier.or(comps.tfcc_food_data_map)))
+    .asArray()
+    .key("modifiers")
+    .defaultOptional()
+
+  comps.tfcc_conditional = builder(
+    comps.tfccc_conditional.key("type"),
+    keys.tfcc_date_condition,
+    keys.inner_modifiers,
+    keys.inner_modifiers.component.key("else_modifiers")
+  )
+
   keys.modifiers = comps.add_trait_modifier
-    .or(comps.modifier.or(comps.add_heat_modifier))
+    .or(comps.modifier.or(comps.add_heat_modifier.or(comps.tfcc_conditional.or(comps.tfcc_food_data_map))))
     .asArray()
     .key("modifiers")
     .defaultOptional()
