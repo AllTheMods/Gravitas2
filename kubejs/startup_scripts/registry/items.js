@@ -241,11 +241,14 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('gregitas:small_tool_handle').texture('kubejs:item/tools/handle').unstackable()
     event.create('gregitas:stone_bowl').texture('kubejs:item/tools/stone_bowl').unstackable()
     event.create('gregitas:flint_pestle').texture('kubejs:item/tools/pestle').color(0, 0x002040).unstackable()
-    event.create('gregitas:plunger_head').texture('kubejs:item/tools/plunger').unstackable()
     event.create('gregitas:rubber_mallet_head').texture('kubejs:item/tools/mallet').color(0, 0x000000).unstackable()
     event.create('gregitas:polyethylene_mallet_head').texture('kubejs:item/tools/mallet').color(0, 0xC8C8C8).unstackable()
     event.create('gregitas:polytetrafluoroethylene_mallet_head').texture('kubejs:item/tools/mallet').color(0, 0x646464).unstackable()
     event.create('gregitas:polybenzimidazole_mallet_head').texture('kubejs:item/tools/mallet').color(0, 0x2D2D2D).unstackable()
+    event.create('gregitas:rubber_plunger_head').texture('kubejs:item/tools/plunger').color(0, 0x353529).unstackable()
+    event.create('gregitas:polyethylene_plunger_head').texture('kubejs:item/tools/plunger').color(0, 0xF0F0F0).unstackable()
+    event.create('gregitas:polytetrafluoroethylene_plunger_head').texture('kubejs:item/tools/plunger').color(0, 0xFFFFFF).unstackable()
+    event.create('gregitas:polybenzimidazole_plunger_head').texture('kubejs:item/tools/plunger').color(0, 0x464441).unstackable()
 
     gtTFCTools.forEach((metal) => {
       event.create(`gregitas:${metal.id}_saw_blade`).texture('kubejs:item/tools/saw').color(0, metal.color).unstackable()
