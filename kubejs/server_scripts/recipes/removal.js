@@ -22,7 +22,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shaped/casing_coke_bricks"})
   event.remove({ id: "gtceu:smelting/fireclay_brick"})
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
-
+  event.remove([{ id: 'gtceu:shaped/pump_deck' }, { id: 'gtceu:shaped/pump_hatch' }, { id: 'gtceu:shaped/primitive_pump' }])
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
@@ -31,6 +31,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:assembler/enchanting_table"})
   event.remove({ id: "gtceu:assembler/wool_from_string"})
   event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
+  event.remove({ id: 'gtceu:shaped/lv_extruder' })
 
 
   //GT / Railcraft Tool Specific
@@ -128,6 +129,13 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
   event.remove({ id: "create:filling/sweet_roll"})
   event.remove({ id: "create:crafting/kinetics/belt_connector"})
+  event.remove({ id: "create:crushing/crimsite_recycling"})
+  event.remove({ id: "create:crushing/ochrum_recycling"})
+  event.remove({ id: "create:crushing/veridium"})
+  event.remove({ id: "create:crushing/tuff"})
+  event.remove({ id: "create:crushing/gravel"})
+  event.remove({ id: "create:crushing/asurine_recycling"})
+  event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -171,8 +179,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^woodencog:cutting\/.*door/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
-  event.remove({ id: /^woodencog:deploying\/.*/, mod: "woodencog" })
   event.remove({ id: "woodencog:crafting/kinetics/belt_connector"})
+
+  event.remove({ id: /^woodencog:heating\/.*_dough/, mod: "woodencog" })
+
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap" })

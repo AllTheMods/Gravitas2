@@ -21,10 +21,19 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
       return oldValue % 25 ? oldValue : oldValue * 1.44
     } else return newValue
   }
+  let convertFluidToKJS = (inputFluid) => {
+    if (inputFluid instanceof $CreateInputFluid) {
+      return inputFluid.copy(inputFluid.getAmount())
+    }
+    return inputFluid
+  }
   let convertFluidsFromArray = (array) => {
+    var newVal;
     return array
       .stream()
-      .map((val) => (val instanceof $UnboundFluidStackJS ? val.setAmount(convertFluidValues(val.amount)) || val : val))
+      .map((val) => (
+        newVal = convertFluidToKJS(val),
+        newVal instanceof $UnboundFluidStackJS ? newVal.setAmount(convertFluidValues(newVal.amount)) || newVal : newVal))
       .toList()
   }
 
@@ -59,6 +68,7 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
   })
 
   event.forEachRecipe({ type: "tfc:casting" }, (/** @type {Special.Recipes.CastingTfc}**/ r) => {
+    if (r.getId().startsWith("tfcchannelcasting")) return
     let fluidIngredient = unwrapValue(r.get("fluid"))
     fluidIngredient.computeIfPresent("amount", (key, val) => convertFluidValues(val))
     r.fluid(fluidIngredient)

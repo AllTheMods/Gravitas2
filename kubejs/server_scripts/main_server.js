@@ -64,6 +64,7 @@ ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
+  addGenericData(event)
 })
 
 NetworkEvents.dataReceived("customTask", (event) => {

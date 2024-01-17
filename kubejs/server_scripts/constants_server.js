@@ -10,6 +10,7 @@ const $CraftingComponent = Java.loadClass("com.gregtechceu.gtceu.data.recipe.Cra
 const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
 const $Fluid = Java.loadClass("net.minecraft.world.level.material.Fluid")
 const $UnboundFluidStackJS = Java.loadClass("dev.latvian.mods.kubejs.fluid.UnboundFluidStackJS")
+const $CreateInputFluid = Java.loadClass("dev.latvian.mods.kubejs.create.CreateInputFluid")
 const $Class = Java.loadClass("java.lang.Class")
 const $ChunkProvider = Java.loadClass("net.dries007.tfc.world.chunkdata.ChunkDataProvider")
 const $ForestConfig = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestConfig")
@@ -274,4 +275,25 @@ const tfcCobbleToSand = [
       stone: 'marble',
       sand: 'yellow'
   }
+]
+
+let tfcMetalFluids = [
+  'bismuth',
+  'bismuth_bronze',
+  'black_bronze',
+  'black_steel',
+  'blue_steel',
+  'bronze',
+  'brass',
+  'copper',
+  'gold',
+  'nickel',
+  'red_steel',
+  'rose_gold',
+  'silver',
+  'steel',
+  'sterling_silver',
+  'tin',
+  'wrought_iron',
+  'zinc'
 ]

@@ -150,7 +150,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
   event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
-
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:iron_bars", "tfc:metal/bars/wrought_iron")
 
   //TFShips
   tfcShipTypes.forEach((wood) => {
@@ -174,8 +174,12 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.replaceInput({}, "#forge:nuggets/iron", "#forge:nuggets/wrought_iron")
   event.replaceOutput({}, "#forge:nuggets/iron", "#forge:nuggets/wrought_iron")
-
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "#forge:rods/iron", "#forge:rods/wrought_iron")
+  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "#forge:rods/iron", "#forge:rods/wrought_iron")
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
 
+  event.replaceInput({ mod: "railways"}, "#railways:internal/plates/iron_plates", "#forge:plates/wrought_iron")
+
+  event.replaceInput({ id: "woodencog:crafting/schematics/schematicannon"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
 }

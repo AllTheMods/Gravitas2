@@ -54,10 +54,18 @@ const tfcSaplings = [
   "white_cedar",
   "willow"
 ]
+const TFCGrains = [
+ "oat",
+ "barley",
+ "maize",
+ "rye",
+ "rice",
+ "wheat"
+]
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
-
+  const smoking = event.recipes.minecraft.smoking
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
   event.custom({
@@ -258,6 +266,34 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
           }
       }
     })
+
+    event.recipes.gtceu.assembler("enchanting")
+              .circuit(3)
+              .itemInputs(
+              {
+                "type": "forge:partial_nbt",
+                "item": "apotheosis:gem",
+                "nbt": "{\"affix_data\":{\"rarity\":\"apotheosis:mythic\"}}"
+              },
+              {
+                "type": "forge:partial_nbt",
+                "item": "apotheosis:gem",
+                "nbt": "{\"affix_data\":{\"rarity\":\"apotheosis:mythic\"}}"
+              },
+              {
+                  tag: "forge:obsidian"
+              },
+              {
+                  tag: "forge:double_plates/red_steel"
+              },
+              {
+                  tag: "forge:plates/blue_steel"
+              },
+              )
+              .itemOutputs("minecraft:enchanting_table")
+              .duration(2500)
+              .EUt(HV)
+
   tfcSaplings.forEach((sapling) => {
     shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
                P: `tfc:wood/planks/${sapling}`,
@@ -649,4 +685,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         X: "#forge:dusts/redstone",
         T: "minecraft:piston"
     })
+
+    TFCGrains.forEach((grain) => {
+    smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
+    smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
+    })
+
 }
