@@ -960,6 +960,38 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.recipes.create.mixing(['gtceu:sticky_resin', Item.of('gtceu:sticky_resin').withChance(0.25)], ['#forge:small_dusts/sulfur', Fluid.of('gregitas:raw_resin', 1000)], 250, 'heated')
 
+    let addMoldChiselDeploying = (resultItem, moldItem, breakChance, fluidIngredientId, fluidAmount) => {
+        let resultMold = (breakChance != 1) ? Item.of(moldItem).withChance(1 - breakChance) : 0;
+        if (resultItem == null || resultItem == Item.empty) return;
+        event.recipes.create.deploying(
+            [
+                resultItem,
+                resultMold,
+            ],
+            [
+                {
+                    type: 'forge:nbt',
+                    item: Item.of(moldItem),
+                    nbt: {tank: {Amount: fluidAmount, FluidName: fluidIngredientId}}
+                },
+                {
+                    tag: "tfc:chisels"
+                }
+            ]
+        )
+    }
+    
+    event.forEachRecipe({ type: "tfc:casting"}, (/** @type {Special.Recipes.CastingTfc} **/ r) => {
+        let fluidInput = unwrapValue(r.get("fluid"))
+        let fluidIngredientId = fluidInput.get("ingredient").getId()
+        let fluidAmount = fluidInput.get("amount")
+        let moldType = unwrapValue(r.get("mold"))
+        let moldItem = moldType.get("item").item
+        let breakChance = unwrapValue(r.get("break_chance"))
+        let resultItem = unwrapValue(r.get("result")).get("item")
+        addMoldChiselDeploying(resultItem, moldItem, breakChance, fluidIngredientId, fluidAmount)
+    })
+
     tfcSaplings.forEach(wood => {
         event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
         event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
