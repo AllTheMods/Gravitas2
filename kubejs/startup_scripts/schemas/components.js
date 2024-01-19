@@ -94,9 +94,9 @@ let loadComponents = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event)
     Component("floatNumber").key("water").optional(0).alwaysWrite(),
     Component("floatNumber").key("decay_modifier").optional(1).alwaysWrite(),
     Component("floatNumber").key("grain").optional(0).alwaysWrite(),
-    Component("floatNumber").key("veg").optional(0).alwaysWrite(),
+    Component("floatNumber").key("vegetables").optional(0).alwaysWrite(),
     Component("floatNumber").key("fruit").optional(0).alwaysWrite(),
-    Component("floatNumber").key("meat").optional(0).alwaysWrite(),
+    Component("floatNumber").key("protein").optional(0).alwaysWrite(),
     Component("floatNumber").key("dairy").optional(0).alwaysWrite()
   )
 
