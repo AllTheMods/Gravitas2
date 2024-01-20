@@ -191,6 +191,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     results: [{ item: "create:large_cogwheel" }]
   })
+
+  event.custom({
+    type: "createaddition:rolling",
+    input: {
+      item: "tfc:metal/ingot/cast_iron"
+    },
+    result: {
+      item: "gtceu:iron_rod",
+	  count: 2
+    }
+  })
+  
   //Create End
 
   //GTCEU Start
@@ -365,6 +377,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     },
     duration: 6000
   }).id('gregitas:barrel/creosote_treated_lumber')
+
+  event.shapeless('gtceu:magnetic_iron_rod', [
+    "#forge:rods/iron",
+    "4x minecraft:redstone"
+  ])
+  
   
   //GTCEU End
 
