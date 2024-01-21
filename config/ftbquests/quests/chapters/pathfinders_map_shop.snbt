@@ -97,10 +97,10 @@
 			dev: false
 			height: 0.5d
 			hover: [ ]
-			image: "kubejs:textures/mountain_fresh_water.png"
+			image: "kubejs:textures/lakes.png"
 			rotation: 0.0d
-			width: 6.0d
-			x: -6.142857142857139d
+			width: 1.5d
+			x: -4.28d
 			y: -5.5d
 		}
 		{
@@ -127,8 +127,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "7D0F0002CFB52FB6"
-				tags: ["biome_badlands"]
-				title: "{gravitas.shop.map.biome.badlands}"
+				tags: ["biome:tfc.badlands"]
+				title: "{gravitas.shop.map.biome.tfc.badlands}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -146,7 +146,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -181,7 +181,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.badlands}"
+			title: "{gravitas.shop.map.biome.tfc.badlands}"
 			x: -3.0d
 			y: -11.5d
 		}
@@ -193,8 +193,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "771F4E9CCD245EB7"
-				tags: ["biome_inverted_badlands"]
-				title: "{gravitas.shop.map.biome.inverted_badlands}"
+				tags: ["biome:tfc.inverted_badlands"]
+				title: "{gravitas.shop.map.biome.tfc.inverted_badlands}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -212,7 +212,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -247,7 +247,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.inverted_badlands}"
+			title: "{gravitas.shop.map.biome.tfc.inverted_badlands}"
 			x: -2.0d
 			y: -11.5d
 		}
@@ -259,8 +259,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "6AEE498906F3A523"
-				tags: ["biome_canyons"]
-				title: "{gravitas.shop.map.biome.canyons}"
+				tags: ["biome:tfc.canyons"]
+				title: "{gravitas.shop.map.biome.tfc.canyons}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -278,7 +278,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -313,7 +313,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.canyons}"
+			title: "{gravitas.shop.map.biome.tfc.canyons}"
 			x: 0.0d
 			y: -11.5d
 		}
@@ -325,8 +325,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "0CE7384D64CFE376"
-				tags: ["biome_low_canyons"]
-				title: "{gravitas.shop.map.biome.low_canyons}"
+				tags: ["biome:tfc.low_canyons"]
+				title: "{gravitas.shop.map.biome.tfc.low_canyons}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -344,7 +344,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -379,7 +379,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.low_canyons}"
+			title: "{gravitas.shop.map.biome.tfc.low_canyons}"
 			x: -3.0d
 			y: -13.0d
 		}
@@ -391,8 +391,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "160D08E16990E6E1"
-				tags: ["biome_plains"]
-				title: "{gravitas.shop.map.biome.plains}"
+				tags: ["biome:tfc.plains"]
+				title: "{gravitas.shop.map.biome.tfc.plains}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -410,7 +410,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -445,7 +445,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.plains}"
+			title: "{gravitas.shop.map.biome.tfc.plains}"
 			x: 0.0d
 			y: -13.0d
 		}
@@ -457,8 +457,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "79B0F330091B9C29"
-				tags: ["biome_plateau"]
-				title: "{gravitas.shop.map.biome.plateau}"
+				tags: ["biome:tfc.plateau"]
+				title: "{gravitas.shop.map.biome.tfc.plateau}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -476,7 +476,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -511,7 +511,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.plateau}"
+			title: "{gravitas.shop.map.biome.tfc.plateau}"
 			x: -1.0d
 			y: -11.5d
 		}
@@ -523,8 +523,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "4E984260F986F84E"
-				tags: ["biome_hills"]
-				title: "{gravitas.shop.map.biome.hills}"
+				tags: ["biome:tfc.hills"]
+				title: "{gravitas.shop.map.biome.tfc.hills}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -542,7 +542,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -577,7 +577,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.hills}"
+			title: "{gravitas.shop.map.biome.tfc.hills}"
 			x: -1.0d
 			y: -13.0d
 		}
@@ -589,8 +589,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "50D0B9B7D7FB10D2"
-				tags: ["biome_rolling_hills"]
-				title: "{gravitas.shop.map.biome.rolling_hills}"
+				tags: ["biome:tfc.rolling_hills"]
+				title: "{gravitas.shop.map.biome.tfc.rolling_hills}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -608,7 +608,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -643,7 +643,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.rolling_hills}"
+			title: "{gravitas.shop.map.biome.tfc.rolling_hills}"
 			x: 1.0d
 			y: -11.5d
 		}
@@ -655,8 +655,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "43F2ED5C264C009A"
-				tags: ["biome_lake"]
-				title: "{gravitas.shop.map.biome.lake}"
+				tags: ["biome:tfc.lake"]
+				title: "{gravitas.shop.map.biome.tfc.lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -674,7 +674,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -709,7 +709,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.lake}"
+			title: "{gravitas.shop.map.biome.tfc.lake}"
 			x: -2.0d
 			y: -8.5d
 		}
@@ -721,8 +721,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "6D9C356B7681E462"
-				tags: ["biome_lowlands"]
-				title: "{gravitas.shop.map.biome.lowlands}"
+				tags: ["biome:tfc.lowlands"]
+				title: "{gravitas.shop.map.biome.tfc.lowlands}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -740,7 +740,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -775,7 +775,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.lowlands}"
+			title: "{gravitas.shop.map.biome.tfc.lowlands}"
 			x: -2.0d
 			y: -13.0d
 		}
@@ -787,8 +787,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "7991DFB316EA91E5"
-				tags: ["biome_mountains"]
-				title: "{gravitas.shop.map.biome.mountains}"
+				tags: ["biome:tfc.mountains"]
+				title: "{gravitas.shop.map.biome.tfc.mountains}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -806,7 +806,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -841,7 +841,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.mountains}"
+			title: "{gravitas.shop.map.biome.tfc.mountains}"
 			x: -1.0d
 			y: -10.0d
 		}
@@ -858,8 +858,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "66209F8592C4FD41"
-				tags: ["biome_volcanic_mountains"]
-				title: "{gravitas.shop.map.biome.volcanic_mountains}"
+				tags: ["biome:tfc.volcanic_mountains"]
+				title: "{gravitas.shop.map.biome.tfc.volcanic_mountains}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -896,7 +896,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.volcanic_mountains}"
+			title: "{gravitas.shop.map.biome.tfc.volcanic_mountains}"
 			x: -2.0d
 			y: -10.0d
 		}
@@ -908,8 +908,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "78B93C4A2B3A06A2"
-				tags: ["biome_old_mountains"]
-				title: "{gravitas.shop.map.biome.old_mountains}"
+				tags: ["biome:tfc.old_mountains"]
+				title: "{gravitas.shop.map.biome.tfc.old_mountains}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -927,7 +927,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -962,7 +962,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.old_mountains}"
+			title: "{gravitas.shop.map.biome.tfc.old_mountains}"
 			x: -3.0d
 			y: -10.0d
 		}
@@ -979,8 +979,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "2196F6577B176E00"
-				tags: ["biome_oceanic_mountains"]
-				title: "{gravitas.shop.map.biome.oceanic_mountains}"
+				tags: ["biome:tfc.oceanic_mountains"]
+				title: "{gravitas.shop.map.biome.tfc.oceanic_mountains}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1017,7 +1017,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.oceanic_mountains}"
+			title: "{gravitas.shop.map.biome.tfc.oceanic_mountains}"
 			x: 0.0d
 			y: -10.0d
 		}
@@ -1034,8 +1034,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "3B6E0FC4915C7C01"
-				tags: ["biome_volcanic_oceanic_mountains"]
-				title: "{gravitas.shop.map.biome.volcanic_oceanic_mountains}"
+				tags: ["biome:tfc.volcanic_oceanic_mountains"]
+				title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountains}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1072,7 +1072,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.volcanic_oceanic_mountains}"
+			title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountains}"
 			x: 1.0d
 			y: -10.0d
 		}
@@ -1090,8 +1090,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "140016D527E12689"
-				tags: ["biome_ocean"]
-				title: "{gravitas.shop.map.biome.ocean}"
+				tags: ["biome:tfc.ocean"]
+				title: "{gravitas.shop.map.biome.tfc.ocean}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1128,7 +1128,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.ocean}"
+			title: "{gravitas.shop.map.biome.tfc.ocean}"
 			x: -3.0d
 			y: -14.5d
 		}
@@ -1146,8 +1146,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "7A21274516E8B0BD"
-				tags: ["biome_ocean_reef"]
-				title: "{gravitas.shop.map.biome.ocean_reef}"
+				tags: ["biome:tfc.ocean_reef"]
+				title: "{gravitas.shop.map.biome.tfc.ocean_reef}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1184,7 +1184,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.ocean_reef}"
+			title: "{gravitas.shop.map.biome.tfc.ocean_reef}"
 			x: -2.0d
 			y: -14.5d
 		}
@@ -1202,8 +1202,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "3561D313C7008CEF"
-				tags: ["biome_deep_ocean"]
-				title: "{gravitas.shop.map.biome.deep_ocean}"
+				tags: ["biome:tfc.deep_ocean"]
+				title: "{gravitas.shop.map.biome.tfc.deep_ocean}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1240,7 +1240,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.deep_ocean}"
+			title: "{gravitas.shop.map.biome.tfc.deep_ocean}"
 			x: -1.0d
 			y: -14.5d
 		}
@@ -1257,8 +1257,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "75E26E0C1971A656"
-				tags: ["biome_deep_ocean_trench"]
-				title: "{gravitas.shop.map.biome.deep_ocean_trench}"
+				tags: ["biome:tfc.deep_ocean_trench"]
+				title: "{gravitas.shop.map.biome.tfc.deep_ocean_trench}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1295,7 +1295,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.deep_ocean_trench}"
+			title: "{gravitas.shop.map.biome.tfc.deep_ocean_trench}"
 			x: 0.0d
 			y: -14.5d
 		}
@@ -1307,8 +1307,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "48033CA0B02AF17F"
-				tags: ["biome_river"]
-				title: "{gravitas.shop.map.biome.river}"
+				tags: ["biome:tfc.river"]
+				title: "{gravitas.shop.map.biome.tfc.river}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1326,7 +1326,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -1361,7 +1361,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.river}"
+			title: "{gravitas.shop.map.biome.tfc.river}"
 			x: -3.0d
 			y: -8.5d
 		}
@@ -1378,8 +1378,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "28936FBAB099E786"
-				tags: ["biome_shore"]
-				title: "{gravitas.shop.map.biome.shore}"
+				tags: ["biome:tfc.shore"]
+				title: "{gravitas.shop.map.biome.tfc.shore}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1416,319 +1416,9 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.shore}"
+			title: "{gravitas.shop.map.biome.tfc.shore}"
 			x: -3.0d
 			y: -7.0d
-		}
-		{
-			can_repeat: true
-			disable_toast: true
-			icon: "tfc:rock/raw/claystone"
-			id: "2E37DAE4A371734B"
-			rewards: [{
-				icon: "minecraft:filled_map"
-				id: "74B28145B11CC534"
-				tags: ["biome_mountain_river"]
-				title: "{gravitas.shop.map.biome.mountain_river}"
-				type: "custom"
-			}]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: true
-					count: 64L
-					disable_toast: true
-					id: "0EB03277CB887872"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "minecraft:clay"
-					}
-					type: "item"
-				}
-				{
-					consume_items: true
-					count: 64L
-					disable_toast: true
-					id: "43DE83F1AD61C95B"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:log_pile_logs"
-						}
-					}
-					title: "Any #tfc:log_pile_logs"
-					type: "item"
-				}
-				{
-					consume_items: true
-					count: 16L
-					disable_toast: true
-					id: "322D9C1B9F4B0E63"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:seeds"
-						}
-					}
-					title: "Any #tfc:seeds"
-					type: "item"
-				}
-			]
-			title: "{gravitas.shop.map.biome.mountain_river}"
-			x: -2.0d
-			y: -5.5d
-		}
-		{
-			can_repeat: true
-			dependencies: [
-				"50EC0F521D31465C"
-				"246FF66E4D1AC9B8"
-			]
-			disable_toast: true
-			icon: "tfc:rock/magma/andesite"
-			id: "1729FA1A494E1C18"
-			min_required_dependencies: 1
-			rewards: [{
-				icon: "minecraft:filled_map"
-				id: "365EC1B114BB4ECA"
-				tags: ["biome_volcanic_mountain_river"]
-				title: "{gravitas.shop.map.biome.volcanic_mountain_river}"
-				type: "custom"
-			}]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: true
-					count: 32L
-					disable_toast: true
-					id: "0D20E9AE44C1BC84"
-					item: "firmalife:beeswax"
-					type: "item"
-				}
-				{
-					consume_items: true
-					disable_toast: true
-					id: "644393B9CC6B4EF4"
-					item: "minecraft:iron_block"
-					type: "item"
-				}
-				{
-					consume_items: true
-					disable_toast: true
-					id: "37CB259F72FDE7DB"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/anvil/copper"
-					}
-					type: "item"
-				}
-			]
-			title: "{gravitas.shop.map.biome.volcanic_mountain_river}"
-			x: -1.0d
-			y: -5.5d
-		}
-		{
-			can_repeat: true
-			disable_toast: true
-			icon: "create:water_wheel"
-			id: "01C56C78CE3C84B7"
-			rewards: [{
-				icon: "minecraft:filled_map"
-				id: "6AF372C4B00B8677"
-				tags: ["biome_old_mountain_river"]
-				title: "{gravitas.shop.map.biome.old_mountain_river}"
-				type: "custom"
-			}]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: true
-					count: 64L
-					disable_toast: true
-					id: "1F58CC22199D34C9"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "minecraft:clay"
-					}
-					type: "item"
-				}
-				{
-					consume_items: true
-					count: 64L
-					disable_toast: true
-					id: "6A89410A1C891B5A"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:log_pile_logs"
-						}
-					}
-					title: "Any #tfc:log_pile_logs"
-					type: "item"
-				}
-				{
-					consume_items: true
-					count: 16L
-					disable_toast: true
-					id: "1029864F4D03434E"
-					item: {
-						Count: 1b
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:seeds"
-						}
-					}
-					title: "Any #tfc:seeds"
-					type: "item"
-				}
-			]
-			title: "{gravitas.shop.map.biome.old_mountain_river}"
-			x: -3.0d
-			y: -5.5d
-		}
-		{
-			can_repeat: true
-			dependencies: [
-				"50EC0F521D31465C"
-				"246FF66E4D1AC9B8"
-			]
-			disable_toast: true
-			icon: {
-				Count: 1b
-				ForgeCaps: {
-					"tfc:food": {
-						creationDate: -9223372036854775808L
-						traits: [ ]
-					}
-					"tfc:item_heat": {
-						heat: 0.0f
-						ticks: 0L
-					}
-				}
-				id: "tfc:food/bluegill"
-			}
-			id: "07693B9DE14F884E"
-			min_required_dependencies: 1
-			rewards: [{
-				icon: "minecraft:filled_map"
-				id: "4C300A4610B2762C"
-				tags: ["biome_oceanic_mountain_river"]
-				title: "{gravitas.shop.map.biome.oceanic_mountain_river}"
-				type: "custom"
-			}]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: true
-					count: 32L
-					disable_toast: true
-					id: "6219813DA1A03E82"
-					item: "firmalife:beeswax"
-					type: "item"
-				}
-				{
-					consume_items: true
-					disable_toast: true
-					id: "16194A1470EE1B72"
-					item: "minecraft:iron_block"
-					type: "item"
-				}
-				{
-					consume_items: true
-					disable_toast: true
-					id: "76AD3B5C7EC005A9"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/anvil/copper"
-					}
-					type: "item"
-				}
-			]
-			title: "{gravitas.shop.map.biome.oceanic_mountain_river}"
-			x: 0.0d
-			y: -5.5d
-		}
-		{
-			can_repeat: true
-			dependencies: [
-				"50EC0F521D31465C"
-				"246FF66E4D1AC9B8"
-			]
-			disable_toast: true
-			icon: "tfc:rock/magma/dacite"
-			id: "590AC0E4F83FFF39"
-			min_required_dependencies: 1
-			rewards: [{
-				icon: "minecraft:filled_map"
-				id: "36B633F245F54FC1"
-				tags: ["biome_volcanic_oceanic_mountain_river"]
-				title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_river}"
-				type: "custom"
-			}]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: true
-					count: 32L
-					disable_toast: true
-					id: "443901D28E9AB9C3"
-					item: "firmalife:beeswax"
-					type: "item"
-				}
-				{
-					consume_items: true
-					disable_toast: true
-					id: "2B4F318FBE1279CB"
-					item: "minecraft:iron_block"
-					type: "item"
-				}
-				{
-					consume_items: true
-					disable_toast: true
-					id: "710578DECA2E2F59"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/anvil/copper"
-					}
-					type: "item"
-				}
-			]
-			title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_river}"
-			x: 3.0d
-			y: -5.5d
 		}
 		{
 			can_repeat: true
@@ -1738,8 +1428,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "5526630F330972EA"
-				tags: ["biome_mountain_lake"]
-				title: "{gravitas.shop.map.biome.mountain_lake}"
+				tags: ["biome:tfc.mountain_lake"]
+				title: "{gravitas.shop.map.biome.tfc.mountain_lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1757,7 +1447,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -1792,8 +1482,8 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.mountain_lake}"
-			x: 2.0d
+			title: "{gravitas.shop.map.biome.tfc.mountain_lake}"
+			x: -3.0d
 			y: -5.5d
 		}
 		{
@@ -1809,8 +1499,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "712FC93F6BAB14B7"
-				tags: ["biome_volcanic_mountain_lake"]
-				title: "{gravitas.shop.map.biome.volcanic_mountain_lake}"
+				tags: ["biome:tfc.volcanic_mountain_lake"]
+				title: "{gravitas.shop.map.biome.tfc.volcanic_mountain_lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1847,8 +1537,8 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.volcanic_mountain_lake}"
-			x: 1.0d
+			title: "{gravitas.shop.map.biome.tfc.volcanic_mountain_lake}"
+			x: 0.0d
 			y: -5.5d
 		}
 		{
@@ -1859,8 +1549,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "055A0376D89D92C6"
-				tags: ["biome_old_mountain_lake"]
-				title: "{gravitas.shop.map.biome.old_mountain_lake}"
+				tags: ["biome:tfc.old_mountain_lake"]
+				title: "{gravitas.shop.map.biome.tfc.old_mountain_lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1878,7 +1568,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -1913,8 +1603,8 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.old_mountain_lake}"
-			x: 4.0d
+			title: "{gravitas.shop.map.biome.tfc.old_mountain_lake}"
+			x: -2.0d
 			y: -5.5d
 		}
 		{
@@ -1930,8 +1620,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "73BD06289DBED9B1"
-				tags: ["biome_oceanic_mountain_lake"]
-				title: "{gravitas.shop.map.biome.oceanic_mountain_lake}"
+				tags: ["biome:tfc.oceanic_mountain_lake"]
+				title: "{gravitas.shop.map.biome.tfc.oceanic_mountain_lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -1968,8 +1658,8 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.oceanic_mountain_lake}"
-			x: 5.0d
+			title: "{gravitas.shop.map.biome.tfc.oceanic_mountain_lake}"
+			x: -1.0d
 			y: -5.5d
 		}
 		{
@@ -1985,8 +1675,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "5B312B328EC7A562"
-				tags: ["biome_volcanic_oceanic_mountain_lake"]
-				title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_lake}"
+				tags: ["biome:tfc.volcanic_oceanic_mountain_lake"]
+				title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountain_lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2023,8 +1713,8 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_lake}"
-			x: 6.0d
+			title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountain_lake}"
+			x: 1.0d
 			y: -5.5d
 		}
 		{
@@ -2035,8 +1725,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "4E6A4E26DC26CE51"
-				tags: ["biome_plateau_lake"]
-				title: "{gravitas.shop.map.biome.plateau_lake}"
+				tags: ["biome:tfc.plateau_lake"]
+				title: "{gravitas.shop.map.biome.tfc.plateau_lake}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2054,7 +1744,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:clay"
+						id: "minecraft:clay_ball"
 					}
 					type: "item"
 				}
@@ -2089,8 +1779,8 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.plateau_lake}"
-			x: 7.0d
+			title: "{gravitas.shop.map.biome.tfc.plateau_lake}"
+			x: 2.0d
 			y: -5.5d
 		}
 		{
@@ -2152,8 +1842,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "356F3D76F14BB7DB"
-				tags: ["biome_warped_forest"]
-				title: "{gravitas.shop.map.biome.warped_forest}"
+				tags: ["biome:minecraft.warped_forest"]
+				title: "{gravitas.shop.map.biome.minecraft.warped_forest}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2181,7 +1871,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.warped_forest}"
+			title: "{gravitas.shop.map.biome.minecraft.warped_forest}"
 			x: -3.0d
 			y: -4.0d
 		}
@@ -2193,8 +1883,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "3F7CCD3755B13704"
-				tags: ["biome_nether_wastes"]
-				title: "{gravitas.shop.map.biome.nether_wastes}"
+				tags: ["biome:minecraft.nether_wastes"]
+				title: "{gravitas.shop.map.biome.minecraft.nether_wastes}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2222,7 +1912,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.nether_wastes}"
+			title: "{gravitas.shop.map.biome.minecraft.nether_wastes}"
 			x: -2.0d
 			y: -4.0d
 		}
@@ -2234,8 +1924,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "433448202CA30F02"
-				tags: ["biome_crimson_forest"]
-				title: "{gravitas.shop.map.biome.crimson_forest}"
+				tags: ["biome:minecraft.crimson_forest"]
+				title: "{gravitas.shop.map.biome.minecraft.crimson_forest}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2263,7 +1953,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.crimson_forest}"
+			title: "{gravitas.shop.map.biome.minecraft.crimson_forest}"
 			x: -1.0d
 			y: -4.0d
 		}
@@ -2275,8 +1965,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "2DAEADA3A37C8290"
-				tags: ["biome_soul_sand_valley"]
-				title: "{gravitas.shop.map.biome.soul_sand_valley}"
+				tags: ["biome:minecraft.soul_sand_valley"]
+				title: "{gravitas.shop.map.biome.minecraft.soul_sand_valley}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2304,7 +1994,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.soul_sand_valley}"
+			title: "{gravitas.shop.map.biome.minecraft.soul_sand_valley}"
 			x: 0.0d
 			y: -4.0d
 		}
@@ -2316,8 +2006,8 @@
 			rewards: [{
 				icon: "minecraft:filled_map"
 				id: "5DC3C1FEB7E5C6DE"
-				tags: ["biome_basalt_deltas"]
-				title: "{gravitas.shop.map.biome.basalt_deltas}"
+				tags: ["biome:minecraft.basalt_deltas"]
+				title: "{gravitas.shop.map.biome.minecraft.basalt_deltas}"
 				type: "custom"
 			}]
 			shape: "octagon"
@@ -2345,11 +2035,198 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.shop.map.biome.basalt_deltas}"
+			title: "{gravitas.shop.map.biome.minecraft.basalt_deltas}"
 			x: 1.0d
 			y: -4.0d
 		}
+		{
+			can_repeat: true
+			disable_toast: true
+			icon: "tfc:mud/silty_loam"
+			id: "59ECDE5F1717A478"
+			rewards: [{
+				icon: "minecraft:filled_map"
+				id: "7A07E8C31FA7C477"
+				tags: ["biome:tfc.salt_marsh"]
+				title: "{gravitas.shop.map.biome.tfc.salt_marsh}"
+				type: "custom"
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "7EDA0F0138593B0F"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "3AD2C5FF4AB65F1A"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					title: "Any #tfc:log_pile_logs"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					disable_toast: true
+					id: "575483C1236FA497"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					title: "Any #tfc:seeds"
+					type: "item"
+				}
+			]
+			title: "{gravitas.shop.map.biome.tfc.salt_marsh}"
+			x: 1.0d
+			y: -13.0d
+		}
+		{
+			can_repeat: true
+			disable_toast: true
+			icon: "tfc:white_kaolin_clay"
+			id: "35472F9D6A826069"
+			rewards: [{
+				icon: "minecraft:filled_map"
+				id: "24200B4DB388113E"
+				tags: ["biome:tfc.highlands"]
+				title: "{gravitas.shop.map.biome.tfc.highlands}"
+				type: "custom"
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "5B9C642117BA5E97"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "7F312426A5171EEC"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					title: "Any #tfc:log_pile_logs"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					disable_toast: true
+					id: "6BAF50DDF117FAE8"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					title: "Any #tfc:seeds"
+					type: "item"
+				}
+			]
+			title: "{gravitas.shop.map.biome.tfc.highlands}"
+			x: 2.0d
+			y: -11.5d
+		}
+		{
+			can_repeat: true
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			disable_toast: true
+			icon: "tfc:sand/green"
+			id: "5602C0E12F1D81EF"
+			min_required_dependencies: 1
+			rewards: [{
+				icon: "minecraft:filled_map"
+				id: "0FDAFDDB45F65BF4"
+				tags: ["biome:tfc.tidal_flats"]
+				title: "{gravitas.shop.map.biome.tfc.tidal_flats}"
+				type: "custom"
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: true
+					count: 32L
+					disable_toast: true
+					id: "36CFFB357AB8C5DD"
+					item: "firmalife:beeswax"
+					type: "item"
+				}
+				{
+					consume_items: true
+					disable_toast: true
+					id: "0B98FB04289F4769"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
+					consume_items: true
+					disable_toast: true
+					id: "47C8D430A5735BE9"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/anvil/copper"
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.shop.map.biome.tfc.tidal_flats}"
+			x: -2.0d
+			y: -7.0d
+		}
 	]
-	tags: ["biome_maps"]
+	tags: ["biome:tfc.maps"]
 	title: "{gravitas.shop.chapter.1}"
 }
