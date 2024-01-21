@@ -179,7 +179,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
   event.remove({ id: "woodencog:crafting/kinetics/belt_connector"})
-
+  event.remove({ id: /^woodencog:deploying\/.*/, mod : "woodencog"})
   event.remove({ id: /^woodencog:heating\/.*_dough/, mod: "woodencog" })
 
 
