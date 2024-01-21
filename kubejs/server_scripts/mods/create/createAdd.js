@@ -960,7 +960,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.recipes.create.mixing(['gtceu:sticky_resin', Item.of('gtceu:sticky_resin').withChance(0.25)], ['#forge:small_dusts/sulfur', Fluid.of('gregitas:raw_resin', 1000)], 250, 'heated')
 
-    let addMoldChiselDeploying = (resultItem, moldItem, breakChance, fluidIngredientId, fluidAmount, meltTemperature) => {
+    let addMoldChiselDeploying = (resultItem, moldItem, breakChance, fluidIngredientId, fluidAmount) => {
         let resultMold = (breakChance != 1) ? Item.of(moldItem).withChance(1 - breakChance) : 0;
         if (resultItem == null || resultItem == Item.empty) return;
         event.recipes.create.deploying(
@@ -971,7 +971,6 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             [
                 {
                     type: "tfc:heatable",
-                    max_temp: meltTemperature,
                     ingredient: {
                         type: "forge:partial_nbt",
                         item: Item.of(moldItem).getId(),
@@ -997,10 +996,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         let moldItem = moldType.get("item").item
         let breakChance = unwrapValue(r.get("break_chance"))
         let resultItem = unwrapValue(r.get("result")).get("item")
-        let meltTemperature = Java.loadClass("net.dries007.tfc.util.Metal")
-            .get(fluidIngredient.getFluid())
-            .getMeltTemperature()
-        addMoldChiselDeploying(resultItem, moldItem, breakChance, fluidIngredient.getId(), fluidAmount, meltTemperature)
+        addMoldChiselDeploying(resultItem, moldItem, breakChance, fluidIngredient.getId(), fluidAmount)
     })
 
 
