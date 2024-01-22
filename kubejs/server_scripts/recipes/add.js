@@ -160,7 +160,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         type: 'tfc:heatable',
         min_temp: 921,
         ingredient: {
-          item: Item.of('tfc:raw_iron_bloom').getId(),
+          item: 'tfc:raw_iron_bloom',
         },
       }
     ]
