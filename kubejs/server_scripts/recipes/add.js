@@ -167,7 +167,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   )
   event.recipes.create.pressing(
     [
-      { item: "tfc:metal/ingot/wrought_iron" }
+      { item: "gtceu:wrought_iron_ingot" }
     ],
     [
       {
