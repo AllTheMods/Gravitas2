@@ -1,6 +1,6 @@
 let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
-    event.shapeless('gtceu:igneous_dust', ['#forge:tools/mortars', '#tfc:igneous_extrusive_rock'])
-    event.shaped('gtceu:igneous_alloy_dust', ['IZ', 'ZI'], {I: 'gtceu:igneous_dust', Z: 'gtceu:zinc_small_dust'})
+    event.shapeless('gregitas_core:igneous_dust', ['#forge:tools/mortars', '#tfc:igneous_extrusive_rock'])
+    event.shaped('gregitas_core:igneous_alloy_dust', ['IZ', 'ZI'], {I: 'gregitas_core:igneous_dust', Z: 'gtceu:small_zinc_dust'})
     event.custom(
         {
             type: 'create:mixing',
@@ -852,7 +852,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 tag: 'forge:dusts/igneous_alloy'
             },
             result_fluid: {
-                fluid: 'gtceu:igneous_alloy',
+                fluid: 'gregitas_core:igneous_alloy',
                 amount: 144.0
             },
             temperature: 420
@@ -864,24 +864,24 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
-                    item: 'gtceu:igneous_dust'
+                    item: 'gregitas_core:igneous_dust'
                 },
                 {
-                    item: 'gtceu:igneous_dust'
+                    item: 'gregitas_core:igneous_dust'
                 },
                 {
-                    item: 'gtceu:igneous_dust'
+                    item: 'gregitas_core:igneous_dust'
                 },
                 {
-                    item: 'gtceu:igneous_dust'
+                    item: 'gregitas_core:igneous_dust'
                 },
                 {
-                    item: 'gtceu:zinc_dust'
+                    item: 'gregitas_core:zinc_dust'
                 }
             ],
             results: [
                 {
-                    fluid: 'gtceu:igneous_alloy',
+                    fluid: 'gregitas_core:igneous_alloy',
                     nbt: {},
                     amount: 288
                 }
@@ -896,7 +896,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             ingredients: [
                 Item.of('tfc:ceramic/ingot_mold').strongNBT(),
                 {
-                    fluid: 'gtceu:igneous_alloy',
+                    fluid: 'gregitas_core:igneous_alloy',
                     nbt: {},
                     amount: 144
                 }
@@ -907,7 +907,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     nbt: {
                         tank: {
                             Amount: 144,
-                            FluidName: 'gtceu:igneous_alloy'
+                            FluidName: 'gregitas_core:igneous_alloy'
                         }
                     },
                     count: 1
@@ -921,7 +921,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             ingredients: [
                 Item.of('tfc:ceramic/fire_ingot_mold').strongNBT(),
                 {
-                    fluid: 'gtceu:igneous_alloy',
+                    fluid: 'gregitas_core:igneous_alloy',
                     nbt: {},
                     amount: 144
                 }
@@ -932,7 +932,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     nbt: {
                         tank: {
                             Amount: 144,
-                            FluidName: 'gtceu:igneous_alloy'
+                            FluidName: 'gregitas_cores:igneous_alloy'
                         }
                     },
                     count: 1
@@ -954,7 +954,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
 
-    event.recipes.create.milling('gtceu:igneous_dust', '#tfc:igneous_extrusive_rock', 250)
+    event.recipes.create.milling('gregitas_core:igneous_dust', '#tfc:igneous_extrusive_rock', 250)
 
     event.recipes.create.milling('gtceu:zinc_dust', 'gtceu:zinc_ingot', 250)
 

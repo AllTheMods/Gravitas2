@@ -453,7 +453,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
    gemPowders.forEach(powder => {
     event.recipes.gtceu.centrifuge("tfc_powder_to_dust/" + powder)
     .itemInputs([`4x tfc:powder/${powder}`])
-    .itemOutputs([`gtceu:${powder.replace("_lazuli", "")}_impure_dust`])
+    .itemOutputs([`gtceu:impure_${powder.replace("_lazuli", "")}_dust`])
     .EUt(ULV).duration(200)
    })
     event.recipes.gtceu.alloy_smelter('copper_alloy')
