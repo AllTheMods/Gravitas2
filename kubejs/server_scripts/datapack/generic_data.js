@@ -102,11 +102,11 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
         let json = JsonIO.toObject(
             {
                 "ingredient": {
-                    "item": item,
-                    "heat_capacity": heat,
-                    "forging_temperature": forge,
-                    "welding_temperature": weld
-                }
+                    "item": item
+				},
+                "heat_capacity": heat,
+                "forging_temperature": forge,
+                "welding_temperature": weld
             }
         )
 
