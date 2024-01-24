@@ -16,7 +16,6 @@ EntityEvents.checkSpawn(event => {
     let climate = $KoppenClimateClassification.classify(avgTemp, rainfall)
     console.log("At climate: " + climate)
     let entityCheck = entityMap[event.entity.type]
-    if(entityCheck == null) { return }
     if(entityCheck != climate) {
       console.log("Entity Allowed: " + (entityCheck == climate))
       event.cancel()

@@ -820,7 +820,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 item: 'tfc:ceramic/ingot_mold'
             },
             fluid: {
-                ingredient: 'gtceu:igneous_alloy',
+                ingredient: 'gregitas_core:igneous_alloy',
                 amount: 144.0
             },
             result: {
@@ -836,7 +836,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 item: 'tfc:ceramic/fire_ingot_mold'
             },
             fluid: {
-                ingredient: 'gtceu:igneous_alloy',
+                ingredient: 'gregitas_core:igneous_alloy',
                 amount: 144.0
             },
             result: {

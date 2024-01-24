@@ -175,5 +175,5 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
         event.addJson(`tfc:tfc/metals/${id}.json`, json)
     }
 
-    addTFCMetals('igneous_alloy', 1, 'gtceu:igneous_alloy', 420, 0.01429, 'create:andesite_alloy')
+    addTFCMetals('igneous_alloy', 1, 'gregitas_core:igneous_alloy', 420, 0.01429, 'create:andesite_alloy')
 }

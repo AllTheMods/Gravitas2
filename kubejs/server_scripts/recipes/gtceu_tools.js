@@ -292,7 +292,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                     tier: metal.tier,
                 result: { 
-                    item: `gtceu:${metal.id}_long_rod`  
+                    item: `gtceu:long_${metal.id}_rod`
                 }
             })
             event.recipes.tfc.anvil(`gtceu:${metal.id}_screwdriver_tip`, `gtceu:long_${metal.id}_rod`, ['draw_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
@@ -314,7 +314,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 ]
             })
             */
-            event.shaped(`gtceu:${metal.id}_screwdriver`, ['S', 'H'], {S: `gtceu:${metal.id}_screwdriver_tip`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_screwdriver`)
+            event.shaped(`gtceu:${metal.id}_screwdriver`, ['sS', 'H'], {S: `gtceu:${metal.id}_screwdriver_tip`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_screwdriver`)
         })
         
     //Hammer
