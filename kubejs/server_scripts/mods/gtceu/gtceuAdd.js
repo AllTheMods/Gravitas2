@@ -281,4 +281,39 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.kubejs.shaped('2x gtceu:pump_deck', ['   ', 'SPS', 'sCh'], { S: 'gtceu:wrought_iron_screw', P: 'gtceu:treated_wood_planks', C: '#forge:slabs/cobblestone', s: '#forge:tools/screwdrivers', h: '#forge:tools/hammers' }).damageIngredient(['#forge:tools'])
     event.recipes.kubejs.shaped('gtceu:pump_hatch', ['SRs', 'PLP', 'CRC'], { S: 'gtceu:wrought_iron_screw', P: 'gtceu:treated_wood_planks', C: '#forge:slabs/cobblestone', R: 'gtceu:wrought_iron_ring', L: 'gtceu:wood_large_fluid_pipe', s: '#forge:tools/screwdrivers' }).damageIngredient(['#forge:tools'])
     event.recipes.kubejs.shaped('gtceu:primitive_pump', ['RNS', 'BPs', 'CLC'], { S: 'gtceu:wrought_iron_screw', P: 'gtceu:treated_wood_planks', C: '#forge:slabs/cobblestone', R: 'gtceu:wrought_iron_ring', L: 'gtceu:wood_large_fluid_pipe', N: 'gtceu:wood_normal_fluid_pipe', B: 'gtceu:wrought_iron_rotor', s: '#forge:tools/screwdrivers' }).damageIngredient(['#forge:tools'])
+
+    /// Extractor
+        /// TFC Ore to GT Fluid
+        const TFCFluidGTFluidMap = {
+            "tfc:metal/copper":     "gtceu:copper",         
+            "tfc:metal/zinc":       "gtceu:zinc",           
+            "tfc:metal/cast_iron":  "tfc:metal/cast_iron",  
+            "tfc:metal/gold":       "gtceu:gold",           
+            "tfc:metal/nickel":     "gtceu:nickel",         
+            "tfc:metal/bismuth":    "gtceu:bismuth",        
+            "tfc:metal/tin":        "gtceu:tin",            
+            "tfc:metal/silver":     "gtceu:silver",         
+        }
+        /// Mainly here just if someone wants to tweak later
+        const TFCFluidEUMap = {
+            16: 16, /// 1/9 of 4320 = 480eu
+            24: 24, /// 1/6 of 4320 = 720eu
+            36: 36, /// 1/4 of 4320 = 1080eu
+            48: 48, /// 1/3 of 4320 = 1440eu
+        }
+    event.forEachRecipe( {input: /^tfc:ore\/?(small|poor|normal|rich).*/, type: "tfc:heating"}, r => {
+        let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
+        let fluidIngredient = unwrapValue(r.get("result_fluid"))
+
+        let fluidRemap = TFCFluidGTFluidMap[fluidIngredient.getId()];
+        if (fluidRemap == null) { return }
+        let orePieceId = orePiece.toString().replace("\"", "");
+        orePieceId = orePieceId.substring("tfc:ore/".length);
+        
+        event.recipes.gtceu.extractor(`extract_${orePieceId}`)
+            .itemInputs(orePiece)
+            .outputFluids(Fluid.of(fluidRemap,fluidIngredient.getAmount()))
+            .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
+            .EUt(LV)
+    })
 }

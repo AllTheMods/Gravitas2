@@ -151,16 +151,34 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       "minecraft:blaze_rod"
     ])
 
-  event.custom({
-    type: "create:pressing",
-    ingredients: [{ item: "tfc:raw_iron_bloom" }],
-    results: [{ item: "tfc:refined_iron_bloom" }]
-  })
-  event.custom({
-    type: "create:pressing",
-    ingredients: [{ item: "tfc:refined_iron_bloom" }],
-    results: [{ item: "tfc:metal/ingot/wrought_iron" }]
-  })
+  event.recipes.create.pressing(
+    [
+      { item: "tfc:refined_iron_bloom" }
+    ],
+    [
+      {
+        type: 'tfc:heatable',
+        min_temp: 921,
+        ingredient: {
+          item: 'tfc:raw_iron_bloom',
+        },
+      }
+    ]
+  )
+  event.recipes.create.pressing(
+    [
+      { item: "gtceu:wrought_iron_ingot" }
+    ],
+    [
+      {
+        type: 'tfc:heatable',
+        min_temp: 921,
+        ingredient: {
+          item: 'tfc:refined_iron_bloom',
+        },
+      }
+    ]
+  )
   event.custom({
     type: "create:deploying",
     ingredients: [
