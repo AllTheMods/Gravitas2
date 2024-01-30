@@ -610,7 +610,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
             event.recipes.gtceu.assembler('gregitas:1k_storage_component')
                 .itemInputs(
-                    'gtceu:certus_plate',
+                    'gtceu:certus_quartz_plate',
                     'ae2:logic_processor',
                     '2x #gtceu:circuits/lv'
                 )
