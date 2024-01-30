@@ -610,5 +610,5 @@
 			y: -0.5d
 		}
 	]
-	title: "Welcome"
+	title: "{gravitas.chapters.0.title}"
 }

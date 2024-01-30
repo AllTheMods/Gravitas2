@@ -155,7 +155,7 @@
 			}]
 			title: "{gravitas.quest.brass.primitve_electron_tube}"
 			x: 1.0d
-			y: -3.0d
+			y: -2.5d
 		}
 		{
 			description: ["By combining Redstone Dust and Quarts you get Rose Quartz. And if you combine sand and paper you get sandpaper (It's hard to follow I know). Use them together to get polished Rose Quartz."]
@@ -186,7 +186,7 @@
 			]
 			title: "{gravitas.quest.brass.rose_quartz}"
 			x: 0.0d
-			y: -4.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["331EA5A3201884D1"]
@@ -517,5 +517,5 @@
 			y: 3.0d
 		}
 	]
-	title: "{gravitas.chapters.9.title}"
+	title: "{gravitas.chapters.12.title}"
 }

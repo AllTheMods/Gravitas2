@@ -79,8 +79,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:anvil", "tfc:metal/anvil/wrought_iron")
   event.replaceInput({ type: "minecraft:crafting_shapeless" }, "minecraft:slime_ball", "tfc:glue")
-  event.replaceInput({},"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
-  event.replaceOutput({},"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceInput({ mod: "create" },"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceInput({ mod: "railways" },"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceInput({ mod: "railcraft" },"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:slime_ball", "tfc:glue")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:cobblestone_slab", "#forge:slabs/cobblestone")
   //remove furnace existance
@@ -150,7 +151,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
   event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
-  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:iron_bars", "tfc:metal/bars/wrought_iron")
 
   //TFShips
   tfcShipTypes.forEach((wood) => {
@@ -165,21 +165,16 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "storagedrawers:controller_slave"}, "minecraft:stone", "#forge:stone")
   event.replaceInput({ id: "storagedrawers:controller_slave"}, "minecraft:gold_ingot", "minecraft:repeater")
   event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "minecraft:stone", "#forge:stone")
-  event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "#forge:ingots/iron", "#forge:plates/wrought_iron")
 
 
   //Integrated Dynamics
   event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:iron_block", "tfc:metal/anvil/wrought_iron")
   event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:stick", "#forge:rods/wrought_iron")
 
-  event.replaceInput({}, "#forge:nuggets/iron", "#forge:nuggets/wrought_iron")
-  event.replaceOutput({}, "#forge:nuggets/iron", "#forge:nuggets/wrought_iron")
-  event.replaceInput({ type: "minecraft:crafting_shaped"}, "#forge:rods/iron", "#forge:rods/wrought_iron")
-  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "#forge:rods/iron", "#forge:rods/wrought_iron")
+
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
 
-  event.replaceInput({ mod: "railways"}, "#railways:internal/plates/iron_plates", "#forge:plates/wrought_iron")
 
   event.replaceInput({ id: "woodencog:crafting/schematics/schematicannon"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
 }

@@ -987,5 +987,5 @@
 			y: -1.5d
 		}
 	]
-	title: "Low Voltage"
+	title: "{gravitas.chapters.16.title}"
 }

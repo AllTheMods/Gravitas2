@@ -202,11 +202,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add(`forge:double_sheets`, `gtceu:${metal}_double_plate`)
   })
 
-  event.add("forge:plates/iron", "tfc:metal/sheet/cast_iron")
-  event.add("forge:plates/double/iron", "tfc:metal/double_sheet/cast_iron")
 
-  event.add(`forge:sheets/cast_iron`, `gtceu:iron_plate`)
-  event.add(`forge:double_sheets/cast_iron`, `gtceu:iron_double_plate`)
 
   event.add("firmalife:sweetener", "#tfc:sweetener")
   event.add("forge:treated_wood", "firmalife:treated_wood")
@@ -259,6 +255,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block","gtceu:coke_chipped_gem","gtceu:coke_flawed_gem", 'gtceu:coke_flawless_gem', 'gtceu:coke_exquisite_gem'])
   event.add("forge:dusts/sulfur", "tfc:powder/sulfur")
   event.remove("forge:ingots/iron", "tfc:metal/ingot/wrought_iron")
+  event.remove("forge:ingots/cast_iron", "minecraft:iron_ingot")
 
 
   event.remove("tfc:unfired_pottery", "woodencog:unfired_fireclay_crucible")

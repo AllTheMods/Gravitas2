@@ -1,12 +1,11 @@
 {
 	chapter_groups: [
 		{ id: "20028FE0986EEEC1", title: "{gravitas.chapters.group.1}" }
-		{ id: "4D27B882A1217B68", title: "Survival" }
-
-		{ id: "4B728CAFC5748917", title: "{gravitas.chapters.group.3.}" }
-		{ id: "6A4ED78F1D529DE3", title: "Gregtech" }
-		{ id: "095899370DDF48CB", title: "{gravitas.chapters.group.4.}" }
-		{ id: "78F1C802B893F66C", title: "{gravitas.chapters.group.2}" }
-		{ id: "3CB58C688DD23BD2", title: "Item Storage and Manipulation" }
+		{ id: "4D27B882A1217B68", title: "{gravitas.chapters.group.2}" }
+		{ id: "4B728CAFC5748917", title: "{gravitas.chapters.group.3}" }
+		{ id: "6A4ED78F1D529DE3", title: "{gravitas.chapters.group.4}" }
+		{ id: "095899370DDF48CB", title: "{gravitas.chapters.group.5}" }
+		{ id: "78F1C802B893F66C", title: "{gravitas.chapters.group.6}" }
+		{ id: "3CB58C688DD23BD2", title: "{gravitas.chapters.group.7}" }
 	]
 }

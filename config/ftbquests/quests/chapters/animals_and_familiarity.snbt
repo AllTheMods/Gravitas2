@@ -54,8 +54,8 @@
 			y: 0.0d
 		}
 	]
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [ ]
-	title: "Animals and familiarity"
+	title: "{gravitas.chapters.10.title}"
 }

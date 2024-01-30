@@ -1,0 +1,1017 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "drawers"
+	group: "3CB58C688DD23BD2"
+	icon: "storagedrawers:controller"
+	id: "4E112C587DAC7B12"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["{gravitas.quest.drawer.desc.drawer}"]
+			id: "495B2BDF498A6CA1"
+			tasks: [{
+				id: "10536EA4B2E69660"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/acacia_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/ash_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/aspen_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/birch_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/blackwood_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/chestnut_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/douglas_fir_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/hickory_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/kapok_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/mangrove_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/maple_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/oak_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/palm_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/pine_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/rosewood_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/sequoia_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/spruce_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/sycamore_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/white_cedar_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/willow_full_drawers_1"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/gtceu/rubber_full_drawers_1"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.drawer}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["495B2BDF498A6CA1"]
+			description: ["{gravitas.quest.drawer.desc.types}"]
+			id: "12F02E2416673200"
+			rewards: [{
+				count: 2
+				id: "5C58970E95DB5ACB"
+				item: "tfc:wood/chest/oak"
+				type: "item"
+			}]
+			tasks: [{
+				id: "25E366C5E228AF94"
+				title: "Types of Drawers"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.drawer.types}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["495B2BDF498A6CA1"]
+			description: ["{gravitas.quest.drawer.desc.upgrades}"]
+			id: "74C15DA677F0536E"
+			rewards: [{
+				count: 4
+				id: "49E79438A5045DA9"
+				item: "storagedrawers:upgrade_template"
+				type: "item"
+			}]
+			tasks: [{
+				id: "389E52CBC4A9E824"
+				item: "storagedrawers:upgrade_template"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.upgrades}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["495B2BDF498A6CA1"]
+			description: ["{gravitas.quest.drawer.desc.keys}"]
+			id: "65E5026260098AA5"
+			rewards: [{
+				id: "00FBDE5CD320C4ED"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/gold"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "35D6F37C877D8C56"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/gold"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.keys}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["495B2BDF498A6CA1"]
+			description: ["{gravitas.quest.drawer.desc.helpful}"]
+			id: "5C7D27646D385FD7"
+			rewards: [{
+				id: "714979EBB8F10191"
+				item: "minecraft:comparator"
+				type: "item"
+			}]
+			tasks: [{
+				id: "06F00CDC6762B45E"
+				item: "minecraft:comparator"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.helpful}"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["12F02E2416673200"]
+			description: ["{gravitas.quest.drawer.desc.1x2}"]
+			id: "6CD40AED4F2014C4"
+			tasks: [
+				{
+					id: "6B51F8E969BAFB96"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/acacia_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/ash_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/aspen_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/birch_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/blackwood_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/chestnut_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/douglas_fir_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/hickory_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/kapok_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/mangrove_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/maple_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/oak_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/palm_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/pine_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/rosewood_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sequoia_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/spruce_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sycamore_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/white_cedar_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/willow_full_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/gtceu/rubber_full_drawers_2"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1502B154DC2B3BE9"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/acacia_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/ash_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/aspen_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/birch_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/blackwood_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/chestnut_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/douglas_fir_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/hickory_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/kapok_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/mangrove_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/maple_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/oak_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/palm_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/pine_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/rosewood_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sequoia_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/spruce_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sycamore_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/white_cedar_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/willow_full_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/gtceu/rubber_full_drawers_4"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.drawer.1x2}"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["12F02E2416673200"]
+			description: ["{gravitas.quest.drawer.desc.2x2}"]
+			id: "683DAC76BC412533"
+			tasks: [
+				{
+					id: "4F0408279DBFAF59"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/acacia_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/ash_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/aspen_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/birch_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/blackwood_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/chestnut_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/douglas_fir_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/hickory_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/kapok_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/mangrove_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/maple_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/oak_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/palm_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/pine_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/rosewood_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sequoia_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/spruce_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sycamore_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/white_cedar_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/willow_half_drawers_1"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/gtceu/rubber_half_drawers_1"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7A7E66FCEEBDEEB3"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/acacia_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/ash_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/aspen_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/birch_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/blackwood_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/chestnut_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/douglas_fir_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/hickory_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/kapok_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/mangrove_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/maple_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/oak_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/palm_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/pine_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/rosewood_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sequoia_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/spruce_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sycamore_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/white_cedar_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/willow_half_drawers_2"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/gtceu/rubber_half_drawers_2"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "42D8ED619A63567E"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/acacia_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/ash_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/aspen_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/birch_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/blackwood_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/chestnut_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/douglas_fir_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/hickory_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/kapok_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/mangrove_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/maple_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/oak_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/palm_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/pine_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/rosewood_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sequoia_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/spruce_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/sycamore_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/white_cedar_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/tfc/willow_half_drawers_4"
+								}
+								{
+									Count: 1b
+									id: "everycomp:sd/gtceu/rubber_half_drawers_4"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.drawer.2x2}"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["12F02E2416673200"]
+			description: ["{gravitas.quest.drawer.desc.trim}"]
+			id: "12C429330257E66C"
+			tasks: [{
+				id: "2E623D494167D4BC"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/acacia_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/ash_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/aspen_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/birch_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/blackwood_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/chestnut_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/douglas_fir_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/hickory_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/kapok_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/mangrove_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/maple_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/oak_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/palm_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/pine_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/rosewood_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/sequoia_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/spruce_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/sycamore_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/white_cedar_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/tfc/willow_trim"
+							}
+							{
+								Count: 1b
+								id: "everycomp:sd/gtceu/rubber_trim"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.trim}"
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74C15DA677F0536E"]
+			description: ["{gravitas.quest.drawer.desc.more}"]
+			id: "09F8DEB8B386BE6A"
+			tasks: [{
+				id: "2D05E35301C5998E"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "storagedrawers:obsidian_storage_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:iron_storage_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:gold_storage_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:diamond_storage_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:emerald_storage_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:creative_storage_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:creative_vending_upgrade"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.more}"
+			x: 0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["74C15DA677F0536E"]
+			description: ["{gravitas.quest.drawer.desc.redstone}"]
+			id: "5733E7E0B9B79B53"
+			rewards: [{
+				count: 3
+				id: "3BCF55783A638772"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7C7951728CB0ABA7"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "storagedrawers:redstone_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:min_redstone_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:max_redstone_upgrade"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.redstone}"
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["74C15DA677F0536E"]
+			description: ["{gravitas.quest.drawer.desc.show}"]
+			id: "2DDA341090C0D168"
+			tasks: [{
+				id: "32E72B7DF003B121"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "storagedrawers:illumination_upgrade"
+							}
+							{
+								Count: 1b
+								id: "storagedrawers:fill_level_upgrade"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.show}"
+			x: -0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["74C15DA677F0536E"]
+			description: ["{gravitas.quest.drawer.desc.void}"]
+			id: "3CCA5822F5DFAAAC"
+			tasks: [{
+				id: "771990C8FA624E09"
+				item: "storagedrawers:void_upgrade"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.void}"
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65E5026260098AA5"]
+			description: ["{gravitas.quest.drawer.desc.dkey}"]
+			id: "163BA9FDD42CAA29"
+			tasks: [{
+				id: "0FE5709B1B4AB7E4"
+				item: "storagedrawers:drawer_key"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.dkey}"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["65E5026260098AA5"]
+			description: ["{gravitas.quest.drawer.desc.qkey}"]
+			id: "7B6C87A37E9EDD8F"
+			tasks: [{
+				id: "2D70BC5C299A6A14"
+				item: "storagedrawers:quantify_key"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.qkey}"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65E5026260098AA5"]
+			description: ["{gravitas.quest.drawer.desc.ckey}"]
+			id: "24B6877F8865EF5A"
+			tasks: [{
+				id: "3E2B39E2884C0873"
+				item: "storagedrawers:shroud_key"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.ckey}"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5C7D27646D385FD7"]
+			description: ["{gravitas.quest.drawer.desc.compacting}"]
+			id: "22115CCB590CC2D1"
+			tasks: [{
+				id: "3B14A7E5C328871A"
+				item: "storagedrawers:compacting_drawers_3"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.compacting}"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5C7D27646D385FD7"]
+			description: ["{gravitas.quest.drawer.desc.slave}"]
+			id: "39F8ABDCEC716386"
+			tasks: [{
+				id: "1790561FBC0CF1CF"
+				item: "storagedrawers:controller_slave"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.slave}"
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5C7D27646D385FD7"]
+			description: ["{gravitas.quest.drawer.desc.controller}"]
+			id: "70DC1F4795C8493C"
+			tasks: [{
+				id: "2E9219064D8B6EE3"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			title: "{gravitas.quest.drawer.controller}"
+			x: 0.0d
+			y: -2.5d
+		}
+	]
+	title: "{gravitas.chapters.31.title}"
+}

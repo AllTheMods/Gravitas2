@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "applied_energistics_2"
 	group: "3CB58C688DD23BD2"
+	icon: "ae2:controller"
 	id: "0AA0D94C7635DD99"
 	images: [
 		{
@@ -54,8 +55,8 @@
 			y: 0.0d
 		}
 	]
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [ ]
-	title: "Applied Energistics 2"
+	title: "{gravitas.chapters.32.title}"
 }
