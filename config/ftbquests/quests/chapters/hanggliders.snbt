@@ -719,31 +719,6 @@
 			x: 11.5d
 			y: 1.0d
 		}
-		{
-			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
-			id: "0C8B7ED76773A4E3"
-			rewards: [{
-				id: "7605548D88F0C439"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
-			shape: "octagon"
-			tasks: [
-				{
-					id: "59F36BC712099275"
-					item: "firmaciv:canoe_paddle"
-					type: "item"
-				}
-				{
-					advancement: "firmaciv:canoe"
-					criterion: ""
-					id: "45BB0DDC3A2AF736"
-					type: "advancement"
-				}
-			]
-			x: 8.5d
-			y: 1.5d
-		}
 	]
-	title: "{gravitas.chapters.13.}"
+	title: "{gravitas.chapters.26.title}"
 }

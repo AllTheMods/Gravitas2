@@ -15,7 +15,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/stick_long_wrought_iron" })
-  event.remove({ id: "gtceu:shaped/screw_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
   event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
@@ -170,7 +169,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
   event.remove({ mod: "railcraft", id: `/^railcraft:.*coke.*/`})
   event.remove({ mod: "railcraft", id: `/^railcraft:crusher\/.*cobbleston.*/`})
-
+  event.remove({ id: "railcraft:invar_ingot_crafted_with_ingots"})
   //Woodencog
   event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog" })
@@ -180,7 +179,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^woodencog:cutting\/.*_sheet/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_steel_ingot/, mod: "woodencog" })
   event.remove({ id: "woodencog:crafting/kinetics/belt_connector"})
-
+  event.remove({ id: /^woodencog:deploying\/.*/, mod : "woodencog"})
   event.remove({ id: /^woodencog:heating\/.*_dough/, mod: "woodencog" })
 
 
@@ -309,4 +308,15 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "sfm:network_tool"})
   event.remove({ id: "sfm:printing_press"})
   event.remove({ id: "sfm:printing_form"})
+
+  //I&F
+  event.remove({ id: `/^iceandfire:.*silver.*_chestplate/`})
+  event.remove({ id: `/^iceandfire:.*silver.*_helmet/`})
+  event.remove({ id: `/^iceandfire:.*silver.*_boots/`})
+  event.remove({ id: `/^iceandfire:.*silver.*_leggings/`})
+
+  event.remove({ id: `/^iceandfire:.*copper.*_chestplate/`})
+  event.remove({ id: `/^iceandfire:.*copper.*_helmet/`})
+  event.remove({ id: `/^iceandfire:.*copper.*_boots/`})
+  event.remove({ id: `/^iceandfire:.*copper.*_leggings/`})
 }

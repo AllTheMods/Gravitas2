@@ -217,19 +217,12 @@
 			dependencies: ["0938DBC3D637DC56"]
 			description: ["{gravitas.quest.railcraft.desc.coke}"]
 			id: "642D21D54A9B9325"
-			rewards: [
-				{
-					count: 16
-					id: "55A921BA74BA223C"
-					item: "gtceu:coke_gem"
-					type: "item"
-				}
-				{
-					id: "3D49D32BCA5C8836"
-					item: "gtceu:creosote_bucket"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 16
+				id: "55A921BA74BA223C"
+				item: "gtceu:coke_gem"
+				type: "item"
+			}]
 			tasks: [{
 				id: "58951241B9971714"
 				item: "gtceu:coke_gem"
@@ -243,20 +236,12 @@
 			dependencies: ["0938DBC3D637DC56"]
 			description: ["{gravitas.quest.railcraft.desc.making_steam}"]
 			id: "302C27B3E947EC2F"
-			rewards: [
-				{
-					count: 32
-					id: "22EAE92549B23108"
-					item: "minecraft:coal"
-					type: "item"
-				}
-				{
-					count: 2
-					id: "4BD2040BFE90A76A"
-					item: "minecraft:water_bucket"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 32
+				id: "22EAE92549B23108"
+				item: "minecraft:coal"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "332699E2DCE5CB88"
@@ -327,11 +312,6 @@
 			dependencies: ["0938DBC3D637DC56"]
 			description: ["{gravitas.quest.railcraft.desc.water_tank}"]
 			id: "73201DA5C818B565"
-			rewards: [{
-				id: "42CD6C574DD7A93F"
-				item: "minecraft:water_bucket"
-				type: "item"
-			}]
 			tasks: [{
 				count: 26L
 				id: "0EDADEAC1B76AAD7"
@@ -1157,11 +1137,6 @@
 			dependencies: ["59519D358EA863C3"]
 			description: ["{gravitas.quest.railcraft.desc.fluid_loader}"]
 			id: "7281623F2F834AB8"
-			rewards: [{
-				id: "0A8ADC85788FE381"
-				item: "minecraft:water_bucket"
-				type: "item"
-			}]
 			tasks: [{
 				id: "0AF6CE3D38F9FAC9"
 				item: "railcraft:fluid_loader"
@@ -1229,11 +1204,6 @@
 			dependencies: ["7281623F2F834AB8"]
 			description: ["{gravitas.quest.railcraft.desc.fluid_unloader}"]
 			id: "113B372172841780"
-			rewards: [{
-				id: "32A101916CC4EDD6"
-				item: "minecraft:bucket"
-				type: "item"
-			}]
 			tasks: [{
 				id: "60832B8C4F28EF63"
 				item: "railcraft:fluid_unloader"
@@ -1303,5 +1273,5 @@
 			y: -3.0d
 		}
 	]
-	title: "{gravitas.chapters.15.}"
+	title: "{gravitas.chapters.28.title}"
 }

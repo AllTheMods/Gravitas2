@@ -93,8 +93,17 @@
 		{
 			id: "7C134F7838C23059"
 			tasks: [{
-				id: "5C915E839949FED6"
-				item: "alltheores:platinum_ingot"
+				id: "2CCBC531A22F3091"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:platinum_ingot"
+				}
 				type: "item"
 			}]
 			x: 0.0d
@@ -197,5 +206,5 @@
 			y: -4.5d
 		}
 	]
-	title: "Extreme Voltage"
+	title: "{gravitas.chapters.19.title}"
 }

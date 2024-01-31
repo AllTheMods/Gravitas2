@@ -518,8 +518,17 @@
 		{
 			id: "7C7B1FAA523F19F2"
 			tasks: [{
-				id: "0E28075B4E87FE2E"
-				item: "alltheores:bronze_ingot"
+				id: "6683D0BC6A2C871C"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:bronze_ingot"
+				}
 				type: "item"
 			}]
 			x: -4.0d
@@ -528,8 +537,17 @@
 		{
 			id: "1EB73508673AD0EC"
 			tasks: [{
-				id: "740E35A5781E43A7"
-				item: "alltheores:steel_ingot"
+				id: "7DB56B55ABF0376C"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
 				type: "item"
 			}]
 			x: -3.0d
@@ -776,8 +794,17 @@
 		{
 			id: "31F55263F748A65F"
 			tasks: [{
-				id: "282B4264413EFB2D"
-				item: "alltheores:platinum_ingot"
+				id: "2F80DF5A840CFEAB"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:platinum_ingot"
+				}
 				type: "item"
 			}]
 			x: 0.0d
@@ -877,5 +904,5 @@
 			y: -6.5d
 		}
 	]
-	title: "Milestones"
+	title: "{gravitas.chapters.25.title}"
 }

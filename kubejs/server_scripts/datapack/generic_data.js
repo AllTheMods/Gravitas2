@@ -18,7 +18,7 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
 
     addTFCDrinkables('maple_syrup', 'gregitas:maple_syrup', 10, 10, 10)
 
-    let addTFCFoodItems = (id, item, hunger, saturation, water, decay, grain, fruit, veg, protien, dairy) => {
+    let addTFCFoodItems = (id, item, hunger, saturation, water, decay, grain, fruit, veg, protein, dairy) => {
         let json = JsonIO.toObject(
             {
                 "ingredient": {
@@ -31,7 +31,7 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
                 "grain": grain,
                 "fruit": fruit,
                 "vegetables": veg,
-                "protien": protien,
+                "protein": protein,
                 "dairy": dairy
             } 
         )
@@ -62,10 +62,10 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
 
     addTFCFuels('coal_coke', 'gtceu:coke_gem', 1100, 1415)
     addTFCFuels('coal_coke_block', 'gtceu:coke_block', 9900, 1415)
-    addTFCFuels('coal_coke_chipped', 'gtceu:coke_chipped_gem', 275, 1415)
-    addTFCFuels('coal_coke_flawed', 'gtceu:coke_flawed_gem', 550, 1415)
-    addTFCFuels('coal_coke_flawless', 'gtceu:coke_flawless_gem', 2200, 1415)
-    addTFCFuels('coal_coke_exquisite', 'gtceu:coke_exquisite_gem', 4400, 1415)
+    addTFCFuels('coal_coke_chipped', 'gtceu:chipped_coke_gem', 275, 1415)
+    addTFCFuels('coal_coke_flawed', 'gtceu:flawed_coke_gem', 550, 1415)
+    addTFCFuels('coal_coke_flawless', 'gtceu:flawless_coke_gem', 2200, 1415)
+    addTFCFuels('coal_coke_exquisite', 'gtceu:exquisite_coke_gem', 4400, 1415)
 
     let addTFCItemDamageResistances = (id, item, piercing, slashing, crushing) => {
         let json = JsonIO.toObject(
@@ -115,7 +115,7 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
 
     addTFCItemHeatsItem('andesite_alloy', 'create:andesite_alloy', 4.762, 252, 336)
     addTFCItemHeatsItem('compressed_coke_clay', 'gtceu:compressed_coke_clay', 1.0, 1.0, 1.0)
-    addTFCItemHeatsItem('igneous_alloy_dust', 'gtceu:igneous_alloy_dust', 4.762, 4.762, 4.762)
+    addTFCItemHeatsItem('igneous_alloy_dust', 'gregitas_core:igneous_alloy_dust', 4.762, 4.762, 4.762)
 
     let addTFCKnappingTypes = (id, tag, count, sound, consume_after, disabled_texture, particles, icon_item) => {
         let json = JsonIO.toObject(
@@ -175,5 +175,5 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
         event.addJson(`tfc:tfc/metals/${id}.json`, json)
     }
 
-    addTFCMetals('igneous_alloy', 1, 'gtceu:igneous_alloy', 420, 0.01429, 'create:andesite_alloy')
+    addTFCMetals('igneous_alloy', 1, 'gregitas_core:igneous_alloy', 420, 0.01429, 'create:andesite_alloy')
 }
