@@ -41,7 +41,7 @@ const addMetalRatioToVessels = (/** @type {Internal.ItemTooltipEventJS} */ event
           fluidMap.forEach((fluid, amount) => {
             let percentil = (amount / total) * 100
             let newComponent = Text.gold(`(${percentil % 1 ? "~" : ""}${Math.floor(percentil)}%) `).append(Text.yellow(Fluid.of(fluid).fluidStack.name)).append(` - ${amount} mB`)
-            components.add(components.length - 1, newComponent)
+            components.add(components.length, newComponent)
           })
         }
       } catch (error) {
