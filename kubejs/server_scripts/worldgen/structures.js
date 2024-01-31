@@ -34,7 +34,8 @@ const strucBlocksReplacementMap = {
   "minecraft:stone": "tfc:rock/hardened/granite",
   "minecraft:deepslate": "tfc:rock/hardened/basalt",
   "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt",
-  "minecraft:infested_chiseled_stone_bricks": "tfc:rock/chiseled/granite"
+  "minecraft:infested_chiseled_stone_bricks": "tfc:rock/chiseled/granite",
+  "minecraft:dirt_path": "tfc:grass_path/sandy_loam"
 }
 
 const strucBlocksWithPropertiesMap = {

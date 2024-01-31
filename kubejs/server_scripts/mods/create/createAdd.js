@@ -876,7 +876,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     item: 'gregitas_core:igneous_dust'
                 },
                 {
-                    item: 'gregitas_core:zinc_dust'
+                    item: 'gtceu:zinc_dust'
                 }
             ],
             results: [
