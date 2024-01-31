@@ -7,13 +7,13 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
             '1x gtceu:certus_quartz_dust',
             '2x gtceu:carbon_dust'
         ])
-        .itemOutputs('1x gtceu:certus_dust')
+        .itemOutputs('1x gregitas_core:certus_dust')
         .outputFluids('gtceu:carbon_dioxide 1000')
         .blastFurnaceTemp(1000)
         .EUt(MV).duration(100)
 
     event.recipes.gtceu.chemical_reactor("trichlorocertane")
-        .itemInputs('1x gtceu:certus_dust')
+        .itemInputs('1x gregitas:certus_dust')
         .inputFluids('gtceu:hydrochloric_acid 3000')
         .outputFluids([
             'gtceu:trichlorocertane 1000',
@@ -24,7 +24,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.gtceu.chemical_reactor("dichlorocertane")
         .inputFluids('gtceu:trichlorocertane 2000')
         .outputFluids('gtceu:dichlorocertane 1000')
-        .itemOutputs('1x gtceu:certus_gem')
+        .itemOutputs('1x gregitas_core:certus_gem')
         .EUt(MV).duration(40)
 
     event.recipes.gtceu.chemical_reactor("chlorocertane")

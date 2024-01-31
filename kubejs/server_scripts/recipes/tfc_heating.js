@@ -68,7 +68,6 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
   })
 
   event.forEachRecipe({ type: "tfc:casting" }, (/** @type {Special.Recipes.CastingTfc}**/ r) => {
-    if (r.getId().startsWith("tfcchannelcasting")) return
     let fluidIngredient = unwrapValue(r.get("fluid"))
     fluidIngredient.computeIfPresent("amount", (key, val) => convertFluidValues(val))
     r.fluid(fluidIngredient)

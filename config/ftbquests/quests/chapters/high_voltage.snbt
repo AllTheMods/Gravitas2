@@ -677,5 +677,5 @@
 			y: 1.5d
 		}
 	]
-	title: "High Voltage"
+	title: "{gravitas.chapters.18.title}"
 }

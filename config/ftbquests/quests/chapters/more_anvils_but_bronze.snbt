@@ -344,16 +344,7 @@
 		}
 		{
 			description: ["{gravitas.quest.bronze.desc.zinc_alloy}"]
-			icon: {
-				Count: 1b
-				ForgeCaps: {
-					"tfc:item_heat": {
-						heat: 0.0f
-						ticks: 0L
-					}
-				}
-				id: "create:andesite_alloy"
-			}
+			icon: "create:andesite_alloy"
 			id: "35CBA8F8B07B6F2A"
 			tasks: [
 				{
@@ -645,52 +636,52 @@
 			y: 2.0d
 		}
 		{
-        			title: "{gravitas.quest.bronze.channel}"
-        			x: -5.0d
-        			y: 1.5d
-        			dependencies: ["3651110B0E67D615"]
-        			id: "5C4E0FABBA11E06E"
-        			tasks: [
-        				{
-        					id: "21331FC42F3460C6"
-        					type: "item"
-        					item: {
-        						id: "tfcchannelcasting:unfired_channel"
-        						Count: 1b
-        						ForgeCaps: {
-        							"tfc:item_heat": {
-        								heat: 0.0f
-        								ticks: 0L
-        							}
-        						}
-        					}
-        				}
-        				{
-        					id: "4142BE5A2CEAE5A2"
-        					type: "item"
-        					item: {
-        						id: "tfcchannelcasting:unfired_mold_table"
-        						Count: 1b
-        						ForgeCaps: {
-        							"tfc:item_heat": {
-        								heat: 0.0f
-        								ticks: 0L
-        							}
-        						}
-        					}
-        				}
-        				{
-        					id: "6FA44A51A2C7D116"
-        					type: "item"
-        					item: "tfcchannelcasting:channel"
-        				}
-        				{
-        					id: "79FD6C632D2D31D2"
-        					type: "item"
-        					item: "tfcchannelcasting:mold_table"
-        				}
-        			]
-        		}
+			dependencies: ["3651110B0E67D615"]
+			id: "5C4E0FABBA11E06E"
+			tasks: [
+				{
+					id: "21331FC42F3460C6"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfcchannelcasting:unfired_channel"
+					}
+					type: "item"
+				}
+				{
+					id: "4142BE5A2CEAE5A2"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfcchannelcasting:unfired_mold_table"
+					}
+					type: "item"
+				}
+				{
+					id: "6FA44A51A2C7D116"
+					item: "tfcchannelcasting:channel"
+					type: "item"
+				}
+				{
+					id: "79FD6C632D2D31D2"
+					item: "tfcchannelcasting:mold_table"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.bronze.channel}"
+			x: -5.0d
+			y: 1.5d
+		}
 	]
 	title: "{gravitas.chapters.3.title}"
 }

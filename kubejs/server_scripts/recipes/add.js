@@ -151,16 +151,34 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       "minecraft:blaze_rod"
     ])
 
-  event.custom({
-    type: "create:pressing",
-    ingredients: [{ item: "tfc:raw_iron_bloom" }],
-    results: [{ item: "tfc:refined_iron_bloom" }]
-  })
-  event.custom({
-    type: "create:pressing",
-    ingredients: [{ item: "tfc:refined_iron_bloom" }],
-    results: [{ item: "tfc:metal/ingot/wrought_iron" }]
-  })
+  event.recipes.create.pressing(
+    [
+      { item: "tfc:refined_iron_bloom" }
+    ],
+    [
+      {
+        type: 'tfc:heatable',
+        min_temp: 921,
+        ingredient: {
+          item: 'tfc:raw_iron_bloom',
+        },
+      }
+    ]
+  )
+  event.recipes.create.pressing(
+    [
+      { item: "gtceu:wrought_iron_ingot" }
+    ],
+    [
+      {
+        type: 'tfc:heatable',
+        min_temp: 921,
+        ingredient: {
+          item: 'tfc:refined_iron_bloom',
+        },
+      }
+    ]
+  )
   event.custom({
     type: "create:deploying",
     ingredients: [
@@ -453,7 +471,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
    gemPowders.forEach(powder => {
     event.recipes.gtceu.centrifuge("tfc_powder_to_dust/" + powder)
     .itemInputs([`4x tfc:powder/${powder}`])
-    .itemOutputs([`gtceu:${powder.replace("_lazuli", "")}_impure_dust`])
+    .itemOutputs([`gtceu:impure_${powder.replace("_lazuli", "")}_dust`])
     .EUt(ULV).duration(200)
    })
     event.recipes.gtceu.alloy_smelter('copper_alloy')
@@ -488,7 +506,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         )
         .duration(750)
         .EUt(MV)
-
+    event.recipes.gtceu.alloy_smelter('vanilla_iron')
+        .itemInputs(
+            '#forge:ingots/cast_iron',
+            "tfc:powder/lime"
+        )
+        .itemOutputs(
+            'minecraft:iron_ingot'
+        )
+        .duration(750)
+        .EUt(LV)
     event.recipes.gtceu.alloy_smelter('conductive_alloy')
         .itemInputs(
             'enderio:copper_alloy_ingot',

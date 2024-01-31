@@ -1,0 +1,11 @@
+{
+  "biomes": [
+    [
+      {
+        "type": "REGISTRY_NAME",
+        "negate": false,
+        "value": "tfc:volcanic_oceanic_mountain_lake"
+      }
+    ]
+  ]
+}

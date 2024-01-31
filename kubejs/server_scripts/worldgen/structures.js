@@ -34,7 +34,8 @@ const strucBlocksReplacementMap = {
   "minecraft:stone": "tfc:rock/hardened/granite",
   "minecraft:deepslate": "tfc:rock/hardened/basalt",
   "minecraft:cobbled_deepslate": "tfc:rock/hardened/basalt",
-  "minecraft:infested_chiseled_stone_bricks": "tfc:rock/chiseled/granite"
+  "minecraft:infested_chiseled_stone_bricks": "tfc:rock/chiseled/granite",
+  "minecraft:dirt_path": "tfc:grass_path/sandy_loam"
 }
 
 const strucBlocksWithPropertiesMap = {
@@ -84,6 +85,7 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:bookshelf": "tfc:wood/planks/spruce_bookshelf",
   "minecraft:iron_bars": "tfc:metal/bars/copper",
   "minecraft:barrel": "tfc:wood/barrel/spruce",
+  "minecraft:infested_stone": "tfc:rock/hardened/granite",
   "minecraft:campfire": "tfc:firepit"
 }
 
@@ -108,6 +110,7 @@ const jigsawReplacementMap = {
   // "minecraft:spruce_planks": "tfc:wood/planks/spruce",
   // "minecraft:mangrove_stairs[facing=east]": "tfc:wood/planks/mangrove_stairs[facing=east]",
   "minecraft:andesite": "tfc:rock/hardened/andesite",
+  "minecraft:infested_stone": "tfc:rock/hardened/granite",
   // "minecraft:acacia_stairs[facing=south]": "tfc:wood/planks/acacia_stairs[facing=south]",
   "minecraft:dirt_path": "tfc:grass_path/loam",
   "minecraft:cobblestone": "tfc:rock/raw/granite",
@@ -129,7 +132,8 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("apotheosis") ||
     event.id.startsWith("waystones") ||
     event.id.startsWith("immersiveengineering") ||
-    event.id.startsWith("ae2")
+    event.id.startsWith("ae2") ||
+    event.id.startsWith("iceandfire")
   ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {

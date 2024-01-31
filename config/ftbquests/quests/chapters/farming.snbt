@@ -3,59 +3,1052 @@
 	default_quest_shape: ""
 	filename: "farming"
 	group: "4D27B882A1217B68"
+	icon: "tfc:seeds/tomato"
 	id: "5063B0E3B65A6863"
-	images: [
+	order_index: 1
+	quest_links: [ ]
+	quests: [
 		{
-			click: ""
-			corner: false
-			dev: false
-			height: 1.0d
-			hover: [ ]
-			image: "thoriumreactors:block/warning_block_lined_black_yellow_left-ctm"
-			rotation: 0.0d
-			width: 5.0d
-			x: 0.0d
-			y: 0.0d
+			description: ["{gravitas.quest.farm.desc.need}"]
+			id: "7FEBCBBBD4FD3B5C"
+			rewards: [
+				{
+					id: "3A869AC619240A51"
+					item: {
+						Count: 1b
+						id: "gtceu:wrought_iron_hoe"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								MaxDamage: 383
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					advancement: "minecraft:husbandry/plant_seed"
+					criterion: ""
+					id: "278073706AB51624"
+					type: "advancement"
+				}
+			]
+			tasks: [{
+				advancement: "tfc:world/seeds"
+				criterion: ""
+				id: "110D24AF5655A577"
+				type: "advancement"
+			}]
+			title: "{gravitas.quest.farm.need}"
+			x: 6.0d
+			y: 1.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
-			height: 1.0d
-			hover: [ ]
-			image: "atm:textures/questpics/construction.png"
-			rotation: 0.0d
-			width: 12.435897435897436d
-			x: 0.0d
-			y: -1.0d
+			dependencies: ["7FEBCBBBD4FD3B5C"]
+			description: ["{gravitas.quest.farm.desc.hydration}"]
+			id: "0C6662072EB8BD48"
+			rewards: [{
+				id: "57E7030BFBCB7CDD"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "3D6F6B1887B989D8"
+				item: "tfc:wooden_bucket"
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.hydration}"
+			x: 5.0d
+			y: 2.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
-			height: 1.0d
-			hover: [ ]
-			image: "tfc:item/metal/hammer/red_steel"
-			rotation: 0.0d
-			width: 1.0d
-			x: -4.0d
-			y: 0.0d
+			dependencies: ["7FEBCBBBD4FD3B5C"]
+			description: ["{gravitas.quest.farm.desc.temperature}"]
+			id: "322A52B4D084D68B"
+			rewards: [{
+				id: "01E3B7FFE0E18CB5"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "11E6F3B016708090"
+				title: "Temperature"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.farm.temperature}"
+			x: 7.0d
+			y: 2.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
-			height: 1.0d
-			hover: [ ]
-			image: "immersiveengineering:item/tool_screwdriver"
-			rotation: 0.0d
-			width: 1.0d
+			dependencies: ["0C6662072EB8BD48"]
+			description: ["{gravitas.quest.farm.desc.moving_water}"]
+			id: "2BB315E610D88139"
+			rewards: [{
+				count: 16
+				id: "35EB98725D62EFE9"
+				item: "tfc:mortar"
+				type: "item"
+			}]
+			tasks: [{
+				id: "00D4E1C10EC4A323"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/granite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/diorite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/gabbro"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/shale"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/claystone"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/limestone"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/conglomerate"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/dolomite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/chert"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/chalk"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/rhyolite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/basalt"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/andesite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/dacite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/quartzite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/slate"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/phyllite"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/schist"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/gneiss"
+							}
+							{
+								Count: 1b
+								id: "tfc:rock/aqueduct/marble"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.moving_water}"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0C6662072EB8BD48"]
+			description: ["{gravitas.quest.farm.desc.hydration_levels}"]
+			id: "0A177BAB72FE6308"
+			rewards: [{
+				id: "73D834E3DD02F340"
+				item: {
+					Count: 1b
+					id: "minecraft:paper"
+					tag: {
+						display: {
+							Name: "{\"text\":\"Certificate of having a Green Thumb\"}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6E735DBCDF1214FB"
+				item: {
+					Count: 1b
+					id: "firmalife:watering_can"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.hydration_levels}"
 			x: 4.0d
-			y: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["322A52B4D084D68B"]
+			description: ["{gravitas.quest.farm.desc.season}"]
+			icon: "minecraft:clock"
+			id: "64B686A83A7C5D47"
+			rewards: [{
+				id: "5C10B07D4997A52C"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			tasks: [{
+				id: "2CF58F09C4926A3C"
+				title: "Time and Season"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.farm.season}"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["322A52B4D084D68B"]
+			description: ["{gravitas.quest.farm.desc.y_level}"]
+			icon: {
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "firmaciv:barometer"
+			}
+			id: "56A1A8DC6AF1BB69"
+			rewards: [{
+				id: "16E9F1FE18EF8B7B"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "firmaciv:barometer"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7AC0A12D92068CDB"
+				title: "Y-Level"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.farm.y_level}"
+			x: 8.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["322A52B4D084D68B"]
+			description: ["{gravitas.quest.farm.desc.climate}"]
+			icon: "tfc:wood/sapling/oak"
+			id: "7FEF46A575DDDD1F"
+			rewards: [{
+				id: "779980DDA782F771"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			tasks: [{
+				dimension: "minecraft:overworld"
+				id: "207244BA9C17E0A6"
+				type: "dimension"
+			}]
+			title: "{gravitas.quest.farm.climate}"
+			x: 9.5d
+			y: 3.0d
+		}
+		{
+			description: ["{gravitas.quest.farm.desc.compost}"]
+			id: "48CDA7090E7D74DA"
+			rewards: [{
+				count: 8
+				id: "7D710F00F1A79377"
+				item: "tfc:compost"
+				type: "item"
+			}]
+			tasks: [{
+				id: "40E10FCE6C7E9499"
+				item: "tfc:composter"
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.compost}"
+			x: 10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["48CDA7090E7D74DA"]
+			description: ["{gravitas.quest.farm.desc.P}"]
+			icon: "tfc:pure_phosphorus"
+			id: "14FCD0A1FA0834F9"
+			rewards: [{
+				count: 5
+				id: "5EFE73123272E8D8"
+				item: "tfc:pure_phosphorus"
+				type: "item"
+			}]
+			tasks: [{
+				id: "369D1C2DC409FA69"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:compost"
+							}
+							{
+								Count: 1b
+								id: "tfc:groundcover/guano"
+							}
+							{
+								Count: 1b
+								id: "tfc:pure_phosphorus"
+							}
+							{
+								Count: 1b
+								id: "tfc:powder/wood_ash"
+							}
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/powder/alabandite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfcthermaldeposits:mineral/powder/smithsonite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfcthermaldeposits:mineral/powder/greigite"
+							}
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/powder/apatite"
+							}
+							{
+								Count: 1b
+								id: "minecraft:bone_meal"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.P}"
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["48CDA7090E7D74DA"]
+			description: ["{gravitas.quest.farm.desc.N}"]
+			icon: "tfc:pure_nitrogen"
+			id: "511DD6894E8F1AB5"
+			rewards: [{
+				count: 5
+				id: "54CC865D3AB8F50B"
+				item: "tfc:pure_nitrogen"
+				type: "item"
+			}]
+			tasks: [{
+				id: "694ED05F71FEE948"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:compost"
+							}
+							{
+								Count: 1b
+								id: "tfc:groundcover/guano"
+							}
+							{
+								Count: 1b
+								id: "tfc:pure_nitrogen"
+							}
+							{
+								Count: 1b
+								id: "tfc:powder/saltpeter"
+							}
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/powder/salmiak"
+							}
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/powder/alabandite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfcthermaldeposits:mineral/powder/smithsonite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfcthermaldeposits:mineral/powder/greigite"
+							}
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/powder/bastnasite"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.N}"
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["48CDA7090E7D74DA"]
+			description: ["{gravitas.quest.farm.desc.K}"]
+			icon: "tfc:pure_potassium"
+			id: "070F41103E1E8D57"
+			rewards: [{
+				count: 5
+				id: "4FB72BAF7E53AA59"
+				item: "tfc:pure_potassium"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2169288A22DA82FA"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:groundcover/guano"
+							}
+							{
+								Count: 1b
+								id: "tfc:compost"
+							}
+							{
+								Count: 1b
+								id: "tfc:pure_potassium"
+							}
+							{
+								Count: 1b
+								id: "tfc:powder/saltpeter"
+							}
+							{
+								Count: 1b
+								id: "tfc:powder/sylvite"
+							}
+							{
+								Count: 1b
+								id: "tfc:powder/wood_ash"
+							}
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/powder/alabandite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfcthermaldeposits:mineral/powder/smithsonite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfcthermaldeposits:mineral/powder/greigite"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.K}"
+			x: 11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7AE28D9EAA93F619"
+				"2936A0213A2D9CD7"
+			]
+			description: ["{gravitas.quest.farm.desc.greenhouse}"]
+			id: "4D67A5506D245F98"
+			rewards: [{
+				id: "044352B61E2E8F38"
+				item: "minecraft:blue_stained_glass"
+				type: "item"
+			}]
+			tasks: [{
+				id: "25F26A9C1585B0EA"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmalife:iron_greenhouse_wall"
+							}
+							{
+								Count: 1b
+								id: "firmalife:copper_greenhouse_wall"
+							}
+							{
+								Count: 1b
+								id: "firmalife:treated_wood_greenhouse_wall"
+							}
+							{
+								Count: 1b
+								id: "firmalife:stainless_steel_greenhouse_wall"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.greenhouse}"
+			x: 9.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4D67A5506D245F98"]
+			description: ["{gravitas.quest.farm.desc.climate_station}"]
+			id: "1685721AE17AFF19"
+			rewards: [{
+				id: "176C91EB66B208FC"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "00C447F79B2667F6"
+				item: "firmalife:climate_station"
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.climate_station}"
+			x: 9.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["522FE1262C949963"]
+			description: ["{gravitas.quest.farm.desc.sprinkler}"]
+			id: "7AE28D9EAA93F619"
+			rewards: [{
+				id: "6BA0AB93A7A1F404"
+				item: "firmalife:sprinkler"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "450791E5C316C6D5"
+					item: "firmalife:sprinkler"
+					type: "item"
+				}
+				{
+					id: "21040C11C73C7153"
+					item: {
+						Count: 1b
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "firmalife:iron_greenhouse_port"
+								}
+								{
+									Count: 1b
+									id: "firmalife:copper_greenhouse_port"
+								}
+								{
+									Count: 1b
+									id: "firmalife:treated_wood_greenhouse_port"
+								}
+								{
+									Count: 1b
+									id: "firmalife:stainless_steel_greenhouse_port"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.farm.sprinkler}"
+			x: 8.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["48CDA7090E7D74DA"]
+			description: ["{gravitas.quest.farm.desc.planters}"]
+			hide_dependency_lines: true
+			id: "2936A0213A2D9CD7"
+			rewards: [{
+				count: 5
+				id: "03CEF21A812FB60E"
+				item: "tfc:compost"
+				type: "item"
+			}]
+			tasks: [{
+				id: "302EDBF90AB136EC"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmalife:large_planter"
+							}
+							{
+								Count: 1b
+								id: "firmalife:quad_planter"
+							}
+							{
+								Count: 1b
+								id: "firmalife:hydroponic_planter"
+							}
+							{
+								Count: 1b
+								id: "firmalife:bonsai_planter"
+							}
+							{
+								Count: 1b
+								id: "firmalife:trellis_planter"
+							}
+							{
+								Count: 1b
+								id: "firmalife:hanging_planter"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.planters}"
+			x: 10.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"744CD94E6A1DF01E"
+				"57EFAAE8E22F107B"
+			]
+			description: ["{gravitas.quest.farm.desc.station}"]
+			id: "522FE1262C949963"
+			rewards: [{
+				count: 4
+				id: "3693AB44DA72F671"
+				item: "firmalife:copper_pipe"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "394FF14EBDAF742B"
+					item: "firmalife:pumping_station"
+					type: "item"
+				}
+				{
+					id: "6BA44A9607402166"
+					item: "firmalife:irrigation_tank"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.farm.station}"
+			x: 7.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"10A5198F6260FDC2"
+				"6CFDA7FA4D944B6D"
+			]
+			dependency_requirement: "one_completed"
+			description: ["{gravitas.quest.farm.desc.axle}"]
+			id: "57EFAAE8E22F107B"
+			rewards: [{
+				id: "529F1D4F797A3BC4"
+				item: "tfc:brass_mechanisms"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1555AE51E595EC9A"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:wood/axle/acacia"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/ash"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/aspen"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/birch"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/blackwood"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/chestnut"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/douglas_fir"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/hickory"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/kapok"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/mangrove"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/maple"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/oak"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/palm"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/pine"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/rosewood"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/sequoia"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/spruce"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/sycamore"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/white_cedar"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/axle/willow"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.axle}"
+			x: 6.0d
+			y: 6.5d
+		}
+		{
+			description: ["{gravitas.quest.farm.desc.pipe}"]
+			id: "744CD94E6A1DF01E"
+			rewards: [{
+				count: 5
+				id: "3D5058DC60C4F677"
+				item: "firmalife:copper_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C15C1828B30CE8B"
+				item: "firmalife:copper_pipe"
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.pipe}"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			description: ["{gravitas.quest.farm.desc.waterwheel}"]
+			id: "6CFDA7FA4D944B6D"
+			rewards: [{
+				count: 10
+				id: "6FEB6F63233E2B19"
+				item: "tfc:wood/axle/white_cedar"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1FB33F5816421672"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/acacia"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/ash"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/aspen"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/birch"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/blackwood"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/chestnut"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/douglas_fir"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/hickory"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/kapok"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/mangrove"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/maple"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/oak"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/palm"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/pine"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/rosewood"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/sequoia"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/spruce"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/sycamore"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/white_cedar"
+							}
+							{
+								Count: 1b
+								id: "tfc:wood/water_wheel/willow"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.waterwheel}"
+			x: 5.0d
+			y: 7.5d
+		}
+		{
+			description: ["{gravitas.quest.farm.desc.windmill}"]
+			id: "10A5198F6260FDC2"
+			rewards: [{
+				count: 4
+				id: "3893330049A4606B"
+				item: "tfc:wool_cloth"
+				type: "item"
+			}]
+			tasks: [{
+				id: "53830EC7B59EBB44"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:orange_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:magenta_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:light_blue_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:yellow_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:lime_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:pink_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:gray_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:light_gray_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:cyan_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:purple_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:blue_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:brown_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:green_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:red_windmill_blade"
+							}
+							{
+								Count: 1b
+								id: "tfc:black_windmill_blade"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.farm.windmill}"
+			x: 5.0d
+			y: 5.5d
 		}
 	]
-	order_index: 0
-	quest_links: [ ]
-	quests: [ ]
-	title: "Farming"
+	title: "{gravitas.chapters.9.title}"
 }
