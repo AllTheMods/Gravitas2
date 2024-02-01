@@ -283,6 +283,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.kubejs.shaped('gtceu:primitive_pump', ['RNS', 'BPs', 'CLC'], { S: 'gtceu:wrought_iron_screw', P: 'gtceu:treated_wood_planks', C: '#forge:slabs/cobblestone', R: 'gtceu:wrought_iron_ring', L: 'gtceu:wood_large_fluid_pipe', N: 'gtceu:wood_normal_fluid_pipe', B: 'gtceu:wrought_iron_rotor', s: '#forge:tools/screwdrivers' }).damageIngredient(['#forge:tools'])
     event.recipes.kubejs.shaped('gtceu:improved_coke_oven', ['CCC', 'LPL', 'TLT'], { C: 'gtceu:lv_voltage_coil', P: 'gregitas:bronze_plated_bricks', T: 'gtceu:tin_single_cable', L: '#gtceu:circuits/lv'})
     event.recipes.kubejs.shaped('2x gregitas:bronze_plated_bricks', ['PPP', 'hBw', 'PPP'], { P: 'gtceu:bronze_plate', B: 'minecraft:bricks', h: '#forge:tools/hammers', w: '#forge:tools/wrenches'}).damageIngredient(['#forge:tools'])
+    event.recipes.kubejs.shaped('3x gtceu:compressed_coke_clay', ['CCC', 'SFS', 'SSS'], { C: 'tfc:fire_clay', S: '#forge:sand', F: 'gtceu:brick_wooden_form' }).damageIngredient(['gtceu:brick_wooden_form']).id('gtceu:shaped/compressed_coke_clay')
 
     /// Extractor
         /// TFC Ore to GT Fluid
