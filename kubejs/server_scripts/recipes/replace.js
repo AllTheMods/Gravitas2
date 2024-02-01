@@ -110,6 +110,11 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.forEachRecipe({id: "woodencog:crafting/kinetics/fluid_tank"}, r => {
     event.recipes.kubejs.shaped("create:fluid_tank", r.json.asMap().pattern, r.json.asMap().key).replaceIngredient("#tfc:barrels", Item.empty).id(r.getId())
   })
+  event.forEachRecipe({id: "woodencog:crafting/sequenced_assembly/track"}, r => {
+    let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
+    modifiedResult = Item.of(modifiedResult, 6)
+    r.results(modifiedResult)
+  })
 
 
   //Functional Storage
@@ -135,6 +140,18 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
       `tfc:metal/double_sheet/${metal}`,
       `#forge:plates/double/${metal}`
     )
+  })
+
+  //Railways (Steam n Rails)
+  event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_[^_]+$/}, r => {
+    let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
+    modifiedResult = Item.of(modifiedResult, 6)
+    r.results(modifiedResult)
+  })
+  event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_.*_narrow$/}, r => {
+    let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
+    modifiedResult = Item.of(modifiedResult, 3)
+    r.results(modifiedResult)
   })
 
   //Firmalife
