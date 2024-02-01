@@ -197,9 +197,9 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add(`forge:plates/double/${metal}`, `tfc:metal/double_sheet/${metal}`)
 
     event.add(`forge:sheets/${metal}`, `gtceu:${metal}_plate`)
-    event.add(`forge:double_sheets/${metal}`, `gtceu:${metal}_double_plate`)
+    event.add(`forge:double_sheets/${metal}`, `gtceu:double_${metal}_plate`)
     event.add(`forge:sheets`, `gtceu:${metal}_plate`)
-    event.add(`forge:double_sheets`, `gtceu:${metal}_double_plate`)
+    event.add(`forge:double_sheets`, `gtceu:double_${metal}_plate`)
   })
 
 
