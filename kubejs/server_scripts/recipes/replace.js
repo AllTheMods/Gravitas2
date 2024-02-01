@@ -110,6 +110,11 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.forEachRecipe({id: "woodencog:crafting/kinetics/fluid_tank"}, r => {
     event.recipes.kubejs.shaped("create:fluid_tank", r.json.asMap().pattern, r.json.asMap().key).replaceIngredient("#tfc:barrels", Item.empty).id(r.getId())
   })
+  event.forEachRecipe({id: "woodencog:crafting/sequenced_assembly/track"}, r => {
+    let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
+    modifiedResult = Item.of(modifiedResult, 6)
+    r.results(modifiedResult)
+  })
 
 
   //Functional Storage
