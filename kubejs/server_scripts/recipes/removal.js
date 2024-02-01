@@ -310,13 +310,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "sfm:printing_form"})
 
   //I&F
-  event.remove({ id: `/^iceandfire:.*silver.*_chestplate/`})
-  event.remove({ id: `/^iceandfire:.*silver.*_helmet/`})
-  event.remove({ id: `/^iceandfire:.*silver.*_boots/`})
-  event.remove({ id: `/^iceandfire:.*silver.*_leggings/`})
+  event.remove({ id: `/^iceandfire:.*silver.*/`})
 
-  event.remove({ id: `/^iceandfire:.*copper.*_chestplate/`})
-  event.remove({ id: `/^iceandfire:.*copper.*_helmet/`})
-  event.remove({ id: `/^iceandfire:.*copper.*_boots/`})
-  event.remove({ id: `/^iceandfire:.*copper.*_leggings/`})
+  event.remove({ id: `/^iceandfire:.*copper.*/`})
+
 }
