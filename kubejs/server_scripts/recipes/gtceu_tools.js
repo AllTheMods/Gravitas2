@@ -468,10 +468,10 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
             }
         ) 
 
-        event.shapeless('gtceu:rubber_mallet', ['gtceu:wood_long_rod', 'gregitas:rubber_mallet_head'])
-        event.shapeless('gtceu:polyethylene_mallet', ['gtceu:wood_long_rod', 'gregitas:polyethylene_mallet_head'])
-        event.shapeless('gtceu:polytetrafluoroethylene_mallet', ['gtceu:wood_long_rod', 'gregitas:polytetrafluoroethylene_mallet_head'])
-        event.shapeless('gtceu:polybenzimidazole_mallet', ['gtceu:wood_long_rod', 'gregitas:polybenzimidazole_mallet_head'])
+        event.shapeless('gtceu:rubber_mallet', ['gtceu:long_wood_rod', 'gregitas:rubber_mallet_head'])
+        event.shapeless('gtceu:polyethylene_mallet', ['gtceu:long_wood_rod', 'gregitas:polyethylene_mallet_head'])
+        event.shapeless('gtceu:polytetrafluoroethylene_mallet', ['gtceu:long_wood_rod', 'gregitas:polytetrafluoroethylene_mallet_head'])
+        event.shapeless('gtceu:polybenzimidazole_mallet', ['gtceu:long_wood_rod', 'gregitas:polybenzimidazole_mallet_head'])
 
     //Plunger
         event.custom(
