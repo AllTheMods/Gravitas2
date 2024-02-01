@@ -57,6 +57,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ output: `railcraft:${tool}_boots`, mod: "railcraft" })
 
     //GT General
+    event.remove({ id: `/^gtceu:shaped/plate_double_.*/`})
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
     event.remove({ id: "gtceu:shapeless/blaze_rod_to_powder"})
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
