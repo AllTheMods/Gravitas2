@@ -137,6 +137,18 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     )
   })
 
+  //Railways (Steam n Rails)
+  event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_[^_]+$/}, r => {
+    let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
+    modifiedResult = Item.of(modifiedResult, 6)
+    r.results(modifiedResult)
+  })
+  event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_.*_narrow$/}, r => {
+    let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
+    modifiedResult = Item.of(modifiedResult, 3)
+    r.results(modifiedResult)
+  })
+
   //Firmalife
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot" )
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot" )
