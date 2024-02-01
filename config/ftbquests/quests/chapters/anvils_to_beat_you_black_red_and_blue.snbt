@@ -25,14 +25,12 @@
 				id: "38CEA148BCE0FBFA"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/black_steel"
 					}
-					id: "tfc:metal/ingot/black_steel"
 				}
+				title: "Any #forge:ingots/black_steel"
 				type: "item"
 			}]
 			x: 3.0d
@@ -66,14 +64,12 @@
 				id: "6B02B33E330B1FF2"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/weak_blue_steel"
 					}
-					id: "tfc:metal/ingot/weak_blue_steel"
 				}
+				title: "Any #forge:ingots/weak_blue_steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -87,14 +83,12 @@
 				id: "00C1DED048695DA6"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/weak_red_steel"
 					}
-					id: "tfc:metal/ingot/weak_red_steel"
 				}
+				title: "Any #forge:ingots/weak_red_steel"
 				type: "item"
 			}]
 			x: 3.5d
@@ -107,14 +101,12 @@
 				id: "2D41794F5ED2908B"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/blue_steel"
 					}
-					id: "tfc:metal/ingot/blue_steel"
 				}
+				title: "Any #forge:ingots/blue_steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -127,14 +119,12 @@
 				id: "2BD6E6BD32452467"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/red_steel"
 					}
-					id: "tfc:metal/ingot/red_steel"
 				}
+				title: "Any #forge:ingots/red_steel"
 				type: "item"
 			}]
 			x: 3.5d
@@ -199,14 +189,12 @@
 				id: "72311DDE4A132AAA"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/high_carbon_blue_steel"
 					}
-					id: "tfc:metal/ingot/high_carbon_blue_steel"
 				}
+				title: "Any #forge:ingots/high_carbon_blue_steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -220,14 +208,12 @@
 				id: "5127DF54C38672CD"
 				item: {
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/high_carbon_red_steel"
 					}
-					id: "tfc:metal/ingot/high_carbon_red_steel"
 				}
+				title: "Any #forge:ingots/high_carbon_red_steel"
 				type: "item"
 			}]
 			x: 3.5d

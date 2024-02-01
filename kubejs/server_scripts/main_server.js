@@ -90,3 +90,7 @@ FTBQuestsEvents.customReward(event => {
     handleBiomeMapShop(event, tag)
   }
 })
+
+ItemEvents.dropped("immersiveengineering:toolbox", event => {
+  event.player.closeMenu()
+})

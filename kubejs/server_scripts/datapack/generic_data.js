@@ -103,10 +103,10 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
             {
                 "ingredient": {
                     "item": item,
-                    "heat_capacity": heat,
-                    "forging_temperature": forge,
-                    "welding_temperature": weld
-                }
+                },
+                "heat_capacity": heat,
+                "forging_temperature": forge,
+                "welding_temperature": weld
             }
         )
 

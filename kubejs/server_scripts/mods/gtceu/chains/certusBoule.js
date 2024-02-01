@@ -16,30 +16,30 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
         .itemInputs('1x gregitas:certus_dust')
         .inputFluids('gtceu:hydrochloric_acid 3000')
         .outputFluids([
-            'gtceu:trichlorocertane 1000',
+            'gregitas_core:trichlorocertane 1000',
             'gtceu:hydrogen 2000'
         ])
         .EUt(MV).duration(40)
 
     event.recipes.gtceu.chemical_reactor("dichlorocertane")
-        .inputFluids('gtceu:trichlorocertane 2000')
-        .outputFluids('gtceu:dichlorocertane 1000')
+        .inputFluids('gregitas_core:trichlorocertane 2000')
+        .outputFluids('gregitas_core:dichlorocertane 1000')
         .itemOutputs('1x gregitas_core:certus_gem')
         .EUt(MV).duration(40)
 
     event.recipes.gtceu.chemical_reactor("chlorocertane")
-        .inputFluids('gtceu:dichlorocertane 2000')
+        .inputFluids('gregitas_core:dichlorocertane 2000')
         .outputFluids([
-            'gtceu:chlorocertane 1000',
-            'gtceu:certus_tetrachloride 1000'
+            'gregitas_core:chlorocertane 1000',
+            'gregitas_core:certus_tetrachloride 1000'
         ])
         .EUt(MV).duration(40)
 
     event.recipes.gtceu.chemical_reactor("certane")
-        .inputFluids('gtceu:chlorocertane 2000')
+        .inputFluids('gregitas_core:chlorocertane 2000')
         .outputFluids([
-            'gtceu:certane 1000',
-            'gtceu:dichlorocertane 1000'
+            'gregitas_core:certane 1000',
+            'gregitas_core:dichlorocertane 1000'
         ])
         .EUt(MV).duration(40)
 
@@ -47,7 +47,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
     // CIRCUIT STUFF
     event.recipes.gtceu.chemical_vapor_deposition("certus_boule")
         .itemInputs('1x gtceu:silicon_wafer')
-        .inputFluids('gtceu:certane 16000')
+        .inputFluids('gregitas_core:certane 16000')
         .itemOutputs('1x gregitas:certus_boule')
         .EUt(MV).duration(1600)
 
