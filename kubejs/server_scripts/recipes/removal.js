@@ -314,4 +314,33 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^iceandfire:.*copper.*/`})
 
+    
+  let only_hotworked = (mineral) => {
+    event.remove({ id: "gtceu:shaped/plate_" + mineral })
+    event.remove({ id: "gtceu:shaped/plate_double_" + mineral })
+  }
+  
+
+  only_hotworked("bismuth")
+  only_hotworked("copper")
+  only_hotworked("gold")
+  only_hotworked("nickel")
+  only_hotworked("silver")
+  only_hotworked("tin")
+  only_hotworked("zinc")
+  only_hotworked("brass") 
+  only_hotworked("bronze") 
+  only_hotworked("invar") 
+  only_hotworked("sterling_silver") 
+  only_hotworked("rose_gold") 
+  only_hotworked("black_bronze") 
+  only_hotworked("bismuth_bronze") 
+  only_hotworked("steel") 
+  only_hotworked("rose_gold") 
+  only_hotworked("wrought_iron")
+  only_hotworked("black_steel")
+  only_hotworked("red_steel")
+  only_hotworked("blue_steel")
+  only_hotworked("wrought_iron")
+
 }
