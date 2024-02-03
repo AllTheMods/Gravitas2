@@ -149,7 +149,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
                 item: "gtceu:plastic_printed_circuit_board"
             },
             middle: {
-                item: "gtceu:red_alloy_fine_wire",
+                item: "gtceu:fine_red_alloy_wire",
             },
             top: {
                 item: "ae2:printed_engineering_processor"
@@ -167,7 +167,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
                 item: "gtceu:plastic_printed_circuit_board"
             },
             middle: {
-                item: "gtceu:red_alloy_fine_wire",
+                item: "gtceu:fine_red_alloy_wire",
             },
             top: {
                 item: "ae2:printed_calculation_processor"
@@ -185,7 +185,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
                 item: "gtceu:plastic_printed_circuit_board"
             },
             middle: {
-                item: "gtceu:red_alloy_fine_wire",
+                item: "gtceu:fine_red_alloy_wire",
             },
             top: {
                 item: "ae2:printed_logic_processor"
