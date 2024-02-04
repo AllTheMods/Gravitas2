@@ -232,6 +232,16 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       amount: 144
     },
     {
+      ore: "gtceu:raw_chalcopyrite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
+      ore: "gtceu:raw_chalcopyrite",
+      liquid: "tfc:metal/copper",
+      amount: 72
+    },
+    {
       ore: "gtceu:raw_galena",
       liquid: "gtceu:lead",
       amount: 72
