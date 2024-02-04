@@ -932,7 +932,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     nbt: {
                         tank: {
                             Amount: 144,
-                            FluidName: 'gregitas_cores:igneous_alloy'
+                            FluidName: 'gregitas_core:igneous_alloy'
                         }
                     },
                     count: 1
