@@ -890,56 +890,8 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     )
 
-    event.custom(
-        {
-            type: 'create:filling',
-            ingredients: [
-                Item.of('tfc:ceramic/ingot_mold').strongNBT(),
-                {
-                    fluid: 'gregitas_core:igneous_alloy',
-                    nbt: {},
-                    amount: 144
-                }
-            ],
-            results: [
-                {
-                    item: 'tfc:ceramic/ingot_mold',
-                    nbt: {
-                        tank: {
-                            Amount: 144,
-                            FluidName: 'gregitas_core:igneous_alloy'
-                        }
-                    },
-                    count: 1
-                }
-            ]
-        }
-    )
-    event.custom(
-        {
-            type: 'create:filling',
-            ingredients: [
-                Item.of('tfc:ceramic/fire_ingot_mold').strongNBT(),
-                {
-                    fluid: 'gregitas_core:igneous_alloy',
-                    nbt: {},
-                    amount: 144
-                }
-            ],
-            results: [
-                {
-                    item: 'tfc:ceramic/fire_ingot_mold',
-                    nbt: {
-                        tank: {
-                            Amount: 144,
-                            FluidName: 'gregitas_core:igneous_alloy'
-                        }
-                    },
-                    count: 1
-                }
-            ]
-        }
-    )
+    event.recipes.woodencog.filling(["tfc:ceramic/ingot_mold"], ['tfc:ceramic/ingot_mold', Fluid.of("gregitas_core:igneous_alloy", 144)]).id("woodencog:advanced_filling/igneous_alloy_to_mold")
+    event.recipes.woodencog.filling(["tfc:ceramic/fire_ingot_mold"], ['tfc:ceramic/fire_ingot_mold', Fluid.of("gregitas_core:igneous_alloy", 144)]).id("woodencog:advanced_filling/igneous_alloy_to_fire_mold")
 
     tfcCobbleToSand.forEach((type) => {
             event.recipes.create.crushing([
