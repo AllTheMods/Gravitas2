@@ -185,9 +185,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
 
   //Integrated Dynamics
-  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:iron_block", "tfc:metal/anvil/wrought_iron")
-  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:stick", "#forge:rods/wrought_iron")
-
 
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
