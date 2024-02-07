@@ -344,4 +344,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
             .EUt(LV)
     })
+
+        event.recipes.gtceu.centrifuge("menril_logs")
+            .itemInputs('1x integrateddynamics:menril_log')
+            .itemOutputs([
+                '2x integrateddynamics:crystalized_menril_chunk'
+            ])
+            .outputFluids('integrateddynamics:menril_resin 500')
+            .EUt(LV).duration(100)
 }
