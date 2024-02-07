@@ -277,4 +277,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       'expatternprovider:fishbig'
     ]
   )
+  event.add("gravitas:bronze_doubles", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
+  event.add("gravitas:bronze_plates", ["#forge:plates/bronze","#forge:plates/bismuth_bronze", "#forge:plates/black_bronze"])
 }
