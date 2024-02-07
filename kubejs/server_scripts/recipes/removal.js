@@ -121,6 +121,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
   event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
+  event.remove({ id: /^create:crushing\/.*_armor/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
@@ -163,7 +164,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^framedcompactdrawers:.*/, mod: "framedcompactdrawers" })
 
   //Integrated Dynamics
-  event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
+  event.remove({ id: "integrateddynamics:crafting/squeezer" })
+  event.remove({ id: "integrateddynamics:crafting/mechanical_squeezer" })
+  event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
   event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
 
   // Railcraft
@@ -314,5 +317,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^iceandfire:.*silver.*/`})
 
   event.remove({ id: `/^iceandfire:.*copper.*/`})
+  event.remove({ id: `/^iceandfire:.*_pile/`})
 
 }
