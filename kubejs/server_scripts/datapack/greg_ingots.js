@@ -168,8 +168,11 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       },
       break_chance: 0.1
     })
-    let itemLocation = Utils.id(item)
-    event.addJson(`tfc:recipes/casting/${itemLocation.path}.json`, json)
+    let fluidLocation = Utils.id(fluid)
+    event.addJson(`tfc:recipes/casting/${fluidLocation.path}_to_mold.json`, json)
+    json.mold.item = "tfc:ceramic/fire_ingot_mold"
+    json.break_chance = 0.01
+    event.addJson(`tfc:recipes/casting/${fluidLocation.path}_to_fire_mold.json`, json)
   }
 
   gtceuIngots1.forEach((id) => {
