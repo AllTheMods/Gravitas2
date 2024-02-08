@@ -27,5 +27,5 @@ badTemperatureChangeSpeed = 1.0
 wetnessChangeSpeed = 1.0
 #How much do items in the forge:hot_ingots tag modify the temperature of the player
 #Range: 0.0 ~ 3.4028234663852886E38
-hotIngotTemperature = 0.5
+hotIngotTemperature = 1.0
 
