@@ -62,6 +62,62 @@ const TFCGrains = [
  "rice",
  "wheat"
 ]
+
+const gtVacuumShit = [
+"europium",
+"iridium",
+"niobium",
+"osmium",
+"palladium",
+"rhodium",
+"rutherium",
+"samarium",
+"silicon",
+"titanium",
+"tungsten",
+"vanadium",
+"yttrium",
+"naquadah",
+"enriched_naquadah",
+"naquadria",
+"trinium",
+"kanthal",
+"nichrome",
+"niobium_nitride",
+"niobium_titanium",
+"black_bronze",
+"ruridit",
+"ultimet",
+"vanadium_gallium",
+"yttrium_barium_cuprate",
+"osmiridium",
+"tungsten_carbide",
+"magnesium_diboride",
+"mercury_barium_calcium_cuprate",
+"uranium_triplatinum",
+"samarium_iron_arsenic_oxide",
+"indium_tin_barium_titanium_cuprate",
+"uranium_rhodium_dinaquadide",
+"enriched_naquadah_trinium_europium_duranide",
+"ruthenium_trinium_americium_neutronate",
+"tungsten_steel",
+"naquadah_alloy",
+"rhodium_plated_palladium",
+"hssg",
+"hsse",
+"hsss",
+"tantalum_carbide",
+"molybdenum_disilicide",
+"zeron_100",
+"watertight_steel",
+"incoloy_ma_956",
+"maraging_steel_300",
+"hastelloy_x",
+"stellite_100",
+"titanium_carbide",
+"titanium_tungsten_carbide",
+"hastelloy_c_276"
+]
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
@@ -736,5 +792,24 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
         H: "#forge:tools/hammers",
         P: "#gravitas:bronze_plates"
+    })
+
+    gtVacuumShit.forEach((hot) => {
+        event.custom({
+          type: "tfc:barrel_instant",
+          input_item: {
+            ingredient: {
+                item: `gtceu:hot_${hot}_ingot`
+            }
+          },
+          input_fluid: {
+            ingredient: "minecraft:water",
+            amount: 1
+          },
+          output_item: {
+                item: `gtceu:${hot}_ingot`
+          },
+         sound: "minecraft:block.fire.extinguish"
+         })
     })
 }
