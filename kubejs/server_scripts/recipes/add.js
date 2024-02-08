@@ -804,7 +804,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
           },
           input_fluid: {
             ingredient: "minecraft:water",
-            amount: 1
+            amount: 500
           },
           output_item: {
                 item: `gtceu:${hot}_ingot`
