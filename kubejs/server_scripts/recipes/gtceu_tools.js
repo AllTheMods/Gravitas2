@@ -10,7 +10,7 @@ const gtMortars = [
   {
     id: 'bronze',
     tier: 2,
-    double: 'tfc:metal/double_ingot/bronze'
+    double: '#gravitas:bronze_doubles'
   },
   {
     id: 'invar',

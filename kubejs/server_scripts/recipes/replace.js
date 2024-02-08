@@ -184,14 +184,15 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "storagedrawers:compacting_drawers_3"}, "minecraft:stone", "#forge:stone")
 
 
-  //Integrated Dynamics
-  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:iron_block", "tfc:metal/anvil/wrought_iron")
-  event.replaceInput({ id: "integrateddynamics:crafting/squeezer"}, "minecraft:stick", "#forge:rods/wrought_iron")
-
 
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
+  event.replaceInput({ mod: "iceandfire" }, "minecraft:stone_bricks", "#forge:stone_bricks")
 
-
+  event.replaceInput({ id: "iceandfire:dragon_meal"}, "#iceandfire:dragon_food_meat", "#tfc:foods/meats")
   event.replaceInput({ id: "woodencog:crafting/schematics/schematicannon"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
+  event.replaceInput({ id: "create:haunting/poisonous_potato"}, "minecraft:potato", "tfc:food/potato")
+  event.replaceOutput({ id: `/^gtceu:smelting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceOutput({ id: `/^gtceu:blasting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceOutput({ id: `/^minecraft:iron_ingot_from_.*/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
 }

@@ -725,4 +725,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
     })
 
+    shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
+        H: "#forge:tools/hammers",
+        D: "#forge:tools/screwdrivers",
+        S: "#forge:screws/bronze",
+        P: "#gravitas:bronze_plates",
+        R: "gtceu:bronze_ring",
+        F: "#forge:tools/files"
+    })
+    shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
+        H: "#forge:tools/hammers",
+        P: "#gravitas:bronze_plates"
+    })
 }
