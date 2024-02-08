@@ -314,7 +314,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 ]
             })
             */
-            event.shaped(`gtceu:${metal.id}_screwdriver`, ['sS', 'H'], {S: `gtceu:${metal.id}_screwdriver_tip`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_screwdriver`)
+            event.shaped(`gtceu:${metal.id}_screwdriver`, ['S', 'H'], {S: `gtceu:${metal.id}_screwdriver_tip`, H: 'gregitas:small_tool_handle'}).id(`gregitas:shaped/${metal.id}_screwdriver`)
         })
         
     //Hammer
