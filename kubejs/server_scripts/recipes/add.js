@@ -713,6 +713,13 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         T: "minecraft:piston"
     })
 
+    event.shapeless('storagedrawers:one_stack_upgrade',         ['2x #tfc:rock_knapping','storagedrawers:upgrade_template'])
+    event.shapeless('storagedrawers:obsidian_storage_upgrade',  ['2x #gravitas:bronze_plates','storagedrawers:upgrade_template'])
+    event.shapeless('storagedrawers:iron_storage_upgrade',      ['2x #forge:double_sheets/any_bronze','storagedrawers:upgrade_template'])
+    event.shapeless('storagedrawers:gold_storage_upgrade',      ['2x #forge:plates/steel','storagedrawers:upgrade_template'])
+    event.shapeless('storagedrawers:diamond_storage_upgrade',   ['2x #forge:double_plates/steel','storagedrawers:upgrade_template'])
+    event.shapeless('storagedrawers:emerald_storage_upgrade',   ['2x #forge:plates/stainless_steel','storagedrawers:upgrade_template'])
+
     TFCGrains.forEach((grain) => {
     smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
     smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)

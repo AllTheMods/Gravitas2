@@ -162,7 +162,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^storagedrawers:warped_.*/, mod: "storagedrawers" })
   event.remove({ id: /^storagedrawers:mangrove_.*/, mod: "storagedrawers" })
   event.remove({ id: /^storagedrawers:cherry_.*/, mod: "storagedrawers" })
-
+  event.remove({ id: /^storagedrawers:.*_storage_upgrade/, mod: "storagedrawers"})
+  
   event.remove({ id: /^framedcompactdrawers:.*/, mod: "framedcompactdrawers" })
 
   //Integrated Dynamics
