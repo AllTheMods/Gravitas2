@@ -315,6 +315,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^iceandfire:.*copper.*/`})
 
+  event.remove({ id: 'tfc:anvil/wrought_iron_sheet'})
     
   let only_hotworked = (mineral) => {
     event.remove({ id: "gtceu:shaped/plate_" + mineral })
