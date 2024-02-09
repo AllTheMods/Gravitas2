@@ -59,6 +59,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     //GT General
     event.remove({ id: `/^gtceu:shaped/plate_double_.*/`})
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
+    event.remove({ id: "gtceu:shaped/rotor_bronze"})
+    event.remove({ id: "gtceu:shaped/bronze_hull"})
     event.remove({ id: "gtceu:shapeless/blaze_rod_to_powder"})
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
     event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
@@ -121,6 +123,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ input: "minecraft:leather_horse_armor", mod: "create" })
   event.remove({ id: /^create:crushing\/.*_ore/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
+  event.remove({ id: /^create:crushing\/.*_armor/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
@@ -159,12 +162,17 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^storagedrawers:warped_.*/, mod: "storagedrawers" })
   event.remove({ id: /^storagedrawers:mangrove_.*/, mod: "storagedrawers" })
   event.remove({ id: /^storagedrawers:cherry_.*/, mod: "storagedrawers" })
-
+  event.remove({ id: /^storagedrawers:.*_storage_upgrade/, mod: "storagedrawers"})
+  
   event.remove({ id: /^framedcompactdrawers:.*/, mod: "framedcompactdrawers" })
 
   //Integrated Dynamics
-  event.remove({ mod: "integrateddynamics", output: "minecraft:leather" })
+  event.remove({ id: "integrateddynamics:crafting/squeezer" })
+  event.remove({ id: "integrateddynamics:crafting/mechanical_squeezer" })
   event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
+  event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
+  event.remove({ type: "integrateddynamics:squeezer"})
+  event.remove({ type: "integrateddynamics:mechanical_squeezer"})
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
@@ -314,6 +322,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: `/^iceandfire:.*silver.*/`})
 
   event.remove({ id: `/^iceandfire:.*copper.*/`})
+  event.remove({ id: `/^iceandfire:.*_pile/`})
 
   event.remove({ id: 'tfc:anvil/wrought_iron_sheet'})
     

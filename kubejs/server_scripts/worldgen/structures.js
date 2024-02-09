@@ -9,6 +9,7 @@ const strucBlocksReplacementMap = {
   "minecraft:cobblestone": "tfc:rock/raw/granite",
   "minecraft:gold_ore": "minecraft:water",
   "minecraft:dirt": "tfc:dirt/loam",
+  "minecraft:enchanting_table": "minecraft:air",
   "minecraft:dirt_path": "tfc:grass_path/loam",
   "minecraft:grass_block": "tfc:grass/loam",
   "minecraft:farmland": "tfc:farmland/loam",
@@ -39,6 +40,8 @@ const strucBlocksReplacementMap = {
 }
 
 const strucBlocksWithPropertiesMap = {
+
+  "minecraft:chest": "minecraft:barrel",
   "minecraft:composter": "tfc:composter",
   "minecraft:beetroots": "tfc:crop/beet",
   "minecraft:carrots": "tfc:crop/carrot",
@@ -101,6 +104,7 @@ const jigsawReplacementMap = {
   "minecraft:dirt": "tfc:dirt/loam",
   "minecraft:smooth_sandstone": "tfc:smooth_sandstone/yellow",
   "minecraft:grass_block": "tfc:grass/loam",
+  "minecraft:enchanting_table": "minecraft:air",
   // "minecraft:acacia_fence_gate": "tfc:wood/planks/acacia_fence_gate",
   // "minecraft:mangrove_wood": "tfc:wood/wood/mangrove",
   "minecraft:smooth_stone_slab[type=bottom]": "tfc:rock/smooth/granite_slab[type=bottom]",

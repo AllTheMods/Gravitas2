@@ -1,0 +1,14 @@
+{
+  "type": "iceandfire:dragonforge",
+  "dragon_type": "fire",
+  "cook_time": 1000,
+  "input": {
+    "tag": "forge:ingots/red_steel"
+  },
+  "blood": {
+    "item": "iceandfire:fire_dragon_blood"
+  },
+  "result": {
+    "item": "iceandfire:dragonsteel_fire_ingot"
+  }
+}

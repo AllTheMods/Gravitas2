@@ -50,6 +50,31 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.custom(
         {
+            type: 'create:crushing',
+            ingredients: [
+                {
+                    item: 'minecraft:quartz'
+                }
+            ],
+            processingTime: 250,
+            results: [
+                {
+                    item: 'enderio:powdered_quartz'
+                },
+                {
+                    chance: 0.5,
+                    item: 'enderio:powdered_quartz'
+                },
+                {
+                    chance: 0.25,
+                    item: 'enderio:powdered_quartz'
+                }
+            ]
+        }
+    ).id('gregitas:crushing/powdered_quartz')
+
+    event.custom(
+        {
             type: 'create:mixing',
             ingredients: [
                 {
@@ -320,4 +345,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
             .EUt(LV)
     })
+
+        event.recipes.gtceu.centrifuge("menril_logs")
+            .itemInputs('1x integrateddynamics:menril_log')
+            .itemOutputs([
+                '2x integrateddynamics:crystalized_menril_chunk'
+            ])
+            .outputFluids('integrateddynamics:menril_resin 500')
+            .EUt(LV).duration(100)
 }
