@@ -777,8 +777,28 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.shapeless('storagedrawers:emerald_storage_upgrade',   ['2x #forge:plates/stainless_steel','storagedrawers:upgrade_template'])
 
     TFCGrains.forEach((grain) => {
-    smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
-    smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
+      smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
+      smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
+      event.custom(
+        {
+          type: "tfc:heating",
+          ingredient: {
+            type: "tfc:not_rotten",
+            ingredient: {
+              item: `firmalife:food\/${grain}_dough`
+            }
+          },
+          result_item: {
+            stack: {
+              item: `tfc:food\/${grain}_bread`
+            },
+            modifiers: [
+              "tfc:copy_food"
+            ]
+          },
+          temperature: 200
+        }
+      )
     })
 
     shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
