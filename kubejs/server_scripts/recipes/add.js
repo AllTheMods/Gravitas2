@@ -718,4 +718,5 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
     })
 
+	  event.recipes.tfc.anvil('gtceu:wrought_iron_plate', 'tfc:metal/double_ingot/wrought_iron', ['hit_last', 'hit_second_last', 'hit_third_last'])
 }
