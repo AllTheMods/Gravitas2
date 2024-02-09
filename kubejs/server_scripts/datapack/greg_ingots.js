@@ -202,117 +202,117 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     {
       ore: "gtceu:raw_lead",
       liquid: "gtceu:lead",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_silver",
       liquid: "tfc:metal/silver",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_tin",
       liquid: "tfc:metal/tin",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_hematite",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_goethite",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_cassiterite",
       liquid: "tfc:metal/tin",
-      amount: 144
+      amount: 36
     },
     {
       ore: "gtceu:raw_cassiterite_sand",
       liquid: "tfc:metal/tin",
-      amount: 144
+      amount: 36
     },
     {
       ore: "gtceu:raw_galena",
       liquid: "gtceu:lead",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_garnierite",
       liquid: "tfc:metal/nickel",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_magnetite",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_pyrite",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_sphalerite",
       liquid: "tfc:metal/zinc",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_tetrahedrite",
       liquid: "tfc:metal/copper",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_chalcopyrite",
       liquid: "tfc:metal/copper",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_yellow_limonite",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_bornite",
       liquid: "tfc:metal/copper",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_chalcocite",
       liquid: "tfc:metal/copper",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_pentlandite",
       liquid: "tfc:metal/nickel",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_malachite",
       liquid: "tfc:metal/copper",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_basaltic_mineral_sand",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_granitic_mineral_sand",
       liquid: "tfc:metal/cast_iron",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_thorium",
       liquid: "gtceu:thorium",
-      amount: 72
+      amount: 36
     },
     {
       ore: "gtceu:raw_chromite",
       liquid: "gtceu:chromium",
-      amount: 72
+      amount: 36
     }
 
 
