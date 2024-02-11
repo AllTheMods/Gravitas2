@@ -283,4 +283,6 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
     event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
   })
+  
+  event.create('gregitas:packaged_greenhouse').modelJson(pkgJson)
 }
