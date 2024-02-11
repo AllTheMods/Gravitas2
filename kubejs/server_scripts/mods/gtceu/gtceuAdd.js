@@ -301,7 +301,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.recipes.kubejs.shaped('gtceu:wood_drum', [ 'mRs', 'PWP', 'PWP' ], { m: '#forge:tools/mallets', R: 'gtceu:sticky_resin', s: '#forge:tools/saws', P: '#minecraft:planks', W: 'gtceu:long_wrought_iron_rod'}).damageIngredient(['#forge:tools'])
 
-    event.recipes.kubejs.shaped('gtceu:lv_electric_motor', ['cwr', 'wmw', 'rwc'], { c: 'gtceu:tin_single_cable', w: 'gtceu:copper_single_wire', r: 'gtceu:wrought_iron_rod', m: 'gtceu:magnetic_wrought_iron_rod' })
+    event.recipes.kubejs.shaped('gtceu:lv_electric_motor', ['cwr', 'wmw', 'rwc'], { c: 'gtceu:tin_single_cable', w: 'gtceu:copper_single_wire', r: 'gtceu:wrought_iron_rod', m: 'gregitas_core:magnetic_wrought_iron_rod' })
 
     event.recipes.kubejs.shaped('2x gtceu:pump_deck', ['   ', 'SPS', 'sCh'], { S: 'gtceu:wrought_iron_screw', P: 'gtceu:treated_wood_planks', C: '#forge:slabs/cobblestone', s: '#forge:tools/screwdrivers', h: '#forge:tools/hammers' }).damageIngredient(['#forge:tools'])
     event.recipes.kubejs.shaped('gtceu:pump_hatch', ['SRs', 'PLP', 'CRC'], { S: 'gtceu:wrought_iron_screw', P: 'gtceu:treated_wood_planks', C: '#forge:slabs/cobblestone', R: 'gtceu:wrought_iron_ring', L: 'gtceu:wood_large_fluid_pipe', s: '#forge:tools/screwdrivers' }).damageIngredient(['#forge:tools'])
@@ -352,4 +352,39 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             ])
             .outputFluids('integrateddynamics:menril_resin 500')
             .EUt(LV).duration(100)
+
+    gtceu.assembler('gregitas:packaged_greenhouse')
+        .itemInputs(
+            '64x firmalife:iron_greenhouse_wall',
+            '64x firmalife:iron_greenhouse_wall',
+            '11x firmalife:iron_greenhouse_wall',
+            '12x firmalife:copper_pipe',
+            '4x firmalife:sprinkler',
+            '4x firmalife:iron_greenhouse_port',
+            '4x gtceu:duct_tape',
+            'firmalife:iron_greenhouse_door',
+            'gtceu:wood_crate'
+        )
+        .inputFluids(
+            Fluid.of('gtceu:concrete', 7056)
+        )
+        .itemOutputs(
+            'gregitas:packaged_greenhouse'
+        )
+        .EUt(MV)
+        .duration(100)
+        
+    gtceu.assembler('gregitas:greenhouse')
+        .itemInputs(
+            'gregitas:packaged_greenhouse',
+            'gtceu:solid_machine_casing',
+            '3x #gtceu:circuits/mv',
+            '2x gtceu:copper_double_cable',
+            '2x gtceu:lv_field_generator' 
+        )
+        .itemOutputs(
+            'gtceu:greenhouse'
+        )
+        .EUt(MV)
+        .duration(250)
 }
