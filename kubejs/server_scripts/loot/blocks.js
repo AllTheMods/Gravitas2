@@ -31,8 +31,8 @@ let modifyAndRemoveBlockLoot = (/** @type {Internal.LootModificationEventJS} */ 
 	event.addLootTypeModifier([LootType.BLOCK]).modifyLoot(Ingredient.of(Object.keys(blockReplacementMap)),(/** @type {Internal.ItemStack} */ item) => Item.of(blockReplacementMap[item.item.id]))
 
     trackTypes.forEach(track => {
-        event.addLootTypeModifier([LootType.BLOCK]).modifyLoot(Ingredient.of(`railways:track_tfc_${track}`),(item) => Item.of(`railways:track_tfc_${track}`))
-        event.addLootTypeModifier([LootType.BLOCK]).modifyLoot(Ingredient.of(`railways:track_tfc_${track}_narrow`),(item) => Item.of(`railways:track_tfc_${track}_narrow`))
-        event.addLootTypeModifier([LootType.BLOCK]).modifyLoot(Ingredient.of(`railways:track_tfc_${track}_wide`),(item) => Item.of(`railways:track_tfc_${track}_wide`))
-    })
+            event.addBlockLootModifier(`railways:track_tfc_${track}`).addLoot(`railways:track_tfc_${track}`)
+            event.addBlockLootModifier(`railways:track_tfc_${track}_narrow`).addLoot(`railways:track_tfc_${track}_narrow`)
+            event.addBlockLootModifier(`railways:track_tfc_${track}_wide`).addLoot(`railways:track_tfc_${track}_wide`)
+        })
 }
