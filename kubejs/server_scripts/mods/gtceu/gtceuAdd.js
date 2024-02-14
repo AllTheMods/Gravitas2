@@ -1,3 +1,4 @@
+
 let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     //Rubber
 
@@ -353,7 +354,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .outputFluids('integrateddynamics:menril_resin 500')
             .EUt(LV).duration(100)
 
-    gtceu.assembler('gregitas:packaged_greenhouse')
+    event.recipes.gtceu.assembler('gregitas:packaged_greenhouse')
         .itemInputs(
             '64x firmalife:iron_greenhouse_wall',
             '64x firmalife:iron_greenhouse_wall',
@@ -374,7 +375,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .EUt(MV)
         .duration(100)
         
-    gtceu.assembler('gregitas:greenhouse')
+    event.recipes.gtceu.assembler('gregitas:greenhouse')
         .itemInputs(
             'gregitas:packaged_greenhouse',
             'gtceu:solid_machine_casing',

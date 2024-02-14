@@ -16,7 +16,6 @@ const $ChunkProvider = Java.loadClass("net.dries007.tfc.world.chunkdata.ChunkDat
 const $ForestConfig = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestConfig")
 const $ForestFeature = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestFeature")
 // const $BlockContainerJS = Java.loadClass("dev.latvian.mods.kubejs.level.BlockContainerJS")
-const gtceu = event.recipes.gtceu
 
 let enderTC = [
   {
