@@ -1,6 +1,7 @@
 // priority 10
 
 const chestBanList = [
+  "alltheores:steel_plate",
   "enderio:copper_alloy_ingot",
   "enderio:dark_steel_ingot",
   "enderio:dark_steel_sword",
@@ -64,6 +65,7 @@ const chestBanList = [
 
 const chestReplacementMap = {
   "alltheores:lead_ingot": "gtceu:lead_ingot",
+  "alltheores:lead_plate": "gtceu:lead_plate",
   "alltheores:nickel_plate": "gtceu:nickel_plate",
   "alltheores:silver_plate": "gtceu:silver_plate",
   "create:copper_sheet": "gtceu:copper_plate",
