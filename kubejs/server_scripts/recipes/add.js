@@ -268,14 +268,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create End
 
   //GTCEU Start
-  shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
+  event.recipes.kubejs.shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
     H: "#forge:tools/hammers",
     R: "#forge:rods/steel",
     S: "#forge:screws/steel",
     P: "#forge:sheets/steel",
     B: "gtceu:firebricks",
     D: "#forge:tools/screwdrivers"
-  })
+  }).damageIngredient(["#forge:tools"])
   shaped("2x gtceu:coke_oven_bricks", ["BMB","MBM","BMB"], {
     M: "tfc:mortar",
     B: "gtceu:coke_oven_brick"
@@ -801,18 +801,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       )
     })
 
-    shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
+    event.recipes.kubejs.shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
         H: "#forge:tools/hammers",
         D: "#forge:tools/screwdrivers",
         S: "#forge:screws/bronze",
         P: "#gravitas:bronze_plates",
         R: "gtceu:bronze_ring",
         F: "#forge:tools/files"
-    })
-    shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
+    }).damageIngredient(["#forge:tools"])
+    event.recipes.kubejs.shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
         H: "#forge:tools/hammers",
         P: "#gravitas:bronze_plates"
-    })
+    }).damageIngredient(["#forge:tools"])
 
     gtVacuumShit.forEach((hot) => {
         event.custom({
