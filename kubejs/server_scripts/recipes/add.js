@@ -851,7 +851,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          })
     })
 
-    Object.keys(chestReplacementMap).forEach((item) => {
-      event.shapeless(item, [gtMetalReplace[item]])
-    })
+    for (const [item, replacement] of Object.entries(chestReplacementMap)) {
+      event.shapeless(item, [replacement])
+    }
 }
