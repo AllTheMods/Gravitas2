@@ -173,6 +173,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "integrateddynamics", output: "minecraft:blaze_powder" })
   event.remove({ type: "integrateddynamics:squeezer"})
   event.remove({ type: "integrateddynamics:mechanical_squeezer"})
+  event.remove({ type: "integrateddynamics:drying_basin", output: "minecraft:leather"})
+  event.remove({ type: "integrateddynamics:mechanical_drying_basin", output: "minecraft:leather"})
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
