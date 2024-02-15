@@ -127,7 +127,7 @@ const gtMetalReplaceMap = {
   "create:copper_sheet": "gtceu:copper_plate",
   "create:golden_sheet": "gtceu:gold_plate",
   "createaddition:zinc_sheet": "gtceu:zinc_plate",
-  "immersiveengineering:ingot_aluminum": "gtceu:aluminum_ingot",
+  "immersiveengineering:ingot_aluminum": "gtceu:aluminium_ingot",
   "immersiveengineering:ingot_lead": "gtceu:lead_ingot",
   "immersiveengineering:plate_lead": "gtceu:lead_plate",
   "immersiveengineering:plate_nickel": "gtceu:nickel_plate",
@@ -851,7 +851,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          })
     })
 
-    for (const [item, replacement] of Object.entries(chestReplacementMap)) {
-      event.shapeless(item, [replacement])
+    for (const [item, replacement] of Object.entries(gtMetalReplaceMap)) {
+      event.shapeless(replacement, [item])
     }
 }
