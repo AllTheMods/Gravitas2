@@ -834,4 +834,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     for (const [item, replacement] of Object.entries(gtMetalReplaceMap)) {
       event.shapeless(replacement, [item])
     }
+    event.shapeless("immersiveengineering:storage_steel","gtceu:steel_block")
+    event.shapeless("gtceu:steel_block","immersiveengineering:storage_steel")
 }
