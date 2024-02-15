@@ -331,8 +331,27 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       ore: "gtceu:raw_chromite",
       liquid: "gtceu:chromium",
       amount: 72
+    },
+    {
+      ore: "tfc:ore/small_chromite",
+      liquid: "gtceu:chromium",
+      amount: 16
+    },
+    {
+      ore: "tfc:ore/poor_chromite",
+      liquid: "gtceu:chromium",
+      amount: 24
+    },
+    {
+      ore: "tfc:ore/normal_chromite",
+      liquid: "gtceu:chromium",
+      amount: 36
+    },
+    {
+      ore: "tfc:ore/rich_chromite",
+      liquid: "gtceu:chromium",
+      amount: 48
     }
-
 
   ]
 

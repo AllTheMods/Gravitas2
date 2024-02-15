@@ -796,27 +796,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     TFCGrains.forEach((grain) => {
       smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
-      smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
-      event.custom(
-        {
-          type: "tfc:heating",
-          ingredient: {
-            type: "tfc:not_rotten",
-            ingredient: {
-              item: `firmalife:food\/${grain}_dough`
-            }
-          },
-          result_item: {
-            stack: {
-              item: `tfc:food\/${grain}_bread`
-            },
-            modifiers: [
-              "tfc:copy_food"
-            ]
-          },
-          temperature: 200
-        }
-      )
     })
 
     event.recipes.kubejs.shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
@@ -827,6 +806,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         R: "gtceu:bronze_ring",
         F: "#forge:tools/files"
     }).damageIngredient(["#forge:tools"])
+
     event.recipes.kubejs.shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
         H: "#forge:tools/hammers",
         P: "#gravitas:bronze_plates"

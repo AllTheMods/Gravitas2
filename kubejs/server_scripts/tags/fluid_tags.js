@@ -44,6 +44,7 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
             'gtceu:nickel',
             'gtceu:bismuth',
             'gtceu:rubber',
+            'gtceu:chromium',
             'gregitas_core:igneous_alloy',
             "gtceu:invar"
         ]
