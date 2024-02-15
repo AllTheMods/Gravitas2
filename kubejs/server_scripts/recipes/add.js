@@ -120,21 +120,21 @@ const gtVacuumShit = [
 ]
 
 // ingot/plates/etc. to convert to GT equivalents
-const gtMetalReplace = [
-  ["alltheores:lead_ingot", "gtceu:lead_ingot"],
-  ["alltheores:nickel_plate", "gtceu:nickel_plate"],
-  ["alltheores:silver_plate", "gtceu:silver_plate"],
-  ["create:copper_sheet", "gtceu:copper_plate"],
-  ["create:golden_sheet", "gtceu:gold_plate"],
-  ["createaddition:zinc_sheet", "gtceu:zinc_plate"],
-  ["immersiveengineering:ingot_aluminum", "gtceu:aluminum_ingot"],
-  ["immersiveengineering:ingot_lead", "gtceu:lead_ingot"],
-  ["immersiveengineering:plate_lead", "gtceu:lead_plate"],
-  ["immersiveengineering:plate_nickel", "gtceu:nickel_plate"],
-  ["railcraft:brass_plate", "gtceu:brass_plate"],
-  ["railcraft:lead_ingot", "gtceu:lead_ingot"],
-  ["railcraft:tin_plate", "gtceu:tin_plate"],
-]
+const gtMetalReplaceMap = {
+  "alltheores:lead_ingot": "gtceu:lead_ingot",
+  "alltheores:nickel_plate": "gtceu:nickel_plate",
+  "alltheores:silver_plate": "gtceu:silver_plate",
+  "create:copper_sheet": "gtceu:copper_plate",
+  "create:golden_sheet": "gtceu:gold_plate",
+  "createaddition:zinc_sheet": "gtceu:zinc_plate",
+  "immersiveengineering:ingot_aluminum": "gtceu:aluminum_ingot",
+  "immersiveengineering:ingot_lead": "gtceu:lead_ingot",
+  "immersiveengineering:plate_lead": "gtceu:lead_plate",
+  "immersiveengineering:plate_nickel": "gtceu:nickel_plate",
+  "railcraft:brass_plate": "gtceu:brass_plate",
+  "railcraft:lead_ingot": "gtceu:lead_ingot",
+  "railcraft:tin_plate": "gtceu:tin_plate",
+}
 
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
@@ -851,7 +851,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          })
     })
 
-    gtMetalReplace.forEach((values) => {
-      event.shapeless(values[1], [values[0]])
+    Object.keys(chestReplacementMap).forEach((item) => {
+      event.shapeless(item, [gtMetalReplace[item]])
     })
 }
