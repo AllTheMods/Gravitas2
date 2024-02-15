@@ -1,6 +1,12 @@
 // priority 10
 
 const chestBanList = [
+  "alltheores:lead_ingot",
+  "alltheores:nickel_plate",
+  "alltheores:silver_plate",
+  "create:copper_sheet",
+  "create:golden_sheet",
+  "createaddition:zinc_sheet",
   "enderio:copper_alloy_ingot",
   "enderio:dark_steel_ingot",
   "enderio:dark_steel_sword",
@@ -13,11 +19,18 @@ const chestBanList = [
   "enderio:vibrant_alloy_ingot",
   "enderio:vibrant_gear",
   "enderio:wood_gear",
+  "immersiveengineering:ingot_aluminum",
+  "immersiveengineering:ingot_lead",
+  "immersiveengineering:plate_lead",
+  "immersiveengineering:plate_nickel",
+  "immersiveengineering:seed",
+  "railcraft:brass_plate",
   "railcraft:charge_meter",
   "railcraft:creosote_bottle",
   "railcraft:goggles",
   "railcraft:iron_crowbar",
   "railcraft:iron_spike_maul",
+  "railcraft:lead_ingot",
   "railcraft:overalls",
   "railcraft:seasons_crowbar",
   "railcraft:signal_block_surveyor",
@@ -29,8 +42,10 @@ const chestBanList = [
   "railcraft:steel_helmet",
   "railcraft:steel_leggings",
   "railcraft:steel_pickaxe",
+  "railcraft:steel_plate",
   "railcraft:steel_sword",
   "railcraft:tank_minecart",
+  "railcraft:tin_plate",
   "sgjourney:jaffa_boots",
   "sgjourney:jaffa_chestplate",
   "sgjourney:jaffa_helmet",
@@ -57,9 +72,6 @@ const chestBanList = [
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
-  "railcraft:steel_plate",
-  "immersiveengineering:seed"
-
 ]
 
 const chestReplacementMap = {
