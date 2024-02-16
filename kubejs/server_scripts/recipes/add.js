@@ -64,60 +64,78 @@ const TFCGrains = [
 ]
 
 const gtVacuumShit = [
-"europium",
-"iridium",
-"niobium",
-"osmium",
-"palladium",
-"rhodium",
-"rutherium",
-"samarium",
-"silicon",
-"titanium",
-"tungsten",
-"vanadium",
-"yttrium",
-"naquadah",
-"enriched_naquadah",
-"naquadria",
-"trinium",
-"kanthal",
-"nichrome",
-"niobium_nitride",
-"niobium_titanium",
-"black_bronze",
-"ruridit",
-"ultimet",
-"vanadium_gallium",
-"yttrium_barium_cuprate",
-"osmiridium",
-"tungsten_carbide",
-"magnesium_diboride",
-"mercury_barium_calcium_cuprate",
-"uranium_triplatinum",
-"samarium_iron_arsenic_oxide",
-"indium_tin_barium_titanium_cuprate",
-"uranium_rhodium_dinaquadide",
-"enriched_naquadah_trinium_europium_duranide",
-"ruthenium_trinium_americium_neutronate",
-"tungsten_steel",
-"naquadah_alloy",
-"rhodium_plated_palladium",
-"hssg",
-"hsse",
-"hsss",
-"tantalum_carbide",
-"molybdenum_disilicide",
-"zeron_100",
-"watertight_steel",
-"incoloy_ma_956",
-"maraging_steel_300",
-"hastelloy_x",
-"stellite_100",
-"titanium_carbide",
-"titanium_tungsten_carbide",
-"hastelloy_c_276"
+  "europium",
+  "iridium",
+  "niobium",
+  "osmium",
+  "palladium",
+  "rhodium",
+  "rutherium",
+  "samarium",
+  "silicon",
+  "titanium",
+  "tungsten",
+  "vanadium",
+  "yttrium",
+  "naquadah",
+  "enriched_naquadah",
+  "naquadria",
+  "trinium",
+  "kanthal",
+  "nichrome",
+  "niobium_nitride",
+  "niobium_titanium",
+  "black_bronze",
+  "ruridit",
+  "ultimet",
+  "vanadium_gallium",
+  "yttrium_barium_cuprate",
+  "osmiridium",
+  "tungsten_carbide",
+  "magnesium_diboride",
+  "mercury_barium_calcium_cuprate",
+  "uranium_triplatinum",
+  "samarium_iron_arsenic_oxide",
+  "indium_tin_barium_titanium_cuprate",
+  "uranium_rhodium_dinaquadide",
+  "enriched_naquadah_trinium_europium_duranide",
+  "ruthenium_trinium_americium_neutronate",
+  "tungsten_steel",
+  "naquadah_alloy",
+  "rhodium_plated_palladium",
+  "hssg",
+  "hsse",
+  "hsss",
+  "tantalum_carbide",
+  "molybdenum_disilicide",
+  "zeron_100",
+  "watertight_steel",
+  "incoloy_ma_956",
+  "maraging_steel_300",
+  "hastelloy_x",
+  "stellite_100",
+  "titanium_carbide",
+  "titanium_tungsten_carbide",
+  "hastelloy_c_276"
 ]
+
+// ingot/plates/etc. to convert to GT equivalents
+const gtMetalReplaceMap = {
+  "alltheores:lead_ingot": "gtceu:lead_ingot",
+  "alltheores:nickel_plate": "gtceu:nickel_plate",
+  "alltheores:silver_plate": "gtceu:silver_plate",
+  "create:copper_sheet": "gtceu:copper_plate",
+  "create:golden_sheet": "gtceu:gold_plate",
+  "createaddition:zinc_sheet": "gtceu:zinc_plate",
+  "immersiveengineering:ingot_aluminum": "gtceu:aluminium_ingot",
+  "immersiveengineering:ingot_lead": "gtceu:lead_ingot",
+  "immersiveengineering:plate_lead": "gtceu:lead_plate",
+  "immersiveengineering:plate_nickel": "gtceu:nickel_plate",
+  "railcraft:brass_plate": "gtceu:brass_plate",
+  "railcraft:lead_ingot": "gtceu:lead_ingot",
+  "railcraft:tin_plate": "gtceu:tin_plate",
+}
+
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
@@ -268,14 +286,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Create End
 
   //GTCEU Start
-  shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
+  event.recipes.kubejs.shaped("gtceu:primitive_blast_furnace", ["HRS", "PBR", "DRS"], {
     H: "#forge:tools/hammers",
     R: "#forge:rods/steel",
     S: "#forge:screws/steel",
     P: "#forge:sheets/steel",
     B: "gtceu:firebricks",
     D: "#forge:tools/screwdrivers"
-  })
+  }).damageIngredient(["#forge:tools"])
   shaped("2x gtceu:coke_oven_bricks", ["BMB","MBM","BMB"], {
     M: "tfc:mortar",
     B: "gtceu:coke_oven_brick"
@@ -439,7 +457,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     },
     duration: 6000
   }).id('gregitas:barrel/creosote_treated_lumber')
-  
+
   //GTCEU End
 
   //Rock and Stone!
@@ -476,20 +494,20 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
-    e: 'gtceu:mv_emitter', 
-    O: 'gtceu:obsidian_plate', 
-    s: 'gtceu:mv_sensor', 
-    c: 'gtceu:mv_conveyor_module', 
-    C: 'gtceu:lv_super_chest', 
+    e: 'gtceu:mv_emitter',
+    O: 'gtceu:obsidian_plate',
+    s: 'gtceu:mv_sensor',
+    c: 'gtceu:mv_conveyor_module',
+    C: 'gtceu:lv_super_chest',
     f: 'gtceu:lv_field_generator'
   })
 
   shaped('endertanks:ender_tank', ['eOs', 'pTp', 'OfO'], {
-    e: 'gtceu:mv_emitter', 
-    O: 'gtceu:obsidian_plate', 
-    s: 'gtceu:mv_sensor', 
-    p: 'gtceu:mv_electric_pump', 
-    T: 'gtceu:lv_super_tank', 
+    e: 'gtceu:mv_emitter',
+    O: 'gtceu:obsidian_plate',
+    s: 'gtceu:mv_sensor',
+    p: 'gtceu:mv_electric_pump',
+    T: 'gtceu:lv_super_tank',
     f: 'gtceu:lv_field_generator'
   })
   //ImmersiveEngineering
@@ -777,22 +795,22 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.shapeless('storagedrawers:emerald_storage_upgrade',   ['2x #forge:plates/stainless_steel','storagedrawers:upgrade_template'])
 
     TFCGrains.forEach((grain) => {
-    smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
-    smoking(`tfc:food\/${grain}_bread`,`firmalife:food\/${grain}_dough`)
+      smoking(`firmalife:food\/${grain}_flatbread`,`tfc:food\/${grain}_dough`)
     })
 
-    shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
+    event.recipes.kubejs.shaped("gtceu:bronze_rotor" , ["PHP", "SRF","PDP"], {
         H: "#forge:tools/hammers",
         D: "#forge:tools/screwdrivers",
         S: "#forge:screws/bronze",
         P: "#gravitas:bronze_plates",
         R: "gtceu:bronze_ring",
         F: "#forge:tools/files"
-    })
-    shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
+    }).damageIngredient(["#forge:tools"])
+
+    event.recipes.kubejs.shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
         H: "#forge:tools/hammers",
         P: "#gravitas:bronze_plates"
-    })
+    }).damageIngredient(["#forge:tools"])
 
     gtVacuumShit.forEach((hot) => {
         event.custom({
@@ -812,4 +830,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          sound: "minecraft:block.fire.extinguish"
          })
     })
+
+    for (const [item, replacement] of Object.entries(gtMetalReplaceMap)) {
+      event.shapeless(replacement, [item])
+    }
+    event.shapeless("immersiveengineering:storage_steel","gtceu:steel_block")
+    event.shapeless("gtceu:steel_block","immersiveengineering:storage_steel")
 }

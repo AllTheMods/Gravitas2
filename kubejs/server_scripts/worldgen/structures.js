@@ -41,7 +41,6 @@ const strucBlocksReplacementMap = {
 
 const strucBlocksWithPropertiesMap = {
 
-  "minecraft:chest": "minecraft:barrel",
   "minecraft:composter": "tfc:composter",
   "minecraft:beetroots": "tfc:crop/beet",
   "minecraft:carrots": "tfc:crop/carrot",

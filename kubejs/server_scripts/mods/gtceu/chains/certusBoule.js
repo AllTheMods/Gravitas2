@@ -13,7 +13,7 @@ let certusSemiconductors = (/** @type {Internal.RecipesEventJS} */ event) => {
         .EUt(MV).duration(100)
 
     event.recipes.gtceu.chemical_reactor("trichlorocertane")
-        .itemInputs('1x gregitas:certus_dust')
+        .itemInputs('1x gregitas_core:certus_dust')
         .inputFluids('gtceu:hydrochloric_acid 3000')
         .outputFluids([
             'gregitas_core:trichlorocertane 1000',

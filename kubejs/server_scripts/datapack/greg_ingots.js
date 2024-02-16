@@ -187,6 +187,24 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     addTFCCastingRecipe(ingot.toString(), fluid.toString(), 144)
   })
 
+  let gtceuFluidCast = [
+    "tin",
+    "silver",
+    "gold",
+    "copper",
+    "nickel",
+    "bismuth",
+  ]
+
+  gtceuFluidCast.forEach((id) => {
+    addTFCMetalFluid("gtceu:" + id, 3, Math.max(230, $FluidHelper.getTemperature(Fluid.of("gtceu:" + id)) - 273), 0.0085, "#forge:ingots/" + id, "#forge:plates/" + id, "#forge:double_ingots/" + id)
+    if (id == "gold" || id == "copper") return
+    addTFCCastingRecipe("gtceu:" + id + "_ingot", "gtceu:" + id, 144)
+  })
+  
+  addTFCCastingRecipe("tfc:metal/ingot/copper", "gtceu:copper", 144)
+  addTFCCastingRecipe("tfc:metal/ingot/gold", "gtceu:gold", 144)
+
   let TFCMoltenTemps = {
     "tfc:metal/copper": 1080,
     "tfc:metal/gold": 1060,
@@ -323,8 +341,27 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       ore: "gtceu:raw_chromite",
       liquid: "gtceu:chromium",
       amount: 72
+    },
+    {
+      ore: "tfc:ore/small_chromite",
+      liquid: "gtceu:chromium",
+      amount: 16
+    },
+    {
+      ore: "tfc:ore/poor_chromite",
+      liquid: "gtceu:chromium",
+      amount: 24
+    },
+    {
+      ore: "tfc:ore/normal_chromite",
+      liquid: "gtceu:chromium",
+      amount: 36
+    },
+    {
+      ore: "tfc:ore/rich_chromite",
+      liquid: "gtceu:chromium",
+      amount: 48
     }
-
 
   ]
 

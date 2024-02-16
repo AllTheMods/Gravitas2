@@ -1,6 +1,7 @@
 // priority 10
 
 const chestBanList = [
+  "alltheores:steel_plate",
   "enderio:copper_alloy_ingot",
   "enderio:dark_steel_ingot",
   "enderio:dark_steel_sword",
@@ -13,6 +14,8 @@ const chestBanList = [
   "enderio:vibrant_alloy_ingot",
   "enderio:vibrant_gear",
   "enderio:wood_gear",
+  "immersiveengineering:ingot_aluminum",
+  "immersiveengineering:seed",
   "railcraft:charge_meter",
   "railcraft:creosote_bottle",
   "railcraft:goggles",
@@ -29,6 +32,7 @@ const chestBanList = [
   "railcraft:steel_helmet",
   "railcraft:steel_leggings",
   "railcraft:steel_pickaxe",
+  "railcraft:steel_plate",
   "railcraft:steel_sword",
   "railcraft:tank_minecart",
   "sgjourney:jaffa_boots",
@@ -57,12 +61,19 @@ const chestBanList = [
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
   "minecraft:enchanting_table",
-  "railcraft:steel_plate",
-  "immersiveengineering:seed"
-
 ]
 
 const chestReplacementMap = {
+  "alltheores:lead_ingot": "gtceu:lead_ingot",
+  "alltheores:lead_plate": "gtceu:lead_plate",
+  "alltheores:nickel_plate": "gtceu:nickel_plate",
+  "alltheores:silver_plate": "gtceu:silver_plate",
+  "create:copper_sheet": "gtceu:copper_plate",
+  "create:golden_sheet": "gtceu:gold_plate",
+  "createaddition:zinc_sheet": "gtceu:zinc_plate",
+  "immersiveengineering:ingot_lead": "gtceu:lead_ingot",
+  "immersiveengineering:plate_lead": "gtceu:lead_plate",
+  "immersiveengineering:plate_nickel": "gtceu:nickel_plate",
   "minecraft:amethyst": "tfc:gem/amethyst",
   "minecraft:allium": "tfc:plant/allium",
   "minecraft:apple": "tfc:food/red_apple",

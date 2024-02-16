@@ -37,7 +37,14 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
    )
    event.add('tfc:usable_in_ingot_mold',
         [
+            'gtceu:tin',
+            'gtceu:silver',
+            'gtceu:gold',
+            'gtceu:copper',
+            'gtceu:nickel',
+            'gtceu:bismuth',
             'gtceu:rubber',
+            'gtceu:chromium',
             'gregitas_core:igneous_alloy',
             "gtceu:invar"
         ]
