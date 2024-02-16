@@ -82,6 +82,12 @@
 	"metal.gtceu.vanadium_steel": "Vanadium Steel",
 	"metal.gtceu.yttrium": "Yttrium",
 	"metal.gtceu.yttrium_barium_cuprate": "Yttrium Barium Cuprate",
+	"metal.gtceu.tin": "Tin",
+	"metal.gtceu.silver": "Silver",
+	"metal.gtceu.gold": "Gold",
+	"metal.gtceu.copper": "Copper",
+	"metal.gtceu.nickel": "Nickel",
+	"metal.gtceu.bismuth": "Bismuth",
 
 	"block.gtceu.greenhouse": "Greenhouse",
     "block.gtceu.advanced_large_chemical_reactor": "Advanced Large Chemical Reactor",
