@@ -14,7 +14,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
-  event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
+  event.remove({ id: "gtceu:shaped/stick_long_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
   event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
@@ -57,7 +57,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ output: `railcraft:${tool}_boots`, mod: "railcraft" })
 
     //GT General
-    event.remove({ id: `/^gtceu:shaped/plate_double_.*/`})
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
     event.remove({ id: "gtceu:shaped/rotor_bronze"})
     event.remove({ id: "gtceu:shaped/bronze_hull"})

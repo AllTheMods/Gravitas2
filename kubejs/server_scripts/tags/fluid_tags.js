@@ -49,10 +49,7 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
             "gtceu:invar"
         ]
     )
-    gtceuIngots1.forEach(id => {
-        event.add('tfc:usable_in_ingot_mold', `gtceu:${id}`)
-    })
-    
+
     event.add('forge:salt_water', 'tfc:salt_water')
     
     tfcMetalFluids.forEach(fluid => {
