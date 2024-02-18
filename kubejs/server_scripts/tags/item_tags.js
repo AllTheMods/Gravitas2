@@ -231,6 +231,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       event.add('tfc:usable_on_tool_rack',`${id}_pickaxe`)
       event.add('tfc:usable_on_tool_rack',`${id}_axe`)
       event.add('tfc:usable_on_tool_rack',`${id}_shovel`)
+      event.add('tfc:usable_on_tool_rack',`${id}_spade`)
       event.add('tfc:usable_on_tool_rack',`${id}_hoe`)
       event.add('tfc:usable_on_tool_rack',`${id}_scythe`)
       event.add('tfc:usable_on_tool_rack',`${id}_butchery_knife`)
@@ -277,7 +278,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       'buildinggadgets2:gadget_copy_paste',
       'buildinggadgets2:gadget_cut_paste',
       'buildinggadgets2:gadget_destruction',
-      'expatternprovider:fishbig'
+      'expatternprovider:fishbig',
+      '#forge:tools'
     ]
   )
   event.add("gravitas:bronze_doubles", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
