@@ -79,7 +79,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
-                    item: 'gtceu:sulfur_small_dust'
+                    item: 'gtceu:small_sulfur_dust'
                 },
                 {
                     item: 'gtceu:raw_rubber_dust'
