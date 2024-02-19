@@ -148,7 +148,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     '2x ae2:fluix_crystal'
                 )
                 .inputFluids(
-                    Fluid.of('gtceu:fiberglass',36)
+                    Fluid.of('gcyr:fiberglass',36)
                 )
                 .itemOutputs(
                     '8x ae2:fluix_glass_cable'

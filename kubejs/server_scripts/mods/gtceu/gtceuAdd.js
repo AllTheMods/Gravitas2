@@ -372,9 +372,9 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.recipes.gtceu.assembler('gregitas:packaged_greenhouse')
         .itemInputs(
-            '64x firmalife:iron_greenhouse_wall',
-            '64x firmalife:iron_greenhouse_wall',
-            '11x firmalife:iron_greenhouse_wall',
+            '32x firmalife:iron_greenhouse_wall',
+            '32x firmalife:iron_greenhouse_wall',
+            '32x firmalife:iron_greenhouse_wall',
             '12x firmalife:copper_pipe',
             '4x firmalife:sprinkler',
             '4x firmalife:iron_greenhouse_port',
@@ -394,6 +394,8 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.gtceu.assembler('gregitas:greenhouse')
         .itemInputs(
             'gregitas:packaged_greenhouse',
+            '32x firmalife:iron_greenhouse_wall',
+            '11x firmalife:iron_greenhouse_wall',
             'gtceu:solid_machine_casing',
             '3x #gtceu:circuits/mv',
             '2x gtceu:copper_double_cable',
