@@ -300,7 +300,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(LV)
     })
 
-    event.recipes.kubejs.shaped('gtceu:wood_drum', [ 'mRs', 'PWP', 'PWP' ], { m: '#forge:tools/mallets', R: 'gtceu:sticky_resin', s: '#forge:tools/saws', P: '#minecraft:planks', W: 'gtceu:wrought_iron_long_rod'}).damageIngredient(['#forge:tools'])
+    event.recipes.kubejs.shaped('gtceu:wood_drum', [ 'mRs', 'PWP', 'PWP' ], { m: '#forge:tools/mallets', R: 'gtceu:sticky_resin', s: '#forge:tools/saws', P: '#minecraft:planks', W: 'gtceu:long_wrought_iron_rod'}).damageIngredient(['#forge:tools'])
 
     event.recipes.kubejs.shaped('gtceu:lv_electric_motor', ['cwr', 'wmw', 'rwc'], { c: 'gtceu:tin_single_cable', w: 'gtceu:copper_single_wire', r: 'gtceu:wrought_iron_rod', m: 'gregitas_core:magnetic_wrought_iron_rod' })
 
