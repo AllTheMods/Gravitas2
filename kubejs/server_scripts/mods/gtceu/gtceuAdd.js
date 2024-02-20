@@ -406,4 +406,22 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         )
         .EUt(MV)
         .duration(250)
+
+    event.recipes.gtceu.chemical_vapor_deposition("gregitas:green_froglight")
+        .itemInputs('3x gtceu:zinc_dust', '3x gtceu:sulfur_dust')
+        .inputFluids('gtceu:copper 72')
+        .itemOutputs('32x minecraft:verdant_froglight')
+        .EUt(LV).duration(200)
+
+    event.recipes.gtceu.chemical_vapor_deposition("gregitas:orange_froglight")
+        .itemInputs('3x gtceu:zinc_dust', '3x gtceu:sulfur_dust')
+        .inputFluids('gtceu:manganese 72')
+        .itemOutputs('32x minecraft:ochre_froglight')
+        .EUt(LV).duration(200)
+
+    event.recipes.gtceu.chemical_vapor_deposition("gregitas:blue_froglight")
+        .itemInputs('3x gtceu:zinc_dust', '3x gtceu:sulfur_dust')
+        .inputFluids('gtceu:silver 72')
+        .itemOutputs('32x minecraft:pearlescent_froglight')
+        .EUt(LV).duration(200)
 }
