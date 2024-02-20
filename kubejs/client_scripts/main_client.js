@@ -18,6 +18,7 @@ ClientEvents.lang("en_us", (event) => {
   addGregitasName(event)
   convertBucketsToIngots(event)
   addRailwaysTFCNames(event)
+  addExtraCreateTooltips()
 })
 
 ItemEvents.tooltip(event => {
