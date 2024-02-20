@@ -208,4 +208,10 @@
     "material.certus_tetrachloride": "Certus Tetrachloride",
     "material.certane": "Certane",
     "material.polycertus": "Polycertus"
+
+    "item.gtceu.terminal.tooltip.summary": "A terminal that will aid you on your _GregTech_ journey across _Gravitas²_ You must construct additional... _Multiblocks?_",
+	"item.gtceu.terminal.tooltip.condition1": "R-Click",
+	"item.gtceu.terminal.tooltip.behaviour1": "Opens the In-game _GTCEU Manual_ that is currently _Work In Progress_",
+	"item.gtceu.terminal.tooltip.condition2": "R-Click while Sneaking on Controller",
+	"item.gtceu.terminal.tooltip.behaviour2": "Will attempt to _Construct_ the corresponding multiblock of the _Gregtech Controller_ with all available blocks inside the _Player Inventory_"
 }
