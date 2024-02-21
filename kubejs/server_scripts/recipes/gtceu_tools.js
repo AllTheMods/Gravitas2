@@ -77,9 +77,9 @@ const gtceuToolsTFC = [
   },
   {
     id: 'stainless_steel',
-    fluid: 'firmalife:metal/stainless_steel',
+    fluid: 'gtceu:stainless_steel',
     tier: 5,
-    double: 'firmalife:metal/double_ingot/stainless_steel'
+    double: 'gregitas:double_stainless_steel_ingot'
   },
   {
     id: 'steel',
@@ -152,9 +152,9 @@ const gtceuToolsGT = [
   },
   {
     id: 'stainless_steel',
-    fluid: 'firmalife:metal/stainless_steel',
+    fluid: 'gtceu:stainless_steel',
     tier: 5,
-    double: 'firmalife:metal/double_ingot/stainless_steel'
+    double: 'gregitas:double_stainless_steel_ingot'
   },
   {
     id: 'damascus_steel',
@@ -191,7 +191,21 @@ const gtceuALLToolMetalsID = [
     'blue_steel'
 ]
 let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
-    //Mortar
+      //Weilding
+    event.custom({
+        type: 'tfc:welding',
+        first_input: {
+          item: 'gtceu:stainless_steel_ingot'
+        },
+        second_input: {
+          item: 'gtceu:stainless_steel_ingot'
+        },
+        tier: 4,
+        result: {
+          item: 'gregitas:double_stainless_steel_ingot'
+        }
+      })
+  //Mortar
     tfcRockKnapping.forEach((rock) => {
         event.custom({
             type: 'tfc:knapping',
