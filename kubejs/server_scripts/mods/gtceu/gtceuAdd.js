@@ -353,7 +353,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             let fluidRemap = TFCFluidGTFluidMap[fluidIngredient.getId()];
             if (fluidRemap == null) { return }
             let orePieceId = orePiece.toString().replace("\"", "");
-            orePieceId = orePieceId.substring("tfc:ore/".length);
+            orePieceId = orePieceId.substring("firmalife:ore/".length);
 
             event.recipes.gtceu.extractor(`extract_${orePieceId}`)
                 .itemInputs(orePiece)

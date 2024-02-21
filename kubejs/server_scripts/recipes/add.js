@@ -70,7 +70,7 @@ const gtVacuumShit = [
   "osmium",
   "palladium",
   "rhodium",
-  "rutherium",
+  "ruthenium",
   "samarium",
   "silicon",
   "titanium",
