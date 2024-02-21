@@ -1357,7 +1357,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(1000)
             .EUt(EV)
 
-        event.recipes.gtceu.assembler('gregitas:crafting_terminal')
+        event.recipes.gtceu.assembler('gregitas:wireless_crafting_terminal')
             .itemInputs(
                 'ae2:wireless_terminal',
                 'gregitas:crafting_core',
