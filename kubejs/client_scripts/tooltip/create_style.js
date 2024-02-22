@@ -196,6 +196,14 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐§2▒▒▒▒§d▓▓§5█§7☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_-7_°C - _18_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_200_mm - _500_mm]"
+                ])
                 .build()
         )
 
@@ -210,6 +218,14 @@ const addExtraCreateTooltips = (event) => {
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐☐☐☐§2▒▒▒§d▓▓§5█§7☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_15_°C - _35_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_200_mm - _500_mm]"
                 ])
                 .build()
         )
@@ -226,6 +242,14 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐☐§2▒▒▒▒§d▓▓§5█§7☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_5_°C - _27_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_200_mm - _500_mm]"
+                ])
                 .build()
         )
 
@@ -240,6 +264,14 @@ const addExtraCreateTooltips = (event) => {
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐§2▒▒▒▒§d▓▓▓§5█§7☐☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_-2_°C - _17_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_80_mm - _380_mm]"
                 ])
                 .build()
         )
@@ -256,6 +288,14 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§d▓▓§5█§7☐☐☐☐☐☐§2▒▒▒"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_5_°C - _28_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_100_mm - _400_mm]"
+                ])
                 .build()
         )
 
@@ -270,6 +310,14 @@ const addExtraCreateTooltips = (event) => {
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐☐☐§2▒▒▒▒▒§d▓▓§5█§7☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_-6_°C - _17_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_100_mm - _400_mm]"
                 ])
                 .build()
         )
@@ -286,6 +334,14 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐§2▒▒▒▒§d▓▓§5█§7☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_-5_°C - _17_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_250_mm - _500_mm]"
+                ])
                 .build()
         )
 
@@ -300,6 +356,14 @@ const addExtraCreateTooltips = (event) => {
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐§2▒▒▒▒§d▓▓§5█§7☐☐☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_7_°C - _24_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_200_mm - _500_mm]"
                 ])
                 .build()
         )
@@ -316,6 +380,14 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐☐§2▒▒▒▒§d▓▓§5█§7☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_5_°C - _25_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_200_mm - _500_mm]"
+                ])
                 .build()
         )
 
@@ -330,6 +402,14 @@ const addExtraCreateTooltips = (event) => {
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐§2▒▒▒▒§d▓▓§5█§7☐☐☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_7_°C - _29_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_100_mm - _400_mm]"
                 ])
                 .build()
         )
@@ -346,10 +426,18 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐§2▒▒▒▒§d▓▓§5█§7☐☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_10_°C - _33_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_100_mm - _400_mm]"
+                ])
                 .build()
         )
 
-        /// TFC CHERRY TREE
+        /// TFC CHERRY SAPLING
         event.addAll(
             createTooltip("tfc:plant/cherry_sapling")
                 .addSummary(
@@ -361,10 +449,18 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§2▒▒▒§d▓▓§5█§7☐☐☐☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_5_°C - _25_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_100_mm - _350_mm]"
+                ])
                 .build()
         )
 
-        /// TFC GREEN APPLE TREE
+        /// TFC GREEN APPLE SAPLING
         event.addAll(
             createTooltip("tfc:plant/green_apple_sapling")
                 .addSummary(
@@ -376,40 +472,43 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐§2▒▒▒▒▒§d▓▓§5█§7☐☐"
                 ])
-                .build()
-        )
-
-        /// TFC APPLE TREE
-        event.addAll(
-            createTooltip("tfc:plant/apple_sapling")
-                .addSummary(
-                    "§7☐§r = Dormant  " + FakeNewLine +
-                    "§2▒§r = Growing  " + FakeNewLine +
-                    "§d▓§r = Flowering" + FakeNewLine +
-                    "§5█§r = Fruiting ")
                 .addBehaviour([
-                    "Fruiting Calendar",
-                    "§7☐☐§2▒▒▒▒▒§d▓▓§5█§7☐☐"
+                    "Avg. Temp",
+                    "[_1_°C - _25_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_110_mm - _280_mm]"
                 ])
                 .build()
         )
 
-        /// TFC LEMON TREE
+        /// TFC LEMON SAPLING
         event.addAll(
             createTooltip("tfc:plant/lemon_sapling")
                 .addSummary(
                     "§7☐§r = Dormant  " + FakeNewLine +
                     "§2▒§r = Growing  " + FakeNewLine +
                     "§d▓§r = Flowering" + FakeNewLine +
-                    "§5█§r = Fruiting ")
+                    "§5█§r = Fruiting " + FakeNewLine +
+                    "§8§oWhen life gives you lemons you make..." +
+                    "§8§oFruity Fluid?")
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐§2▒▒▒▒§d▓▓§5█§7☐☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_10_°C - _30_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_180_mm - _470_mm]"
+                ])
                 .build()
         )
 
-        /// TFC OLIVE TREE
+        /// TFC OLIVE SAPLING
         event.addAll(
             createTooltip("tfc:plant/olive_sapling")
                 .addSummary(
@@ -421,10 +520,18 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐§2▒▒▒▒▒§d▓▓§5█§7☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_5_°C - _30_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_150_mm - _500_mm]"
+                ])
                 .build()
         )
 
-        /// TFC ORANGE TREE
+        /// TFC ORANGE SAPLING
         event.addAll(
             createTooltip("tfc:plant/orange_sapling")
                 .addSummary(
@@ -436,25 +543,42 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐§2▒▒▒▒§d▓▓§5█§7☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_15_°C - _36_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_250_mm - _500_mm]"
+                ])
                 .build()
         )
 
-        /// TFC PEACH TREE
+        /// TFC PEACH SAPLING
         event.addAll(
             createTooltip("tfc:plant/peach_sapling")
                 .addSummary(
                     "§7☐§r = Dormant  " + FakeNewLine +
                     "§2▒§r = Growing  " + FakeNewLine +
                     "§d▓§r = Flowering" + FakeNewLine +
-                    "§5█§r = Fruiting ")
+                    "§5█§r = Fruiting " + FakeNewLine +
+                    "§8§oWhy does a spiky turtle like me?§r")
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§2▒▒▒§d▓▓§5█§7☐☐☐☐☐§2▒"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_4_°C - _27_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_60_mm - _230_mm]"
+                ])
                 .build()
         )
 
-        /// TFC PLUM TREE
+        /// TFC PLUM SAPLING
         event.addAll(
             createTooltip("tfc:plant/plum_sapling")
                 .addSummary(
@@ -466,10 +590,18 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§2▒▒▒▒§d▓▓§5█§7☐☐☐☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_15_°C - _31_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_250_mm - _400_mm]"
+                ])
                 .build()
         )
 
-        /// TFC BANANA TREE
+        /// TFC BANANA SAPLING
         event.addAll(
             createTooltip("tfc:plant/banana_sapling")
                 .addSummary(
@@ -481,10 +613,18 @@ const addExtraCreateTooltips = (event) => {
                     "Fruiting Calendar",
                     "§7☐☐☐§2▒▒▒▒§d▓▓§5█§7☐☐"
                 ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_17_°C - _35_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_280_mm - _500_mm]"
+                ])
                 .build()
         )
 
-        /// TFC RED APPLE TREE
+        /// TFC RED APPLE SAPLING
         event.addAll(
             createTooltip("tfc:plant/red_apple_sapling")
                 .addSummary(
@@ -495,6 +635,14 @@ const addExtraCreateTooltips = (event) => {
                 .addBehaviour([
                     "Fruiting Calendar",
                     "§7☐☐§2▒▒▒▒▒§d▓▓§5█§7☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_1_°C - _25_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_100_mm - _280_mm]"
                 ])
                 .build()
         )
@@ -509,7 +657,15 @@ const addExtraCreateTooltips = (event) => {
                     "§5█§r = Fruiting ")
                 .addBehaviour([
                     "Fruiting Calendar",
-                    "_N/A_ Feel free to notify us on Discord if you find the calendar"
+                    "§7☐§2▒▒▒▒▒§d▓§5█§7☐☐☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_7_°C - _24_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_200_mm - _400_mm]"
                 ])
                 .build()
         )
@@ -524,7 +680,15 @@ const addExtraCreateTooltips = (event) => {
                     "§5█§r = Fruiting ")
                 .addBehaviour([
                     "Fruiting Calendar",
-                    "_N/A_ Feel free to notify us on Discord if you find the calendar"
+                    "§7☐☐§2▒▒▒▒§d▓▓§5█§7☐☐☐"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_20_°C - _32_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_250_mm - _500_mm]"
                 ])
                 .build()
         )
@@ -539,7 +703,15 @@ const addExtraCreateTooltips = (event) => {
                     "§5█§r = Fruiting ")
                 .addBehaviour([
                     "Fruiting Calendar",
-                    "_N/A_ Feel free to notify us on Discord if you find the calendar"
+                    "§2▒▒§d▓▓§5█§7☐☐☐☐☐§2▒▒"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_20_°C - _35_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_125_mm - _215_mm]"
                 ])
                 .build()
         )
@@ -554,7 +726,15 @@ const addExtraCreateTooltips = (event) => {
                     "§5█§r = Fruiting ")
                 .addBehaviour([
                     "Fruiting Calendar",
-                    "_N/A_ Feel free to notify us on Discord if you find the calendar"
+                    "§2▒▒▒§d▓▓§5█§7☐☐☐☐☐§2▒"
+                ])
+                .addBehaviour([
+                    "Avg. Temp",
+                    "[_20_°C - _35_°C]"
+                ])
+                .addBehaviour([
+                    "Annual Rainfall",
+                    "[_220_mm - _400_mm]"
                 ])
                 .build()
         )
@@ -597,7 +777,7 @@ const addExtraCreateTooltips = (event) => {
         )
     }
 
-    /* TFC WOOD SAPLINGS */ {
+    /* TFC WOOD SAPLINGS INFO */ {
         /// TFC WOOD ACACIA SAPLING
         event.addAll(
             createTooltip("tfc:wood/sapling/acacia")
@@ -722,6 +902,7 @@ const addExtraCreateTooltips = (event) => {
         event.addAll(
             createTooltip("tfc:wood/sapling/kapok")
                 .addSummary("In ancient times, the _Maya_ believed that the _Kapok_ tree stood at the center of the _Earth_.")
+                
                 .addBehaviour([
                     "Avg. Temp",
                     "[_17.1_°C - _38_°C]"
@@ -730,13 +911,13 @@ const addExtraCreateTooltips = (event) => {
                     "Annual Rainfall",
                     "[_320_mm - _500_mm]"
                 ])
-                .addBehaviour([
-                    "When Tapped",
-                    "Produces _Resin_, crucial when combined with _Sulfur_, making _Rubber_"
-                ])
-                .addBehaviour([
+                .addAction([
                     "Tapping Calendar",
                     "§7☐§2█████§7☐§2███§7☐☐"
+                ])
+                .addAction([
+                    "When Tapped",
+                    "Produces _Resin_, crucial when combined with _Sulfur_, making _Rubber_"
                 ])
                 .build()
         )
