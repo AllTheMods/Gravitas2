@@ -79,7 +79,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:anvil", "tfc:metal/anvil/wrought_iron")
   event.replaceInput({ type: "minecraft:crafting_shapeless" }, "minecraft:slime_ball", "tfc:glue")
-  event.replaceInput({ mod: "create" },"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceInput({ mod: "create" },"minecraft:iron_ingot", "gtceu:wrought_iron_ingot")
+
+  event.replaceInput({ mod: "create" },"#forge:plates/iron", "gtceu:wrought_iron_plate")
   event.replaceInput({ mod: "railways" },"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ mod: "railcraft" },"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:slime_ball", "tfc:glue")

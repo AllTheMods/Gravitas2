@@ -573,6 +573,28 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs([`gtceu:impure_${powder.replace("_lazuli", "")}_dust`])
     .EUt(ULV).duration(200)
    })
+   event.recipes.gtceu.alloy_smelter('brick')
+           .itemInputs(
+               'minecraft:clay_ball'
+           )
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs(
+               'minecraft:brick'
+           )
+           .duration(120)
+           .EUt(LV)
+
+    tfcStone.forEach(stone => {
+        event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
+               .itemInputs(
+                   `tfc:rock/loose/${stone}`
+               )
+               .notConsumable('gtceu:ingot_casting_mold')
+               .itemOutputs(
+                   `tfc:brick/${stone}`               )
+               .duration(120)
+               .EUt(LV)
+    })
     event.recipes.gtceu.alloy_smelter('copper_alloy')
         .itemInputs(
             '#forge:silicon',
