@@ -374,6 +374,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     addTFCHeatingRecipe(ore.ore, ore.liquid, temp, ore.amount)
   })
 
+  addTFCCastingRecipe("firmalife:metal/ingot/chromium", "gtceu:chromium", 144)
   addTFCHeatCapability("gregitas:double_invar_ingot", 2.857, 921, 1228)
   addTFCHeatCapability("gtceu:wrought_iron_bolt", 1.429, 921, 1228)
 

@@ -246,6 +246,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
+  event.remove({ id: /firmalife:heating\/ore\/.*_chromite/})
   //AE2
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
