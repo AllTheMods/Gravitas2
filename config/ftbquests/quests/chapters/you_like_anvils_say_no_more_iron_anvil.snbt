@@ -68,9 +68,15 @@
 			description: ["{gravitas.quest.iron.desc.cutting}"]
 			id: "7C814B7542057941"
 			tasks: [{
-				count: 16L
 				id: "725B8C6F1D91ECC1"
-				item: "tfc:brick/andesite"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:bricks"
+					}
+				}
+				title: "Any #tfc:bricks"
 				type: "item"
 			}]
 			title: "{gravitas.quest.iron.cutting}"
