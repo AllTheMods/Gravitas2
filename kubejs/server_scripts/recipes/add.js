@@ -553,7 +553,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     f: '#forge:frames/treated_wood',
     c: 'immersiveengineering:craftingtable'
   })
-
+  shaped('railcraft:wooden_tie', ['   ','ppp','   '], {
+    p: 'gregitas:creosote_treated_lumber'
+    })
   const gemPowders = [
     "amethyst",
     "emerald",
