@@ -33,6 +33,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'gtceu:shaped/lv_extruder' })
 
 
+
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {
     event.remove({ output: `gtceu:${tool}_shovel`, mod: "gtceu" })
@@ -98,7 +99,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "railcraft:coke_oven_bricks" })
   event.remove({ id: "railcraft:solid_fueled_firebox" })
   event.remove({ id: "railcraft:brass_ingot_crafted_with_ingots" })
-
+  event.remove({ id: "railcraft:wooden_tie"})
+  event.remove({ id: "railcraft:wooden_tie_bottle"})
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
@@ -124,6 +126,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_armor/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
+  event.remove({ id: "create:crafting/appliances/tree_fertilizer"})
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
   event.remove({ id: "create:crafting/kinetics/mechanical_press"})
