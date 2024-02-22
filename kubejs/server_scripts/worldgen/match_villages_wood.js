@@ -1,6 +1,6 @@
 // priority: 10
 
-const RandomSource = $Class.forName("net.minecraft.util.RandomSource")
+const $RandomSource = Java.loadClass("net.minecraft.util.RandomSource")
 
 let TREE_FOREST
 let FOREST_FEATURE
@@ -21,7 +21,7 @@ let replaceVillagesWoodAccordingToClimate = (/** @type {Internal.StructureAfterP
       .getDeclaredMethod(
         "getTree",
         chunkData.getClass(),
-        RandomSource,
+        $RandomSource,
         TREE_FOREST.config().getClass(),
         event.chunkPos.worldPosition.getClass()
       )

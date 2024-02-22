@@ -234,7 +234,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.shapeless('gtceu:flint_mortar', ['gregitas:stone_bowl', 'gregitas:flint_pestle'])
 
         gtMortars.forEach((metal) => {
-            event.recipes.tfc.anvil(`gregitas:${metal.id}_pestle`, metal.double, ['hit_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            event.recipes.tfc.anvil(`gregitas:${metal.id}_pestle`, metal.double, ['shrink_last', 'draw_second_last', 'hit_third_last']).tier(metal.tier)
             /*
             event.custom({
                 type: 'tfc:anvil',
@@ -258,7 +258,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     
     //File
         gtceuToolsTFC.forEach((metal) => {
-            event.recipes.tfc.anvil(`gregitas:${metal.id}_file_head`, metal.double, ['hit_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            event.recipes.tfc.anvil(`gregitas:${metal.id}_file_head`, metal.double, ['shrink_last', 'draw_second_last', 'hit_third_last']).tier(metal.tier)
             /*
             event.custom({
                 type: 'tfc:anvil',
@@ -295,7 +295,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                     item: `gtceu:long_${metal.id}_rod`
                 }
             })
-            event.recipes.tfc.anvil(`gtceu:${metal.id}_screwdriver_tip`, `gtceu:long_${metal.id}_rod`, ['draw_third_last', 'draw_second_last', 'shrink_last']).tier(metal.tier)
+            event.recipes.tfc.anvil(`gtceu:${metal.id}_screwdriver_tip`, `gtceu:long_${metal.id}_rod`, ['shrink_last', 'draw_second_last', 'draw_third_last']).tier(metal.tier)
             /*
             event.custom({
                 type: "tfc:anvil",
@@ -336,7 +336,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 }
             )
 
-            event.shaped(`gtceu:${metal.id}_hammer`, ['RH'], {H: `gregitas:${metal.id}_hammer_head`, R: 'gtceu:wood_long_rod'}).id(`gregitas:shaped/${metal.id}_hammer`)
+            event.shaped(`gtceu:${metal.id}_hammer`, ['RH'], {H: `gregitas:${metal.id}_hammer_head`, R: '#forge:rods/wooden'}).id(`gregitas:shaped/${metal.id}_hammer`)
         })
 
     //Saw
@@ -358,7 +358,7 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
                 }
             )
 
-            event.shaped(`gtceu:${metal.id}_saw`, ['HR'], {H: `gregitas:${metal.id}_saw_blade`, R: 'gtceu:wood_long_rod'}).id(`gregitas:shaped/${metal.id}_saw`)
+            event.shaped(`gtceu:${metal.id}_saw`, ['HR'], {H: `gregitas:${metal.id}_saw_blade`, R: 'gtceu:long_wood_rod'}).id(`gregitas:shaped/${metal.id}_saw`)
         })
 
     //Wire Cutters
@@ -558,10 +558,10 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
             }
         ).id('gregitas:rubber_knapping/polybenzimidazole_plunger_head')
         
-        event.recipes.kubejs.shapeless('gtceu:rubber_plunger', ['gtceu:wood_long_rod', 'gregitas:rubber_plunger_head'])
-        event.recipes.kubejs.shapeless('gtceu:polyethylene_plunger', ['gtceu:wood_long_rod', 'gregitas:polyethylene_plunger_head'])
-        event.recipes.kubejs.shapeless('gtceu:polytetrafluoroethylene_plunger', ['gtceu:wood_long_rod', 'gregitas:polytetrafluoroethylene_plunger_head'])
-        event.recipes.kubejs.shapeless('gtceu:polybenzimidazole_plunger', ['gtceu:wood_long_rod', 'gregitas:polybenzimidazole_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:rubber_plunger', ['gtceu:long_wood_rod', 'gregitas:rubber_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:polyethylene_plunger', ['gtceu:long_wood_rod', 'gregitas:polyethylene_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:polytetrafluoroethylene_plunger', ['gtceu:long_wood_rod', 'gregitas:polytetrafluoroethylene_plunger_head'])
+        event.recipes.kubejs.shapeless('gtceu:polybenzimidazole_plunger', ['gtceu:long_wood_rod', 'gregitas:polybenzimidazole_plunger_head'])
 
     //Wrench
         gtceuToolsTFC.forEach((metal) => {
@@ -815,30 +815,30 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.recipes.kubejs.shaped('2x gtceu:long_wood_rod', ['s', 'L'], {L: '#tfc:lumber', s: '#forge:tools/saws'}).damageIngredient("#forge:tools/saws").id('gregitas:shaped/long_wood_rod')
 
-    GTRegistries.MATERIALS.forEach(id => {
-        event.remove(`gtceu:shaped/file_${id.path}`)
-        event.remove(`gtceu:shaped/wrench_${id.path}`)
-        event.remove(`gtceu:shaped/saw_${id.path}`)
-        event.remove(`gtceu:shaped/plunger_${id.path}`)
-        event.remove(`gtceu:shaped/hammer_${id.path}`)
-        event.remove(`gtceu:shaped/knife_${id.path}`)
-        event.remove(`gtceu:shaped/screwdriver_${id.path}`)
-        event.remove(`gtceu:shaped/crowbar_${id.path}`)
-        event.remove(`gtceu:shaped/mortar_${id.path}`)
-        event.remove(`gtceu:shaped/soft_mallet_${id.path}`)
-        event.remove(`gtceu:shaped/wire_cutter_${id.path}`)
-        event.remove(`gtceu:shaped/sword_${id.path}`)
-        event.remove(`gtceu:shaped/pickaxe_${id.path}`)
-        event.remove(`gtceu:shaped/axe_${id.path}`)
-        event.remove(`gtceu:shaped/shovel_${id.path}`)
-        event.remove(`gtceu:shaped/hoe_${id.path}`)
-        event.remove(`gtceu:shaped/scythe_${id.path}`)
-        event.remove(`gtceu:shaped/butchery_knife_${id.path}`)
-        event.remove(`gtceu:shaped/plate_${id.path}`)
-        event.remove(`gtceu:shaped/double_${id.path}_plate`)
-        event.remove(`gtceu:shaped/stick_${id.path}`)
-        event.remove(`gtceu:shaped/stick_long_${id.path}`)
-        event.remove(`gtceu:shaped/stick_long_stick_${id.path}`)
+    GTMaterialRegistry.registeredMaterials.forEach(id => {
+        event.remove(`gtceu:shaped/file_${id.name}`)
+        event.remove(`gtceu:shaped/wrench_${id.name}`)
+        event.remove(`gtceu:shaped/saw_${id.name}`)
+        event.remove(`gtceu:shaped/plunger_${id.name}`)
+        event.remove(`gtceu:shaped/hammer_${id.name}`)
+        event.remove(`gtceu:shaped/knife_${id.name}`)
+        event.remove(`gtceu:shaped/screwdriver_${id.name}`)
+        event.remove(`gtceu:shaped/crowbar_${id.name}`)
+        event.remove(`gtceu:shaped/mortar_${id.name}`)
+        event.remove(`gtceu:shaped/soft_mallet_${id.name}`)
+        event.remove(`gtceu:shaped/wire_cutter_${id.name}`)
+        event.remove(`gtceu:shaped/sword_${id.name}`)
+        event.remove(`gtceu:shaped/pickaxe_${id.name}`)
+        event.remove(`gtceu:shaped/axe_${id.name}`)
+        event.remove(`gtceu:shaped/shovel_${id.name}`)
+        event.remove(`gtceu:shaped/hoe_${id.name}`)
+        event.remove(`gtceu:shaped/scythe_${id.name}`)
+        event.remove(`gtceu:shaped/butchery_knife_${id.name}`)
+        event.remove(`gtceu:shaped/plate_${id.name}`)
+        event.remove(`gtceu:shaped/plate_double_${id.name}`)
+        event.remove(`gtceu:shaped/stick_${id.name}`)
+        event.remove(`gtceu:shaped/stick_long_${id.name}`)
+        event.remove(`gtceu:shaped/stick_long_stick_${id.name}`)
     })
 
     event.forEachRecipe({id: /gtceu:shaped\//}, r => {

@@ -79,7 +79,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
-                    item: 'gtceu:sulfur_small_dust'
+                    item: 'gtceu:small_sulfur_dust'
                 },
                 {
                     item: 'gtceu:raw_rubber_dust'
@@ -229,7 +229,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     //ALCR
     event.recipes.gtceu.assembly_line('advanced_large_chemical_reactor')
-        .itemInputs('gtceu:large_chemical_reactor', '3x #gtceu:circuits/iv', '15x gtceu:nitinol_plate', '4x gtceu:platinum_single_cable')
+        .itemInputs('gtceu:large_chemical_reactor', '3x #gtceu:circuits/iv', '15x gregitas_core:nitinol_plate', '4x gtceu:platinum_single_cable')
         .itemOutputs('gtceu:advanced_large_chemical_reactor')
         .inputFluids(
             Fluid.of('gtceu:copper', 4608),
@@ -300,7 +300,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(LV)
     })
 
-    event.recipes.kubejs.shaped('gtceu:wood_drum', [ 'mRs', 'PWP', 'PWP' ], { m: '#forge:tools/mallets', R: 'gtceu:sticky_resin', s: '#forge:tools/saws', P: '#minecraft:planks', W: 'gtceu:wrought_iron_long_rod'}).damageIngredient(['#forge:tools'])
+    event.recipes.kubejs.shaped('gtceu:wood_drum', [ 'mRs', 'PWP', 'PWP' ], { m: '#forge:tools/mallets', R: 'gtceu:sticky_resin', s: '#forge:tools/saws', P: '#minecraft:planks', W: 'gtceu:long_wrought_iron_rod'}).damageIngredient(['#forge:tools'])
 
     event.recipes.kubejs.shaped('gtceu:lv_electric_motor', ['cwr', 'wmw', 'rwc'], { c: 'gtceu:tin_single_cable', w: 'gtceu:copper_single_wire', r: 'gtceu:wrought_iron_rod', m: 'gregitas_core:magnetic_wrought_iron_rod' })
 
@@ -353,7 +353,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             let fluidRemap = TFCFluidGTFluidMap[fluidIngredient.getId()];
             if (fluidRemap == null) { return }
             let orePieceId = orePiece.toString().replace("\"", "");
-            orePieceId = orePieceId.substring("tfc:ore/".length);
+            orePieceId = orePieceId.substring("firmalife:ore/".length);
 
             event.recipes.gtceu.extractor(`extract_${orePieceId}`)
                 .itemInputs(orePiece)

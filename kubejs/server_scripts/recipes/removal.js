@@ -14,7 +14,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
-  event.remove({ id: "gtceu:shaped/stick_long_wrought_iron" })
+  event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
   event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
@@ -246,6 +246,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
+  event.remove({ id: /firmalife:heating\/ore\/.*_chromite/})
   //AE2
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})

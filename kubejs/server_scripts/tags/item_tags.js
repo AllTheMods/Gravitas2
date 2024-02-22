@@ -212,7 +212,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add('tfc:flint_knapping', 'minecraft:flint')
   event.add('tfc:rubber_knapping', ['gtceu:rubber_plate', 'gtceu:polyethylene_plate', 'gtceu:polytetrafluoroethylene_plate', 'gtceu:polybenzimidazole_plate'])
 
-  GTRegistries.MATERIALS.forEach(id => {
+  GTMaterialRegistry.registeredMaterials.forEach(id => {
       event.add('tfc:saws', `${id}_saw`)
       event.add('tfc:hammers', `${id}_hammer`)
       event.add('tfc:knives', `${id}_knife`)

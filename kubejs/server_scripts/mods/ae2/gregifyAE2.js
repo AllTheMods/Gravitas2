@@ -258,7 +258,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.recipes.gtceu.assembler('gregitas:me_smart_cable')
                 .itemInputs(
                     '16x ae2:fluix_covered_cable',
-                    '32x gtceu:red_alloy_fine_wire'
+                    '32x gtceu:fine_red_alloy_wire'
                 )
                 .inputFluids(
                     Fluid.of('gtceu:glowstone',2304)
@@ -272,7 +272,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.recipes.gtceu.assembler('gregitas:me_smart_dense_cable')
                 .itemInputs(
                     '4x ae2:fluix_covered_dense_cable',
-                    '16x gtceu:red_alloy_fine_wire'
+                    '16x gtceu:fine_red_alloy_wire'
                 )
                 .inputFluids(
                     Fluid.of('gtceu:glowstone',1152)
@@ -457,7 +457,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemInputs(
                 'minecraft:crafting_table',
                 'gtceu:steel_plate',
-                '16x gtceu:red_alloy_fine_wire',
+                '16x gtceu:fine_red_alloy_wire',
                 '#gtceu:circuits/lv'
             )
             .itemOutputs(
@@ -559,7 +559,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemInputs(
                     '8x gtceu:steel_plate',
                     'gtceu:lv_field_generator',
-                    '8x gtceu:red_alloy_fine_wire',
+                    '8x gtceu:fine_red_alloy_wire',
                     '2x ae2:quartz_glass'
                 )
                 .itemOutputs(
@@ -572,7 +572,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemInputs(
                     '8x gtceu:annealed_copper_plate',
                     'gtceu:lv_field_generator',
-                    '8x gtceu:red_alloy_fine_wire',
+                    '8x gtceu:fine_red_alloy_wire',
                     '2x ae2:quartz_glass'
                 )
                 .itemOutputs(
@@ -801,7 +801,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 '6x gtceu:vanadium_steel_plate',
                 'ae2:engineering_processor',
                 '2x #gtceu:circuits/lv',
-                '16x gtceu:red_alloy_fine_wire'
+                '16x gtceu:fine_red_alloy_wire'
             )
             .inputFluids(
                 Fluid.of('gtceu:soldering_alloy',144)
@@ -1019,7 +1019,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:crafting_unit',
                 'ae2:semi_dark_monitor',
                 'gtceu:computer_monitor_cover',
-                '16x gtceu:red_alloy_fine_wire'
+                '16x gtceu:fine_red_alloy_wire'
             )
             .itemOutputs(
                 'ae2:crafting_monitor'
@@ -1068,7 +1068,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 '#ae2:quartz_wrench',
                 'ae2:semi_dark_monitor',
                 'ae2:calculation_processor',
-                '8x gtceu:red_alloy_fine_wire'
+                '8x gtceu:fine_red_alloy_wire'
             )
             .itemOutputs(
                 'ae2:network_tool'
@@ -1244,7 +1244,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         event.recipes.gtceu.assembler('gregitas:me_p2p')
             .itemInputs(
-                '16x gtceu:red_alloy_fine_wire',
+                '16x gtceu:fine_red_alloy_wire',
                 '4x gtceu:vanadium_steel_plate',
                 'ae2:engineering_processor',
                 'gtceu:certus_quartz_plate',
@@ -1337,7 +1337,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         event.recipes.gtceu.assembler('gregitas:wireless_terminal')
             .itemInputs(
-                '8x gtceu:red_alloy_fine_wire',
+                '8x gtceu:fine_red_alloy_wire',
                 '2x gtceu:vanadium_steel_plate',
                 '2x #gtceu:circuits/hv',
                 'ae2:semi_dark_monitor',
@@ -1357,7 +1357,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(1000)
             .EUt(EV)
 
-        event.recipes.gtceu.assembler('wireless_gregitas:crafting_terminal')
+        event.recipes.gtceu.assembler('gregitas:wireless_crafting_terminal')
             .itemInputs(
                 'ae2:wireless_terminal',
                 'gregitas:crafting_core',
@@ -1406,7 +1406,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         event.recipes.gtceu.assembler('gregitas:wireless_access_point')
             .itemInputs(
-                '16x gtceu:red_alloy_fine_wire',
+                '16x gtceu:fine_red_alloy_wire',
                 '2x #gtceu:circuits/hv',
                 '2x gtceu:mpic_chip',
                 'gtceu:epoxy_printed_circuit_board',
@@ -1427,12 +1427,12 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         event.recipes.gtceu.assembler('gregitas:wireless_booster')
             .itemInputs(
-                '16x gtceu:red_alloy_fine_wire',
+                '16x gtceu:fine_red_alloy_wire',
                 '3x gtceu:ender_pearl_dust',
                 'gtceu:epoxy_printed_circuit_board',
                 '#gtceu:circuits/hv',
                 'gtceu:hv_field_generator',
-                'gtceu:vanadium_steel_double_plate'
+                'gtceu:double_vanadium_steel_plate'
             )
             .inputFluids(
                 Fluid.of('gtceu:soldering_alloy', 144)
@@ -1502,7 +1502,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             
             event.recipes.gtceu.assembler('gregitas:patten_pe')
                 .itemInputs(
-                    '4x gtceu:red_alloy_fine_wire',
+                    '4x gtceu:fine_red_alloy_wire',
                     '3x gtceu:steel_plate',
                     '2x gtceu:polyethylene_plate',
                     '#gtceu:circuits/mv' 
@@ -1515,7 +1515,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
             event.recipes.gtceu.assembler('gregitas:patten_pvc')
                 .itemInputs(
-                    '4x gtceu:red_alloy_fine_wire',
+                    '4x gtceu:fine_red_alloy_wire',
                     '3x gtceu:steel_plate',
                     '2x gtceu:polyvinyl_chloride_plate',
                     '#gtceu:circuits/mv' 
@@ -1528,7 +1528,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
             event.recipes.gtceu.assembler('gregitas:patten_ptfe')
                 .itemInputs(
-                    '4x gtceu:red_alloy_fine_wire',
+                    '4x gtceu:fine_red_alloy_wire',
                     '3x gtceu:steel_plate',
                     '2x gtceu:polytetrafluoroethylene_plate',
                     '#gtceu:circuits/mv' 
@@ -1541,7 +1541,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
             event.recipes.gtceu.assembler('gregitas:patten_pbi')
                 .itemInputs(
-                    '4x gtceu:red_alloy_fine_wire',
+                    '4x gtceu:fine_red_alloy_wire',
                     '3x gtceu:steel_plate',
                     '2x gtceu:polybenzimidazole_plate',
                     '#gtceu:circuits/mv' 
@@ -1556,7 +1556,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             
             event.recipes.gtceu.assembler('gregitas:me_inscriber')
                 .itemInputs(
-                    '16x gtceu:red_alloy_fine_wire',
+                    '16x gtceu:fine_red_alloy_wire',
                     '6x gtceu:vanadium_steel_plate',
                     '2x #gtceu:circuits/lv',
                     '2x gtceu:mv_electric_piston',
@@ -1628,8 +1628,8 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.recipes.gtceu.assembler('gregitas:basic_card')
                 .itemInputs(
                     '3x gtceu:aluminium_plate',
-                    '2x gtceu:red_alloy_fine_wire',
-                    '2x gtceu:gold_fine_wire',
+                    '2x gtceu:fine_red_alloy_wire',
+                    '2x gtceu:fine_gold_wire',
                     'ae2:engineering_processor',
                     '#gtceu:circuits/mv'
                 )
@@ -1687,8 +1687,8 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.recipes.gtceu.assembler('gregitas:advanced_card')
                 .itemInputs(
                     '3x gtceu:stainless_steel_plate',
-                    '2x gtceu:red_alloy_fine_wire',
-                    '2x gtceu:silver_fine_wire',
+                    '2x gtceu:fine_red_alloy_wire',
+                    '2x gtceu:fine_silver_wire',
                     'ae2:engineering_processor',
                     '#gtceu:circuits/hv'
                 )

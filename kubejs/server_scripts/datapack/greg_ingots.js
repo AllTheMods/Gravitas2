@@ -343,22 +343,22 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       amount: 72
     },
     {
-      ore: "tfc:ore/small_chromite",
+      ore: "firmalife:ore/small_chromite",
       liquid: "gtceu:chromium",
       amount: 16
     },
     {
-      ore: "tfc:ore/poor_chromite",
+      ore: "firmalife:ore/poor_chromite",
       liquid: "gtceu:chromium",
       amount: 24
     },
     {
-      ore: "tfc:ore/normal_chromite",
+      ore: "firmalife:ore/normal_chromite",
       liquid: "gtceu:chromium",
       amount: 36
     },
     {
-      ore: "tfc:ore/rich_chromite",
+      ore: "firmalife:ore/rich_chromite",
       liquid: "gtceu:chromium",
       amount: 48
     }
@@ -374,6 +374,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     addTFCHeatingRecipe(ore.ore, ore.liquid, temp, ore.amount)
   })
 
+  addTFCCastingRecipe("firmalife:metal/ingot/chromium", "gtceu:chromium", 144)
   addTFCHeatCapability("gregitas:double_invar_ingot", 2.857, 921, 1228)
   addTFCHeatCapability("gtceu:wrought_iron_bolt", 1.429, 921, 1228)
 
