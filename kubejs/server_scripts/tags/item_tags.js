@@ -279,7 +279,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       'buildinggadgets2:gadget_cut_paste',
       'buildinggadgets2:gadget_destruction',
       'expatternprovider:fishbig',
-      '#forge:tools'
+      '#forge:tools',
+      'enderio:dark_steel_sword'
     ]
   )
   event.add("gravitas:bronze_doubles", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
