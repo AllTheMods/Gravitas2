@@ -45,7 +45,11 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", e
 ForgeEvents.onEvent(
   "blusunrize.immersiveengineering.api.multiblocks.MultiblockHandler$MultiblockFormEvent",
   (event) => {
-    event.getMultiblock().getUniqueName().namespace == "immersiveengineering" && event.setCanceled(true)
+    if (
+      event.getMultiblock().getUniqueName().namespace == "immersiveengineering" &&
+      event.getMultiblock().getUniqueName().path != "feedthrough") {
+      event.setCanceled(true)
+    }
   }
 )
 

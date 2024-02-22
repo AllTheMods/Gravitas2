@@ -212,7 +212,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add('tfc:flint_knapping', 'minecraft:flint')
   event.add('tfc:rubber_knapping', ['gtceu:rubber_plate', 'gtceu:polyethylene_plate', 'gtceu:polytetrafluoroethylene_plate', 'gtceu:polybenzimidazole_plate'])
 
-  GTRegistries.MATERIALS.forEach(id => {
+  GTMaterialRegistry.registeredMaterials.forEach(id => {
       event.add('tfc:saws', `${id}_saw`)
       event.add('tfc:hammers', `${id}_hammer`)
       event.add('tfc:knives', `${id}_knife`)
@@ -279,9 +279,13 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       'buildinggadgets2:gadget_cut_paste',
       'buildinggadgets2:gadget_destruction',
       'expatternprovider:fishbig',
-      '#forge:tools'
+      '#forge:tools',
+      'enderio:dark_steel_sword'
     ]
   )
   event.add("gravitas:bronze_doubles", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
   event.add("gravitas:bronze_plates", ["#forge:plates/bronze","#forge:plates/bismuth_bronze", "#forge:plates/black_bronze"])
+  event.add("iceandfire:tempt_hippogryph", ["tfc:food/rabbit", "tfc:food/cooked_rabbit"])
+  event.add("iceandfire:tempt_hippocampus", ["tfc:plant/winged_kelp", "tfc:plant/leafy_kelp"])
+  event.add("iceandfire:heal_hippocampus", ["tfc:plant/giant_kelp_flower"])
 }

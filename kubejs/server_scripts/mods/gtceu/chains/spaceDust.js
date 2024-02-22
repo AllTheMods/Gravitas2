@@ -4,7 +4,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
     // CATALYSTS (etc)
     event.recipes.gtceu.alloy_blast_smelter("hypogen_solder_catalyst")
         .itemInputs([
-            '4x gtceu:unobtainium_dust',
+            '4x gregitas_core:unobtainium_dust',
             '1x gtceu:neutronium_dust',
         ])
         .inputFluids('gtceu:soldering_alloy 576')
@@ -21,7 +21,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
         .EUt(UV).duration(100)
 
     event.recipes.gtceu.chemical_reactor("spacetime_reaction_catalyst")
-        .itemInputs('1x gtceu:weapons_grade_naquadah_dust')
+        .itemInputs('1x gregitas_core:weapons_grade_naquadah_dust')
         .inputFluids([
             'gtceu:spacetime 288',
             'gtceu:star_matter 1000'
@@ -31,7 +31,7 @@ let spaceDustChain = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     // START
     event.recipes.gtceu.electrolyzer("space_dust")
-        .itemInputs('15x gtceu:space_dust')
+        .itemInputs('15x gregitas_core:space_dust')
         .itemOutputs([
             '1x gregitas_core:trace_minerals_dust',
             '1x gregitas_core:extraterrestial_materials_dust',

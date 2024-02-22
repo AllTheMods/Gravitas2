@@ -70,7 +70,7 @@ const gtVacuumShit = [
   "osmium",
   "palladium",
   "rhodium",
-  "rutherium",
+  "ruthenium",
   "samarium",
   "silicon",
   "titanium",
@@ -121,19 +121,42 @@ const gtVacuumShit = [
 
 // ingot/plates/etc. to convert to GT equivalents
 const gtMetalReplaceMap = {
+  "alltheores:brass_ingot": "gtceu:brass_ingot",
+  "alltheores:bronze_ingot": "gtceu:bronze_ingot",
+  "alltheores:invar_ingot": "gtceu:invar_ingot",
   "alltheores:lead_ingot": "gtceu:lead_ingot",
+  "alltheores:lead_plate": "gtceu:lead_plate",
   "alltheores:nickel_plate": "gtceu:nickel_plate",
+  "alltheores:silver_ingot": "gtceu:silver_ingot",
   "alltheores:silver_plate": "gtceu:silver_plate",
+  "alltheores:steel_plate": "gtceu:steel_plate",
+  "alltheores:tin_ingot": "gtceu:tin_ingot",
+  "alltheores:zinc_ingot": "gtceu:zinc_ingot",
+  "alltheores:zinc_plate": "gtceu:zinc_plate",
   "create:copper_sheet": "gtceu:copper_plate",
   "create:golden_sheet": "gtceu:gold_plate",
+  "create:zinc_ingot": "gtceu:zinc_ingot",
   "createaddition:zinc_sheet": "gtceu:zinc_plate",
   "immersiveengineering:ingot_aluminum": "gtceu:aluminium_ingot",
   "immersiveengineering:ingot_lead": "gtceu:lead_ingot",
+  "immersiveengineering:ingot_nickel": "gtceu:nickel_ingot",
   "immersiveengineering:plate_lead": "gtceu:lead_plate",
   "immersiveengineering:plate_nickel": "gtceu:nickel_plate",
   "railcraft:brass_plate": "gtceu:brass_plate",
+  "railcraft:bronze_ingot": "gtceu:bronze_ingot",
+  "railcraft:gold_plate": "gtceu:gold_plate",
   "railcraft:lead_ingot": "gtceu:lead_ingot",
+  "railcraft:silver_ingot": "gtceu:silver_ingot",
+  "railcraft:silver_plate": "gtceu:silver_plate",
   "railcraft:tin_plate": "gtceu:tin_plate",
+  "tfc:metal/ingot/brass": "gtceu:brass_ingot",
+  "tfc:metal/ingot/bronze": "gtceu:bronze_ingot",
+  "tfc:metal/ingot/silver": "gtceu:silver_ingot",
+  "tfc:metal/ingot/steel": "gtceu:steel_ingot",
+  "tfc:metal/ingot/wrought_iron": "gtceu:wrought_iron_ingot",
+  "tfc:metal/sheet/silver": "gtceu:silver_plate",
+  "tfc:metal/sheet/steel": "gtceu:steel_plate",
+  "tfc:metal/sheet/zinc": "gtceu:zinc_plate",
 }
 
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
@@ -530,7 +553,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     f: '#forge:frames/treated_wood',
     c: 'immersiveengineering:craftingtable'
   })
-
+  shaped('railcraft:wooden_tie', ['   ','ppp','   '], {
+    p: 'gregitas:creosote_treated_lumber'
+    })
   const gemPowders = [
     "amethyst",
     "emerald",
@@ -548,6 +573,28 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs([`gtceu:impure_${powder.replace("_lazuli", "")}_dust`])
     .EUt(ULV).duration(200)
    })
+   event.recipes.gtceu.alloy_smelter('brick')
+           .itemInputs(
+               'minecraft:clay_ball'
+           )
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs(
+               'minecraft:brick'
+           )
+           .duration(120)
+           .EUt(LV)
+
+    tfcStone.forEach(stone => {
+        event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
+               .itemInputs(
+                   `tfc:rock/loose/${stone}`
+               )
+               .notConsumable('gtceu:ingot_casting_mold')
+               .itemOutputs(
+                   `tfc:brick/${stone}`               )
+               .duration(120)
+               .EUt(LV)
+    })
     event.recipes.gtceu.alloy_smelter('copper_alloy')
         .itemInputs(
             '#forge:silicon',

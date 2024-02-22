@@ -16,7 +16,8 @@ let blockReplacementMap = {
   "minecraft:lectern": "tfc:wood/lectern/oak",
   "minecraft:bell": "tfc:brass_bell",
   "minecraft:torch": "tfc:torch",
-  "minecraft:beehive": "firmalife:beehive"
+  "minecraft:beehive": "firmalife:beehive",
+  "minecraft:lantern": "tfc:metal/lamp/bronze"
 }
 let $WailaClientRegistration
 if (Platform.isClientEnvironment()){

@@ -14,7 +14,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "tfc:crafting/bloomery" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
-  event.remove({ id: "gtceu:shaped/stick_long_wrought_iron" })
+  event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
   event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
@@ -31,6 +31,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:assembler/wool_from_string"})
   event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
   event.remove({ id: 'gtceu:shaped/lv_extruder' })
+
 
 
   //GT / Railcraft Tool Specific
@@ -98,7 +99,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "railcraft:coke_oven_bricks" })
   event.remove({ id: "railcraft:solid_fueled_firebox" })
   event.remove({ id: "railcraft:brass_ingot_crafted_with_ingots" })
-
+  event.remove({ id: "railcraft:wooden_tie"})
+  event.remove({ id: "railcraft:wooden_tie_bottle"})
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
@@ -124,6 +126,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: /^create:crushing\/.*_block/, mod: "create" })
   event.remove({ id: /^create:crushing\/.*_armor/, mod: "create" })
   event.remove({ id: "create:crafting/appliances/copper_backtank"})
+  event.remove({ id: "create:crafting/appliances/tree_fertilizer"})
   event.remove({ id: "create:crushing/blaze_rod"})
   event.remove({ id: "create:crafting/kinetics/fluid_tank"})
   event.remove({ id: "create:crafting/kinetics/mechanical_press"})
@@ -243,6 +246,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
+  event.remove({ id: /firmalife:heating\/ore\/.*_chromite/})
   //AE2
 
   event.remove({ id: `/^ae2:tools\/.*_pickaxe/`})
