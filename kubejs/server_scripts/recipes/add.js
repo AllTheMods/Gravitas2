@@ -594,6 +594,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                    `tfc:brick/${stone}`               )
                .duration(120)
                .EUt(LV)
+        event.recipes.gtceu.forge_hammer(`loose_${stone}`)
+                .itemInputs(`tfc:rock/raw/${stone}`)
+                .itemOutputs(`4x tfc:rock/loose/${stone}`)
+                .duration(120)
+                .EUt(LV)
     })
     event.recipes.gtceu.alloy_smelter('copper_alloy')
         .itemInputs(
