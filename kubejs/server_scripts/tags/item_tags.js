@@ -283,8 +283,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       'enderio:dark_steel_sword'
     ]
   )
-  event.add("gravitas:bronze_doubles", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
-  event.add("gravitas:bronze_plates", ["#forge:plates/bronze","#forge:plates/bismuth_bronze", "#forge:plates/black_bronze"])
+  event.add("forge:double_ingots/any_bronze", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
+  event.add("forge:plates/any_bronze", ["#forge:plates/bronze","#forge:plates/bismuth_bronze", "#forge:plates/black_bronze"])
   event.add("iceandfire:tempt_hippogryph", ["tfc:food/rabbit", "tfc:food/cooked_rabbit"])
   event.add("iceandfire:tempt_hippocampus", ["tfc:plant/winged_kelp", "tfc:plant/leafy_kelp"])
   event.add("iceandfire:heal_hippocampus", ["tfc:plant/giant_kelp_flower"])
