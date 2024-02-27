@@ -191,6 +191,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   tfcSaplingz.forEach((sapling) => {
     event.add("forge:saplings", `tfc:wood/sapling/${sapling}`)
+    event.add('minecraft:logs_that_burn', [`#tfc:${sapling}_logs`])
   })
 
   tfcMetalz.forEach((metal) => {
@@ -291,4 +292,5 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
+  event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
 }
