@@ -888,4 +888,13 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     }
     event.shapeless("immersiveengineering:storage_steel","gtceu:steel_block")
     event.shapeless("gtceu:steel_block","immersiveengineering:storage_steel")
+
+    /* Railways Smokestacks */ {
+      event.stonecutting("3x railways:smokestack_caboosestyle", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_long", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_coalburner", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_oilburner", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
+    }
 }
