@@ -265,7 +265,10 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         if (glass instanceof $TagKey) {
             glass = '#' + glass.location().toString()
         }
-        if (index >= 1) {
+        if (index == 1) {
+           event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:steel_small_fluid_pipe", C: `#gtceu:circuits/${tier_name.toLowerCase()}`, G: glass, H: `gtceu:${tier_name.toLowerCase()}_machine_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_chemical_vapor_depositor`)
+        }
+        if (index > 1) {
            event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:stainless_steel_small_fluid_pipe", C: `#gtceu:circuits/${tier_name.toLowerCase()}`, G: glass, H: `gtceu:${tier_name.toLowerCase()}_machine_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_chemical_vapor_depositor`)
         }
         if (index >= 4) {
@@ -423,5 +426,10 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .itemInputs('3x gtceu:zinc_dust', '3x gtceu:sulfur_dust')
         .inputFluids('gtceu:silver 72')
         .itemOutputs('32x minecraft:pearlescent_froglight')
+        .EUt(LV).duration(200)
+    
+    event.recipes.gtceu.chemical_vapor_deposition("gregitas:tinted_glass")
+        .itemInputs('1x #forge:dusts/amethyst', '4x #forge:glass')
+        .itemOutputs('4x minecraft:tinted_glass')
         .EUt(LV).duration(200)
 }
