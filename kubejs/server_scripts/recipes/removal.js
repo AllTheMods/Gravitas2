@@ -101,6 +101,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "railcraft:brass_ingot_crafted_with_ingots" })
   event.remove({ id: "railcraft:wooden_tie"})
   event.remove({ id: "railcraft:wooden_tie_bottle"})
+
+  /// Railways (Steam n Rails)
+  event.remove({ mod: "railways", id: /^railways:crafting\/smokestack.*/})
+  
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
 
