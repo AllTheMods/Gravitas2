@@ -290,4 +290,5 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("iceandfire:heal_hippocampus", ["tfc:plant/giant_kelp_flower"])
 
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
+  event.add("minecraft:axes", ["#tfc:axes"])
 }
