@@ -427,4 +427,9 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .inputFluids('gtceu:silver 72')
         .itemOutputs('32x minecraft:pearlescent_froglight')
         .EUt(LV).duration(200)
+    
+    event.recipes.gtceu.chemical_vapor_deposition("gregitas:tinted_glass")
+        .itemInputs('1x #forge:dusts/amethyst', '4x #forge:glass')
+        .itemOutputs('4x minecraft:tinted_glass')
+        .EUt(LV).duration(200)
 }
