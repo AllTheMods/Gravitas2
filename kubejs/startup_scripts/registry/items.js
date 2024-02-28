@@ -285,4 +285,5 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
   })
   
   event.create('gregitas:packaged_greenhouse').modelJson(pkgJson)
+  event.create('gregitas:cane_pulp').texture('gtceu:item/material_sets/dull/dust').color(0, 0xdc6f51)
 }
