@@ -201,6 +201,13 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       },
       duration: 1200
     }).id(`gregitas:barrel/${color}_chalk`)
+    event.recipes.gtceu.chemical_bath(`${color}_chalk`)
+    .itemInputs('chalk:white_chalk')
+    .inputFluids(Fluid.of(`tfc:${color}_dye`, 25))
+    .itemOutputs(Item.of(`chalk:${color}_chalk`))
+    .duration(500)
+    .EUt(LV)
+
   })
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
