@@ -332,5 +332,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^iceandfire:.*copper.*/`})
   event.remove({ id: `/^iceandfire:.*_pile/`})
+  
+  //CHALK
 
+  event.remove({ id: `/^chalk:chalk_from_.*/`})
+  
 }

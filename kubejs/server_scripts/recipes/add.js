@@ -158,11 +158,50 @@ const gtMetalReplaceMap = {
   "tfc:metal/sheet/steel": "gtceu:steel_plate",
   "tfc:metal/sheet/zinc": "gtceu:zinc_plate",
 }
+const colorMap = [
+  "orange",
+  "light_gray",
+  "cyan",
+  "red",
+  "magenta",
+  "purple",
+  "pink",
+  "gray",
+  "blue",
+  "brown",
+  "black",
+  "lime",
+  "light_blue",
+  "yellow",
+  "green"
+]
 
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
   const smoking = event.recipes.minecraft.smoking
+  event.shapeless('3x chalk:white_chalk', [
+    '#tfc:chisels',
+    "tfc:brick/chalk"
+  ])
+  colorMap.forEach((color) => {
+    event.custom({
+      type: "tfc:barrel_sealed",
+      input_item: {
+        ingredient: {
+          item: 'chalk:white_chalk'
+        }
+      },
+      input_fluid: {
+        ingredient: `tfc:${color}_dye`,
+        amount: 25
+      },
+      output_item: {
+        item: `chalk:${color}_chalk`
+      },
+      duration: 1200
+    }).id(`gregitas:barrel/${color}_chalk`)
+  })
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
   event.custom({
