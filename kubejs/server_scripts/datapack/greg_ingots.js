@@ -194,6 +194,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     "copper",
     "nickel",
     "bismuth",
+    "rubber",
   ]
 
   gtceuFluidCast.forEach((id) => {
