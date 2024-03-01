@@ -132,23 +132,6 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.custom(
         {
-            type: 'tfc:casting',
-            mold: {
-                item: 'tfc:ceramic/ingot_mold'
-            },
-            fluid: {
-                ingredient: 'gtceu:rubber',
-                amount: 144
-            },
-            result: {
-                item: 'gtceu:rubber_ingot'
-            },
-            break_chance: 0.1
-        }
-    ).id('gregitas:casting/rubber_ingot')
-
-    event.custom(
-        {
             type: 'create:compacting',
             ingredients: [
                 {
