@@ -265,7 +265,10 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         if (glass instanceof $TagKey) {
             glass = '#' + glass.location().toString()
         }
-        if (index >= 1) {
+        if (index == 1) {
+           event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:steel_small_fluid_pipe", C: `#gtceu:circuits/${tier_name.toLowerCase()}`, G: glass, H: `gtceu:${tier_name.toLowerCase()}_machine_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_chemical_vapor_depositor`)
+        }
+        if (index > 1) {
            event.shaped(`gtceu:${tier_name.toLowerCase()}_chemical_vapor_depositor`, ["SCS", "GHG", "PCP"], {S: "gtceu:stainless_steel_small_fluid_pipe", C: `#gtceu:circuits/${tier_name.toLowerCase()}`, G: glass, H: `gtceu:${tier_name.toLowerCase()}_machine_hull`, P: `gtceu:${tier_name.toLowerCase()}_emitter`}).id(`gregitas:shaped/${tier_name.toLowerCase()}_chemical_vapor_depositor`)
         }
         if (index >= 4) {
@@ -424,4 +427,35 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .inputFluids('gtceu:silver 72')
         .itemOutputs('32x minecraft:pearlescent_froglight')
         .EUt(LV).duration(200)
+    
+    event.recipes.gtceu.chemical_vapor_deposition("gregitas:tinted_glass")
+        .itemInputs('1x #forge:dusts/amethyst', '4x #forge:glass')
+        .itemOutputs('4x minecraft:tinted_glass')
+        .EUt(LV).duration(200)
+        
+    /* Sugar Refinering */ {
+        event.recipes.gtceu.extractor('cane_pulp')
+            .itemInputs('1x tfc:food/sugarcane')
+            .itemOutputs('1x gregitas:cane_pulp')
+            .outputFluids(Fluid.of('gregitas:cane_syrup', 15))
+            .EUt(LV)
+            .duration(50)
+        event.recipes.gtceu.centrifuge('cane_syrup')
+            .itemInputs('1x gregitas:cane_pulp')
+            .chancedOutput('1x gtceu:bio_chaff', 2000, 150)
+            .outputFluids(Fluid.of('gregitas:cane_syrup', 150))
+            .EUt(LV)
+            .duration(110)
+        event.recipes.gtceu.fluid_heater('sugar_syrup')
+            .inputFluids(Fluid.of('gregitas:cane_syrup', 100))
+            .outputFluids(Fluid.of('gregitas:sugar_syrup', 50))
+            .circuit(1)
+            .EUt(LV)
+            .duration(25)
+        event.recipes.gtceu.autoclave('sugar_crystallization')
+            .inputFluids(Fluid.of('gregitas:sugar_syrup', 225))
+            .itemOutputs('1x gtceu:sugar_block')
+            .EUt(LV)
+            .duration(110)
+    }
 }

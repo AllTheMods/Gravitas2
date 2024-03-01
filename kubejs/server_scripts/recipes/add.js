@@ -158,11 +158,57 @@ const gtMetalReplaceMap = {
   "tfc:metal/sheet/steel": "gtceu:steel_plate",
   "tfc:metal/sheet/zinc": "gtceu:zinc_plate",
 }
+const colorMap = [
+  "orange",
+  "light_gray",
+  "cyan",
+  "red",
+  "magenta",
+  "purple",
+  "pink",
+  "gray",
+  "blue",
+  "brown",
+  "black",
+  "lime",
+  "light_blue",
+  "yellow",
+  "green"
+]
 
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
   const smoking = event.recipes.minecraft.smoking
+  event.shapeless('3x chalk:white_chalk', [
+    '#tfc:chisels',
+    "tfc:brick/chalk"
+  ])
+  colorMap.forEach((color) => {
+    event.custom({
+      type: "tfc:barrel_sealed",
+      input_item: {
+        ingredient: {
+          item: 'chalk:white_chalk'
+        }
+      },
+      input_fluid: {
+        ingredient: `tfc:${color}_dye`,
+        amount: 25
+      },
+      output_item: {
+        item: `chalk:${color}_chalk`
+      },
+      duration: 1200
+    }).id(`gregitas:barrel/${color}_chalk`)
+    event.recipes.gtceu.chemical_bath(`${color}_chalk`)
+    .itemInputs('chalk:white_chalk')
+    .inputFluids(Fluid.of(`tfc:${color}_dye`, 25))
+    .itemOutputs(Item.of(`chalk:${color}_chalk`))
+    .duration(500)
+    .EUt(LV)
+
+  })
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
   event.custom({
@@ -840,7 +886,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
 
     event.shapeless('storagedrawers:one_stack_upgrade',         ['2x #tfc:rock_knapping','storagedrawers:upgrade_template'])
-    event.shapeless('storagedrawers:obsidian_storage_upgrade',  ['2x #gravitas:bronze_plates','storagedrawers:upgrade_template'])
+    event.shapeless('storagedrawers:obsidian_storage_upgrade',  ['2x #forge:plates/any_bronze','storagedrawers:upgrade_template'])
     event.shapeless('storagedrawers:iron_storage_upgrade',      ['2x #forge:double_sheets/any_bronze','storagedrawers:upgrade_template'])
     event.shapeless('storagedrawers:gold_storage_upgrade',      ['2x #forge:plates/steel','storagedrawers:upgrade_template'])
     event.shapeless('storagedrawers:diamond_storage_upgrade',   ['2x #forge:double_plates/steel','storagedrawers:upgrade_template'])
@@ -854,14 +900,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         H: "#forge:tools/hammers",
         D: "#forge:tools/screwdrivers",
         S: "#forge:screws/bronze",
-        P: "#gravitas:bronze_plates",
+        P: "#forge:plates/any_bronze",
         R: "gtceu:bronze_ring",
         F: "#forge:tools/files"
     }).damageIngredient(["#forge:tools"])
 
     event.recipes.kubejs.shaped("gtceu:bronze_machine_casing" , ["PPP", "PHP","PPP"], {
         H: "#forge:tools/hammers",
-        P: "#gravitas:bronze_plates"
+        P: "#forge:plates/any_bronze"
     }).damageIngredient(["#forge:tools"])
 
     gtVacuumShit.forEach((hot) => {
@@ -888,4 +934,13 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     }
     event.shapeless("immersiveengineering:storage_steel","gtceu:steel_block")
     event.shapeless("gtceu:steel_block","immersiveengineering:storage_steel")
+
+    /* Railways Smokestacks */ {
+      event.stonecutting("3x railways:smokestack_caboosestyle", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_long", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_coalburner", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_oilburner", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
+      event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
+    }
 }

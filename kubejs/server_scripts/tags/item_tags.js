@@ -191,6 +191,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   tfcSaplingz.forEach((sapling) => {
     event.add("forge:saplings", `tfc:wood/sapling/${sapling}`)
+    event.add('minecraft:logs_that_burn', [`#tfc:${sapling}_logs`])
   })
 
   tfcMetalz.forEach((metal) => {
@@ -283,9 +284,13 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
       'enderio:dark_steel_sword'
     ]
   )
-  event.add("gravitas:bronze_doubles", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
-  event.add("gravitas:bronze_plates", ["#forge:plates/bronze","#forge:plates/bismuth_bronze", "#forge:plates/black_bronze"])
+  event.add("forge:double_ingots/any_bronze", ["tfc:metal/double_ingot/bronze","tfc:metal/double_ingot/bismuth_bronze", "tfc:metal/double_ingot/black_bronze"])
+  event.add("forge:plates/any_bronze", ["#forge:plates/bronze","#forge:plates/bismuth_bronze", "#forge:plates/black_bronze"])
   event.add("iceandfire:tempt_hippogryph", ["tfc:food/rabbit", "tfc:food/cooked_rabbit"])
   event.add("iceandfire:tempt_hippocampus", ["tfc:plant/winged_kelp", "tfc:plant/leafy_kelp"])
   event.add("iceandfire:heal_hippocampus", ["tfc:plant/giant_kelp_flower"])
+
+  event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
+  event.add("minecraft:axes", ["#tfc:axes"])
+  event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
 }
