@@ -180,10 +180,24 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
   const smoking = event.recipes.minecraft.smoking
-  event.shapeless('3x chalk:white_chalk', [
-    '#tfc:chisels',
-    "tfc:brick/chalk"
-  ])
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+        type: "minecraft:crafting_shapeless",
+        ingredients: [
+        {
+            tag: "tfc:chisels"
+        },
+        {
+            item: `tfc:brick/chalk`
+        }
+        ],
+        result: {
+            item: `3x chalk:white_chalk`
+        }
+    }
+  })
+
   colorMap.forEach((color) => {
     event.custom({
       type: "tfc:barrel_sealed",
