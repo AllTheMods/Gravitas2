@@ -32,6 +32,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
   event.remove({ id: 'gtceu:shaped/lv_extruder' })
   event.remove({ id: "gtceu:alloy_smelter/anvil"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_tag_seeds"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_beetroot"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_melon"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_pumpkin"})
 
 
   //GT / Railcraft Tool Specific

@@ -441,4 +441,9 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(LV)
             .duration(110)
     }
+    event.recipes.gtceu.extractor('seed_oil')
+            .itemInputs('1x #tfc:seeds')
+            .outputFluids(Fluid.of('gtceu:seed_oil', 10))
+            .EUt(LV)
+            .duration(50)
 }
