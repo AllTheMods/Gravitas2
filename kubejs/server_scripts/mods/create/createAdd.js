@@ -546,7 +546,8 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         addMoldChiselDeploying(resultItem, moldItem, breakChance, fluidIngredient.getId(), fluidAmount)
     })
 
-
+    addMoldChiselDeploying("create:andesite_alloy", "tfc:ceramic/fire_ingot_mold", 0.01, "gregitas_core:igneous_alloy", 144)
+    addMoldChiselDeploying("create:andesite_alloy", "tfc:ceramic/ingot_mold", 0.1, "gregitas_core:igneous_alloy", 144)
     tfcSaplings.forEach(wood => {
         event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
         event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
