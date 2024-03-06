@@ -12,6 +12,15 @@ const toolsToRemove = [
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "tfc:crafting/bloomery" })
+  event.remove({ id: "computercraft:computer_normal" })
+  event.remove({ id: "computercraft:computer_advanced_upgrade" })
+  event.remove({ id: "computercraft:computer_advanced" })
+  event.remove({ id: "computercraft:pocket_computer_normal" })
+  event.remove({ id: "computercraft:pocket_computer_advanced_upgrade" })
+  event.remove({ id: "computercraft:pocket_computer_advanced" })
+  event.remove({ id: "computercraft:wireless_modem_normal" })
+  event.remove({ id: "computercraft:wireless_modem_advanced"})
+  
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })

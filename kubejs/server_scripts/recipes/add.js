@@ -544,7 +544,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   }).id('gregitas:barrel/creosote_treated_lumber')
 
   //GTCEU End
-
+  //Computercraft
+  shaped('computercraft:computer_normal', ['sps', 'scs', 'OPO'], {
+    O: 'gtceu:iron_plate',
+    s: '#forge:plates/copper',
+    c: 'gtceu:basic_electronic_circuit',
+    p: 'gtceu:resin_printed_circuit_board',
+    P: '#forge:glass_panes'
+  })
+  
+  event.shapeless("computercraft:wireless_modem_normal",[
+    "computercraft:wired_modem",
+    "minecraft:ender_pearl"
+  ]) 
+  event.shapeless("computercraft:wireless_modem_advanced",[
+    "computercraft:wireless_modem_normal",
+    "minecraft:eye_of_ender"
+  ])
   //Rock and Stone!
   tfcStone.forEach((stone) => {
     event.recipes.gtceu
