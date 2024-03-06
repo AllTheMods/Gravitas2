@@ -307,7 +307,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       '#forge:tools/mortars',
       "minecraft:blaze_rod"
     ])
-
+    event.shapeless('1x gtceu:saltpeter_dust', [
+      '4x tfc:powder/saltpeter'
+    ])
   event.recipes.create.pressing(
     [
       { item: "tfc:refined_iron_bloom" }
