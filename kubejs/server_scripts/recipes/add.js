@@ -718,7 +718,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .itemOutputs(
             'minecraft:iron_ingot'
         )
-        .duration(750)
+        .duration(250)
         .EUt(LV)
     event.recipes.gtceu.alloy_smelter('conductive_alloy')
         .itemInputs(
