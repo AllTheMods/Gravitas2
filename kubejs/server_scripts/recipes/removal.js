@@ -12,6 +12,15 @@ const toolsToRemove = [
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "tfc:crafting/bloomery" })
+  event.remove({ id: "computercraft:computer_normal" })
+  event.remove({ id: "computercraft:computer_advanced_upgrade" })
+  event.remove({ id: "computercraft:computer_advanced" })
+  event.remove({ id: "computercraft:pocket_computer_normal" })
+  event.remove({ id: "computercraft:pocket_computer_advanced_upgrade" })
+  event.remove({ id: "computercraft:pocket_computer_advanced" })
+  event.remove({ id: "computercraft:wireless_modem_normal" })
+  event.remove({ id: "computercraft:wireless_modem_advanced"})
+
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
@@ -32,7 +41,12 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
   event.remove({ id: 'gtceu:shaped/lv_extruder' })
   event.remove({ id: "gtceu:alloy_smelter/anvil"})
-
+  event.remove({ id: "gtceu:extractor/seed_oil_from_tag_seeds"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_beetroot"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_melon"})
+  event.remove({ id: "gtceu:extractor/seed_oil_from_pumpkin"})
+  event.remove({ id: "gtceu:electric_blast_furnace/steel_from_wrought_iron"})
+  event.remove({ id: "gtceu:electric_blast_furnace/steel_from_iron"})
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {

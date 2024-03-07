@@ -180,10 +180,24 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
   const smoking = event.recipes.minecraft.smoking
-  event.shapeless('3x chalk:white_chalk', [
-    '#tfc:chisels',
-    "tfc:brick/chalk"
-  ])
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+        type: "minecraft:crafting_shapeless",
+        ingredients: [
+        {
+            tag: "tfc:chisels"
+        },
+        {
+            item: `tfc:brick/chalk`
+        }
+        ],
+        result: {
+            item: `3x chalk:white_chalk`
+        }
+    }
+  })
+
   colorMap.forEach((color) => {
     event.custom({
       type: "tfc:barrel_sealed",
@@ -293,7 +307,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       '#forge:tools/mortars',
       "minecraft:blaze_rod"
     ])
-
+    event.shapeless('1x gtceu:saltpeter_dust', [
+      '4x tfc:powder/saltpeter'
+    ])
   event.recipes.create.pressing(
     [
       { item: "tfc:refined_iron_bloom" }
@@ -528,7 +544,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   }).id('gregitas:barrel/creosote_treated_lumber')
 
   //GTCEU End
-
+  //Computercraft
+  shaped('computercraft:computer_normal', ['sps', 'scs', 'OPO'], {
+    O: 'gtceu:iron_plate',
+    s: '#forge:plates/copper',
+    c: 'gtceu:basic_electronic_circuit',
+    p: 'gtceu:resin_printed_circuit_board',
+    P: '#forge:glass_panes'
+  })
+  
+  event.shapeless("computercraft:wireless_modem_normal",[
+    "computercraft:wired_modem",
+    "minecraft:ender_pearl"
+  ]) 
+  event.shapeless("computercraft:wireless_modem_advanced",[
+    "computercraft:wireless_modem_normal",
+    "minecraft:eye_of_ender"
+  ])
   //Rock and Stone!
   tfcStone.forEach((stone) => {
     event.recipes.gtceu
@@ -646,6 +678,35 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(120)
                 .EUt(LV)
     })
+    
+    event.recipes.gtceu.electric_blast_furnace('steel')
+    .itemInputs(
+              '#forge:ingots/wrought_iron'
+    )
+    .inputFluids(Fluid.of('gtceu:oxygen',200))
+    .chancedOutput('gtceu:ash_dust',1111,1)
+    .chancedOutput('immersiveengineering:slag',2000,1)
+    .itemOutputs(
+        'gtceu:steel_ingot'
+    )
+    .blastFurnaceTemp(1000)
+    .duration(300)
+    .EUt(MV)
+
+    event.recipes.gtceu.electric_blast_furnace('steel_from_iron')
+    .itemInputs(
+              '#forge:ingots/iron'
+    )
+    .inputFluids(Fluid.of('gtceu:oxygen',200))
+    .chancedOutput('gtceu:ash_dust',1111,1)
+    .chancedOutput('immersiveengineering:slag',2000,1)
+    .itemOutputs(
+        'gtceu:steel_ingot'
+    )
+    .blastFurnaceTemp(1000)
+    .duration(300)
+    .EUt(MV)
+
     event.recipes.gtceu.alloy_smelter('copper_alloy')
         .itemInputs(
             '#forge:silicon',
@@ -686,7 +747,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .itemOutputs(
             'minecraft:iron_ingot'
         )
-        .duration(750)
+        .duration(250)
         .EUt(LV)
     event.recipes.gtceu.alloy_smelter('conductive_alloy')
         .itemInputs(

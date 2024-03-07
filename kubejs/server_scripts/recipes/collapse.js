@@ -94,7 +94,7 @@ const addCollapse = (/** @type {Internal.RecipesEventJS} */ event) => {
       type: "tfc:collapse",
       ingredient: ingredients,
       result: result
-    })
+    }).id(`tfc:collapse/${Utils.id(result).path.replaceAll("/", "_")}`)
   }
   tfcStones.forEach(stone => {
     const rockArray = []

@@ -162,6 +162,20 @@ function getWoodReplacement(block, tfcTree) {
   }
 }
 
+function getStoneReplacement(block, rockId) {
+  let item = block
+  if (!item.namespace.equals("minecraft")) return
+  for (let i = 0; i < regexStoneArray.length; i++) {
+    let regExp = regexStoneArray[i][0]
+    let tfcString = regexStoneArray[i][1]
+    let match = item.path.match(regExp)
+    if (!match) continue
+    let rockType = rockId.replace("tfc:rock/raw/", "")
+    let newItem = tfcString.replace("$1", rockType)
+    return newItem
+  }
+}
+
 const regexArray = [
   [new RegExp(/^stripped_(\w+?)_log$/), "tfc:wood/stripped_log/$1"],
   [new RegExp(/^(\w+?)_log$/), "tfc:wood/log/$1"],
@@ -178,6 +192,38 @@ const regexArray = [
   [new RegExp(/^(\w+?)_trapdoor$/), "tfc:wood/planks/$1_trapdoor"],
   [new RegExp(/^(\w+?)_pressure_plate$/), "tfc:wood/planks/$1_pressure_plate"],
   [new RegExp(/^(\w+?)_button$/), "tfc:wood/planks/$1_button"]
+]
+
+const regexStoneArray = [
+  [new RegExp(/^stone$/), "tfc:rock/hardened/$1"],
+  [new RegExp(/^stone_stairs$/), "tfc:rock/raw/$1_stairs"],
+  [new RegExp(/^stone_slab$/), "tfc:rock/raw/$1_slab"],
+  [new RegExp(/^stone_pressure_plate$/), "tfc:rock/pressure_plate/$1"],
+  [new RegExp(/^stone_button$/), "tfc:rock/button/$1"],
+  [new RegExp(/^stone_bricks$/), "tfc:rock/bricks/$1"],
+  [new RegExp(/^stone_brick_slab$/), "tfc:rock/bricks/$1_slab"],
+  [new RegExp(/^stone_brick_stairs$/), "tfc:rock/bricks/$1_stairs"],
+  [new RegExp(/^stone_brick_wall$/), "tfc:rock/bricks/$1_wall"],
+
+  [new RegExp(/^cobblestone_wall$/), "tfc:rock/cobble/$1_wall"],
+  [new RegExp(/^cobblestone_slab$/), "tfc:rock/cobble/$1_slab"],
+  [new RegExp(/^cobblestone_stairs$/), "tfc:rock/cobble/$1_stairs"],
+  [new RegExp(/^cobblestone$/), "tfc:rock/raw/$1"],
+
+  [new RegExp(/^chiseled_stone_bricks$/), "tfc:rock/chiseled/$1"],
+  [new RegExp(/^infested_chiseled_stone_bricks$/), "tfc:rock/chiseled/$1"],
+  [new RegExp(/^cracked_stone_bricks$/), "tfc:rock/cracked_bricks/$1"],
+
+  [new RegExp(/^mossy_stone_bricks$/), "tfc:rock/mossy_bricks/$1"],
+
+  [new RegExp(/^mossy_cobblestone$/), "tfc:rock/mossy_cobble/$1"],
+
+  [new RegExp(/^smooth_stone_slab$/), "tfc:rock/smooth/$1_slab"],
+
+  [new RegExp(/^infested_stone$/), "tfc:rock/hardened/$1"],
+
+  [new RegExp(/^andesite$/), "tfc:rock/hardened/andesite"]
+
 ]
 
 const tfcWoodVanillaToTFC = {
