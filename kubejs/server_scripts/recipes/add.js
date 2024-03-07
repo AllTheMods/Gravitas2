@@ -678,6 +678,35 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(120)
                 .EUt(LV)
     })
+    
+    event.recipes.gtceu.electric_blast_furnace('steel')
+    .itemInputs(
+              '#forge:ingots/wrought_iron'
+    )
+    .inputFluids(Fluid.of('gtceu:oxygen',200))
+    .chancedOutput('gtceu:ash_dust',1111,1)
+    .chancedOutput('immersiveengineering:slag',2000,1)
+    .itemOutputs(
+        'gtceu:steel_ingot'
+    )
+    .blastFurnaceTemp(1000)
+    .duration(300)
+    .EUt(MV)
+
+    event.recipes.gtceu.electric_blast_furnace('steel_from_iron')
+    .itemInputs(
+              '#forge:ingots/iron'
+    )
+    .inputFluids(Fluid.of('gtceu:oxygen',200))
+    .chancedOutput('gtceu:ash_dust',1111,1)
+    .chancedOutput('immersiveengineering:slag',2000,1)
+    .itemOutputs(
+        'gtceu:steel_ingot'
+    )
+    .blastFurnaceTemp(1000)
+    .duration(300)
+    .EUt(MV)
+
     event.recipes.gtceu.alloy_smelter('copper_alloy')
         .itemInputs(
             '#forge:silicon',
