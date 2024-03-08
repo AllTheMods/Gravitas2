@@ -20,7 +20,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "computercraft:pocket_computer_advanced" })
   event.remove({ id: "computercraft:wireless_modem_normal" })
   event.remove({ id: "computercraft:wireless_modem_advanced"})
-
+  event.remove({ id: "vintageimprovements:curving/iron_sheet"})
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
