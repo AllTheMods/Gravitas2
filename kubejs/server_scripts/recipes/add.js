@@ -189,7 +189,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             tag: "tfc:chisels"
         },
         {
-            item: `tfc:brick/chalk`
+            item: `tfc:rock/button/chalk`
         }
         ],
         result: {
