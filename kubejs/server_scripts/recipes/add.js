@@ -683,7 +683,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
            .itemOutputs(
                'minecraft:brick'
            )
-           .duration(120)
+           .duration(60)
            .EUt(LV)
 
     tfcStone.forEach(stone => {
@@ -694,12 +694,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                .notConsumable('gtceu:ingot_casting_mold')
                .itemOutputs(
                    `tfc:brick/${stone}`               )
-               .duration(120)
+               .duration(60)
                .EUt(LV)
         event.recipes.gtceu.forge_hammer(`loose_${stone}`)
                 .itemInputs(`tfc:rock/raw/${stone}`)
                 .itemOutputs(`4x tfc:rock/loose/${stone}`)
-                .duration(120)
+                .duration(60)
                 .EUt(LV)
     })
     tfcStone2.forEach(stone => {
@@ -707,7 +707,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemInputs(`tfc:rock/loose/${stone}`)
                 .itemOutputs(`gregitas_core:${stone}_dust`)
                 .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
-                .duration(120)
+                .duration(60)
                 .EUt(LV)
     })
     vanStone.forEach(stone => {
@@ -715,7 +715,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemInputs(`tfc:rock/loose/${stone}`)
                 .itemOutputs(`gtceu:${stone}_dust`)
                 .chancedOutput(`gtceu:${stone}_dust`,1000,1)
-                .duration(120)
+                .duration(60)
                 .EUt(LV)
     })
 
