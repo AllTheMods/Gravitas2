@@ -138,9 +138,18 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //TFC
   tfcMetallics.forEach((metal) => {
-    event.replaceInput({ type: "minecraft:crafting_shaped" }, `tfc:metal/sheet/${metal}`, `#forge:plates/${metal}`)
-    event.replaceInput(
+    // Replace all instances of `tfc:metal/sheet/${metal}` with `#forge:plates/${metal}` for all shaped and shapeless recipes.
+    event.replaceInput([
       { type: "minecraft:crafting_shaped" },
+      { type: "minecraft:crafting_shapeless" },
+    ], `tfc:metal/sheet/${metal}`, `#forge:plates/${metal}`)
+
+    // Replace all instances of `tfc:metal/double_sheet/${metal}` with `#forge:plates/${metal}` for all shaped and shapeless recipes.
+    event.replaceInput(
+      [
+        { type: "minecraft:crafting_shaped" },
+        { type: "minecraft:crafting_shapeless" },
+      ],
       `tfc:metal/double_sheet/${metal}`,
       `#forge:plates/double/${metal}`
     )
