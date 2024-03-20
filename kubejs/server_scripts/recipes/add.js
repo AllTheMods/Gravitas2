@@ -21,6 +21,30 @@ const tfcStone = [
   "gneiss",
   "marble"
 ]
+const tfcStone2 = [
+  "gabbro",
+  "shale",
+  "claystone",
+  "limestone",
+  "conglomerate",
+  "dolomite",
+  "chert",
+  "chalk",
+  "rhyolite",
+  "dacite",
+  "slate",
+  "phyllite",
+  "schist",
+  "gneiss"
+]
+const vanStone = [
+  "granite",
+  "diorite",
+  "andesite",
+  "quartzite",
+  "marble",
+  "basalt"
+]
 const gemStonesA = [
  "amethyst",
  "diamond",
@@ -678,7 +702,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(120)
                 .EUt(LV)
     })
-    
+    tfcStone2.forEach(stone => {
+      event.recipes.gtceu.macerator(`${stone}_dust`)
+                .itemInputs(`tfc:rock/loose/${stone}`)
+                .itemOutputs(`gregitas_core:${stone}_dust`)
+                .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
+                .duration(120)
+                .EUt(LV)
+    })
+    vanStone.forEach(stone => {
+      event.recipes.gtceu.macerator(`${stone}_dust`)
+                .itemInputs(`tfc:rock/loose/${stone}`)
+                .itemOutputs(`gtceu:${stone}_dust`)
+                .chancedOutput(`gtceu:${stone}_dust`,1000,1)
+                .duration(120)
+                .EUt(LV)
+    })
+
     event.recipes.gtceu.electric_blast_furnace('steel')
     .itemInputs(
               '#forge:ingots/wrought_iron'
