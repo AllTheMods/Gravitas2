@@ -23,6 +23,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "vintageimprovements:curving/iron_sheet"})
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
+  event.remove({ id: "gtceu:cutter/cut_glass_block_to_plate_water"})
   event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
