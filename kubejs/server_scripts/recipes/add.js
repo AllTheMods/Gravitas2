@@ -860,7 +860,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .duration(750)
         .EUt(MV)
 
-     event.recipes.gtceu.alloy_smelter('enlightened_fused_quartz')
+    event.recipes.gtceu.alloy_smelter('enlightened_fused_quartz')
          .itemInputs(
              'enderio:fused_quartz',
              'minecraft:glowstone'
@@ -870,6 +870,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          )
          .duration(750)
          .EUt(MV)
+
+    // Create Igneous Alloy
+    event.recipes.gtceu.alloy_smelter('igneous_alloy')
+        .itemInputs(
+            '2x gregitas_core:igneous_dust',
+            '2x gtceu:small_zinc_dust'
+        )
+        .itemOutputs(
+            'create:andesite_alloy'
+        )
+        .duration(60)
+        .EUt(LV)        
 
      shaped("computercraft:turtle_normal", ["www", "wpw","wcw"], {
         w: "tfc:metal/ingot/cast_iron",
