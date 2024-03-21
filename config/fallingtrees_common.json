@@ -1,0 +1,59 @@
+{
+  "disableCrouchMining": true,
+  "disableExtraToolDamage": false,
+  "disableExtraFoodExhaustion": false,
+  "onlyFallWithRequiredTool": false,
+  "treeLifetimeLength": 4.0,
+  "dynamicMiningSpeed": {
+    "disable": true,
+    "speedMultiplication": 0.5,
+    "minimumSpeed": 1.0E-4
+  },
+  "trees": {
+    "standardTree": {
+      "algorithm": {
+        "maxLeavesRadius": 10,
+        "maxLogAmount": 256,
+        "shouldFallOnMaxLogAmount": false
+      },
+      "logFilter": {
+        "whitelistedTags": [
+          "minecraft:logs"
+        ],
+        "whitelist": [],
+        "blacklist": []
+      },
+      "leavesFilter": {
+        "whitelistedTags": [
+          "minecraft:leaves"
+        ],
+        "whitelist": [],
+        "blacklist": []
+      },
+      "extraBlockFilter": {
+        "whitelistedTags": [],
+        "whitelist": [
+          "minecraft:vine",
+          "minecraft:bee_nest",
+          "minecraft:cocoa"
+        ],
+        "blacklist": []
+      },
+      "enabled": true
+    },
+    "verticalTree": {
+      "filter": {
+        "whitelistedTags": [],
+        "whitelist": [
+          "minecraft:cactus",
+          "minecraft:bamboo"
+        ],
+        "blacklist": []
+      },
+      "enabled": true
+    },
+    "chorusTree": {
+      "enabled": true
+    }
+  }
+}

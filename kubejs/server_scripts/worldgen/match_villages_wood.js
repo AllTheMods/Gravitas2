@@ -5,7 +5,7 @@ const $RandomSource = Java.loadClass("net.minecraft.util.RandomSource")
 let TREE_FOREST
 let FOREST_FEATURE
 let replaceVillagesWoodAccordingToClimate = (/** @type {Internal.StructureAfterPlaceEventJS} */ event) => {
-  if (event.id.toString().includes("village")) {
+  if (event.chunkGenerator.class.simpleName == "TFCChunkGenerator") {
     // console.log(`Structure: ${event.structure} is a village with id: ${event.id}`)
     if (!TREE_FOREST) {
       TREE_FOREST = event.worldGenLevel.server
