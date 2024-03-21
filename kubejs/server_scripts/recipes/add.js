@@ -21,6 +21,30 @@ const tfcStone = [
   "gneiss",
   "marble"
 ]
+const tfcStone2 = [
+  "gabbro",
+  "shale",
+  "claystone",
+  "limestone",
+  "conglomerate",
+  "dolomite",
+  "chert",
+  "chalk",
+  "rhyolite",
+  "dacite",
+  "slate",
+  "phyllite",
+  "schist",
+  "gneiss"
+]
+const vanStone = [
+  "granite",
+  "diorite",
+  "andesite",
+  "quartzite",
+  "marble",
+  "basalt"
+]
 const gemStonesA = [
  "amethyst",
  "diamond",
@@ -189,7 +213,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             tag: "tfc:chisels"
         },
         {
-            item: `tfc:brick/chalk`
+            item: `tfc:rock/button/chalk`
         }
         ],
         result: {
@@ -659,7 +683,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
            .itemOutputs(
                'minecraft:brick'
            )
-           .duration(120)
+           .duration(60)
            .EUt(LV)
 
     tfcStone.forEach(stone => {
@@ -670,15 +694,31 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                .notConsumable('gtceu:ingot_casting_mold')
                .itemOutputs(
                    `tfc:brick/${stone}`               )
-               .duration(120)
+               .duration(60)
                .EUt(LV)
         event.recipes.gtceu.forge_hammer(`loose_${stone}`)
                 .itemInputs(`tfc:rock/raw/${stone}`)
                 .itemOutputs(`4x tfc:rock/loose/${stone}`)
-                .duration(120)
+                .duration(60)
                 .EUt(LV)
     })
-    
+    tfcStone2.forEach(stone => {
+      event.recipes.gtceu.macerator(`${stone}_dust`)
+                .itemInputs(`tfc:rock/loose/${stone}`)
+                .itemOutputs(`gregitas_core:${stone}_dust`)
+                .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
+                .duration(60)
+                .EUt(LV)
+    })
+    vanStone.forEach(stone => {
+      event.recipes.gtceu.macerator(`${stone}_dust`)
+                .itemInputs(`tfc:rock/loose/${stone}`)
+                .itemOutputs(`gtceu:${stone}_dust`)
+                .chancedOutput(`gtceu:${stone}_dust`,1000,1)
+                .duration(60)
+                .EUt(LV)
+    })
+
     event.recipes.gtceu.electric_blast_furnace('steel')
     .itemInputs(
               '#forge:ingots/wrought_iron'
@@ -860,7 +900,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         .duration(750)
         .EUt(MV)
 
-     event.recipes.gtceu.alloy_smelter('enlightened_fused_quartz')
+    event.recipes.gtceu.alloy_smelter('enlightened_fused_quartz')
          .itemInputs(
              'enderio:fused_quartz',
              'minecraft:glowstone'
@@ -870,6 +910,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
          )
          .duration(750)
          .EUt(MV)
+
+    // Create Igneous Alloy
+    event.recipes.gtceu.alloy_smelter('igneous_alloy')
+        .itemInputs(
+            '2x gregitas_core:igneous_dust',
+            '2x gtceu:small_zinc_dust'
+        )
+        .itemOutputs(
+            'create:andesite_alloy'
+        )
+        .duration(60)
+        .EUt(LV)        
 
      shaped("computercraft:turtle_normal", ["www", "wpw","wcw"], {
         w: "tfc:metal/ingot/cast_iron",

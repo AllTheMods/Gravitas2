@@ -1,7 +1,7 @@
 // priority: 10
 
 let replaceVillagesStoneAccordingRock = (/** @type {Internal.StructureAfterPlaceEventJS} */ event) => {
-  // if (event.id.toString().includes("village")) {
+  if (event.chunkGenerator.class.simpleName != "TFCChunkGenerator") {
   // console.log(`Structure: ${event.structure} is a village with id: ${event.id}`)
   let chunkData = $ChunkProvider.get(event.chunkGenerator).get(event.worldGenLevel, event.chunkPos.worldPosition)
   let rockId = chunkData.rockData.getRock(event.chunkPos.worldPosition).raw().id
@@ -17,5 +17,5 @@ let replaceVillagesStoneAccordingRock = (/** @type {Internal.StructureAfterPlace
       }
     })
   })
-  // }
+  }
 }
