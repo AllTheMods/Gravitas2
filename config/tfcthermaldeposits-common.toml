@@ -1,0 +1,173 @@
+
+[General]
+	#
+	# Should lava deposit minerals onto the surrounding blocks?
+	shouldLavaDepositMinerals = true
+	#
+	# Should hot springs deposit minerals onto the surrounding blocks?
+	shouldHotSpringsDepositMinerals = true
+	#
+	# How often minerals can generate around lava. This also affects natural replenishment. Lower value => more often.
+	#Range: > 0
+	mineralGenFrequencyLava = 128
+	#
+	# How often minerals can generate around hot springs. This also affects natural replenishment. Lower value => more often.
+	#Range: > 0
+	mineralGenFrequencyHotSpring = 64
+	#
+	# Toggle smoke particles released by lava? True = smokes.
+	shouldLavaSmoke = true
+	#
+	# Toggle whether or not lava and hot springs should deposit minerals in other dimensions than the overworld? True = not limited to the overworld.
+	toggleOtherDimensions = false
+	#
+	# Toggle whether or not lava and hot spring water should replenish their mineral "storage" naturally. True = replenishes.
+	naturalReplenishment = true
+	#
+	# Toggle whether or not lava and hot spring water should deposit minerals, regardless of them being natural or placed. True = all generated or placed deposits minerals.
+	toggleDepositsFromAllLavaOrSpringWater = false
+	#
+	# Sound amplifier level for earthquakes and tremors. Default = 4.0.
+	#Range: 0.0 ~ 1.7976931348623157E308
+	earthquakeSoundAmplifier = 4.0
+	#
+	# Should volcanoes launch pyroclastic bombs?
+	togglePyroclasticBombs = true
+	#
+	# Should pyroclastic bombs destroy blocks?
+	togglePyroclasticBombsExplode = false
+	#
+	# How big should the explosion radius of pyroclastic bombs be? Default = 4.0.
+	#Range: 0.0 ~ 1.7976931348623157E308
+	pyroclasticBombExplosionRadius = 4.0
+	#
+	# Should pyroclastic bombs generate scoria around its zone of impact?
+	togglePyroclasticBombScoria = true
+	#
+	# Should pyroclastic bombs have a chance of spawning with ore?
+	togglePyroclasticBombOre = true
+	#
+	# How big of a chance should pyroclastic bombs have to contain a random ore? Higher value => lower chance.
+	#Range: > 1
+	pyroclasticBombOreChance = 30
+	#
+	# Should volcanos shake the camera during high activity events?
+	toggleVolcanoShake = true
+	#
+	# Should Nether have the occasional tremors and earthquakes?
+	toggleNetherTremor = false
+	#
+	# Should tremors happen more frequent? True => more frequent.
+	highTremorFrequency = false
+	#
+	# How fast shall minerals replenish for the lava or hot spring water in mafic rock environment? Lower = faster.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	replenishmentFactorMafic = 0.25
+	#
+	# How fast shall minerals replenish for the lava or hot spring water in intermediate rock environment? Lower = faster.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	replenishmentFactorIntermediate = 0.42
+	#
+	# How fast shall minerals replenish for the lava or hot spring water in felsic rock environment? Lower = faster.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	replenishmentFactorFelsic = 0.66
+	#
+	# How fast shall minerals replenish for the lava or hot spring water in metamorphic rock environment? Lower = faster.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	replenishmentFactorMetamorphic = 0.5
+	#
+	# How fast shall minerals replenish for the lava or hot spring water in sedimentary rock environment? Lower = faster.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	replenishmentFactorSedimentary = 1.0
+	#
+	# Factor for how rare pyroclastic bombs will happen in rocks of the mafic type. Lower = greater intensity.
+	#Range: 0.0 ~ 2000.0
+	maficVolcanoIntensityFactor = 2.0
+	#
+	# Factor for how rare pyroclastic bombs will happen in rocks of the intermediate type. Lower = greater intensity.
+	#Range: 0.0 ~ 2000.0
+	intermediateVolcanoIntensityFactor = 1.5
+	#
+	# Factor for how rare pyroclastic bombs will happen in rocks of the felsic type. Lower = greater intensity.
+	#Range: 0.0 ~ 2000.0
+	felsicVolcanoIntensityFactor = 0.6
+	#
+	# Factor for how rare pyroclastic bombs will happen in rocks of the metamorphic type. Lower = greater intensity.
+	#Range: 0.0 ~ 2000.0
+	metamorphicVolcanoIntensityFactor = 1.0
+	#
+	# Factor for how rare pyroclastic bombs will happen in rocks of the sedimentary type. Lower = greater intensity.
+	#Range: 0.0 ~ 2000.0
+	sedimentaryVolcanoIntensityFactor = 0.9
+	#
+	# Felsic rocks contain more silica compounds than mafic, thus "felsic lava" has a higher viscosity, flow speed and distance -- like honey.
+	# 
+	# Standard slope distance for lava is 2, whilst 4 in the Nether.
+	# Slope distance for lava in felsic rocks.
+	#Range: > 0
+	slopeDistanceFelsic = 4
+	#
+	# Slope distance for lava in sedimentary rocks.
+	#Range: > 0
+	slopeDistanceSedimentary = 5
+	#
+	# Slope distance for lava in metamorphic rocks.
+	#Range: > 0
+	slopeDistanceMetamorphic = 5
+	#
+	# Slope distance for lava in intermediate rocks.
+	#Range: > 0
+	slopeDistanceIntermediate = 6
+	#
+	# Slope distance for lava in mafic rocks.
+	#Range: > 0
+	slopeDistanceMafic = 7
+	#
+	# Standard drop off for lava is 2, whilst 1 in the Nether.
+	# Drop off for lava in felsic rocks.
+	#Range: > 0
+	dropOffFelsic = 3
+	#
+	# Drop off for lava in sedimentary rocks.
+	#Range: > 0
+	dropOffSedimentary = 2
+	#
+	# Drop off for lava in metamorphic rocks.
+	#Range: > 0
+	dropOffMetamorphic = 2
+	#
+	# Drop off for lava in intermediate rocks.
+	#Range: > 0
+	dropOffIntermediate = 1
+	#
+	# Drop off for lava in mafic rocks.
+	#Range: > 0
+	dropOffMafic = 1
+	#
+	# Standard tick delay for lava is 30, whilst 10 in the Nether.
+	# Tick delay for lava in felsic rocks.
+	#Range: > 0
+	tickDelayFelsic = 40
+	#
+	# Tick delay for lava in sedimentary rocks.
+	#Range: > 0
+	tickDelaySedimentary = 25
+	#
+	# Tick delay for lava in metamorphic rocks.
+	#Range: > 0
+	tickDelayMetamorphic = 25
+	#
+	# Tick delay for lava in intermediate rocks.
+	#Range: > 0
+	tickDelayIntermediate = 10
+	#
+	# Tick delay for lava in mafic rocks.
+	#Range: > 0
+	tickDelayMafic = 5
+	#
+	# Enable debug messaging in the log?
+	toggleDebug = false
+	#
+	# Toggle finite water for salt-, fresh-, river- and spring water? Setting this to true will prevent water from creating source blocks when spreading.
+	toggleFiniteWater = true
+
