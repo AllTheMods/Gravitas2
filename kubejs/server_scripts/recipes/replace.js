@@ -214,4 +214,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ id: `/^gtceu:blasting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceOutput({ id: `/^minecraft:iron_ingot_from_.*/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ mod: "computercraft"}, "minecraft:redstone", "gtceu:basic_electronic_circuit")
+
+  event.replaceInput({ mod: "immersiveengineering"}, "#forge:rods/aluminum", "gtceu:aluminium_rod")
 }
