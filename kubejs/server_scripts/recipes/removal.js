@@ -263,7 +263,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
 
   //Firmalife
-  event.remove({ id: "firmalife:alloy/stainless_steel"})
+  // event.remove({ id: "firmalife:alloy/stainless_steel"})
   event.remove({ id: /firmalife:heating\/ore\/.*_chromite/})
   //AE2
 

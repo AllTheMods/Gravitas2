@@ -136,6 +136,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Railcraft
   event.replaceInput({ id: "railcraft:water_tank_siding" }, "minecraft:slimeball", "gtceu:sticky_resin")
   event.replaceInput({ id: "railcraft:steam_locomotive" }, "railcraft:blast_furnace_bricks", "gtceu:firebricks")
+  // $event.replaceOutput({ id: "firmalife:casting/stainless_steel_ingot" }, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot")
 
   //TFC
   tfcMetallics.forEach((metal) => {
@@ -170,7 +171,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Firmalife
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot" )
-  event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot" )
+  event.replaceInput({}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot")
+  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/chromium", "gtceu:chromium")
+  event.replaceOutput({}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot")
   //Firebricks/Cokebricks etc
   event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
