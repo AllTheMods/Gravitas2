@@ -1,0 +1,21 @@
+{
+    "type": "tfc:alloy",
+    "result": "gtceu:stainless_steal",
+    "contents": [
+        {
+            "metal": "#forge:nickel",
+            "min": 0.10,
+            "max": 0.20
+        },
+        {
+            "metal": "#forge:chromium",
+            "min": 0.20,
+            "max": 0.30
+        },
+        {
+            "metal": "#forge:steel",
+            "min": 0.60,
+            "max": 0.80
+        }
+    ]
+}

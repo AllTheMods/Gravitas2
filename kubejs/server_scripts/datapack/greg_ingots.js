@@ -340,27 +340,27 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     },
     {
       ore: "gtceu:raw_chromite",
-      liquid: "gtceu:chromium",
+      liquid: "firmalife:metal/ingot/chromium",
       amount: 72
     },
     {
       ore: "firmalife:ore/small_chromite",
-      liquid: "gtceu:chromium",
+      liquid: "firmalife:metal/ingot/chromium",
       amount: 16
     },
     {
       ore: "firmalife:ore/poor_chromite",
-      liquid: "gtceu:chromium",
+      liquid: "firmalife:metal/ingot/chromium",
       amount: 24
     },
     {
       ore: "firmalife:ore/normal_chromite",
-      liquid: "gtceu:chromium",
+      liquid: "firmalife:metal/ingot/chromium",
       amount: 36
     },
     {
       ore: "firmalife:ore/rich_chromite",
-      liquid: "gtceu:chromium",
+      liquid: "firmalife:metal/ingot/chromium",
       amount: 48
     }
 
