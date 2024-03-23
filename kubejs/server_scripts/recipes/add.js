@@ -217,7 +217,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
         ],
         result: {
-            item: `3x chalk:white_chalk`
+            item: `chalk:white_chalk`
         }
     }
   })
