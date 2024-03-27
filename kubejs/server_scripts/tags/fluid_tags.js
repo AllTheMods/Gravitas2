@@ -56,4 +56,8 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
     tfcMetalFluids.forEach(fluid => {
         event.add(`forge:${fluid}`, `tfc:metal/${fluid}`)
     })
+
+    event.add('create:bottomless/allow', 'tfc:salt_water')
+    event.add('create:bottomless/allow', 'tfc:river_water')
+
 }
