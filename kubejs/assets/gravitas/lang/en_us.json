@@ -874,5 +874,8 @@
 	"gravitas.quest.lv.title.maint": "Machine Maintenance",
 	"gravitas.quest.lv.desc.maint": "You broke it all ready? Thats what the Maintenance Hatch is for I guess. Click tools into the hatch until the problem is fixed, or use duct-tape.",
 	"gravitas.quest.lv.desc.oxy_bucket": "This is sign TWO that you should probably make that passive oxygen line. There are many ways to obtain it, so i'll leave it to you and JEI.",
-	"gravitas.quest.lv.desc.ars_triox": "Put Cobaltite dust in with 3 buckets of oxygen to your EBF to get Arsenic Trioxide. You can process some of the byproducts for some of your O2 back."
+	"gravitas.quest.lv.desc.ars_triox": "Put Cobaltite dust in with 3 buckets of oxygen to your EBF to get Arsenic Trioxide. You can process some of the byproducts for some of your O2 back.",
+
+    "death.attack.heatstroke": "%s died of heatstroke",
+	"death.attack.frostbite": "%s died of frostbite"
 }
