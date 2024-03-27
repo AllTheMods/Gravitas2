@@ -877,5 +877,6 @@
 	"gravitas.quest.lv.desc.ars_triox": "Put Cobaltite dust in with 3 buckets of oxygen to your EBF to get Arsenic Trioxide. You can process some of the byproducts for some of your O2 back.",
 
     "death.attack.heatstroke": "%s died of heatstroke",
-	"death.attack.frostbite": "%s died of frostbite"
+	"death.attack.frostbite": "%s died of frostbite",
+	"death.attack.gtceu.electric": "%s was electrocuted"	
 }
