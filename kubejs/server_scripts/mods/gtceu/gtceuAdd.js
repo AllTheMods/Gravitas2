@@ -308,7 +308,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             "tfc:metal/bismuth":    "gtceu:bismuth",        
             "tfc:metal/tin":        "gtceu:tin",            
             "tfc:metal/silver":     "gtceu:silver",
-            "firmalife:metal/chromium": "gtceu:chromium",
+            "gtceu:chromium": "gtceu:chromium",
         }
         /// Mainly here just if someone wants to tweak later
         const TFCFluidEUMap = {
@@ -317,7 +317,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             36: 36, /// 1/4 of 4320 = 1080eu
             48: 48, /// 1/3 of 4320 = 1440eu
         }
-    event.forEachRecipe( {input: /^tfc:ore\/?(small|poor|normal|rich).*/, type: "tfc:heating"}, r => {
+    event.forEachRecipe( {input: `/^tfc:ore\/?(small|poor|normal|rich).*/`, type: "tfc:heating"}, r => {
         let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
         let fluidIngredient = unwrapValue(r.get("result_fluid"))
 
@@ -332,7 +332,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
             .EUt(LV)
     })
-    event.forEachRecipe( {input: /^firmalife:ore\/?(small|poor|normal|rich).*/, type: "tfc:heating"}, r => {
+    event.forEachRecipe( {input: `/^firmalife:ore\/?(small|poor|normal|rich).*/`, type: "tfc:heating"}, r => {
             let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
             let fluidIngredient = unwrapValue(r.get("result_fluid"))
 
@@ -347,6 +347,13 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
                 .EUt(LV)
         })
+    event.recipes.gtceu.fluid_solidifier("tfc:metal/ingot/cast_iron")
+    .inputFluids('tfc:metal/cast_iron 144')
+    .notConsumable('gtceu:ingot_casting_mold')
+    .itemOutputs('tfc:metal/ingot/cast_iron')
+    .duration(60)
+    .EUt(LV)
+
 
         event.recipes.gtceu.centrifuge("menril_logs")
             .itemInputs('1x integrateddynamics:menril_log')
