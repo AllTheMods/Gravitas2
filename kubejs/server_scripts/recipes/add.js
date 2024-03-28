@@ -1063,4 +1063,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(60)
     .EUt(LV)
 
+    event.recipes.gtceu.cutter("tin_lid")
+    .itemInputs("gtceu:tin_plate")
+    .itemOutputs('32x tfc:jar_lid')
+    .inputFluids(Fluid.of("minecraft:water", 4))
+    .duration(40)
+    .EUt(LV)
+
+
 }
