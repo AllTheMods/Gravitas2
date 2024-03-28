@@ -1056,4 +1056,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
       event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
     }
+    event.recipes.gtceu.alloy_smelter("empty_jar")
+    .notConsumable("gtceu:block_casting_mold")
+    .itemInputs("#tfc:glass_batches_tier_2")
+    .itemOutputs("tfc:empty_jar")
+    .duration(60)
+    .EUt(LV)
+
 }
