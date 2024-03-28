@@ -94,6 +94,9 @@
 	unhandled_beneficial_effects = ["astralsorcery:potiontimefreeze"]
 	#Harmful effects that can't used by certain features such as tablet of cupidity and the enchantment plague bringer
 	unhandled_harmful_effects = ["minecraft:nausea"]
+	#Rarity for Easter Eggs to spawn during Easter [1000..100000|default:5000]
+	#Range: 1000 ~ 100000
+	easter_egg_spawn_rarity = 100000
 
 #Allows to define the conditions for a village siege to begin
 [village_siege]

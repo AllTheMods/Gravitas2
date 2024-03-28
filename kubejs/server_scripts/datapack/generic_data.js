@@ -17,6 +17,7 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
     }
 
     addTFCDrinkables('maple_syrup', 'gregitas:maple_syrup', 10, 10, 10)
+    
 
     let addTFCFoodItems = (id, item, hunger, saturation, water, decay, grain, fruit, veg, protein, dairy) => {
         let json = JsonIO.toObject(
@@ -43,6 +44,7 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
     addTFCFoodItems('honey_cake_slice', 'kubejs:honey_cake_slice', 4, 2.5, 0, 0.7, 1, 2, 0, 0, 0)
     addTFCFoodItems('honeyed_apple', 'create:honeyed_apple', 4, 2.5, 0, 0.7, 0, 2, 0, 0, 0)
     addTFCFoodItems('sweet_roll', 'create:sweet_roll', 4, 3.5, 0, 1.7, 2, 0, 0, 0, 1)
+    addTFCFoodItems('maple_glazed_roll', 'gregitas:maple_glazed_roll', 4, 3.5, 0, 2.1, 2.5, 0, 0, 0, 0)
 
     let addTFCFuels = (id, fuel, duration, temp) => {
         let json = JsonIO.toObject(

@@ -1746,7 +1746,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.recipes.gtceu.assembler('gregitas:energy_card')
                 .itemInputs(
                     'ae2:advanced_card',
-                    '#forge:batteries/mv'
+                    '#gtceu:batteries/mv'
                 )
                 .itemOutputs(
                     'ae2:energy_card'

@@ -217,7 +217,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
         ],
         result: {
-            item: `3x chalk:white_chalk`
+            item: `chalk:white_chalk`
         }
     }
   })
@@ -1056,4 +1056,19 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
       event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
     }
+    event.recipes.gtceu.alloy_smelter("empty_jar")
+    .notConsumable("gtceu:block_casting_mold")
+    .itemInputs("#tfc:glass_batches_tier_2")
+    .itemOutputs("tfc:empty_jar")
+    .duration(60)
+    .EUt(LV)
+
+    event.recipes.gtceu.cutter("tin_lid")
+    .itemInputs("gtceu:tin_plate")
+    .itemOutputs('32x tfc:jar_lid')
+    .inputFluids(Fluid.of("minecraft:water", 4))
+    .duration(40)
+    .EUt(LV)
+
+
 }
