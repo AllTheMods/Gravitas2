@@ -575,4 +575,6 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.sequenced_assembly('gtceu:red_steel_ingot', 'tfc:metal/ingot/high_carbon_red_steel', 
         event.recipes.create.pressing('tfc:metal/ingot/high_carbon_red_steel', 'tfc:metal/ingot/high_carbon_red_steel')
     ).transitionalItem('tfc:metal/ingot/high_carbon_red_steel').loops(3)
+
+    event.recipes.create.filling("gregitas:maple_glazed_roll", ["#tfc:foods/breads", Fluid.of("gregitas:maple_syrup", 250)]).id("gregitas:maple_glazed_roll")
 }
