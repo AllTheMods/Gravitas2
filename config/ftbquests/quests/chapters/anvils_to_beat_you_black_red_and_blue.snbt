@@ -30,7 +30,7 @@
 						value: "forge:ingots/black_steel"
 					}
 				}
-				title: "Any #forge:ingots/black_steel"
+				title: "Black_Steel"
 				type: "item"
 			}]
 			x: 3.0d
@@ -69,7 +69,7 @@
 						value: "forge:ingots/weak_blue_steel"
 					}
 				}
-				title: "Any #forge:ingots/weak_blue_steel"
+				title: "Weak_Blue_Steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -88,7 +88,7 @@
 						value: "forge:ingots/weak_red_steel"
 					}
 				}
-				title: "Any #forge:ingots/weak_red_steel"
+				title: "Red_Steel"
 				type: "item"
 			}]
 			x: 3.5d
@@ -106,7 +106,7 @@
 						value: "forge:ingots/blue_steel"
 					}
 				}
-				title: "Any #forge:ingots/blue_steel"
+				title: "Blue_Steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -124,7 +124,7 @@
 						value: "forge:ingots/red_steel"
 					}
 				}
-				title: "Any #forge:ingots/red_steel"
+				title: "Red_Steel"
 				type: "item"
 			}]
 			x: 3.5d
@@ -149,7 +149,7 @@
 					}
 					id: "tfc:metal/anvil/blue_steel"
 				}
-				title: "{gravitas.quest.caveman.coloured_anvil}"
+				title: "Coloured_Anvil"
 				type: "item"
 			}]
 			x: 3.0d
@@ -194,7 +194,7 @@
 						value: "forge:ingots/high_carbon_blue_steel"
 					}
 				}
-				title: "Any #forge:ingots/high_carbon_blue_steel"
+				title: "Any #High_Carbon_Blue_Steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -213,7 +213,7 @@
 						value: "forge:ingots/high_carbon_red_steel"
 					}
 				}
-				title: "Any #forge:ingots/high_carbon_red_steel"
+				title: "High_Carbon_Red_Steel"
 				type: "item"
 			}]
 			x: 3.5d
@@ -251,7 +251,7 @@
 				title: "Any #tfc:pickaxe_tier6"
 				type: "item"
 			}]
-			title: "{gravitas.quest.caveman.coloured_pickaxe}"
+			title: "Tier_666_Pickaxe"
 			x: 5.0d
 			y: 2.5d
 		}
