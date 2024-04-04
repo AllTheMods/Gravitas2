@@ -1,4 +1,15 @@
 // priority 10
+const fish =[
+  "tfc:food/cod",
+  "tfc:food/salmon",
+  "tfc:food/bluegill",
+  "tfc:food/crappie",
+  "tfc:food/lake_trout",
+  "tfc:food/largemouth_bass",
+  "tfc:food/rainbow_trout",
+  "tfc:food/smallmouth_bass",
+  "tfc:food/tropical_fish"
+]
 const tfcStone = [
   "granite",
   "diorite",
@@ -1069,5 +1080,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(40)
     .EUt(LV)
 
-
+   fish.forEach((fish) => {
+    event.recipes.gtceu.extractor(`${fish}_oil`)
+    .itemInputs(`${fish}`)
+    .outputFluids(Fluid.of("gtceu:fish_oil", 50))
+    .duration(60)
+    .EUt(LV)
+   })
 }
