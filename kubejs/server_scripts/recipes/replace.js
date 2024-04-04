@@ -219,5 +219,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "createdeco"}, "create:brass_nugget", "#forge:nuggets/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_nugget", "#forge:nuggets/zinc")
   event.replaceInput({ mod: "createdeco"}, "create:copper_nugget", "#forge:nuggets/copper")
+  event.replaceInput({ mod: "createdeco"}, "create:limestone", "tfc:rock/raw/limestone")
+  event.replaceInput({ mod: "createdeco"}, "create:crimsite", "minecraft:netherrack")
+  
 
 }
