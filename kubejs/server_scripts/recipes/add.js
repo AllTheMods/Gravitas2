@@ -951,11 +951,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
 
     //SFM
-    shaped("sfm:manager", ["PPP", "BVI", "CCC"], {
+    shaped("sfm:manager", ["PPP", "LVL", "CCC"], {
         P: "#forge:plates/wrought_iron",
-        B: "gtceu:basic_electronic_circuit",
+        L: "gtceu:circuits/lv",
         V: "gtceu:vacuum_tube",
-        I: "gtceu:basic_integrated_circuit",
         C: "gtceu:resin_printed_circuit_board"
     })
     shaped("8x sfm:cable", ["ppp", "bcb", "ppp"], {
