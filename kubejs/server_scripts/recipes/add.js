@@ -964,7 +964,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     //SFM
     shaped("sfm:manager", ["PPP", "LVL", "CCC"], {
         P: "#forge:plates/wrought_iron",
-        L: "gtceu:circuits/lv",
+        L: "#gtceu:circuits/lv",
         V: "gtceu:vacuum_tube",
         C: "gtceu:resin_printed_circuit_board"
     })
