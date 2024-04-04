@@ -357,4 +357,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^chalk:chalk_from_.*/`})
   
+  //DECO
+
+  event.remove({ id: 'createdeco:pressing/zinc_sheet'})
+
 }

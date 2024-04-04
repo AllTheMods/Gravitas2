@@ -203,4 +203,21 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "computercraft"}, "minecraft:redstone", "gtceu:basic_electronic_circuit")
 
   event.replaceInput({ mod: "immersiveengineering"}, "#forge:rods/aluminum", "gtceu:aluminium_rod")
+  event.replaceInput({ mod: "createdeco"}, "minecraft:copper_ingot", "#forge:ingots/copper")
+  event.replaceInput({ mod: "createdeco"}, "create:brass_ingot", "#forge:ingots/brass")
+  event.replaceInput({ mod: "createdeco"}, "create:zinc_ingot", "#forge:ingots/zinc")
+  event.replaceInput({ mod: "createdeco"}, "create:brass_sheet", "#forge:plates/brass")
+  event.replaceInput({ mod: "createdeco"}, "create:iron_sheet", "#forge:plates/iron")
+  event.replaceInput({ mod: "createdeco"}, "createdeco:zinc_sheet", "#forge:plates/zinc")
+  event.replaceInput({ mod: "createdeco"}, "create:copper_sheet", "#forge:plates/copper")
+
+  event.replaceInput({ mod: "createdeco"}, "tfc:torch", "minecraft:ochre_froglight")
+  event.replaceInput({ mod: "createdeco"}, "minecraft:redstone_torch", "minecraft:glowstone")
+  event.replaceInput({ mod: "createdeco"}, "minecraft:glow_berries", "minecraft:verdant_froglight")
+  event.replaceInput({ mod: "createdeco"}, "minecraft:soul_torch", "minecraft:perlescent_froglight")
+
+  event.replaceInput({ mod: "createdeco"}, "create:brass_nugget", "#forge:nuggets/brass")
+  event.replaceInput({ mod: "createdeco"}, "create:zinc_nugget", "#forge:nuggets/zinc")
+  event.replaceInput({ mod: "createdeco"}, "create:copper_nugget", "#forge:nuggets/copper")
+
 }
