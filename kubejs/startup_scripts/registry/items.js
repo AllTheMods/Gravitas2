@@ -283,7 +283,11 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     event.create(`gregitas:${metal.id}_wrench_claw`).texture('kubejs:item/tools/wrench_claw').color(0, metal.color).unstackable()
     event.create(`gregitas:${metal.id}_butchery_blade`).texture('kubejs:item/tools/butchery_blade').color(0, metal.color).unstackable()
   })
-  event.create("gregitas:maple_glazed_roll").texture("create:item/sweet_roll").color(0, 0xBB9351)
+  event.create("gregitas:maple_glazed_roll").texture("create:item/sweet_roll").color(0, 0xBB9351).food(food => {
+    food
+    .hunger(6)
+    .saturation(6)
+})
   event.create('gregitas:packaged_greenhouse').modelJson(pkgJson)
   event.create('gregitas:cane_pulp').texture('gtceu:item/material_sets/dull/dust').color(0, 0xdc6f51)
 }

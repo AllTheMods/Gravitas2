@@ -1,4 +1,15 @@
 // priority 10
+const fish =[
+  "tfc:food/cod",
+  "tfc:food/salmon",
+  "tfc:food/bluegill",
+  "tfc:food/crappie",
+  "tfc:food/lake_trout",
+  "tfc:food/largemouth_bass",
+  "tfc:food/rainbow_trout",
+  "tfc:food/smallmouth_bass",
+  "tfc:food/tropical_fish"
+]
 const tfcStone = [
   "granite",
   "diorite",
@@ -951,11 +962,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
 
     //SFM
-    shaped("sfm:manager", ["PPP", "BVI", "CCC"], {
+    shaped("sfm:manager", ["PPP", "LVL", "CCC"], {
         P: "#forge:plates/wrought_iron",
-        B: "gtceu:basic_electronic_circuit",
+        L: "#gtceu:circuits/lv",
         V: "gtceu:vacuum_tube",
-        I: "gtceu:basic_integrated_circuit",
         C: "gtceu:resin_printed_circuit_board"
     })
     shaped("8x sfm:cable", ["ppp", "bcb", "ppp"], {
@@ -1070,5 +1080,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(40)
     .EUt(LV)
 
-
+   fish.forEach((fish) => {
+    event.recipes.gtceu.extractor(`${fish}_oil`)
+    .itemInputs(`${fish}`)
+    .outputFluids(Fluid.of("gtceu:fish_oil", 50))
+    .duration(60)
+    .EUt(LV)
+   })
 }

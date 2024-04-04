@@ -73,6 +73,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ output: `railcraft:${tool}_boots`, mod: "railcraft" })
 
     //GT General
+    event.remove({ id: "gtceu:extractor/fish_oil_from_salmon"})
+    event.remove({ id: "gtceu:extractor/fish_oil_from_pufferfish"})
+    event.remove({ id: "gtceu:extractor/fish_oil_from_tropical_fish"})
+    event.remove({ id: "gtceu:extractor/fish_oil_from_cod"})
+    
     event.remove({ id: "gtceu:shaped/plank_to_wooden_shape"})
     event.remove({ id: "gtceu:shaped/rotor_bronze"})
     event.remove({ id: "gtceu:shaped/bronze_hull"})
@@ -159,6 +164,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crushing/tuff"})
   event.remove({ id: "create:crushing/gravel"})
   event.remove({ id: "create:crushing/asurine_recycling"})
+  event.remove({ id: "create:crushing/crimsite"})
+  event.remove({ id: /^create:.*_crimsite_stonecutting/})
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
 
   //Cast iron plate jank
@@ -352,4 +359,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^chalk:chalk_from_.*/`})
   
+  //DECO
+
+  event.remove({ id: 'createdeco:pressing/zinc_sheet'})
+
 }
