@@ -10,10 +10,10 @@ const fishes =[
     "tfc:food/tropical_fish"
 ]
 let modifyAndRemoveFishingLoot = (/** @type {Internal.LootModificationEventJS} */ event) => {
-
-    event.addLootTypeModifier([LootType.FISHING]).removeLoot(`/^.*/`)
+    event.addLootTableModifier("fishing").removeLoot(ItemFilter.ALWAYS_TRUE)
+    
 
     fishes.forEach(fish => {
-        event.addLootTypeModifier([LootType.FISHING]).addLoot(fish)
+        event.addLootTableModifier("fishing").addLoot(fish)
     })
 }
