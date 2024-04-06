@@ -556,6 +556,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`16x tfc:wood/lumber/${sapling}`)
       .duration(40)
       .EUt(LV)
+	  
   })
 
   shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
@@ -964,7 +965,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     //SFM
     shaped("sfm:manager", ["PPP", "LVL", "CCC"], {
         P: "#forge:plates/wrought_iron",
-        L: "#gtceu:circuits/lv",
+        L: "gtceu:circuits/lv",
         V: "gtceu:vacuum_tube",
         C: "gtceu:resin_printed_circuit_board"
     })
@@ -1086,5 +1087,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .outputFluids(Fluid.of("gtceu:fish_oil", 50))
     .duration(60)
     .EUt(LV)
-   })
+	
+    })
+   event.recipes.kubejs.shaped("2x minecraft:moss_block" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:fertilizer",
+        R: "#tfc:rock/raw",
+        
+    })
 }
