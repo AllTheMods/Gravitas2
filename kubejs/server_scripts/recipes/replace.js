@@ -172,8 +172,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
   event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
-
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst_shard", "tfc:gem/amethyst")
+  
   //TFShips
   tfcShipTypes.forEach((wood) => {
     event.replaceInput({ id: `tfships:${wood}_cog`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
@@ -214,14 +214,23 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "createdeco"}, "tfc:torch", "minecraft:ochre_froglight")
   event.replaceInput({ mod: "createdeco"}, "minecraft:redstone_torch", "minecraft:glowstone")
   event.replaceInput({ mod: "createdeco"}, "minecraft:glow_berries", "minecraft:verdant_froglight")
-  event.replaceInput({ mod: "createdeco"}, "minecraft:soul_torch", "minecraft:perlescent_froglight")
+  event.replaceInput({ mod: "createdeco"}, "minecraft:soul_torch", "minecraft:pearlescent_froglight")
 
   event.replaceInput({ mod: "createdeco"}, "create:brass_nugget", "#forge:nuggets/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_nugget", "#forge:nuggets/zinc")
   event.replaceInput({ mod: "createdeco"}, "create:copper_nugget", "#forge:nuggets/copper")
   event.replaceInput({ mod: "createdeco"}, "create:limestone", "tfc:rock/raw/limestone")
   event.replaceInput({ mod: "createdeco"}, "create:crimsite", "minecraft:netherrack")
-  event.replaceInput({ mod: "createdeco"}, "create:asurine", "#forge:storage_blocks/lapis")
-  event.replaceInput({ mod: "createdeco"}, "create:veridium", "#forge:storage_blocks/emerald")
+  event.replaceInput({ mod: "createdeco"}, "create:asurine", "tfc:rock/raw/dolomite")
+  event.replaceInput({ mod: "createdeco"}, "create:veridium", "tfc:rock/raw/schist")
+  event.replaceInput({ mod: "createdeco"}, "create:ochrum", "tfc:rock/raw/claystone")
+  event.replaceInput({ mod: "createdeco"}, "create:brass_block", "#forge:storage_blocks/brass")
+  event.replaceInput({ mod: "createdeco"}, "create:zinc_block", "#forge:storage_blocks/zinc")
+  event.replaceInput({}, "minecraft:honeycomb", "firmalife:beeswax")
+  event.replaceInput({}, "minecraft:honey_bottle", "firmalife:jar/honey")
+
+
+
+
 
 }
