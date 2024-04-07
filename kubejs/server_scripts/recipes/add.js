@@ -628,7 +628,131 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "framedblocks:framed_chest"
   })
   //Railcraft End
+  //ThoriumReactors Start
+	event.recipes.gtceu.alloy_smelter('blasted_stone')
+		.itemInputs(
+			'minecraft:smooth_stone',
+			'#minecraft:coals'
+		)
+		.itemOutputs(
+			'thoriumreactors:blasted_stone'
+		)
+		.duration(150)
+		.EUt(EV)
+		   
+	event.recipes.gtceu.alloy_smelter('blasted_iron')
+		.itemInputs(
+			'#forge:ingots/wrought_iron',
+			'#minecraft:coals'
+		)
+		.itemOutputs(
+			'thoriumreactors:blasted_iron_ingot'
+		)
+		.duration(300)
+		.EUt(EV)
+		
+	event.recipes.gtceu.autoclave('enriched_uranium_pellet')
+		.inputFluids(
+			Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
+		)
+		.itemOutputs(
+			'thoriumreactors:enriched_uranium'
+		)
+		.duration(3000)
+		.EUt(EV)
+	
+	event.recipes.gtceu.centrifuge('enriched_uranium_hexafluorite')
+		.inputFluids(
+			Fluid.of("thoriumreactors:uranium_hexafluorite", 1000)
+		)
+		.outputFluids(
+			Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
+		)
+		.duration(3000)
+		.EUt(EV)
+		.cleanroom(CleanroomType.CLEANROOM)
 
+	event.recipes.gtceu.chemical_reactor('enriched_uranium_hexafluorite')
+		.itemInputs(
+		'thoriumreactors:yellow_cake'
+		)
+		.inputFluids(
+			Fluid.of("thoriumreactors:hydrofluorite", 1000)
+		)
+		.outputFluids(
+			Fluid.of("thoriumreactors:uranium_hexafluorite", 500)
+		)
+		.duration(500)
+		.EUt(EV)
+		.cleanroom(CleanroomType.CLEANROOM)
+		
+	event.recipes.gtceu.chemical_reactor('hydrofluorite')
+		.itemInputs(
+		'#forge:dusts/fluorite'
+		)
+		.inputFluids(
+			Fluid.of("gtceu:distilled_water", 100)
+		)
+		.outputFluids(
+			Fluid.of("thoriumreactors:hydrofluorite", 100)
+		)
+		.duration(100)
+		.EUt(EV)
+
+	event.recipes.gtceu.compressor('yellow_cake')
+		.itemInputs(
+			'#forge:dusts/uranium_235'
+		)
+		.inputFluids(
+			Fluid.of("gtceu:distilled_water", 100)
+		)
+		.itemOutputs(
+			'thoriumreactors:yellow_cake'
+		)
+		.duration(2400)
+		.EUt(EV)
+		.cleanroom(CleanroomType.CLEANROOM)
+		
+	event.recipes.gtceu.mixer('molten_salt')
+		.itemInputs(
+			'#forge:dusts/thorium'
+		)
+		.inputFluids(
+			Fluid.of("gtceu:sodium_potassium", 1000)
+		)
+		.outputFluids(
+			Fluid.of("thoriumreactors:molten_salt", 100)
+		)
+		.duration(800)
+		.EUt(EV)
+
+	event.recipes.gtceu.mixer('molten_salt_from_depleted')
+		.itemInputs(
+			'#forge:dusts/thorium'
+		)
+		.inputFluids(
+			Fluid.of("thoriumreactors:depleted_molten_salt", 6000)
+		)
+		.outputFluids(
+			Fluid.of("thoriumreactors:molten_salt", 6000)
+		)
+		.duration(200)
+		.EUt(EV)
+
+	//Torium Reactors Temporary(?) Recipe to Get fluorite
+	event.recipes.gtceu.autoclave('fluorite')
+		.itemInputs(
+			'#forge:dusts/calcium'
+		)
+		.inputFluids(
+			Fluid.of("gtceu:fluorine", 2000)
+		)
+		.itemOutputs(
+			'3x gcyr:fluorite_gem'
+		)
+		.duration(800)
+		.EUt(EV)
+  //ThoriumReactors End
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
     e: 'gtceu:mv_emitter',
