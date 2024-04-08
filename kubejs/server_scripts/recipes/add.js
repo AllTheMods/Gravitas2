@@ -629,10 +629,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   //Railcraft End
   //ThoriumReactors Start
-	event.recipes.gtceu.alloy_smelter('blasted_stone')
+	event.recipes.gtceu.implosion_compressor('blasted_stone')
 		.itemInputs(
-			'minecraft:smooth_stone',
-			'#minecraft:coals'
+			'immersiveengineering:concrete_leaded',
+			'minecraft:tnt'
 		)
 		.itemOutputs(
 			'thoriumreactors:blasted_stone'
@@ -640,15 +640,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 		.duration(150)
 		.EUt(EV)
 		   
-	event.recipes.gtceu.alloy_smelter('blasted_iron')
+	event.recipes.gtceu.implosion_compressor('blasted_iron')
 		.itemInputs(
 			'#forge:ingots/wrought_iron',
-			'#minecraft:coals'
+			'minecraft:tnt'
 		)
 		.itemOutputs(
 			'thoriumreactors:blasted_iron_ingot'
 		)
-		.duration(300)
+		.duration(150)
 		.EUt(EV)
 		
 	event.recipes.gtceu.autoclave('enriched_uranium_pellet')
