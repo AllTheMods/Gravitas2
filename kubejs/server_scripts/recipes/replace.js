@@ -226,11 +226,19 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "createdeco"}, "create:ochrum", "tfc:rock/raw/claystone")
   event.replaceInput({ mod: "createdeco"}, "create:brass_block", "#forge:storage_blocks/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_block", "#forge:storage_blocks/zinc")
+  
   event.replaceInput({}, "minecraft:honeycomb", "firmalife:beeswax")
   event.replaceInput({}, "minecraft:honey_bottle", "firmalife:jar/honey")
-
-
-
-
-
+  
+  event.replaceInput({ id: "integratedtunnels:crafting/part_exporter_world_block"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
+  event.replaceInput({ id: "integratedtunnels:crafting/part_importer_world_block"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
+  
+  event.replaceInput({ id: "mininggadgets:upgrade_size_1"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
+  event.replaceInput({ id: "mininggadgets:upgrade_size_1"}, "minecraft:ender_pearl", "#gtceu:circuits/lv")
+  event.replaceInput({ id: "mininggadgets:upgrade_size_2"}, "minecraft:netherite_pickaxe", "tfc:metal/pickaxe/blue_steel")
+  event.replaceInput({ id: "mininggadgets:upgrade_size_2"}, "minecraft:ender_pearl", "#gtceu:circuits/mv")
+  event.replaceInput({ id: "mininggadgets:upgrade_size_3"}, "minecraft:netherite_pickaxe", "tfc:metal/pickaxe/red_steel")
+  event.replaceInput({ id: "mininggadgets:upgrade_size_3"}, "minecraft:ender_pearl", "#gtceu:circuits/hv")
+  
+  event.replaceInput({ id: "railcraft:track_relayer"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
 }
