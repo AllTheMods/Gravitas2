@@ -1454,7 +1454,22 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:redstone_processor')
     })
    event.recipes.kubejs.shaped("2x minecraft:moss_block" , ["PPP", "PRP","PPP"], {
         P: "gtceu:fertilizer",
-        R: "#tfc:rock/raw",
-        
+        R: "#tfc:rock/raw",		
     })
+	
+	event.recipes.gtceu.mixer('liquid_chorus')
+    .itemInputs(
+        'integrateddynamics:proto_chorus'
+    )
+    .inputFluids(
+        Fluid.of("integrateddynamics:menril_resin", 250)
+    )
+    .inputFluids(
+        Fluid.of("gtceu:methane",250)
+    )
+    .outputFluids(
+        Fluid.of("integrateddynamics:liquid_chorus", 100)
+    )
+    .duration(50)
+    .EUt(HV)
 }
