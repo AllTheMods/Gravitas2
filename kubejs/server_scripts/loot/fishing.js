@@ -9,11 +9,21 @@ const fishes =[
     "tfc:food/smallmouth_bass",
     "tfc:food/tropical_fish"
 ]
+const vanillaFishes = [
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:tropical_fish",
+    "minecraft:pufferfish"
+]
+
 let modifyAndRemoveFishingLoot = (/** @type {Internal.LootModificationEventJS} */ event) => {
-    event.addLootTableModifier("fishing").removeLoot(ItemFilter.ALWAYS_TRUE)
     
+    
+    vanillaFishes.forEach(fish => {
+        event.addLootTableModifier("gameplay/fishing").removeLoot(fish)
+    })
 
     fishes.forEach(fish => {
-        event.addLootTableModifier("fishing").addLoot(fish)
+        event.addLootTableModifier("gameplay/fishing").addLoot(fish)
     })
 }

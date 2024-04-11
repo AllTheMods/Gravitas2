@@ -156,11 +156,6 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .outputFluids(Fluid.of('gtceu:creosote', 125))
                 .duration(1000)
 
-            event.recipes.gtceu.coke_oven('gem/lignite_to_flawed_coke')
-                .itemInputs('tfc:ore/lignite')
-                .itemOutputs('gtceu:flawed_coke_gem')
-                .outputFluids(Fluid.of('gtceu:creosote', 250))
-                .duration(1000)
 
             event.recipes.gtceu.coke_oven('gem/bituminous_coal_to_exquisite_coke')
                 .itemInputs('tfc:ore/bituminous_coal')
@@ -196,12 +191,6 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(4050)
                 .EUt(LV)
 
-            event.recipes.gtceu.improved_coke_oven('gem/lignite_to_flawed_coke')
-                .itemInputs('tfc:ore/lignite')
-                .itemOutputs('gtceu:flawed_coke_gem')
-                .outputFluids(Fluid.of('gtceu:creosote', 250))
-                .duration(500)
-                .EUt(LV)
 
             event.recipes.gtceu.improved_coke_oven('gem/bituminous_coal_to_exquisite_coke')
                 .itemInputs('tfc:ore/bituminous_coal')

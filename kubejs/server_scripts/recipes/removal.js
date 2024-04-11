@@ -304,6 +304,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:blaze_powder"})
   event.remove({ id: "minecraft:diorite"})
   event.remove({ id: "minecraft:stone"})
+  event.remove({ id: "minecraft:sugar_from_honey_bottle"})
 
   //PM
   event.remove({ id: "potionsmaster:blaze_powder"})

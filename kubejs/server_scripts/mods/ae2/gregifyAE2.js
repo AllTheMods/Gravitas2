@@ -190,6 +190,17 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemOutputs('ae2:fluix_covered_cable')
                 .duration(50)
                 .EUt(LV)
+				
+		    event.recipes.gtceu.assembler('gregitas:me_covered_cable_styrene')
+                .itemInputs(
+                    'ae2:fluix_glass_cable'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:styrene_butadiene_rubber',36)
+                )
+                .itemOutputs('ae2:fluix_covered_cable')
+                .duration(50)
+                .EUt(LV)
 
             event.recipes.gtceu.chemical_bath('gregitas:me_covered_fluix_cleaning')
                 .itemInputs(
