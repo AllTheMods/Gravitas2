@@ -364,4 +364,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: 'createdeco:pressing/zinc_sheet'})
 
+  // Thorium Reactors
+  event.remove({ id: "create_new_age:thorium_multiplication")
 }
