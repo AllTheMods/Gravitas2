@@ -49,11 +49,11 @@ let gregVeinz = [
     ]
   },
   {
+    name: "garnet_tin",
     weight: 80,
     minY: 30,
     maxY: 60,
     validStones: ["limestone", "chalk"],
-    name: "garnet_tin",
     oreAndWeight: [
       ["cassiterite_sand", 5],
       ["garnet_sand", 2],
@@ -173,7 +173,7 @@ let gregVeinz = [
     ]
   },
   {
-    name: "diamond",
+    name: "lapis_lazuli",
     weight: 40,
     minY: -65,
     maxY: -30,
