@@ -344,6 +344,13 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
 
 
+    event.recipes.gtceu.fluid_solidifier("create:andesite_alloy")
+        .inputFluids('gregitas_core:igneous_alloy 144')
+        .notConsumable('gtceu:ingot_casting_mold')
+        .itemOutputs('create:andesite_alloy')
+        .duration(60)
+        .EUt(LV)
+
         event.recipes.gtceu.centrifuge("menril_logs")
             .itemInputs('1x integrateddynamics:menril_log')
             .itemOutputs([
