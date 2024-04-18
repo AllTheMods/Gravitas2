@@ -10,20 +10,20 @@ recipes:
 
   # Change the recipe of Rods in the Lathe to 1 Rod and 2 Small Piles of Dust, instead of 2 Rods.
   # Default: false
-  harderRods: true
+  harderRods: false
 
   # Whether to make crafting recipes for Bricks, Firebricks, and Coke Bricks harder.
   # Default: false
-  harderBrickRecipes: true
+  harderBrickRecipes: false
 
   # Whether to nerf Wood crafting to 2 Planks from 1 Log, and 2 Sticks from 2 Planks.
   # Default: false
-  nerfWoodCrafting: true
+  nerfWoodCrafting: false
 
   # Whether to make Wood related recipes harder.
   # Excludes sticks and planks.
   # Default: false
-  hardWoodRecipes: true
+  hardWoodRecipes: false
 
   # Recipes for Buckets, Cauldrons, Hoppers, and Iron Bars require Iron Plates, Rods, and more.
   # Default: true
@@ -31,16 +31,16 @@ recipes:
 
   # Whether to make Redstone related recipes harder.
   # Default: false
-  hardRedstoneRecipes: true
+  hardRedstoneRecipes: false
 
   # Whether to make Vanilla Tools and Armor recipes harder.
   # Excludes Flint and Steel, and Buckets.
   # Default: false
-  hardToolArmorRecipes: true
+  hardToolArmorRecipes: false
 
   # Whether to make miscellaneous recipes harder.
   # Default: false
-  hardMiscRecipes: true
+  hardMiscRecipes: false
 
   # Whether to make Glass related recipes harder. Default: true
   hardGlassRecipes: true
@@ -51,11 +51,11 @@ recipes:
 
   # Recipes for items like Iron Doors, Trapdoors, Anvil require Iron Plates, Rods, and more.
   # Default: false
-  hardAdvancedIronRecipes: true
+  hardAdvancedIronRecipes: false
 
   # Whether to make coloring blocks like Concrete or Glass harder.
   # Default: false
-  hardDyeRecipes: true
+  hardDyeRecipes: false
 
   # Whether to remove charcoal smelting recipes from the vanilla furnace.
   # Default: true
@@ -67,7 +67,7 @@ recipes:
 
   # Whether to remove Vanilla Block Recipes from the Crafting Table.
   # Default: false
-  removeVanillaBlockRecipes: true
+  removeVanillaBlockRecipes: false
 
   # Whether to remove Vanilla TNT Recipe from the Crafting Table.
   # Default: true
@@ -76,7 +76,7 @@ recipes:
 worldgen:
   # Rubber Tree spawn chance (% per chunk)
   # Default: 0.5
-  rubberTreeSpawnChance: 0.0
+  rubberTreeSpawnChance: 0.5
 
   # Should all Stone Types drop unique Ore Item Blocks?
   # Default: false (meaning only Stone, Netherrack, and Endstone)
@@ -128,7 +128,7 @@ machines:
   # If true, progress will reset.
   # If false, progress will decrease to zero with 2x speed
   # Default: false
-  recipeProgressLowEnergy: true
+  recipeProgressLowEnergy: false
 
   # Whether to require a Wrench, Wirecutter, or other GregTech tools to break machines, casings, wires, and more.
   # Default: false
