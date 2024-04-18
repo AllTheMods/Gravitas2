@@ -241,4 +241,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "mininggadgets:upgrade_size_3"}, "minecraft:ender_pearl", "#gtceu:circuits/hv")
   
   event.replaceInput({ id: "railcraft:track_relayer"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
+  
+  event.replaceInput({ id: "expatternprovider:water_cell"}, "#forge:gems/diamond", "gtceu:infinite_water_cover")
+  event.replaceInput({ id: "expatternprovider:water_cell"}, "minecraft:water_bucket", "gtceu:lv_super_tank")
+  event.replaceInput({ id: "expatternprovider:water_cell"}, "ae2:cell_component_16k", "ae2:cell_component_64k")
+
 }
