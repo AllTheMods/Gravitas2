@@ -1127,7 +1127,7 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
   '64x gtceu:annealed_copper_single_wire'
 )
 .itemOutputs(
-  'thoriumreactors:thoriumreactors:electromagnetic_coil'
+  'thoriumreactors:electromagnetic_coil'
 )
 .duration(160)
 .EUt(EV)
@@ -1193,13 +1193,13 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
    })
    event.recipes.gtceu.alloy_smelter('brick')
            .itemInputs(
-               'minecraft:clay_ball'
+               '4x minecraft:clay_ball'
            )
            .notConsumable('gtceu:ingot_casting_mold')
            .itemOutputs(
-               'minecraft:brick'
+               '4x minecraft:brick'
            )
-           .duration(60)
+           .duration(80)
            .EUt(LV)
 
     tfcStone.forEach(stone => {
