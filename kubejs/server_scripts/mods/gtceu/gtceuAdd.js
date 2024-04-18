@@ -162,6 +162,15 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemOutputs('gtceu:exquisite_coke_gem')
                 .outputFluids(Fluid.of('gtceu:creosote', 750))
                 .duration(1000)
+				
+				
+            event.recipes.gtceu.coke_oven('gem/lignite_to_coke')
+                .itemInputs('tfc:ore/lignite')
+                .itemOutputs('gtceu:coke_gem')
+                .outputFluids(Fluid.of('gtceu:creosote', 250))
+                .duration(1000)
+				
+				
         //Improved
             event.recipes.gtceu.improved_coke_oven('stick_bundle_to_charcoal')
                 .itemInputs('tfc:stick_bundle')
@@ -196,6 +205,14 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .itemInputs('tfc:ore/bituminous_coal')
                 .itemOutputs('gtceu:exquisite_coke_gem')
                 .outputFluids(Fluid.of('gtceu:creosote', 750))
+                .duration(500)
+                .EUt(LV)
+				
+				
+			event.recipes.gtceu.improved_coke_oven('gem/lignite_to_coke')
+                .itemInputs('tfc:ore/lignite')
+                .itemOutputs('gtceu:coke_gem')
+                .outputFluids(Fluid.of('gtceu:creosote', 250))
                 .duration(500)
                 .EUt(LV)
 
@@ -343,6 +360,13 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(60)
     .EUt(LV)
 
+
+    event.recipes.gtceu.fluid_solidifier("create:andesite_alloy")
+        .inputFluids('gregitas_core:igneous_alloy 144')
+        .notConsumable('gtceu:ingot_casting_mold')
+        .itemOutputs('create:andesite_alloy')
+        .duration(60)
+        .EUt(LV)
 
         event.recipes.gtceu.centrifuge("menril_logs")
             .itemInputs('1x integrateddynamics:menril_log')

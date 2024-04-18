@@ -628,370 +628,511 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "framedblocks:framed_chest"
   })
   //Railcraft End
-  //ThoriumReactors Start
+    //ThoriumReactors Start
 	event.recipes.gtceu.implosion_compressor('blasted_stone')
-		.itemInputs(
-			'immersiveengineering:concrete_leaded',
-			'minecraft:tnt'
-		)
-		.itemOutputs(
-			'thoriumreactors:blasted_stone'
-		)
-		.duration(150)
-		.EUt(EV)
-		   
-	event.recipes.gtceu.implosion_compressor('blasted_iron')
-		.itemInputs(
-			'#forge:ingots/wrought_iron',
-			'minecraft:tnt'
-		)
-		.itemOutputs(
-			'thoriumreactors:blasted_iron_ingot'
-		)
-		.duration(150)
-		.EUt(EV)
-		
-	event.recipes.gtceu.autoclave('enriched_uranium_pellet')
-		.inputFluids(
-			Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
-		)
-		.itemOutputs(
-			'thoriumreactors:enriched_uranium'
-		)
-		.duration(3000)
-		.EUt(EV)
-	
-	event.recipes.gtceu.centrifuge('enriched_uranium_hexafluorite')
-		.inputFluids(
-			Fluid.of("thoriumreactors:uranium_hexafluorite", 1000)
-		)
-		.outputFluids(
-			Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
-		)
-		.duration(3000)
-		.EUt(EV)
-		.cleanroom(CleanroomType.CLEANROOM)
+  .itemInputs(
+    'immersiveengineering:concrete_leaded',
+    'minecraft:tnt'
+  )
+  .itemOutputs(
+    'thoriumreactors:blasted_stone'
+  )
+  .duration(150)
+  .EUt(EV)
+     
+event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
+  .itemInputs(
+    '#forge:ingots/wrought_iron',
+    'minecraft:tnt'
+  )
+  .itemOutputs(
+    'thoriumreactors:blasted_iron_ingot'
+  )
+  .duration(150)
+  .EUt(EV)
+  
+event.recipes.gtceu.autoclave('enriched_uranium_pellet')
+  .inputFluids(
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
+  )
+  .itemOutputs(
+    'thoriumreactors:enriched_uranium'
+  )
+  .duration(3000)
+  .EUt(EV)
 
-	event.recipes.gtceu.chemical_reactor('enriched_uranium_hexafluorite')
-		.itemInputs(
-		'thoriumreactors:yellow_cake'
-		)
-		.inputFluids(
-			Fluid.of("thoriumreactors:hydrofluorite", 1000)
-		)
-		.outputFluids(
-			Fluid.of("thoriumreactors:uranium_hexafluorite", 500)
-		)
-		.duration(500)
-		.EUt(EV)
-		.cleanroom(CleanroomType.CLEANROOM)
-		
-	event.recipes.gtceu.chemical_reactor('hydrofluorite')
-		.itemInputs(
-		'#forge:dusts/fluorite'
-		)
-		.inputFluids(
-			Fluid.of("gtceu:distilled_water", 100)
-		)
-		.outputFluids(
-			Fluid.of("thoriumreactors:hydrofluorite", 100)
-		)
-		.duration(100)
-		.EUt(EV)
+event.recipes.gtceu.centrifuge('enriched_uranium_hexafluorite')
+  .inputFluids(
+    Fluid.of("thoriumreactors:uranium_hexafluorite", 1000)
+  )
+  .outputFluids(
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
+  )
+  .duration(3000)
+  .EUt(EV)
+  .cleanroom(CleanroomType.CLEANROOM)
 
-	event.recipes.gtceu.compressor('yellow_cake')
-		.itemInputs(
-			'#forge:dusts/uranium_235'
-		)
-		.inputFluids(
-			Fluid.of("gtceu:distilled_water", 100)
-		)
-		.itemOutputs(
-			'thoriumreactors:yellow_cake'
-		)
-		.duration(2400)
-		.EUt(EV)
-		.cleanroom(CleanroomType.CLEANROOM)
-		
-	event.recipes.gtceu.mixer('molten_salt')
-		.itemInputs(
-			'#forge:dusts/thorium'
-		)
-		.inputFluids(
-			Fluid.of("gtceu:sodium_potassium", 1000)
-		)
-		.outputFluids(
-			Fluid.of("thoriumreactors:molten_salt", 100)
-		)
-		.duration(800)
-		.EUt(EV)
+event.recipes.gtceu.chemical_reactor('enriched_uranium_hexafluorite')
+  .itemInputs(
+  'thoriumreactors:yellow_cake'
+  )
+  .inputFluids(
+    Fluid.of("thoriumreactors:hydrofluorite", 1000)
+  )
+  .outputFluids(
+    Fluid.of("thoriumreactors:uranium_hexafluorite", 500)
+  )
+  .duration(500)
+  .EUt(EV)
+  .cleanroom(CleanroomType.CLEANROOM)
+  
+event.recipes.gtceu.chemical_reactor('hydrofluorite')
+  .itemInputs(
+  '#forge:dusts/fluorite'
+  )
+  .inputFluids(
+    Fluid.of("gtceu:distilled_water", 100)
+  )
+  .outputFluids(
+    Fluid.of("thoriumreactors:hydrofluorite", 100)
+  )
+  .duration(100)
+  .EUt(EV)
 
-	event.recipes.gtceu.mixer('molten_salt_from_depleted')
-		.itemInputs(
-			'#forge:dusts/thorium'
-		)
-		.inputFluids(
-			Fluid.of("thoriumreactors:depleted_molten_salt", 6000)
-		)
-		.outputFluids(
-			Fluid.of("thoriumreactors:molten_salt", 6000)
-		)
-		.duration(200)
-		.EUt(EV)
+event.recipes.gtceu.compressor('yellow_cake')
+  .itemInputs(
+    '#forge:dusts/uranium_235'
+  )
+  .inputFluids(
+    Fluid.of("gtceu:distilled_water", 100)
+  )
+  .itemOutputs(
+    'thoriumreactors:yellow_cake'
+  )
+  .duration(2400)
+  .EUt(EV)
+  .cleanroom(CleanroomType.CLEANROOM)
+  
+event.recipes.gtceu.mixer('molten_salt')
+  .itemInputs(
+    '#forge:dusts/thorium'
+  )
+  .inputFluids(
+    Fluid.of("gtceu:sodium_potassium", 1000)
+  )
+  .outputFluids(
+    Fluid.of("thoriumreactors:molten_salt", 100)
+  )
+  .duration(800)
+  .EUt(EV)
+
+event.recipes.gtceu.mixer('molten_salt_from_depleted')
+  .itemInputs(
+    '#forge:dusts/thorium'
+  )
+  .inputFluids(
+    Fluid.of("thoriumreactors:depleted_molten_salt", 6000)
+  )
+  .outputFluids(
+    Fluid.of("thoriumreactors:molten_salt", 6000)
+  )
+  .duration(200)
+  .EUt(EV)
 
 //Torium Reactors Temporary(?) Recipe to Get fluorite
-	event.recipes.gtceu.autoclave('fluorite')
-		.itemInputs(
-			'#forge:dusts/calcium'
-		)
-		.inputFluids(
-			Fluid.of("gtceu:fluorine", 2000)
-		)
-		.itemOutputs(
-			'3x gcyr:fluorite_gem'
-		)
-		.duration(800)
-		.EUt(EV)
+event.recipes.gtceu.autoclave('fluorite')
+  .itemInputs(
+    '#forge:dusts/calcium'
+  )
+  .inputFluids(
+    Fluid.of("gtceu:fluorine", 2000)
+  )
+  .itemOutputs(
+    '3x gcyr:fluorite_gem'
+  )
+  .duration(800)
+  .EUt(EV)
 //Thorium Reactors Recipes Phase 2
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_glass')
-	.itemInputs(
-    'thoriumreactors:reactor_casing',
-    'immersiveengineering:insulating_glass',
-    'create_new_age:reactor_glass'
-	)
-	.itemOutputs(
-	  'thoriumreactors:reactor_glass'
-	)
-	.duration(160)
-	.EUt(HV)
+.itemInputs(
+  'thoriumreactors:reactor_casing',
+  'immersiveengineering:insulating_glass',
+  'create_new_age:reactor_glass'
+)
+.itemOutputs(
+  'thoriumreactors:reactor_glass'
+)
+.duration(160)
+.EUt(HV)
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_graphite_moderator')
-	.itemInputs(
-	  '25x thoriumreactors:graphite_tube'
-	)
-	.itemOutputs(
-    'thoriumreactors:reactor_graphite_moderator'
-	)
-	.duration(600)
-	.EUt(EV)
+.itemInputs(
+  '25x thoriumreactors:graphite_tube'
+)
+.itemOutputs(
+  'thoriumreactors:reactor_graphite_moderator'
+)
+.duration(600)
+.EUt(EV)
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_core')
-	.itemInputs(
-    'thoriumreactors:reactor_casing',
-    'thoriumreactors:module_sensor',
-    'thoriumreactors:module_storage',
-    'thoriumreactors:reactor_graphite_moderator'
-	)
-	.itemOutputs(
-	'thoriumreactors:reactor_core'
-	)
-	.duration(600)
-	.EUt(EV)
-  .cleanroom(CleanroomType.CLEANROOM)
+.itemInputs(
+  'thoriumreactors:reactor_casing',
+  'thoriumreactors:module_sensor',
+  'thoriumreactors:module_storage',
+  'thoriumreactors:reactor_graphite_moderator'
+)
+.itemOutputs(
+'thoriumreactors:reactor_core'
+)
+.duration(600)
+.EUt(EV)
+.cleanroom(CleanroomType.CLEANROOM)
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_rod_controller')
-	.itemInputs(
-    'thoriumreactors:reactor_casing',
-    'thoriumreactors:reactor_graphite_moderator',
-    'gtceu:ev_conveyor_module',
-    'thoriumreactors:module_sensor'
-	)
-	.itemOutputs(
-	  'thoriumreactors:reactor_rod_controller'
-	)
-	.duration(300)
-	.EUt(EV)
-  .cleanroom(CleanroomType.CLEANROOM)
+.itemInputs(
+  'thoriumreactors:reactor_casing',
+  'thoriumreactors:reactor_graphite_moderator',
+  'gtceu:ev_conveyor_module',
+  'thoriumreactors:module_sensor'
+)
+.itemOutputs(
+  'thoriumreactors:reactor_rod_controller'
+)
+.duration(300)
+.EUt(EV)
+.cleanroom(CleanroomType.CLEANROOM)
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_valve')
-	.itemInputs(
-    'thoriumreactors:reactor_casing',
-    'thoriumreactors:module_io'
-	)
-	.itemOutputs(
-	'thoriumreactors:reactor_valve'
-	)
-	.duration(300)
-	.EUt(EV)
+.itemInputs(
+  'thoriumreactors:reactor_casing',
+  'thoriumreactors:module_io'
+)
+.itemOutputs(
+'thoriumreactors:reactor_valve'
+)
+.duration(300)
+.EUt(EV)
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_controller')
-	.itemInputs(
-    'thoriumreactors:reactor_casing',
-    'thoriumreactors:machine_casing',
-    'gtceu:computer_monitor_cover'
-	)
-	.itemOutputs(
-	  'thoriumreactors:reactor_controller'
-	)
-	.duration(600)
-	.EUt(EV)
-  .cleanroom(CleanroomType.CLEANROOM)
+.itemInputs(
+  'thoriumreactors:reactor_casing',
+  'thoriumreactors:machine_casing',
+  'gtceu:computer_monitor_cover'
+)
+.itemOutputs(
+  'thoriumreactors:reactor_controller'
+)
+.duration(600)
+.EUt(EV)
+.cleanroom(CleanroomType.CLEANROOM)
 
 event.recipes.gtceu.assembler('immersiveengineering:insulating_glass')
-	.itemInputs(
-    '2x gtceu:tempered_glass',
-    '4x gtceu:stainless_steel_screw'
-	)
-  .inputFluids(Fluid.of("gtceu:argon fluid", 1000))
-	.itemOutputs(
-	  'immersiveengineering:insulating_glass'
-	)
-	.duration(100)
-	.EUt(MV)
+.itemInputs(
+  '2x gtceu:tempered_glass',
+  '4x gtceu:stainless_steel_screw'
+)
+.inputFluids(Fluid.of("gtceu:argon fluid", 1000))
+.itemOutputs(
+  'immersiveengineering:insulating_glass'
+)
+.duration(100)
+.EUt(MV)
 
 event.recipes.gtceu.assembler('thoriumreactors:graphite_tube')
-	.itemInputs(
-    '4x gtceu:graphite_dust',
-    '2x gtceu:carbon_fiber_mesh'
-	)
-  .inputFluids(Fluid.of("gtceu:reinforced_epoxy_resin", 144))
-	.itemOutputs(
-	'thoriumreactors:graphite_tube'
-	)
-	.duration(120)
-	.EUt(HV)
+.itemInputs(
+  '4x gtceu:graphite_dust',
+  '2x gtceu:carbon_fiber_mesh'
+)
+.inputFluids(Fluid.of("gtceu:reinforced_epoxy_resin", 144))
+.itemOutputs(
+'thoriumreactors:graphite_tube'
+)
+.duration(120)
+.EUt(HV)
 
 event.recipes.gtceu.assembler('thoriumreactors:reactor_casing')
-	.itemInputs(
-    '4x thoriumreactors:blasted_stone',
-    '2x thoriumreactors:double_lead_plate',
-    '4x thoriumreactors:blasted_iron',
-    'gtceu:titanium_frame'
-	)
-	.itemOutputs(
-	  'thoriumreactors:reactor_casing'
-	)
-	.duration(160)
-	.EUt(EV)
+.itemInputs(
+  '4x thoriumreactors:blasted_stone',
+  '2x gtceu:double_lead_plate',
+  '4x thoriumreactors:blasted_iron_ingot',
+  'gtceu:titanium_frame'
+)
+.itemOutputs(
+  'thoriumreactors:reactor_casing'
+)
+.duration(160)
+.EUt(EV)
 
 event.recipes.gtceu.assembler('thoriumreactors:machine_casing')
-	.itemInputs(
-    'thoriumreactors:module_energy',
-    'thoriumreactors:module_io',
-    'thoriumreactors:module_processing',
-    'thoriumreactors:module_storage',
-    'thoriumreactors:module_sensor',
-    'gtceu:ev_machine_hull'
-	)
-	.itemOutputs(
-	  'thoriumreactors:machine_casing'
-	)
-	.duration(200)
-	.EUt(EV)
+.itemInputs(
+  'thoriumreactors:module_energy',
+  'thoriumreactors:module_io',
+  'thoriumreactors:module_processing',
+  'thoriumreactors:module_storage',
+  'thoriumreactors:module_sensor',
+  'thoriumreactors:module_tank',
+  'gtceu:ev_machine_hull'
+)
+.itemOutputs(
+  'thoriumreactors:machine_casing'
+)
+.duration(200)
+.EUt(EV)
 
 event.recipes.gtceu.assembler('thoriumreactors:configurator')
-	.itemInputs(
-    'thoriumreactors:empty_module',
-    'thoriumreactors:data_stick',
-    'createdeco:decal_radioactive'
-	)
-	.itemOutputs(
-	  'thoriumreactors:configurator'
-	)
-	.duration(360)
-	.EUt(EV)
+.itemInputs(
+  'thoriumreactors:module_empty',
+  'gtceu:data_stick',
+  'createdeco:decal_radioactive'
+)
+.itemOutputs(
+  'thoriumreactors:configurator'
+)
+.duration(360)
+.EUt(EV)
 
 // Thorium Reactors Phase 3
 
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_empty')
-  .itemInputs(
-    'thoriumreactors:redstone_processor',
-    'gtceu:data_stick',
-    '#gtceu:circuits/ev'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:module_empty'
-  )
+.itemInputs(
+  '2x thoriumreactors:redstone_processor',
+  'gtceu:data_stick',
+  '#gtceu:circuits/ev'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:module_empty'
+)
 .duration(200)
 .EUt(HV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_io')
-  .itemInputs(
-    '2x thoriumreactors:redstone_processor',
-    'gtceu:item_filter',
-    'gtceu:ev_robot_arm'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-   'thoriumreactors:module_io'
-  )
+.itemInputs(
+  'thoriumreactors:module_empty',
+  'gtceu:item_filter',
+  'gtceu:ev_robot_arm'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+ 'thoriumreactors:module_io'
+)
 .duration(200)
 .EUt(EV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_energy')
-  .itemInputs(
-    '2x thoriumreactors:redstone_processor',
-    'gtceu:advanced_energy_detector_cover',
-    'gtceu:engraved_lapotron_crystal_chip'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:module_energy'
-  )
+.itemInputs(
+  'thoriumreactors:module_empty',
+  'gtceu:advanced_energy_detector_cover',
+  'gtceu:engraved_lapotron_crystal_chip'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:module_energy'
+)
 .duration(200)
 .EUt(EV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_storage')
-  .itemInputs(
-    '2x thoriumreactors:redstone_processor',
-    'gtceu:ev_conveyor_module'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:module_storage'
-  )
+.itemInputs(
+  'thoriumreactors:module_empty',
+  'gtceu:ev_conveyor_module'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:module_storage'
+)
 .duration(200)
 .EUt(EV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_tank')
-  .itemInputs(
-    '2x thoriumreactors:redstone_processor',
-    'gtceu:ev_electric_pump'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:module_tank'
-  )
+.itemInputs(
+  'thoriumreactors:module_empty',
+  'gtceu:ev_electric_pump'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:module_tank'
+)
 .duration(200)
 .EUt(EV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_sensor')
-  .itemInputs(
-    '2x thoriumreactors:redstone_processor',
-    'gtceu:advanced_fluid_detector_cover',
-    'gtceu:advanced_item_detector_cover'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:module_sensor'
-  )
+.itemInputs(
+  'thoriumreactors:module_empty',
+  'gtceu:advanced_fluid_detector_cover',
+  'gtceu:advanced_item_detector_cover'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:module_sensor'
+)
 .duration(200)
 .EUt(EV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_processing')
-  .itemInputs(
-    '2x thoriumreactors:redstone_processor',
-    '4x gtceu:ram_chip'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:module_processing'
-  )
+.itemInputs(
+  'thoriumreactors:module_empty',
+  '4x gtceu:ram_chip'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:module_processing'
+)
 .duration(200)
 .EUt(EV)
 event.recipes.gtceu.circuit_assembler('thoriumreactors:redstone_processor')
-  .itemInputs(
-    'gtceu:lpic_chip',
-    'create_new_age:copper_circuit',
-    'vintageimprovements:redstone_module',
-    '#forge:plates/redstone',
-    'create:content_observer'
-  )
-  .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
-  .itemOutputs(
-    'thoriumreactors:redstone_processor'
-  )
+.itemInputs(
+  'gtceu:lpic_chip',
+  'create_new_age:copper_circuit',
+  'vintageimprovements:redstone_module',
+  '#forge:plates/redstone',
+  'create:content_observer'
+)
+.inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
+.itemOutputs(
+  'thoriumreactors:redstone_processor'
+)
 .duration(200)
 .EUt(MV)
 
+//ThoriumReactors Phase 4
+event.recipes.gtceu.assembler('thoriumreactors:turbine_casing')
+.itemInputs(
+  '4x thoriumreactors:blasted_stone',
+  '2x gtceu:plascrete',
+  '4x thoriumreactors:blasted_iron_ingot',
+  'gtceu:titanium_frame'
+)
+.itemOutputs(
+  'thoriumreactors:turbine_casing'
+)
+.duration(160)
+.EUt(EV)
 
-  //ThoriumReactors End
+event.recipes.gtceu.assembler('thoriumreactors:thermal_conductor')
+.itemInputs(
+  '4x thoriumreactors:blasted_stone',
+  '2x gtceu:nichrome_coil_block',
+  '4x thoriumreactors:blasted_iron_ingot',
+  'gtceu:titanium_frame'
+)
+.itemOutputs(
+  'thoriumreactors:thermal_conductor'
+)
+.duration(160)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:turbine_valve')
+.itemInputs(
+  'thoriumreactors:turbine_casing',
+  'thoriumreactors:module_io'
+)
+.itemOutputs(
+'thoriumreactors:turbine_valve'
+)
+.duration(300)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:turbine_controller')
+.itemInputs(
+  'thoriumreactors:turbine_casing',
+  'thoriumreactors:machine_casing',
+  'gtceu:computer_monitor_cover'
+)
+.itemOutputs(
+  'thoriumreactors:turbine_controller'
+)
+.duration(600)
+.EUt(EV)
+.cleanroom(CleanroomType.CLEANROOM)
+
+event.recipes.gtceu.assembler('thoriumreactors:thermal_valve')
+.itemInputs(
+  'thoriumreactors:thermal_conductor',
+  'thoriumreactors:module_io'
+)
+.itemOutputs(
+'thoriumreactors:thermal_valve'
+)
+.duration(300)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:thermal_controller')
+.itemInputs(
+  'thoriumreactors:thermal_conductor',
+  'thoriumreactors:machine_casing',
+  'gtceu:computer_monitor_cover'
+)
+.itemOutputs(
+  'thoriumreactors:thermal_controller'
+)
+.duration(600)
+.EUt(EV)
+.cleanroom(CleanroomType.CLEANROOM)
+
+event.recipes.gtceu.assembler('thoriumreactors:turbine_glass')
+.itemInputs(
+  'thoriumreactors:turbine_casing',
+  'immersiveengineering:insulating_glass',
+  'gtceu:reactorglass'
+)
+.itemOutputs(
+  'thoriumreactors:turbine_glass'
+)
+.duration(160)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:thermal_heat_sink')
+.itemInputs(
+  'thoriumreactors:thermal_conductor',
+  '9x #forge:plates/copper'
+)
+.itemOutputs(
+  'thoriumreactors:thermal_heat_sink'
+)
+.duration(160)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:turbine_vent')
+.itemInputs(
+  'thoriumreactors:turbine_casing',
+  'gtceu:ev_input_hatch'
+)
+.itemOutputs(
+  'thoriumreactors:turbine_vent'
+)
+.duration(160)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:turbine_rotation_mount')
+.itemInputs(
+  'thoriumreactors:turbine_casing',
+  'thoriumreactors:turbine_rotor'
+)
+.itemOutputs(
+  'thoriumreactors:turbine_rotation_mount'
+)
+.duration(160)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:turbine_rotor')
+.itemInputs(
+  'railcraft:turbine_rotor'
+)
+.itemOutputs(
+  'thoriumreactors:turbine_rotor'
+)
+.duration(80)
+.EUt(EV)
+
+event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
+.itemInputs(
+  'create_new_age:netherite_magnet',
+  '64x gtceu:annealed_copper_single_wire'
+)
+.itemOutputs(
+  'thoriumreactors:electromagnetic_coil'
+)
+.duration(160)
+.EUt(EV)
+
+//ThoriumReactors End
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
     e: 'gtceu:mv_emitter',
@@ -1052,13 +1193,13 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:redstone_processor')
    })
    event.recipes.gtceu.alloy_smelter('brick')
            .itemInputs(
-               'minecraft:clay_ball'
+               '4x minecraft:clay_ball'
            )
            .notConsumable('gtceu:ingot_casting_mold')
            .itemOutputs(
-               'minecraft:brick'
+               '4x minecraft:brick'
            )
-           .duration(60)
+           .duration(80)
            .EUt(LV)
 
     tfcStone.forEach(stone => {

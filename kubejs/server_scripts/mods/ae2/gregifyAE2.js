@@ -784,6 +784,19 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 id: 'ae2:network/blocks/storage_drive'
             }
         )
+		
+        event.remove(
+            {
+                id: 'expatternprovider:ex_drive'
+            }
+        )
+		
+        event.remove(
+            {
+                id: 'expatternprovider:ex_drive_upgrade'
+            }
+        )
+
 
         event.recipes.gtceu.assembler('gregitas:me_drive')
             .itemInputs(
@@ -798,6 +811,33 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             )
             .duration(200)
             .EUt(MV)
+			
+        event.recipes.gtceu.assembler('gregitas:extended_me_drive')
+            .itemInputs(
+                'ae2:drive',
+                '4x gtceu:ultimet_plate',
+                '8x #ae2:smart_cable',
+                '#gtceu:circuits/hv',
+                '2x ae2:engineering_processor'
+            )
+            .itemOutputs(
+                'expatternprovider:ex_drive'
+            )
+            .duration(200)
+            .EUt(EV)
+			
+        event.recipes.gtceu.assembler('gregitas:extended_me_drive_upgrade')
+            .itemInputs(
+                '4x gtceu:ultimet_plate',
+                '8x #ae2:smart_cable',
+                '#gtceu:circuits/hv',
+                '2x ae2:engineering_processor'
+            )
+            .itemOutputs(
+                'expatternprovider:drive_upgrade'
+            )
+            .duration(200)
+            .EUt(EV)
 
     //ME Controller
         event.remove(
@@ -828,6 +868,17 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.remove(
             {
                 id: 'ae2:network/blocks/pattern_providers_interface'
+            }
+		)
+		event.remove(
+            {
+                id: 'expatternprovider:epp'
+            }
+			
+		)
+		event.remove(
+            {
+                id: 'expatternprovider:epp_upgrade'
             }
         )
 
@@ -882,6 +933,34 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             )
             .duration(500)
             .EUt(EV)
+			
+		event.recipes.gtceu.assembler('gregitas:extended_provider')
+            .itemInputs(
+                '2x ae2:pattern_provider',
+                '#gtceu:circuits/hv',
+                '2x gregitas:crafting_core',
+                'ae2:annihilation_core',
+                'ae2:formation_core'
+            )
+            .itemOutputs(
+                'expatternprovider:ex_pattern_provider'
+            )
+            .duration(500)
+            .EUt(EV)
+			
+			event.recipes.gtceu.assembler('gregitas:extended_provider_upgrade')
+            .itemInputs(
+                'ae2:pattern_provider',
+                '#gtceu:circuits/hv',
+                '2x gregitas:crafting_core',
+                'ae2:annihilation_core',
+                'ae2:formation_core'
+            )
+            .itemOutputs(
+                'expatternprovider:pattern_provider_upgrade'
+            )
+            .duration(500)
+            .EUt(EV)
 
     //Interface
 
@@ -891,6 +970,18 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             }
         )
 
+        event.remove(
+            {
+                id: 'expatternprovider:ei'
+            }
+        )
+		
+	    event.remove(
+            {
+                id: 'expatternprovider:ei_upgrade'
+            }
+        )
+		
         event.recipes.gtceu.assembler('gregitas:interface_steel')
             .itemInputs(
                 '4x gtceu:steel_plate',
@@ -942,6 +1033,34 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             )
             .duration(500)
             .EUt(EV)
+			
+	    event.recipes.gtceu.assembler('gregitas:extended_interface')
+            .itemInputs(
+                '2x ae2:interface',
+                '#gtceu:circuits/hv',
+                '2x #forge:glass',
+                'ae2:annihilation_core',
+                'ae2:formation_core'
+            )
+            .itemOutputs(
+                'expatternprovider:ex_interface'
+            )
+            .duration(500)
+            .EUt(EV)
+			
+	    event.recipes.gtceu.assembler('gregitas:extended_interface_upgrade')
+            .itemInputs(
+                'ae2:interface',
+                '#gtceu:circuits/hv',
+                '2x #forge:glass',
+                'ae2:annihilation_core',
+                'ae2:formation_core'
+            )
+            .itemOutputs(
+                'expatternprovider:interface_upgrade'
+            )
+            .duration(500)
+            .EUt(EV)
 
     //Energy Accepter
         
@@ -967,8 +1086,16 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     //Molecular Assembler
 
         event.remove(
+	        
             {
                 id: 'ae2:network/crafting/molecular_assembler'
+            }
+
+        )
+		
+        event.remove(
+            {
+                id: 'expatternprovider:ex_molecular_assembler'
             }
         )
         
@@ -1016,6 +1143,19 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             )
             .duration(600)
             .EUt(IV)
+			
+        event.recipes.gtceu.assembler('gregitas:extended_assembler')
+                .itemInputs(
+                    'gtceu:ev_machine_hull',
+                    '#gtceu:circuits/ev',
+                    '4x ae2:molecular_assembler',
+                    '2x ae2:crafting_accelerator'
+                )
+                .itemOutputs(
+                    'expatternprovider:ex_molecular_assembler'
+                )
+                .duration(400)
+                .EUt(EV) 
 
     //Crafting Monitor
 
@@ -1307,6 +1447,14 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 {
                     id: 'ae2:network/blocks/quantum_link'
+                },
+				
+                {
+                    id: 'expatternprovider:wireless_connector'
+                },
+				
+                {
+                    id: 'expatternprovider:wireless_tool'
                 }
             ]
         )
@@ -1453,6 +1601,41 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             )
             .duration(250)
             .EUt(EV)
+			
+        event.recipes.gtceu.assembler('gregitas:wireless_connector')
+            .itemInputs(
+                '2x gtceu:iv_machine_hull',
+                '4x #gtceu:circuits/luv',
+                '16x gtceu:hpic_chip',
+                '2x ae2:wireless_access_point',
+                '2x gtceu:iv_field_generator',
+                '2x ae2:wireless_receiver'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 576)
+            )
+            .itemOutputs(
+                '2x expatternprovider:wireless_connect'
+            )
+            .duration(500)
+            .EUt(IV)
+			
+        event.recipes.gtceu.assembler('gregitas:wireless_tool')
+            .itemInputs(
+                '4x gtceu:double_tungsten_steel_plate',
+                '#gtceu:circuits/luv',
+                '4x gtceu:hpic_chip',
+                'gtceu:ev_field_generator',
+                'ae2:wireless_receiver'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 244)
+            )
+            .itemOutputs(
+                'expatternprovider:wireless_tool'
+            )
+            .duration(200)
+            .EUt(IV)
 
     //Bits and Bobs
 
@@ -1464,6 +1647,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 {
                     id: 'ae2:network/blocks/inscribers'
                 },
+				
                 {
                     id: 'ae2:materials/basiccard'
                 },
@@ -1505,7 +1689,47 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 {
                     id: 'ae2:network/parts/export_bus'
-                }
+                },
+				
+                {
+                    id: 'expatternprovider:tape'
+                },
+				
+                {
+                    id: 'expatternprovider:cobblestone_cell'
+                },
+			
+                {
+                    id: 'expatternprovider:ingredient_buffer'
+                },
+
+                {
+                    id: 'expatternprovider:pattern_modifier'
+                },
+
+                {
+                    id: 'expatternprovider:crystal_fixer'
+                },
+
+                {
+                    id: 'expatternprovider:ebus_upgrade'
+                },
+
+                {
+                    id: 'expatternprovider:ebus_in'
+                },
+
+                {
+                    id: 'expatternprovider:ebus_out'
+                },
+
+                {
+                    id: 'expatternprovider:epa_upgrade'
+                },
+
+                {
+                    id: 'expatternprovider:wireless_ex_pat'
+                }					
             ]
         )
 
@@ -1764,7 +1988,131 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 )
                 .duration(50)
                 .EUt(LV) 
-
+				
+    //Misc expatternprovider
+	
+            event.recipes.gtceu.assembler('gregitas:ingredient_buffer')
+                .itemInputs(
+                    'gtceu:ev_machine_hull',
+                    '#gtceu:circuits/ev',
+                    '2x ae2:cell_component_16k',
+                    'expatternprovider:ex_export_bus_part'
+                )
+                .itemOutputs(
+                    'expatternprovider:ingredient_buffer'
+                )
+                .duration(400)
+                .EUt(EV) 
+				
+            event.recipes.gtceu.assembler('gregitas:pattern_modifier')
+                .itemInputs(
+                    'gtceu:ev_machine_hull',
+                    '2x #gtceu:circuits/ev',
+                    '4x ae2:annihilation_core',
+                    '4x ae2:formation_core',
+                    '2x ae2:cell_component_64k',
+                    '32x ae2:blank_pattern'
+                )
+                .itemOutputs(
+                    'expatternprovider:pattern_modifier'
+                )
+                .duration(400)
+                .EUt(EV) 
+				
+            event.recipes.gtceu.assembler('gregitas:crystal_fixer')
+                .itemInputs(
+                    'gtceu:ev_machine_hull',
+                    '4x gtceu:ev_robot_arm',
+                    '16x ae2:formation_core',
+                    '64x ae2:charged_certus_quartz_crystal'
+                )
+                .itemOutputs(
+                    'expatternprovider:crystal_fixer'
+                )
+                .duration(400)
+                .EUt(EV) 
+				
+            event.recipes.gtceu.assembler('gregitas:extended_import')
+                .itemInputs(
+                    'ae2:import_bus',
+                    '4x gtceu:ultimet_plate',
+                    '4x ae2:annihilation_core',
+                    '4x ae2:formation_core',
+                    'gtceu:hv_robot_arm',
+                    'gtceu:hv_electric_pump'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:soldering_alloy',288)
+                )
+                .itemOutputs(
+                    'expatternprovider:ex_import_bus_part'
+                )
+                .duration(200)
+                .EUt(EV)
+				
+            event.recipes.gtceu.assembler('gregitas:extended_export')
+                .itemInputs(
+                    'ae2:export_bus',
+                    '4x gtceu:ultimet_plate',
+                    '4x ae2:annihilation_core',
+                    '4x ae2:formation_core',
+                    'gtceu:hv_robot_arm',
+                    'gtceu:hv_electric_pump'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:soldering_alloy',288)
+                )
+                .itemOutputs(
+                    'expatternprovider:ex_export_bus_part'
+                )
+                .duration(200)
+                .EUt(EV)
+				
+            event.recipes.gtceu.assembler('gregitas:extended_io_upgrade')
+                .itemInputs(
+                    '4x gtceu:ultimet_plate',
+                    '4x ae2:annihilation_core',
+                    '4x ae2:formation_core',
+                    'gtceu:hv_robot_arm',
+                    'gtceu:hv_electric_pump'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:soldering_alloy',288)
+                )
+                .itemOutputs(
+                    'expatternprovider:io_bus_upgrade'
+                )
+                .duration(200)
+                .EUt(EV)
+				
+            event.recipes.gtceu.assembler('gregitas:pattern_access_upgrade')
+                .itemInputs(
+                    '3x ae2:logic_processor',
+                    '#gtceu:circuits/hv',
+                    'ae2:pattern_provider'
+				)
+                .itemOutputs(
+                    'expatternprovider:pattern_terminal_upgrade'
+                )
+                .duration(200)
+                .EUt(HV)
+				
+            event.recipes.gtceu.assembler('gregitas:wireless_extended_pattern_access')
+                .itemInputs(
+                    'ae2wtlib:wireless_pattern_access_terminal',
+                    '3x ae2:logic_processor',
+                    '#gtceu:circuits/hv',
+                    '#ae2:pattern_provider'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:soldering_alloy',144)
+                )
+                .itemOutputs(
+                    'expatternprovider:wireless_ex_pat'
+                )
+                .duration(200)
+                .EUt(HV)
+				
     //Generic Remove
         
         event.remove(
@@ -1774,9 +2122,6 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 },
                 {
                     mod: 'aeinfinitybooster'
-                },
-                {
-                    mod: 'expatternprovider'
                 },
                 {
                     mod: 'megacells'
