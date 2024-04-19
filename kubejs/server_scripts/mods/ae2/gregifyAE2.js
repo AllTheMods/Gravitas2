@@ -2433,7 +2433,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 event.recipes.gtceu.canner('regitas:bulk_item_cell')
                     .itemInputs(
                         'megacells:bulk_cell_component',
-                        'egacells:mega_item_cell_housing'
+                        'megacells:mega_item_cell_housing'
                     )
                     .itemOutputs(
                         'megacells:bulk_item_cell'
