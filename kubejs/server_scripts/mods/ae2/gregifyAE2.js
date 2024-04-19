@@ -813,6 +813,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(MV)
 			
         event.recipes.gtceu.assembler('gregitas:extended_me_drive')
+			.circuit(1)
             .itemInputs(
                 'ae2:drive',
                 '4x gtceu:ultimet_plate',
@@ -827,6 +828,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
         event.recipes.gtceu.assembler('gregitas:extended_me_drive_upgrade')
+			.circuit(2)
             .itemInputs(
                 '4x gtceu:ultimet_plate',
                 '8x #ae2:smart_cable',
@@ -935,6 +937,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 		event.recipes.gtceu.assembler('gregitas:extended_provider')
+			.circuit(1)
             .itemInputs(
                 '2x ae2:pattern_provider',
                 '#gtceu:circuits/hv',
@@ -949,6 +952,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 			event.recipes.gtceu.assembler('gregitas:extended_provider_upgrade')
+			.circuit(2)
             .itemInputs(
                 'ae2:pattern_provider',
                 '#gtceu:circuits/hv',
@@ -1035,6 +1039,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 	    event.recipes.gtceu.assembler('gregitas:extended_interface')
+			.circuit(1)
             .itemInputs(
                 '2x ae2:interface',
                 '#gtceu:circuits/hv',
@@ -1049,6 +1054,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 	    event.recipes.gtceu.assembler('gregitas:extended_interface_upgrade')
+			.circuit(2)
             .itemInputs(
                 'ae2:interface',
                 '#gtceu:circuits/hv',
@@ -2069,6 +2075,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .EUt(EV)
 				
             event.recipes.gtceu.assembler('gregitas:extended_io_upgrade')
+			    .circuit(1)
                 .itemInputs(
                     '4x gtceu:ultimet_plate',
                     '4x ae2:annihilation_core',
@@ -2086,6 +2093,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .EUt(EV)
 				
             event.recipes.gtceu.assembler('gregitas:pattern_access_upgrade')
+				.circuit(1)
                 .itemInputs(
                     '3x ae2:logic_processor',
                     '#gtceu:circuits/hv',
