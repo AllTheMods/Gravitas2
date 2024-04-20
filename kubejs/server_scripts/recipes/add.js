@@ -1205,12 +1205,12 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
     tfcStone.forEach(stone => {
         event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
                .itemInputs(
-                   `tfc:rock/loose/${stone}`
+                   `4x tfc:rock/loose/${stone}`
                )
                .notConsumable('gtceu:ingot_casting_mold')
                .itemOutputs(
-                   `tfc:brick/${stone}`               )
-               .duration(60)
+                   `4x tfc:brick/${stone}`               )
+               .duration(80)
                .EUt(LV)
         event.recipes.gtceu.forge_hammer(`loose_${stone}`)
                 .itemInputs(`tfc:rock/raw/${stone}`)
