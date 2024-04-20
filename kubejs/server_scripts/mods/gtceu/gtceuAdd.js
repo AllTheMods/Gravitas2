@@ -466,4 +466,46 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .outputFluids(Fluid.of('gtceu:seed_oil', 10))
             .EUt(LV)
             .duration(50)
+			
+    //yeast starter
+	
+        event.recipes.gtceu.fermenter('yeast_starter_create')
+            .itemInputs('#tfc:foods/fruits')
+            .inputFluids(Fluid.of('minecraft:water', 100))
+            .outputFluids(Fluid.of('firmalife:yeast_starter', 100))
+            .EUt(LV)
+            .duration(2000)
+	
+        event.recipes.gtceu.fermenter('yeast_starter_duplicate')
+            .itemInputs('#firmalife:feeds_yeast')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 100))
+            .outputFluids(Fluid.of('firmalife:yeast_starter', 500))
+            .EUt(LV)
+            .duration(200)
+			
+    //limewater
+	
+        event.recipes.gtceu.mixer('limewater_from_flux')
+            .itemInputs('tfc:powder/flux')
+            .inputFluids(Fluid.of('minecraft:water', 500))
+            .outputFluids(Fluid.of('tfc:limewater', 500))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('limewater_from_lime')
+            .itemInputs('tfc:powder/lime')
+            .inputFluids(Fluid.of('minecraft:water', 500))
+            .outputFluids(Fluid.of('tfc:limewater', 500))
+            .EUt(LV)
+            .duration(50)
+			
+    //raw resin
+	
+        event.recipes.gtceu.mixer('sticky_resin_from_raw')
+            .itemInputs('gtceu:small_sulfur_dust')
+            .inputFluids(Fluid.of('gregitas:raw_resin', 500))
+            .itemOutputs('gtceu:sticky_resin')
+            .EUt(LV)
+            .duration(50)
+	
 }
