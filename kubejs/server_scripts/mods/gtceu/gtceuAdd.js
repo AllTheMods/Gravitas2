@@ -483,6 +483,64 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(LV)
             .duration(200)
 			
+    //dough
+	
+        event.recipes.gtceu.mixer('gt_mixer_oat_dough')
+            .itemInputs('tfc:food/oat_flour')
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/oat_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_wheat_dough')
+            .itemInputs('tfc:food/wheat_flour')
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/wheat_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_barley_dough')
+            .itemInputs('tfc:food/barley_flour')
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/barley_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_maize_dough')
+            .itemInputs('tfc:food/maize_flour')
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/maize_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_rice_dough')
+            .itemInputs('tfc:food/rice_flour')
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/rice_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_rye_dough')
+            .itemInputs('tfc:food/rye_flour')
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/rye_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_hardtack_dough')
+            .itemInputs('#tfc:foods/flour')
+            .itemInputs('tfc:powder/salt')
+            .inputFluids(Fluid.of('minecraft:water', 1000))
+            .itemOutputs('4x firmalife:food/hardtack_dough')
+            .EUt(LV)
+            .duration(50)
+			
     //limewater
 	
         event.recipes.gtceu.mixer('limewater_from_flux')
@@ -507,5 +565,45 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('gtceu:sticky_resin')
             .EUt(LV)
             .duration(50)
+			
+    //dry mud bricks
+	
+   event.recipes.gtceu.alloy_smelter('loam_brick_dry')
+           .itemInputs('4x tfc:drying_bricks/loam')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:mud_brick/loam')
+           .EUt(LV)
+           .duration(80)
+		   
+   event.recipes.gtceu.alloy_smelter('silty_brick_dry')
+           .itemInputs('4x tfc:drying_bricks/silty_loam')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:mud_brick/silty_loam')
+           .EUt(LV)
+           .duration(80)
+		   
+   event.recipes.gtceu.alloy_smelter('sandy_brick_dry')
+           .itemInputs('4x tfc:drying_bricks/sandy_loam')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:mud_brick/sandy_loam')
+           .EUt(LV)
+           .duration(80)
+		   
+	//alabaster brick
+	
+   event.recipes.gtceu.alloy_smelter('alabaster_brick')
+           .itemInputs('4x tfc:ore/gypsum')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:alabaster_brick')
+           .EUt(LV)
+           .duration(80)
+		   
+   event.recipes.gtceu.alloy_smelter('alabaster_brick_with_dust')
+           .itemInputs('4x gtceu:gypsum_dust')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:alabaster_brick')
+           .EUt(LV)
+           .duration(80)
+
 	
 }
