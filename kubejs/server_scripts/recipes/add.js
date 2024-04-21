@@ -1650,33 +1650,50 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
       event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
       event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
     }
+	 
+	//TFC Jars
     event.recipes.gtceu.alloy_smelter("empty_jar")
     .notConsumable("gtceu:block_casting_mold")
     .itemInputs("#tfc:glass_batches_tier_2")
     .itemOutputs("tfc:empty_jar")
     .duration(60)
     .EUt(LV)
-
+     
     event.recipes.gtceu.cutter("tin_lid")
     .itemInputs("gtceu:tin_plate")
     .itemOutputs('32x tfc:jar_lid')
     .inputFluids(Fluid.of("minecraft:water", 4))
     .duration(40)
     .EUt(LV)
-
+     
+	//Fish Oil
    fish.forEach((fish) => {
     event.recipes.gtceu.extractor(`${fish}_oil`)
     .itemInputs(`${fish}`)
     .outputFluids(Fluid.of("gtceu:fish_oil", 50))
     .duration(60)
     .EUt(LV)
-	
+	 
+	//Moss
+	 
     })
    event.recipes.kubejs.shaped("2x minecraft:moss_block" , ["PPP", "PRP","PPP"], {
         P: "gtceu:fertilizer",
         R: "#tfc:rock/raw",		
     })
-  
+	 
+	//Create Redstone
+	 
+   event.recipes.kubejs.shaped("create_connected:sequenced_pulse_generator" , ["EC ", "ERT","PPP"], {
+        P: "#tfc:rock/raw",
+        R: "gtceu:brass_plate",    
+        C: "#gtceu:circuits/lv",
+        E: "create:electron_tube",
+        T: "minecraft:redstone_torch",
+    })
+    
+	//Liquid Chorus
+	
 	event.recipes.gtceu.mixer('liquid_chorus')
     .itemInputs(
         'integrateddynamics:proto_chorus'
