@@ -470,14 +470,24 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     //yeast starter
 	
         event.recipes.gtceu.fermenter('yeast_starter_create')
-            .itemInputs('#tfc:foods/fruits')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
             .inputFluids(Fluid.of('minecraft:water', 100))
             .outputFluids(Fluid.of('firmalife:yeast_starter', 100))
             .EUt(LV)
             .duration(2000)
 	
         event.recipes.gtceu.fermenter('yeast_starter_duplicate')
-            .itemInputs('#firmalife:feeds_yeast')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "firmalife:feeds_yeast"
+                }
+              },1))
             .inputFluids(Fluid.of('firmalife:yeast_starter', 100))
             .outputFluids(Fluid.of('firmalife:yeast_starter', 500))
             .EUt(LV)
@@ -486,7 +496,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     //dough
 	
         event.recipes.gtceu.mixer('gt_mixer_oat_dough')
-            .itemInputs('tfc:food/oat_flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/oat_flour"
+                }
+              },1))
             .itemInputs('#tfc:sweetener')
             .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
             .itemOutputs('4x firmalife:food/oat_dough')
@@ -494,7 +509,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(50)
 			
         event.recipes.gtceu.mixer('gt_mixer_wheat_dough')
-            .itemInputs('tfc:food/wheat_flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/wheat_flour"
+                }
+              },1))
             .itemInputs('#tfc:sweetener')
             .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
             .itemOutputs('4x firmalife:food/wheat_dough')
@@ -502,7 +522,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(50)
 			
         event.recipes.gtceu.mixer('gt_mixer_barley_dough')
-            .itemInputs('tfc:food/barley_flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/barley_flour"
+                }
+              },1))
             .itemInputs('#tfc:sweetener')
             .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
             .itemOutputs('4x firmalife:food/barley_dough')
@@ -510,7 +535,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(50)
 			
         event.recipes.gtceu.mixer('gt_mixer_maize_dough')
-            .itemInputs('tfc:food/maize_flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/maize_flour"
+                }
+              },1))
             .itemInputs('#tfc:sweetener')
             .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
             .itemOutputs('4x firmalife:food/maize_dough')
@@ -518,7 +548,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(50)
 			
         event.recipes.gtceu.mixer('gt_mixer_rice_dough')
-            .itemInputs('tfc:food/rice_flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/rice_flour"
+                }
+              },1))
             .itemInputs('#tfc:sweetener')
             .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
             .itemOutputs('4x firmalife:food/rice_dough')
@@ -526,7 +561,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(50)
 			
         event.recipes.gtceu.mixer('gt_mixer_rye_dough')
-            .itemInputs('tfc:food/rye_flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/rye_flour"
+                }
+              },1))
             .itemInputs('#tfc:sweetener')
             .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
             .itemOutputs('4x firmalife:food/rye_dough')
@@ -534,7 +574,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(50)
 			
         event.recipes.gtceu.mixer('gt_mixer_hardtack_dough')
-            .itemInputs('#tfc:foods/flour')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/flour"
+                }
+              },1))
             .itemInputs('tfc:powder/salt')
             .inputFluids(Fluid.of('minecraft:water', 1000))
             .itemOutputs('4x firmalife:food/hardtack_dough')
