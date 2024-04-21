@@ -649,6 +649,118 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
            .itemOutputs('4x tfc:alabaster_brick')
            .EUt(LV)
            .duration(80)
-
+		   
+	//milk vinegar
 	
+	//couldnt get fluidtags/array stuff to work with fluids
+	
+        event.recipes.gtceu.mixer('milk_vinegar')
+            .inputFluids(Fluid.of('minecraft:milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(100)
+
+        event.recipes.gtceu.mixer('milk_vinegar_from_goat')
+            .inputFluids(Fluid.of('firmalife:goat_milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+        event.recipes.gtceu.mixer('milk_vinegar_from_yak')
+            .inputFluids(Fluid.of('firmalife:yak_milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(200)
+			
+        event.recipes.gtceu.mixer('milk_vinegar_from_coconut')
+            .inputFluids(Fluid.of('firmalife:coconut_milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+		//vinegar 
+	     
+        event.recipes.gtceu.fermenter('vinegar_from_beer')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:beer', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fermenter('vinegar_from_rum')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:rum', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fermenter('vinegar_from_whiskey')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:whiskey', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fermenter('vinegar_from_vodka')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:vodka', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+		//curdled milk
+		
+        event.recipes.gtceu.mixer('curdled_milk')
+            .inputFluids(Fluid.of('minecraft:milk', 900))
+            .inputFluids(Fluid.of('tfc:milk_vinegar', 100))
+            .outputFluids(Fluid.of('tfc:curdled_milk', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+        event.recipes.gtceu.mixer('curdled_goat_milk')
+            .inputFluids(Fluid.of('firmalife:goat_milk', 900))
+            .inputFluids(Fluid.of('tfc:milk_vinegar', 100))
+            .outputFluids(Fluid.of('firmalife:curdled_goat_milk', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+        event.recipes.gtceu.mixer('curdled_yak_milk')
+            .inputFluids(Fluid.of('firmalife:yak_milk', 900))
+            .inputFluids(Fluid.of('tfc:milk_vinegar', 100))
+            .outputFluids(Fluid.of('firmalife:curdled_yak_milk', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+		//tfc brine
+		
+        event.recipes.gtceu.mixer('TFC_brine')
+            .inputFluids(Fluid.of('tfc:salt_water', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:brine', 1000))
+            .EUt(LV)
+            .duration(20)
 }
