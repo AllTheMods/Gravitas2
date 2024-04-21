@@ -673,7 +673,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .inputFluids(Fluid.of('tfc:vinegar', 100))
             .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
             .EUt(LV)
-            .duration(200)
+            .duration(100)
 			
         event.recipes.gtceu.mixer('milk_vinegar_from_coconut')
             .inputFluids(Fluid.of('firmalife:coconut_milk', 900))
