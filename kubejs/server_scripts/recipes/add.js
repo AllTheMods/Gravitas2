@@ -1,4 +1,27 @@
 // priority 10
+const TFCSeeds = [
+  "barley",
+  "oat",
+  "rye",
+  "maize",
+  "wheat",
+  "rice",
+  "beet",
+  "cabbage",
+  "carrot",
+  "garlic",
+  "green_bean",
+  "potato",
+  "onion",
+  "soybean",
+  "squash",
+  "sugarcane",
+  "tomato",
+  "red_bell_pepper",
+  "yellow_bell_pepper"
+
+
+]
 const fish =[
   "tfc:food/cod",
   "tfc:food/salmon",
@@ -558,6 +581,62 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .EUt(LV)
 	  
   })
+  TFCSeeds.forEach((seed) => {
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${seed}_boosted`)
+      .circuit(3)
+      .notConsumable(`tfc:seeds/${seed}`)
+      .itemInputs("4x gtceu:fertilizer")
+      .inputFluids(Fluid.of("minecraft:water", 2000))
+      .itemOutputs(`16x tfc:food/${seed}`, `16x tfc:food/${seed}`, `8x tfc:seeds/${seed}`)
+      .duration(480)
+      .EUt(HV)
+      .cleanroom(CleanroomType.CLEANROOM)
+  })
+  event.recipes.gtceu
+  .greenhouse(`gregitas:pumpkin_boosted`)
+  .circuit(3)
+  .notConsumable(`tfc:seeds/pumpkin`)
+  .itemInputs("4x gtceu:fertilizer")
+  .inputFluids(Fluid.of("minecraft:water", 2000))
+  .itemOutputs(`16x tfc:pumpkin`, `16x tfc:pumpkin`, `8x tfc:seeds/pumpkin`)
+  .duration(480)
+  .EUt(HV)
+  .cleanroom(CleanroomType.CLEANROOM)
+
+  event.recipes.gtceu
+  .greenhouse(`gregitas:melon_boosted`)
+  .circuit(3)
+  .notConsumable(`tfc:seeds/melon`)
+  .itemInputs("4x gtceu:fertilizer")
+  .inputFluids(Fluid.of("minecraft:water", 2000))
+  .itemOutputs(`16x tfc:melon`, `16x tfc:melon`, `8x tfc:seeds/melon`)
+  .duration(480)
+  .EUt(HV)
+  .cleanroom(CleanroomType.CLEANROOM)
+  
+  event.recipes.gtceu
+  .greenhouse(`gregitas:papyrus_boosted`)
+  .circuit(3)
+  .notConsumable(`tfc:seeds/papyrus`)
+  .itemInputs("4x gtceu:fertilizer")
+  .inputFluids(Fluid.of("minecraft:water", 2000))
+  .itemOutputs(`16x tfc:papyrus`, `16x tfc:papyrus`, `8x tfc:seeds/papyrus`)
+  .duration(480)
+  .EUt(HV)
+  .cleanroom(CleanroomType.CLEANROOM)
+
+  event.recipes.gtceu
+  .greenhouse(`gregitas:jute_boosted`)
+  .circuit(3)
+  .notConsumable(`tfc:seeds/jute`)
+  .itemInputs("4x gtceu:fertilizer")
+  .inputFluids(Fluid.of("minecraft:water", 2000))
+  .itemOutputs(`16x tfc:jute`, `16x tfc:jute`, `8x tfc:seeds/jute`)
+  .duration(480)
+  .EUt(HV)
+  .cleanroom(CleanroomType.CLEANROOM)
+
 
   shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
   shaped('gtceu:rubber_planks', ['LL', 'LL'], {L: 'gregitas:rubber_lumber'}).id('gregitas:shaped/rubber_planks')
@@ -1597,7 +1676,7 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
         P: "gtceu:fertilizer",
         R: "#tfc:rock/raw",		
     })
-	
+  
 	event.recipes.gtceu.mixer('liquid_chorus')
     .itemInputs(
         'integrateddynamics:proto_chorus'
