@@ -743,9 +743,10 @@ event.recipes.gtceu.autoclave('enriched_uranium_pellet')
 event.recipes.gtceu.centrifuge('enriched_uranium_hexafluorite')
   .inputFluids(
     Fluid.of("thoriumreactors:uranium_hexafluorite", 1000)
+	
   )
   .outputFluids(
-    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 500)
   )
   .duration(3000)
   .EUt(EV)
