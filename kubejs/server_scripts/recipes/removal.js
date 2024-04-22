@@ -158,14 +158,26 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
   event.remove({ id: "create:filling/sweet_roll"})
   event.remove({ id: "create:crafting/kinetics/belt_connector"})
+  event.remove({ id: "create:crushing/crimsite"})
   event.remove({ id: "create:crushing/crimsite_recycling"})
+  event.remove({ id: "create:crushing/ochrum"})
   event.remove({ id: "create:crushing/ochrum_recycling"})
   event.remove({ id: "create:crushing/veridium"})
+  event.remove({ id: "create:crushing/veridium_recycling"})
   event.remove({ id: "create:crushing/tuff"})
-  event.remove({ id: "create:crushing/gravel"})
+  event.remove({ id: "create:crushing/tuff_recycling"})
+  event.remove({ id: "create:crushing/asurine"})
   event.remove({ id: "create:crushing/asurine_recycling"})
   event.remove({ id: "create:crushing/crimsite"})
-  event.remove({ id: /^create:.*_crimsite_stonecutting/})
+  event.remove({ id: "create:crushing/crimsite_recycling"})
+  event.remove({ id: "create:crushing/gravel"})
+  event.remove({ id: "create:granite_from_stone_types_granite_stonecutting"})
+  event.remove({ id: "create:diorite_from_stone_types_diorite_stonecutting"})
+  event.remove({ id: "create:andesite_from_stone_types_andesite_stonecutting"})
+  event.remove({ id: "create:calcite_from_stone_types_calcite_stonecutting"})
+  event.remove({ id: "create:dripstone_block_stone_types_dripstone_stonecutting"})
+  event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
+  event.remove({ id: "vintageimprovements:crushing/scoria"})
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
 
   //Cast iron plate jank
@@ -363,5 +375,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //DECO
 
   event.remove({ id: 'createdeco:pressing/zinc_sheet'})
+  
+  //water source do not give recipe
+  
+  event.remove({ id: 'thoriumreactors:thorium_crafting/water_source_block'})
+  
+  
 
 }
