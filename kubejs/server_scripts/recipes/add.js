@@ -761,7 +761,7 @@ event.recipes.gtceu.chemical_reactor('enriched_uranium_hexafluorite')
   .outputFluids(
     Fluid.of("thoriumreactors:uranium_hexafluorite", 500)
   )
-  .duration(500)
+  .duration(250)
   .EUt(EV)
   .cleanroom(CleanroomType.CLEANROOM)
   
@@ -782,13 +782,10 @@ event.recipes.gtceu.compressor('yellow_cake')
   .itemInputs(
     '#forge:dusts/uranium_235'
   )
-  .inputFluids(
-    Fluid.of("gtceu:distilled_water", 100)
-  )
   .itemOutputs(
     'thoriumreactors:yellow_cake'
   )
-  .duration(2400)
+  .duration(1200)
   .EUt(EV)
   .cleanroom(CleanroomType.CLEANROOM)
   
@@ -1211,6 +1208,39 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
 .duration(160)
 .EUt(EV)
 
+//ThoriumReactors Phase 5
+shaped("thoriumreactors:warning_block_lined_black_yellow_right", ["BKB", "KBY", "BYB"], {
+  B: "#tfc:rock/bricks",
+  K: "#forge:dyes/black",
+  Y: "#forge:dyes/yellow"
+})
+shaped("thoriumreactors:warning_block_lined_black_yellow_left", ["BKB", "YBK", "BYB"], {
+  B: "#tfc:rock/bricks",
+  K: "#forge:dyes/black",
+  Y: "#forge:dyes/yellow"
+})
+
+shaped("thoriumreactors:warning_block_lined_white_orange_right", ["BWB", "WBO", "BOB"], {
+  B: "#tfc:rock/bricks",
+  O: "#forge:dyes/orange",
+  W: "#forge:dyes/white"
+})
+shaped("thoriumreactors:warning_block_lined_white_orange_left", ["BWB", "OBW", "BOB"], {
+  B: "#tfc:rock/bricks",
+  O: "#forge:dyes/orange",
+  W: "#forge:dyes/white"
+})
+
+shaped("thoriumreactors:warning_block_lined_white_black_right", ["BWB", "WBK", "BKB"], {
+  B: "#tfc:rock/bricks",
+  K: "#forge:dyes/black",
+  W: "#forge:dyes/white"
+})
+shaped("thoriumreactors:warning_block_lined_white_black_left", ["BWB", "KBW", "BKB"], {
+  B: "#tfc:rock/bricks",
+  K: "#forge:dyes/black",
+  W: "#forge:dyes/white"
+})
 //ThoriumReactors End
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
