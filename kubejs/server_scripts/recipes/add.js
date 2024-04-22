@@ -1682,6 +1682,57 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
         R: "#tfc:rock/raw",		
     })
 	 
+	//create stones
+	 
+   event.recipes.kubejs.shaped("2x minecraft:tuff" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/dacite",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:veridium" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/schist",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:ochrum" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/conglomerate",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:crimsite" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/chert",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:asurine" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/shale",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:cut_granite" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/granite",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:cut_andesite" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/andesite",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:cut_diorite" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/diorite",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:cut_calcite" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/marble",		
+    })
+	 
+   event.recipes.kubejs.shaped("2x create:cut_dripstone" , ["PPP", "PRP","PPP"], {
+        P: "gtceu:stone_dust",
+        R: "tfc:rock/raw/claystone",		
+    })
 	//Create Redstone
 	 
    event.recipes.kubejs.shaped("create_connected:sequenced_pulse_generator" , ["EC ", "ERT","PPP"], {
