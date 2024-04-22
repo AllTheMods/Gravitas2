@@ -673,7 +673,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .inputFluids(Fluid.of('tfc:vinegar', 100))
             .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
             .EUt(LV)
-            .duration(100)
+            .duration(200)
 			
         event.recipes.gtceu.mixer('milk_vinegar_from_coconut')
             .inputFluids(Fluid.of('firmalife:coconut_milk', 900))
@@ -763,4 +763,82 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .outputFluids(Fluid.of('tfc:brine', 1000))
             .EUt(LV)
             .duration(20)
+			
+	    //firmalife stuff
+		
+         event.recipes.gtceu.forming_press("firmalife_copper_pipe")
+            .notConsumable('gtceu:small_pipe_extruder_mold')
+            .itemInputs('gtceu:copper_plate')
+            .itemOutputs('8x firmalife:copper_pipe')
+            .duration(200)
+            .EUt(LV)
+	     
+        event.recipes.gtceu.forming_press("firmalife_sprinkler")
+            .notConsumable('gtceu:tiny_pipe_extruder_mold')
+            .itemInputs('gtceu:copper_plate')
+            .itemOutputs('firmalife:sprinkler')
+            .duration(200)
+            .EUt(LV)
+	
+        event.recipes.gtceu.forming_press("firmalife_reinforced_glass")
+            .notConsumable('gtceu:plate_extruder_mold')
+            .itemInputs('#tfc:glass_batches')
+            .itemInputs('#tfc:glassworking_potash')
+            .itemOutputs('8x firmalife:reinforced_glass')
+            .duration(200)
+            .EUt(LV)
+	     
+        event.recipes.gtceu.forming_press("firmalife_reinforced_glass_gt_materials")
+            .notConsumable('gtceu:plate_extruder_mold')
+            .itemInputs('#forge:dusts/glass')
+            .itemInputs('#forge:dusts/soda_ash')
+            .itemOutputs('8x firmalife:reinforced_glass')
+            .duration(200)
+            .EUt(LV)
+			
+		//jute fiber
+		 
+        event.recipes.gtceu.mixer('gt_mixer_jute_fiber')
+            .itemInputs('tfc:jute')
+            .inputFluids(Fluid.of('minecraft:water', 200))
+            .itemOutputs('tfc:jute_fiber')
+            .EUt(LV)
+            .duration(50)
+         
+		//olive oil
+		
+        event.recipes.gtceu.forge_hammer('olive_crushing')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/olive"
+                }
+              },1))
+            .itemOutputs('2x tfc:olive_paste')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fluid_heater('olive_oil_water')
+            .itemInputs('5x tfc:olive_paste')
+            .inputFluids(Fluid.of('minecraft:water', 1000))
+            .outputFluids(Fluid.of('tfc:olive_oil_water', 1000))
+            .EUt(LV)
+            .duration(200)
+			
+        event.recipes.gtceu.mixer('olive_oil_with_jute_net')
+            .itemInputs('tfc:jute_net')
+            .inputFluids(Fluid.of('tfc:olive_oil_water', 250))
+            .outputFluids(Fluid.of('tfc:olive_oil', 50))
+            .itemOutputs('tfc:dirty_jute_net')
+            .EUt(LV)
+            .duration(200)
+			
+        event.recipes.gtceu.mixer('jute_net_cleaning')
+            .itemInputs('tfc:dirty_jute_net')
+            .inputFluids(Fluid.of('minecraft:water', 250))
+            .itemOutputs('tfc:jute_net')
+            .EUt(LV)
+            .duration(100)
+		
+
 }
