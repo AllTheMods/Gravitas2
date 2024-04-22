@@ -1760,4 +1760,12 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
     )
     .duration(50)
     .EUt(HV)
+    
+    
+    // Straw Hat
+    shaped("tfcambiental:straw_hat", ["TTT", "T T", "   "],
+      {
+          T: "tfc:straw"
+      })
+  
 }

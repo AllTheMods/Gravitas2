@@ -380,6 +380,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   
   event.remove({ id: 'thoriumreactors:thorium_crafting/water_source_block'})
   
-  
-
+  //Straw Hat
+  event.remove({ id: 'tfcambiental:crafting/straw_hat'})
 }
