@@ -1209,34 +1209,34 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
 .EUt(EV)
 
 //ThoriumReactors Phase 5
-shaped("thoriumreactors:warning_block_lined_black_yellow_right", ["BKB", "KBY", "BYB"], {
+shaped("5x thoriumreactors:warning_block_lined_black_yellow_right", ["BKB", "KBY", "BYB"], {
   B: "#tfc:rock/bricks",
   K: "#forge:dyes/black",
   Y: "#forge:dyes/yellow"
 })
-shaped("thoriumreactors:warning_block_lined_black_yellow_left", ["BKB", "YBK", "BYB"], {
+shaped("5x thoriumreactors:warning_block_lined_black_yellow_left", ["BKB", "YBK", "BYB"], {
   B: "#tfc:rock/bricks",
   K: "#forge:dyes/black",
   Y: "#forge:dyes/yellow"
 })
 
-shaped("thoriumreactors:warning_block_lined_white_orange_right", ["BWB", "WBO", "BOB"], {
+shaped("5x thoriumreactors:warning_block_lined_white_orange_right", ["BWB", "WBO", "BOB"], {
   B: "#tfc:rock/bricks",
   O: "#forge:dyes/orange",
   W: "#forge:dyes/white"
 })
-shaped("thoriumreactors:warning_block_lined_white_orange_left", ["BWB", "OBW", "BOB"], {
+shaped("5x thoriumreactors:warning_block_lined_white_orange_left", ["BWB", "OBW", "BOB"], {
   B: "#tfc:rock/bricks",
   O: "#forge:dyes/orange",
   W: "#forge:dyes/white"
 })
 
-shaped("thoriumreactors:warning_block_lined_white_black_right", ["BWB", "WBK", "BKB"], {
+shaped("5x thoriumreactors:warning_block_lined_white_black_right", ["BWB", "WBK", "BKB"], {
   B: "#tfc:rock/bricks",
   K: "#forge:dyes/black",
   W: "#forge:dyes/white"
 })
-shaped("thoriumreactors:warning_block_lined_white_black_left", ["BWB", "KBW", "BKB"], {
+shaped("5x thoriumreactors:warning_block_lined_white_black_left", ["BWB", "KBW", "BKB"], {
   B: "#tfc:rock/bricks",
   K: "#forge:dyes/black",
   W: "#forge:dyes/white"
