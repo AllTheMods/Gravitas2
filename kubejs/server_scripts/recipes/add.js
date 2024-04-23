@@ -33,6 +33,23 @@ const fish =[
   "tfc:food/smallmouth_bass",
   "tfc:food/tropical_fish"
 ]
+
+const ores =[
+  "hematite",
+  "cassiterite",
+  "garnierite",
+  "malachite",
+  "magnetite",
+  "sphalerite",
+  "tetrahedrite"
+]
+
+const natores =[
+  "silver",
+  "copper",
+  "gold"
+]
+
 const tfcStone = [
   "granite",
   "diorite",
@@ -663,9 +680,17 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   shaped('computercraft:computer_normal', ['sps', 'scs', 'OPO'], {
     O: 'gtceu:iron_plate',
     s: '#forge:plates/copper',
-    c: 'gtceu:basic_electronic_circuit',
+    c: '#gtceu:circuits/lv',
     p: 'gtceu:resin_printed_circuit_board',
-    P: '#forge:glass_panes'
+    P: 'gtceu:glass_plate'
+  })
+
+  shaped('computercraft:computer_advanced', ['sps', 'scs', 'OPO'], {
+    O: 'gtceu:steel_plate',
+    s: '#forge:plates/gold',
+    c: '#gtceu:circuits/mv',
+    p: 'gtceu:phenolic_printed_circuit_board',
+    P: 'gtceu:glass_plate'
   })
   
   event.shapeless("computercraft:wireless_modem_normal",[
@@ -1742,6 +1767,148 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
         E: "create:electron_tube",
         T: "minecraft:redstone_torch",
     })
+
+  //tfc ore conversion
+
+    ores.forEach(ores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_rich_${ores}`)
+      .itemInputs(`3x tfc:ore/rich_${ores}`)
+      .itemOutputs(`gtceu:crushed_${ores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+    ores.forEach(ores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_${ores}`)
+      .itemInputs(`4x tfc:ore/normal_${ores}`)
+      .itemOutputs(`gtceu:crushed_${ores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+    ores.forEach(ores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_${ores}`)
+      .itemInputs(`6x tfc:ore/poor_${ores}`)
+      .itemOutputs(`gtceu:crushed_${ores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+    ores.forEach(ores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_${ores}`)
+      .itemInputs(`9x tfc:ore/small_${ores}`)
+      .itemOutputs(`gtceu:crushed_${ores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+  //tfc ore conversion native
+
+    natores.forEach(natores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_rich_${natores}`)
+      .itemInputs(`3x tfc:ore/rich_native_${natores}`)
+      .itemOutputs(`gtceu:crushed_${natores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+    natores.forEach(natores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_${natores}`)
+      .itemInputs(`4x tfc:ore/normal_native_${natores}`)
+      .itemOutputs(`gtceu:crushed_${natores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+    natores.forEach(natores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_${natores}`)
+      .itemInputs(`6x tfc:ore/poor_native_${natores}`)
+      .itemOutputs(`gtceu:crushed_${natores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+    natores.forEach(natores => {
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_${natores}`)
+      .itemInputs(`9x tfc:ore/small_native_${natores}`)
+      .itemOutputs(`gtceu:crushed_${natores}_ore`)
+      .duration(40)
+      .EUt(HV)
+    })
+
+  //tfc ore conversion misc
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_rich_chromite`)
+      .itemInputs(`3x firmalife:ore/rich_chromite`)
+      .itemOutputs(`gtceu:crushed_chromite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_chromite`)
+      .itemInputs(`4x firmalife:ore/normal_chromite`)
+      .itemOutputs(`gtceu:crushed_chromite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_chromite`)
+      .itemInputs(`6x firmalife:ore/poor_chromite`)
+      .itemOutputs(`gtceu:crushed_chromite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_chromite`)
+      .itemInputs(`9x firmalife:ore/small_chromite`)
+      .itemOutputs(`gtceu:crushed_chromite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_rich_limonite`)
+      .itemInputs(`3x tfc:ore/rich_limonite`)
+      .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_limonite`)
+      .itemInputs(`4x tfc:ore/normal_limonite`)
+      .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_limonite`)
+      .itemInputs(`6x tfc:ore/poor_limonite`)
+      .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_limonite`)
+      .itemInputs(`9x tfc:ore/small_limonite`)
+      .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_bismuth_rich`)
+      .itemInputs(`3x tfc:ore/rich_bismuthinite`)
+      .itemOutputs(`gtceu:bismuth_dust`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_bismuth_normal`)
+      .itemInputs(`4x tfc:ore/normal_bismuthinite`)
+      .itemOutputs(`gtceu:bismuth_dust`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_bismuth_poor`)
+      .itemInputs(`6x tfc:ore/poor_bismuthinite`)
+      .itemOutputs(`gtceu:bismuth_dust`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_bismuth_small`)
+      .itemInputs(`9x tfc:ore/small_bismuthinite`)
+      .itemOutputs(`gtceu:bismuth_dust`)
+      .duration(40)
+      .EUt(HV)
     
 	//Liquid Chorus
 	
@@ -1760,12 +1927,5 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
     )
     .duration(50)
     .EUt(HV)
-    
-    
-    // Straw Hat
-    shaped("tfcambiental:straw_hat", ["TTT", "T T", "   "],
-      {
-          T: "tfc:straw"
-      })
-  
+
 }
