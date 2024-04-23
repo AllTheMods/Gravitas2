@@ -380,6 +380,26 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   
   event.remove({ id: 'thoriumreactors:thorium_crafting/water_source_block'})
   
-  //Straw Hat
+  //jumbo furnace
+
+  event.remove({ type: "jumbofurnace:jumbo_furnace" })
+  event.remove({ id: 'jumbofurnace:jumbo_furnace'})
+
+  //wireless redstone
+
+  event.remove({ id: 'wirelessredstone:remote'}) 
+  event.remove({ id: 'wirelessredstone:circuit'}) 
+  event.remove({ id: 'wirelessredstone:frequency_tool'}) 
+  event.remove({ id: 'wirelessredstone:frequency_sniffer'}) 
+  event.remove({ id: 'wirelessredstone:redstone_receiver'}) 
+  event.remove({ id: 'wirelessredstone:redstone_transmitter'}) 
+
+  //more red
+
+  event.remove({ id: 'morered:red_alloy_wire'}) 
+  event.remove({ type: 'morered:soldering'})
+  event.remove({ id: 'morered:soldering_table'})
+
+  //straw hat
   event.remove({ id: 'tfcambiental:crafting/straw_hat'})
 }

@@ -246,4 +246,11 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "expatternprovider:water_cell"}, "minecraft:water_bucket", "gtceu:lv_super_tank")
   event.replaceInput({ id: "expatternprovider:water_cell"}, "ae2:cell_component_16k", "ae2:cell_component_64k")
 
+  event.replaceInput({ id: "createdieselgenerators:crafting/canister"}, "minecraft:barrel", "#tfc:barrels")
+  event.replaceInput({ id: "createdieselgenerators:crafting/oil_barrel"}, "minecraft:barrel", "#tfc:barrels")
+
+  //more red
+
+  event.replaceInput({ mod: "morered"}, "morered:red_alloy_ingot", "gtceu:red_alloy_ingot")
+
 }
