@@ -399,4 +399,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'morered:red_alloy_wire'}) 
   event.remove({ type: 'morered:soldering'})
   event.remove({ id: 'morered:soldering_table'})
+
+  //straw hat
+  event.remove({ id: 'tfcambiental:crafting/straw_hat'})
 }
