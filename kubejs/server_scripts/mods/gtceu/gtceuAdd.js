@@ -839,6 +839,88 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('tfc:jute_net')
             .EUt(LV)
             .duration(100)
-		
 
+        //wireless redstone
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_circuit')
+            .itemInputs(
+                '4x gtceu:gold_plate',
+                '4x gtceu:glowstone_plate',
+                '4x ae2:fluix_pearl',
+                '#gtceu:circuits/mv'
+                )
+            .inputFluids(Fluid.of('gtceu:red_alloy',144))
+            .itemOutputs('wirelessredstone:circuit')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_remote')
+            .itemInputs(
+                '4x gtceu:iron_plate',
+                '4x gtceu:redstone_plate',
+                'wirelessredstone:circuit',
+                'create:linked_controller',
+                '4x ae2:fluix_pearl'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelessredstone:remote')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_frequency_sniffer')
+            .itemInputs(
+                '4x gtceu:silver_plate',
+                '4x gtceu:redstone_plate',
+                'wirelessredstone:circuit',
+                'create:linked_controller',
+                '4x ae2:fluix_pearl'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelessredstone:frequency_sniffer')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_frequency_tool')
+            .itemInputs(
+                '4x gtceu:tin_plate',
+                '4x gtceu:redstone_plate',
+                'wirelessredstone:circuit',
+                'create:linked_controller',
+                '4x ae2:fluix_pearl'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelessredstone:frequency_tool')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_receiver')
+            .itemInputs(
+                '8x gtceu:iron_plate',
+                '4x gtceu:redstone_plate',
+                '2x wirelessredstone:circuit',
+                'create:redstone_link'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('wirelessredstone:redstone_receiver')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_transmitter')
+            .itemInputs(
+                '8x gtceu:iron_plate',
+                '4x gtceu:glowstone_plate',
+                '2x wirelessredstone:circuit',
+                'create:redstone_link'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('wirelessredstone:redstone_transmitter')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.wiremill('gregitas:morered_wire')
+            .circuit(3)
+            .itemInputs('gtceu:red_alloy_ingot')
+            .itemOutputs('4x morered:red_alloy_wire')
+            .duration(40)
+            .EUt(ULV)
 }
