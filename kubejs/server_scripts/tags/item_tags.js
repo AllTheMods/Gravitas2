@@ -258,8 +258,14 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:chipped_coke_gem", "gtceu:flawed_coke_gem", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
   event.add("tfc:blast_furnace_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
-
+  
   event.add("forge:dusts/sulfur", "tfc:powder/sulfur")
+  
+  event.remove("forge:dusts/salt", "railcraft:saltpeter_dust")
+  event.add("forge:dusts/salt", "tfc:powder/salt")
+  event.add("forge:dusts/saltpeter", "tfc:powder/saltpeter")
+  event.add("forge:dusts/saltpeter", "railcraft:saltpeter_dust")
+  
   event.remove("forge:ingots/iron", "tfc:metal/ingot/wrought_iron")
   event.remove("forge:ingots/cast_iron", "minecraft:iron_ingot")
 

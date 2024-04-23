@@ -15,7 +15,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     tag: 'tfc:foods/dough'}
                 },
                 {
-                    item: 'tfc:powder/salt'
+                    tag: 'forge:dusts/salt'
                 },
                 {
                     item: 'firmalife:spice/basil_leaves'
@@ -103,7 +103,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     amount: 1000
                 },
                 {
-                    item: 'tfc:powder/salt'
+                    tag: 'forge:dusts/salt'
                 },
             ],
             results: [
@@ -159,7 +159,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     tag: 'firmalife:feeds_yeast'}
                 },
                 {
-                    item: 'tfc:powder/salt'
+                    tag: 'forge:dusts/salt'
                 },
             ],
             results: [
