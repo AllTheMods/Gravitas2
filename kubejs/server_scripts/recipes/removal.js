@@ -175,7 +175,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:diorite_from_stone_types_diorite_stonecutting"})
   event.remove({ id: "create:andesite_from_stone_types_andesite_stonecutting"})
   event.remove({ id: "create:calcite_from_stone_types_calcite_stonecutting"})
-  event.remove({ id: "create:dripstone_block_stone_types_dripstone_stonecutting"})
+  event.remove({ id: "create:milling/dripstone_block"})
+  event.remove({ id: "create:milling/calcite"})
+  event.remove({ id: "create:compacting/diorite_from_flint"})
   event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
   event.remove({ id: "vintageimprovements:crushing/scoria"})
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
@@ -401,5 +403,21 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'morered:soldering_table'})
 
   //straw hat
+
   event.remove({ id: 'tfcambiental:crafting/straw_hat'})
+
+  //honey
+
+  event.remove({ id: 'vintageimprovements:centrifugation/honey_comb'})
+  event.remove({ id: 'minecraft:honey_bottle'})
+
+  //apotheosis
+
+  event.remove({ id: 'apotheosis:enchanting/xp_bottle'})  
+  event.remove({ id: 'apotheosis:enchanting/xp_bottle_2'})  
+  event.remove({ id: 'apotheosis:enchanting/xp_bottle_3'})  
+
+  //dripstone
+
+  event.remove({ id: 'minecraft:dripstone_block'}) 
 }

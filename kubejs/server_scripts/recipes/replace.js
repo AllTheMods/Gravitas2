@@ -164,6 +164,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Firebricks/Cokebricks etc
   event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
+  event.replaceInput({ id: "firmalife:crafting/vat"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
+  event.replaceInput({ id: "firmalife:crafting/jarring_station"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
 
   //IE
   event.replaceInput({ mod: "immersiveengineering"}, "immersiveengineering:hemp_fiber", "tfc:jute_fiber")
@@ -203,6 +205,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "computercraft"}, "minecraft:redstone", "gtceu:basic_electronic_circuit")
 
   event.replaceInput({ mod: "immersiveengineering"}, "#forge:rods/aluminum", "gtceu:aluminium_rod")
+
+//createdeco
+
   event.replaceInput({ mod: "createdeco"}, "minecraft:copper_ingot", "#forge:ingots/copper")
   event.replaceInput({ mod: "createdeco"}, "create:brass_ingot", "#forge:ingots/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_ingot", "#forge:ingots/zinc")
@@ -227,12 +232,21 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "createdeco"}, "create:brass_block", "#forge:storage_blocks/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_block", "#forge:storage_blocks/zinc")
   
+//honey
+
   event.replaceInput({}, "minecraft:honeycomb", "firmalife:beeswax")
   event.replaceInput({}, "minecraft:honey_bottle", "firmalife:jar/honey")
-  
+  event.replaceOutput({ id: "create:emptying/honey_bottle"}, "minecraft:glass_bottle", "tfc:empty_jar")
+  event.replaceInput({ id: "create:filling/honey_bottle"}, "minecraft:glass_bottle", "tfc:empty_jar")
+  event.replaceOutput({ id: "create:filling/honey_bottle"}, "minecraft:honey_bottle", "firmalife:jar/honey")
+
+//integrated dynamics
+
   event.replaceInput({ id: "integratedtunnels:crafting/part_exporter_world_block"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
   event.replaceInput({ id: "integratedtunnels:crafting/part_importer_world_block"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
   
+//mining gadgets
+
   event.replaceInput({ id: "mininggadgets:upgrade_size_1"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
   event.replaceInput({ id: "mininggadgets:upgrade_size_1"}, "minecraft:ender_pearl", "#gtceu:circuits/lv")
   event.replaceInput({ id: "mininggadgets:upgrade_size_2"}, "minecraft:netherite_pickaxe", "tfc:metal/pickaxe/blue_steel")
@@ -240,16 +254,22 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "mininggadgets:upgrade_size_3"}, "minecraft:netherite_pickaxe", "tfc:metal/pickaxe/red_steel")
   event.replaceInput({ id: "mininggadgets:upgrade_size_3"}, "minecraft:ender_pearl", "#gtceu:circuits/hv")
   
+//railcraft
+
   event.replaceInput({ id: "railcraft:track_relayer"}, "minecraft:diamond_pickaxe", "tfc:metal/pickaxe/black_steel")
   
+//expatternprovider
+
   event.replaceInput({ id: "expatternprovider:water_cell"}, "#forge:gems/diamond", "gtceu:infinite_water_cover")
   event.replaceInput({ id: "expatternprovider:water_cell"}, "minecraft:water_bucket", "gtceu:lv_super_tank")
   event.replaceInput({ id: "expatternprovider:water_cell"}, "ae2:cell_component_16k", "ae2:cell_component_64k")
 
+//create diesel
+
   event.replaceInput({ id: "createdieselgenerators:crafting/canister"}, "minecraft:barrel", "#tfc:barrels")
   event.replaceInput({ id: "createdieselgenerators:crafting/oil_barrel"}, "minecraft:barrel", "#tfc:barrels")
 
-  //more red
+//more red
 
   event.replaceInput({ mod: "morered"}, "morered:red_alloy_ingot", "gtceu:red_alloy_ingot")
 

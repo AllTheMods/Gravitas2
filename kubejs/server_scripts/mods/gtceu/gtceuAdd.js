@@ -923,4 +923,21 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('4x morered:red_alloy_wire')
             .duration(40)
             .EUt(ULV)
+         
+    //honey
+
+        event.recipes.gtceu.centrifuge('gregitas:centrifuge_honey')
+            .itemInputs('firmalife:raw_honey')
+            .outputFluids(Fluid.of('create:honey', 100))
+            .duration(40)
+            .EUt(ULV)
+
+    //firmalife misc
+
+        event.recipes.gtceu.extruder("gregitas:brass_mechanism_extruder")
+            .itemInputs('#forge:ingots/brass')
+            .notConsumable('gtceu:small_gear_extruder_mold')
+            .itemOutputs('2x tfc:brass_mechanisms')
+            .duration(100)
+            .EUt(ULV)
 }

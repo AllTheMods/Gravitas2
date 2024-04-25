@@ -50,6 +50,81 @@ const natores =[
   "gold"
 ]
 
+const createstone = [
+  "veridium",
+  "asurine",
+  "crimsite",
+  "ochrum"
+
+]
+
+const createstonec = [
+  "scoria",
+  "scorchia"
+
+]
+
+const createstoneh = [
+  "limestone"
+
+]
+
+const createstonecut = [
+  "granite",
+  "diorite",
+  "andesite"
+
+]
+
+const createstonevanilla= [
+  "tuff",
+  "calcite"
+]
+
+const jams = [
+  "blackberry",
+  "blueberry",
+  "bunchberry",
+  "cloudberry",
+  "cranberry",
+  "elderberry",
+  "gooseberry",
+  "raspberry",
+  "snowberry",
+  "strawberry",
+  "wintergreen_berry",
+  "banana",
+  "cherry",
+  "green_apple",
+  "lemon",
+  "olive",
+  "orange",
+  "peach",
+  "plum",
+  "red_apple",
+  "pumpkin_chunks",
+  "melon_slice"
+]
+
+const dyes = [
+  "white",
+  "light_gray",
+  "gray",
+  "black",
+  "brown",
+  "orange",
+  "red",
+  "yellow",
+  "green",
+  "lime",
+  "blue",
+  "light_blue",
+  "pink",
+  "magenta",
+  "purple",
+  "cyan"
+]
+
 const tfcStone = [
   "granite",
   "diorite",
@@ -1749,15 +1824,30 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
         R: "tfc:rock/raw/diorite",		
     })
 	 
-   event.recipes.kubejs.shaped("2x create:cut_calcite" , ["PPP", "PRP","PPP"], {
+   event.recipes.kubejs.shaped("2x minecraft:calcite" , ["PPP", "PRP","PPP"], {
         P: "gtceu:stone_dust",
         R: "tfc:rock/raw/marble",		
     })
 	 
-   event.recipes.kubejs.shaped("2x create:cut_dripstone" , ["PPP", "PRP","PPP"], {
+   event.recipes.kubejs.shaped("2x minecraft:dripstone_block" , ["PPP", "PRP","PPP"], {
         P: "gtceu:stone_dust",
         R: "tfc:rock/raw/claystone",		
     })
+
+  //honey
+
+    event.shapeless('4x firmalife:jar/honey', [
+      'minecraft:honey_block',
+      "4x tfc:empty_jar"
+    ])
+
+     event.recipes.kubejs.shaped("apotheosis:beeshelf" , ["PTP", "ERE","PTP"], {
+        P: "firmalife:beeswax",
+        R: "#forge:bookshelves",   
+        E: "minecraft:honey_block",  
+        T: "minecraft:beehive",   
+    })
+
 	//Create Redstone
 	 
    event.recipes.kubejs.shaped("create_connected:sequenced_pulse_generator" , ["EC ", "ERT","PPP"], {
@@ -1836,6 +1926,70 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
       .EUt(HV)
     })
 
+  //tfc jams
+
+    jams.forEach(jams => {
+      event.recipes.gtceu.mixer(`gregitas:mixer_jam_${jams}`)
+      .itemInputs(`4x tfc:empty_jar_with_lid`)
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": `tfc:food/${jams}`}
+              },4))
+      .itemInputs(`#firmalife:sweetener`)
+      .inputFluids(Fluid.of('minecraft:water', 500))
+      .itemOutputs(`4x tfc:jar/${jams}`)
+      .duration(40)
+      .EUt(LV)
+   })
+
+  //tfc liquid dyes
+
+    dyes.forEach(dyes => {
+      event.recipes.gtceu.mixer(`gregitas:mixer_tfc_${dyes}_dye`)
+      .itemInputs(`minecraft:${dyes}_dye`)
+      .inputFluids(Fluid.of('minecraft:water', 1000))
+      .outputFluids(Fluid.of(`tfc:${dyes}_dye`, 1000))
+      .duration(100)
+      .EUt(LV)
+   })
+
+  //alabaster
+
+    dyes.forEach(dyes => {
+      event.recipes.gtceu.mixer(`gregitas:mixer_tfc_${dyes}_alabaster`)
+      .itemInputs(`tfc:alabaster/raw`)
+      .inputFluids(Fluid.of(`tfc:${dyes}_dye`, 25))
+      .itemOutputs(`tfc:alabaster/raw/${dyes}`)
+      .duration(40)
+      .EUt(LV)
+   })
+
+    dyes.forEach(dyes => {
+      event.recipes.gtceu.mixer(`gregitas:mixer_tfc_${dyes}_alabaster_bricks`)
+      .itemInputs(`tfc:alabaster/bricks`)
+      .inputFluids(Fluid.of(`tfc:${dyes}_dye`, 25))
+      .itemOutputs(`tfc:alabaster/bricks/${dyes}`)
+      .duration(40)
+      .EUt(LV)
+   })
+
+      event.recipes.gtceu.mixer(`gregitas:mixer_tfc_alabaster`)
+      .itemInputs(`tfc:ore/gypsum`)
+      .inputFluids(Fluid.of(`tfc:limewater`, 100))
+      .itemOutputs(`tfc:alabaster/raw`)
+      .duration(20)
+      .EUt(LV)
+
+    dyes.forEach(dyes => {
+      event.recipes.gtceu.mixer(`gregitas:mixer_tfc_${dyes}_alabaster_polished`)
+      .itemInputs(`tfc:alabaster/polished`)
+      .inputFluids(Fluid.of(`tfc:${dyes}_dye`, 25))
+      .itemOutputs(`tfc:alabaster/polished/${dyes}`)
+      .duration(40)
+      .EUt(LV)
+   })
+
   //tfc ore conversion misc
 
     event.recipes.gtceu.compressor(`gregitas:conversion_rich_chromite`)
@@ -1909,7 +2063,83 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
       .itemOutputs(`gtceu:bismuth_dust`)
       .duration(40)
       .EUt(HV)
-    
+
+  //create stones
+
+  createstone.forEach((createstone) => {
+    event.recipes.gtceu
+      .rock_breaker(`raw_${createstone}`)
+      .notConsumable(`create:${createstone}`)
+      .itemOutputs(`create:${createstone}`)
+      .duration(16)
+      .EUt(MV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+      .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+  createstonec.forEach((createstonec) => {
+    event.recipes.gtceu
+      .rock_breaker(`raw_${createstonec}`)
+      .notConsumable(`create:${createstonec}`)
+      .itemOutputs(`create:${createstonec}`)
+      .duration(16)
+      .EUt(MV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "firmalife:chocolate")
+      .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+  createstoneh.forEach((createstoneh) => {
+    event.recipes.gtceu
+      .rock_breaker(`raw_${createstoneh}`)
+      .notConsumable(`create:${createstoneh}`)
+      .itemOutputs(`create:${createstoneh}`)
+      .duration(16)
+      .EUt(MV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "create:honey")
+      .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+  createstoneh.forEach((createstoneh) => {
+    event.recipes.gtceu
+      .rock_breaker(`minecraft:dripstone_block`)
+      .notConsumable(`minecraft:dripstone_block`)
+      .itemOutputs(`minecraft:dripstone_block`)  
+      .duration(16)
+      .EUt(MV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+      .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+  createstonecut.forEach((createstonecut) => {
+    event.recipes.gtceu
+      .rock_breaker(`cut_${createstonecut}`)
+      .notConsumable(`create:cut_${createstonecut}`)
+      .itemOutputs(`create:cut_${createstonecut}`)
+      .duration(16)
+      .EUt(MV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+      .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+  createstonevanilla.forEach((createstonevanilla) => {
+    event.recipes.gtceu
+      .rock_breaker(`raw_${createstonevanilla}`)
+      .notConsumable(`minecraft:${createstonevanilla}`)
+      .itemOutputs(`minecraft:${createstonevanilla}`)
+      .duration(16)
+      .EUt(MV)
+      ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+      ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+      .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+
+
 	//Liquid Chorus
 	
 	event.recipes.gtceu.mixer('liquid_chorus')
@@ -1927,8 +2157,9 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
     )
     .duration(50)
     .EUt(HV)
-
-    // Straw Hat
+	
+	 //straw hat
+	 
     shaped("tfcambiental:straw_hat", ["TTT", "T T", "   "],
       {
           T: "tfc:straw"
