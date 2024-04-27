@@ -751,6 +751,17 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     .duration(200)
                     .EUt(cell.voltage)
 
+                event.recipes.gtceu.canner(`gregitas:${cell.tier}_deep_drive`)
+                    .itemInputs(
+                        'ae2things:disk_housing',
+                        `ae2:cell_component_${cell.tier}`
+                    )
+                    .itemOutputs(
+                        `ae2things:disk_drive_${cell.tier}`
+                    )
+                    .duration(200)
+                    .EUt(cell.voltage)
+
                 event.remove(
                     [
                         {
@@ -773,6 +784,15 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                         },
                         {
                             id: `ae2:network/crafting/${cell.tier}_cpu_crafting_storage`
+                        },
+                        {
+                            id: `ae2things:cells/disk_drive_${cell.tier}_storage`
+                        },
+                        {
+                            id: `ae2things:cells/disk_drive_${cell.tier}`
+                        },
+                        {
+                            id: `ae2things:cells/disk_housing`
                         }
                     ]
                 )
@@ -1461,7 +1481,11 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 				
                 {
                     id: 'expatternprovider:wireless_tool'
-                }
+                },
+
+                {
+                    id: 'ae2wtlib:quantum_bridge_card'
+                },
             ]
         )
 
@@ -1635,10 +1659,64 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:wireless_receiver'
             )
             .inputFluids(
-                Fluid.of('gtceu:soldering_alloy', 244)
+                Fluid.of('gtceu:soldering_alloy', 288)
             )
             .itemOutputs(
                 'expatternprovider:wireless_tool'
+            )
+            .duration(200)
+            .EUt(IV)
+
+        event.recipes.gtceu.assembler('gregitas:quantum_link')
+            .circuit(1)
+            .itemInputs(
+                '4x gtceu:ev_machine_hull',
+                '32x ae2:quartz_vibrant_glass',
+                '2x #gtceu:circuits/luv',
+                'gtceu:iv_field_generator',
+                'ae2:singularity'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 1152)
+            )
+            .itemOutputs(
+                '2x ae2:quantum_link'
+            )
+            .duration(200)
+            .EUt(IV)
+
+        event.recipes.gtceu.assembler('gregitas:quantum_ring')
+            .circuit(2)
+            .itemInputs(
+                'megacells:mega_energy_cell',
+                '2x expatternprovider:wireless_connect',
+                '4x #gtceu:circuits/luv',
+                '64x gtceu:hpic_chip',
+                '2x gtceu:iv_field_generator',
+                'ae2:singularity'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 1152)
+            )
+            .itemOutputs(
+                '16x ae2:quantum_ring'
+            )
+            .duration(200)
+            .EUt(IV)
+
+        event.recipes.gtceu.assembler('gregitas:quantum_bridge_card')
+            .itemInputs(
+                '16x ae2:quantum_ring',
+                '2x ae2:quantum_link',
+                '4x #gtceu:circuits/luv',
+                '2x gtceu:iv_field_generator',
+                'ae2:singularity'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 576)
+            )
+            .itemOutputs(
+                'ae2wtlib:quantum_bridge_card'
             )
             .duration(200)
             .EUt(IV)
@@ -2517,17 +2595,31 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                         {
                             id: `megacells:crafting/${cell.tier}_crafting_storage`
                         }
+
                     ]
                 )
             })
+
+    //ae2things housing
+
+    event.recipes.gtceu.assembler('gregitas:deep_drive_housing')
+    .itemInputs(
+                '2x ae2:item_cell_housing',
+                'gtceu:lv_field_generator'
+    )
+    .inputFluids(
+        Fluid.of('gtceu:soldering_alloy',288)
+    )
+    .itemOutputs(
+        '2x ae2things:disk_housing'
+    )
+    .duration(200)
+    .EUt(MV)
 				
     //Generic Remove
         
         event.remove(
             [
-                {
-                    mod: 'ae2things'
-                },
                 {
                     mod: 'aeinfinitybooster'
                 },
