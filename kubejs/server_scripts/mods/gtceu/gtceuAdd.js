@@ -940,4 +940,18 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('2x tfc:brass_mechanisms')
             .duration(100)
             .EUt(ULV)
+
+    //integrated omni
+
+        event.recipes.gtceu.assembler('gregitas:omni_directional')
+            .itemInputs(
+                '16x ae2:quantum_ring',
+                '2x ae2:quantum_link',
+                'ae2wtlib:quantum_bridge_card',
+                '32x integrateddynamics:logic_director'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('2x integrateddynamics:part_connector_omni_directional')
+            .duration(200)
+            .EUt(IV)
 }
