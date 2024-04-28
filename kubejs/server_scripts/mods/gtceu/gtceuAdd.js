@@ -998,5 +998,23 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
             .itemOutputs('6x gcyr:potassium_carbonate_dust')
             .duration(40)
+            .EUt(HV)
+
+        event.recipes.gtceu.chemical_reactor('gregitas:potassium_carbonate_potash')
+            .itemInputs('3x gtceu:potash_dust')
+            .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
+            .itemOutputs('6x gcyr:potassium_carbonate_dust')
+            .duration(40)
             .EUt(LV)
+
+    //stuff
+
+        event.recipes.gtceu.electrolyzer('gregitas:sodium_hydroxide')
+            .itemInputs('gtceu:sodium_dust')
+            .inputFluids(Fluid.of('minecraft:water',1000))
+            .outputFluids(Fluid.of('gtceu:hydrogen', 500))
+            .itemOutputs('3x gtceu:sodium_hydroxide_dust')
+            .duration(720)
+            .EUt(LV)
+
 }
