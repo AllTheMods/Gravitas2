@@ -1023,5 +1023,33 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('7x gtceu:sodium_bisulfate_dust')
             .duration(60)
             .EUt(LV)
+      
+    //wool
+
+        event.recipes.gtceu.compressor('gregitas:silk_cloth_from_string')
+            .itemInputs('32x minecraft:string')
+            .itemOutputs('4x tfc:silk_cloth')
+            .duration(100)
+            .EUt(HV)
+
+        event.recipes.gtceu.forming_press('gregitas:wool_from_silk_cloth')
+            .notConsumable('gtceu:block_extruder_mold')
+            .itemInputs('4x tfc:silk_cloth')
+            .itemOutputs('minecraft:white_wool')
+            .duration(100)
+            .EUt(HV)
+
+        event.recipes.gtceu.compressor('gregitas:wool_cloth_from_yarn')
+            .itemInputs('32x tfc:wool_yarn')
+            .itemOutputs('4x tfc:wool_cloth')
+            .duration(100)
+            .EUt(HV)
+
+        event.recipes.gtceu.forming_press('gregitas:wool_from_wool_cloth')
+            .notConsumable('gtceu:block_extruder_mold')
+            .itemInputs('4x tfc:wool_cloth')
+            .itemOutputs('2x minecraft:white_wool')
+            .duration(100)
+            .EUt(HV)
 
 }
