@@ -1012,7 +1012,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.chemical_reactor('gregitas:sodium_hydroxide')
             .itemInputs('gtceu:sodium_dust')
             .inputFluids(Fluid.of('minecraft:water',1000))
-            .outputFluids(Fluid.of('gtceu:hydrogen', 500))
+            .outputFluids(Fluid.of('gtceu:hydrogen', 1000))
             .itemOutputs('3x gtceu:sodium_hydroxide_dust')
             .duration(200)
             .EUt(LV)
