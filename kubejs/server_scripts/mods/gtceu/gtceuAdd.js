@@ -1017,4 +1017,11 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(200)
             .EUt(LV)
 
+        event.recipes.gtceu.chemical_reactor('gregitas:sodium_bisulfate')
+            .itemInputs('gtceu:sodium_dust')
+            .inputFluids(Fluid.of('gtceu:sulfuric_acid',1000))
+            .itemOutputs('7x gtceu:sodium_bisulfate_dust')
+            .duration(60)
+            .EUt(LV)
+
 }
