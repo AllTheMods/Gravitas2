@@ -954,4 +954,49 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('2x integrateddynamics:part_connector_omni_directional')
             .duration(200)
             .EUt(IV)
+
+    //temporary rocket related recipes until there are proper ones
+
+        event.recipes.gtceu.assembler('gregitas:advanced_fuel_tank')
+            .itemInputs(
+                '4x gcyr:basic_fuel_tank',
+                'gtceu:tungsten_steel_frame',
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('gcyr:advanced_fuel_tank')
+            .duration(200)
+            .EUt(EV)
+
+        event.recipes.gtceu.assembler('gregitas:advanced_rocket_motor')
+            .itemInputs(
+                '4x gcyr:basic_rocket_motor',
+                'gtceu:tungsten_steel_frame',
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('gcyr:advanced_rocket_motor')
+            .duration(200)
+            .EUt(EV)
+
+        event.recipes.gtceu.fluid_heater('gregitas:salt_water_evaporate')
+            .inputFluids(Fluid.of(`gtceu:salt_water`, 16000))
+            .outputFluids(Fluid.of('gcyr:raw_brine', 1000))
+            .duration(1000)
+            .EUt(HV)
+
+        event.recipes.gtceu.centrifuge('gregitas:brine_seperation')
+            .inputFluids(Fluid.of('gcyr:raw_brine',1000))
+            .itemOutputs('20x gtceu:salt_dust')
+            .itemOutputs('3x gtceu:magnesium_dust')
+            .itemOutputs('2x gtceu:lithium_dust')
+            .outputFluids(Fluid.of('gtceu:bromine', 33))
+            .duration(200)
+            .EUt(HV)
+
+        event.recipes.gtceu.chemical_reactor('gregitas:potassium_carbonate')
+            .itemInputs('2x gtceu:potassium_dust')
+            .inputFluids(Fluid.of('gtceu:oxygen',1000))
+            .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
+            .itemOutputs('6x gcyr:potassium_carbonate_dust')
+            .duration(40)
+            .EUt(LV)
 }
