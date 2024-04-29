@@ -6,6 +6,66 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
+                    fluid: 'minecraft:water',
+                    nbt: {},
+                    amount: 1000
+                },
+                {
+                    item: 'tfc:olive_paste'
+                },
+                {
+                    item: 'tfc:olive_paste'
+                },
+                {
+                    item: 'tfc:olive_paste'
+                },
+                {
+                    item: 'tfc:olive_paste'
+                },
+                {
+                    item: 'tfc:olive_paste'
+                },
+            ],
+            results: [
+                {
+                    fluid: 'tfc:olive_oil_water',
+                    nbt: {},
+                    amount: 1000
+                },
+            ],
+            heatRequirement: "heated",
+        }
+    )
+    event.custom(
+        {
+            type: 'create:mixing',
+            ingredients: [
+                {
+                    fluid: 'tfc:olive_oil_water',
+                    nbt: {},
+                    amount: 250
+                },
+                {
+                    item: 'tfc:jute_net'
+                },
+            ],
+            results: [
+                {
+                    fluid: 'tfc:olive_oil',
+                    nbt: {},
+                    amount: 50
+                },
+                {
+                    item: 'tfc:dirty_jute_net'
+                },
+            ],
+        }
+    )
+    event.custom(
+        {
+            type: 'create:mixing',
+            ingredients: [
+                {
                     fluid: 'tfc:olive_oil',
                     nbt: {},
                     amount: 1000
@@ -15,7 +75,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     tag: 'tfc:foods/dough'}
                 },
                 {
-                    item: 'tfc:powder/salt'
+                    tag: 'forge:dusts/salt'
                 },
                 {
                     item: 'firmalife:spice/basil_leaves'
@@ -103,7 +163,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     amount: 1000
                 },
                 {
-                    item: 'tfc:powder/salt'
+                    tag: 'forge:dusts/salt'
                 },
             ],
             results: [
@@ -159,7 +219,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
                     tag: 'firmalife:feeds_yeast'}
                 },
                 {
-                    item: 'tfc:powder/salt'
+                    tag: 'forge:dusts/salt'
                 },
             ],
             results: [

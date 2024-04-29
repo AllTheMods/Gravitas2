@@ -751,6 +751,17 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                     .duration(200)
                     .EUt(cell.voltage)
 
+                event.recipes.gtceu.canner(`gregitas:${cell.tier}_deep_drive`)
+                    .itemInputs(
+                        'ae2things:disk_housing',
+                        `ae2:cell_component_${cell.tier}`
+                    )
+                    .itemOutputs(
+                        `ae2things:disk_drive_${cell.tier}`
+                    )
+                    .duration(200)
+                    .EUt(cell.voltage)
+
                 event.remove(
                     [
                         {
@@ -773,6 +784,15 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                         },
                         {
                             id: `ae2:network/crafting/${cell.tier}_cpu_crafting_storage`
+                        },
+                        {
+                            id: `ae2things:cells/disk_drive_${cell.tier}_storage`
+                        },
+                        {
+                            id: `ae2things:cells/disk_drive_${cell.tier}`
+                        },
+                        {
+                            id: `ae2things:cells/disk_housing`
                         }
                     ]
                 )
@@ -813,6 +833,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(MV)
 			
         event.recipes.gtceu.assembler('gregitas:extended_me_drive')
+			.circuit(1)
             .itemInputs(
                 'ae2:drive',
                 '4x gtceu:ultimet_plate',
@@ -827,6 +848,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
         event.recipes.gtceu.assembler('gregitas:extended_me_drive_upgrade')
+			.circuit(2)
             .itemInputs(
                 '4x gtceu:ultimet_plate',
                 '8x #ae2:smart_cable',
@@ -935,6 +957,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 		event.recipes.gtceu.assembler('gregitas:extended_provider')
+			.circuit(1)
             .itemInputs(
                 '2x ae2:pattern_provider',
                 '#gtceu:circuits/hv',
@@ -949,6 +972,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 			event.recipes.gtceu.assembler('gregitas:extended_provider_upgrade')
+			.circuit(2)
             .itemInputs(
                 'ae2:pattern_provider',
                 '#gtceu:circuits/hv',
@@ -1035,6 +1059,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 	    event.recipes.gtceu.assembler('gregitas:extended_interface')
+			.circuit(1)
             .itemInputs(
                 '2x ae2:interface',
                 '#gtceu:circuits/hv',
@@ -1049,6 +1074,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
             .EUt(EV)
 			
 	    event.recipes.gtceu.assembler('gregitas:extended_interface_upgrade')
+			.circuit(2)
             .itemInputs(
                 'ae2:interface',
                 '#gtceu:circuits/hv',
@@ -1455,7 +1481,11 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 				
                 {
                     id: 'expatternprovider:wireless_tool'
-                }
+                },
+
+                {
+                    id: 'ae2wtlib:quantum_bridge_card'
+                },
             ]
         )
 
@@ -1629,10 +1659,64 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 'ae2:wireless_receiver'
             )
             .inputFluids(
-                Fluid.of('gtceu:soldering_alloy', 244)
+                Fluid.of('gtceu:soldering_alloy', 288)
             )
             .itemOutputs(
                 'expatternprovider:wireless_tool'
+            )
+            .duration(200)
+            .EUt(IV)
+
+        event.recipes.gtceu.assembler('gregitas:quantum_link')
+            .circuit(1)
+            .itemInputs(
+                '4x gtceu:ev_machine_hull',
+                '32x ae2:quartz_vibrant_glass',
+                '2x #gtceu:circuits/luv',
+                'gtceu:iv_field_generator',
+                'ae2:singularity'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 1152)
+            )
+            .itemOutputs(
+                '2x ae2:quantum_link'
+            )
+            .duration(200)
+            .EUt(IV)
+
+        event.recipes.gtceu.assembler('gregitas:quantum_ring')
+            .circuit(2)
+            .itemInputs(
+                'megacells:mega_energy_cell',
+                '2x expatternprovider:wireless_connect',
+                '4x #gtceu:circuits/luv',
+                '64x gtceu:hpic_chip',
+                '2x gtceu:iv_field_generator',
+                'ae2:singularity'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 1152)
+            )
+            .itemOutputs(
+                '16x ae2:quantum_ring'
+            )
+            .duration(200)
+            .EUt(IV)
+
+        event.recipes.gtceu.assembler('gregitas:quantum_bridge_card')
+            .itemInputs(
+                '16x ae2:quantum_ring',
+                '2x ae2:quantum_link',
+                '4x #gtceu:circuits/luv',
+                '2x gtceu:iv_field_generator',
+                'ae2:singularity'
+            )
+            .inputFluids(
+                Fluid.of('gtceu:soldering_alloy', 576)
+            )
+            .itemOutputs(
+                'ae2wtlib:quantum_bridge_card'
             )
             .duration(200)
             .EUt(IV)
@@ -2069,6 +2153,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .EUt(EV)
 				
             event.recipes.gtceu.assembler('gregitas:extended_io_upgrade')
+			    .circuit(1)
                 .itemInputs(
                     '4x gtceu:ultimet_plate',
                     '4x ae2:annihilation_core',
@@ -2086,6 +2171,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .EUt(EV)
 				
             event.recipes.gtceu.assembler('gregitas:pattern_access_upgrade')
+				.circuit(1)
                 .itemInputs(
                     '3x ae2:logic_processor',
                     '#gtceu:circuits/hv',
@@ -2113,18 +2199,429 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(200)
                 .EUt(HV)
 				
+    //Mega Cells
+	
+        event.remove(
+            [
+                {
+                    id: 'megacells:transform/sky_steel_ingot'
+                },
+                {
+                    id: 'megacells:cells/mega_item_cell_housing'
+                },
+				
+                {
+                    id: 'megacells:cells/mega_fluid_cell_housing'
+                },
+                {
+                    id: 'megacells:inscriber/accumulation_processor_press'
+                },
+                {
+                    id: 'megacells:inscriber/accumulation_processor_press_extra'
+                },
+                {
+                    id: 'megacells:inscriber/accumulation_processor'
+                },
+                {
+                    id: 'megacells:cells/cell_component_1m'
+                },
+                {
+                    id: 'megacells:cells/cell_component_4m'
+                },
+                {
+                    id: 'megacells:cells/cell_component_16m'
+                },
+                {
+                    id: 'megacells:cells/cell_component_64m'
+                },
+                {
+                    id: 'megacells:cells/cell_component_256m'
+                },
+                {
+                    id: 'megacells:cells/standard/fluid_storage_cell_1m_with_housing'
+                },
+                {
+                    id: 'megacells:cells/standard/fluid_storage_cell_4m_with_housing'
+                },
+                {
+                    id: 'megacells:cells/standard/fluid_storage_cell_16m_with_housing'
+                },				
+                {
+                    id: 'megacells:cells/standard/fluid_storage_cell_64m_with_housing'
+                },				
+                {
+                    id: 'megacells:cells/standard/fluid_storage_cell_256m_with_housing'
+                },	
+                {
+                    id: 'megacells:cells/standard/item_storage_cell_1m_with_housing'
+                },
+                {
+                    id: 'megacells:cells/standard/item_storage_cell_4m_with_housing'
+                },
+                {
+                    id: 'megacells:cells/standard/item_storage_cell_16m_with_housing'
+                },				
+                {
+                    id: 'megacells:cells/standard/item_storage_cell_64m_with_housing'
+                },				
+                {
+                    id: 'megacells:cells/standard/item_storage_cell_256m_with_housing'
+                },					
+                {
+                    id: 'megacells:crafting/mega_energy_cell'
+                },
+				
+                {
+                    id: 'megacells:crafting/mega_crafting_unit'
+                },
+				
+                {
+                    id: 'megacells:crafting/bulk_cell_component'
+                },
+			
+                {
+                    id: 'megacells:cells/standard/bulk_item_cell'
+                },
+
+                {
+                    id: 'megacells:network/mega_pattern_provider'
+                },
+
+                {
+                    id: 'megacells:network/mega_pattern_provider_part'
+                },
+
+                {
+                    id: 'megacells:network/mega_interface'
+                },
+
+                {
+                    id: 'megacells:network/mega_interface_part'
+                },
+
+                {
+                    id: 'megacells:network/mega_pattern_provider_block'
+                },
+
+                {
+                    id: 'megacells:network/mega_interface_block'
+                }					
+            ]
+        )
+		
+    //Mega Cells EBF
+		
+    event.recipes.gtceu.electric_blast_furnace('sky_steel')
+    .itemInputs(
+              'gtceu:black_steel_ingot',
+              '4x ae2:sky_stone_block',
+              '4x ae2:charged_certus_quartz_crystal'
+
+    )
+    .inputFluids(Fluid.of('gtceu:neon',25))
+    .itemOutputs(
+        'megacells:sky_steel_ingot',
+        'ae2:sky_dust'
+    )
+    .blastFurnaceTemp(4500)
+    .duration(400)
+    .EUt(EV)
+	
+    //Mega Cells Assembler
+	
+    event.recipes.gtceu.assembler('gregitas:mega_item_cell_housing')
+	.circuit(1)
+    .itemInputs(
+                'megacells:sky_steel_block',
+                'gtceu:hv_field_generator',
+                '32x gtceu:fine_red_alloy_wire',
+                '4x ae2:quartz_vibrant_glass'
+    )
+    .inputFluids(
+        Fluid.of('gtceu:soldering_alloy',288)
+    )
+    .itemOutputs(
+        '2x megacells:mega_item_cell_housing'
+    )
+    .duration(200)
+    .EUt(EV)
+	
+    event.recipes.gtceu.assembler('gregitas:mega_fluid_cell_housing')
+	.circuit(2)
+    .itemInputs(
+                'megacells:sky_steel_block',
+                'gtceu:hv_field_generator',
+                '32x gtceu:fine_red_alloy_wire',
+                '4x ae2:quartz_vibrant_glass'
+    )
+    .inputFluids(
+        Fluid.of('gtceu:soldering_alloy',288)
+    )
+    .itemOutputs(
+        '2x megacells:mega_fluid_cell_housing'
+    )
+    .duration(200)
+    .EUt(EV)
+	
+    event.recipes.gtceu.assembler('gregitas:accumulation_processor_press')
+	.circuit(1)
+    .itemInputs(
+                '4x megacells:sky_steel_block',
+				'2x gtceu:double_tungsten_steel_plate',
+				'16x ae2:logic_processor',
+				'16x ae2:calculation_processor',
+				'16x ae2:engineering_processor',
+    )
+    .inputFluids(
+        Fluid.of('gtceu:soldering_alloy',576)
+    )
+    .itemOutputs(
+        'megacells:accumulation_processor_press'
+    )
+    .duration(400)
+    .EUt(EV)
+	
+    event.recipes.gtceu.assembler('gregitas:superdense_energy_cell')
+    .itemInputs(
+                '8x ae2:dense_energy_cell',
+                'megacells:accumulation_processor',
+				'#gtceu:circuits/ev'
+    )
+    .itemOutputs(
+        'megacells:mega_energy_cell'
+    )
+    .duration(200)
+    .EUt(EV)
+	
+    event.recipes.gtceu.assembler('gregitas:mega_crafting_unit')
+    .itemInputs(
+                '4x ae2:crafting_unit',
+                'megacells:accumulation_processor',
+				'2x #gtceu:circuits/ev',
+				'32x #ae2:smart_dense_cable'
+    )
+    .itemOutputs(
+        'megacells:mega_crafting_unit'
+    )
+    .duration(200)
+    .EUt(EV)
+	
+    event.recipes.gtceu.assembler('gregitas:bulk_cell_component')
+    .itemInputs(
+                'megacells:cell_component_1m',
+                '4x megacells:sky_steel_block',
+                '4x megacells:accumulation_processor',
+				'2x #gtceu:circuits/ev',
+				'ae2:spatial_cell_component'
+    )
+    .itemOutputs(
+        'megacells:bulk_cell_component'
+    )
+    .duration(200)
+    .EUt(EV)
+	
+    //Mega Cells cutter
+	
+//might want to replace with a new type of "wafer" eventually
+	
+    event.recipes.gtceu.cutter("accumulation_processor")
+    .itemInputs("megacells:printed_accumulation_processor")
+    .itemOutputs('megacells:accumulation_processor')
+    .inputFluids(Fluid.of("gtceu:lubricant", 200))
+    .duration(1000)
+    .EUt(EV)
+	
+    //Mega Cells components
+	
+            event.recipes.gtceu.assembler('gregitas:1m_storage_component')
+                .itemInputs(
+                    '3x ae2:cell_component_256k',
+                    'megacells:accumulation_processor',
+                    '#gtceu:circuits/iv'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:red_alloy',576)
+                )
+                .itemOutputs(
+                    'megacells:cell_component_1m'
+                )
+                .duration(200)
+                .EUt(IV)
+				
+            event.recipes.gtceu.assembler('gregitas:4m_storage_component')
+                .itemInputs(
+                    '3x megacells:cell_component_1m',
+                    'megacells:accumulation_processor',
+                    '#gtceu:circuits/iv'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:red_alloy',576)
+                )
+                .itemOutputs(
+                    'megacells:cell_component_4m'
+                )
+                .duration(200)
+                .EUt(IV)
+				
+            event.recipes.gtceu.assembler('gregitas:16m_storage_component')
+                .itemInputs(
+                    '3x megacells:cell_component_4m',
+                    'megacells:accumulation_processor',
+                    '#gtceu:circuits/luv'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:red_alloy',576)
+                )
+                .itemOutputs(
+                    'megacells:cell_component_16m'
+                )
+                .duration(200)
+                .EUt(LuV)
+				
+            event.recipes.gtceu.assembler('gregitas:64m_storage_component')
+                .itemInputs(
+                    '3x megacells:cell_component_16m',
+                    'megacells:accumulation_processor',
+                    '#gtceu:circuits/luv'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:red_alloy',576)
+                )
+                .itemOutputs(
+                    'megacells:cell_component_64m'
+                )
+                .duration(200)
+                .EUt(LuV)
+				
+            event.recipes.gtceu.assembler('gregitas:256m_storage_component')
+                .itemInputs(
+                    '3x megacells:cell_component_64m',
+                    'megacells:accumulation_processor',
+                    '#gtceu:circuits/zpm'
+                )
+                .inputFluids(
+                    Fluid.of('gtceu:red_alloy',576)
+                )
+                .itemOutputs(
+                    'megacells:cell_component_256m'
+                )
+                .duration(200)
+                .EUt(ZPM)
+				
+                event.recipes.gtceu.canner('gregitas:bulk_item_cell')
+                    .itemInputs(
+                        'megacells:bulk_cell_component',
+                        'megacells:mega_item_cell_housing'
+                    )
+                    .itemOutputs(
+                        'megacells:bulk_item_cell'
+                    )
+                    .duration(200)
+                    .EUt(EV)
+					
+//megacells cells
+	
+            let megacellscells = [
+                {
+                    tier: '1m',
+                    voltage: IV
+                },
+                {
+                    tier: '4m',
+                    voltage: IV
+                },
+                {
+                    tier: '16m',
+                    voltage: LuV
+                },
+                {
+                    tier: '64m',
+                    voltage: LuV
+                },
+                {
+                    tier: '256m',
+                    voltage: ZPM
+                }
+            ]
+
+            megacellscells.forEach(cell => {
+                event.recipes.gtceu.canner(`gregitas:${cell.tier}_item_cell`)
+                    .itemInputs(
+                        'megacells:mega_item_cell_housing',
+                        `megacells:cell_component_${cell.tier}`
+                    )
+                    .itemOutputs(
+                        `megacells:item_storage_cell_${cell.tier}`
+                    )
+                    .duration(200)
+                    .EUt(cell.voltage)
+
+                event.recipes.gtceu.canner(`gregitas:${cell.tier}_fluid_cell`)
+                    .itemInputs(
+                        'megacells:mega_fluid_cell_housing',
+                        `megacells:cell_component_${cell.tier}`
+                    )
+                    .itemOutputs(
+                        `megacells:fluid_storage_cell_${cell.tier}`
+                    )
+                    .duration(200)
+                    .EUt(cell.voltage)
+
+                event.recipes.gtceu.canner(`gregitas:${cell.tier}_crafting_storage`)
+                    .itemInputs(
+                        'megacells:mega_crafting_unit',
+                        `megacells:cell_component_${cell.tier}`
+                    )
+                    .itemOutputs(
+                        `megacells:${cell.tier}_crafting_storage`
+                    )
+                    .duration(200)
+                    .EUt(cell.voltage)
+
+                event.remove(
+                    [
+                        {
+                            id: `megacells:cells/standard/fluid_storage_cell_${cell.tier}`  
+                        },
+                        {
+                            id: `megacells:cells/standard/item_storage_cell_${cell.tier}`
+                        },
+                        {
+                            id: `megacells:cells/portable/portable_fluid_cell_${cell.tier}`
+                        },
+                        {
+                            id: `megacells:cells/portable/portable_item_cell_${cell.tier}`
+                        },
+                        {
+                            id: `megacells:crafting/${cell.tier}_crafting_storage`
+                        }
+
+                    ]
+                )
+            })
+
+    //ae2things housing
+
+    event.recipes.gtceu.assembler('gregitas:deep_drive_housing')
+    .itemInputs(
+                '2x ae2:item_cell_housing',
+                'gtceu:lv_field_generator'
+    )
+    .inputFluids(
+        Fluid.of('gtceu:soldering_alloy',288)
+    )
+    .itemOutputs(
+        '2x ae2things:disk_housing'
+    )
+    .duration(200)
+    .EUt(MV)
+				
     //Generic Remove
         
         event.remove(
             [
                 {
-                    mod: 'ae2things'
-                },
-                {
                     mod: 'aeinfinitybooster'
-                },
-                {
-                    mod: 'megacells'
                 },
                 {
                     id: 'ae2:network/blocks/spatial_anchor'

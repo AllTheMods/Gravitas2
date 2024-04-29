@@ -60,4 +60,5 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
     event.add('create:bottomless/allow', 'tfc:salt_water')
     event.add('create:bottomless/allow', 'tfc:river_water')
 
+    event.add("forge:water", "tfc:river_water")
 }

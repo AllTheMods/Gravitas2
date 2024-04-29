@@ -158,14 +158,28 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
   event.remove({ id: "create:filling/sweet_roll"})
   event.remove({ id: "create:crafting/kinetics/belt_connector"})
+  event.remove({ id: "create:crushing/crimsite"})
   event.remove({ id: "create:crushing/crimsite_recycling"})
+  event.remove({ id: "create:crushing/ochrum"})
   event.remove({ id: "create:crushing/ochrum_recycling"})
   event.remove({ id: "create:crushing/veridium"})
+  event.remove({ id: "create:crushing/veridium_recycling"})
   event.remove({ id: "create:crushing/tuff"})
-  event.remove({ id: "create:crushing/gravel"})
+  event.remove({ id: "create:crushing/tuff_recycling"})
+  event.remove({ id: "create:crushing/asurine"})
   event.remove({ id: "create:crushing/asurine_recycling"})
   event.remove({ id: "create:crushing/crimsite"})
-  event.remove({ id: /^create:.*_crimsite_stonecutting/})
+  event.remove({ id: "create:crushing/crimsite_recycling"})
+  event.remove({ id: "create:crushing/gravel"})
+  event.remove({ id: "create:granite_from_stone_types_granite_stonecutting"})
+  event.remove({ id: "create:diorite_from_stone_types_diorite_stonecutting"})
+  event.remove({ id: "create:andesite_from_stone_types_andesite_stonecutting"})
+  event.remove({ id: "create:calcite_from_stone_types_calcite_stonecutting"})
+  event.remove({ id: "create:milling/dripstone_block"})
+  event.remove({ id: "create:milling/calcite"})
+  event.remove({ id: "create:compacting/diorite_from_flint"})
+  event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
+  event.remove({ id: "vintageimprovements:crushing/scoria"})
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
 
   //Cast iron plate jank
@@ -203,6 +217,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ type: "integrateddynamics:mechanical_squeezer"})
   event.remove({ type: "integrateddynamics:drying_basin", output: "minecraft:leather"})
   event.remove({ type: "integrateddynamics:mechanical_drying_basin", output: "minecraft:leather"})
+  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional" })
+  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional_copy" })
+  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional_join" })
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
@@ -363,5 +380,47 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //DECO
 
   event.remove({ id: 'createdeco:pressing/zinc_sheet'})
+  
+  //water source do not give recipe
+  
+  event.remove({ id: 'thoriumreactors:thorium_crafting/water_source_block'})
+  
+  //jumbo furnace
 
+  event.remove({ type: "jumbofurnace:jumbo_furnace" })
+  event.remove({ id: 'jumbofurnace:jumbo_furnace'})
+
+  //wireless redstone
+
+  event.remove({ id: 'wirelessredstone:remote'}) 
+  event.remove({ id: 'wirelessredstone:circuit'}) 
+  event.remove({ id: 'wirelessredstone:frequency_tool'}) 
+  event.remove({ id: 'wirelessredstone:frequency_sniffer'}) 
+  event.remove({ id: 'wirelessredstone:redstone_receiver'}) 
+  event.remove({ id: 'wirelessredstone:redstone_transmitter'}) 
+
+  //more red
+
+  event.remove({ id: 'morered:red_alloy_wire'}) 
+  event.remove({ type: 'morered:soldering'})
+  event.remove({ id: 'morered:soldering_table'})
+
+  //straw hat
+
+  event.remove({ id: 'tfcambiental:crafting/straw_hat'})
+
+  //honey
+
+  event.remove({ id: 'vintageimprovements:centrifugation/honey_comb'})
+  event.remove({ id: 'minecraft:honey_bottle'})
+
+  //apotheosis
+
+  event.remove({ id: 'apotheosis:enchanting/xp_bottle'})  
+  event.remove({ id: 'apotheosis:enchanting/xp_bottle_2'})  
+  event.remove({ id: 'apotheosis:enchanting/xp_bottle_3'})  
+
+  //dripstone
+
+  event.remove({ id: 'minecraft:dripstone_block'}) 
 }

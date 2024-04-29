@@ -466,4 +466,590 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .outputFluids(Fluid.of('gtceu:seed_oil', 10))
             .EUt(LV)
             .duration(50)
+			
+    //yeast starter
+	
+        event.recipes.gtceu.fermenter('yeast_starter_create')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('minecraft:water', 100))
+            .outputFluids(Fluid.of('firmalife:yeast_starter', 100))
+            .EUt(LV)
+            .duration(2000)
+	
+        event.recipes.gtceu.fermenter('yeast_starter_duplicate')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "firmalife:feeds_yeast"
+                }
+              },1))
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 100))
+            .outputFluids(Fluid.of('firmalife:yeast_starter', 500))
+            .EUt(LV)
+            .duration(200)
+			
+    //dough
+	
+        event.recipes.gtceu.mixer('gt_mixer_oat_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/oat_flour"
+                }
+              },1))
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/oat_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_wheat_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/wheat_flour"
+                }
+              },1))
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/wheat_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_barley_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/barley_flour"
+                }
+              },1))
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/barley_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_maize_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/maize_flour"
+                }
+              },1))
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/maize_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_rice_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/rice_flour"
+                }
+              },1))
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/rice_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_rye_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/rye_flour"
+                }
+              },1))
+            .itemInputs('#tfc:sweetener')
+            .inputFluids(Fluid.of('firmalife:yeast_starter', 1000))
+            .itemOutputs('4x firmalife:food/rye_dough')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('gt_mixer_hardtack_dough')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/flour"
+                }
+              },1))
+            .itemInputs('tfc:powder/salt')
+            .inputFluids(Fluid.of('minecraft:water', 1000))
+            .itemOutputs('4x firmalife:food/hardtack_dough')
+            .EUt(LV)
+            .duration(50)
+			
+    //limewater
+	
+        event.recipes.gtceu.mixer('limewater_from_flux')
+            .itemInputs('tfc:powder/flux')
+            .inputFluids(Fluid.of('minecraft:water', 500))
+            .outputFluids(Fluid.of('tfc:limewater', 500))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.mixer('limewater_from_lime')
+            .itemInputs('tfc:powder/lime')
+            .inputFluids(Fluid.of('minecraft:water', 500))
+            .outputFluids(Fluid.of('tfc:limewater', 500))
+            .EUt(LV)
+            .duration(50)
+			
+    //raw resin
+	
+        event.recipes.gtceu.mixer('sticky_resin_from_raw')
+            .itemInputs('gtceu:small_sulfur_dust')
+            .inputFluids(Fluid.of('gregitas:raw_resin', 500))
+            .itemOutputs('gtceu:sticky_resin')
+            .EUt(LV)
+            .duration(50)
+			
+    //dry mud bricks
+	
+   event.recipes.gtceu.alloy_smelter('loam_brick_dry')
+           .itemInputs('4x tfc:drying_bricks/loam')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:mud_brick/loam')
+           .EUt(LV)
+           .duration(80)
+		   
+   event.recipes.gtceu.alloy_smelter('silty_brick_dry')
+           .itemInputs('4x tfc:drying_bricks/silty_loam')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:mud_brick/silty_loam')
+           .EUt(LV)
+           .duration(80)
+		   
+   event.recipes.gtceu.alloy_smelter('sandy_brick_dry')
+           .itemInputs('4x tfc:drying_bricks/sandy_loam')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:mud_brick/sandy_loam')
+           .EUt(LV)
+           .duration(80)
+		   
+	//alabaster brick
+	
+   event.recipes.gtceu.alloy_smelter('alabaster_brick')
+           .itemInputs('4x tfc:ore/gypsum')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:alabaster_brick')
+           .EUt(LV)
+           .duration(80)
+		   
+   event.recipes.gtceu.alloy_smelter('alabaster_brick_with_dust')
+           .itemInputs('4x gtceu:gypsum_dust')
+           .notConsumable('gtceu:ingot_casting_mold')
+           .itemOutputs('4x tfc:alabaster_brick')
+           .EUt(LV)
+           .duration(80)
+		   
+	//milk vinegar
+	
+	//couldnt get fluidtags/array stuff to work with fluids
+	
+        event.recipes.gtceu.mixer('milk_vinegar')
+            .inputFluids(Fluid.of('minecraft:milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(100)
+
+        event.recipes.gtceu.mixer('milk_vinegar_from_goat')
+            .inputFluids(Fluid.of('firmalife:goat_milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+        event.recipes.gtceu.mixer('milk_vinegar_from_yak')
+            .inputFluids(Fluid.of('firmalife:yak_milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(200)
+			
+        event.recipes.gtceu.mixer('milk_vinegar_from_coconut')
+            .inputFluids(Fluid.of('firmalife:coconut_milk', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:milk_vinegar', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+		//vinegar 
+	     
+        event.recipes.gtceu.fermenter('vinegar_from_beer')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:beer', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fermenter('vinegar_from_rum')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:rum', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fermenter('vinegar_from_whiskey')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:whiskey', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fermenter('vinegar_from_vodka')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "tag": "tfc:foods/fruits"
+                }
+              },1))
+            .inputFluids(Fluid.of('tfc:vodka', 250))
+            .outputFluids(Fluid.of('tfc:vinegar', 250))
+            .EUt(LV)
+            .duration(50)
+			
+		//curdled milk
+		
+        event.recipes.gtceu.mixer('curdled_milk')
+            .inputFluids(Fluid.of('minecraft:milk', 900))
+            .inputFluids(Fluid.of('tfc:milk_vinegar', 100))
+            .outputFluids(Fluid.of('tfc:curdled_milk', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+        event.recipes.gtceu.mixer('curdled_goat_milk')
+            .inputFluids(Fluid.of('firmalife:goat_milk', 900))
+            .inputFluids(Fluid.of('tfc:milk_vinegar', 100))
+            .outputFluids(Fluid.of('firmalife:curdled_goat_milk', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+        event.recipes.gtceu.mixer('curdled_yak_milk')
+            .inputFluids(Fluid.of('firmalife:yak_milk', 900))
+            .inputFluids(Fluid.of('tfc:milk_vinegar', 100))
+            .outputFluids(Fluid.of('firmalife:curdled_yak_milk', 1000))
+            .EUt(LV)
+            .duration(100)
+			
+		//tfc brine
+		
+        event.recipes.gtceu.mixer('tfc_brine')
+            .inputFluids(Fluid.of('tfc:salt_water', 900))
+            .inputFluids(Fluid.of('tfc:vinegar', 100))
+            .outputFluids(Fluid.of('tfc:brine', 1000))
+            .EUt(LV)
+            .duration(20)
+			
+	    //firmalife stuff
+		
+         event.recipes.gtceu.forming_press("firmalife_copper_pipe")
+            .notConsumable('gtceu:small_pipe_extruder_mold')
+            .itemInputs('gtceu:copper_plate')
+            .itemOutputs('8x firmalife:copper_pipe')
+            .duration(200)
+            .EUt(LV)
+	     
+        event.recipes.gtceu.forming_press("firmalife_sprinkler")
+            .notConsumable('gtceu:tiny_pipe_extruder_mold')
+            .itemInputs('gtceu:copper_plate')
+            .itemOutputs('firmalife:sprinkler')
+            .duration(200)
+            .EUt(LV)
+	
+        event.recipes.gtceu.forming_press("firmalife_reinforced_glass")
+            .notConsumable('gtceu:plate_extruder_mold')
+            .itemInputs('#tfc:glass_batches')
+            .itemInputs('#tfc:glassworking_potash')
+            .itemOutputs('8x firmalife:reinforced_glass')
+            .duration(200)
+            .EUt(LV)
+	     
+        event.recipes.gtceu.forming_press("firmalife_reinforced_glass_gt_materials")
+            .notConsumable('gtceu:plate_extruder_mold')
+            .itemInputs('#forge:dusts/glass')
+            .itemInputs('#forge:dusts/soda_ash')
+            .itemOutputs('8x firmalife:reinforced_glass')
+            .duration(200)
+            .EUt(LV)
+			
+		//jute fiber
+		 
+        event.recipes.gtceu.mixer('gt_mixer_jute_fiber')
+            .itemInputs('tfc:jute')
+            .inputFluids(Fluid.of('minecraft:water', 200))
+            .itemOutputs('tfc:jute_fiber')
+            .EUt(LV)
+            .duration(50)
+         
+		//olive oil
+		
+        event.recipes.gtceu.forge_hammer('olive_crushing')
+            .itemInputs(Ingredient.of({
+                "type": "tfc:not_rotten",
+                "ingredient": {
+                  "item": "tfc:food/olive"
+                }
+              },1))
+            .itemOutputs('2x tfc:olive_paste')
+            .EUt(LV)
+            .duration(50)
+			
+        event.recipes.gtceu.fluid_heater('olive_oil_water')
+            .itemInputs('5x tfc:olive_paste')
+            .inputFluids(Fluid.of('minecraft:water', 1000))
+            .outputFluids(Fluid.of('tfc:olive_oil_water', 1000))
+            .EUt(LV)
+            .duration(200)
+			
+        event.recipes.gtceu.mixer('olive_oil_with_jute_net')
+            .itemInputs('tfc:jute_net')
+            .inputFluids(Fluid.of('tfc:olive_oil_water', 250))
+            .outputFluids(Fluid.of('tfc:olive_oil', 50))
+            .itemOutputs('tfc:dirty_jute_net')
+            .EUt(LV)
+            .duration(200)
+			
+        event.recipes.gtceu.mixer('jute_net_cleaning')
+            .itemInputs('tfc:dirty_jute_net')
+            .inputFluids(Fluid.of('minecraft:water', 250))
+            .itemOutputs('tfc:jute_net')
+            .EUt(LV)
+            .duration(100)
+
+        //wireless redstone
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_circuit')
+            .itemInputs(
+                '4x gtceu:gold_plate',
+                '4x gtceu:glowstone_plate',
+                '4x ae2:fluix_pearl',
+                '#gtceu:circuits/mv'
+                )
+            .inputFluids(Fluid.of('gtceu:red_alloy',144))
+            .itemOutputs('wirelessredstone:circuit')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_remote')
+            .itemInputs(
+                '4x gtceu:iron_plate',
+                '4x gtceu:redstone_plate',
+                'wirelessredstone:circuit',
+                'create:linked_controller',
+                '4x ae2:fluix_pearl'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelessredstone:remote')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_frequency_sniffer')
+            .itemInputs(
+                '4x gtceu:silver_plate',
+                '4x gtceu:redstone_plate',
+                'wirelessredstone:circuit',
+                'create:linked_controller',
+                '4x ae2:fluix_pearl'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelessredstone:frequency_sniffer')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_frequency_tool')
+            .itemInputs(
+                '4x gtceu:tin_plate',
+                '4x gtceu:redstone_plate',
+                'wirelessredstone:circuit',
+                'create:linked_controller',
+                '4x ae2:fluix_pearl'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelessredstone:frequency_tool')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_receiver')
+            .itemInputs(
+                '8x gtceu:iron_plate',
+                '4x gtceu:redstone_plate',
+                '2x wirelessredstone:circuit',
+                'create:redstone_link'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('wirelessredstone:redstone_receiver')
+            .duration(200)
+            .EUt(MV)
+
+        event.recipes.gtceu.assembler('gregitas:wirelessredstone_transmitter')
+            .itemInputs(
+                '8x gtceu:iron_plate',
+                '4x gtceu:glowstone_plate',
+                '2x wirelessredstone:circuit',
+                'create:redstone_link'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('wirelessredstone:redstone_transmitter')
+            .duration(200)
+            .EUt(MV)
+
+      //  event.recipes.gtceu.wiremill('gregitas:morered_wire')
+      //      .circuit(3)
+      //      .itemInputs('gtceu:red_alloy_ingot')
+      //      .itemOutputs('4x morered:red_alloy_wire')
+      //      .duration(40)
+      //      .EUt(ULV)
+         
+    //honey
+
+        event.recipes.gtceu.centrifuge('gregitas:centrifuge_honey')
+            .itemInputs('firmalife:raw_honey')
+            .outputFluids(Fluid.of('create:honey', 100))
+            .duration(40)
+            .EUt(ULV)
+
+    //firmalife misc
+
+        event.recipes.gtceu.extruder("gregitas:brass_mechanism_extruder")
+            .itemInputs('#forge:ingots/brass')
+            .notConsumable('gtceu:small_gear_extruder_mold')
+            .itemOutputs('2x tfc:brass_mechanisms')
+            .duration(100)
+            .EUt(ULV)
+
+    //integrated omni
+
+        event.recipes.gtceu.assembler('gregitas:omni_directional')
+            .itemInputs(
+                '16x ae2:quantum_ring',
+                '2x ae2:quantum_link',
+                'ae2wtlib:quantum_bridge_card',
+                '32x integrateddynamics:logic_director'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('2x integrateddynamics:part_connector_omni_directional')
+            .duration(200)
+            .EUt(IV)
+
+    //temporary rocket related recipes until there are proper ones
+
+        event.recipes.gtceu.assembler('gregitas:advanced_fuel_tank')
+            .itemInputs(
+                '4x gcyr:basic_fuel_tank',
+                'gtceu:tungsten_steel_frame',
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('gcyr:advanced_fuel_tank')
+            .duration(200)
+            .EUt(EV)
+
+        event.recipes.gtceu.assembler('gregitas:advanced_rocket_motor')
+            .itemInputs(
+                '4x gcyr:basic_rocket_motor',
+                'gtceu:tungsten_steel_frame',
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('gcyr:advanced_rocket_motor')
+            .duration(200)
+            .EUt(EV)
+
+        event.recipes.gtceu.fluid_heater('gregitas:salt_water_evaporate')
+            .inputFluids(Fluid.of(`gtceu:salt_water`, 16000))
+            .outputFluids(Fluid.of('gcyr:raw_brine', 1000))
+            .duration(1000)
+            .EUt(HV)
+
+        event.recipes.gtceu.centrifuge('gregitas:brine_seperation')
+            .inputFluids(Fluid.of('gcyr:raw_brine',1000))
+            .itemOutputs('20x gtceu:salt_dust')
+            .itemOutputs('3x gtceu:magnesium_dust')
+            .itemOutputs('2x gtceu:lithium_dust')
+            .outputFluids(Fluid.of('gtceu:bromine', 33))
+            .duration(200)
+            .EUt(HV)
+
+        event.recipes.gtceu.chemical_reactor('gregitas:potassium_carbonate')
+            .itemInputs('2x gtceu:potassium_dust')
+            .inputFluids(Fluid.of('gtceu:oxygen',1000))
+            .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
+            .itemOutputs('6x gcyr:potassium_carbonate_dust')
+            .duration(40)
+            .EUt(HV)
+
+        event.recipes.gtceu.chemical_reactor('gregitas:potassium_carbonate_potash')
+            .itemInputs('3x gtceu:potash_dust')
+            .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
+            .itemOutputs('6x gcyr:potassium_carbonate_dust')
+            .duration(40)
+            .EUt(LV)
+
+    //stuff
+
+        event.recipes.gtceu.chemical_reactor('gregitas:sodium_hydroxide')
+            .itemInputs('gtceu:sodium_dust')
+            .inputFluids(Fluid.of('minecraft:water',1000))
+            .outputFluids(Fluid.of('gtceu:hydrogen', 1000))
+            .itemOutputs('3x gtceu:sodium_hydroxide_dust')
+            .duration(200)
+            .EUt(LV)
+
+        event.recipes.gtceu.chemical_reactor('gregitas:sodium_bisulfate')
+            .itemInputs('gtceu:sodium_dust')
+            .inputFluids(Fluid.of('gtceu:sulfuric_acid',1000))
+            .itemOutputs('7x gtceu:sodium_bisulfate_dust')
+            .duration(60)
+            .EUt(LV)
+      
+    //wool
+
+        event.recipes.gtceu.compressor('gregitas:silk_cloth_from_string')
+            .itemInputs('32x minecraft:string')
+            .itemOutputs('4x tfc:silk_cloth')
+            .duration(100)
+            .EUt(HV)
+
+        event.recipes.gtceu.forming_press('gregitas:wool_from_silk_cloth')
+            .notConsumable('gtceu:block_extruder_mold')
+            .itemInputs('4x tfc:silk_cloth')
+            .itemOutputs('minecraft:white_wool')
+            .duration(100)
+            .EUt(HV)
+
+        event.recipes.gtceu.compressor('gregitas:wool_cloth_from_yarn')
+            .itemInputs('32x tfc:wool_yarn')
+            .itemOutputs('4x tfc:wool_cloth')
+            .duration(100)
+            .EUt(HV)
+
+        event.recipes.gtceu.forming_press('gregitas:wool_from_wool_cloth')
+            .notConsumable('gtceu:block_extruder_mold')
+            .itemInputs('4x tfc:wool_cloth')
+            .itemOutputs('2x minecraft:white_wool')
+            .duration(100)
+            .EUt(HV)
+
 }
