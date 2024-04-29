@@ -2433,7 +2433,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
     //Mega Cells components
 	
-            event.recipes.gtceu.assembler('gregitas:1M_storage_component')
+            event.recipes.gtceu.assembler('gregitas:1m_storage_component')
                 .itemInputs(
                     '3x ae2:cell_component_256k',
                     'megacells:accumulation_processor',
@@ -2448,7 +2448,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(200)
                 .EUt(IV)
 				
-            event.recipes.gtceu.assembler('gregitas:4M_storage_component')
+            event.recipes.gtceu.assembler('gregitas:4m_storage_component')
                 .itemInputs(
                     '3x megacells:cell_component_1m',
                     'megacells:accumulation_processor',
@@ -2463,7 +2463,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(200)
                 .EUt(IV)
 				
-            event.recipes.gtceu.assembler('gregitas:16M_storage_component')
+            event.recipes.gtceu.assembler('gregitas:16m_storage_component')
                 .itemInputs(
                     '3x megacells:cell_component_4m',
                     'megacells:accumulation_processor',
@@ -2478,7 +2478,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(200)
                 .EUt(LuV)
 				
-            event.recipes.gtceu.assembler('gregitas:64M_storage_component')
+            event.recipes.gtceu.assembler('gregitas:64m_storage_component')
                 .itemInputs(
                     '3x megacells:cell_component_16m',
                     'megacells:accumulation_processor',
@@ -2493,7 +2493,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(200)
                 .EUt(LuV)
 				
-            event.recipes.gtceu.assembler('gregitas:256M_storage_component')
+            event.recipes.gtceu.assembler('gregitas:256m_storage_component')
                 .itemInputs(
                     '3x megacells:cell_component_64m',
                     'megacells:accumulation_processor',
@@ -2508,7 +2508,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 .duration(200)
                 .EUt(ZPM)
 				
-                event.recipes.gtceu.canner('regitas:bulk_item_cell')
+                event.recipes.gtceu.canner('gregitas:bulk_item_cell')
                     .itemInputs(
                         'megacells:bulk_cell_component',
                         'megacells:mega_item_cell_housing'

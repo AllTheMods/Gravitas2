@@ -757,7 +757,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 			
 		//tfc brine
 		
-        event.recipes.gtceu.mixer('TFC_brine')
+        event.recipes.gtceu.mixer('tfc_brine')
             .inputFluids(Fluid.of('tfc:salt_water', 900))
             .inputFluids(Fluid.of('tfc:vinegar', 100))
             .outputFluids(Fluid.of('tfc:brine', 1000))
@@ -917,12 +917,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(200)
             .EUt(MV)
 
-        event.recipes.gtceu.wiremill('gregitas:morered_wire')
-            .circuit(3)
-            .itemInputs('gtceu:red_alloy_ingot')
-            .itemOutputs('4x morered:red_alloy_wire')
-            .duration(40)
-            .EUt(ULV)
+      //  event.recipes.gtceu.wiremill('gregitas:morered_wire')
+      //      .circuit(3)
+      //      .itemInputs('gtceu:red_alloy_ingot')
+      //      .itemOutputs('4x morered:red_alloy_wire')
+      //      .duration(40)
+      //      .EUt(ULV)
          
     //honey
 
