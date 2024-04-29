@@ -273,4 +273,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.replaceInput({ mod: "morered"}, "morered:red_alloy_ingot", "gtceu:red_alloy_ingot")
 
+//simple planes
+
+  event.replaceInput({ id: "simpleplanes:seats"}, "minecraft:phantom_membrane", "#create:seats")
 }
