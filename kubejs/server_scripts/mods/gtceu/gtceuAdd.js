@@ -1017,6 +1017,15 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemOutputs('7x gtceu:sodium_bisulfate_dust')
             .duration(60)
             .EUt(LV)
+
+        event.recipes.gtceu.large_chemical_reactor('gregitas:co_mn_br_catalyst')
+            .inputFluids(Fluid.of('gcyr:cobalt_bromide',1000))
+            .inputFluids(Fluid.of('gcyr:manganese_bromide',1000))
+            .inputFluids(Fluid.of('gcyr:manganese_acetate',1000))
+            .inputFluids(Fluid.of('gcyr:hydrobromic_acid',1000))
+            .outputFluids(Fluid.of('gcyr:co_mn_br_catalyst', 4000))
+            .duration(100)
+            .EUt(HV)
       
     //wool
 
