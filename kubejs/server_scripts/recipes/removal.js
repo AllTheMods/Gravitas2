@@ -422,4 +422,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //dripstone
 
   event.remove({ id: 'minecraft:dripstone_block'}) 
+
+  //gcyr
+
+  event.remove({ id: 'gcyr:mixer/co_mn_br_catalyst'})
+  event.remove({ id: 'gcyr:create_mixer/co_mn_br_catalyst'}) 
 }
