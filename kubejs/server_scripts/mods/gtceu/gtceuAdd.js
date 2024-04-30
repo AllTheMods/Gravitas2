@@ -977,12 +977,6 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(200)
             .EUt(EV)
 
-        event.recipes.gtceu.fluid_heater('gregitas:salt_water_evaporate')
-            .inputFluids(Fluid.of(`gtceu:salt_water`, 16000))
-            .outputFluids(Fluid.of('gcyr:raw_brine', 1000))
-            .duration(1000)
-            .EUt(HV)
-
         event.recipes.gtceu.centrifuge('gregitas:brine_seperation')
             .inputFluids(Fluid.of('gcyr:raw_brine',1000))
             .itemOutputs('20x gtceu:salt_dust')
