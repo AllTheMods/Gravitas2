@@ -1001,13 +1001,6 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(40)
             .EUt(LV)
 
-        event.recipes.gtceu.mixer('gregitas:co-mn-br_catalyst')
-            .inputFluids(Fluid.of('gcyr:manganese_bromide',1000))
-            .inputFluids(Fluid.of('gcyr:cobalt_bromide',1000))
-            .outputFluids(Fluid.of('gcyr:co_mn_br_catalyst', 4000))
-            .duration(100)
-            .EUt(HV)
-
     //stuff
 
         event.recipes.gtceu.chemical_reactor('gregitas:sodium_hydroxide')
