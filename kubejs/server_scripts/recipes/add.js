@@ -1781,6 +1781,15 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
         P: "gtceu:fertilizer",
         R: "#tfc:rock/raw",		
     })
+
+  //create stuff
+
+    shaped("railways:smokestack_diesel", [" T ", "TET", " T "],
+      {
+          T: "gtceu:iron_plate",
+          E: "create:propeller",
+      })
+
 	 
 	//create stones
 	 
