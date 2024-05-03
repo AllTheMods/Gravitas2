@@ -2165,4 +2165,26 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
           T: "tfc:straw"
       })
 
+  // normalize color-steel recipes
+  event.recipes.gtceu.mixer('blue_steel')
+    .circuit(1)
+    .itemInputs('#forge:dusts/sterling_silver')
+    .itemInputs('#forge:dusts/bismuth_bronze')
+    .itemInputs('4x #forge:dusts/black_steel')
+    .itemInputs('2x #forge:dusts/steel')
+    .itemOutputs('8x gtceu:blue_steel_dust')
+    .duration(800)
+    .EUt(ULV)
+
+  event.recipes.gtceu.mixer('red_steel')
+    .circuit(1)
+    .itemInputs('#forge:dusts/rose_gold')
+    .itemInputs('#forge:dusts/brass')
+    .itemInputs('4x #forge:dusts/black_steel')
+    .itemInputs('2x #forge:dusts/steel')
+    .itemOutputs('8x gtceu:red_steel_dust')
+    .duration(800)
+    .EUt(ULV)
+
+
 }
