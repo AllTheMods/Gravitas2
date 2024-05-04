@@ -1,6 +1,7 @@
 // priority 0
 
-ClientEvents.tick((event) => {
+ClientEvents.highPriorityAssets(event => {
+  addTFCBookEntries(event)
 })
 
 NetworkEvents.dataReceived('customTask', event => {
