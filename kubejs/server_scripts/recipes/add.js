@@ -633,7 +633,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .circuit(1)
       .notConsumable(`tfc:wood/sapling/${sapling}`)
       .inputFluids(Fluid.of("minecraft:water", 1000))
-      .itemOutputs(`64x tfc:wood/log/${sapling}`, `4x tfc:wood/sapling/${sapling}`)
+      .itemOutputs(`64x tfc:wood/log/${sapling}`, `4x tfc:wood/sapling/${sapling}`, `32x tfc:wood/leaves/${sapling}`)
       .duration(640)
       .EUt(MV)
 
@@ -643,7 +643,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .notConsumable(`tfc:wood/sapling/${sapling}`)
       .itemInputs("4x gtceu:fertilizer")
       .inputFluids(Fluid.of("minecraft:water", 1000))
-      .itemOutputs(`64x tfc:wood/log/${sapling}`, `64x tfc:wood/log/${sapling}`, `8x tfc:wood/sapling/${sapling}`)
+      .itemOutputs(`64x tfc:wood/log/${sapling}`, `48x tfc:wood/log/${sapling}`, `8x tfc:wood/sapling/${sapling}`, `32x tfc:wood/leaves/${sapling}`)
       .duration(640)
       .EUt(MV)
 
