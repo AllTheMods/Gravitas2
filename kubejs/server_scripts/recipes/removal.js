@@ -423,4 +423,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //dripstone
 
   event.remove({ id: 'minecraft:dripstone_block'}) 
+
+  //ColdsGrappler
+  event.remove({ id: 'coldsgrappler:grappler'})
+  event.remove({ id: "coldsgrappler:extra_rope"})
+  event.remove({ id: "coldsgrappler:rope_light"})
+
 }

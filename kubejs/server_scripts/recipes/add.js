@@ -2165,4 +2165,23 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
           T: "tfc:straw"
       })
 
+      //ColdsGrappler
+      shaped("coldsgrappler:extra_rope_item", ["  R", " R ", "   "],
+      {
+          R: "firmaciv:rope_coil"
+      }).id("coldsgrappler:extra_rope")
+
+      shaped("coldsgrappler:rope_light_item", [" R ", " L ", "   "],
+      {
+        R: "firmaciv:rope_coil",
+        L: "#tfc:lamps"
+      }).id("coldsgrappler:rope_light")
+
+      shaped("coldsgrappler:grappler_item", [" P ", " L ", " R "],
+      {
+        R: "firmaciv:rope_coil",
+        P: "tfc:metal/pickaxe_head/wrought_iron",
+        L: "#tfc:lamps"
+      }).id("coldsgrappler:grappler")
+      
 }
