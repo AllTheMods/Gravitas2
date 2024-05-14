@@ -423,4 +423,15 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //dripstone
 
   event.remove({ id: 'minecraft:dripstone_block'}) 
+
+  //ColdsGrappler
+  event.remove({ id: 'coldsgrappler:grappler'})
+  event.remove({ id: "coldsgrappler:extra_rope"})
+  event.remove({ id: "coldsgrappler:rope_light"})
+
+  //GT Rock breaker
+  event.remove({ output: "tfc:rock/raw/diorite", EUt: MV })
+  event.remove({ output: "tfc:rock/raw/andesite", EUt: MV })
+  event.remove({ output: "tfc:rock/raw/granite", EUt: MV })
+  event.remove({ output: "tfc:rock/raw/basalt", EUt: HV })
 }
