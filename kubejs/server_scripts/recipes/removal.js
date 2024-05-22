@@ -434,4 +434,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "tfc:rock/raw/andesite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/granite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/basalt", EUt: HV })
+
+  //TFCGroomer
+
+  event.remove({ id: `/^tfcgroomer:.*_grooming_station/`})
 }
