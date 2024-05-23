@@ -80,7 +80,17 @@ const createstonevanilla= [
   "tuff",
   "calcite"
 ]
-
+const baseTFCMetals = [
+  'bismuth_bronze',
+  'black_bronze',
+  "bronze",
+  "copper",
+  "wrought_iron",
+  "steel",
+  "black_steel",
+  "blue_steel",
+  "red_steel"
+]
 const jams = [
   "blackberry",
   "blueberry",
@@ -881,9 +891,6 @@ event.recipes.gtceu.chemical_reactor('hydrofluorite')
 event.recipes.gtceu.compressor('yellow_cake')
   .itemInputs(
     '#forge:dusts/uranium_235'
-  )
-  .inputFluids(
-    Fluid.of("gtceu:distilled_water", 100)
   )
   .itemOutputs(
     'thoriumreactors:yellow_cake'
@@ -2184,4 +2191,11 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
         L: "#tfc:lamps"
       }).id("coldsgrappler:grappler")
       
-}
+      baseTFCMetals.forEach((metal) => {
+        event.recipes.kubejs.shaped(`tfcgroomer:${metal}_grooming_station`, ["PHP", "PPP", "W W"], {
+          P: `#forge:plates/${metal}`,
+          H: `#forge:tools/hammers`,
+          W: `tfc:wattle`
+        }).damageIngredient(["#forge:tools/hammers"]).id(`tfcgroomer:${metal}_grooming_station`)
+      })
+    }

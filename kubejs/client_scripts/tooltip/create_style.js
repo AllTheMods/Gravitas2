@@ -1115,4 +1115,19 @@ const addExtraCreateTooltips = (event) => {
                 .build()
         )
     }
+
+    /* MISC INFO */ {
+        event.addAll(
+            createTooltip("immersiveengineering:hammer")
+                .addSummary("Immersive Engineering _Default Multiblocks_ have been _Disabled_")
+                .addBehaviour([
+                    "Whitelisted Multiblocks",
+                    "Beamhouse" + FakeNewLine +
+                    "Grist Mill" + FakeNewLine +
+                    "Power Loom" + FakeNewLine +
+                    "Thresher"
+                ])
+                .build()
+        )
+    }
 }

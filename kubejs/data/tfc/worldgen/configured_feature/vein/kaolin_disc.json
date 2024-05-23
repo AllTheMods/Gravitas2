@@ -11,14 +11,15 @@
     "biomes": "#tfc:kaolin_clay_spawns_in",
     "blocks": [],
     "indicator": {
-      "rarity": 12,
-      "depth": 5,
+      "depth": 35,
+      "spread": 5,
+      "rarity": 10,
       "underground_rarity": 1,
-      "underground_count": 3,
+      "underground_count": 0,
       "blocks": [
-        {
-          "block": "tfc:rock/loose/marble"
-        }
+          {
+              "block": "tfc:plant/blood_lily"
+          }
       ]
     }
   }

@@ -368,9 +368,21 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "sfm:printing_form"})
 
   //I&F
-  event.remove({ id: `/^iceandfire:.*silver.*/`})
+  event.remove({ id: `/^iceandfire:armor_silver_metal.*/`})
+  event.remove({ id: "iceandfire:silver_sword"})
+  event.remove({ id: "iceandfire:silver_shovel"})
+  event.remove({ id: "iceandfire:silver_pickaxe"})
+  event.remove({ id: "iceandfire:silver_axe"})
+  event.remove({ id: "iceandfire:silver_hoe"})
 
-  event.remove({ id: `/^iceandfire:.*copper.*/`})
+  event.remove({ id: `/^iceandfire:armor_copper_metal.*/`})
+  event.remove({ id: "iceandfire:copper_sword"})
+  event.remove({ id: "iceandfire:copper_shovel"})
+  event.remove({ id: "iceandfire:copper_pickaxe"})
+  event.remove({ id: "iceandfire:copper_axe"})
+  event.remove({ id: "iceandfire:copper_hoe"})
+  
+
   event.remove({ id: `/^iceandfire:.*_pile/`})
   
   //CHALK
@@ -434,4 +446,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "tfc:rock/raw/andesite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/granite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/basalt", EUt: HV })
+
+  //TFCGroomer
+
+  event.remove({ id: `/^tfcgroomer:.*_grooming_station/`})
 }
