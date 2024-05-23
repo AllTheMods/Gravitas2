@@ -892,9 +892,6 @@ event.recipes.gtceu.compressor('yellow_cake')
   .itemInputs(
     '#forge:dusts/uranium_235'
   )
-  .inputFluids(
-    Fluid.of("gtceu:distilled_water", 100)
-  )
   .itemOutputs(
     'thoriumreactors:yellow_cake'
   )
