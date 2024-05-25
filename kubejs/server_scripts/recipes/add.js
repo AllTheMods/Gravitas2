@@ -826,7 +826,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   .itemOutputs(
     'thoriumreactors:blasted_stone'
   )
-  .duration(150)
+  .duration(320)
   .EUt(EV)
      
 event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
@@ -837,17 +837,17 @@ event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
   .itemOutputs(
     'thoriumreactors:blasted_iron_ingot'
   )
-  .duration(150)
+  .duration(400)
   .EUt(EV)
   
 event.recipes.gtceu.autoclave('enriched_uranium_pellet')
   .inputFluids(
-    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 500)
   )
   .itemOutputs(
     'thoriumreactors:enriched_uranium'
   )
-  .duration(3000)
+  .duration(1000)
   .EUt(EV)
 
 event.recipes.gtceu.centrifuge('enriched_uranium_hexafluorite')
@@ -857,7 +857,7 @@ event.recipes.gtceu.centrifuge('enriched_uranium_hexafluorite')
   .outputFluids(
     Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 1000)
   )
-  .duration(3000)
+  .duration(500)
   .EUt(EV)
   .cleanroom(CleanroomType.CLEANROOM)
 
@@ -866,7 +866,7 @@ event.recipes.gtceu.chemical_reactor('enriched_uranium_hexafluorite')
   'thoriumreactors:yellow_cake'
   )
   .inputFluids(
-    Fluid.of("thoriumreactors:hydrofluorite", 1000)
+    Fluid.of("thoriumreactors:hydrofluorite", 500)
   )
   .outputFluids(
     Fluid.of("thoriumreactors:uranium_hexafluorite", 500)
@@ -880,10 +880,10 @@ event.recipes.gtceu.chemical_reactor('hydrofluorite')
   '#forge:dusts/fluorite'
   )
   .inputFluids(
-    Fluid.of("gtceu:distilled_water", 100)
+    Fluid.of("gtceu:distilled_water", 250)
   )
   .outputFluids(
-    Fluid.of("thoriumreactors:hydrofluorite", 100)
+    Fluid.of("thoriumreactors:hydrofluorite", 250)
   )
   .duration(100)
   .EUt(EV)
@@ -895,7 +895,7 @@ event.recipes.gtceu.compressor('yellow_cake')
   .itemOutputs(
     'thoriumreactors:yellow_cake'
   )
-  .duration(2400)
+  .duration(1000)
   .EUt(EV)
   .cleanroom(CleanroomType.CLEANROOM)
   
@@ -1093,6 +1093,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_empty')
 )
 .duration(200)
 .EUt(HV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_io')
 .itemInputs(
   'thoriumreactors:module_empty',
@@ -1105,6 +1106,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_io')
 )
 .duration(200)
 .EUt(EV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_energy')
 .itemInputs(
   'thoriumreactors:module_empty',
@@ -1117,6 +1119,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_energy')
 )
 .duration(200)
 .EUt(EV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_storage')
 .itemInputs(
   'thoriumreactors:module_empty',
@@ -1128,6 +1131,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_storage')
 )
 .duration(200)
 .EUt(EV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_tank')
 .itemInputs(
   'thoriumreactors:module_empty',
@@ -1139,6 +1143,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_tank')
 )
 .duration(200)
 .EUt(EV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_sensor')
 .itemInputs(
   'thoriumreactors:module_empty',
@@ -1151,6 +1156,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_sensor')
 )
 .duration(200)
 .EUt(EV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:module_processing')
 .itemInputs(
   'thoriumreactors:module_empty',
@@ -1162,20 +1168,33 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_processing')
 )
 .duration(200)
 .EUt(EV)
+
+event.recipes.gtceu.assembler('vintageimprovements:redstone_module')
+.itemInputs(
+  '#forge:plates/gold',
+  'minecraft:repeater',
+  '#forge:gems/nether_quartz',
+  '#forge:nuggets/iron'
+)
+.itemOutputs(
+  'vintageimprovements:redstone_module'
+)
+.duration(120)
+.EUt(HV)
+	
 event.recipes.gtceu.circuit_assembler('thoriumreactors:redstone_processor')
 .itemInputs(
   'gtceu:lpic_chip',
-  'create_new_age:copper_circuit',
+  'gtceu:circuits/mv',
   'vintageimprovements:redstone_module',
-  '#forge:plates/redstone',
-  'create:content_observer'
+  '#forge:plates/redstone'
 )
 .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
 .itemOutputs(
   'thoriumreactors:redstone_processor'
 )
 .duration(200)
-.EUt(MV)
+.EUt(HV)
 
 //ThoriumReactors Phase 4
 event.recipes.gtceu.assembler('thoriumreactors:turbine_casing')
