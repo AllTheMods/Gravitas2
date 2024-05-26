@@ -928,15 +928,15 @@ event.recipes.gtceu.mixer('molten_salt_from_depleted')
 //Torium Reactors Temporary(?) Recipe to Get fluorite
 event.recipes.gtceu.autoclave('fluorite')
   .itemInputs(
-    '#forge:dusts/calcium'
+    '4x #forge:dusts/calcium'
   )
   .inputFluids(
-    Fluid.of("gtceu:fluorine", 2000)
+    Fluid.of("gtceu:fluorine", 1000)
   )
   .itemOutputs(
-    '3x gcyr:fluorite_gem'
+    '2x gcyr:fluorite_gem'
   )
-  .duration(400)
+  .duration(300)
   .EUt(EV)
 //Thorium Reactors Recipes Phase 2
 
