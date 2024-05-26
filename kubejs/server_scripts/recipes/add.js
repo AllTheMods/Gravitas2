@@ -936,7 +936,7 @@ event.recipes.gtceu.autoclave('fluorite')
   .itemOutputs(
     '3x gcyr:fluorite_gem'
   )
-  .duration(800)
+  .duration(400)
   .EUt(EV)
 //Thorium Reactors Recipes Phase 2
 
