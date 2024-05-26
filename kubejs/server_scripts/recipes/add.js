@@ -1338,7 +1338,7 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
 .EUt(EV)
 
 //ThoriumReactors Phase 5
-event.recipes.gtceu.autoclave('enriched_uranium_pellet')
+event.recipes.gtceu.autoclave('enriched_uranium_pellet_2')
 .itemInputs(
   'thoriumreactors:depleted_uranium'
 )
@@ -1348,7 +1348,7 @@ event.recipes.gtceu.autoclave('enriched_uranium_pellet')
   .itemOutputs(
     'thoriumreactors:enriched_uranium'
   )
-  .duration(1000)
+  .duration(600)
   .EUt(EV)
 
 //ThoriumReactors End
