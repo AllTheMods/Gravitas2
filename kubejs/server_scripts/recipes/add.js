@@ -1337,6 +1337,20 @@ event.recipes.gtceu.assembler('thoriumreactors:electromagnetic_coil')
 .duration(160)
 .EUt(EV)
 
+//ThoriumReactors Phase 5
+event.recipes.gtceu.autoclave('enriched_uranium_pellet')
+.itemInputs(
+  'thoriumreactors:depleted_uranium'
+)
+.inputFluids(
+  Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 100)
+  )
+  .itemOutputs(
+    'thoriumreactors:enriched_uranium'
+  )
+  .duration(1000)
+  .EUt(EV)
+
 //ThoriumReactors End
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
