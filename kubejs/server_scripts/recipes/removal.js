@@ -437,17 +437,36 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'minecraft:dripstone_block'}) 
 
   //ColdsGrappler
+  
   event.remove({ id: 'coldsgrappler:grappler'})
   event.remove({ id: "coldsgrappler:extra_rope"})
   event.remove({ id: "coldsgrappler:rope_light"})
 
   //GT Rock breaker
+  
   event.remove({ output: "tfc:rock/raw/diorite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/andesite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/granite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/basalt", EUt: HV })
 
   //TFCGroomer
-
+  
   event.remove({ id: `/^tfcgroomer:.*_grooming_station/`})
+
+  //Thorium Reactors
+
+  event.remove({ id: 'thoriumreactors:generator_block'})
+  event.remove({ id: 'thoriumreactors:fluid_evaporation_block'})
+  event.remove({ id: 'thoriumreactors:electrolytic_salt_separator'})
+  event.remove({ id: 'thoriumreactors:salt_melter_block'})
+  event.remove({ id: 'thoriumreactors:concentrator_block'})
+  event.remove({ id: 'thoriumreactors:decomposer_block'})
+  event.remove({ id: 'thoriumreactors:uranium_oxidizer_block'})
+  event.remove({ id: 'thoriumreactors:fluid_centrifuge_block'})
+  event.remove({ id: 'thoriumreactors:crystallizer_block'})
+  event.remove({ id: 'thoriumreactors:blast_furance_block'})
+  event.remove({ id: 'thoriumreactors:fluid_enricher_block'})
+  event.remove({ id: 'thoriumreactors:sodium'})
+  event.remove({ id: 'thoriumreactors:potassium'})
+  
 }
