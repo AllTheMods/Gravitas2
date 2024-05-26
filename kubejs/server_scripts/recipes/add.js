@@ -826,7 +826,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   .itemOutputs(
     'thoriumreactors:blasted_stone'
   )
-  .duration(320)
+  .duration(400)
   .EUt(EV)
      
 event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
@@ -837,7 +837,7 @@ event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
   .itemOutputs(
     'thoriumreactors:blasted_iron_ingot'
   )
-  .duration(400)
+  .duration(800)
   .EUt(EV)
   
 event.recipes.gtceu.autoclave('enriched_uranium_pellet')
@@ -895,7 +895,7 @@ event.recipes.gtceu.compressor('yellow_cake')
   .itemOutputs(
     'thoriumreactors:yellow_cake'
   )
-  .duration(1000)
+  .duration(600)
   .EUt(EV)
   .cleanroom(CleanroomType.CLEANROOM)
   
@@ -1171,7 +1171,7 @@ event.recipes.gtceu.circuit_assembler('thoriumreactors:module_processing')
 
 event.recipes.gtceu.assembler('vintageimprovements:redstone_module')
 .itemInputs(
-  '#forge:plates/gold',
+  'gtceu:gold_plate',
   'minecraft:repeater',
   '#forge:gems/nether_quartz',
   '#forge:nuggets/iron'
@@ -1185,7 +1185,7 @@ event.recipes.gtceu.assembler('vintageimprovements:redstone_module')
 event.recipes.gtceu.circuit_assembler('thoriumreactors:redstone_processor')
 .itemInputs(
   'gtceu:lpic_chip',
-  'gtceu:circuits/mv',
+  '#gtceu:circuits/mv',
   'vintageimprovements:redstone_module',
   '#forge:plates/redstone'
 )
