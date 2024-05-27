@@ -299,4 +299,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
   event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
+
+  //Thorium Reactors
+  event.removeAllTagsFrom('thoriumreactors:fluorite')
 }
