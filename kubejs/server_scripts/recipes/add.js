@@ -926,7 +926,7 @@ event.recipes.gtceu.fluid_heater('molten_salt')
   .outputFluids(
     Fluid.of("thoriumreactors:molten_salt", 200)
   )
-  .duration(800)
+  .duration(400)
   .EUt(EV)
 
 event.recipes.gtceu.fluid_heater('molten_salt_from_depleted')
