@@ -903,15 +903,12 @@ event.recipes.gtceu.chemical_reactor('hydrofluorite')
   .duration(100)
   .EUt(EV)
 
-event.recipes.gtceu.autoclave('yellow_cake')
+event.recipes.gtceu.compressor('yellow_cake')
   .itemInputs(
-    'thoriumreactors:uran_three_chloride'
+    'gregitas:triuranium_octoxide'
   )
   .itemOutputs(
-    'thoriumreactors:yellow_cake'
-  )
-  .outputFluids(
-    Fluid.of("gtceu:chlorine", 3000)
+    '3x thoriumreactors:yellow_cake'
   )
   .duration(200)
   .EUt(EV)
@@ -1411,18 +1408,19 @@ event.recipes.gtceu.autoclave('enriched_uranium_pellet_2')
   .duration(600)
   .EUt(EV)
 
-event.recipes.gtceu.chemical_reactor('uran3_chloride')
+event.recipes.gtceu.centrifuge('triuranium_octoxide')
   .itemInputs(
-    'gtceu:uranium_235_dust'
+    '3x gtceu:uranium_235_dust'
   )
   .inputFluids(
-    Fluid.of("gtceu:hydrochloric_acid", 3000)
+    Fluid.of("gtceu:sulfuric_acid", 2000)
   )
   .itemOutputs(
-    'thoriumreactors:uran_three_chloride'
+    'gregitas:triuranium_octoxide',
+	'gtceu:sulfur_dust'
   )
   .outputFluids(
-    Fluid.of("gtceu:hydrogen", 3000)
+    Fluid.of("gtceu:hydrogen", 2000)
   )
   .duration(160)
   .EUt(EV)
