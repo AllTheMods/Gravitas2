@@ -1417,10 +1417,10 @@ event.recipes.gtceu.centrifuge('triuranium_octoxide')
   )
   .itemOutputs(
     'gregitas:triuranium_octoxide',
-	'gtceu:sulfur_dust'
+    '2x gtceu:sulfur_dust'
   )
   .outputFluids(
-    Fluid.of("gtceu:hydrogen", 2000)
+    Fluid.of("gtceu:hydrogen", 4000)
   )
   .duration(160)
   .EUt(EV)
