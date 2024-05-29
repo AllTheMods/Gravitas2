@@ -387,7 +387,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.deploying(`precisionprospecting:ceramic/unfired_${mold}_mold`,['minecraft:clay_ball', `precisionprospecting:ceramic/${mold}_mold`]).keepHeldItem().id(`gregitas:deploying/unfired_${mold}_mold`)
   }) 
   event.recipes.create.deploying(`tfcchannelcasting:unfired_heart_mold`,['minecraft:clay_ball', `tfcchannelcasting:heart_mold`]).keepHeldItem().id(`gregitas:deploying/unfired_heart_mold`)
-  
+  event.recipes.create.deploying('tfc:ceramic/unfired_fire_brick', ['tfc:fire_clay', 'tfc:ceramic/ingot_mold']).keepHeldItem().id('gregitas:deploying/unfired_fire_brick')
+
   colorMap.forEach((color) => {
     event.custom({
       type: "tfc:barrel_sealed",
