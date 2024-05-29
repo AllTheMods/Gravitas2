@@ -22,6 +22,28 @@ const TFCSeeds = [
 
 
 ]
+const molds = [
+  "ingot",
+  "chisel_head",
+  "axe_head",
+  "hoe_head",
+  "pickaxe_head",
+  "propick_head",
+  "scythe_blade",
+  "shovel_head",
+  "sword_blade",
+  "hammer_head",
+  "saw_blade",
+  "javelin_head",
+  "mace_head",
+  "knife_blade",
+  "bell",
+]
+const proMolds = [
+  "prospector_hammer_head",
+  "prospector_drill_head",
+  "mineral_prospector_head"
+]
 const fish =[
   "tfc:food/cod",
   "tfc:food/salmon",
@@ -357,7 +379,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     }
   })
+  molds.forEach((mold) => {
+    event.recipes.create.deploying(`tfc:ceramic/unfired_${mold}_mold`,['minecraft:clay_ball', `tfc:ceramic/${mold}_mold`]).keepHeldItem().id(`gregitas:deploying/unfired_${mold}_mold`)
 
+  })
+  proMolds.forEach((mold) => {
+    event.recipes.create.deploying(`precisionprospecting:ceramic/unfired_${mold}_mold`,['minecraft:clay_ball', `precisionprospecting:ceramic/${mold}_mold`]).keepHeldItem().id(`gregitas:deploying/unfired_${mold}_mold`)
+  }) 
+  event.recipes.create.deploying(`tfcchannelcasting:unfired_heart_mold`,['minecraft:clay_ball', `tfcchannelcasting:heart_mold`]).keepHeldItem().id(`gregitas:deploying/unfired_heart_mold`)
+  
   colorMap.forEach((color) => {
     event.custom({
       type: "tfc:barrel_sealed",
