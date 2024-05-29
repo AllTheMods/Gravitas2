@@ -410,6 +410,7 @@ event.recipes.gtceu.extruder(`gregitas:fire_brick`)
 .EUt(LV)
 
 
+event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
 
   colorMap.forEach((color) => {
     event.custom({
