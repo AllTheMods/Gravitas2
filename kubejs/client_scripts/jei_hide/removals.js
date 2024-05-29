@@ -132,4 +132,5 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('thoriumreactors:potassium')
     event.hide('thoriumreactors:raw_uranium')
     event.hide('thoriumreactors:fluorite')
+    event.hide('thoriumreactors:uran_three_chloride')
 }
