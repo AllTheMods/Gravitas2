@@ -402,6 +402,15 @@ event.recipes.gtceu.extruder(`gregitas:molds/heart`)
 .duration(100)
 .EUt(LV)
 
+event.recipes.gtceu.extruder(`gregitas:fire_brick`)
+.itemInputs(`tfc:fire_clay`)
+.itemOutputs(`tfc:ceramic/unfired_fire_brick`)
+.notConsumable(`tfc:ceramic/ingot_mold`)
+.duration(100)
+.EUt(LV)
+
+
+
   colorMap.forEach((color) => {
     event.custom({
       type: "tfc:barrel_sealed",
