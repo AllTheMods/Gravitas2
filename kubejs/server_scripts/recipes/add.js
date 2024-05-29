@@ -380,7 +380,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     }
   })
   molds.forEach((mold) => {
-    event.recipes.gtceu.extruder(`gregitas:molds/${mold}`)
+    event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
     .itemInputs(`5x minecraft:clay_ball`)
     .itemOutputs(`tfc:ceramic/unfired_${mold}_mold`)
     .notConsumable(`tfc:ceramic/${mold}_mold`)
@@ -388,21 +388,21 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
   })
 proMolds.forEach((mold) => {
-  event.recipes.gtceu.extruder(`gregitas:molds/${mold}`)
+  event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
   .itemInputs(`5x minecraft:clay_ball`)
   .itemOutputs(`precisionprospecting:ceramic/unfired_${mold}_mold`)
   .notConsumable(`precisionprospecting:ceramic/${mold}_mold`)
   .duration(100)
   .EUt(LV)
 })
-event.recipes.gtceu.extruder(`gregitas:molds/heart`)
+event.recipes.gtceu.forming_press(`gregitas:molds/heart`)
 .itemInputs(`5x minecraft:clay_ball`)
 .itemOutputs(`tfcchannelcasting:unfired_heart_mold`)
 .notConsumable(`tfcchannelcasting:heart_mold`)
 .duration(100)
 .EUt(LV)
 
-event.recipes.gtceu.extruder(`gregitas:fire_brick`)
+event.recipes.gtceu.forming_press(`gregitas:fire_brick`)
 .itemInputs(`tfc:fire_clay`)
 .itemOutputs(`tfc:ceramic/unfired_fire_brick`)
 .notConsumable(`tfc:ceramic/ingot_mold`)
