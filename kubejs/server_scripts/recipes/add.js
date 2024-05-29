@@ -22,7 +22,28 @@ const TFCSeeds = [
 
 
 ]
-
+const molds = [
+  "ingot",
+  "chisel_head",
+  "axe_head",
+  "hoe_head",
+  "pickaxe_head",
+  "propick_head",
+  "scythe_blade",
+  "shovel_head",
+  "sword_blade",
+  "hammer_head",
+  "saw_blade",
+  "javelin_head",
+  "mace_head",
+  "knife_blade",
+  "bell",
+]
+const proMolds = [
+  "prospector_hammer_head",
+  "prospector_drill_head",
+  "mineral_prospector_head"
+]
 const fish =[
   "tfc:food/cod",
   "tfc:food/salmon",
@@ -358,7 +379,29 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     }
   })
-  
+  molds.forEach((mold) => {
+    event.recipes.gtceu.extruder(`gregitas:molds/${mold}`)
+    .itemInputs(`5x minecraft:clay_ball`)
+    .itemOutputs(`tfc:ceramic/unfired_${mold}_mold`)
+    .notConsumable(`tfc:ceramic/${mold}_mold`)
+    .duration(100)
+    .EUt(LV)
+  })
+proMolds.forEach((mold) => {
+  event.recipes.gtceu.extruder(`gregitas:molds/${mold}`)
+  .itemInputs(`5x minecraft:clay_ball`)
+  .itemOutputs(`precisionprospecting:ceramic/unfired_${mold}_mold`)
+  .notConsumable(`precisionprospecting:ceramic/${mold}_mold`)
+  .duration(100)
+  .EUt(LV)
+})
+event.recipes.gtceu.extruder(`gregitas:molds/heart`)
+.itemInputs(`5x minecraft:clay_ball`)
+.itemOutputs(`tfcchannelcasting:unfired_heart_mold`)
+.notConsumable(`tfcchannelcasting:heart_mold`)
+.duration(100)
+.EUt(LV)
+
   colorMap.forEach((color) => {
     event.custom({
       type: "tfc:barrel_sealed",
