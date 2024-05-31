@@ -298,10 +298,6 @@ const tfcCobbleToSand = [
       sand: 'yellow'
   },
   {
-      stone: 'quartzite',
-      sand: 'white'
-  },
-  {
       stone: 'slate',
       sand: 'yellow'
   },
