@@ -237,6 +237,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "woodencog:crafting/kinetics/belt_connector"})
   event.remove({ id: /^woodencog:deploying\/.*/, mod : "woodencog"})
   event.remove({ id: /^woodencog:heating\/.*_dough/, mod: "woodencog" })
+  event.remove({ id: /^woodencog:compacting\/.*/, mod: "woodencog" , input: "minecraft:clay_ball"})
+  event.remove({ id: /^woodencog:compacting\/.*/, mod: "woodencog" , input: "tfc:fire_clay"})
 
 
   // TreeTap
@@ -437,17 +439,69 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'minecraft:dripstone_block'}) 
 
   //ColdsGrappler
+  
   event.remove({ id: 'coldsgrappler:grappler'})
   event.remove({ id: "coldsgrappler:extra_rope"})
   event.remove({ id: "coldsgrappler:rope_light"})
 
   //GT Rock breaker
+  
   event.remove({ output: "tfc:rock/raw/diorite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/andesite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/granite", EUt: MV })
   event.remove({ output: "tfc:rock/raw/basalt", EUt: HV })
 
   //TFCGroomer
-
+  
   event.remove({ id: `/^tfcgroomer:.*_grooming_station/`})
+
+  //Thorium Reactors
+  
+  event.remove({ id: 'thoriumreactors:thorium_crafting/machine_casing'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_casing'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_controller'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_valve'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_control_rod'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_core'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_casing'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_constroller'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_power_port'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_valve'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_rotation_mount'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_vent'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/electromagnetic_coil'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/thermal_conductor'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/thermal_heat_controller'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/thermal_heat_valve'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/thermal_heatsink'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_glass'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_glass'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/reactor_graphite_moderator'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/turbine_rotor'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/configurator'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_empty'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_io'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_energy'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_storage'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_tank'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_sensor'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/module_processing'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/graphite_tube'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/redstone_processor'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/generator'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/fluid_evaporation'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/electrolytic_salt_separator'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/salt_melter'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/concentrator_block'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/decomposer_block'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/uranium_oxidizer_block'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/fluid_centrifuge'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/crystallizer'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/blast_furnace'})
+  event.remove({ id: 'thoriumreactors:thorium_crafting/fluid_enricher'})
+  event.remove({ id: 'thoriumreactors:evaporating/sodium'})
+  event.remove({ id: 'thoriumreactors:electrolysing/potassium'})
+  event.remove({ id: 'thoriumreactors:concentrating/yellow_cake'})
+  event.remove({ id: 'thoriumreactors:crystallizing/enriched_uranium_pellet'})
+  
 }

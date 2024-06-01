@@ -119,7 +119,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     modifiedResult = Item.of(modifiedResult, 6)
     r.results(modifiedResult)
   })
-
+event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/cobble/quartzite", "tfc:rock/raw/quartzite")
 
   //Functional Storage
   event.replaceInput(
