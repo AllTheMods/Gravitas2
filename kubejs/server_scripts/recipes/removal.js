@@ -218,8 +218,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ type: "integrateddynamics:drying_basin", output: "minecraft:leather"})
   event.remove({ type: "integrateddynamics:mechanical_drying_basin", output: "minecraft:leather"})
   event.remove({ id: "integrateddynamics:special/part_connector_omni_directional" })
-  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional_copy" })
-  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional_join" })
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
