@@ -917,12 +917,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(200)
             .EUt(MV)
 
-      //  event.recipes.gtceu.wiremill('gregitas:morered_wire')
-      //      .circuit(3)
-      //      .itemInputs('gtceu:red_alloy_ingot')
-      //      .itemOutputs('4x morered:red_alloy_wire')
-      //      .duration(40)
-      //      .EUt(ULV)
+        event.recipes.gtceu.wiremill('gregitas:morered_wire')
+            .itemInputs('gtceu:red_alloy_ingot')
+            .circuit(5)
+            .itemOutputs('4x morered:red_alloy_wire')
+            .duration(40)
+            .EUt(ULV)
          
     //honey
 
@@ -941,26 +941,41 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(100)
             .EUt(ULV)
 
-    //integrated omni
+    //integrated omni/mono
 
         event.recipes.gtceu.assembler('gregitas:omni_directional')
             .itemInputs(
-                '16x ae2:quantum_ring',
-                '2x ae2:quantum_link',
-                'ae2wtlib:quantum_bridge_card',
-                '32x integrateddynamics:logic_director'
+                '8x #gtceu:circuits/luv',
+                '4x gtceu:ev_machine_hull',
+                '4x gtceu:iv_field_generator',
+                '32x gtceu:hpic_chip',
+                '6x integrateddynamics:part_connector_mono_directional'
                 )
             .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
             .itemOutputs('2x integrateddynamics:part_connector_omni_directional')
             .duration(200)
             .EUt(IV)
 
+        event.recipes.gtceu.assembler('gregitas:mono_directional')
+            .itemInputs(
+                '4x #gtceu:circuits/ev',
+                '2x gtceu:hv_machine_hull',
+                '2x gtceu:hv_field_generator',
+                '16x gtceu:lpic_chip',
+                '16x integrateddynamics:logic_director'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('2x integrateddynamics:part_connector_mono_directional')
+            .duration(200)
+            .EUt(HV)
+
     //temporary rocket related recipes until there are proper ones
+
 
         event.recipes.gtceu.assembler('gregitas:advanced_fuel_tank')
             .itemInputs(
                 '4x gcyr:basic_fuel_tank',
-                'gtceu:tungsten_steel_frame',
+                '2x gtceu:titanium_frame',
                 )
             .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
             .itemOutputs('gcyr:advanced_fuel_tank')
@@ -970,27 +985,12 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.assembler('gregitas:advanced_rocket_motor')
             .itemInputs(
                 '4x gcyr:basic_rocket_motor',
-                'gtceu:tungsten_steel_frame',
+                '2x gtceu:titanium_frame',
                 )
             .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
             .itemOutputs('gcyr:advanced_rocket_motor')
             .duration(200)
             .EUt(EV)
-
-        event.recipes.gtceu.fluid_heater('gregitas:salt_water_evaporate')
-            .inputFluids(Fluid.of(`gtceu:salt_water`, 16000))
-            .outputFluids(Fluid.of('gcyr:raw_brine', 1000))
-            .duration(1000)
-            .EUt(HV)
-
-        event.recipes.gtceu.centrifuge('gregitas:brine_seperation')
-            .inputFluids(Fluid.of('gcyr:raw_brine',1000))
-            .itemOutputs('20x gtceu:salt_dust')
-            .itemOutputs('3x gtceu:magnesium_dust')
-            .itemOutputs('2x gtceu:lithium_dust')
-            .outputFluids(Fluid.of('gtceu:bromine', 33))
-            .duration(200)
-            .EUt(HV)
 
         event.recipes.gtceu.chemical_reactor('gregitas:potassium_carbonate')
             .itemInputs('2x gtceu:potassium_dust')
@@ -1007,6 +1007,15 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(40)
             .EUt(LV)
 
+        event.recipes.gtceu.large_chemical_reactor('gregitas:co_mn_br_catalyst')
+            .inputFluids(Fluid.of('gcyr:cobalt_bromide',1000))
+            .inputFluids(Fluid.of('gcyr:manganese_bromide',1000))
+            .inputFluids(Fluid.of('gcyr:manganese_acetate',1000))
+            .inputFluids(Fluid.of('gcyr:hydrobromic_acid',1000))
+            .outputFluids(Fluid.of('gcyr:co_mn_br_catalyst', 4000))
+            .duration(100)
+            .EUt(HV)
+
     //stuff
 
         event.recipes.gtceu.chemical_reactor('gregitas:sodium_hydroxide')
@@ -1022,6 +1031,24 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .inputFluids(Fluid.of('gtceu:sulfuric_acid',1000))
             .itemOutputs('7x gtceu:sodium_bisulfate_dust')
             .duration(60)
+            .EUt(LV)
+
+    //wrought iron anvil
+
+        event.recipes.gtceu.fluid_solidifier('gregitas:wrought_iron_anvil')
+            .notConsumable('gtceu:anvil_casting_mold')
+            .inputFluids(Fluid.of('gtceu:wrought_iron',2016))
+            .itemOutputs('tfc:metal/anvil/wrought_iron')
+            .duration(400)
+            .EUt(LV)
+
+    //amethyst conversion (cut amethyst only has 1 source as of adding, from tfc ore)
+
+        event.recipes.gtceu.laser_engraver("gregitas:cut_amethyst_conversion")
+            .itemInputs('minecraft:amethyst_shard')
+            .notConsumable('gtceu:purple_glass_lens')
+            .itemOutputs('tfc:gem/amethyst')
+            .duration(100)
             .EUt(LV)
       
     //wool
