@@ -747,7 +747,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
       .itemOutputs(`16x tfc:food/${seed}`, `16x tfc:food/${seed}`, `32x tfc:seeds/${seed}`, `32x tfc:seeds/${seed}`)
       .duration(480)
       .EUt(HV)
-      .cleanroom(CleanroomType.CLEANROOM)
   })
   event.recipes.gtceu
   .greenhouse(`gregitas:pumpkin_boosted`)
@@ -2341,6 +2340,14 @@ event.recipes.gtceu.mixer('raw_thorium')
     )
     .duration(50)
     .EUt(HV)
+
+   //create radiator fan
+
+    shaped("railways:smokestack_diesel", [" T ", "TET", " T "],
+      {
+          T: "gtceu:iron_plate",
+          E: "create:propeller",
+      })
 	
 	 //straw hat
 	 

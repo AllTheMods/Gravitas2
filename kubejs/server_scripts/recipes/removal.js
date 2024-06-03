@@ -218,6 +218,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ type: "integrateddynamics:drying_basin", output: "minecraft:leather"})
   event.remove({ type: "integrateddynamics:mechanical_drying_basin", output: "minecraft:leather"})
   event.remove({ id: "integrateddynamics:special/part_connector_omni_directional" })
+  event.remove({ id: "integrateddynamics:crafting/part_connector_mono_directional" })
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
@@ -452,6 +453,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //TFCGroomer
   
   event.remove({ id: `/^tfcgroomer:.*_grooming_station/`})
+
+  //gcyr
+
+  event.remove({ id: 'gcyr:mixer/co_mn_br_catalyst'})
+  event.remove({ id: 'gcyr:create_mixer/co_mn_br_catalyst'}) 
 
   //Thorium Reactors
   
