@@ -242,6 +242,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap" })
+  event.remove({ id: "treetap:water_from_crying_obsidian" })
 
   // Immersive Engineering
 
