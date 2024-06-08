@@ -330,4 +330,361 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   //Thorium Reactors
   event.removeAllTagsFrom('thoriumreactors:fluorite')
+  
+  event.removeAllTagsFrom('thoriumreactors:steel_ingot')
+  event.removeAllTagsFrom('thoriumreactors:nickel_ingot')
+  event.removeAllTagsFrom('thoriumreactors:aluminum_ingot')
+  event.removeAllTagsFrom('thoriumreactors:uranium_ingot')
+  event.removeAllTagsFrom('thoriumreactors:steel_ingot')
+  
+  
+  event.removeAllTagsFrom('thoriumreactors:steel_nugget')
+  event.removeAllTagsFrom('thoriumreactors:nickel_nugget')
+  event.removeAllTagsFrom('thoriumreactors:aluminum_nugget')
+  event.removeAllTagsFrom('thoriumreactors:uranium_nugget')
+  event.removeAllTagsFrom('thoriumreactors:steel_nugget')
+  
+  //Minecraft
+  event.removeAllTagsFrom('minecraft:copper_ingot')
+  event.removeAllTagsFrom('minecraft:gold_ingot')
+  
+  //Railcraft
+  event.removeAllTagsFrom('railcraft:brass_ingot')
+  event.removeAllTagsFrom('railcraft:lead_ingot')
+  event.removeAllTagsFrom('railcraft:nickel_ingot')
+  event.removeAllTagsFrom('railcraft:silver_ingot')
+  event.removeAllTagsFrom('railcraft:tin_ingot')
+  event.removeAllTagsFrom('railcraft:zinc_ingot')
+  event.removeAllTagsFrom('railcraft:steel_ingot')
+  event.removeAllTagsFrom('railcraft:invar_ingot')
+  event.removeAllTagsFrom('railcraft:bronze_ingot')
+  
+  event.removeAllTagsFrom('railcraft:brass_nugget')
+  event.removeAllTagsFrom('railcraft:lead_nugget')
+  event.removeAllTagsFrom('railcraft:nickel_nugget')
+  event.removeAllTagsFrom('railcraft:silver_nugget')
+  event.removeAllTagsFrom('railcraft:tin_nugget')
+  event.removeAllTagsFrom('railcraft:zinc_nugget')
+  event.removeAllTagsFrom('railcraft:steel_nugget')
+  event.removeAllTagsFrom('railcraft:invar_nugget')
+  event.removeAllTagsFrom('railcraft:bronze_nugget')
+  
+  event.removeAllTagsFrom('alltheores:brass_plate')
+  event.removeAllTagsFrom('alltheores:lead_plate')
+  event.removeAllTagsFrom('alltheores:nickel_plate')
+  event.removeAllTagsFrom('alltheores:silver_plate')
+  event.removeAllTagsFrom('alltheores:tin_plate')
+  event.removeAllTagsFrom('alltheores:zinc_plate')
+  event.removeAllTagsFrom('alltheores:steel_plate')
+  event.removeAllTagsFrom('alltheores:invar_plate')
+  event.removeAllTagsFrom('alltheores:bronze_plate')
+  event.removeAllTagsFrom('alltheores:iron_plate')
+  event.removeAllTagsFrom('alltheores:gold_plate')
+  event.removeAllTagsFrom('alltheores:copper_plate')
+  
+  //Ice and Fire
+  event.removeAllTagsFrom('iceandfire:silver_ingot')
+  
+  event.removeAllTagsFrom('iceandfire:silver_nugget')
+  event.removeAllTagsFrom('iceandfire:copper_nugget')
+  
+  //All The Ores
+  event.removeAllTagsFrom('alltheores:aluminum_ingot')
+  event.removeAllTagsFrom('alltheores:iridium_ingot')
+  event.removeAllTagsFrom('alltheores:lead_ingot')
+  event.removeAllTagsFrom('alltheores:nickel_ingot')
+  event.removeAllTagsFrom('alltheores:osmium_ingot')
+  event.removeAllTagsFrom('alltheores:platinum_ingot')
+  event.removeAllTagsFrom('alltheores:silver_ingot')
+  event.removeAllTagsFrom('alltheores:tin_ingot')
+  event.removeAllTagsFrom('alltheores:uranium_ingot')
+  event.removeAllTagsFrom('alltheores:zinc_ingot')
+  event.removeAllTagsFrom('alltheores:steel_ingot')
+  event.removeAllTagsFrom('alltheores:invar_ingot')
+  event.removeAllTagsFrom('alltheores:electrum_ingot')
+  event.removeAllTagsFrom('alltheores:bronze_ingot')
+  event.removeAllTagsFrom('alltheores:brass_ingot')
+  event.removeAllTagsFrom('alltheores:constantan_ingot')							            //added by IE
+  //event.removeAllTagsFrom('alltheores:enderium_ingot')							            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:lumium_ingot')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:signalum_ingot')							            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_ingot')							            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_allthemodium_alloy_ingot')		  might be added in the future?
+  //event.removeAllTagsFrom('alltheores:unobtainium_vibranium_alloy_ingot')			  might be added in the future?
+  //event.removeAllTagsFrom('alltheores:unobtainium_allthemodium_alloy_ingot')		might be added in the future?
+  event.removeAllTagsFrom('alltheores:allthemodium_ingot')
+  event.removeAllTagsFrom('alltheores:unobtainium_ingot')
+
+  event.removeAllTagsFrom('alltheores:aluminum_nugget')
+  event.removeAllTagsFrom('alltheores:iridium_nugget')
+  event.removeAllTagsFrom('alltheores:lead_nugget')
+  event.removeAllTagsFrom('alltheores:nickel_nugget')
+  event.removeAllTagsFrom('alltheores:osmium_nugget')
+  event.removeAllTagsFrom('alltheores:platinum_nugget')
+  event.removeAllTagsFrom('alltheores:silver_nugget')
+  event.removeAllTagsFrom('alltheores:tin_nugget')
+  event.removeAllTagsFrom('alltheores:uranium_nugget')
+  event.removeAllTagsFrom('alltheores:zinc_nugget')
+  event.removeAllTagsFrom('alltheores:steel_nugget')
+  event.removeAllTagsFrom('alltheores:invar_nugget')
+  event.removeAllTagsFrom('alltheores:electrum_nugget')
+  event.removeAllTagsFrom('alltheores:bronze_nugget')
+  event.removeAllTagsFrom('alltheores:copper_nugget')
+  event.removeAllTagsFrom('alltheores:brass_nugget')
+  event.removeAllTagsFrom('alltheores:constantan_nugget')							            //added by IE
+  //event.removeAllTagsFrom('alltheores:enderium_nugget')							            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:lumium_nugget')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:signalum_nugget')							            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_nugget')							          might be added in the future?
+  event.removeAllTagsFrom('alltheores:unobtainium_nugget')
+  event.removeAllTagsFrom('alltheores:allthemodium_nugget')
+
+  event.removeAllTagsFrom('alltheores:aluminum_dust')
+  event.removeAllTagsFrom('alltheores:iridium_dust')
+  event.removeAllTagsFrom('alltheores:lead_dust')
+  event.removeAllTagsFrom('alltheores:nickel_dust')
+  event.removeAllTagsFrom('alltheores:osmium_dust')
+  event.removeAllTagsFrom('alltheores:platinum_dust')
+  event.removeAllTagsFrom('alltheores:silver_dust')
+  event.removeAllTagsFrom('alltheores:tin_dust')
+  event.removeAllTagsFrom('alltheores:uranium_dust')
+  event.removeAllTagsFrom('alltheores:zinc_dust')
+  event.removeAllTagsFrom('alltheores:steel_dust')
+  event.removeAllTagsFrom('alltheores:invar_dust')
+  event.removeAllTagsFrom('alltheores:electrum_dust')
+  event.removeAllTagsFrom('alltheores:bronze_dust')
+  event.removeAllTagsFrom('alltheores:brass_dust')
+  event.removeAllTagsFrom('alltheores:copper_gear')
+  event.removeAllTagsFrom('alltheores:iron_dust')
+  event.removeAllTagsFrom('alltheores:gold_dust')
+  event.removeAllTagsFrom('alltheores:diamond_dust')
+  event.removeAllTagsFrom('alltheores:constantan_dust')								            //added by IE
+  //event.removeAllTagsFrom('alltheores:enderium_dust')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:lumium_dust')								              might be added in the future?
+  //event.removeAllTagsFrom('alltheores:signalum_dust')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:peridot_dust')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_dust')							            might be added in the future?			
+  event.removeAllTagsFrom('alltheores:allthemodium_dust')
+  event.removeAllTagsFrom('alltheores:unobtainium_dust')
+
+  
+  event.removeAllTagsFrom('alltheores:aluminum_gear')
+  event.removeAllTagsFrom('alltheores:iridium_gear')
+  event.removeAllTagsFrom('alltheores:lead_gear')
+  event.removeAllTagsFrom('alltheores:nickel_gear')
+  event.removeAllTagsFrom('alltheores:osmium_gear')
+  event.removeAllTagsFrom('alltheores:platinium_gear')
+  event.removeAllTagsFrom('alltheores:silver_gear')
+  event.removeAllTagsFrom('alltheores:tin_gear')
+  event.removeAllTagsFrom('alltheores:uranium_gear')
+  event.removeAllTagsFrom('alltheores:zinc_gear')
+  event.removeAllTagsFrom('alltheores:steel_gear')
+  event.removeAllTagsFrom('alltheores:invar_gear')
+  event.removeAllTagsFrom('alltheores:electrum_gear')
+  event.removeAllTagsFrom('alltheores:bronze_gear')
+  event.removeAllTagsFrom('alltheores:brass_dust')
+  event.removeAllTagsFrom('alltheores:copper_gear')
+  event.removeAllTagsFrom('alltheores:iron_gear')
+  event.removeAllTagsFrom('alltheores:gold_gear')
+  event.removeAllTagsFrom('alltheores:diamond_gear')
+  //event.removeAllTagsFrom('alltheores:constantan_gear')							          not currently added by IE/GT
+  //event.removeAllTagsFrom('alltheores:enderium_gear')								          might be added in the future?
+  //event.removeAllTagsFrom('alltheores:lumium_gear')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:signalum_gear')							           	might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_gear')						          	might be added in the future?
+  event.removeAllTagsFrom('alltheores:allthemodium_gear')
+  event.removeAllTagsFrom('alltheores:unobtainium_gear')
+
+
+  event.removeAllTagsFrom('alltheores:aluminum_plate')
+  event.removeAllTagsFrom('alltheores:iridium_plate')
+  event.removeAllTagsFrom('alltheores:lead_plate')
+  event.removeAllTagsFrom('alltheores:nickel_plate')
+  event.removeAllTagsFrom('alltheores:osmium_plate')
+  event.removeAllTagsFrom('alltheores:platinium_plate')
+  event.removeAllTagsFrom('alltheores:silver_plate')
+  event.removeAllTagsFrom('alltheores:tin_plate')
+  event.removeAllTagsFrom('alltheores:uranium_plate')
+  event.removeAllTagsFrom('alltheores:zinc_plate')
+  event.removeAllTagsFrom('alltheores:steel_plate')
+  event.removeAllTagsFrom('alltheores:invar_plate')
+  event.removeAllTagsFrom('alltheores:electrum_plate')
+  event.removeAllTagsFrom('alltheores:bronze_plate')
+  event.removeAllTagsFrom('alltheores:iron_plate')
+  event.removeAllTagsFrom('alltheores:gold_plate')
+  event.removeAllTagsFrom('alltheores:diamond_plate')
+  event.removeAllTagsFrom('alltheores:copper_plate')
+  event.removeAllTagsFrom('alltheores:brass_plate')
+  event.removeAllTagsFrom('alltheores:constantan_plate')						          	//added by IE
+  //event.removeAllTagsFrom('alltheores:enderium_plate')							          might be added in the future?
+  //event.removeAllTagsFrom('alltheores:lumium_plate')								          might be added in the future?
+  //event.removeAllTagsFrom('alltheores:signalum_plate')							          might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_plate')							          might be added in the future?
+  event.removeAllTagsFrom('alltheores:allthemodium_plate')
+  event.removeAllTagsFrom('alltheores:unobtainium_plate')
+
+  event.removeAllTagsFrom('alltheores:aluminum_rod')
+  event.removeAllTagsFrom('alltheores:iridium_rod')
+  event.removeAllTagsFrom('alltheores:lead_rod')
+  event.removeAllTagsFrom('alltheores:nickel_rod')
+  event.removeAllTagsFrom('alltheores:osmium_rod')
+  event.removeAllTagsFrom('alltheores:platinium_rod')
+  event.removeAllTagsFrom('alltheores:silver_rod')
+  event.removeAllTagsFrom('alltheores:tin_rod')
+  event.removeAllTagsFrom('alltheores:uranium_rod')
+  event.removeAllTagsFrom('alltheores:zinc_rod')
+  event.removeAllTagsFrom('alltheores:steel_rod')
+  event.removeAllTagsFrom('alltheores:invar_rod')
+  event.removeAllTagsFrom('alltheores:electrum_rod')
+  event.removeAllTagsFrom('alltheores:bronze_rod')
+  event.removeAllTagsFrom('alltheores:iron_rod')
+  event.removeAllTagsFrom('alltheores:gold_rod')
+  event.removeAllTagsFrom('alltheores:diamond_rod')
+  event.removeAllTagsFrom('alltheores:copper_rod')
+  event.removeAllTagsFrom('alltheores:brass_rod')
+  //event.removeAllTagsFrom('alltheores:constantan_rod')						          	not currently added by IE/GT
+  //event.removeAllTagsFrom('alltheores:enderium_rod')								          might be added in the future?
+  //event.removeAllTagsFrom('alltheores:lumium_rod')								            might be added in the future?
+  //event.removeAllTagsFrom('alltheores:signalum_rod')								          might be added in the future?
+  //event.removeAllTagsFrom('alltheores:vibranium_rod')								          might be added in the future?
+  event.removeAllTagsFrom('alltheores:allthemodium_rod')
+  event.removeAllTagsFrom('alltheores:unobtainium_rod')
+
+
+  //Create
+  event.removeAllTagsFrom('create:zinc_ingot')
+  event.removeAllTagsFrom('create:brass_ingot')
+
+  event.removeAllTagsFrom('create:copper_nugget')
+  event.removeAllTagsFrom('create:zinc_nugget')
+  event.removeAllTagsFrom('create:brass_nugget')
+
+  event.removeAllTagsFrom('create:copper_sheet')
+  event.removeAllTagsFrom('create:brass_sheet')
+  event.removeAllTagsFrom('create:zinc_sheet')
+  event.removeAllTagsFrom('create:iron_sheet')
+  event.removeAllTagsFrom('create:golden_sheet')
+
+  //Create Deco
+  event.removeAllTagsFrom('createdeco:zinc_sheet')
+
+  //Vintage Improvements:
+  event.removeAllTagsFrom('vintageimprovements:aluminum_sheet')
+  event.removeAllTagsFrom('vintageimprovements:bronze_sheet')
+  event.removeAllTagsFrom('vintageimprovements:cobalt_sheet')
+  event.removeAllTagsFrom('vintageimprovements:constantan_sheet')
+  event.removeAllTagsFrom('vintageimprovements:enderium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:invar_sheet')
+  event.removeAllTagsFrom('vintageimprovements:lead_sheet')
+  event.removeAllTagsFrom('vintageimprovements:lumium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:nickel_sheet')
+  event.removeAllTagsFrom('vintageimprovements:osmium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:palladium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:platinum_sheet')
+  event.removeAllTagsFrom('vintageimprovements:rhodium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:rose_gold_sheet')
+  event.removeAllTagsFrom('vintageimprovements:signalum_sheet')
+  event.removeAllTagsFrom('vintageimprovements:silver_sheet')
+  event.removeAllTagsFrom('vintageimprovements:tin_sheet')
+  event.removeAllTagsFrom('vintageimprovements:uranium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:vanadium_sheet')
+  event.removeAllTagsFrom('vintageimprovements:zinc_sheet')
+
+
+  event.removeAllTagsFrom('vintageimprovements:aluminum_sheet')
+  event.removeAllTagsFrom('vintageimprovements:bronze_rod')
+  event.removeAllTagsFrom('vintageimprovements:cobalt_rod')
+  event.removeAllTagsFrom('vintageimprovements:constantan_rod')
+  event.removeAllTagsFrom('vintageimprovements:enderium_rod')
+  event.removeAllTagsFrom('vintageimprovements:invar_rod')
+  event.removeAllTagsFrom('vintageimprovements:lead_rod')
+  event.removeAllTagsFrom('vintageimprovements:lumium_rod')
+  event.removeAllTagsFrom('vintageimprovements:nickel_rod')
+  event.removeAllTagsFrom('vintageimprovements:osmium_rod')
+  event.removeAllTagsFrom('vintageimprovements:palladium_rod')
+  event.removeAllTagsFrom('vintageimprovements:platinum_rod')
+  event.removeAllTagsFrom('vintageimprovements:rhodium_rod')
+  event.removeAllTagsFrom('vintageimprovements:rose_gold_rod')
+  event.removeAllTagsFrom('vintageimprovements:signalum_rod')
+  event.removeAllTagsFrom('vintageimprovements:silver_rod')
+  event.removeAllTagsFrom('vintageimprovements:steel_rod')
+  event.removeAllTagsFrom('vintageimprovements:tin_rod')
+  event.removeAllTagsFrom('vintageimprovements:uranium_rod')
+  event.removeAllTagsFrom('vintageimprovements:vanadium_rod')
+  event.removeAllTagsFrom('vintageimprovements:zinc_rod')
+
+  event.removeAllTagsFrom('vintageimprovements:sulfuric_acid')
+
+
+  //Create Additions
+  event.removeAllTagsFrom('createadditions:electrum_ingot')
+  event.removeAllTagsFrom('createadditions:electrum_nugget')
+
+  event.removeAllTagsFrom('alltheores:zinc_plate')
+  event.removeAllTagsFrom('alltheores:electrum_plate')
+
+  event.removeAllTagsFrom('createadditions:copper_rod')
+  event.removeAllTagsFrom('createadditions:iron_rod')
+  event.removeAllTagsFrom('createadditions:gold_rod')
+  event.removeAllTagsFrom('createadditions:electrum_rod')
+  event.removeAllTagsFrom('createadditions:brass_rod')
+
+  event.removeAllTagsFrom('createadditions:seed_oil')
+  event.removeAllTagsFrom('createadditions:bioethanol')
+
+
+
+  //Immersive Engineering
+  event.removeAllTagsFrom('immersiveengineering:ingot_lead')
+  event.removeAllTagsFrom('immersiveengineering:ingot_silver')
+  event.removeAllTagsFrom('immersiveengineering:ingot_nickel')
+  event.removeAllTagsFrom('immersiveengineering:ingot_uranium')
+  //event.removeAllTagsFrom('immersiveengineering:ingot_constantan')				    not currently added by GT
+  event.removeAllTagsFrom('immersiveengineering:ingot_electrum')
+  event.removeAllTagsFrom('immersiveengineering:ingot_steel')
+
+  event.removeAllTagsFrom('immersiveengineering:nugget_copper')
+  event.removeAllTagsFrom('immersiveengineering:nugget_lead')
+  event.removeAllTagsFrom('immersiveengineering:nugget_silver')
+  event.removeAllTagsFrom('immersiveengineering:nugget_nickel')
+  event.removeAllTagsFrom('immersiveengineering:nugget_uranium')
+  //event.removeAllTagsFrom('immersiveengineering:nugget_constantan')				    not currently added by GT
+  event.removeAllTagsFrom('immersiveengineering:nugget_electrum')
+  event.removeAllTagsFrom('immersiveengineering:nugget_steel')
+
+
+  event.removeAllTagsFrom('immersiveengineering:plate_copper')
+  event.removeAllTagsFrom('immersiveengineering:plate_lead')
+  event.removeAllTagsFrom('immersiveengineering:plate_silver')
+  event.removeAllTagsFrom('immersiveengineering:plate_nickel')
+  event.removeAllTagsFrom('immersiveengineering:plate_uranium')
+  //event.removeAllTagsFrom('immersiveengineering:plate_constantan')				    not currently added by GT
+  event.removeAllTagsFrom('immersiveengineering:plate_electrum')
+  event.removeAllTagsFrom('immersiveengineering:plate_steel')
+  event.removeAllTagsFrom('immersiveengineering:plate_iron')
+  event.removeAllTagsFrom('immersiveengineering:plate_gold')
+
+  event.removeAllTagsFrom('alltheores:steel_rod')
+  event.removeAllTagsFrom('alltheores:iron_rod')
+
+
+  event.removeAllTagsFrom('immersiveengineering:plantoil')
+  event.removeAllTagsFrom('immersiveengineering:ethanol')
+  event.removeAllTagsFrom('immersiveengineering:biodiesel')
+  event.removeAllTagsFrom('immersiveengineering:concrete')
+  event.removeAllTagsFrom('immersiveengineering:herbicide')
+  event.removeAllTagsFrom('immersiveengineering:redstone_acid')
+  event.removeAllTagsFrom('immersiveengineering:potion')
+  event.removeAllTagsFrom('immersiveengineering:acetaldehyde')
+  event.removeAllTagsFrom('immersiveengineering:phenolic_resin')
+
+  event.removeAllTagsFrom('immersiveengineering:plantoil_bucket')
+  event.removeAllTagsFrom('immersiveengineering:ethanol_bucket')
+  event.removeAllTagsFrom('immersiveengineering:biodiesel_bucket')
+  event.removeAllTagsFrom('immersiveengineering:concrete_bucket')
+  event.removeAllTagsFrom('immersiveengineering:herbicide_bucket')
+  event.removeAllTagsFrom('immersiveengineering:redstone_acid_bucket')
+  event.removeAllTagsFrom('immersiveengineering:potion_bucket')
+  event.removeAllTagsFrom('immersiveengineering:acetaldehyde_bucket')
+  event.removeAllTagsFrom('immersiveengineering:phenolic_resin_bucket')
 }
