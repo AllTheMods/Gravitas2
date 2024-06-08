@@ -276,4 +276,8 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 //simple planes
 
   event.replaceInput({ id: "simpleplanes:seats"}, "minecraft:phantom_membrane", "#create:seats")
+
+//gcyr
+
+  event.replaceInput({ id: "gcyr:shaped/space_chest"}, "gtceu:tungstensteel_fluid_cell", "gtceu:titanium_fluid_cell")
 }
