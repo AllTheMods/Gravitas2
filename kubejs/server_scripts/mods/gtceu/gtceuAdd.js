@@ -1079,4 +1079,60 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(100)
             .EUt(HV)
 
+    //wireless chargers
+
+        event.recipes.gtceu.assembler('gregitas:basic_wireless_player_charger')
+            .circuit(1)
+            .itemInputs(
+                '4x gtceu:steel_frame',
+                '4x #gtceu:batteries/lv',
+                '2x #gtceu:circuits/lv',
+                'gtceu:lv_field_generator'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelesschargers:basic_wireless_player_charger')
+            .duration(200)
+            .EUt(LV)
+
+        event.recipes.gtceu.assembler('gregitas:advanced_wireless_player_charger')
+            .circuit(1)
+            .itemInputs(
+                '4x gtceu:stainless_steel_frame',
+                '4x #gtceu:batteries/hv',
+                '2x #gtceu:circuits/hv',
+                'gtceu:hv_field_generator',
+                'wirelesschargers:basic_wireless_player_charger'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('wirelesschargers:advanced_wireless_player_charger')
+            .duration(200)
+            .EUt(HV)
+
+        event.recipes.gtceu.assembler('gregitas:basic_wireless_block_charger')
+            .circuit(2)
+            .itemInputs(
+                '4x gtceu:steel_frame',
+                '4x #gtceu:batteries/lv',
+                '2x #gtceu:circuits/lv',
+                'gtceu:lv_field_generator'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',144))
+            .itemOutputs('wirelesschargers:basic_wireless_block_charger')
+            .duration(200)
+            .EUt(LV)
+
+        event.recipes.gtceu.assembler('gregitas:advanced_wireless_block_charger')
+            .circuit(2)
+            .itemInputs(
+                '4x gtceu:stainless_steel_frame',
+                '4x #gtceu:batteries/hv',
+                '2x #gtceu:circuits/hv',
+                'gtceu:hv_field_generator',
+                'wirelesschargers:basic_wireless_block_charger'
+                )
+            .inputFluids(Fluid.of('gtceu:soldering_alloy',576))
+            .itemOutputs('wirelesschargers:advanced_wireless_block_charger')
+            .duration(200)
+            .EUt(HV)
+
 }
