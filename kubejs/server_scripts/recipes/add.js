@@ -757,7 +757,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:pumpkin`, `16x tfc:pumpkin`, `32x tfc:seeds/pumpkin`, `32x tfc:seeds/pumpkin`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
 
   event.recipes.gtceu
   .greenhouse(`gregitas:melon_boosted`)
@@ -768,7 +767,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:melon`, `16x tfc:melon`, `32x tfc:seeds/melon`, `32x tfc:seeds/melon`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
   
   event.recipes.gtceu
   .greenhouse(`gregitas:papyrus_boosted`)
@@ -779,7 +777,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:papyrus`, `16x tfc:papyrus`, `32x tfc:seeds/papyrus`, `32x tfc:seeds/papyrus`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
 
   event.recipes.gtceu
   .greenhouse(`gregitas:jute_boosted`)
@@ -790,7 +787,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:jute`, `16x tfc:jute`, `32x tfc:seeds/jute`, `32x tfc:seeds/jute`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
 
 
   shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
