@@ -66,6 +66,19 @@ const ores =[
   "tetrahedrite"
 ]
 
+const tfcgems =[
+   "topaz",
+   "sapphire",
+   "ruby",
+   "pyrite",
+   "opal",
+   "lapis_lazuli",
+   "emerald",
+   "amethyst",
+   "sylvite",
+   "saltpeter"
+]
+
 const natores =[
   "silver",
   "copper",
@@ -2242,6 +2255,52 @@ event.recipes.gtceu.mixer('raw_thorium')
       .itemOutputs(`gtceu:bismuth_dust`)
       .duration(40)
       .EUt(HV)
+
+    //tfc gem macerating
+
+        event.recipes.gtceu.macerator('gregitas:diamond_crushing')
+            .itemInputs('tfc:ore/diamond')
+            .itemOutputs('4x gtceu:diamond_dust')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:sulfur_crushing')
+            .itemInputs('tfc:ore/sulfur')
+            .itemOutputs('4x gtceu:sulfur_dust')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:cinnabar_crushing')
+            .itemInputs('tfc:ore/cinnabar')
+            .itemOutputs('8x minecraft:redstone')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:cryolite_crushing')
+            .itemInputs('tfc:ore/cryolite')
+            .itemOutputs('8x minecraft:redstone')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:borax_crushing')
+            .itemInputs('tfc:ore/borax')
+            .itemOutputs('6x tfc:powder/flux')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:halite_crushing')
+            .itemInputs('tfc:ore/halite')
+            .itemOutputs('4x tfc:powder/salt')
+            .EUt(MV)
+            .duration(10)
+
+        tfcgems.forEach(tfcgems => {
+        event.recipes.gtceu.macerator(`gregitas:${tfcgems}_crushing`)
+            .itemInputs(`tfc:ore/${tfcgems}`)
+            .itemOutputs(`4x tfc:powder/${tfcgems}`)
+            .duration(10)
+            .EUt(MV)
+        })
 
   //create stones
 
