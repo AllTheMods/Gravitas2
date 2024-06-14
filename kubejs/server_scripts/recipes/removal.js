@@ -515,5 +515,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'wirelesschargers:advanced_wireless_player_charger'})
   event.remove({ id: 'wirelesschargers:basic_wireless_block_charger'})
   event.remove({ id: 'wirelesschargers:advanced_wireless_block_charger'})
+
+  event.remove({ itemtypes: 'gtceu:quantum_processor_mainframe'})
   
 }
