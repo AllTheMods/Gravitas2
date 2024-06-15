@@ -910,7 +910,7 @@ event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
   
 event.recipes.gtceu.autoclave('enriched_uranium_pellet')
   .inputFluids(
-    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 500)
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 600)
   )
   .itemOutputs(
     'thoriumreactors:enriched_uranium'
@@ -1448,12 +1448,12 @@ event.recipes.gtceu.arc_furnace('thoriumreactors:graphite_ingot')
   .duration(60)
   .EUt(HV)
 
-event.recipes.gtceu.autoclave('enriched_uranium_pellet_2')
+event.recipes.gtceu.autoclave('thoriumreactors:enriched_uranium_pellet_2')
   .itemInputs(
     'thoriumreactors:depleted_uranium'
   )
   .inputFluids(
-    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 100)
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 400)
   )
   .itemOutputs(
     'thoriumreactors:enriched_uranium'
