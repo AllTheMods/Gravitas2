@@ -35,6 +35,7 @@ let replaceVillagesWoodAccordingToClimate = (/** @type {Internal.StructureAfterP
       event.chunkPos.worldPosition
     )
     // tree && console.log(tree.treeFeature().key().location())
+    if (tree == null) return
     let treeId = tree.treeFeature().key().location()
     let level = event.worldGenLevel
     event.intersectionBoxes.forEach((bb) => {
