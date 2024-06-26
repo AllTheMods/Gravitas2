@@ -996,14 +996,14 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemInputs('2x gtceu:potassium_dust')
             .inputFluids(Fluid.of('gtceu:oxygen',1000))
             .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
-            .itemOutputs('6x gcyr:potassium_carbonate_dust')
+            .itemOutputs('6x gtceu:potassium_carbonate_dust')
             .duration(40)
             .EUt(HV)
 
         event.recipes.gtceu.chemical_reactor('gregitas:potassium_carbonate_potash')
             .itemInputs('3x gtceu:potash_dust')
             .inputFluids(Fluid.of('gtceu:carbon_dioxide',1000))
-            .itemOutputs('6x gcyr:potassium_carbonate_dust')
+            .itemOutputs('6x gtceu:potassium_carbonate_dust')
             .duration(40)
             .EUt(LV)
 
