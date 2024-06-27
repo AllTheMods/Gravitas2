@@ -44,7 +44,7 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("FFF", "CCC", "CGC", "CGC", "CLC", "CCC")
-            .aisle("FCF", "CMC", "GSG", "G#G", "LIL", "COC")
+            .aisle("FFF", "CMC", "GSG", "G#G", "LIL", "COC")
             .aisle("FFF", "CKC", "CGC", "CGC", "CLC", "CNC")
             .where("K", Predicates.controller(Predicates.blocks(definition.get())))
             .where("L", Predicates.blocks(GTBlocks.CASING_GRATE.get()))

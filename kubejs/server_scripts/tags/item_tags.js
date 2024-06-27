@@ -327,6 +327,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
   event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
-
-
+  event.add("forge:rods/aluminium", ["vintageimprovements:aluminum_rod","alltheores:aluminum_rod"])
+ 
+  event.removeAllTagsFrom("immersiveengineering:storage_steel")
+  
 }
