@@ -1,53 +1,40 @@
 // priority: 10
 
-const $RandomSource = Java.loadClass("net.minecraft.util.RandomSource")
-
-let TREE_FOREST
-let FOREST_FEATURE
 let replaceVillagesWoodAccordingToClimate = (/** @type {Internal.StructureAfterPlaceEventJS} */ event) => {
-  if (event.chunkGenerator.class.simpleName == "TFCChunkGenerator") {
-    // console.log(`Structure: ${event.structure} is a village with id: ${event.id}`)
-    if (!TREE_FOREST) {
-      TREE_FOREST = event.worldGenLevel.server
-        .registryAccess()
-        .registry($Registries.CONFIGURED_FEATURE)
-        .get()
-        .get("tfc:forest")
-      FOREST_FEATURE = new $ForestFeature($ForestConfig.CODEC)
-    }
-    let chunkData = $ChunkProvider.get(event.chunkGenerator).get(event.worldGenLevel, event.chunkPos.worldPosition)
-    let getTreeMethod = FOREST_FEATURE
-      .getClass()
-      .getDeclaredMethod(
-        "getTree",
-        chunkData.getClass(),
-        $RandomSource,
-        TREE_FOREST.config().getClass(),
-        event.chunkPos.worldPosition.getClass()
-      )
-    getTreeMethod.setAccessible(true)
-    /** @type {Internal.ForestFeature$Entry} */
-    let tree = getTreeMethod.invoke(
-      FOREST_FEATURE,
-      chunkData,
-      event.randomSource,
-      TREE_FOREST.config(),
-      event.chunkPos.worldPosition
-    )
-    // tree && console.log(tree.treeFeature().key().location())
-    if (tree == null) return
-    let treeId = tree.treeFeature().key().location()
+  if (event.chunkGenerator instanceof $ChunkGeneratorExtension) {
+    /** @type {$ChunkGeneratorExtension} */
+    let chunkGenerator = event.chunkGenerator
     let level = event.worldGenLevel
+    let pieceCenter = event.structureBoundingBox.center
+    let treeId = getTreeFromPosition(chunkGenerator, event.worldGenLevel, pieceCenter)
     event.intersectionBoxes.forEach((bb) => {
       BlockPos.betweenClosed(bb.minX(), bb.minY(), bb.minZ(), bb.maxX(), bb.maxY(), bb.maxZ()).forEach((pos) => {
         let blockState = level.getBlockState(pos)
         let newWoodBlock = getWoodReplacement(blockState.block.idLocation, treeId)
         if (newWoodBlock) {
-          // console.log(`Replacing block ${blockState.block.id} with ${newWoodBlock}`)
-          // level.setBlock(pos, getState(newWoodBlock, blockState))
           level.getChunk(pos).setBlockState(pos, getState(newWoodBlock, blockState), false)
         }
       })
     })
   }
+}
+
+function getTreeFromPosition(chunkgen, level, blockPos) {
+  let chunkData = $ChunkProvider.get(chunkgen).get(level, blockPos)
+  let getTree = ForestFeature$getTree
+  getTree.setAccessible(true)
+  let salt = level.seed
+  let seed = $Helpers.hash(salt, blockPos)
+  let randomSource = $RandomSource.create(seed)
+  /** @type {Internal.ForestFeature$Entry} */
+  let tree = getTree.invoke(
+    $ForestFeatureObj,
+    chunkData,
+    randomSource,
+    $ForestConfigObj,
+    blockPos
+  )
+  if (tree == null) return null
+  let treeId = tree.treeFeature().key().location()
+  return treeId
 }
