@@ -1,0 +1,834 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "gravitaschaptersnew3title"
+	group: "20028FE0986EEEC1"
+	icon: {
+		Count: 1
+		id: "gtceu:bronze_wrench"
+		tag: {
+			DisallowContainerItem: 0b
+			GT.Behaviours: {
+				Mode: 2b
+			}
+			GT.Tool: {
+				Damage: 0
+				HarvestLevel: 2
+				MaxDamage: 191
+				ToolSpeed: 7.0f
+			}
+			HideFlags: 2
+		}
+	}
+	id: "19898B501BE117B8"
+	order_index: 2
+	quest_links: [
+		{
+			id: "1D0AA83521316B72"
+			linked_quest: "7C15C2F46BF7E2DF"
+			shape: "gear"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			id: "6E83ED38B516791A"
+			linked_quest: "4FE3DADFDC32A6B0"
+			x: 2.5d
+			y: -4.5d
+		}
+		{
+			id: "219AC25F7A32BF96"
+			linked_quest: "59BDE76B679AB4CC"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			id: "492441BABD4CFBF8"
+			linked_quest: "5C1BB559DD83E88F"
+			size: 1.5d
+			x: 5.25d
+			y: -2.25d
+		}
+		{
+			id: "0BD2E9B11FD51FA7"
+			linked_quest: "4CEC74B892EA3A64"
+			shape: "gear"
+			x: -0.5d
+			y: -6.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"62ECC24E927CF28D"
+				"636382729718F25B"
+				"19811B419D853CDF"
+			]
+			description: ["{gravitas.quest.stage3.desc.silica}"]
+			id: "5EB9173D9F7F558A"
+			subtitle: "{gravitas.quest.stage3.subt.silica}"
+			tasks: [{
+				count: 6L
+				id: "0865EEC8F23A5DAC"
+				item: { Count: 6, id: "tfc:silica_glass_batch" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["262189001F2C1C75"]
+			description: [""]
+			icon: "gtceu:quantum_eye"
+			id: "00F25F9C1F5B5DBB"
+			rewards: [{
+				id: "774FC2DF4FCC7605"
+				item: "minecraft:ender_pearl"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [
+				{
+					id: "569058283093D530"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "gtceu:nickel_ingot"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "gtceu:raw_garnierite"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/rich_garnierite"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/normal_garnierite"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/poor_garnierite"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/small_garnierite"
+								}
+							]
+						}
+					}
+					title: "{gravitas.quest.stage3.nickel}"
+					type: "item"
+				}
+				{
+					id: "313F14B53A0559E1"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/rich_native_silver"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/normal_native_silver"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/poor_native_silver"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/small_native_silver"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "gtceu:silver_ingot"
+								}
+							]
+						}
+					}
+					title: "{gravitas.quest.stage3.silver}"
+					type: "item"
+				}
+				{
+					id: "2ABC945571A57E43"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:metal/ingot/gold"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/small_native_gold"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/poor_native_gold"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/normal_native_gold"
+								}
+								{
+									Count: 1b
+									ForgeCaps: {
+										"tfc:item_heat": {
+											heat: 0.0f
+											ticks: 0L
+										}
+									}
+									id: "tfc:ore/rich_native_gold"
+								}
+							]
+						}
+					}
+					title: "{gravitas.quest.stage3.gold}"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.stage3.start}"
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00F25F9C1F5B5DBB"]
+			description: ["{gravitas.quest.stage3.desc.tap}"]
+			id: "368A89D88BB382E6"
+			tasks: [{
+				count: 5L
+				id: "30ABB3BB4CC145D9"
+				item: "treetap:tap"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["368A89D88BB382E6"]
+			description: [""]
+			id: "2F41686356FA093E"
+			subtitle: "{gravitas.quest.stage3.subt.buckets}"
+			tasks: [{
+				count: 5L
+				id: "55C27A1D1AF7AB9F"
+				item: { Count: 5, id: "tfc:wooden_bucket" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7C15C2F46BF7E2DF"
+				"1D14DA5F4040ABB4"
+			]
+			id: "257651D19A132E5B"
+			subtitle: "{gravitas.quest.stage3.subt.basin}"
+			tasks: [{
+				id: "14246B66AC6C5F22"
+				item: "create:basin"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4D488420015F67A3"]
+			id: "55B4A65E371C23A5"
+			tasks: [{
+				id: "23EECD5A048F5093"
+				item: "gtceu:sulfur_dust"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00F25F9C1F5B5DBB"]
+			description: ["{gravitas.quest.stage3.desc.miningh}"]
+			id: "6BFBC3AFF6FA6BCE"
+			tasks: [{
+				id: "4B95CEC715411A9A"
+				item: {
+					Count: 1
+					id: "gtceu:steel_mining_hammer"
+					tag: {
+						DisallowContainerItem: 0b
+						GT.Behaviours: {
+							AoEColumn: 1
+							AoELayer: 0
+							AoERow: 1
+							MaxAoEColumn: 1
+							MaxAoELayer: 0
+							MaxAoERow: 1
+						}
+						GT.Tool: {
+							Damage: 0
+							HarvestLevel: 3
+							MaxDamage: 1535
+							ToolSpeed: 6.0f
+						}
+						HideFlags: 2
+					}
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6BFBC3AFF6FA6BCE"]
+			description: ["{gravitas.quest.stage3.desc.nether}"]
+			icon: "minecraft:netherrack"
+			id: "4D488420015F67A3"
+			tasks: [{
+				count: 10L
+				id: "6FD591F89D9907F8"
+				item: { Count: 10, id: "minecraft:obsidian" }
+				type: "item"
+			}]
+			title: "{gravitas.quest.stage3.nether}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2F41686356FA093E"]
+			id: "1D14DA5F4040ABB4"
+			subtitle: "{gravitas.quest.stage3.subt.resin}"
+			tasks: [{
+				id: "196C351E8FC4C3B7"
+				item: {
+					Count: 1
+					id: "tfc:wooden_bucket"
+					tag: {
+						fluid: {
+							Amount: 1000
+							FluidName: "gregitas:raw_resin"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["55B4A65E371C23A5"]
+			id: "5511D0EE5981A769"
+			tasks: [{
+				count: 4L
+				id: "4E8F35BC0BF8902A"
+				item: { Count: 4, id: "gtceu:small_sulfur_dust" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["00F25F9C1F5B5DBB"]
+			description: ["{gravitas.quest.stage3.desc.blowpipe}"]
+			id: "62ECC24E927CF28D"
+			tasks: [{
+				id: "4E46DA34FF58420C"
+				item: "tfc:blowpipe"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["671FCC33E9B9DB13"]
+			id: "2F8B03DAFBFB0EF5"
+			subtitle: "{gravitas.quest.stage3.subt.forglass}"
+			tasks: [{
+				id: "1828036698F0D6D4"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:jacks"
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5940B53C874A6550"]
+			id: "324CA68FEB74A4B5"
+			subtitle: "{gravitas.quest.stage3.desc.weld2}"
+			tasks: [{
+				count: 15L
+				id: "408C0474CE6D0DEA"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/black_steel"
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["00F25F9C1F5B5DBB"]
+			description: ["{gravitas.quest.stage3.desc.hbsteel}"]
+			id: "5940B53C874A6550"
+			subtitle: "{gravitas.quest.stage3.desc.weld}"
+			tasks: [{
+				count: 15L
+				id: "158764D3EB1332D3"
+				item: {
+					Count: 15
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/high_carbon_black_steel"
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["324CA68FEB74A4B5"]
+			id: "6BA828D67EA665EA"
+			shape: "rsquare"
+			subtitle: "{gravitas.quest.stage3.desc.weld2}"
+			tasks: [{
+				id: "0BB92EADEFCA4455"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/black_steel"
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6BA828D67EA665EA"]
+			id: "35C75E911D6BDE12"
+			subtitle: "{gravitas.quest.stage3.desc.bspick}"
+			tasks: [{
+				id: "02D424BAE95DEB0D"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/pickaxe/black_steel"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["35C75E911D6BDE12"]
+			id: "0E2E6B398D3F5CF1"
+			subtitle: "{gravitas.quest.stage3.desc.sanded}"
+			tasks: [{
+				count: 2L
+				id: "5C55397017332856"
+				item: "tfc:ore/diamond"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0E2E6B398D3F5CF1"]
+			id: "32BCB3B8DAF972E5"
+			subtitle: "{gravitas.quest.stage3.desc.sandp}"
+			tasks: [{
+				id: "5D8CC9B8B35B17BD"
+				item: {
+					Count: 1
+					id: "create:sand_paper"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["32BCB3B8DAF972E5"]
+			description: [
+				"{gravitas.quest.steel.desc.papyrus.1}"
+				"{gravitas.quest.steel.desc.papyrus.2}"
+			]
+			id: "23F7CF8E46D96250"
+			optional: true
+			shape: "gear"
+			subtitle: "{gravitas.quest.stage3.desc.papyrus}"
+			tasks: [
+				{
+					id: "4A6CD5F655200501"
+					item: "tfc:papyrus"
+					type: "item"
+				}
+				{
+					id: "17AD4CC24ADE10AD"
+					item: "tfc:papyrus_strip"
+					type: "item"
+				}
+				{
+					id: "4640BF5BE29D49C6"
+					item: "tfc:soaked_papyrus_strip"
+					type: "item"
+				}
+				{
+					id: "235B821A8E916C61"
+					item: "tfc:unrefined_paper"
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["32BCB3B8DAF972E5"]
+			id: "5ACD19E705D43C48"
+			tasks: [{
+				count: 2L
+				id: "33C560A22F8D3BD0"
+				item: { Count: 2, id: "tfc:gem/diamond" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"5511D0EE5981A769"
+				"257651D19A132E5B"
+			]
+			id: "554DA4CDDAC7CBB1"
+			tasks: [{
+				id: "7D2F6883D6F87797"
+				item: "gtceu:sticky_resin"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["00F25F9C1F5B5DBB"]
+			description: ["{gravitas.quest.stage3.desc.mechcraft}"]
+			id: "46BE30EFB8425540"
+			subtitle: "{gravitas.quest.stage3.subt.21}"
+			tasks: [{
+				count: 15L
+				id: "0CCE93B76AEC025C"
+				item: { Count: 21, id: "create:mechanical_crafter" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["46BE30EFB8425540"]
+			id: "693B46904121EA55"
+			subtitle: "{gravitas.quest.stage3.subt.crushing}"
+			tasks: [{
+				count: 2L
+				id: "672EC68A84EA54F9"
+				item: { Count: 2, id: "create:crushing_wheel" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"693B46904121EA55"
+				"554DA4CDDAC7CBB1"
+			]
+			id: "7389402160789056"
+			subtitle: "{gravitas.quest.stage3.subt.rawrubber}"
+			tasks: [{
+				id: "4079B81A54C81263"
+				item: "gtceu:raw_rubber_dust"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5ACD19E705D43C48"]
+			id: "4762A0600F3D453F"
+			tasks: [{
+				id: "7B5981CC34EF0385"
+				item: "sophisticatedbackpacks:diamond_backpack"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"2F8B03DAFBFB0EF5"
+				"4CEC74B892EA3A64"
+			]
+			id: "50B5AC70B71677FF"
+			subtitle: "{gravitas.quest.stage3.subt.forglass}"
+			tasks: [{
+				id: "316EA21B0851ECE5"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:gem_saw"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: -5.5d
+		}
+		{
+			id: "636382729718F25B"
+			shape: "gear"
+			subtitle: "{gravitas.quest.stage3.subt.lime}"
+			tasks: [{
+				id: "3B18F0F1F1DE3CAB"
+				item: "tfc:powder/lime"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.5d
+		}
+		{
+			id: "169F355CA44285E8"
+			shape: "gear"
+			tasks: [{
+				id: "2F32A9CD39E63D36"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfcthermaldeposits:mineral/saltpeter"
+							}
+							{
+								Count: 1b
+								id: "minecraft:dried_kelp"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:food": {
+										creationDate: 1374000L
+										traits: [ ]
+									}
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:food/dried_seaweed"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:food": {
+										creationDate: 1374000L
+										traits: [ ]
+									}
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:food/dried_kelp"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.stage3.subt.sea}"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5EB9173D9F7F558A"]
+			id: "671FCC33E9B9DB13"
+			subtitle: "{gravitas.quest.stage3.subt.forglass}"
+			tasks: [{
+				id: "46BFD94D1D3FB5B9"
+				item: "tfc:wool_cloth"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["169F355CA44285E8"]
+			id: "19811B419D853CDF"
+			subtitle: "{gravitas.quest.stage3.subt.ash}"
+			tasks: [{
+				id: "1669D27C171D6309"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:powder/saltpeter"
+							}
+							{
+								Count: 1b
+								id: "tfc:powder/soda_ash"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.5d
+		}
+	]
+	title: "{gravitas.chapters.New3.title}"
+}

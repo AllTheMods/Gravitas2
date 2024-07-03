@@ -8,11 +8,7 @@
 	id: "2E58B32F9A1289D6"
 	images: [
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "kubejs:textures/biomes_text.png"
 			rotation: 0.0d
 			width: 4.5d
@@ -20,11 +16,7 @@
 			y: -16.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/aquatic.png"
 			rotation: 0.0d
 			width: 2.0d
@@ -32,11 +24,7 @@
 			y: -14.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/high_altitude.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -44,11 +32,7 @@
 			y: -10.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/low_altitude.png"
 			rotation: 0.0d
 			width: 3.5d
@@ -56,11 +40,7 @@
 			y: -13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/mid_altitude.png"
 			rotation: 0.0d
 			width: 3.5d
@@ -68,11 +48,7 @@
 			y: -11.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/shores.png"
 			rotation: 0.0d
 			width: 2.0d
@@ -80,11 +56,7 @@
 			y: -7.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/water.png"
 			rotation: 0.0d
 			width: 1.5d
@@ -92,11 +64,7 @@
 			y: -8.535714285714285d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/lakes.png"
 			rotation: 0.0d
 			width: 1.5d
@@ -104,11 +72,7 @@
 			y: -5.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/nether.png"
 			rotation: 0.0d
 			width: 2.0d
@@ -139,7 +103,7 @@
 					disable_toast: true
 					id: "554D0CF89F994B9F"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -156,7 +120,7 @@
 					disable_toast: true
 					id: "2C0FA13DB3C7C0B5"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -171,7 +135,7 @@
 					disable_toast: true
 					id: "3419CD4167C00630"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -205,7 +169,7 @@
 					disable_toast: true
 					id: "34D3A2ABE63A4E69"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -222,7 +186,7 @@
 					disable_toast: true
 					id: "49ABB45AC71E825A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -237,7 +201,7 @@
 					disable_toast: true
 					id: "2FA62A7C70673302"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -271,7 +235,7 @@
 					disable_toast: true
 					id: "373361598194E3FD"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -288,7 +252,7 @@
 					disable_toast: true
 					id: "1F6CCAC0BD39AC27"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -303,7 +267,7 @@
 					disable_toast: true
 					id: "651EA37030407231"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -337,7 +301,7 @@
 					disable_toast: true
 					id: "233F0A5DC2B96F11"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -354,7 +318,7 @@
 					disable_toast: true
 					id: "03F842E6D4C33308"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -369,7 +333,7 @@
 					disable_toast: true
 					id: "686EF426B93C9A86"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -403,7 +367,7 @@
 					disable_toast: true
 					id: "40CE0908588FE31C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -420,7 +384,7 @@
 					disable_toast: true
 					id: "0548634BB908A7CC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -435,7 +399,7 @@
 					disable_toast: true
 					id: "4B1F046E9C5B1186"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -469,7 +433,7 @@
 					disable_toast: true
 					id: "3B73C4FCA2391661"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -486,7 +450,7 @@
 					disable_toast: true
 					id: "7CA0960024E2DA9A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -501,7 +465,7 @@
 					disable_toast: true
 					id: "0E536DF458D5CDE4"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -535,7 +499,7 @@
 					disable_toast: true
 					id: "45DCCA98D83DF80C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -552,7 +516,7 @@
 					disable_toast: true
 					id: "27A1B70BAC9EF0A8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -567,7 +531,7 @@
 					disable_toast: true
 					id: "722547729AAFFC28"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -601,7 +565,7 @@
 					disable_toast: true
 					id: "728931BA0B7589EC"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -618,7 +582,7 @@
 					disable_toast: true
 					id: "409ECFA8451D5DFC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -633,7 +597,7 @@
 					disable_toast: true
 					id: "7D24089395A294E1"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -667,7 +631,7 @@
 					disable_toast: true
 					id: "0F4C51964F5EB48E"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -684,7 +648,7 @@
 					disable_toast: true
 					id: "39AE11AB253C8F41"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -699,7 +663,7 @@
 					disable_toast: true
 					id: "7BE714091FFAE5BB"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -733,7 +697,7 @@
 					disable_toast: true
 					id: "1ECDB706CFF34BC7"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -750,7 +714,7 @@
 					disable_toast: true
 					id: "6309898AEDB7B279"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -765,7 +729,7 @@
 					disable_toast: true
 					id: "7982F5C7823279E0"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -799,7 +763,7 @@
 					disable_toast: true
 					id: "00333C4BF120B21E"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -816,7 +780,7 @@
 					disable_toast: true
 					id: "327AAEC85E74DA57"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -831,7 +795,7 @@
 					disable_toast: true
 					id: "5BCF2D2F935F963F"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -884,7 +848,7 @@
 					disable_toast: true
 					id: "498C598EB2721DD2"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -920,7 +884,7 @@
 					disable_toast: true
 					id: "1E8B4C02254CD28F"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -937,7 +901,7 @@
 					disable_toast: true
 					id: "35FAA859FAB675D0"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -952,7 +916,7 @@
 					disable_toast: true
 					id: "265E9C221CCEE2B9"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -1005,7 +969,7 @@
 					disable_toast: true
 					id: "57787EDA93F5BB24"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1060,7 +1024,7 @@
 					disable_toast: true
 					id: "10F4AEDF5B995C77"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1116,7 +1080,7 @@
 					disable_toast: true
 					id: "3B5D2A252F710FA6"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1172,7 +1136,7 @@
 					disable_toast: true
 					id: "08D81AE155AC7A9C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1228,7 +1192,7 @@
 					disable_toast: true
 					id: "2AFF463E7084EE0B"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1283,7 +1247,7 @@
 					disable_toast: true
 					id: "6C4AD2B883251DDF"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1319,7 +1283,7 @@
 					disable_toast: true
 					id: "0DFFE66328515B09"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1336,7 +1300,7 @@
 					disable_toast: true
 					id: "47FCA6AA2F5473A2"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -1351,7 +1315,7 @@
 					disable_toast: true
 					id: "792029C42B6F197E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -1404,7 +1368,7 @@
 					disable_toast: true
 					id: "784FF04D84470367"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1440,7 +1404,7 @@
 					disable_toast: true
 					id: "7180FA81B570D5F4"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1457,7 +1421,7 @@
 					disable_toast: true
 					id: "39EB36400159E438"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -1472,7 +1436,7 @@
 					disable_toast: true
 					id: "24ECC66708F1818A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -1525,7 +1489,7 @@
 					disable_toast: true
 					id: "78EF9A59AA630B29"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1561,7 +1525,7 @@
 					disable_toast: true
 					id: "1964FA913A8DA592"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1578,7 +1542,7 @@
 					disable_toast: true
 					id: "704023EC44623A4E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -1593,7 +1557,7 @@
 					disable_toast: true
 					id: "620E4992F80039DD"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -1646,7 +1610,7 @@
 					disable_toast: true
 					id: "4A547DCAA8B68203"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1701,7 +1665,7 @@
 					disable_toast: true
 					id: "3119208825D684AE"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1737,7 +1701,7 @@
 					disable_toast: true
 					id: "55D3D05C4C9E93F2"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1754,7 +1718,7 @@
 					disable_toast: true
 					id: "429D12C794CED7C8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -1769,7 +1733,7 @@
 					disable_toast: true
 					id: "6D78E92776AD6E11"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -1789,7 +1753,7 @@
 			size: 1.5d
 			tasks: [{
 				icon: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1816,7 +1780,7 @@
 			size: 1.5d
 			tasks: [{
 				icon: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -2059,7 +2023,7 @@
 					disable_toast: true
 					id: "7EDA0F0138593B0F"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -2076,7 +2040,7 @@
 					disable_toast: true
 					id: "3AD2C5FF4AB65F1A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -2091,7 +2055,7 @@
 					disable_toast: true
 					id: "575483C1236FA497"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -2125,7 +2089,7 @@
 					disable_toast: true
 					id: "5B9C642117BA5E97"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -2142,7 +2106,7 @@
 					disable_toast: true
 					id: "7F312426A5171EEC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
@@ -2157,7 +2121,7 @@
 					disable_toast: true
 					id: "6BAF50DDF117FAE8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
@@ -2210,7 +2174,7 @@
 					disable_toast: true
 					id: "47C8D430A5735BE9"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f

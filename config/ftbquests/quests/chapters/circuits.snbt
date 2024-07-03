@@ -4,7 +4,7 @@
 	filename: "circuits"
 	group: "6A4ED78F1D529DE3"
 	id: "560EF4C38DEACA03"
-	order_index: 9
+	order_index: 10
 	quest_links: [ ]
 	quests: [
 		{
@@ -520,7 +520,7 @@
 			tasks: [{
 				id: "6683D0BC6A2C871C"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -539,7 +539,7 @@
 			tasks: [{
 				id: "7DB56B55ABF0376C"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -608,7 +608,7 @@
 			tasks: [{
 				id: "7BEB4A258BB8C759"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -796,7 +796,7 @@
 			tasks: [{
 				id: "2F80DF5A840CFEAB"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f

@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:micro_processor_computer"
 	id: "489F28A71282B3E7"
-	order_index: 3
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -95,7 +95,7 @@
 			tasks: [{
 				id: "2CCBC531A22F3091"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f

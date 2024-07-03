@@ -6,11 +6,7 @@
 	id: "7633854F671AD921"
 	images: [
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/construction.png"
 			rotation: 0.0d
 			width: 12.435897435897436d
@@ -18,11 +14,7 @@
 			y: -1.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "thoriumreactors:block/warning_block_lined_black_yellow_left-ctm"
 			rotation: 0.0d
 			width: 5.0d
@@ -30,11 +22,7 @@
 			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "immersiveengineering:item/tool_screwdriver"
 			rotation: 0.0d
 			width: 1.0d
@@ -42,11 +30,7 @@
 			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "tfc:item/metal/hammer/red_steel"
 			rotation: 0.0d
 			width: 1.0d
