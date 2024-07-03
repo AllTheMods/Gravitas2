@@ -5,10 +5,15 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:basic_electronic_circuit"
 	id: "37A28F4697946CB4"
-	order_index: 0
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"7389402160789056"
+				"59BDE76B679AB4CC"
+				"4FE3DADFDC32A6B0"
+			]
 			description: [
 				"{gravitas.quest.lv.desc.starter_1}"
 				""
@@ -34,7 +39,7 @@
 			size: 1.5d
 			subtitle: "Welcome to LV"
 			tasks: [{
-				count: 4L
+				count: 3L
 				id: "08EA6CE798092CE9"
 				item: "gtceu:basic_electronic_circuit"
 				type: "item"
@@ -349,7 +354,7 @@
 			tasks: [{
 				id: "52AFA2CE57617039"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -428,7 +433,7 @@
 				"{gravitas.quest.lv.desc.circuits_3}"
 			]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "gtceu:programmed_circuit"
 				tag: {
 					Configuration: 0
@@ -733,7 +738,7 @@
 				count: 4
 				id: "6F26DB04DC94172A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "gtceu:fluid_cell"
 					tag: {
 						Fluid: {
@@ -749,7 +754,7 @@
 				{
 					id: "00648047034C9531"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -775,7 +780,7 @@
 					count: 2L
 					id: "6D9C084B63F0AE29"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -805,7 +810,7 @@
 				{
 					id: "016BA8271625AE36"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [

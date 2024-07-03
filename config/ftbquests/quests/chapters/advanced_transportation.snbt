@@ -4,7 +4,7 @@
 	filename: "advanced_transportation"
 	group: "095899370DDF48CB"
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "simpleplanes:plane"
 		tag: {
 			EntityTag: {
@@ -54,7 +54,7 @@
 			tasks: [{
 				id: "7155AC8769ECD7E5"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -167,7 +167,7 @@
 			tasks: [{
 				id: "10EA6F086BDC32BA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -286,7 +286,7 @@
 			tasks: [{
 				id: "329F005595C4C649"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -530,7 +530,7 @@
 			tasks: [{
 				id: "7AC78CFFB9C89F2A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -657,7 +657,7 @@
 			tasks: [{
 				id: "6C6C56D6786A5C6D"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -781,7 +781,7 @@
 			tasks: [{
 				id: "2BCF67B2DAF13633"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
