@@ -47,6 +47,8 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
     fluid.setAmount(r.getId().includes("helmet") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
     fluid.setAmount(r.getId().includes("fish_hook") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
     fluid.setAmount(r.getId().includes("bars") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
+    
+    fluid.setAmount(r.getId().includes("block") ? convertFluidValues(fluid.amount) / 2 : convertFluidValues(fluid.amount))
 
     r.resultFluid(fluid)
   })

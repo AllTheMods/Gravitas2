@@ -331,4 +331,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
  
   event.removeAllTagsFrom("immersiveengineering:storage_steel")
   
+  event.add("tfc:glassworking_potash", ["gtceu:saltpeter_dust"])
+
 }
