@@ -62,7 +62,7 @@
 			id: "58AC0AF9F4895FEA"
 			rewards: [{
 				id: "385413ABB005F7F8"
-				item: "minecraft:cooked_beef"
+				item: "tfc:torch"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -83,11 +83,6 @@
 				"Just like IRL, you'll need to gather &aTwigs&r from the ground. These make great handles for the tools we'll make."
 			]
 			id: "1C236E0B89076819"
-			rewards: [{
-				id: "6F8B974FD3915B7B"
-				item: "minecraft:cod"
-				type: "item"
-			}]
 			tasks: [{
 				consume_items: false
 				count: 2L
@@ -171,22 +166,9 @@
 			id: "2512A0E115F4A300"
 			min_width: 400
 			rewards: [{
-				id: "3F50E04938FD9CA2"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 312000L
-							traits: [ ]
-						}
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:food/cod"
-				}
-				type: "item"
+				id: "17E1F5314969E9AC"
+				type: "xp_levels"
+				xp_levels: 5
 			}]
 			tasks: [
 				{
@@ -370,7 +352,7 @@
 					Count: 1
 					ForgeCaps: {
 						"tfc:food": {
-							creationDate: 1422000L
+							creationDate: 0L
 							traits: [ ]
 						}
 					}
@@ -439,17 +421,17 @@
 			id: "177E7D3A7B2B48FA"
 			min_width: 300
 			rewards: [{
-				count: 2
-				id: "789C6FAA622D7C61"
+				count: 16
+				id: "7DC830672E0C910C"
 				item: {
 					Count: 1
 					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 1422000L
-							traits: [ ]
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
 						}
 					}
-					id: "tfc:food/pumpkin_chunks"
+					id: "minecraft:stick"
 				}
 				type: "item"
 			}]
@@ -729,11 +711,6 @@
 			dependencies: ["177E7D3A7B2B48FA"]
 			description: ["{gravitas.quest.stage1.desc.torch}"]
 			id: "18A7123E7EC22490"
-			rewards: [{
-				id: "408F504DB010C2BD"
-				item: "minecraft:lantern"
-				type: "item"
-			}]
 			shape: "gear"
 			tasks: [{
 				id: "6BA75ED94C39502B"
@@ -965,7 +942,7 @@
 					Count: 1
 					ForgeCaps: {
 						"tfc:food": {
-							creationDate: 1422000L
+							creationDate: 0L
 							traits: [ ]
 						}
 					}
@@ -1405,18 +1382,8 @@
 			hide_dependent_lines: true
 			id: "4C3B53255AE41111"
 			rewards: [{
-				count: 3
-				id: "51923C9FCAAE5562"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 1428000L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/green_apple"
-				}
+				id: "682AEB37FBA9CCA1"
+				item: "minecraft:golden_apple"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1485,7 +1452,7 @@
 					Count: 1
 					ForgeCaps: {
 						"tfc:food": {
-							creationDate: 1428000L
+							creationDate: 0L
 							traits: [ ]
 						}
 					}
@@ -1782,21 +1749,6 @@
 					}
 					type: "item"
 				}
-				{
-					count: 10
-					id: "02812F568DE753E6"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							"tfc:food": {
-								creationDate: 504000L
-								traits: [ ]
-							}
-						}
-						id: "tfc:food/green_apple"
-					}
-					type: "item"
-				}
 			]
 			shape: "pentagon"
 			size: 2.5d
@@ -1813,18 +1765,9 @@
 			dependencies: ["791DA52F7A377FB2"]
 			id: "7A932904C1789E86"
 			rewards: [{
-				id: "0FDC62F34246C930"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 1428000L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/red_apple"
-				}
-				type: "item"
+				id: "7B3BD5FDF9164356"
+				type: "xp_levels"
+				xp_levels: 5
 			}]
 			shape: "gear"
 			subtitle: "{gravitas.quest.stage1.subt.rack}"
@@ -1845,7 +1788,7 @@
 					Count: 1
 					ForgeCaps: {
 						"tfc:food": {
-							creationDate: 1428000L
+							creationDate: 0L
 							traits: [ ]
 						}
 					}
