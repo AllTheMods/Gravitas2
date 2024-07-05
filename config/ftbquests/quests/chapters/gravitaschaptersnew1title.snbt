@@ -1446,18 +1446,8 @@
 			hide_dependent_lines: true
 			id: "7C2AC560097A01BE"
 			rewards: [{
-				count: 5
-				id: "47C46A3A643048A2"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 0L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/red_apple"
-				}
+				id: "14894200BDE14024"
+				item: "tfc:plant/red_apple_sapling"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1712,7 +1702,6 @@
 		{
 			dependencies: [
 				"7C2AC560097A01BE"
-				"3D008B1624FDB7FC"
 				"4C3B53255AE41111"
 			]
 			description: ["{gravitas.quest.stage1.desc.win}"]
@@ -1783,18 +1772,9 @@
 			dependencies: ["791DA52F7A377FB2"]
 			id: "7EDC1CC1DC256673"
 			rewards: [{
-				id: "6FC403A1AE78113E"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 0L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/red_apple"
-				}
-				type: "item"
+				id: "75929A7C6D8F4BD5"
+				type: "xp"
+				xp: 100
 			}]
 			size: 0.75d
 			subtitle: "{gravitas.quest.stage1.subt.bucket}"

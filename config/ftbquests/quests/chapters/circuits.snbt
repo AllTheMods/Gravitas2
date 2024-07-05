@@ -656,7 +656,7 @@
 			id: "3F591BADFF8585FE"
 			tasks: [{
 				id: "3371F13082C01141"
-				item: "gtceu:tungstensteel_coil_block"
+				item: "gtceu:rtm_alloy_coil_block"
 				type: "item"
 			}]
 			x: 1.0d

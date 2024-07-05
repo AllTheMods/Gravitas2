@@ -173,7 +173,7 @@
 			id: "17E73AABA487834A"
 			rewards: [{
 				id: "6E0DDBE6219941AD"
-				item: "gtceu:wood_long_rod"
+				item: "gtceu:long_wood_rod"
 				type: "item"
 			}]
 			tasks: [{
