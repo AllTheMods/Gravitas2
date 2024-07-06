@@ -764,25 +764,6 @@
 			dependencies: ["4771ECA6958AEFDC"]
 			description: ["{gravitas.quest.stage2.desc.ID}"]
 			id: "7E0E95E46C24E405"
-			rewards: [
-				{
-					id: "6C4BA5FBACF2E929"
-					item: "integratedterminals:part_terminal_storage"
-					type: "item"
-				}
-				{
-					count: 12
-					id: "708A7DF8E6A6CF91"
-					item: "integrateddynamics:cable"
-					type: "item"
-				}
-				{
-					count: 2
-					id: "24C9662296B59BEE"
-					item: "integratedtunnels:part_interface_item"
-					type: "item"
-				}
-			]
 			size: 1.5d
 			subtitle: "{gravitas.quest.stage2.subt.anvil4}"
 			tasks: [{
@@ -1342,6 +1323,68 @@
 			}]
 			x: 4.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["48F40B8850D384F9"]
+			id: "12AC2CCD46FF3476"
+			rewards: [{
+				count: 4
+				id: "592C2AEC96E13AA7"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:wrought_iron_plate"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			subtitle: "{gravitas.quest.id.subt.taste}"
+			tasks: [{
+				id: "7C4E85479421B1C4"
+				item: "gtceu:steel_crate"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7E0E95E46C24E405"]
+			description: ["{gravitas.quest.id.desc.taste}"]
+			icon: "integrateddynamics:on_the_dynamics_of_integration"
+			id: "291A5F97C601D53D"
+			min_width: 275
+			rewards: [
+				{
+					id: "1897751F8766C14D"
+					item: "integratedterminals:part_terminal_storage"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "005BAEFCB77234AD"
+					item: "integrateddynamics:cable"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0FBF991C5C8962DA"
+					item: "integratedtunnels:part_interface_item"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			tasks: [{
+				id: "7C1554AE918688BE"
+				title: "{gravitas.quest.id.taste}"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: 4.0d
 		}
 	]
 	title: "{gravitas.chapters.New2.title}"

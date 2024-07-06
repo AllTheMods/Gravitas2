@@ -119,7 +119,7 @@
 			rewards: [{
 				count: 4
 				id: "0477033EDE72D79B"
-				item: "gtceu:tin_fine_wire"
+				item: "gtceu:fine_tin_wire"
 				random_bonus: 6
 				type: "item"
 			}]
@@ -498,7 +498,7 @@
 			subtitle: "Hot potato"
 			tasks: [{
 				id: "00676E5631ED2A66"
-				item: "gtceu:silicon_hot_ingot"
+				item: "gtceu:hot_silicon_ingot"
 				type: "item"
 			}]
 			x: 0.5d

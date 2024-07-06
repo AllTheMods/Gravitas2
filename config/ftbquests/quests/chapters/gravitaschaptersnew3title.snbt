@@ -77,7 +77,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["262189001F2C1C75"]
 			description: [""]
 			icon: "gtceu:quantum_eye"
 			id: "00F25F9C1F5B5DBB"
