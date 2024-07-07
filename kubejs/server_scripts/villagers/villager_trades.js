@@ -34,6 +34,8 @@ const replaceTrades = ((event) => {
 
     event.removeVanillaTrades();
 
+    event.removeModdedTrades();
+
     addArmorerTrades(event);
 
     addButcherTrades(event);
