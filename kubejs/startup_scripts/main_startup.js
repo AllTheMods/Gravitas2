@@ -44,6 +44,7 @@ GTCEuStartupEvents.registry("gtceu:element", (event) => {
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
   addTooltipIngots(event)
+  addMoreInfoTooltips(event)
 })
 
 ForgeEvents.onEvent(
