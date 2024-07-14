@@ -1,32 +1,48 @@
 // priority 10
 const $Language = Java.loadClass("net.minecraft.client.resources.language.I18n")
-
-const addMoreInfoTooltips = (/** @type {Internal.ItemTooltipEvent} */ event) => {
-    const tooltipKey = "gregitas." + event.itemStack.getDescriptionId() + ".tooltip";
-
-    if (!$Language.exists(tooltipKey)) return
-    (!Client.isShiftDown()) && event.toolTip.add(Text.translate("gregitas.tooltip.holdForDesc", Text.translate("key.keyboard.left.shift").gray()).darkGray())
-    
-    if (!Client.isShiftDown()) return
-    let translatedText = String(Text.translate(tooltipKey).getString())
-    let lines = translatedText.split("\n")
+let parseFormatText = (/**@type {string}*/text, /** @type {Internal.ItemTooltipEvent} */ event) => {
+    let lines = text.split("\n")
     let colorCode = 0xAAAAAA
-    
 
     for (let line in lines) {
-        let words = lines[line]
-        words = words.split(/<([0-9a-fA-F]{6})>/)
-        let newLine = Text.of("")
+        let words = lines[line].split(/<([0-9a-fA-F]{6})>/)
+        let newLine = Text.empty()
         for (let word in words) {
-          Client.tell(words[word])
             if (/[0-9a-fA-F]{6}/.test(words[word])) {
                 colorCode = parseInt(words[word], 16)
                 continue
             }
-            
             newLine.append(Text.literal(words[word]).color(colorCode))
         }
         event.toolTip.add(Text.of(newLine))
+    }
+}
+const addMoreInfoTooltips = (/** @type {Internal.ItemTooltipEvent} */ event) => {
+    const tooltipKeyShift = "gregitas." + event.itemStack.getDescriptionId() + ".shift";
+    const tooltipKeyCtrl = "gregitas." + event.itemStack.getDescriptionId() + ".ctrl";
+    const tooltipKeyAlt = "gregitas." + event.itemStack.getDescriptionId() + ".alt";
+
+    if (!$Language.exists(tooltipKeyCtrl) && !$Language.exists(tooltipKeyShift) && !$Language.exists(tooltipKeyAlt)) return
+
+    if (Client.isShiftDown() && $Language.exists(tooltipKeyShift)) {
+        parseFormatText(String(Text.translate(tooltipKeyShift).getString()), event)
+        return
+    } else {
+        $Language.exists(tooltipKeyShift) && event.toolTip.add(Text.translate("gregitas.tooltip.holdForDesc", Text.translate("key.keyboard.left.shift").gray()).darkGray())
+    }
+    
+    if (Client.isCtrlDown() && $Language.exists(tooltipKeyCtrl)) {
+        parseFormatText(String(Text.translate(tooltipKeyCtrl).getString()), event)
+        return
+    } else {
+        $Language.exists(tooltipKeyCtrl) && event.toolTip.add(Text.translate("gregitas.tooltip.holdForDesc", Text.translate("key.keyboard.left.ctrl").gray()).darkGray())
+    }
+    
+    if (Client.isAltDown() && $Language.exists(tooltipKeyAlt)) {
+        parseFormatText(String(Text.translate(tooltipKeyAlt).getString()), event)
+        return
+    } else {
+        $Language.exists(tooltipKeyAlt) && event.toolTip.add(Text.translate("gregitas.tooltip.holdForDesc", Text.translate("key.keyboard.left.alt").gray()).darkGray())
     }
 }
 /*
