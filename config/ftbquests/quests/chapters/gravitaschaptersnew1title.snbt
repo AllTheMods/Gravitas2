@@ -149,7 +149,6 @@
 			y: 1.0d
 		}
 		{
-			can_repeat: true
 			dependencies: [
 				"1C236E0B89076819"
 				"0D1A2331FB89A93A"
