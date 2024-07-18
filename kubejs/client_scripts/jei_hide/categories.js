@@ -10,12 +10,9 @@ let hideCats = (event) => {
    event.remove("immersiveengineering:bottling_machine")
    event.remove("immersiveengineering:coke_oven")
    event.remove("immersiveengineering:crusher")
-   event.remove("immersiveengineering:fermenter")
    event.remove("immersiveengineering:metal_press")
-   event.remove("immersiveengineering:mixer")
    event.remove("immersiveengineering:refinery")
    event.remove("immersiveengineering:sawmill")
-   event.remove("immersiveengineering:squeezer")
 
    event.remove("railcraft:crusher")
 

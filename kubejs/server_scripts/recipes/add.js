@@ -22,6 +22,38 @@ const TFCSeeds = [
 
 
 ]
+const TFCGrainsToAlchohol = [
+  {
+    id: 'barley',
+    color: 0x8B4513,
+    name: 'Barley',
+    alcohol: 'tfc:beer'
+  },
+  {
+    id: 'maize',
+    color: 0xFFD700,
+    name: 'Maize',
+    alcohol: 'tfc:corn_whiskey'
+  },
+  {
+    id: 'rye',
+    color: 0x8B4513,
+    name: 'Rye',
+    alcohol: 'tfc:rye_whiskey'
+  },
+  {
+    id: 'rice',
+    color: 0xFFD700,
+    name: 'Rice',
+    alcohol: 'tfc:sake'
+  },
+  {
+    id: 'wheat',
+    color: 0xFFD700,
+    name: 'Wheat',
+    alcohol: 'tfc:whiskey'
+  }
+]
 const molds = [
   "ingot",
   "chisel_head",
@@ -2489,4 +2521,47 @@ event.recipes.gtceu.mixer('raw_thorium')
           W: `tfc:wattle`
         }).damageIngredient(["#forge:tools/hammers"]).id(`tfcgroomer:${metal}_grooming_station`)
       })
-    }
+
+      event.custom({
+        type:"immersiveengineering:fermenter",
+        energy:6400,
+        fluid:{ amount:80,fluid:"firmalife:yeast_starter"},
+        input:{ type: "tfc:has_trait", trait: "firmalife:dried",ingredient: {tag: "tfc:foods/fruits"} }
+      }).id("gregitas:yeast_starter")
+
+      
+      event.custom({
+        type:"immersiveengineering:fermenter",
+        energy:6400,
+        fluid:{ amount:100,fluid:"firmalife:yeast_starter"},
+        input:{ type: "tfc:not_rotten",ingredient: {item: `gregitas:oat_mash`} }
+      }).id("gregitas:yeast_starter_oat")
+
+      event.custom({
+        type:"immersiveengineering:fermenter",
+        energy:6400,
+        fluid:{ amount:100,fluid:"firmalife:yeast_starter"},
+        input:{ type: "tfc:not_rotten",ingredient: {item: `gregitas:wheat_mash`} }
+      }).id("gregitas:yeast_starter_wheat")
+
+
+      TFCGrainsToAlchohol.forEach((grain) => {
+        event.custom({
+          type:"immersiveengineering:squeezer",
+          energy:19200,
+          input:{ type: "tfc:not_rotten",ingredient: {item: `tfc:food/${grain.id}_grain`} },
+          result: { item: `gregitas:${grain.id}_mash`,count: 1 }
+        }).id(`gregitas:${grain.id}_mash`)
+      })
+
+      TFCGrainsToAlchohol.forEach((grain) => {
+        event.custom({
+          type:"immersiveengineering:mixer",
+          energy:18000,
+          fluid:{ amount:500, tag: "gregitas:water"},
+          inputs: [{ type: "tfc:not_rotten",ingredient: { item: `gregitas:${grain.id}_mash`},count:1}],
+          result: { amount: 500,  fluid: `${grain.alcohol}` }
+        }).id(`gregitas:${grain.id}_alcohol`)
+      })
+
+}

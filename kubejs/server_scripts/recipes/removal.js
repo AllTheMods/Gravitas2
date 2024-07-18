@@ -274,6 +274,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/raw_hammercrushing.*/})
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
 
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:fermenter\/.*/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:mixer\/.*/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:squeezer\/.*/})
+
   event.remove({ id: "immersiveengineering:crafting/survey_tools"})
   event.remove({ id: "immersiveengineering:crafting/string"})
   event.remove({ id: `/^immersiveengineering:crafting\/pickaxe_.*/`})
@@ -288,6 +292,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "immersiveengineering:crafting/craftingtable"})
   event.remove({ id: "immersiveengineering:crafting/workbench"})
   event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
+  
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})

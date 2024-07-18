@@ -17,6 +17,44 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
     }
 
     addTFCDrinkables('maple_syrup', 'gregitas:maple_syrup', 10, 10, 10)
+    const TFCGrainsToAlchohol = [
+        {
+          id: 'barley',
+          color: 0x8B4513,
+          name: 'Barley',
+          alcohol: 'beer'
+        },
+        {
+          id: 'maize',
+          color: 0xFFD700,
+          name: 'Maize',
+          alcohol: 'corn_whiskey'
+        },
+        {
+          id: 'oat',
+          color: 0x8B4513,
+          name: 'Oat',
+          alcohol: 'yeast_starter'
+        },
+        {
+          id: 'rye',
+          color: 0x8B4513,
+          name: 'Rye',
+          alcohol: 'rye_whiskey'
+        },
+        {
+          id: 'rice',
+          color: 0xFFD700,
+          name: 'Rice',
+          alcohol: 'sake'
+        },
+        {
+          id: 'wheat',
+          color: 0xFFD700,
+          name: 'Wheat',
+          alcohol: 'whiskey'
+        }
+      ]
     
 
     let addTFCFoodItems = (id, item, hunger, saturation, water, decay, grain, fruit, veg, protein, dairy) => {
@@ -39,13 +77,15 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
 
         event.addJson(`tfc:tfc/food_items/${id}.json`, json)
     }
-
+    TFCGrainsToAlchohol.forEach((grain) => {
+        addTFCFoodItems(`${grain.id}_mash`, `gregitas:${grain.id}_mash`, 0, 0, 0, 1.0, 1, 0, 0, 0, 0)
+    })
     addTFCFoodItems('chocolate_glazed_berries', 'create:chocolate_glazed_berries', 4, 2, 5, 2.5, 0, 1, 0, 0, 1)
     addTFCFoodItems('honey_cake_slice', 'kubejs:honey_cake_slice', 4, 2.5, 0, 0.7, 1, 2, 0, 0, 0)
     addTFCFoodItems('honeyed_apple', 'create:honeyed_apple', 4, 2.5, 0, 0.7, 0, 2, 0, 0, 0)
     addTFCFoodItems('sweet_roll', 'create:sweet_roll', 4, 3.5, 0, 1.7, 2, 0, 0, 0, 1)
     addTFCFoodItems('maple_glazed_roll', 'gregitas:maple_glazed_roll', 4, 3.5, 0, 2.1, 2.5, 0, 0, 0, 0)
-
+    
     let addTFCFuels = (id, fuel, duration, temp) => {
         let json = JsonIO.toObject(
             {

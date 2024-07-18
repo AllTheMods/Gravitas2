@@ -1,5 +1,5 @@
 // priority 10
-const $Language = Java.loadClass("net.minecraft.client.resources.language.I18n")
+
 let parseFormatText = (/**@type {string}*/text, /** @type {Internal.ItemTooltipEvent} */ event) => {
     let lines = text.split("\n")
     let colorCode = 0xAAAAAA
@@ -18,6 +18,8 @@ let parseFormatText = (/**@type {string}*/text, /** @type {Internal.ItemTooltipE
     }
 }
 const addMoreInfoTooltips = (/** @type {Internal.ItemTooltipEvent} */ event) => {
+    if(Platform.isClientEnvironment()) return
+    const $Language = Java.loadClass("net.minecraft.client.resources.language.I18n")
     const tooltipKeyShift = "gregitas." + event.itemStack.getDescriptionId() + ".shift";
     const tooltipKeyCtrl = "gregitas." + event.itemStack.getDescriptionId() + ".ctrl";
     const tooltipKeyAlt = "gregitas." + event.itemStack.getDescriptionId() + ".alt";
