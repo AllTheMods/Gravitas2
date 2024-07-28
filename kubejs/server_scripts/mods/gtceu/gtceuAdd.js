@@ -287,7 +287,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
 	
     // Gravel to sand
-	tfcCobbleToSand.forEach((type) => {			
+    tfcCobbleToSand.forEach((type) => {			
 		event.recipes.gtceu.forge_hammer(`sand/${type.stone}_to_${type.sand}_sand`)
 			.itemInputs(`tfc:rock/gravel/${type.stone}`)
 			.itemOutputs(`tfc:sand/${type.sand}`)
