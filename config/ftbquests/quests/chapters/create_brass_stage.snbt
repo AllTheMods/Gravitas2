@@ -4,7 +4,7 @@
 	filename: "create_brass_stage"
 	group: "4B728CAFC5748917"
 	icon: {
-		Count: 1b
+		Count: 1
 		ForgeCaps: {
 			"tfc:item_heat": {
 				heat: 0.0f
@@ -24,7 +24,7 @@
 				count: 3
 				id: "339D75DEE5D2E212"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -38,7 +38,7 @@
 			tasks: [{
 				id: "61C8E83F56304C8F"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -108,7 +108,7 @@
 				{
 					id: "228A49AE32F4F7D4"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -175,7 +175,7 @@
 				{
 					id: "329CD5038624CE7D"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "create:sand_paper"
 						tag: {
 							Damage: 0
@@ -305,7 +305,7 @@
 			tasks: [{
 				id: "4C7CD3FFBDA41E77"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "create:extendo_grip"
 					tag: {
 						Damage: 0
@@ -348,7 +348,7 @@
 			tasks: [{
 				id: "7EE0BDF5CD8DD2B8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "create:potato_cannon"
 					tag: {
 						Damage: 0
@@ -372,7 +372,7 @@
 				{
 					id: "1928F07DD3C3FE2E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "create:super_glue"
 						tag: {
 							Damage: 0
@@ -398,7 +398,7 @@
 			tasks: [{
 				id: "0109FECB1CD6CC0A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [

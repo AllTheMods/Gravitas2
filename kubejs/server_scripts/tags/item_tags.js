@@ -163,8 +163,36 @@ let tfcMetalz = [
   'aluminium',
   'titanium'
 ]
+const fire = [
+  "red",
+  "green",
+  "bronze",
+  "gray"
+]
+const ice = [
+  "blue",
+  "white",
+  "sapphire",
+  "silver"
+]
+const lightning = [
+  "electric",
+  "amethyst",
+  "copper",
+  "black"
+]
 
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
+
+  fire.forEach((color) => {
+    event.add("gregitas:eggs/dragon/fire", `iceandfire:dragonegg_${color}`)
+  })
+  ice.forEach((color) => {
+    event.add("gregitas:eggs/dragon/ice", `iceandfire:dragonegg_${color}`)
+  })
+  lightning.forEach((color) => {
+    event.add("gregitas:eggs/dragon/lightning", `iceandfire:dragonegg_${color}`)
+  })
 
   event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
@@ -299,7 +327,10 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
   event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
+  event.add("forge:rods/aluminium", ["vintageimprovements:aluminum_rod","alltheores:aluminum_rod"])
+ 
+  event.removeAllTagsFrom("immersiveengineering:storage_steel")
+  
+  event.add("tfc:glassworking_potash", ["gtceu:saltpeter_dust"])
 
-  //Thorium Reactors
-  event.removeAllTagsFrom('thoriumreactors:fluorite')
 }

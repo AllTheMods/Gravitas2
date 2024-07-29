@@ -40,6 +40,7 @@ let addTFCBookEntries = (/** @type {Internal.GenerateClientAssetsEventJS} */ eve
       multiblocks: patterns
     }
   }
+  //Veins
   entry.put("name", "Gregtech Veins")
   entry.put("category", "tfc:gregitas")
   entry.put("icon", "gtceu:prospector.lv")
@@ -79,4 +80,62 @@ let addTFCBookEntries = (/** @type {Internal.GenerateClientAssetsEventJS} */ eve
   entry.put("pages", pages)
   entry.put("extra_recipe_mappings", mapping)
   event.add("tfc:patchouli_books/field_guide/en_us/entries/gregitas/greg_veins", entry)
+
+  //Dragons
+  entry.clear()
+  entry.put("name", "Ice And Fire Dragons")
+  entry.put("category", "tfc:gregitas")
+  entry.put("icon", "iceandfire:dragon_skull_fire")
+  entry.put("read_by_default", true)
+  entry.put("sortnum", 2)
+  pages.clear()
+  pages.add({
+    type: "patchouli:text",
+    text: "This pack includes the $(thing)Ice And Fire$() mod, which adds $(thing)Dragons$() to the game."
+  })
+  pages.add({
+    type: "patchouli:text",
+    text: "Dragon Lairs are both $(thing)Biome$() and $(thing)Climate$() specific. Each $(thing)Dragon$() type has its own preference."
+  })
+  pages.add({
+    type: "patchouli:entity",
+    title: "Fire Dragon",
+    entity: "iceandfire:fire_dragon"
+  })
+  pages.add({
+    type: "patchouli:spotlight",
+    item: {
+      tag: "gregitas:eggs/dragon/fire",
+    },
+    text: "Fire Dragons prefer $(thing)Hot (15 degree C Avg temp)$()  and $(thing)Wet (300mm+ rainfall$() $(thing)Climates$() and tend to favor Volcanic Mountain biomes"
+  })
+  pages.add({
+    type: "patchouli:entity",
+    title: "Ice Dragon",
+    entity: "iceandfire:ice_dragon"
+  })
+  pages.add({
+    type: "patchouli:spotlight",
+    item: {
+      tag: "gregitas:eggs/dragon/ice",
+    },
+    text: "Ice Dragons prefer $(thing)Cold (Ar or Below 4 degree C Avg temp)$() and tend to favor mountainous and hill biomes."
+  })
+  pages.add({
+    type: "patchouli:entity",
+    title: "Lightning Dragon",
+    entity: "iceandfire:lightning_dragon"
+  })
+  pages.add({
+    type: "patchouli:spotlight",
+    item: {
+      tag: "gregitas:eggs/dragon/lightning",
+    },
+    text: "Lightning Dragons prefer $(thing)Hot (15 degree C Avg temp)$()  and $(thing)Dry (Below 200mm rainfall$() $(thing)Climates$() amd tend to favor low lying areas"
+  })
+
+  entry.put("pages", pages)
+  event.add("tfc:patchouli_books/field_guide/en_us/entries/gregitas/ice_and_fire_dragons", entry)
+
+  
 }

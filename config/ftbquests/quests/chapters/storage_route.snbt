@@ -30,25 +30,10 @@
 			dependencies: ["44BBC0C030C09D81"]
 			description: ["{gravitas.quest.storage.desc.vessel}"]
 			id: "58018258B24045E1"
-			rewards: [{
-				id: "2A178075B76CB1A6"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						Parent: {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:ceramic/vessel"
-					tag: { }
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "575A7010B13D0F78"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						Parent: {
 							heat: 0.0f
@@ -68,12 +53,6 @@
 			dependencies: ["58018258B24045E1"]
 			description: ["{gravitas.quest.storage.desc.large_vessel}"]
 			id: "518BB09D7C1286B8"
-			rewards: [{
-				count: 2
-				id: "4E780E862CE14921"
-				item: "tfc:ceramic/large_vessel"
-				type: "item"
-			}]
 			tasks: [{
 				id: "3602F4B365045351"
 				item: "tfc:ceramic/large_vessel"
@@ -84,7 +63,10 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["518BB09D7C1286B8"]
+			dependencies: [
+				"518BB09D7C1286B8"
+				"791DA52F7A377FB2"
+			]
 			description: ["{gravitas.quest.storage.desc.chest}"]
 			id: "69F1C7C818C1C6A2"
 			rewards: [{
@@ -96,7 +78,7 @@
 			tasks: [{
 				id: "22F37D83B43EADD6"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -179,6 +161,7 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.storage.chest}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.storage.chest}"
@@ -190,7 +173,7 @@
 			id: "17E73AABA487834A"
 			rewards: [{
 				id: "6E0DDBE6219941AD"
-				item: "gtceu:wood_long_rod"
+				item: "gtceu:long_wood_rod"
 				type: "item"
 			}]
 			tasks: [{
@@ -214,7 +197,7 @@
 			tasks: [{
 				id: "6CC598E9B8E5853F"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -367,7 +350,7 @@
 			rewards: [{
 				id: "0920A594934898DA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_chest"
 					tag: {
 						code: "000"
@@ -379,7 +362,7 @@
 			tasks: [{
 				id: "3D9BDD3C91A03044"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_chest"
 					tag: {
 						code: "000"
@@ -398,7 +381,7 @@
 			rewards: [{
 				id: "25FFCE0B9477F1B8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "endertanks:ender_tank"
 					tag: {
 						code: "000"
@@ -410,7 +393,7 @@
 			tasks: [{
 				id: "12D16D9132BEBF6B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "endertanks:ender_tank"
 					tag: {
 						code: "000"
@@ -431,7 +414,7 @@
 				count: 4
 				id: "738FA153BFF455D9"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -631,7 +614,7 @@
 			tasks: [{
 				id: "30CE4917E7DC0168"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "endertanks:ender_bucket"
 					tag: {
 						code: "000"
@@ -657,7 +640,7 @@
 			tasks: [{
 				id: "24F00006FC3DF1FC"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_bag"
 					tag: {
 						code: "000"
@@ -683,7 +666,7 @@
 			tasks: [{
 				id: "500505062B6F8BF6"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_pouch"
 					tag: {
 						open: 0b

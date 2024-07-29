@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:micro_processor_mainframe"
 	id: "00E59A3B38CB7EEA"
-	order_index: 4
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -84,7 +84,7 @@
 			id: "0A848E0B9F485B2C"
 			tasks: [{
 				id: "0DABFD3310034563"
-				item: "gtceu:tungstensteel_coil_block"
+				item: "gtceu:rtm_alloy_coil_block"
 				type: "item"
 			}]
 			x: 0.0d

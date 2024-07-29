@@ -269,8 +269,8 @@
 
     "gravitas.quest.moon.desc.silicon_press": "Busca alrededor de la Luna para encontrar las prensas. También valdrá la pena recoger un montón de piedra del cielo mientras consigues las prensas.",
     "gravitas.quest.moon.desc.fluix_crystal": "Los Cristales de Fluix se crean tirando &3Cuarzo del Nether, &3Redstone y &3Cristales de Certus Cargados &fen el Agua.",
-	
-	
+
+
 	"gravitas.quest.farm.need": "Necesidades Minimas",
 	"gravitas.quest.farm.hydration": "1: Hidratación",
 	"gravitas.quest.farm.hydration_levels": "Niveles de Hidratación",
@@ -292,8 +292,8 @@
 	"gravitas.quest.farm.greenhouse": "Convertirtiendo la Casa en Parte de un Invernadero",
 	"gravitas.quest.farm.planters": "Para Poder Crecer Cultivos en Nuestro Invernadero: Plantadores",
 	"gravitas.quest.farm.climate_station": "Toques Finales",
-	
-	
+
+
     "gravitas.quest.farm.desc.need": "La agricultura en TFC no es muy diferente de la agricultura en Minecraft. Aún necesitas hidratación para que crezcan las plantas, pero ahora debes preocuparte por la temperatura. {Tampoco puedes romper cultivos saltando sobre ellos}.",
     "gravitas.quest.farm.desc.hydration": "Al igual que en Minecraft (y en la vida real), las plantas necesitan agua para crecer. A diferencia de Minecraft, las diferentes plantas necesitan diferentes niveles de hidratación; pueden estar subregadas o sobre-regadas.",
     "gravitas.quest.farm.desc.hydration_levels": "Los niveles de hidratación se muestran en el suelo de cultivo en la parte superior de la pantalla. Los niveles de hidratación pueden cambiar ligeramente debido al clima, pero permanecen en la misma área estimada. Los niveles bajan cuanto más lejos estás de una fuente. También se distribuyen en cuadrados alrededor del agua. El primer cuadrado alrededor de la fuente tendrá la mayor hidratación, del 100% al 91%. El siguiente cuadrado será del 90% al 71%. Después de eso, del 70% al 51%. El cuarto cuadrado es la última parte hidratada, después de eso, es la hidratación base o la que tendrá cualquier suelo de cultivo en el área sin agua. El cuarto cuadrado va del 50% al 31%.",
@@ -315,8 +315,8 @@
     "gravitas.quest.farm.desc.greenhouse": "Ahora hemos llegado a la parte divertida, el propio invernadero. El invernadero puede estar hecho de cualquiera de esos tipos de bloques, pero debe estar hecho solo de esos. No se permiten invernaderos de cobre y madera. Puedes usar cualquiera de los tipos de bloques de invernadero siempre que tenga paredes y un techo. No puede estar expuesto al aire exterior, excepto una puerta en posición abierta. No hay un límite real para el tamaño del invernadero (que yo sepa); puede ser de 1x2x1 a 33x33x33. Si es un verdadero invernadero, entonces...",
     "gravitas.quest.farm.desc.planters": "La tierra de cultivo no funciona en invernaderos, así que en su lugar necesitarás macetas. Funcionan igual que la tierra de cultivo, pero son selectivas solo para invernaderos. Las diferentes macetas hacen cosas diferentes. Las macetas grandes y cuádruples cultivan cultivos normales. La hidro-maceta cultiva aquellos que necesitan ser plantados en agua. La maceta de bonsái cultiva pequeños árboles frutales y la maceta de enrejado cultiva arbustos de bayas. Las macetas colgantes cultivan plantas al revés.",
     "gravitas.quest.farm.desc.climate_station": "La Estación Climática es cómo haces que el invernadero funcione. Una vez que tu invernadero esté creado, coloca la Estación Climática al nivel del suelo junto a las paredes. Cuando la Estación Climática muestre hielo, significa que hay un problema. Si muestra agua, ¡entonces está bien! Haz clic derecho y te dirá si el invernadero está funcionando. Luego, cuando esté funcionando, usa puertos para obtener rociadores y coloca tus macetas y haz clic derecho en la Estación Climática nuevamente. El rociador debería decir invernadero válido al igual que las macetas. Si todo está funcionando, los rociadores deberían estar rociando, las macetas deberían estar recibiendo agua y deberías sentir un gran éxito en tu corazón.",
-	
-	
+
+
     "gravitas.quest.high_voltage.enchanting.desc": "Ahora que estás en Alta Tensión, puedes comenzar a alterar las propiedades de los objetos de manera única. Necesitarás 2 &5Gemas Míticas &ffor para este proceso.",
 	"gravitas.quest.igneous.igneous_zinc_alloy.title": "El Comienzo",
 	"gravitas.quest.igneous.shaft": "Eje",
@@ -339,8 +339,8 @@
 	"gravitas.quest.igneous.mechanical_press": "Presióna",
 	"gravitas.quest.igneous.mechanical_mixer": "Mezcladora",
 	"gravitas.quest.igneous.windmill": "Molino de Viento",
-	
-	
+
+
     "gravitas.quest.igneous.desc.igneous_zinc_alloy": "Donde comienza el mod Create es en este pequeño objeto de metal. ¡Puedes crearlo combinando rocas ígneas y zinc!",
     "gravitas.quest.igneous.desc.shaft": "El eje será tu forma más útil de mover energía cinética y crear máquinas.",
     "gravitas.quest.igneous.desc.water_wheel": "La rueda hidráulica será tu primera máquina para crear energía cinética, que se representa en unidades de estrés (SU). Create funciona con energía cinética como su energía. La rueda hidráulica necesita agua fluyendo sobre ella para crear energía cinética que se puede mover desde los ejes conectados a ella.",
@@ -362,8 +362,8 @@
     "gravitas.quest.igneous.desc.mechanical_press": "La prensa mecánica es una máquina muy útil para mucha elaboración automática. Con un lavabo, puede empaquetar y compactar elementos, como en lingotes o bloques. Sin un lavabo, prensará elementos, como caña de azúcar en papel o lingotes en láminas.",
     "gravitas.quest.igneous.desc.mechanical_mixer": "El mezclador mecánico es una máquina que se puede usar para preparar pociones, mezclar o elaborar sin forma específica. Puedes hacer pociones o bebidas alcohólicas con él. Y las recetas de elaboración que no necesitan una forma específica se pueden crear con esto. ¡Necesita mucha velocidad para alimentarse!",
     "gravitas.quest.igneous.desc.windmill": "El molino de viento es una máquina muy útil para generar SU. Su SU depende de cuán grande sea el molino de viento. Necesita al menos 8 velas de molino de viento y puede ser tan grande como quieras. ¡Haz clic derecho en el cojinete del molino de viento para iniciarlo!",
-	
-	
+
+
 	"gravitas.quest.brass.brass_ingot": "Empezando Con la Era del Latón",
 	"gravitas.quest.brass.wrench": "La Herramienta Principal: La Llave Ingles",
 	"gravitas.quest.brass.brass_hand": "Apuntar Es de Mala Educación",
@@ -386,8 +386,8 @@
 	"gravitas.quest.brass.mechanical_harvester": "Cosechadora",
 	"gravitas.quest.brass.mechanical_saw": "Sierra",
 	"gravitas.quest.brass.mechanical_drill": "Taladro",
-	
-	
+
+
     "gravitas.quest.brass.desc.brass_ingot": "El latón será necesario para los próximos pasos de Create. Se hace combinando polvo de cobre y polvo de zinc para obtener polvo de latón, que se puede fundir para obtener lingotes de latón.",
     "gravitas.quest.brass.desc.wrench": "La llave inglesa es la herramienta más importante para Create y será necesaria. Se usa para configurar tus máquinas.",
     "gravitas.quest.brass.desc.brass_hand": "La mano de latón realmente solo se usa para el desplegador. También puedes ponerla en un marco de objeto, supongo. Ya me quedé sin ideas para esto.",
@@ -410,8 +410,8 @@
     "gravitas.quest.brass.desc.mechanical_harvester": "El cosechador mecánico, cuando se usa sobre cultivos completamente crecidos, los recogerá y los reemplazará. ¡Perfecto para granjas automáticas!",
     "gravitas.quest.brass.desc.mechanical_saw": "La sierra se puede usar para procesar objetos o cortar árboles. Si la base del árbol se rompe con la sierra, todo el árbol caerá. Cuando se procesan objetos a través de ella, puede hacer lo mismo que una cortadora de piedra.",
     "gravitas.quest.brass.desc.mechanical_drill": "El taladro romperá cualquier bloque en su camino cuando esté alimentado. Su velocidad de ruptura depende de la velocidad de rotación.",
-	
-	
+
+
 	"gravitas.quest.create_copper.copper_ingot": "El Comienzo de La Era del Cobre",
 	"gravitas.quest.create_copper.fluid_pipe": "Tuberias pero Con S",
 	"gravitas.quest.create_copper.copper_valve_handle": "Manivela de Válvula",
@@ -427,8 +427,8 @@
 	"gravitas.quest.create_copper.copper_spool": "Carrete de Cobre",
 	"gravitas.quest.create_copper.alternator": "Creando FE o Energía Cínetica",
 	"gravitas.quest.create_copper.copper_wires": "Moviendo FE con Create",
-	
-	
+
+
     "gravitas.quest.create_copper.desc.copper_ingot": "El cobre es nuestro metal principal para todo lo relacionado con líquidos y electricidad dentro de Create.",
     "gravitas.quest.create_copper.desc.fluid_pipe": "Esta será tu fuente principal para mover fluidos. Puede ser editada con una llave inglesa para proporcionar una ventana.",
     "gravitas.quest.create_copper.desc.copper_valve_handle": "El mango de válvula de cobre será necesario para usar una válvula de fluido. También puede ser usado en cojinetes mecánicos para mover estructuras.",
@@ -444,8 +444,8 @@
     "gravitas.quest.create_copper.desc.copper_spool": "El carrete de cobre se hace combinando alambres de cobre y un carrete vacío. Estos pueden usarse para conectar máquinas que utilizan energía o para hacer más máquinas.",
     "gravitas.quest.create_copper.desc.alternator": "Estas máquinas son tu portal entre Forge Energy (FE) y la energía cinética de Create. El alternador crea FE a partir de energía cinética y el motor eléctrico usa FE para hacer energía cinética.",
     "gravitas.quest.create_copper.desc.copper_wires": "Los alambres son cómo mueves FE a las máquinas de Create. Los conectores son cómo realmente llevas el FE a las máquinas.",
-	
-	
+
+
     "gravitas.quest.rails.tracks": "Vías del Tren",
     "gravitas.quest.rails.wide_tracks": "Vías del Tren Anchas",
     "gravitas.quest.rails.narrow_tracks": "Vías del Tren Estrechas",
@@ -466,8 +466,8 @@
     "gravitas.quest.rails.conductor_whistle": "Silbato del Conductor",
     "gravitas.quest.rails.remote_lens": "Un segundo par de ojos",
     "gravitas.quest.rails.train_schedule": "Dirigiendo a los Conductores",
-	
-	
+
+
     "gravitas.quest.rails.desc.tracks": "El lugar donde todo comienza, las vías. Necesitarás vías de tren para usar y operar trenes. Las vías estándar pueden ser utilizadas con la mayoría de los bogeys. ¡Cuidado con las curvas y pendientes!",
     "gravitas.quest.rails.desc.wide_tracks": "Las vías anchas solo pueden ser utilizadas por algunas estructuras de tren. Solo las estructuras estándar: invisibles, estándar y cómicamente grandes pueden ser usadas en vías anchas. Las vías anchas se hacen cortando una vía normal con una sierra, luego desplegando una losa sobre ella y finalmente prensándola.",
     "gravitas.quest.rails.desc.narrow_tracks": "Las vías estrechas solo pueden ser utilizadas por las estructuras estándar: invisibles, estándar y yugo doble estrecho. Las vías estrechas se hacen cortando una losa con una sierra, desplegando una pepita de hierro sobre ella y luego prensándola.",
@@ -488,8 +488,8 @@
     "gravitas.quest.rails.desc.conductor_whistle": "Es un silbato.",
     "gravitas.quest.rails.desc.remote_lens": "Si te gustan las cámaras de seguridad, te encantará esto. Al darle gafas de ingeniero a un conductor, las usará, y luego podrás vincular la lente remota a ellos haciendo clic derecho. Luego, en cualquier momento y en cualquier lugar, puedes hacer clic derecho con la lente remota para ver lo que el conductor está viendo.",
     "gravitas.quest.rails.desc.train_schedule": "El horario del tren es bueno para todos los conductores no humanos. Cuando se lo das a quien esté en el asiento, seguirán lo que se les indique (¡y les darán un sombrero genial!).",
-	
-	
+
+
 	"gravitas.quest.new_age.crafts": "Completa Crafts and Additions",
 	"gravitas.quest.new_age.connector": "Moviendo la Energía con New Age",
 	"gravitas.quest.new_age.magnetite": "Bloque de Magnetita",
@@ -514,8 +514,8 @@
     "gravitas.quest.new_age.reactor": "Creando un Reactor",
     "gravitas.quest.new_age.stirling_engine": "Usando Calor para la energía",
     "gravitas.quest.new_age.meltdown": "¡FUSIÓN NUCLEAR!",
-	
-	
+
+
     "gravitas.quest.simple_transportation.hang_glider": "En el aire: Ala Delta",
     "gravitas.quest.simple_transportation.reinforced": "¿Un Ala Delta mejorado?",
     "gravitas.quest.simple_transportation.carts": "En el suelo: Carros de Astikor",
@@ -528,8 +528,8 @@
     "gravitas.quest.simple_transportation.rowboat1": "Paso 1: Andamios de Barco",
     "gravitas.quest.simple_transportation.rowboat2": "Paso 2: Atornillándolo todo junto",
     "gravitas.quest.simple_transportation.rowboat3": "Paso 3: Remos y Bloqueos de Remos",
-	
-	
+
+
     "gravitas.quest.simple_transportation.desc.hang_glider": "¡Bienvenido a los ala delta! El primero que harás es simplemente el ala delta normal. Combinando 2 alas de ala delta y un marco de ala delta, harás tu propio ala delta. Úsalo haciendo clic derecho para activarlo. Ahora, cada vez que estés en el aire, planearás.",
     "gravitas.quest.simple_transportation.desc.reinforced": "Combinando un ala delta y Elytra, harás un ala delta reforzado. Más durabilidad y ligeramente más rápido (no me cites en eso). ¡Disfruta de tu planeo! Además, planear no te expulsa por volar.",
     "gravitas.quest.simple_transportation.desc.carts": "Astikor Carts es un pequeño mod que te ayuda en el juego temprano. Pueden ser usados por ti o con un caballo. Para equipar un carrito, necesitas mirar los mangos mientras presionas el botón (por defecto es R, asegúrate de cambiarlo porque R también recarga shaders). Para equipar el carrito a un caballo, monta el caballo y luego haz lo mismo que harías para equipar el carrito.",
@@ -544,7 +544,7 @@
     "gravitas.quest.simple_transportation.desc.rowboat3": "Notarás que el bote de remos solo va con la corriente por ahora, para que se mueva a tu mando necesitarás remos. Usa los portaremes en el bote para colocarlos y luego coloca los remos en los portaremes. ¡Ahora es apto para el mar!",
     "gravitas.quest.simple_transportation.desc.paddles": "Hay 2 remos que puedes usar con los kayaks: el remo de canoa y el remo de kayak. (Lo siento, no hay canoas, solo kayaks). El remo de canoa lleva el kayak a la misma velocidad que un bote normal. Mientras que el remo de kayak te hace más rápido que un bote normal. Para usarlos, solo necesitas tenerlos en tus manos mientras estás en el kayak.",
 
-	
+
     "gravitas.quest.adv_transportation.sail": "En el agua: Barcos pequeños",
     "gravitas.quest.adv_transportation.cog": "Cog (Barco pequeño)",
     "gravitas.quest.adv_transportation.brigg": "Brigg (Barco grande)",
@@ -563,8 +563,8 @@
     "gravitas.quest.adv_transportation.armor": "Armadura y paneles solares",
     "gravitas.quest.adv_transportation.extras": "Camas flotantes y mejora plegable",
     "gravitas.quest.adv_transportation.shooting": "Mejora de disparo y cohetes impulsores",
-	
-	
+
+
     "gravitas.quest.adv_transportation.desc.sail": "¡Bienvenido a Small Ships! Antes de comenzar a navegar los 7 mares, necesitas saber cómo operar estos barcos. Se colocan como los barcos normales y te subes a ellos de la misma manera. Para comenzar a moverlos, debes usar las Velas (la tecla predeterminada es R, recomiendo cambiarla). Se mueven con el viento y, al usar la tecla W, la vela se despliega más y tu barco va más rápido. La tecla S hace lo contrario. También tienen almacenamiento, que se puede acceder con Shift + clic derecho desde fuera o presionando E mientras estás dentro.",
     "gravitas.quest.adv_transportation.desc.cog": "El Cog es el barco más pequeño. Funciona igual que los otros, pero solo alcanza los 32 km/h. Puede llevar 4 cañones, pero no estoy seguro de cuántas personas. Hago estas misiones en modo de un solo jugador.",
     "gravitas.quest.adv_transportation.desc.brigg": "El Brigg es el barco más grande y rápido. Puede alcanzar hasta 37 km/h y llevar 6 cañones. No tiene más almacenamiento que los otros barcos.",
@@ -583,8 +583,8 @@
     "gravitas.quest.adv_transportation.desc.armor": "Las mejoras básicas son Placas de Armadura y Paneles Solares. Las Placas de Armadura ayudan a proteger el avión al darle más durabilidad. Sin embargo, no protegen contra choques. Los Paneles Solares ayudan a proporcionar más energía a los aviones. Solo funcionan con el Motor Eléctrico.",
     "gravitas.quest.adv_transportation.desc.extras": "La Cama Flotante ayuda a que tu avión pueda aterrizar de manera segura en el agua. Por sí solos, no son muy flotantes. La Mejora Plegable facilita que puedas añadir tu avión a tu inventario.",
     "gravitas.quest.adv_transportation.desc.shooting": "La mejora de Disparo permite que tu avión luche contra prácticamente cualquier cosa. Añádela a tu avión, luego presiona X para añadir flechas a su inventario. Luego, cuando vueles, haz clic izquierdo para disparar. Los Cohetes Impulsores ayudan a que tu avión vuele más rápido.",
-	
-	
+
+
 	"gravitas.quest.railcraft.rail": "RailCraft!",
     "gravitas.quest.railcraft.types_tracks": "Tipos de Vías",
     "gravitas.quest.railcraft.abandoned": "Vías Abandonadas",
@@ -636,8 +636,8 @@
     "gravitas.quest.railcraft.crusher": "Trituradora",
     "gravitas.quest.railcraft.manual_roller": "Máquina de Laminación Manual",
     "gravitas.quest.railcraft.powered_roller": "Máquina de Laminación Motorizada",
-	
-	
+
+
     "gravitas.quest.railcraft.desc.rail": "¡RailCraft es el mod perfecto para el transporte o simplemente para aquellos que se enfocan en los trenes! Un buen lugar para empezar es con los rieles normales de Minecraft.",
     "gravitas.quest.railcraft.desc.types_tracks": "En RailCraft, los rieles normales no serán suficientes para todo. ¡Vas a necesitar nuevos rieles mejores!",
     "gravitas.quest.railcraft.desc.abandoned": "Los rieles abandonados son buenos para los tacaños y los estéticos. Se pueden usar para cruzar algunos bloques sin soporte. Solo pueden estar a 2 bloques de distancia de otros bloques yendo en la misma dirección, o a un bloque de distancia en la dirección opuesta. Vienen con el riesgo de descarrilamiento, básicamente tu carrito será lanzado fuera de los rieles.",
@@ -728,8 +728,8 @@
     "gravitas.shop.map.biome.minecraft.crimson_forest": "Mapa del Bioma Bosque Carmesí",
     "gravitas.shop.map.biome.minecraft.soul_sand_valley": "Mapa del Bioma Valle de Arena de Almas",
     "gravitas.shop.map.biome.minecraft.basalt_deltas": "Mapa del Bioma Deltas de Basalto",
-	
-	
+
+
 	"gravitas.quest.storage.start": "Almacenamiento en Gregitas",
 	"gravitas.quest.storage.vessel": "Recipiente",
 	"gravitas.quest.storage.large_vessel": "Recipiente Grande",
@@ -759,8 +759,8 @@
 	"gravitas.quest.storage.ebag": "Saco de Ender",
 	"gravitas.quest.storage.etank": "Tanque de Ender",
 	"gravitas.quest.storage.ebucket": "Cubeta de Ender",
-	
-	
+
+
     "gravitas.quest.storage.desc.start": "Con TFC, almacenar objetos es bastante diferente a Minecraft normal. No obtendrás cofres el primer día, en su lugar tendrás otras cosas. Lo más básico es simplemente colocar objetos en el suelo. Usando V (tecla por defecto, se puede cambiar) puedes colocar objetos en el suelo. Solo apila objetos de uno en uno y la cantidad depende del peso y tamaño de los objetos. Los objetos colocados de esta manera no desaparecerán, pero pueden ser quemados o rotos.",
     "gravitas.quest.storage.desc.vessel": "El almacenamiento más temprano son los recipientes. Aunque se utilizan en recetas para avanzar en el modpack, también pueden usarse para almacenar 4 objetos pequeños. (También pueden colocarse en el suelo usando V).",
     "gravitas.quest.storage.desc.large_vessel": "Finalmente entrando en bloques reales. Los recipientes grandes actúan como cofres peores y más baratos. Los colocas y puedes poner 9 objetos pequeños en ellos. También pueden sellarse, pero no nos importa eso aquí, estamos aquí por el almacenamiento.",
@@ -776,8 +776,8 @@
     "gravitas.quest.storage.desc.ebag": "El Saco de Ender es como la bolsa de Ender, pero debe estar vinculada a un cofre de Ender modificado en particular. Cuando el cofre está codificado por colores, haz clic derecho con el saco de Ender para conectarlos. Ahora ese cofre de Ender puede abrirse desde ese Saco de Ender.",
     "gravitas.quest.storage.desc.etank": "El tanque de Ender sin el cubo de Ender es como un barril. También puede hacer lo mismo de compartir inventarios con codificación de colores. Así que tener un tanque que recibe agua en un lugar, y otro tanque que saca agua en otro, ¡funcionará!",
     "gravitas.quest.storage.desc.ebucket": "El cubo de Ender sin el tanque es inútil, no contendrá agua por sí solo. Con el tanque, puede recoger y colocar tanto como hay en el tanque (32 cubos). ¡También puede colocar fuentes de agua!",
-	
-	
+
+
 	"gravitas.quest.drawer.drawer": "Storage Drawers",
 	"gravitas.quest.drawer.types": "Tipos de Cajones",
 	"gravitas.quest.drawer.1x2": "Cajones Llenos",
@@ -796,8 +796,8 @@
 	"gravitas.quest.drawer.more": "Mejoras de Almacenamiento",
 	"gravitas.quest.drawer.show": "Mejoras para Ver Más",
 	"gravitas.quest.drawer.redstone": "Mejoras de Redstone",
-	
-	
+
+
     "gravitas.quest.drawer.desc.drawer": "¡Bienvenidx a Storage Drawers!",
     "gravitas.quest.drawer.desc.types": "Este mod agrega bastantes tipos de cajones, los cuales nos ayudan a almacenar bastantes tipos de objetos. ¡Todos los cajones tienen el mismo propósito!",
     "gravitas.quest.drawer.desc.1x2": "Estos cajones son bloques completos. Son diferentes de los cajones normales ya que el 1x2 está dividido por la mitad y el 2x2 está dividido en cuartos. El 1x2 puede contener 2 pilas de elementos diferentes pero con la mitad del almacenamiento. El 2x2 puede contener 4 pilas de elementos pero con solo una cuarta parte del mismo almacenamiento.",
@@ -816,52 +816,52 @@
     "gravitas.quest.drawer.desc.more": "Estas permiten contener más pilas de elementos. Cuanto mayor sea la mejora, mayor será el almacenamiento.",
     "gravitas.quest.drawer.desc.show": "Estas mejoras hacen que el cajón muestre luz o muestre una barra de cuán lleno está el cajón.",
     "gravitas.quest.drawer.desc.redstone": "Las mejoras de redstone permiten que el cajón emita una señal de redstone dependiendo de las mejoras y el almacenamiento.",
-	
+
     "gravitas.quest.lv.title.starter": "Tus Primeros Circuitos de Voltaje Bajo",
     "gravitas.quest.lv.desc.starter_1": "Actualizar tus máquinas con circuitos básicos te dará acceso a nuevas recetas y aumentará su velocidad.",
     "gravitas.quest.lv.desc.starter_2": "Puedes ejecutar cualquier receta de nivel inferior en una máquina de nivel superior. Esto se llama Overclocking y se puede configurar en la GUI de las máquinas.",
     "gravitas.quest.lv.desc.starter_3": "Las recetas overclockeadas se ejecutan el doble de rápido; pero consumen cuatro veces la energía.",
-  
+
     "gravitas.quest.lv.title.chem": "Reactor Químico",
     "gravitas.quest.lv.desc.chem_1": "El Reactor Químico, entre otras cosas, reduce la cantidad de azufre necesaria para hacer caucho de 1:1 a 1:3, ¡pero ahora tendrás que solidificar el caucho!",
-  
+
 	"gravitas.quest.lv.title.extractor": "Extractora de Voltaje Bajo",
 	"gravitas.quest.lv.desc.extractor_1": "La Extractora Basica hace lo mismo que la Extractora de Vapor, pero más rapido.",
-  
+
 	"gravitas.quest.lv.title.fluid_solidifier": "Solidificando Esos Liquidos",
 	"gravitas.quest.lv.desc.fluid_solid_1": "Esta maquina usa moldes para tomar líquidos y enfriarlos en nuevas formas! Muy Útil para crear Hule. ¡Asegúrate de conseguir moldes de FUNDICIÓN para este!",
-  
+
     "gravitas.quest.lv.title.power_converter": "De RF a EU y Viceversa",
     "gravitas.quest.lv.desc.power_converter_1": "¿Ya tienes alguna forma de generación de energía RF? Podría ser una buena idea usar uno de estos para convertirla a EU.",
     "gravitas.quest.lv.desc.power_converter_2": "Por defecto, convierte EU a RF, así que dale un buen golpe con tu mazo blando para cambiarlo. El lado ROJO es la salida.",
-  
+
     "gravitas.quest.lv.title.circuits": "Circuitos Programados",
     "gravitas.quest.lv.desc.circuits_1": "Muchas máquinas usan un circuito programado para determinar qué se puede procesar y cómo hacerlo.",
     "gravitas.quest.lv.desc.circuits_2": "Puedes cambiar el circuito 'activo' en la GUI de la máquina, ¡no necesitas hacer un nuevo objeto para cada receta!",
     "gravitas.quest.lv.desc.circuits_3": "Sin embargo, cuando se trata de automatización, a menudo es más fácil tener múltiples máquinas en lugar de cambiar la configuración de una repetidamente.",
-  
+
 	"gravitas.quest.lv.title.steam_turbine": "Turbina Basica de Vapor",
 	"gravitas.quest.lv.desc.steam_turbine": "Si le damos vapor, produce EU, y un poco de agua destilida.",
-  
+
 	"gravitas.quest.lv.title.bronze_boiler": "Caldera Grande de Bronze",
 	"gravitas.quest.lv.desc.bronze_boiler": "Eventualmente, vas a necesitar más vapor, las maquinas de vapor de un bloque no seran suficientes, y aqui es en donde la Gran Caldera de Bronze llega!",
-  
+
 	"gravitas.quest.lv.title.bender": "CreaPlacas MK. I",
 	"gravitas.quest.lv.desc.bender": "Esta máquina convierte lingotes en placas, bueno, la de Voltaje Medio hace más, pero aún es útil para láminas; ¡y tiene una mejor relación!",
-  
+
     "gravitas.quest.lv.title.lathe": "Torno Simple",
     "gravitas.quest.lv.desc.lathe": "Esta máquina produce varillas y tornillos, ¡y a mejores proporciones también!",
-  
+
     "gravitas.quest.lv.title.wiremill": "Molino de Alambres Simple",
     "gravitas.quest.lv.desc.wiremill": "Los molinos de alambres producen alambres a una mejor proporción, ¡1:2 de lingote a alambre! ¡También producen alambre fino!",
-  
+
     "gravitas.quest.lv.title.oxy_line": "¡Oxígeno Gratis para Todos!",
     "gravitas.quest.lv.desc.oxy_line_1": "¿Por qué debería producir oxígeno de forma pasiva; o cualquier cosa, para el caso? Simple: ¡Es mejor tener algo hecho que esperar cada vez que lo necesites!",
     "gravitas.quest.lv.desc.oxy_line_2": "Configura una trituradora de rocas con lava en un lado y agua en el otro, luego inserta un trozo de adoquín.",
     "gravitas.quest.lv.desc.oxy_line_3": "Alimenta ese adoquín en un martillo de forja dos veces para obtener arena, luego usa un Horno de Arco para obtener vidrio. Esto necesita oxígeno, pero obtendrás más después.",
     "gravitas.quest.lv.desc.oxy_line_4": "Ahora tritura el vidrio para obtener su polvo, centrifúgalo para obtener Dióxido de Silicio y, finalmente, electrólizalo para obtener oxígeno. Pero guarda el silicio.",
     "gravitas.quest.lv.desc.oxy_line_5": "Solo necesitas un poco de oxígeno para poner en marcha el ciclo, ahora me pregunto dónde podrías encontrar eso...",
-  
+
     "gravitas.quest.lv.desc.assembler": "Esta máquina hace tanto que no se puede describir en una sola descripción. Querrás esta máquina prácticamente en cada nivel.",
     "gravitas.quest.lv.desc.centrifuge": "Separa polvos, líquidos y otras cosas.",
     "gravitas.quest.lv.desc.good_circuit": "Espero que hayas estado fabricando en lotes, ¡necesitarás muchos de estos!",

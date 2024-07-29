@@ -218,8 +218,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ type: "integrateddynamics:drying_basin", output: "minecraft:leather"})
   event.remove({ type: "integrateddynamics:mechanical_drying_basin", output: "minecraft:leather"})
   event.remove({ id: "integrateddynamics:special/part_connector_omni_directional" })
-  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional_copy" })
-  event.remove({ id: "integrateddynamics:special/part_connector_omni_directional_join" })
+  event.remove({ id: "integrateddynamics:crafting/part_connector_mono_directional" })
 
   // Railcraft
   event.remove({ id: "railcraft:bronze_ingot_crafted_with_ingots" })
@@ -243,6 +242,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   // TreeTap
   event.remove({ mod: "treetap", output: "treetap:tap" })
+  event.remove({ id: "treetap:water_from_crying_obsidian" })
 
   // Immersive Engineering
 
@@ -274,6 +274,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/raw_hammercrushing.*/})
   event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
 
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:fermenter\/.*/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:mixer\/.*/})
+  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:squeezer\/.*/})
+
   event.remove({ id: "immersiveengineering:crafting/survey_tools"})
   event.remove({ id: "immersiveengineering:crafting/string"})
   event.remove({ id: `/^immersiveengineering:crafting\/pickaxe_.*/`})
@@ -288,6 +292,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "immersiveengineering:crafting/craftingtable"})
   event.remove({ id: "immersiveengineering:crafting/workbench"})
   event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
+  
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
@@ -455,6 +460,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   
   event.remove({ id: `/^tfcgroomer:.*_grooming_station/`})
 
+  //gcyr
+
+  event.remove({ id: 'gcyr:mixer/co_mn_br_catalyst'})
+  event.remove({ id: 'gcyr:create_mixer/co_mn_br_catalyst'}) 
+
   //Thorium Reactors
   
   event.remove({ id: 'thoriumreactors:thorium_crafting/machine_casing'})
@@ -503,5 +513,14 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'thoriumreactors:electrolysing/potassium'})
   event.remove({ id: 'thoriumreactors:concentrating/yellow_cake'})
   event.remove({ id: 'thoriumreactors:crystallizing/enriched_uranium_pellet'})
+
+  //wireless chargers
+
+  event.remove({ id: 'wirelesschargers:basic_wireless_player_charger'})
+  event.remove({ id: 'wirelesschargers:advanced_wireless_player_charger'})
+  event.remove({ id: 'wirelesschargers:basic_wireless_block_charger'})
+  event.remove({ id: 'wirelesschargers:advanced_wireless_block_charger'})
+
+  event.remove({ output: 'gtceu:quantum_processor_mainframe'})
   
 }

@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:advanced_integrated_circuit"
 	id: "37A5A4A81CCB67E5"
-	order_index: 2
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -463,7 +463,7 @@
 			tasks: [{
 				id: "30ECDAAF21DA2EA9"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -557,7 +557,7 @@
 			rewards: [{
 				id: "1ED49BD4715F5C22"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "gtceu:neutronium_wrench"
 					tag: {
 						Damage: 0

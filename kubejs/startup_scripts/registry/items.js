@@ -61,7 +61,44 @@ const gtTFCTools = [
     name: 'Vanadium Steel'
   }
 ]
-
+const TFCGrainsToMash = [
+  {
+    id: 'barley',
+    color: 0x8B4513,
+    name: 'Barley',
+    alcohol: 'beer'
+  },
+  {
+    id: 'maize',
+    color: 0xFFD700,
+    name: 'Maize',
+    alcohol: 'corn_whiskey'
+  },
+  {
+    id: 'oat',
+    color: 0x8B4513,
+    name: 'Oat',
+    alcohol: 'yeast_starter'
+  },
+  {
+    id: 'rye',
+    color: 0x8B4513,
+    name: 'Rye',
+    alcohol: 'rye_whiskey'
+  },
+  {
+    id: 'rice',
+    color: 0xFFD700,
+    name: 'Rice',
+    alcohol: 'sake'
+  },
+  {
+    id: 'wheat',
+    color: 0xFFD700,
+    name: 'Wheat',
+    alcohol: 'whiskey'
+  }
+]
 
 const gtMortars = [
   {
@@ -288,6 +325,9 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     .hunger(6)
     .saturation(6)
 })
+ TFCGrainsToMash.forEach((grain) => {
+    event.create(`gregitas:${grain.id}_mash`).texture(`tfc:item/food/${grain.id}_grain`).color(0, grain.color)})
+
   //Custom Items
   event.create('gregitas:packaged_greenhouse').modelJson(pkgJson)
   event.create('gregitas:cane_pulp').texture('gtceu:item/material_sets/dull/dust').color(0, 0xdc6f51)

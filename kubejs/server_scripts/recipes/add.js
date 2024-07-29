@@ -22,6 +22,38 @@ const TFCSeeds = [
 
 
 ]
+const TFCGrainsToAlchohol = [
+  {
+    id: 'barley',
+    color: 0x8B4513,
+    name: 'Barley',
+    alcohol: 'tfc:beer'
+  },
+  {
+    id: 'maize',
+    color: 0xFFD700,
+    name: 'Maize',
+    alcohol: 'tfc:corn_whiskey'
+  },
+  {
+    id: 'rye',
+    color: 0x8B4513,
+    name: 'Rye',
+    alcohol: 'tfc:rye_whiskey'
+  },
+  {
+    id: 'rice',
+    color: 0xFFD700,
+    name: 'Rice',
+    alcohol: 'tfc:sake'
+  },
+  {
+    id: 'wheat',
+    color: 0xFFD700,
+    name: 'Wheat',
+    alcohol: 'tfc:whiskey'
+  }
+]
 const molds = [
   "ingot",
   "chisel_head",
@@ -64,6 +96,19 @@ const ores =[
   "magnetite",
   "sphalerite",
   "tetrahedrite"
+]
+
+const tfcgems =[
+   "topaz",
+   "sapphire",
+   "ruby",
+   "pyrite",
+   "opal",
+   "lapis_lazuli",
+   "emerald",
+   "amethyst",
+   "sylvite",
+   "saltpeter"
 ]
 
 const natores =[
@@ -747,7 +792,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
       .itemOutputs(`16x tfc:food/${seed}`, `16x tfc:food/${seed}`, `32x tfc:seeds/${seed}`, `32x tfc:seeds/${seed}`)
       .duration(480)
       .EUt(HV)
-      .cleanroom(CleanroomType.CLEANROOM)
   })
   event.recipes.gtceu
   .greenhouse(`gregitas:pumpkin_boosted`)
@@ -758,7 +802,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:pumpkin`, `16x tfc:pumpkin`, `32x tfc:seeds/pumpkin`, `32x tfc:seeds/pumpkin`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
 
   event.recipes.gtceu
   .greenhouse(`gregitas:melon_boosted`)
@@ -769,7 +812,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:melon`, `16x tfc:melon`, `32x tfc:seeds/melon`, `32x tfc:seeds/melon`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
   
   event.recipes.gtceu
   .greenhouse(`gregitas:papyrus_boosted`)
@@ -780,7 +822,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:papyrus`, `16x tfc:papyrus`, `32x tfc:seeds/papyrus`, `32x tfc:seeds/papyrus`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
 
   event.recipes.gtceu
   .greenhouse(`gregitas:jute_boosted`)
@@ -791,7 +832,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .itemOutputs(`16x tfc:jute`, `16x tfc:jute`, `32x tfc:seeds/jute`, `32x tfc:seeds/jute`)
   .duration(480)
   .EUt(HV)
-  .cleanroom(CleanroomType.CLEANROOM)
 
 
   shaped('gtceu:treated_wood_planks', ['LL', 'LL'], {L: 'gregitas:creosote_treated_lumber'}).id('gregitas:shaped/treated_wood_planks')
@@ -911,7 +951,7 @@ event.recipes.gtceu.implosion_compressor('blasted_iron_ingot')
   
 event.recipes.gtceu.autoclave('enriched_uranium_pellet')
   .inputFluids(
-    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 500)
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 600)
   )
   .itemOutputs(
     'thoriumreactors:enriched_uranium'
@@ -1449,12 +1489,12 @@ event.recipes.gtceu.arc_furnace('thoriumreactors:graphite_ingot')
   .duration(60)
   .EUt(HV)
 
-event.recipes.gtceu.autoclave('enriched_uranium_pellet_2')
+event.recipes.gtceu.autoclave('thoriumreactors:enriched_uranium_pellet_2')
   .itemInputs(
     'thoriumreactors:depleted_uranium'
   )
   .inputFluids(
-    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 100)
+    Fluid.of("thoriumreactors:enriched_uranium_hexafluorite", 400)
   )
   .itemOutputs(
     'thoriumreactors:enriched_uranium'
@@ -2248,6 +2288,52 @@ event.recipes.gtceu.mixer('raw_thorium')
       .duration(40)
       .EUt(HV)
 
+    //tfc gem macerating
+
+        event.recipes.gtceu.macerator('gregitas:diamond_crushing')
+            .itemInputs('tfc:ore/diamond')
+            .itemOutputs('4x gtceu:diamond_dust')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:sulfur_crushing')
+            .itemInputs('tfc:ore/sulfur')
+            .itemOutputs('4x gtceu:sulfur_dust')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:cinnabar_crushing')
+            .itemInputs('tfc:ore/cinnabar')
+            .itemOutputs('8x minecraft:redstone')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:cryolite_crushing')
+            .itemInputs('tfc:ore/cryolite')
+            .itemOutputs('8x minecraft:redstone')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:borax_crushing')
+            .itemInputs('tfc:ore/borax')
+            .itemOutputs('6x tfc:powder/flux')
+            .EUt(MV)
+            .duration(10)
+
+        event.recipes.gtceu.macerator('gregitas:halite_crushing')
+            .itemInputs('tfc:ore/halite')
+            .itemOutputs('4x tfc:powder/salt')
+            .EUt(MV)
+            .duration(10)
+
+        tfcgems.forEach(tfcgems => {
+        event.recipes.gtceu.macerator(`gregitas:${tfcgems}_crushing`)
+            .itemInputs(`tfc:ore/${tfcgems}`)
+            .itemOutputs(`4x tfc:powder/${tfcgems}`)
+            .duration(10)
+            .EUt(MV)
+        })
+
   //create stones
 
   createstone.forEach((createstone) => {
@@ -2322,7 +2408,59 @@ event.recipes.gtceu.mixer('raw_thorium')
       .addCondition(RockBreakerCondition.INSTANCE)
     })
 
+  //gregtech circuits
 
+    event.recipes.gtceu.circuit_assembler('gregitas:quantum_mainframe_advanced')
+      .itemInputs('2x gtceu:hssg_frame')
+      .itemInputs('2x gtceu:quantum_processor_computer')
+      .itemInputs('6x gtceu:advanced_smd_inductor')
+      .itemInputs('12x gtceu:advanced_smd_capacitor')
+      .itemInputs('24x gtceu:ram_chip')
+      .itemInputs('24x gtceu:annealed_copper_double_wire')
+      .inputFluids(Fluid.of(`gtceu:tin`, 576))
+      .itemOutputs('gtceu:quantum_processor_mainframe')
+      .EUt(IV)
+      .duration(400)
+      .cleanroom(CleanroomType.CLEANROOM)
+
+    event.recipes.gtceu.circuit_assembler('gregitas:quantum_mainframe_advanced_solder')
+      .itemInputs('2x gtceu:hssg_frame')
+      .itemInputs('2x gtceu:quantum_processor_computer')
+      .itemInputs('6x gtceu:advanced_smd_inductor')
+      .itemInputs('12x gtceu:advanced_smd_capacitor')
+      .itemInputs('24x gtceu:ram_chip')
+      .itemInputs('24x gtceu:annealed_copper_double_wire')
+      .inputFluids(Fluid.of(`gtceu:soldering_alloy`, 288))
+      .itemOutputs('gtceu:quantum_processor_mainframe')
+      .EUt(IV)
+      .duration(400)
+      .cleanroom(CleanroomType.CLEANROOM)
+
+    event.recipes.gtceu.circuit_assembler('gregitas:quantum_mainframe')
+      .itemInputs('2x gtceu:hssg_frame')
+      .itemInputs('2x gtceu:quantum_processor_computer')
+      .itemInputs('24x gtceu:smd_inductor')
+      .itemInputs('48x gtceu:smd_capacitor')
+      .itemInputs('24x gtceu:ram_chip')
+      .itemInputs('24x gtceu:annealed_copper_double_wire')
+      .inputFluids(Fluid.of(`gtceu:tin`, 576))
+      .itemOutputs('gtceu:quantum_processor_mainframe')
+      .EUt(IV)
+      .duration(800)
+      .cleanroom(CleanroomType.CLEANROOM)
+
+    event.recipes.gtceu.circuit_assembler('gregitas:quantum_mainframe_solder')
+      .itemInputs('2x gtceu:hssg_frame')
+      .itemInputs('2x gtceu:quantum_processor_computer')
+      .itemInputs('24x gtceu:smd_inductor')
+      .itemInputs('48x gtceu:smd_capacitor')
+      .itemInputs('24x gtceu:ram_chip')
+      .itemInputs('24x gtceu:annealed_copper_double_wire')
+      .inputFluids(Fluid.of(`gtceu:soldering_alloy`, 288))
+      .itemOutputs('gtceu:quantum_processor_mainframe')
+      .EUt(IV)
+      .duration(800)
+      .cleanroom(CleanroomType.CLEANROOM)
 
 	//Liquid Chorus
 	
@@ -2341,6 +2479,14 @@ event.recipes.gtceu.mixer('raw_thorium')
     )
     .duration(50)
     .EUt(HV)
+
+   //create radiator fan
+
+    shaped("railways:smokestack_diesel", [" T ", "TET", " T "],
+      {
+          T: "gtceu:iron_plate",
+          E: "create:propeller",
+      })
 	
 	 //straw hat
 	 
@@ -2375,4 +2521,47 @@ event.recipes.gtceu.mixer('raw_thorium')
           W: `tfc:wattle`
         }).damageIngredient(["#forge:tools/hammers"]).id(`tfcgroomer:${metal}_grooming_station`)
       })
-    }
+
+      event.custom({
+        type:"immersiveengineering:fermenter",
+        energy:6400,
+        fluid:{ amount:80,fluid:"firmalife:yeast_starter"},
+        input:{ type: "tfc:has_trait", trait: "firmalife:dried",ingredient: {tag: "tfc:foods/fruits"} }
+      }).id("gregitas:yeast_starter")
+
+      
+      event.custom({
+        type:"immersiveengineering:fermenter",
+        energy:6400,
+        fluid:{ amount:100,fluid:"firmalife:yeast_starter"},
+        input:{ type: "tfc:not_rotten",ingredient: {item: `gregitas:oat_mash`} }
+      }).id("gregitas:yeast_starter_oat")
+
+      event.custom({
+        type:"immersiveengineering:fermenter",
+        energy:6400,
+        fluid:{ amount:100,fluid:"firmalife:yeast_starter"},
+        input:{ type: "tfc:not_rotten",ingredient: {item: `gregitas:wheat_mash`} }
+      }).id("gregitas:yeast_starter_wheat")
+
+
+      TFCGrainsToAlchohol.forEach((grain) => {
+        event.custom({
+          type:"immersiveengineering:squeezer",
+          energy:19200,
+          input:{ type: "tfc:not_rotten",ingredient: {item: `tfc:food/${grain.id}_grain`} },
+          result: { item: `gregitas:${grain.id}_mash`,count: 1 }
+        }).id(`gregitas:${grain.id}_mash`)
+      })
+
+      TFCGrainsToAlchohol.forEach((grain) => {
+        event.custom({
+          type:"immersiveengineering:mixer",
+          energy:18000,
+          fluid:{ amount:500, tag: "gregitas:water"},
+          inputs: [{ type: "tfc:not_rotten",ingredient: { item: `gregitas:${grain.id}_mash`},count:1}],
+          result: { amount: 500,  fluid: `${grain.alcohol}` }
+        }).id(`gregitas:${grain.id}_alcohol`)
+      })
+
+}

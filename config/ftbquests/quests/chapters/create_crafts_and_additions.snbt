@@ -20,7 +20,7 @@
 			tasks: [{
 				id: "5F7E95E6963C8442"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -102,7 +102,7 @@
 			tasks: [{
 				id: "2CB46275B68C7FB6"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -180,7 +180,7 @@
 			tasks: [{
 				id: "571D0195DE65403A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -307,7 +307,7 @@
 			tasks: [{
 				id: "3573C1A38B2F2B46"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "create:super_glue"
 					tag: {
 						Damage: 0
@@ -407,7 +407,7 @@
 			tasks: [{
 				id: "3C95EE3C415B2948"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -491,7 +491,7 @@
 			tasks: [{
 				id: "28BB0F5E260129E7"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [

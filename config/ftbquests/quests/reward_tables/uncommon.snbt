@@ -57,7 +57,7 @@
 		{ item: "productivebees:upgrade_breeding" }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -70,7 +70,7 @@
 		{ item: "minecraft:netherite_ingot" }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "potionsmaster:netherite_sight"
@@ -79,7 +79,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "potionsmaster:diamond_sight"
@@ -92,7 +92,7 @@
 		{ item: "functionalstorage:gold_upgrade", weight: 2.0f }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "enderchests:ender_chest"
 				tag: {
 					code: "000"
@@ -137,7 +137,7 @@
 		{ item: "minecraft:emerald_block", weight: 10.0f }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "potionsmaster:diamond_sight"
@@ -147,7 +147,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "potionsmaster:gold_sight"
@@ -157,7 +157,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "potionsmaster:iron_sight"
@@ -167,7 +167,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "potionsmaster:redstone_sight"
@@ -192,7 +192,7 @@
 		{ item: "minecraft:ender_eye", random_bonus: 2, weight: 5.0f }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -204,7 +204,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -216,7 +216,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -228,7 +228,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -240,7 +240,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -252,7 +252,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -264,7 +264,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{

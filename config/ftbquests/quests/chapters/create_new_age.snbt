@@ -63,7 +63,7 @@
 				{
 					id: "1869AB5D8193DB51"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -101,7 +101,7 @@
 				{
 					id: "4D80636BB6F52992"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -115,7 +115,7 @@
 				{
 					id: "1A6078E04EC8ACC5"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -341,7 +341,7 @@
 				count: 9
 				id: "402D1616ED34356A"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -414,7 +414,7 @@
 				count: 4
 				id: "26ECFF7E480AFEEA"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -428,7 +428,7 @@
 			tasks: [{
 				id: "527C134433386552"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -516,7 +516,7 @@
 				{
 					id: "6006230EDF06A90C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:food": {
 								creationDate: -2L
@@ -589,7 +589,7 @@
 			rewards: [{
 				id: "3DAA994402654049"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:potion"
 					tag: {
 						Potion: "minecraft:fire_resistance"
@@ -600,7 +600,7 @@
 			tasks: [{
 				id: "33A1992891D55CE8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [

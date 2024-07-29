@@ -4,7 +4,7 @@
 	filename: "create_copper_stage"
 	group: "4B728CAFC5748917"
 	icon: {
-		Count: 1b
+		Count: 1
 		ForgeCaps: {
 			"tfc:item_heat": {
 				heat: 0.0f
@@ -21,24 +21,14 @@
 			description: ["{gravitas.quest.create_copper.desc.copper_ingot}"]
 			id: "48C8D0CB8C53A8A4"
 			rewards: [{
-				count: 3
-				id: "6AAA57DBDD78B362"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:metal/ingot/copper"
-				}
-				type: "item"
+				id: "05E7FE9233117D7E"
+				type: "xp_levels"
+				xp_levels: 2
 			}]
 			tasks: [{
 				id: "3183CF05DC3CA174"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -280,7 +270,7 @@
 				count: 5
 				id: "13B79FB6DFE6ACD3"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -314,7 +304,7 @@
 				{
 					id: "6BB7F231F559B062"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -334,7 +324,7 @@
 				{
 					id: "06B8F1E7CD29CFD1"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
