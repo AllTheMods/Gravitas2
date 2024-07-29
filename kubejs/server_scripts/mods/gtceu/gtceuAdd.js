@@ -268,6 +268,46 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
     })
 
+    // Cobble to gravel
+    tfcCobbleToSand.forEach((type) => {
+        event.recipes.gtceu.forge_hammer(`rock/cobble_${type.stone}_to_gravel`)
+            .itemInputs(`tfc:rock/cobble/${type.stone}`)
+            .itemOutputs(`tfc:rock/gravel/${type.stone}`)
+            .duration(100)
+            .EUt(LV)
+    })
+    
+    // Cobble to gravel
+    tfcCobbleToSand.forEach((type) => {
+        event.recipes.gtceu.forge_hammer(`rock/cobble_${type.stone}_to_gravel`)
+            .itemInputs(`tfc:rock/cobble/${type.stone}`)
+            .itemOutputs(`tfc:rock/gravel/${type.stone}`)
+            .duration(100)
+            .EUt(18)
+    })
+	
+    // Gravel to sand
+    tfcCobbleToSand.forEach((type) => {			
+		event.recipes.gtceu.forge_hammer(`sand/${type.stone}_to_${type.sand}_sand`)
+			.itemInputs(`tfc:rock/gravel/${type.stone}`)
+			.itemOutputs(`tfc:sand/${type.sand}`)
+			.duration(100)
+			.EUt(8)
+    })
+
+    // Rock breaker recipes
+    tfcCobbleToSand.forEach((type) => {
+        event.recipes.gtceu.rock_breaker(`rock/cobble/${type.stone}`)
+            .notConsumable(`tfc:rock/cobble/${type.stone}`)
+            .itemOutputs(`tfc:rock/cobble/${type.stone}`)
+            ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+            ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+            .duration(16)
+            .EUt(24)
+            .addCondition(RockBreakerCondition.INSTANCE)
+    })
+
+
     //Modification
     event.replaceInput({ mod: 'gtceu', }, 'minecraft:sand', '#forge:sand')
     event.replaceInput({ mod: 'gtceu', },'minecraft:red_sand', '#forge:sand')
