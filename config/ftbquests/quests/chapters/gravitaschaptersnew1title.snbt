@@ -82,10 +82,18 @@
 				""
 				"Just like IRL, you'll need to gather &aTwigs&r from the ground. These make great handles for the tools we'll make."
 			]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:wood/twig/pine"
+			}
 			id: "1C236E0B89076819"
 			tasks: [{
-				consume_items: false
-				count: 2L
 				icon: {
 					Count: 1
 					ForgeCaps: {
@@ -94,18 +102,17 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:wood/twig/oak"
+					id: "minecraft:stick"
 				}
-				id: "4872FD3163163FDE"
+				id: "464F08F2D70AD61B"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
 					tag: {
-						value: "tfc:twigs"
+						value: "tfc:can_be_lit_on_torch"
 					}
 				}
-				only_from_crafting: false
-				title: "Twigs"
+				title: "Any Stick/Twig"
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.stick}"

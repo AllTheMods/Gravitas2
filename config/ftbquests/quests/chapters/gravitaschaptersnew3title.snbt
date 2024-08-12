@@ -474,7 +474,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/black_steel"
+					id: "gtceu:black_steel_ingot"
 				}
 				type: "item"
 			}]
@@ -487,18 +487,15 @@
 			id: "5940B53C874A6550"
 			subtitle: "{gravitas.quest.stage3.desc.weld}"
 			tasks: [{
-				count: 15L
 				id: "158764D3EB1332D3"
 				item: {
-					Count: 15
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/high_carbon_black_steel"
 					}
-					id: "tfc:metal/ingot/high_carbon_black_steel"
 				}
+				title: "Any #forge:ingots/high_carbon_black_steel"
 				type: "item"
 			}]
 			x: -1.5d
