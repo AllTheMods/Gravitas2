@@ -274,25 +274,16 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .itemInputs(`tfc:rock/cobble/${type.stone}`)
             .itemOutputs(`tfc:rock/gravel/${type.stone}`)
             .duration(100)
-            .EUt(LV)
-    })
-    
-    // Cobble to gravel
-    tfcCobbleToSand.forEach((type) => {
-        event.recipes.gtceu.forge_hammer(`rock/cobble_${type.stone}_to_gravel`)
-            .itemInputs(`tfc:rock/cobble/${type.stone}`)
-            .itemOutputs(`tfc:rock/gravel/${type.stone}`)
-            .duration(100)
             .EUt(18)
     })
 	
     // Gravel to sand
     tfcCobbleToSand.forEach((type) => {			
-		event.recipes.gtceu.forge_hammer(`sand/${type.stone}_to_${type.sand}_sand`)
-			.itemInputs(`tfc:rock/gravel/${type.stone}`)
-			.itemOutputs(`tfc:sand/${type.sand}`)
-			.duration(100)
-			.EUt(8)
+	event.recipes.gtceu.forge_hammer(`sand/${type.stone}_to_${type.sand}_sand`)
+	    .itemInputs(`tfc:rock/gravel/${type.stone}`)
+	    .itemOutputs(`tfc:sand/${type.sand}`)
+	    .duration(100)
+	    .EUt(8)
     })
 
     // Rock breaker recipes
