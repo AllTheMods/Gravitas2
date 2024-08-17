@@ -73,3 +73,18 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerAe2ChargerSchema(event)
   registerAe2InscriberSchema(event)
 })
+
+// Server only
+const configPath = "kubejs/config/modpack_config.json"
+const config = JsonIO.read(configPath)
+let bannedBlockEntities
+if (config) {
+  /** @type {Internal.ArrayList<string>} */
+  bannedBlockEntities = config?.server.banned_block_entities
+
+  if (bannedBlockEntities instanceof $ArrayList && !bannedBlockEntities.isEmpty()) {
+    ForgeEvents.onEvent("net.minecraftforge.event.level.ChunkEvent$Load", event => {
+      removeBlockEntities(event)
+    })
+  }
+}

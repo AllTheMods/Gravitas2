@@ -20,6 +20,9 @@ const $ChunkGeneratorExtension = Java.loadClass("net.dries007.tfc.world.ChunkGen
 const $RandomSource = Java.loadClass("net.minecraft.util.RandomSource")
 const $ChunkPos = Java.loadClass("net.minecraft.world.level.ChunkPos")
 const $Util = Java.loadClass("net.minecraft.Util")
+const $HashSet = Java.loadClass("java.util.HashSet")
+const $ArrayList = Java.loadClass("java.util.ArrayList")
+
 /** @type {Internal.ForestFeature} */
 const $ForestFeatureObj = $TFCFeatures.FOREST.get()
 /**  @type {Internal.Method} */
