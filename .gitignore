@@ -32,6 +32,7 @@ kubejs/startup_scripts/jsconfig.json
 kubejs/client_scripts/debug/
 kubejs/client_scripts/jsconfig.json
 kubejs/config/probejs.json
+kubejs/config/modpack_config.json
 kubejs/jsconfig.json
 kubejs/documentation/
 kubejs/probe/
