@@ -55,6 +55,15 @@ rocket:
 
   # How much fuel is required to travel to a planet anywhere?
   # note: this is platform-specific.
-  # Default: 8 buckets.
+  # Default: 48 buckets.
   anywhereFuelAmount: 48000
+
+client:
+  # Offset of the oxygen bar from the left side of the screen.
+  # Default: 32
+  oxygenBarX: 32
+
+  # Offset of the oxygen bar from the bottom of the screen.
+  # Default: 32
+  oxygenBarY: 32
 

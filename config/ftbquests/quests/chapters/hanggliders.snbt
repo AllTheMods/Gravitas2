@@ -15,7 +15,7 @@
 		click: "custom:patchouli:tfc/firmaciv/canoe"
 		height: 1.0d
 		hover: ["Click For Info!"]
-		image: "firmaciv:item/canoe_with_paddle_icon"
+		image: "firmaciv:textures/gui/book/canoe_isometric.png"
 		rotation: 0.0d
 		width: 1.0d
 		x: 9.5d
@@ -703,14 +703,14 @@
 								ticks: 0L
 							}
 						}
-						id: "firmaciv:oarlock"
+						id: "alekiships:oarlock"
 					}
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "75A77C3C8800A25E"
-					item: "firmaciv:oar"
+					item: "alekiships:oar"
 					type: "item"
 				}
 			]

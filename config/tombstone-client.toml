@@ -27,8 +27,6 @@
 	priorize_tool_on_hotbar = false
 	#Allows to activate a grave by sneaking [false/true|default:true]
 	activate_grave_by_sneaking = true
-	#Denies to create a grave with your items when you die [false/true|default:false]
-	deny_grave_on_death = false
 	#Allows your grave to appear in water [false/true|default:true]
 	allow_grave_in_water = true
 	#Decimal value for the color of the particles when using magic items [0..16777215|default:125656]
@@ -56,7 +54,7 @@
 	#Allowed Values: GRAVE_SIMPLE, GRAVE_NORMAL, GRAVE_CROSS, TOMBSTONE, SUBARAKI_GRAVE, GRAVE_ORIGINAL
 	favorite_grave = "GRAVE_SIMPLE"
 	#Favorite grave marble
-	#Allowed Values: DARK, WHITE
+	#Allowed Values: DARK, WHITE, BLUE, GREEN, CARMIN
 	favorite_grave_marble = "DARK"
 	#Defines the rule to use for grave's skin [DEFAULT/FORCE_NORMAL/FORCE_HALLOWEEN|default:DEFAULT]
 	#Allowed Values: DEFAULT, FORCE_NORMAL, FORCE_HALLOWEEN, FORCE_CHRISTMAS

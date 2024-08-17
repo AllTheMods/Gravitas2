@@ -1,0 +1,9 @@
+
+["Stair Sitting Without Click"]
+	#If this is set to true, sitting on a stair without clicking it will trigger Stair sitting poses.
+	"No Click Stair Poses" = true
+
+["Click stair/slabs"]
+	#If this is set to true, right clicking a stair or slab will make the player sit down.
+	"No click stairs/slabs" = true
+

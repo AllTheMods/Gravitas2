@@ -81,18 +81,49 @@
 			#The amount of energy cost of keeping the wormhole open each tick for intergalactic connections
 			#Range: 0 ~ 9223372036854775807
 			intergalactic_connection_energy_draw = 1000000
-			#The amount of energy required to estabilish a connection inside a solar system
+			#The amount of energy required to establish a connection inside a solar system
 			#Range: 0 ~ 9223372036854775807
 			system_wide_connection_energy_cost = 50000
-			#The amount of energy required to estabilish a connection inside the galaxy
+			#The amount of energy required to establish a connection inside the galaxy
 			#Range: 0 ~ 9223372036854775807
 			interstellar_connection_energy_cost = 100000
-			#The amount of energy required to estabilish a connection outside the galaxy
+			#The amount of energy required to establish a connection outside the galaxy
 			#Range: 0 ~ 9223372036854775807
 			intergalactic_connection_energy_cost = 100000000000
 			#The energy required to keep the Stargate open after exceeding the maximum open time is multiplied by this number
 			#Range: > 1
 			energy_bypass_multiplier = 100000
+			#If true, allow the destruction of Blocks by Kawooshes
+			kawoosh_destroys_blocks = true
+			#If true, allow the disintegration of Entities by Kawooshes
+			kawoosh_disintegrates_entities = true
+			#If true, allow the disintegration of Items by Kawooshes
+			kawoosh_disintegrates_items = true
+			#Decides if 8-chevron addresses can be used for dialing within the same galaxy
+			allow_interstellar_8_chevron_addresses = false
+			#Decides if two Stargates from the same Solar System should be able to connect
+			allow_system_wide_connections = true
+			#The maximum amount of blocks allowed within the ring area before Stargate becomes obstructed
+			#Range: 1 ~ 21
+			max_obstructive_blocks = 12
+			#Enables choosing the Address when first creating a Stargate by right-clicking it with a renamed Control Crystal
+			enable_address_choice = false
+			#Enables upgrading the Classic Stargate
+			enable_classic_stargate_upgrades = true
+			#Enables creating Stargate Variants
+			enable_stargate_variants = true
+			#If true, Stargate item will always display the 9-Chevron Address of the Stargate in the inventory
+			always_display_stargate_id = false
+			#If true, the Universe Stargate will always rotate in the best direction; If false, the Universe Stargate will alternate between rotation directions
+			universe_stargate_best_direction = true
+			#If true, the Universe Stargate will rotate faster (Fast full rotation takes 108 ticks, slow full toration takes 162 ticks)
+			universe_fast_rotation = true
+			#The maximum amount of energy the Stargate can hold
+			#Range: 0 ~ 9223372036854775807
+			stargate_energy_capacity = 1000000000000
+			#The maximum amount of energy the Stargate can receive at once
+			#Range: 0 ~ 9223372036854775807
+			stargate_energy_max_receive = 1000000000000
 
 	["Stargate Journey Common Config"."Naquadah Generator Config"]
 
@@ -131,24 +162,8 @@
 			generate_random_solar_systems = true
 			#Stargate Network will randomize addresses based on the world seed
 			random_addresses_from_seed = true
-			#X chunk center offset of structures that contain a Stargate
-			#Range: -512 ~ 512
-			stargate_generation_center_x_chunk_offset = 0
-			#Z chunk center offset of structures that contain a Stargate
-			#Range: -512 ~ 512
-			stargate_generation_center_z_chunk_offset = 0
-			#X chunk bounds within which a Structure containing a Stargate may generate
-			#Range: 0 ~ 64
-			stargate_generation_x_bound = 64
-			#Z chunk bounds within which a Structure containing a Stargate may generate
-			#Range: 0 ~ 64
-			stargate_generation_z_bound = 64
-			#X chunk bounds within which a Buried Stargate may generate
-			#Range: 0 ~ 64
-			buried_stargate_generation_x_bound = 64
-			#Z chunk bounds within which a Buried Stargate may generate
-			#Range: 0 ~ 64
-			buried_stargate_generation_z_bound = 64
+			#Stargates Network will not consider DHDs when choosing preferred Stargate
+			disable_dhd_preference = false
 
 	["Stargate Journey Common Config"."Tech Config"]
 
@@ -171,4 +186,26 @@
 			#Probability of the Ancient Gene Therapy working
 			#Range: 0 ~ 100
 			ata_gene_therapy_success_rate = 100
+
+	["Stargate Journey Common Config"."Generation Config"]
+
+		["Stargate Journey Common Config"."Generation Config".server]
+			#X chunk center offset of structures that contain a Stargate
+			#Range: -512 ~ 512
+			stargate_generation_center_x_chunk_offset = 0
+			#Z chunk center offset of structures that contain a Stargate
+			#Range: -512 ~ 512
+			stargate_generation_center_z_chunk_offset = 0
+			#X chunk bounds within which a Structure containing a Stargate may generate
+			#Range: 0 ~ 64
+			stargate_generation_x_bound = 64
+			#Z chunk bounds within which a Structure containing a Stargate may generate
+			#Range: 0 ~ 64
+			stargate_generation_z_bound = 64
+			#X chunk bounds within which a Buried Stargate may generate
+			#Range: 0 ~ 64
+			buried_stargate_generation_x_bound = 64
+			#Z chunk bounds within which a Buried Stargate may generate
+			#Range: 0 ~ 64
+			buried_stargate_generation_z_bound = 64
 

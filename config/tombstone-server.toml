@@ -1,9 +1,6 @@
 
 #Options related to player's death
 [player_death]
-	#Experience loss on death (%) [-1..100|default:100|disabled:-1]
-	#Range: -1 ~ 100
-	xp_loss = 50
 	#The time in minutes before a grave is unlocked to anyone [-1..MAX|default:-1|disabled:-1]
 	#Range: > -1
 	decay_time = -1
@@ -13,12 +10,8 @@
 	#The duration of the Ghostly Shape effect in seconds [0..MAX|default:120]
 	#Range: > 0
 	ghostly_shape_duration = 0
-	#The chance that a player receives an already enchanted Grave's Key on death [-1..100|default:0|disabled:-1]
-	#Range: -1 ~ 100
-	chance_enchanted_grave_key = 0
-	#Defines the progression scale to be able to upgrade perks to higher level (based on the level in Knowledge of Death) [1..5|default:2]
-	#Range: 1 ~ 5
-	perk_progression_scale = 2
+	#Always Keep xp on death [false/true|default:false]
+	always_keep_xp_on_death = false
 
 #Allows to customize or disable the enchantments
 [enchantments]
@@ -69,15 +62,16 @@
 	#Cooldown in second after using a tablet [60..1200|default:300]
 	#Range: 60 ~ 1200
 	tablet_cooldown = 300
+	#Always enchant Grave's Key [false/true|default:false]
+	always_enchant_grave_key = false
+	#Prevents to craft Enchanted Grave Key [false/true|default:false]
+	disable_enchanted_grave_key_recipe = false
 
 #For settings related to decorative tombs and magic items
 [decorative_grave]
 	#The cooldown in hours to pray with the Ankh [1..10|default:3]
 	#Range: 1 ~ 10
 	cooldown_to_pray = 3
-	#The cooldown in minutes to reset the perks with the ankh of Pray [20..1440|default:120]
-	#Range: 20 ~ 1440
-	cooldown_reset_perk = 120
 
 #Allows to disable some magic items
 [allowedMagicItems]
@@ -147,11 +141,78 @@
 	allow_familiar_stone = false
 	#Merchant Stone [false/true|default:true]
 	allow_merchant_stone = false
+	#Tablet of Guard [false/true|default:true]
+	allow_tablet_of_guard = true
+	#Book of Scribe [false/true|default:true]
+	allow_book_of_scribe = true
+	#Prayer Stone [false/true|default:true]
+	allow_prayer_stone = true
+	#Guardian Stone [false/true|default:true]
+	allow_guardian_stone = true
 
 #Allows to enable some features related to others mods
 [compatibility]
-	#fix the custom name with anvil when the string is empty [false/true|default:true]
-	fix_anvil_custom_name = true
 	#fix the RepairCost:0 added by the anvil & grindstone in nbt preventing theses items to stack [false/true|default:true]
 	fix_repair_cost_zero = true
+
+#Allows to customize or disable the perks
+[allowed_perks]
+	#Allows the perk Alchemist [false/true|default:true]
+	allow_alchemist = true
+	#Defines the level max of the perk Alchemist [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_alchemist = 5
+	#Allows the perk Concentration [false/true|default:true]
+	allow_concentration = true
+	#Defines the level max of the perk Concentration [1..3|default:3]
+	#Range: 1 ~ 3
+	level_max_concentration = 3
+	#Allows the perk Jailer [false/true|default:true]
+	allow_jailer = true
+	#Defines the level max of the perk Jailer [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_jailer = 5
+	#Allows the perk Memento Mori [false/true|default:true]
+	allow_memento_mori = true
+	#Defines the level max of the perk Memento Lori [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_memento_mori = 5
+	#Allows the perk Necromancer [false/true|default:true]
+	allow_necromancer = true
+	#Defines the level max of the perk Necromancer [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_necromancer = 5
+	#Allows the perk Rune Inscriber [false/true|default:true]
+	allow_rune_inscriber = true
+	#Defines the level max of the perk Rune Inscriber [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_rune_inscriber = 5
+	#Allows the perk Scribe [false/true|default:true]
+	allow_scribe = true
+	#Defines the level max of the perk Scribe [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_scribe = 5
+	#Allows the perk ShadowWalker [false/true|default:true]
+	allow_shadow_walker = true
+	#Defines the level max of the perk ShadowWalker [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_shadow_walker = 5
+	#Allows the perk Treasure Seeker [false/true|default:true]
+	allow_treasure_seeker = true
+	#Defines the level max of the perk Treasure Seeker [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_treasure_seeker = 5
+	#Allows the perk Witch Doctor [false/true|default:true]
+	allow_witch_doctor = true
+	#Defines the level max of the perk Witch Doctor [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_witch_doctor = 5
+	#Allows the perk Gladiator [false/true|default:true]
+	allow_gladiator = true
+	#Defines the level max of the perk Gladiator [1..5|default:5]
+	#Range: 1 ~ 5
+	level_max_gladiator = 5
+	#The cooldown in minutes to reset the perks with the ankh of Pray [20..1440|default:120]
+	#Range: 20 ~ 1440
+	cooldown_reset_perk = 120
 

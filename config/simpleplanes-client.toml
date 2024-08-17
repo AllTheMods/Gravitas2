@@ -10,4 +10,7 @@
 	#Third person camera zoom on a helicopter
 	#Range: 1.0 ~ 2.0
 	heli_camera_distance_multiplier = 1.2
+	#Third person camera zoom on a cargo plane
+	#Range: 1.0 ~ 2.0
+	cargo_plane_camera_distance_multiplier = 1.8
 

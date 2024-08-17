@@ -1,0 +1,239 @@
+{
+  "Replace": false,
+  "Attributes": {
+    "MaxHealth": 25.0,
+    "MaxHunger": 20.0,
+    "MaxEnergy": 20.0,
+    "MovementSpeed": 1.0,
+    "Gravity": 0.07,
+    "FollowRange": 24.0,
+    "AttackDamage": 3.0
+  },
+  "SpawnData": {
+    "SpawnCount": "2-2",
+    "SpawnWeight": 1,
+    "RandomChance": 0.5,
+    "Biomes": [
+      {
+        "ID": "minecraft:river"
+      }
+    ]
+  },
+  "AI": {
+    "TargetGoals": [
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_hit_by",
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ]
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:target_hunt",
+        "SpatialSearch": true,
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ]
+      }
+    ],
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 2000
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:try_to_find_water",
+        "Speed": 1.0
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:jump_out_of_water",
+        "HorizontalSpeed": 0.7,
+        "VerticalSpeed": 0.4,
+        "CanUse": [
+          "dawnera:random_chance,3",
+          "dawnera:is_grown_up"
+        ]
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 1.0
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:lay_egg",
+        "Speed": 1.0,
+        "CanUse": [
+          "dawnera:is_in_water"
+        ],
+        "EggBlock": {
+          "ID": "dawnera:alligator_gar_roe",
+          "Properties": {
+            "waterlogged": true
+          }
+        },
+        "PositionChooser": "WATER"
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:eat_food",
+        "Speed": 1.2,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 10,
+        "MaxItemCountCanEat": 1,
+        "CanUse": [
+          "dawnera:is_in_water"
+        ],
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ],
+        "FoodEat": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:eat_block",
+        "Speed": 1.2,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 2,
+        "Interval": 20,
+        "AcceptableDistance": 2,
+        "CanUse": [
+          "dawnera:is_no_action",
+          "dawnera:is_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "Blocks": [
+          {
+            "ID": "minecraft:frogspawn"
+          },
+          {
+            "ID": "dawnera:alligator_gar_roe"
+          },
+          {
+            "ID": "dawnera:sturgeon_roe"
+          }
+        ],
+        "AchievePos": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:melee_attack",
+        "Speed": 1.2,
+        "ShouldSeeTarget": false,
+        "CanUse": [
+          "dawnera:is_in_water"
+        ],
+        "PerformAttack": {
+          "Conditions": [
+            "dawnera:is_no_action"
+          ],
+          "Actions": [
+            "dawnera:focus_on_target",
+            "dawnera:play_action,ActionController,attack"
+          ]
+        }
+      },
+      {
+        "Priority": 6,
+        "ID": "dawnera:random_stroll",
+        "Speed": 1.0,
+        "Interval": 40,
+        "PositionChooser": "WATER"
+      }
+    ]
+  },
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "attack",
+          "Length": 0.48
+        },
+        {
+          "ID": "eat",
+          "Length": 0.48
+        },
+        {
+          "ID": "jump",
+          "Length": 1
+        }
+      ]
+    }
+  ],
+  "FoodRation": {
+    "Items": [
+      {
+        "ID": "dawnera:worm"
+      },
+      {
+        "ID": "minecraft:frogspawn"
+      },
+      {
+        "ID": "dawnera:sturgeon_roe"
+      },
+      {
+        "ID": "dawnera:alligator_gar_roe"
+      },
+      {
+        "Tag": "dawnera:meat_food"
+      }
+    ],
+    "Entities": [
+      {
+        "ID": "dawnera:pond_snail"
+      },
+      {
+        "ID": "dawnera:worm"
+      },
+      {
+        "ID": "minecraft:frog"
+      },
+      {
+        "ID": "minecraft:tadpole"
+      },
+      {
+        "ID": "minecraft:salmon"
+      },
+      {
+        "ID": "minecraft:cod"
+      },
+      {
+        "ID": "minecraft:tropical_fish"
+      },
+      {
+        "ID": "minecraft:axolotl",
+        "Conditions": [
+          "dawnera:is_baby"
+        ],
+        "TargetConditions": [
+          "dawnera:is_baby"
+        ]
+      },
+      {
+        "ID": "minecraft:axolotl",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      },
+      {
+        "Tag": "dawnera:small_animal",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+
+#Disables certain types. Note that all these configs, like in any other mod, only hide stuff from tabs and disable their recipes
+[types]
+
+	[types.wood_type]
+
+		[types.wood_type.createdieselgenerators]
+			chip_wood = true
+
+		[types.wood_type.iceandfire]
+			dreadwood = true
+
+		[types.wood_type.tfc]
+			acacia = true
+			ash = true
+			aspen = true
+			birch = true
+			blackwood = true
+			chestnut = true
+			douglas_fir = true
+			hickory = true
+			kapok = true
+			mangrove = true
+			maple = true
+			oak = true
+			palm = true
+			pine = true
+			rosewood = true
+			sequoia = true
+			spruce = true
+			sycamore = true
+			white_cedar = true
+			willow = true
+
+		[types.wood_type.allthemodium]
+			demonic = true
+			soul = true
+
+		[types.wood_type.integrateddynamics]
+			menril = true
+
+		[types.wood_type.gtceu]
+			rubber = true
+
+	[types.leaves_type]
+
+		[types.leaves_type.allthemodium]
+			ancient = true
+			demonic = true
+			soul = true
+
+		[types.leaves_type.integrateddynamics]
+			menril = true
+
+		[types.leaves_type.gtceu]
+			rubber = true
+
+#Disables specific entries
+[entries]
+
+	[entries.wood_type]
+
+		[entries.wood_type.storagedrawers]
+			full_drawers_2 = true
+			half_drawers_1 = true
+			full_drawers_4 = true
+			half_drawers_4 = true
+			trim = true
+			half_drawers_2 = true
+			full_drawers_1 = true
+
+		[entries.wood_type.create]
+			window_pane = true
+			window = true
+

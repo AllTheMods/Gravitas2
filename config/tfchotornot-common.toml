@@ -1,0 +1,24 @@
+
+[general]
+	#This sets whether an item that contains a fluid will have a tooltip that they are gaseous, too hot or too cold.
+	enableTooltips = true
+	#This sets whether gaseous effect for a fluid should be enabled.
+	enableGaseous = true
+	#If true, players yeet hot or cold items from their hands.
+	yeet = true
+	#This sets the temperature when a hot object should start burning the player (in celsius).
+	#Range: > -2147483648
+	hotTemperature = 300
+	#This sets the temperature when a cold object should add effects to the player (in celsius).
+	#Range: > -2147483648
+	coldTemperature = -20
+	#This sets the temperature when a hot fluid should start burning the player (in kelvin).
+	#Range: > -2147483648
+	hotFluidTemperature = 1300
+	#This sets the temperature when a cold fluid should add effects to the player (in kelvin).
+	#Range: > -2147483648
+	coldFluidTemperature = 273
+	#How fast offhand items should heat up when holding hot items.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	itemTemperatureModifier = 1.75
+

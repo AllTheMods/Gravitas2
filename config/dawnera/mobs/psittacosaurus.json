@@ -1,0 +1,305 @@
+{
+  "Replace": false,
+  "StepHeight": 0.75,
+  "Tamable": true,
+  "Attributes": {
+    "MaxHealth": 24.0,
+    "MaxHunger": 20.0,
+    "MaxEnergy": 50.0,
+    "MovementSpeed": 0.25,
+    "SwimSpeed": 2.0,
+    "KnockbackResistance": 0.1,
+    "FollowRange": 32.0,
+    "AttackDamage": 2.0
+  },
+  "TameMethod": {
+    "ID": "dawnera:feed_from_ground",
+    "Chance": 5
+  },
+  "SpawnData": {
+    "SpawnCount": "2-3",
+    "SpawnWeight": 1,
+    "RandomChance": 0.33,
+    "Biomes": [
+      {
+        "ID": "minecraft:savanna"
+      },
+      {
+        "ID": "minecraft:taiga"
+      },
+      {
+        "ID": "minecraft:old_growth_pine_taiga"
+      },
+      {
+        "ID": "minecraft:old_growth_spruce_taiga"
+      }
+    ]
+  },
+  "AI": {
+    "TargetGoals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:target_hit_by_owner"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_owner_hit_by"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_hit_by",
+        "AlertOthers": true
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_has_baby"
+      }
+    ],
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:float_on_water"
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 4000
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:avoid_low_health",
+        "WalkSpeed": 1.3,
+        "SprintSpeed": 1.3,
+        "MaxDistance": 20
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:panic_of_damage",
+        "WalkSpeed": 1.3,
+        "SprintSpeed": 1.3
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:panic_of_entity",
+        "WalkSpeed": 1.3,
+        "SprintSpeed": 1.3,
+        "MaxDistance": 20,
+        "TargetConditions": "dawnera:is_big || dawnera:is_giant",
+        "CanUse": [
+          "dawnera:is_not_sleeping"
+        ],
+        "StartPanic": {
+          "Conditions": [
+            "dawnera:is_not_in_water"
+          ],
+          "Actions": [
+            "dawnera:delay_sleep,150,300",
+            "dawnera:play_action,ActionController,scream",
+            "dawnera:stop_action,StateController"
+          ]
+        }
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 0.8
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:lay_egg",
+        "Speed": 0.8,
+        "EggBlock": "dawnera:psittacosaurus_eggs",
+        "PositionChooser": "LAND"
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:melee_attack",
+        "Speed": 1.3,
+        "MeleeRange": 2.0,
+        "ShouldSeeTarget": false,
+        "CanUse": [
+          "dawnera:is_not_sleeping",
+          "dawnera:is_grown_up"
+        ],
+        "PerformAttack": {
+          "Conditions": [
+            "dawnera:is_no_action"
+          ],
+          "Actions": [
+            "dawnera:focus_on_target",
+            "dawnera:play_action,ActionController,attack"
+          ]
+        }
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:follow_owner",
+        "Speed": 1.3,
+        "StartFollowDistance": 4,
+        "StopFollowDistance": 2,
+        "TeleportDistance": 10,
+        "CanFly": false
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:eat_food",
+        "Speed": 0.85,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 3,
+        "MaxItemCountCanEat": 1,
+        "CanUse": [
+          "dawnera:is_no_action",
+          "dawnera:is_not_sleeping_or_resting",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "FoodEat": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:psittacosaurus.collect_crops",
+        "Speed": 0.85,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 10,
+        "Interval": 10,
+        "AcceptableDistance": 1.75
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:follow_parent",
+        "Speed": 1.3,
+        "VisibilityDistance": 20,
+        "AcceptableDistance": 8
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:follow_entity",
+        "Speed": 0.8,
+        "VisibilityDistance": 32,
+        "AcceptableDistance": 10,
+        "CanUse": [
+          "dawnera:is_not_tamed",
+          "dawnera:is_not_sleeping"
+        ],
+        "CanContinueUse": [
+          "dawnera:is_not_tamed",
+          "dawnera:is_not_sleeping"
+        ],
+        "TargetConditions": [
+          "dawnera:is_entity_type,dawnera:psittacosaurus"
+        ]
+      },
+      {
+        "Priority": 5,
+        "ID": "dawnera:look_around"
+      },
+      {
+        "Priority": 6,
+        "ID": "dawnera:random_stroll",
+        "Speed": 0.8,
+        "PositionChooser": "LAND"
+      }
+    ]
+  },
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "attack",
+          "Length": 0.6
+        },
+        {
+          "ID": "scream",
+          "Length": 1.76
+        },
+        {
+          "ID": "bush",
+          "Length": 1.48
+        },
+        {
+          "ID": "down",
+          "Length": 0.8
+        },
+        {
+          "ID": "fall_asleep",
+          "Length": 0.92
+        },
+        {
+          "ID": "wake_up",
+          "Length": 0.84
+        },
+        {
+          "ID": "up",
+          "Length": 0.92
+        },
+        {
+          "ID": "eat",
+          "Length": 2.6
+        }
+      ]
+    },
+    {
+      "ID": "StateController",
+      "Actions": [
+        {
+          "ID": "rest"
+        },
+        {
+          "ID": "sleep"
+        }
+      ]
+    }
+  ],
+  "FoodRation": {
+    "Items": [
+      {
+        "Tag": "dawnera:plant_food"
+      },
+      {
+        "Tag": "dawnera:fruit_food"
+      }
+    ]
+  },
+  "MobSchedule": {
+    "Conditions": [
+      "dawnera:is_alive",
+      "dawnera:is_on_ground",
+      "dawnera:has_no_target"
+    ],
+    "Tasks": [
+      {
+        "Start": "21:00",
+        "End": "21:10",
+        "Actions": [
+          "dawnera:lie_down"
+        ]
+      },
+      {
+        "Start": "21:10",
+        "End": "05:40",
+        "Actions": [
+          "dawnera:sleep"
+        ]
+      },
+      {
+        "Start": "05:40",
+        "End": "06:00",
+        "Actions": [
+          "dawnera:wake_up"
+        ]
+      },
+      {
+        "Start": "06:00",
+        "End": "21:00",
+        "Actions": [
+          "dawnera:stand_up"
+        ]
+      }
+    ]
+  }
+}

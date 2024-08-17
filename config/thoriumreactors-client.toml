@@ -1,7 +1,23 @@
 
+["Creative TAB and JEI"]
+	#Show fluid creative tanks in Just Enough Items (JEI)
+	showCreativeEnergyTanksInJEI = true
+	#Show fluid creative tanks in creative tab
+	showCreativeEnergyTanksInCreativeTAB = true
+	#Show fluid creative tanks in Just Enough Items (JEI)
+	showCreativeFluidTanksInJEI = true
+	#Show fluid creative tanks in creative tab
+	showCreativeFluidTanksInCreativeTAB = true
+
 ["Reactor Control Screen"]
-	#Should the left area of the reactor control screen be rendered.
+	#Render left area of the reactor control screen
 	showLeftReactorScreenArea = false
-	#Should the right area of the reactor control screen be rendered.
+	#Render right area of the reactor control screen
 	showRightReactorScreenArea = false
+
+[General]
+	#Show by hotkey activated details hover text
+	showBlockDetails = true
+	#Show by hotkey activated description hover text
+	showBlockDescription = true
 

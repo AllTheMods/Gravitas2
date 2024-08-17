@@ -1,0 +1,9 @@
+#Baby mobs attribute multiplier.
+#Range: 0.0 ~ 1000.0
+ageAttributeMultiplier = 0.3499999940395355
+#Tamed mobs attribute multiplier.
+#Range: 0.0 ~ 1000.0
+tameAttributeMultiplier = 1.25
+#Trees are falling, when broken by dinosaurs
+treeFall = true
+
