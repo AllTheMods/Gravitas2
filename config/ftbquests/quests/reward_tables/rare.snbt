@@ -1,6 +1,6 @@
 {
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "ftbquests:lootcrate"
 		tag: {
 			type: "rare_loot_chest"
@@ -28,7 +28,7 @@
 		{ item: "functionalstorage:diamond_upgrade", weight: 3.0f }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -40,7 +40,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:enchanted_book"
 				tag: {
 					StoredEnchantments: [{
@@ -76,7 +76,7 @@
 		{ item: "minecraft:emerald_block", random_bonus: 1, weight: 5.0f }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "apotheosis:potion_charm"
 				tag: {
 					Damage: 0
@@ -87,7 +87,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "apotheosis:potion_charm"
 				tag: {
 					Damage: 0
@@ -98,7 +98,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "apotheosis:potion_charm"
 				tag: {
 					Damage: 0
@@ -145,7 +145,7 @@
 		{ item: "minecraft:budding_amethyst", random_bonus: 2, weight: 5.0f }
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "mininggadgets:mininggadget_simple"
 				tag: { }
 			}
@@ -153,7 +153,7 @@
 		}
 		{
 			item: {
-				Count: 1b
+				Count: 1
 				id: "mininggadgets:mininggadget_fancy"
 				tag: { }
 			}

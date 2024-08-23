@@ -5,7 +5,7 @@
 	group: "20028FE0986EEEC1"
 	icon: "gcyr:gps_satellite"
 	id: "3BE4D5CA7BA9EB50"
-	order_index: 6
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{

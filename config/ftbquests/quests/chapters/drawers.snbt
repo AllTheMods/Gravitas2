@@ -12,102 +12,18 @@
 			description: ["{gravitas.quest.drawer.desc.drawer}"]
 			id: "495B2BDF498A6CA1"
 			tasks: [{
-				id: "10536EA4B2E69660"
+				icon: "everycomp:sd/tfc/oak_full_drawers_1"
+				id: "6BD65C5FCC39C11C"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "itemfilters:tag"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/acacia_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/ash_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/aspen_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/birch_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/blackwood_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/chestnut_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/douglas_fir_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/hickory_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/kapok_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/mangrove_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/maple_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/oak_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/palm_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/pine_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/rosewood_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/sequoia_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/spruce_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/sycamore_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/white_cedar_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/tfc/willow_full_drawers_1"
-							}
-							{
-								Count: 1b
-								id: "everycomp:sd/gtceu/rubber_full_drawers_1"
-							}
-						]
+						value: "storagedrawers:drawers"
 					}
 				}
+				title: "{gravitas.quest.drawer.drawer}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.drawer}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -156,7 +72,7 @@
 			rewards: [{
 				id: "00FBDE5CD320C4ED"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -170,7 +86,7 @@
 			tasks: [{
 				id: "35D6F37C877D8C56"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -211,7 +127,7 @@
 				{
 					id: "6B51F8E969BAFB96"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -302,12 +218,13 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.1x2}"
 					type: "item"
 				}
 				{
 					id: "1502B154DC2B3BE9"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -398,10 +315,10 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.1x2}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.drawer.1x2}"
 			x: -2.0d
 			y: -1.0d
 		}
@@ -413,7 +330,7 @@
 				{
 					id: "4F0408279DBFAF59"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -504,12 +421,13 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 				{
 					id: "7A7E66FCEEBDEEB3"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -600,12 +518,13 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 				{
 					id: "42D8ED619A63567E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -696,10 +615,10 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.drawer.2x2}"
 			x: -2.0d
 			y: 1.0d
 		}
@@ -710,7 +629,7 @@
 			tasks: [{
 				id: "2E623D494167D4BC"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -801,9 +720,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.trim}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.trim}"
 			x: -2.5d
 			y: 0.0d
 		}
@@ -814,7 +733,7 @@
 			tasks: [{
 				id: "2D05E35301C5998E"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -849,9 +768,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.more}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.more}"
 			x: 0.5d
 			y: 2.5d
 		}
@@ -868,7 +787,7 @@
 			tasks: [{
 				id: "7C7951728CB0ABA7"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -887,9 +806,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.redstone}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.redstone}"
 			x: -1.0d
 			y: 1.5d
 		}
@@ -900,7 +819,7 @@
 			tasks: [{
 				id: "32E72B7DF003B121"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -915,9 +834,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.show}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.show}"
 			x: -0.5d
 			y: 2.5d
 		}

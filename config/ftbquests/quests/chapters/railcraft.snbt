@@ -4,7 +4,7 @@
 	filename: "railcraft"
 	group: "095899370DDF48CB"
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "railcraft:steam_locomotive"
 		tag: { }
 	}
@@ -184,7 +184,7 @@
 				count: 5
 				id: "013F8CB8C6B70201"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -198,7 +198,7 @@
 			tasks: [{
 				id: "77C07403D2BA2CE4"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -246,7 +246,7 @@
 				{
 					id: "332699E2DCE5CB88"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -266,7 +266,7 @@
 				{
 					id: "6088DE4C5E7AD1A3"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -361,7 +361,7 @@
 				{
 					id: "742CB4E32C19D9A0"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "railcraft:turbine_rotor"
 						tag: {
 							Damage: 0
@@ -382,7 +382,7 @@
 				count: 3
 				id: "0437EC58568BC757"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -410,7 +410,7 @@
 				count: 9
 				id: "12A692B9FA72658F"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -442,7 +442,7 @@
 			tasks: [{
 				id: "2E80B7BBA24B714A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -490,7 +490,7 @@
 			tasks: [{
 				id: "1A24EDEF90D13776"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:seasons_crowbar"
 					tag: {
 						Damage: 0
@@ -516,7 +516,7 @@
 			tasks: [{
 				id: "508109BCA683A87B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -669,7 +669,7 @@
 			rewards: [{
 				id: "2E9FFD841584AF65"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:iron_crowbar"
 					tag: {
 						Damage: 0
@@ -748,7 +748,7 @@
 			rewards: [{
 				id: "124FD1607DDB25FA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:whistle_tuner"
 					tag: {
 						Damage: 0
@@ -862,7 +862,7 @@
 			tasks: [{
 				id: "51999B0113C01326"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:electric_locomotive"
 					tag: { }
 				}
@@ -900,7 +900,7 @@
 			tasks: [{
 				id: "431EC0383D8F537B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:steam_locomotive"
 					tag: { }
 				}
@@ -917,7 +917,7 @@
 			rewards: [{
 				id: "5DD6B1679819564D"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:enchanted_book"
 					tag: {
 						StoredEnchantments: [{
@@ -931,7 +931,7 @@
 			tasks: [{
 				id: "7CE6962D2439E3A5"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -980,7 +980,7 @@
 				count: 10
 				id: "72757F9FEAB8EC43"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1012,7 +1012,7 @@
 			tasks: [{
 				id: "4FC1C55D3320AA2C"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -1050,7 +1050,7 @@
 			tasks: [{
 				id: "45620A01FB424298"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -1086,7 +1086,7 @@
 			rewards: [{
 				id: "70E4CE668003B83F"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1113,7 +1113,7 @@
 			rewards: [{
 				id: "5E565FE35ACE1746"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1220,7 +1220,7 @@
 			rewards: [{
 				id: "18A7D8025C8597EA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:steam_locomotive"
 					tag: { }
 				}

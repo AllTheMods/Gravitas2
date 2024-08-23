@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:micro_processor_mainframe"
 	id: "00E59A3B38CB7EEA"
-	order_index: 4
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -73,8 +73,17 @@
 		{
 			id: "08D48D7C2C6EEF54"
 			tasks: [{
-				id: "36397CBA6D39DC0D"
-				item: "chemlib:tungsten_ingot"
+				id: "5F113ACC0D8E38A9"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:tungsten_ingot"
+				}
 				type: "item"
 			}]
 			x: -2.5d
@@ -84,7 +93,7 @@
 			id: "0A848E0B9F485B2C"
 			tasks: [{
 				id: "0DABFD3310034563"
-				item: "gtceu:tungstensteel_coil_block"
+				item: "gtceu:rtm_alloy_coil_block"
 				type: "item"
 			}]
 			x: 0.0d

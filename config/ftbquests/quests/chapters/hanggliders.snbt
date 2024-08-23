@@ -4,7 +4,7 @@
 	filename: "hanggliders"
 	group: "095899370DDF48CB"
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "hangglider:hang_glider"
 		tag: {
 			Damage: 0
@@ -13,11 +13,9 @@
 	id: "068A7B40DE5F65C9"
 	images: [{
 		click: "custom:patchouli:tfc/firmaciv/canoe"
-		corner: false
-		dev: false
 		height: 1.0d
 		hover: ["Click For Info!"]
-		image: "firmaciv:item/canoe_with_paddle_icon"
+		image: "firmaciv:textures/gui/book/canoe_isometric.png"
 		rotation: 0.0d
 		width: 1.0d
 		x: 9.5d
@@ -27,6 +25,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5249B4D0415DBC97"]
 			description: ["{gravitas.quest.simple_transportation.desc.hang_glider}"]
 			id: "30B2B1CEB12737B1"
 			rewards: [{
@@ -37,7 +36,7 @@
 			tasks: [{
 				id: "22AB22945F2AD0C9"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "hangglider:hang_glider"
 					tag: {
 						Damage: 0
@@ -61,7 +60,7 @@
 			tasks: [{
 				id: "2097E67794BA916F"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "hangglider:reinforced_hang_glider"
 					tag: {
 						Damage: 0
@@ -80,7 +79,7 @@
 				count: 16
 				id: "4E1EB13ED91EB86D"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -94,7 +93,7 @@
 			tasks: [{
 				id: "33C0522C953F5347"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -199,7 +198,7 @@
 			tasks: [{
 				id: "4AE4D93861F1B0AE"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -304,7 +303,7 @@
 			tasks: [{
 				id: "1F77CEC83A0FD913"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -404,7 +403,7 @@
 			rewards: [{
 				id: "02F047AA01494B0B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "tfc:stone/hoe/sedimentary"
 					tag: {
 						Damage: 0
@@ -415,7 +414,7 @@
 			tasks: [{
 				id: "7FAB018BCB922C06"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -573,7 +572,7 @@
 				{
 					id: "641E1B5769661B64"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -587,7 +586,7 @@
 				{
 					id: "27369E3505CC7798"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -601,7 +600,7 @@
 				{
 					id: "09AC50AD1A2E5C50"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -629,7 +628,7 @@
 				count: 12
 				id: "2AA5AA94D4074FD5"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -643,7 +642,7 @@
 			tasks: [{
 				count: 6L
 				id: "4BD3CCF75E3DE968"
-				item: { Count: 32b, id: "firmaciv:watercraft_frame_angled" }
+				item: { Count: 32, id: "firmaciv:watercraft_frame_angled" }
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.rowboat1}"
@@ -658,7 +657,7 @@
 				count: 2
 				id: "4A8854468C81CA41"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -673,7 +672,7 @@
 				count: 24L
 				id: "58A9C964E845D4AF"
 				item: {
-					Count: 16b
+					Count: 16
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -697,21 +696,21 @@
 					count: 2L
 					id: "1D354C14BE1228C4"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
 								ticks: 0L
 							}
 						}
-						id: "firmaciv:oarlock"
+						id: "alekiships:oarlock"
 					}
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "75A77C3C8800A25E"
-					item: "firmaciv:oar"
+					item: "alekiships:oar"
 					type: "item"
 				}
 			]
