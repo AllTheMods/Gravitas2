@@ -37,30 +37,43 @@ const replaceTrades = ((event) => {
     event.removeModdedTrades();
 
     addArmorerTrades(event);
+    console.info("Added Armorer Trades");
 
     addButcherTrades(event);
-
+    console.info("Added Butcher Trades");
     addCartographerTrades(event);
+    console.info("Added Cartographer Trades");
 
     addClericTrades(event);
+    console.info("Added Cleric Trades");
 
     addFarmerTrades(event);
+    console.info("Added Farmer Trades");
 
     addFishermanTrades(event);
+    console.info("Added Fisherman Trades");
 
     addFletcherTrades(event);
+    console.info("Added Fletcher Trades");
 
     addLeatherworkerTrades(event);
+    console.info("Added Leatherworker Trades");
+
 
     addLibrarianTrades(event);
+    console.info("Added Librarian Trades");
 
     addMasonTrades(event);
+    console.info("Added Mason Trades");
 
     addShepherdTrades(event);
+    console.info("Added Shepherd Trades");
 
     addToolsmithTrades(event);
+    console.info("Added Toolsmith Trades");
 
     addWeaponsmithTrades(event);
+    console.info("Added Weaponsmith Trades");
 })
 
 function addArmorerTrades(event) {
@@ -71,44 +84,44 @@ function addArmorerTrades(event) {
     event.addTrade("minecraft:armorer", 1, [TradeItem.of("tfc:gem/lapis_lazuli", 4, 6), TradeItem.of("tfc:metal/ingot/copper", 2, 2)], TradeItem.of("tfc:metal/boots/copper", 1, 1)).villagerExperience(tradeLevelXp[0]);
 
     
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("tfc:metal/ingot/bismuth_bronze", 3, 3)], TradeItem.of("tfc:metal/helmet/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("tfc:metal/ingot/bismuth_bronze", 3, 3)], TradeItem.of("tfc:metal/chestplate/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("tfc:metal/ingot/bismuth_bronze", 3, 3)], TradeItem.of("tfc:metal/greaves/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("tfc:metal/ingot/bismuth_bronze", 2, 2)], TradeItem.of("tfc:metal/boots/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/black_bronze", 3, 3)], TradeItem.of("tfc:metal/helmet/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/black_bronze", 3, 3)], TradeItem.of("tfc:metal/chestplate/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/black_bronze", 3, 3)], TradeItem.of("tfc:metal/greaves/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/black_bronze", 2, 2)], TradeItem.of("tfc:metal/boots/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/bronze", 3, 3)], TradeItem.of("tfc:metal/helmet/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/bronze", 3, 3)], TradeItem.of("tfc:metal/chestplate/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/bronze", 3, 3)], TradeItem.of("tfc:metal/greaves/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("tfc:metal/ingot/bronze", 2, 2)], TradeItem.of("tfc:metal/boots/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("gtceu:bismuth_bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("gtceu:bismuth_bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("gtceu:bismuth_bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/amethyst", 4, 6), TradeItem.of("gtceu:bismuth_bronze_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/bismuth_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:black_bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:black_bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:black_bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:black_bronze_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/black_bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:bronze_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:armorer", 2, [TradeItem.of("tfc:gem/ruby", 4, 6), TradeItem.of("gtceu:bronze_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/bronze", 1, 1)).villagerExperience(tradeLevelXp[1]);
 
     
-    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("tfc:metal/ingot/wrought_iron", 3, 3)], TradeItem.of("tfc:metal/helmet/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
-    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("tfc:metal/ingot/wrought_iron", 3, 3)], TradeItem.of("tfc:metal/chestplate/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
-    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("tfc:metal/ingot/wrought_iron", 3, 3)], TradeItem.of("tfc:metal/greaves/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
-    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("tfc:metal/ingot/wrought_iron", 2, 2)], TradeItem.of("tfc:metal/boots/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
+    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("gtceu:wrought_iron_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
+    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("gtceu:wrought_iron_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
+    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("gtceu:wrought_iron_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
+    event.addTrade("minecraft:armorer", 3, [TradeItem.of("tfc:gem/sapphire", 4, 6), TradeItem.of("gtceu:wrought_iron_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/wrought_iron", 1, 1)).villagerExperience(tradeLevelXp[2]);
 
     
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/steel", 3, 3)], TradeItem.of("tfc:metal/helmet/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/steel", 3, 3)], TradeItem.of("tfc:metal/chestplate/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/steel", 3, 3)], TradeItem.of("tfc:metal/greaves/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/steel", 2, 2)], TradeItem.of("tfc:metal/boots/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/black_steel", 3, 3)], TradeItem.of("tfc:metal/helmet/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/black_steel", 3, 3)], TradeItem.of("tfc:metal/chestplate/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/black_steel", 3, 3)], TradeItem.of("tfc:metal/greaves/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
-    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("tfc:metal/ingot/black_steel", 2, 2)], TradeItem.of("tfc:metal/boots/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:steel_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:steel_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:steel_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:steel_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:black_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:black_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:black_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
+    event.addTrade("minecraft:armorer", 4, [TradeItem.of("tfc:gem/opal", 4, 6), TradeItem.of("gtceu:black_steel_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/black_steel", 1, 1)).villagerExperience(tradeLevelXp[3]);
 
     
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/red_steel", 3, 3)], TradeItem.of("tfc:metal/helmet/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/red_steel", 3, 3)], TradeItem.of("tfc:metal/chestplate/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/red_steel", 3, 3)], TradeItem.of("tfc:metal/greaves/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/red_steel", 2, 2)], TradeItem.of("tfc:metal/boots/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/blue_steel", 3, 3)], TradeItem.of("tfc:metal/helmet/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/blue_steel", 3, 3)], TradeItem.of("tfc:metal/chestplate/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/blue_steel", 3, 3)], TradeItem.of("tfc:metal/greaves/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
-    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("tfc:metal/ingot/blue_steel", 2, 2)], TradeItem.of("tfc:metal/boots/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:red_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:red_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:red_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:red_steel_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/red_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:blue_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/helmet/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:blue_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/chestplate/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:blue_steel_ingot", 3, 3)], TradeItem.of("tfc:metal/greaves/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
+    event.addTrade("minecraft:armorer", 5, [TradeItem.of("tfc:gem/emerald", 4, 6), TradeItem.of("gtceu:blue_steel_ingot", 2, 2)], TradeItem.of("tfc:metal/boots/blue_steel", 1, 1)).villagerExperience(tradeLevelXp[4]);
 
 }
 
@@ -204,7 +217,7 @@ function addClericTrades(event) {
     event.addTrade("minecraft:cleric", 1, [TradeItem.of("tfc:small_sheepskin_hide", 4, 5)], TradeItem.of("tombstone:bone_needle", 1, 2)).villagerExperience(tradeLevelXp[0]);
 
     event.addTrade("minecraft:cleric", 2, [TradeItem.of("tfc:gem/amethyst", 2, 4)], TradeItem.of("tombstone:strange_scroll")).villagerExperience(tradeLevelXp[1]);
-    event.addTrade("minecraft:cleric", 2, [TradeItem.of("tfc:gem/sapphire", 2, 6)], TradeItem.of("tombstone:ankh_of_pray", 1, 1)).villagerExperience(tradeLevelXp[1]);
+    event.addTrade("minecraft:cleric", 2, [TradeItem.of("tfc:gem/sapphire", 2, 6)], TradeItem.of("tombstone:ankh_of_prayer", 1, 1)).villagerExperience(tradeLevelXp[1]);
 
     event.addTrade("minecraft:cleric", 3, [TradeItem.of("tfc:gem/ruby", 2, 6)], TradeItem.of("tombstone:fishing_rod_of_misadventure", 1, 1)).villagerExperience(tradeLevelXp[2]);
     Ingredient.of("#tombstone:decorative_graves").getStacks().toArray().forEach((graveItem => {

@@ -154,7 +154,7 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
           palette.add(struc.position, getState(newBlock))
           return
         }
-        if (!event.id.includes("village")) {
+        if ((!event.id.includes("village")) && (!event.id.includes("pyramid"))) {
           let newWoodBlock = getWoodReplacement(struc.block.idLocation)
           if (newWoodBlock) {
             palette.add(struc.position, getState(newWoodBlock, struc.state()))
