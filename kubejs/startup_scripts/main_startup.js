@@ -50,13 +50,7 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", e
 ForgeEvents.onEvent(
   "blusunrize.immersiveengineering.api.multiblocks.MultiblockHandler$MultiblockFormEvent",
   (event) => {
-    if (event.getMultiblock().getUniqueName().namespace == "immersiveengineering" && 
-        (event.getMultiblock().getUniqueName().path == "multiblocks/feedthrough" || event.getMultiblock().getUniqueName().path == "multiblocks/fermenter" || event.getMultiblock().getUniqueName().path == "multiblocks/mixer" || event.getMultiblock().getUniqueName().path == "multiblocks/squeezer")){
-            
-    } else {
-      event.setCanceled(true)
-      console.error("Multiblock not allowed! " + event.getMultiblock().getUniqueName())
-    }
+    banIEMultiblocks(event)
   }
 )
 
