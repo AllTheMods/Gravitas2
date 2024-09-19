@@ -2564,4 +2564,25 @@ event.recipes.gtceu.mixer('raw_thorium')
         }).id(`gregitas:${grain.id}_alcohol`)
       })
 
+    // Create Diesel Generators
+    shaped("8x createdieselgenerators:asphalt_block", ["SSS", "SBG", "GGG"],
+      {
+        "S": "#forge:sand",
+        "G": "#forge:gravel",
+        "B": "createdieselgenerators:crude_oil_bucket",
+    })
+
+    event.custom({
+      type: "create:mixing",
+      ingredients: [
+        { tag: "forge:gravel" },
+        { tag: "forge:sand" },
+        {
+          "amount": 100,
+          "fluid": "createdieselgenerators:crude_oil"
+        },
+      ],
+      "heatRequirement": "heated",
+      results: [{ item: "createdieselgenerators:asphalt_block", amount: 4 }]
+    })
 }
