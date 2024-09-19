@@ -181,6 +181,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
   event.remove({ id: "vintageimprovements:crushing/scoria"})
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
+  event.remove({ id: "createdieselgenerators:crafting/asphalt_block"})
+  event.remove({ id: "createdieselgenerators:mixing/asphalt_block"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
