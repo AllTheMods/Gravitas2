@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "musketmod:musket",
+            "nbt": {"damage": 0}
+        },
+        {"item": "tfc:metal/knife_blade/steel"}
+    ],
+    
+    "result": {
+        "item": "musketmod:musket_with_bayonet",
+        "nbt": {
+            "Enchantments": [
+                {
+                    "id": "unbreaking",
+                    "lvl": 8
+                }
+            ],
+            "HideFlags": 1
+        }
+    }
+}
