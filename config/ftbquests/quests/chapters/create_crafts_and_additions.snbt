@@ -331,10 +331,9 @@
 			id: "046ACD0FEBC76604"
 			tasks: [{
 				id: "46825FB022EE3E5D"
-				title: "Make a train!"
+				title: "{gravitas.quest.rails.make_a_train!}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.rails.make_a_train!}"
 			x: 5.5d
 			y: 0.0d
 		}

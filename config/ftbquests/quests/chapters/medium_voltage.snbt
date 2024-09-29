@@ -473,11 +473,7 @@
 				"589F47DE51213920"
 				"2CBC21079AB18569"
 			]
-			description: [
-				"Holding a hot ingot will damage you, but you have to for this quest because I'm a little evil"
-				""
-				"You will need to cool it, in this case with a chemical bath"
-			]
+			description: ["Holding a hot ingot will damage you, but you have to for this quest because I'm a 'little' evil.\\n\\nYou will need to cool it, in this case with a chemical bath."]
 			id: "2AB457E29360E3B8"
 			rewards: [
 				{
@@ -495,7 +491,7 @@
 					type: "item"
 				}
 			]
-			subtitle: "Hot potato"
+			subtitle: "Hot Potato"
 			tasks: [{
 				id: "00676E5631ED2A66"
 				item: "gtceu:hot_silicon_ingot"
@@ -506,13 +502,7 @@
 		}
 		{
 			dependencies: ["262AE37765B139BE"]
-			description: [
-				"You can find raw aluminium in the End"
-				""
-				"Alternatively, you can acquire aluminium by processing a variety of items like bauxite in an electrolyzer for example"
-				""
-				"We'll also generate aluminium passively in the clay line process"
-			]
+			description: ["You can acquire Aluminum by processing Bauxite in an Electrolyzer."]
 			id: "1C1802ABF3EE3120"
 			rewards: [{
 				count: 8
@@ -521,7 +511,6 @@
 				random_bonus: 4
 				type: "item"
 			}]
-			subtitle: "Aluminum is that you?"
 			tasks: [{
 				id: "7B46FA23AF26BF76"
 				item: "gtceu:aluminium_ingot"

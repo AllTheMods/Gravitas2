@@ -105,9 +105,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.drawer}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.drawer}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -123,10 +123,9 @@
 			}]
 			tasks: [{
 				id: "25E366C5E228AF94"
-				title: "Types of Drawers"
+				title: "{gravitas.quest.drawer.types}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.drawer.types}"
 			x: -1.5d
 			y: 0.0d
 		}
@@ -302,6 +301,7 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.1x2}"
 					type: "item"
 				}
 				{
@@ -398,10 +398,10 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.1x2}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.drawer.1x2}"
 			x: -2.0d
 			y: -1.0d
 		}
@@ -504,6 +504,7 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 				{
@@ -600,6 +601,7 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 				{
@@ -696,10 +698,10 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.drawer.2x2}"
 			x: -2.0d
 			y: 1.0d
 		}
@@ -801,9 +803,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.trim}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.trim}"
 			x: -2.5d
 			y: 0.0d
 		}
@@ -849,9 +851,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.more}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.more}"
 			x: 0.5d
 			y: 2.5d
 		}
@@ -887,9 +889,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.redstone}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.redstone}"
 			x: -1.0d
 			y: 1.5d
 		}
@@ -915,9 +917,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.show}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.show}"
 			x: -0.5d
 			y: 2.5d
 		}

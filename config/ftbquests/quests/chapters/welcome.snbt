@@ -12,12 +12,11 @@
 			image: "atm:textures/logo.png"
 			rotation: 0.0d
 			width: 14.222222222222221d
-			x: 0.0d
+			x: 0.3d
 			y: -5.0d
 		}
 		{
 			height: 5.0d
-			hover: ["whatthedrunk"]
 			image: "atm:textures/questpics/welcome/whatthedrunkcharacter.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -26,7 +25,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["theVortex"]
 			image: "atm:textures/questpics/welcome/thevortexcharacter.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -134,7 +132,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["Uncandango"]
 			image: "atm:textures/questpics/welcome/uncandango.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -152,7 +149,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["Drack_Ion"]
 			image: "atm:textures/questpics/welcome/drack_ion.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -197,7 +193,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["screret"]
 			image: "atm:textures/questpics/welcome/screret.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -206,7 +201,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["Len_Kagamine"]
 			image: "atm:textures/questpics/welcome/len_kagamine.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -215,7 +209,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["LobsterJonn"]
 			image: "atm:textures/questpics/welcome/lobsterjonn.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -224,7 +217,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["AlfredGG"]
 			image: "atm:textures/questpics/welcome/alfredcharacter.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -233,7 +225,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["KuramA"]
 			image: "atm:textures/questpics/welcome/kurama.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -242,7 +233,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["MutantGumDrop"]
 			image: "atm:textures/questpics/welcome/mutantgumdrop.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -251,7 +241,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["ToshibaMicrowave"]
 			image: "atm:textures/questpics/welcome/toshibamicrowave.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -276,7 +265,6 @@
 		}
 		{
 			height: 5.0d
-			hover: ["oly2o6"]
 			image: "atm:textures/questpics/welcome/oly206character.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -373,7 +361,7 @@
 			size: 3.0d
 			tasks: [{
 				id: "5A1784C5676CDC62"
-				title: "Welcome to All The Mods 9!"
+				title: "{gravitas.quest.main.welcome2}"
 				type: "checkmark"
 			}]
 			title: "{gravitas.quest.main.welcome}"
@@ -424,10 +412,9 @@
 			size: 1.5d
 			tasks: [{
 				id: "103C42C743E2A2DB"
-				title: "Claiming Chunks"
+				title: "{gravitas.quest.main.chunks}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.main.chunks}"
 			x: 4.5d
 			y: -0.5d
 		}

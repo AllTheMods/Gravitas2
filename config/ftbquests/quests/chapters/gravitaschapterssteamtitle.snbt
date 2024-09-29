@@ -781,17 +781,6 @@
 					item: "minecraft:golden_apple"
 					type: "item"
 				}
-				{
-					id: "0F6F8B3CF8C92799"
-					item: {
-						Count: 1
-						id: "minecraft:diamond_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
 			]
 			shape: "octagon"
 			size: 2.5d
@@ -881,5 +870,5 @@
 			y: -2.5d
 		}
 	]
-	title: "{gravitas.chapters.steam.title}"
+	title: "{gravitas.chapters.32.title}"
 }

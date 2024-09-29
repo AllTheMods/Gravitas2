@@ -547,7 +547,7 @@
 			shape: "gear"
 			subtitle: "{gravitas.quest.stage2.subt.guidebook}"
 			tasks: [{
-				id: "6C1C2D59EE975654"
+				id: "57B023996E29B98F"
 				item: "gtceu:raw_graphite"
 				type: "item"
 			}]
@@ -1380,12 +1380,12 @@
 			shape: "rsquare"
 			tasks: [{
 				id: "7C1554AE918688BE"
-				title: "{gravitas.quest.id.taste}"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.id.taste}"
 			x: 9.5d
 			y: 4.0d
 		}
 	]
-	title: "{gravitas.chapters.New2.title}"
+	title: "{gravitas.chapters.2.title}"
 }

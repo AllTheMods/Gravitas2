@@ -470,9 +470,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.railcraft.crowbars}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.crowbars}"
 			x: -1.0d
 			y: -1.0d
 		}

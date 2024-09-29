@@ -12,7 +12,7 @@
 			image: "kubejs:textures/biomes_text.png"
 			rotation: 0.0d
 			width: 4.5d
-			x: -3.0d
+			x: -1.5d
 			y: -16.0d
 		}
 		{
@@ -141,7 +141,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -207,7 +207,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -273,7 +273,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -339,7 +339,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -405,7 +405,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -471,7 +471,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -537,7 +537,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -603,7 +603,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -669,7 +669,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -735,7 +735,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -801,7 +801,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -922,7 +922,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -1321,7 +1321,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -1442,7 +1442,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -1563,7 +1563,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -1739,7 +1739,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -2061,7 +2061,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
@@ -2127,7 +2127,7 @@
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
