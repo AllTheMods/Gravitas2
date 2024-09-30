@@ -73,8 +73,17 @@
 		{
 			id: "08D48D7C2C6EEF54"
 			tasks: [{
-				id: "36397CBA6D39DC0D"
-				item: "chemlib:tungsten_ingot"
+				id: "1B9C19DAD6E6C23C"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:tungsten_ingot"
+				}
 				type: "item"
 			}]
 			x: -2.5d

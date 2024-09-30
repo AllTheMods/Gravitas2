@@ -83,8 +83,17 @@
 		{
 			id: "78A295D4D1A21BCA"
 			tasks: [{
-				id: "7AB26B5B4167E5EC"
-				item: "chemlib:titanium_ingot"
+				id: "0C15E205681BAC38"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:titanium_ingot"
+				}
 				type: "item"
 			}]
 			x: 0.0d

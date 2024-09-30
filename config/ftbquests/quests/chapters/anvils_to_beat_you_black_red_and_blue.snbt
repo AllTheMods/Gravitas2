@@ -21,20 +21,21 @@
 			dependencies: ["568F95FC508BA84A"]
 			id: "32CE5C0CEBF02E0E"
 			tasks: [{
-				count: 14L
-				id: "38CEA148BCE0FBFA"
+				id: "4F3C0B1AFAE9C2AD"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/black_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "gtceu:black_steel_ingot"
 				}
-				title: "Any #forge:ingots/black_steel"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -3.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["32CE5C0CEBF02E0E"]
@@ -53,23 +54,25 @@
 				}
 				type: "item"
 			}]
-			x: 3.0d
-			y: -2.0d
+			x: 1.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["44CE2B741A323973"]
 			description: ["{gravitas.quest.blacksteel.desc.weak_blue}"]
 			id: "1F261F1F9CDC5CA8"
 			tasks: [{
-				id: "6B02B33E330B1FF2"
+				id: "2B4E1D01871773D4"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/weak_blue_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "tfc:metal/ingot/weak_blue_steel"
 				}
-				title: "Any #forge:ingots/weak_blue_steel"
 				type: "item"
 			}]
 			x: 2.5d
@@ -80,55 +83,61 @@
 			description: ["{gravitas.quest.blacksteel.desc.weak_red}"]
 			id: "6DD0554711B68632"
 			tasks: [{
-				id: "00C1DED048695DA6"
+				id: "017DD79D7873B1FD"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/weak_red_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "tfc:metal/ingot/weak_red_steel"
 				}
-				title: "Any #forge:ingots/weak_red_steel"
 				type: "item"
 			}]
-			x: 3.5d
-			y: -0.5d
+			x: 2.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["37180015F854BC0D"]
 			id: "4C8385E2ACE406EE"
 			tasks: [{
-				id: "2D41794F5ED2908B"
+				id: "24E6F50369952801"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/blue_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "gtceu:blue_steel_ingot"
 				}
-				title: "Any #forge:ingots/blue_steel"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 1.5d
+			x: 4.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["3F1A57E5A784E739"]
 			id: "15BC783BB17EE2D4"
 			tasks: [{
-				id: "2BD6E6BD32452467"
+				id: "02354F0CF91788C3"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/red_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "gtceu:red_steel_ingot"
 				}
-				title: "Any #forge:ingots/red_steel"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 1.5d
+			x: 4.5d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -138,22 +147,40 @@
 			dependency_requirement: "one_completed"
 			id: "782836C39D00C73C"
 			tasks: [{
-				id: "06F8DDE48FE6BBF0"
+				id: "252FA869676A3407"
 				item: {
 					Count: 1
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/anvil/blue_steel"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/anvil/red_steel"
+							}
+						]
 					}
-					id: "tfc:metal/anvil/blue_steel"
 				}
-				title: "{gravitas.quest.caveman.coloured_anvil}"
+				title: "{gravitas.quest.blacksteel.anvils}"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 2.5d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["782836C39D00C73C"]
@@ -165,8 +192,8 @@
 				item: "tfc:metal/bucket/blue_steel"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 3.5d
+			x: 7.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["782836C39D00C73C"]
@@ -178,42 +205,46 @@
 				item: "tfc:metal/bucket/red_steel"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 3.5d
+			x: 7.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["1F261F1F9CDC5CA8"]
 			description: ["{gravitas.quest.blacksteel.desc.high_blue}"]
 			id: "37180015F854BC0D"
 			tasks: [{
-				id: "72311DDE4A132AAA"
+				id: "538054E96C8E9339"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/high_carbon_blue_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "tfc:metal/ingot/high_carbon_blue_steel"
 				}
-				title: "Any #forge:ingots/high_carbon_blue_steel"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 0.5d
+			x: 3.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["6DD0554711B68632"]
 			description: ["{gravitas.quest.blacksteel.desc.high_red}"]
 			id: "3F1A57E5A784E739"
 			tasks: [{
-				id: "5127DF54C38672CD"
+				id: "24192291C2ACA986"
 				item: {
 					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/high_carbon_red_steel"
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
 					}
+					id: "tfc:metal/ingot/high_carbon_red_steel"
 				}
-				title: "Any #forge:ingots/high_carbon_red_steel"
 				type: "item"
 			}]
 			x: 3.5d
@@ -231,8 +262,8 @@
 				item: "minecraft:bucket"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 5.0d
+			x: 9.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["782836C39D00C73C"]
@@ -248,12 +279,11 @@
 						value: "tfc:pickaxe_tier6"
 					}
 				}
-				title: "Any #tfc:pickaxe_tier6"
+				title: "{gravitas.quest.blacksteel.pickaxes}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.caveman.coloured_pickaxe}"
-			x: 5.0d
-			y: 2.5d
+			x: 6.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["7B044C2424F0CF68"]
@@ -266,8 +296,8 @@
 				title: "{gravitas.quest.blacksteel.going_deeper}"
 				type: "dimension"
 			}]
-			x: 5.0d
-			y: 5.0d
+			x: 6.0d
+			y: 3.0d
 		}
 	]
 	title: "{gravitas.chapters.6.title}"

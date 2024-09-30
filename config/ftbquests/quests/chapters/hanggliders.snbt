@@ -18,14 +18,13 @@
 		image: "firmaciv:textures/gui/book/canoe_isometric.png"
 		rotation: 0.0d
 		width: 1.0d
-		x: 9.5d
-		y: -1.0d
+		x: 7.5d
+		y: -3.5d
 	}]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["5249B4D0415DBC97"]
 			description: ["{gravitas.quest.simple_transportation.desc.hang_glider}"]
 			id: "30B2B1CEB12737B1"
 			rewards: [{
@@ -45,7 +44,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.hang_glider}"
-			x: 5.0d
+			x: 5.5d
 			y: -1.0d
 		}
 		{
@@ -69,8 +68,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.reinforced}"
-			x: 5.0d
-			y: 0.0d
+			x: 5.5d
+			y: -3.0d
 		}
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.carts}"]
@@ -180,9 +179,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.carts}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.carts}"
 			x: 7.5d
 			y: -1.0d
 		}
@@ -285,9 +284,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.animal}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.animal}"
 			x: 6.5d
 			y: 0.0d
 		}
@@ -390,9 +389,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.supply}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.supply}"
 			x: 7.5d
 			y: 0.0d
 		}
@@ -501,9 +500,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.plow}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.plow}"
 			x: 8.5d
 			y: 0.0d
 		}
@@ -530,8 +529,8 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.dugout_canoe}"
-			x: 10.5d
-			y: -1.0d
+			x: 7.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["36731C807BA975C4"]
@@ -556,8 +555,8 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.kayak}"
-			x: 10.0d
-			y: 0.0d
+			x: 6.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["36731C807BA975C4"]
@@ -618,8 +617,8 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.tools}"
-			x: 11.0d
-			y: 0.0d
+			x: 8.5d
+			y: -3.5d
 		}
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.rowboat1}"]
@@ -647,7 +646,7 @@
 			}]
 			title: "{gravitas.quest.simple_transportation.rowboat1}"
 			x: 9.5d
-			y: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["4105E42ADCA71D92"]
@@ -684,8 +683,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.rowboat2}"
-			x: 10.5d
-			y: 1.0d
+			x: 9.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["366151FAF15BEC3E"]
@@ -715,8 +714,8 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.rowboat3}"
-			x: 11.5d
-			y: 1.0d
+			x: 9.5d
+			y: -3.0d
 		}
 	]
 	title: "{gravitas.chapters.26.title}"

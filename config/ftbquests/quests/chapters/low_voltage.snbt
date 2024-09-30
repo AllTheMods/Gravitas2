@@ -9,11 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"7389402160789056"
-				"59BDE76B679AB4CC"
-				"4FE3DADFDC32A6B0"
-			]
 			description: [
 				"{gravitas.quest.lv.desc.starter_1}"
 				""
@@ -37,7 +32,6 @@
 				}
 			]
 			size: 1.5d
-			subtitle: "Welcome to LV"
 			tasks: [{
 				count: 3L
 				id: "08EA6CE798092CE9"

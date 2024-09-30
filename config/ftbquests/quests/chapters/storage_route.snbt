@@ -22,7 +22,6 @@
 				title: "Storage in Gregitas"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.storage.start}"
 			x: 5.0d
 			y: 2.5d
 		}
@@ -164,7 +163,6 @@
 				title: "{gravitas.quest.storage.chest}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.chest}"
 			x: 9.5d
 			y: 2.5d
 		}

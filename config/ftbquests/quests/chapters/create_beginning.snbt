@@ -84,10 +84,9 @@
 			}]
 			tasks: [{
 				id: "2F282FE03E90C1E9"
-				title: "Moving Stress"
+				title: "{gravitas.quest.igneous.moving_stress}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.igneous.moving_stress}"
 			x: 1.0d
 			y: -1.5d
 		}
@@ -183,10 +182,9 @@
 			}]
 			tasks: [{
 				id: "33DD85D63A14A78D"
-				title: "Small Machines"
+				title: "{gravitas.quest.igneous.small_machines}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.igneous.small_machines}"
 			x: 3.0d
 			y: 1.5d
 		}
@@ -254,10 +252,9 @@
 			}]
 			tasks: [{
 				id: "31BEED00AD60CDAD"
-				title: "Testing Stress and Speed"
+				title: "{gravitas.quest.igneous.testing_stress_and_speed}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.igneous.testing_stress_and_speed}"
 			x: 1.0d
 			y: 1.5d
 		}
@@ -372,10 +369,9 @@
 			}]
 			tasks: [{
 				id: "6562B5A6E3064223"
-				title: "Moving items"
+				title: "{gravitas.quest.igneous.moving_items}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.igneous.moving_items}"
 			x: 3.0d
 			y: -1.5d
 		}

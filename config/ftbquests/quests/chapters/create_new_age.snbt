@@ -14,10 +14,9 @@
 			optional: true
 			tasks: [{
 				id: "7F5F79A27EDC57D2"
-				title: "Go through Create Crafts and Additions"
+				title: "{gravitas.quest.new_age.crafts}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.new_age.crafts}"
 			x: 1.0d
 			y: 0.0d
 		}
@@ -354,10 +353,9 @@
 			}]
 			tasks: [{
 				id: "12038E2649361493"
-				title: "Is it Hot in here?"
+				title: "{gravitas.quest.new_age.heat}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.new_age.heat}"
 			x: 1.0d
 			y: 4.5d
 		}

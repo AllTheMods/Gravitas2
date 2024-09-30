@@ -324,7 +324,7 @@
 			id: "679D7B1E110BE18E"
 			tasks: [
 				{
-					count: 25L
+					count: 32L
 					id: "4D221A36C8F952DF"
 					item: "gtceu:coke_oven_bricks"
 					type: "item"
@@ -489,9 +489,9 @@
 			id: "72A5FB46B1AF320B"
 			tasks: [{
 				id: "29775B79006C102C"
+				title: "{gravitas.quest.steel.paper_making}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.steel.paper_making}"
 			x: 2.5d
 			y: -0.5d
 		}

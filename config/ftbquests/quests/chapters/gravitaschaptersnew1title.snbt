@@ -11,8 +11,8 @@
 			image: "minecraft:block/campfire_fire"
 			rotation: 0.0d
 			width: 1.0d
-			x: -4.0d
-			y: -4.25d
+			x: -3.75d
+			y: -3.3d
 		}
 		{
 			height: 7.0d
@@ -53,11 +53,11 @@
 		linked_quest: "69F1C7C818C1C6A2"
 		shape: "gear"
 		x: 1.0d
-		y: 3.5d
+		y: 5.0d
 	}]
 	quests: [
 		{
-			description: ["{gravitas.quest.stage1.desc.hi}"]
+			description: ["{gravitas.quest.stage1.desc.welcome}"]
 			icon: "gtceu:quantum_eye"
 			id: "58AC0AF9F4895FEA"
 			rewards: [{
@@ -69,7 +69,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "624D36C64A6CD88C"
-				title: "{gravitas.quest.stage1.hi}"
+				title: "{gravitas.quest.stage1.welcome}"
 				type: "checkmark"
 			}]
 			x: -11.0d
@@ -77,11 +77,7 @@
 		}
 		{
 			dependencies: ["58AC0AF9F4895FEA"]
-			description: [
-				"Can you chop down a tree with your hand in real life? No?"
-				""
-				"Just like IRL, you'll need to gather &aTwigs&r from the ground. These make great handles for the tools we'll make."
-			]
+			description: ["{gravitas.quest.stage1.desc.twig}"]
 			icon: {
 				Count: 1
 				ForgeCaps: {
@@ -121,14 +117,7 @@
 		}
 		{
 			dependencies: ["58AC0AF9F4895FEA"]
-			description: [
-				"It doesn't make much sense to make wooden tools first when there are literally stones all over the ground, right?"
-				""
-				"Pick up some &3Pebbles&r you see along the ground. You'll get different types of stones and even small ores depending on the geological region you are in."
-				""
-				""
-				"Make sure to check out the TFC guidebook on different areas to learn what you can gather!"
-			]
+			description: ["{gravitas.quest.caveman.desc.pebbles}"]
 			hide_dependency_lines: false
 			id: "0D1A2331FB89A93A"
 			min_width: 300
@@ -149,9 +138,10 @@
 						value: "tfc:rock_knapping"
 					}
 				}
-				title: "{gravitas.quest.caveman.pebbles}"
+				title: "{gravitas.quest.caveman.pebbles2}"
 				type: "item"
 			}]
+			title: "{gravitas.quest.caveman.pebbles}"
 			x: -9.0d
 			y: 1.0d
 		}
@@ -161,20 +151,25 @@
 				"0D1A2331FB89A93A"
 			]
 			description: [
-				"With enough Pebbles, we can create our starter tools by &eKnapping&r the rocks into the shape of the tool head we want."
-				""
-				"To do this, hold &aat least 2&r pebbles in your hand and right click. From here, you can carve out the desired shape to get the tool head you want. Combine the tool head with a twig to get your first tool!"
-				""
-				"Tip: All of the knapping recipes can be found in JEI!"
-				""
+				"{gravitas.quest.caveman.desc.stone_tools}\\n"
 				"{image:gravitas:textures/quests/knapping.png width:200 height:150 align:1}"
 			]
 			id: "2512A0E115F4A300"
 			min_width: 400
 			rewards: [{
-				id: "17E1F5314969E9AC"
-				type: "xp_levels"
-				xp_levels: 5
+				count: 10
+				id: "0FDDAEA92AC4B517"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "minecraft:stick"
+				}
+				type: "item"
 			}]
 			tasks: [
 				{
@@ -186,7 +181,7 @@
 							value: "tfc:hammers"
 						}
 					}
-					title: "{gravitas.quest.caveman.stone_hammer}"
+					title: "{gravitas.quest.caveman.hammers}"
 					type: "item"
 				}
 				{
@@ -198,7 +193,7 @@
 							value: "tfc:axes"
 						}
 					}
-					title: "{gravitas.quest.caveman.stone_axe}"
+					title: "{gravitas.quest.caveman.axes}"
 					type: "item"
 				}
 				{
@@ -212,7 +207,7 @@
 					}
 					match_nbt: true
 					tags: ["tfcstone_tools"]
-					title: "{gravitas.quest.caveman.stone_knife}"
+					title: "{gravitas.quest.caveman.knives}"
 					type: "item"
 				}
 				{
@@ -224,7 +219,7 @@
 							value: "tfc:javelins"
 						}
 					}
-					title: "Stone Javelin"
+					title: "{gravitas.quest.caveman.javelins}"
 					type: "item"
 				}
 			]
@@ -267,7 +262,7 @@
 				}
 				type: "item"
 			}]
-			x: -8.5d
+			x: -9.0d
 			y: -1.0d
 		}
 		{
@@ -288,7 +283,7 @@
 				}
 				type: "item"
 			}]
-			subtitle: "{gravitas.quest.stage1.subt.stickb}"
+			subtitle: "{gravitas.quest.stage1.subt.stickB}"
 			tasks: [{
 				id: "2F9E1D38DFEE7FE7"
 				item: {
@@ -303,11 +298,12 @@
 				}
 				type: "item"
 			}]
-			x: -9.5d
-			y: -1.5d
+			x: -9.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["06B8CC7CD9608571"]
+			description: ["{gravitas.quest.stage1.desc.stickB2}"]
 			id: "5660FFBAC72F8F14"
 			rewards: [{
 				id: "023AAC74B5B68A58"
@@ -315,14 +311,14 @@
 				type: "item"
 			}]
 			shape: "gear"
-			subtitle: "{gravitas.quest.stage1.subt.stuckb2}"
+			subtitle: "{gravitas.quest.stage1.subt.stuckB2}"
 			tasks: [{
 				id: "7B076884DCC02D10"
 				item: "tfc:stick_bundle"
 				type: "item"
 			}]
-			x: -8.5d
-			y: -2.0d
+			x: -9.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["58AC0AF9F4895FEA"]
@@ -340,16 +336,29 @@
 			subtitle: "{gravitas.quest.stage1.subt.survival}"
 			tasks: [{
 				id: "14870CCD99C19F2B"
-				title: "gravitas.quest.stage1.survival"
+				title: "{gravitas.quest.stage1.survival}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.stage1.survival}"
 			x: -11.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["2512A0E115F4A300"]
 			description: ["{gravitas.quest.stage1.desc.food}"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:food": {
+						creationDate: 366000L
+						traits: [ ]
+					}
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:food/salmon"
+			}
 			id: "2E9A1FAAEB2D9F95"
 			rewards: [{
 				count: 2
@@ -376,7 +385,6 @@
 						value: "tfc:foods/raw_meats"
 					}
 				}
-				title: "{gravitas.quest.stage1.food}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.stage1.food}"
@@ -386,6 +394,7 @@
 		{
 			dependencies: ["2512A0E115F4A300"]
 			description: ["{gravitas.quest.stage1.desc.tools}"]
+			icon: "tfc:straw"
 			id: "77B9F349C8DBA0D1"
 			rewards: [{
 				count: 4
@@ -543,17 +552,16 @@
 		{
 			dependencies: ["0D1A2331FB89A93A"]
 			description: [
-				"{gravitas.quest.caveman.desc.clay}"
-				""
+				"{gravitas.quest.caveman.desc.clay}\\n"
 				"{image:gravitas:textures/quests/clayexample.png width:180 height:120 align:1}"
 			]
 			id: "0CA57C62599C1CD7"
 			min_width: 300
 			rewards: [{
-				id: "4B34CF4BC446AD2B"
+				id: "0932DA6616C3A352"
 				item: {
 					Count: 1
-					id: "minecraft:stone_shovel"
+					id: "tfc:stone/shovel/sedimentary"
 					tag: {
 						Damage: 0
 					}
@@ -563,7 +571,7 @@
 			shape: "pentagon"
 			size: 1.25d
 			tasks: [{
-				count: 32L
+				count: 16L
 				id: "0040DFB438C83061"
 				item: "minecraft:clay_ball"
 				type: "item"
@@ -668,14 +676,13 @@
 				title: "{gravitas.quest.stage1.logpiles}"
 				type: "checkmark"
 			}]
-			x: -5.5d
+			x: -6.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["177E7D3A7B2B48FA"]
 			description: [
-				"{gravitas.quest.stage1.desc.copper}"
-				""
+				"{gravitas.quest.stage1.desc.copper}\\n"
 				"{image:gravitas:textures/quests/copperex.png width:165 height:120 align:1}"
 			]
 			id: "20F61C521879413B"
@@ -711,7 +718,7 @@
 			}]
 			title: "{gravitas.quest.stage1.copper}"
 			x: -2.5d
-			y: 0.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["177E7D3A7B2B48FA"]
@@ -719,8 +726,8 @@
 			id: "18A7123E7EC22490"
 			shape: "gear"
 			tasks: [{
-				id: "6BA75ED94C39502B"
-				item: "minecraft:torch"
+				id: "279E2DCF9E3C0A53"
+				item: "tfc:torch"
 				type: "item"
 			}]
 			x: -4.0d
@@ -745,8 +752,8 @@
 				item: "minecraft:charcoal"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -2.0d
+			x: -5.0d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -788,7 +795,7 @@
 							value: "tfc:castable_pickaxe_heads"
 						}
 					}
-					title: "Any #tfc:castable_pickaxe_heads"
+					title: "{gravitas.quest.caveman.pickHead}"
 					type: "item"
 				}
 				{
@@ -818,7 +825,7 @@
 					type: "item"
 				}
 			]
-			title: "&aMaking Our First Metal Tools&r"
+			title: "{gravitas.quest.caveman.copperTools}"
 			x: -1.0d
 			y: 0.5d
 		}
@@ -886,8 +893,8 @@
 				item: "tfc:ceramic/large_vessel"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 3.5d
+			x: -2.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["2D4FDCC9E9E2E515"]
@@ -908,6 +915,7 @@
 						value: "tfc:lumber"
 					}
 				}
+				title: "{gravitas.quest.caveman.lumber}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.stage1.lumber}"
@@ -916,7 +924,6 @@
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
-			description: [""]
 			id: "429A660FABB36C9F"
 			rewards: [{
 				id: "6CE9B726AA819439"
@@ -956,13 +963,12 @@
 				}
 				type: "item"
 			}]
-			subtitle: "{gravitas.quest.stage1.subt.crafting}"
 			tasks: [{
 				id: "71D8E7FECAFBC417"
 				item: "minecraft:crafting_table"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -0.5d
 			y: 5.0d
 		}
 		{
@@ -996,8 +1002,8 @@
 				type: "observation"
 			}]
 			title: "Our First Anvil"
-			x: -1.0d
-			y: -1.5d
+			x: -0.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["2D4FDCC9E9E2E515"]
@@ -1030,8 +1036,8 @@
 			icon: "minecraft:lava_bucket"
 			id: "360533FB6366ACEF"
 			rewards: [{
-				id: "2949C6AC4725B676"
-				item: "minecraft:coal"
+				id: "1A24D7689E2B45B2"
+				item: "tfc:ore/bituminous_coal"
 				type: "item"
 			}]
 			size: 1.25d
@@ -1041,8 +1047,8 @@
 				title: "{gravitas.quest.stage1.charforge}"
 				type: "checkmark"
 			}]
-			x: -4.0d
-			y: -3.5d
+			x: -3.75d
+			y: -2.5d
 		}
 		{
 			dependencies: ["2D4FDCC9E9E2E515"]
@@ -1126,7 +1132,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: -1.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
@@ -1214,8 +1220,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.raw_hide}"
-			x: 1.5d
-			y: 0.0d
+			x: 2.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
@@ -1271,8 +1277,8 @@
 				item: "tfc:powder/flux"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -1.0d
+			x: 1.0d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1316,8 +1322,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.squeegee}"
-			x: 2.5d
-			y: -0.5d
+			x: 3.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["466B5ADBED6C1CA3"]
@@ -1330,7 +1336,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["77A64A20B277C6B0"]
@@ -1350,7 +1356,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.soak_2}"
-			x: 3.0d
+			x: 4.0d
 			y: -1.5d
 		}
 		{
@@ -1399,12 +1405,11 @@
 				item: "tfc:bellows"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -2.5d
+			x: 6.0d
+			y: -2.25d
 		}
 		{
 			dependencies: [
-				"360533FB6366ACEF"
 				"1F2AE955933F52CE"
 				"1247FF48A0CEB223"
 				"03BFC97BE7446807"
@@ -1474,7 +1479,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: -4.5d
+			y: -3.75d
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
@@ -1559,8 +1564,8 @@
 				item: "minecraft:saddle"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -1.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3B3414C2273DDFA7"]
@@ -1611,7 +1616,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 2.0d
+			y: 2.25d
 		}
 		{
 			dependencies: ["24AF409A22897A89"]
@@ -1639,19 +1644,14 @@
 				item: "firmalife:beehive"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 5.0d
+			x: 3.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["045737499F7531D3"]
 			description: [""]
 			hide_dependent_lines: true
 			id: "3D008B1624FDB7FC"
-			rewards: [{
-				id: "1EE3AA4786443B72"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "{gravitas.quest.stage1.subt.treated}"
@@ -1678,11 +1678,10 @@
 			shape: "gear"
 			subtitle: "{gravitas.quest.stage1.subt.drink}"
 			tasks: [{
-				id: "61E64757EFA413DE"
-				title: "{gravitas.quest.stage1.desc.drink}"
+				id: "0E22AA53B252E0CE"
+				title: "{gravitas.quest.stage1.drink}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.stage1.drink}"
 			x: 3.0d
 			y: 0.5d
 		}
@@ -1702,8 +1701,8 @@
 				title: "{gravitas.quest.stage1.canvil}"
 				type: "checkmark"
 			}]
-			x: 3.0d
-			y: -4.5d
+			x: 1.5d
+			y: -5.5d
 		}
 		{
 			dependencies: [
@@ -1750,9 +1749,9 @@
 			subtitle: "{gravitas.quest.stage1.subt.win}"
 			tasks: [{
 				id: "199F693B00975A9C"
-				title: "{gravitas.quest.stage1.win}"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.stage1.win}"
 			x: 9.0d
 			y: 1.0d
 		}
@@ -1771,8 +1770,8 @@
 				item: "tfc:wood/planks/oak_tool_rack"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.5d
+			x: -0.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
@@ -1812,8 +1811,8 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 1.5d
+			x: -1.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["42DEE32BEAF4F9DB"]
@@ -1835,5 +1834,5 @@
 			y: 0.5d
 		}
 	]
-	title: "{gravitas.chapters.New1.title}"
+	title: "{gravitas.chapters.1.title}"
 }

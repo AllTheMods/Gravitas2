@@ -268,10 +268,9 @@
 			id: "73F337C36FFAD26C"
 			tasks: [{
 				id: "7CB32E3CEDA23A60"
-				title: "tools"
+				title: "{gravitas.quest.brass.tools}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.brass.tools}"
 			x: 3.0d
 			y: 1.0d
 		}
