@@ -854,6 +854,28 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
     duration: 6000
   }).id('gregitas:barrel/creosote_treated_lumber')
 
+  //Assembly Line
+  event.recipes.gtceu.assembly_line("hpca")
+  .itemInputs(
+    "gtceu:data_bank",
+    "4x #gtceu:circuits/zpm",
+    "8x gtceu:luv_field_generator",
+    "gtceu:data_orb",
+    "gtceu:computer_monitor_cover",
+    "32x gtceu:uranium_rhodium_dinaquadide_double_wire",
+    "32x gtceu:uranium_rhodium_dinaquadide_double_wire",
+    "16x gtceu:normal_optical_pipe",
+  )
+  .inputFluids(
+    "gtceu:soldering_alloy 1152",
+    "gtceu:vanadium_gallium 1152",
+    "gtceu:pcb_coolant 4000",
+  )
+  .itemOutputs("gtceu:high_performance_computation_array")
+  ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack('gtceu:computer_monitor_cover').EUt(IV).duration(2400))
+  .duration(1200)
+  .EUt(100000)
+
   //GTCEU End
   //Computercraft
   shaped('computercraft:computer_normal', ['sps', 'scs', 'OPO'], {
