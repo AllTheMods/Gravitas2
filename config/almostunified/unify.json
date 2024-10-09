@@ -31,7 +31,8 @@
     "forge:double_ingots/{material}",
     "forge:double_sheets/{material}",
     "forge:sheets/{material}",
-    "forge:thorium"
+    "forge:thorium",
+    "forge:rods/treated_wood"
   ],
   "materials": [
     "aeternium",

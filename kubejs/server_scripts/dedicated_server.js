@@ -3,8 +3,8 @@
 let config
 
 if (!Platform.isClientEnvironment()) {
-  const configPath = "kubejs/config/modpack_config.json"
-  const defaultConfig = {
+  let configPath = "kubejs/config/modpack_config.json"
+  let defaultConfig = {
     server: {
       banned_block_entities: Utils.newList(),
       banned_items: Utils.newList(),

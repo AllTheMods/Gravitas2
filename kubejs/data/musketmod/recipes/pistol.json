@@ -34,17 +34,8 @@
     },
     
     "result": {
-        "item": "musketmod:pistol",
-        "nbt": {
-            "Enchantments": [
-                {
-                    "id": "unbreaking",
-                    "lvl": 14
-                }
-            ],
-            "HideFlags": 1
+        "item": "musketmod:pistol"
         }
-    }
     
 }
 

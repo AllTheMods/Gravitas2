@@ -70,6 +70,6 @@ const addBiomesToStructures = (/** @type {TagEvent.Biome} */ event) => {
   event.add("minecraft:has_structure/ruined_portal_swamp", ["#minecraft:is_lowland"])
   event.add("repurposed_structures:has_structure/mineshafts/desert", ["#minecraft:is_badlands"])
   event.get("ae2:has_meteorites").remove("#is_overworld")
-
+  event.add("repurposed_structures:has_structure/strongholds/nether",["gcyr:martian_wastelands"])
 
 }

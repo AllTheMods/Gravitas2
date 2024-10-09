@@ -792,7 +792,7 @@
 			id: "159F43C0C0D91776"
 			rewards: [{
 				id: "6DDD4C022DDE3A33"
-				item: "chemlib:sulfur_dust"
+				item: "gtceu:sulfur_dust"
 				random_bonus: 2
 				type: "item"
 			}]
