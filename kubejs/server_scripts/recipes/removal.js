@@ -49,6 +49,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:electric_blast_furnace/steel_from_wrought_iron"})
   event.remove({ id: "gtceu:electric_blast_furnace/steel_from_iron"})
   event.remove({ id: "gtceu:assembly_line/high_performance_computing_array"})
+  event.remove({ id: "gtceu:assembly_line/ultimate_battery"})
 
   //GT / Railcraft Tool Specific
   toolsToRemove.forEach((tool) => {

@@ -876,6 +876,33 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
   .duration(1200)
   .EUt(100000)
 
+  event.recipes.gtceu.assembly_line("uhv_battery")
+  .itemInputs(
+    "16x gtceu:double_darmstadtium_plate",
+    "4x gtceu:wetware_processor_mainframe",
+    "16x gtceu:energy_cluster",
+    "4x gtceu:uv_field_generator",
+    "64x gtceu:uhpic_wafer",
+    "64x gtceu:uhpic_wafer",
+    "64x gtceu:advanced_smd_diode",
+    "64x gtceu:advanced_smd_capacitor",
+    "64x gtceu:advanced_smd_resistor",
+    "64x gtceu:advanced_smd_transistor",
+    "64x gtceu:advanced_smd_inductor",
+    "32x gtceu:enriched_naquadah_trinium_europium_duranide_single_wire",
+    "32x gtceu:enriched_naquadah_trinium_europium_duranide_single_wire",
+    "64x gtceu:neutronium_bolt",
+  )
+  .inputFluids(
+    "gtceu:soldering_alloy 5760",
+    "gtceu:polybenzimidazole 2304",
+    "gtceu:naquadria 2592",
+  )
+  .itemOutputs("gtceu:max_battery")
+  .stationResearch(b => b.researchStack('gtceu:energy_cluster').EUt(1966080).CWUt(144, 576000))
+  .duration(2000)
+  .EUt(300000)
+
   //GTCEU End
   //Computercraft
   shaped('computercraft:computer_normal', ['sps', 'scs', 'OPO'], {
