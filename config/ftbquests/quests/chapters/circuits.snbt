@@ -3,8 +3,9 @@
 	default_quest_shape: ""
 	filename: "circuits"
 	group: "6A4ED78F1D529DE3"
+	icon: "gtceu:max_battery"
 	id: "560EF4C38DEACA03"
-	order_index: 10
+	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
@@ -911,6 +912,32 @@
 			title: "Steam Age"
 			x: -5.0d
 			y: -6.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "74A70CF5492A2225"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "4B13017DE6F5BCFB"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: -9.0d
 		}
 	]
 	title: "{gravitas.chapters.25.title}"

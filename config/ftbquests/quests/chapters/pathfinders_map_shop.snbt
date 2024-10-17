@@ -12,72 +12,72 @@
 			image: "kubejs:textures/biomes_text.png"
 			rotation: 0.0d
 			width: 4.5d
-			x: -1.5d
-			y: -16.0d
+			x: 1.2857142857142847d
+			y: -1.5d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/aquatic.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: -4.5d
-			y: -14.5d
+			x: -1.7142857142857153d
+			y: 0.0d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/high_altitude.png"
 			rotation: 0.0d
 			width: 4.0d
-			x: -5.285714285714285d
-			y: -10.0d
+			x: -2.5d
+			y: 4.5d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/low_altitude.png"
 			rotation: 0.0d
 			width: 3.5d
-			x: -5.142857142857139d
-			y: -13.0d
+			x: -2.357142857142854d
+			y: 1.5d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/mid_altitude.png"
 			rotation: 0.0d
 			width: 3.5d
-			x: -5.142857142857139d
-			y: -11.5d
+			x: -2.357142857142854d
+			y: 3.0d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/shores.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: -4.464285714285715d
-			y: -7.0d
+			x: -1.6785714285714306d
+			y: 7.5d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/water.png"
 			rotation: 0.0d
 			width: 1.5d
-			x: -4.285714285714285d
-			y: -8.535714285714285d
+			x: -1.5d
+			y: 5.964285714285715d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/lakes.png"
 			rotation: 0.0d
 			width: 1.5d
-			x: -4.28d
-			y: -5.5d
+			x: -1.4942857142857155d
+			y: 9.0d
 		}
 		{
 			height: 0.5d
 			image: "kubejs:textures/nether.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: -4.5d
-			y: -4.0d
+			x: -1.7142857142857153d
+			y: 10.5d
 		}
 	]
 	order_index: 0
@@ -126,7 +126,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -146,8 +146,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.badlands}"
-			x: -3.0d
-			y: -11.5d
+			x: 0.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -192,7 +192,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -212,8 +212,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.inverted_badlands}"
-			x: -2.0d
-			y: -11.5d
+			x: 1.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -258,7 +258,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -278,8 +278,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.canyons}"
-			x: 0.0d
-			y: -11.5d
+			x: 3.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -324,7 +324,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -344,8 +344,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.low_canyons}"
-			x: -3.0d
-			y: -13.0d
+			x: 0.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -390,7 +390,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -410,8 +410,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.plains}"
-			x: 0.0d
-			y: -13.0d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -456,7 +456,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -476,8 +476,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.plateau}"
-			x: -1.0d
-			y: -11.5d
+			x: 2.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -522,7 +522,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -542,8 +542,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.hills}"
-			x: -1.0d
-			y: -13.0d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -588,7 +588,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -608,8 +608,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.rolling_hills}"
-			x: 1.0d
-			y: -11.5d
+			x: 4.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -654,7 +654,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -674,8 +674,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.lake}"
-			x: -2.0d
-			y: -8.5d
+			x: 1.0d
+			y: 6.0d
 		}
 		{
 			can_repeat: true
@@ -720,7 +720,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -740,8 +740,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.lowlands}"
-			x: -2.0d
-			y: -13.0d
+			x: 1.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -786,7 +786,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -806,8 +806,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.mountains}"
-			x: -1.0d
-			y: -10.0d
+			x: 2.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -861,8 +861,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_mountains}"
-			x: -2.0d
-			y: -10.0d
+			x: 1.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -907,7 +907,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -927,8 +927,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.old_mountains}"
-			x: -3.0d
-			y: -10.0d
+			x: 0.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -982,8 +982,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.oceanic_mountains}"
-			x: 0.0d
-			y: -10.0d
+			x: 3.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -1037,8 +1037,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountains}"
-			x: 1.0d
-			y: -10.0d
+			x: 4.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -1093,8 +1093,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.ocean}"
-			x: -3.0d
-			y: -14.5d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1149,8 +1149,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.ocean_reef}"
-			x: -2.0d
-			y: -14.5d
+			x: 1.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1181,16 +1181,12 @@
 					type: "item"
 				}
 				{
-					consume_items: true
-					disable_toast: true
-					id: "63879166586F27B5"
+					id: "039BE63ECF871513"
 					item: "minecraft:iron_block"
 					type: "item"
 				}
 				{
-					consume_items: true
-					disable_toast: true
-					id: "2AFF463E7084EE0B"
+					id: "6448E681841175F2"
 					item: {
 						Count: 1
 						ForgeCaps: {
@@ -1205,8 +1201,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.deep_ocean}"
-			x: -1.0d
-			y: -14.5d
+			x: 2.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1260,8 +1256,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.deep_ocean_trench}"
-			x: 0.0d
-			y: -14.5d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1306,7 +1302,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1326,8 +1322,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.river}"
-			x: -3.0d
-			y: -8.5d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			can_repeat: true
@@ -1381,8 +1377,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.shore}"
-			x: -3.0d
-			y: -7.0d
+			x: 0.0d
+			y: 7.5d
 		}
 		{
 			can_repeat: true
@@ -1427,7 +1423,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1447,8 +1443,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.mountain_lake}"
-			x: -3.0d
-			y: -5.5d
+			x: 0.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1502,8 +1498,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_mountain_lake}"
-			x: 0.0d
-			y: -5.5d
+			x: 3.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1548,7 +1544,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1568,8 +1564,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.old_mountain_lake}"
-			x: -2.0d
-			y: -5.5d
+			x: 1.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1623,8 +1619,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.oceanic_mountain_lake}"
-			x: -1.0d
-			y: -5.5d
+			x: 2.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1678,8 +1674,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountain_lake}"
-			x: 1.0d
-			y: -5.5d
+			x: 4.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1724,7 +1720,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1744,8 +1740,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.plateau_lake}"
-			x: 2.0d
-			y: -5.5d
+			x: 5.0d
+			y: 9.0d
 		}
 		{
 			id: "50EC0F521D31465C"
@@ -1771,8 +1767,8 @@
 				type: "stat"
 				value: 2000000
 			}]
-			x: 3.75d
-			y: -12.0d
+			x: 6.75d
+			y: 2.5d
 		}
 		{
 			id: "246FF66E4D1AC9B8"
@@ -1795,8 +1791,8 @@
 				type: "stat"
 				value: 4000000
 			}]
-			x: 3.75d
-			y: -9.0d
+			x: 6.75d
+			y: 5.5d
 		}
 		{
 			can_repeat: true
@@ -1836,8 +1832,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.warped_forest}"
-			x: -3.0d
-			y: -4.0d
+			x: 0.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -1877,8 +1873,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.nether_wastes}"
-			x: -2.0d
-			y: -4.0d
+			x: 1.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -1918,8 +1914,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.crimson_forest}"
-			x: -1.0d
-			y: -4.0d
+			x: 2.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -1959,8 +1955,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.soul_sand_valley}"
-			x: 0.0d
-			y: -4.0d
+			x: 3.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -2000,8 +1996,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.basalt_deltas}"
-			x: 1.0d
-			y: -4.0d
+			x: 4.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -2046,7 +2042,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -2066,8 +2062,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.salt_marsh}"
-			x: 1.0d
-			y: -13.0d
+			x: 4.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -2112,7 +2108,7 @@
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -2132,8 +2128,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.highlands}"
-			x: 2.0d
-			y: -11.5d
+			x: 5.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -2187,8 +2183,34 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.tidal_flats}"
-			x: -2.0d
-			y: -7.0d
+			x: 1.0d
+			y: 7.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "2E54D926D2173DF2"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "2A14900811D3FEAA"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: -1.5d
 		}
 	]
 	tags: ["biome:tfc.maps"]

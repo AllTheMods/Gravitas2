@@ -3,13 +3,14 @@
 	default_quest_shape: ""
 	filename: "drawers"
 	group: "3CB58C688DD23BD2"
-	icon: "storagedrawers:controller"
+	icon: "everycomp:sd/tfc/oak_full_drawers_4"
 	id: "4E112C587DAC7B12"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			description: ["{gravitas.quest.drawer.desc.drawer}"]
+			icon: "everycomp:sd/tfc/oak_full_drawers_1"
 			id: "495B2BDF498A6CA1"
 			tasks: [{
 				id: "10536EA4B2E69660"
@@ -205,6 +206,7 @@
 		{
 			dependencies: ["12F02E2416673200"]
 			description: ["{gravitas.quest.drawer.desc.1x2}"]
+			icon: "everycomp:sd/tfc/oak_full_drawers_4"
 			id: "6CD40AED4F2014C4"
 			tasks: [
 				{
@@ -408,6 +410,7 @@
 		{
 			dependencies: ["12F02E2416673200"]
 			description: ["{gravitas.quest.drawer.desc.2x2}"]
+			icon: "everycomp:sd/tfc/oak_half_drawers_1"
 			id: "683DAC76BC412533"
 			tasks: [
 				{
@@ -708,6 +711,7 @@
 		{
 			dependencies: ["12F02E2416673200"]
 			description: ["{gravitas.quest.drawer.desc.trim}"]
+			icon: "everycomp:sd/tfc/oak_trim"
 			id: "12C429330257E66C"
 			tasks: [{
 				id: "2E623D494167D4BC"
@@ -1013,6 +1017,32 @@
 			title: "{gravitas.quest.drawer.controller}"
 			x: 0.0d
 			y: -2.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "5E735798274FDF69"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "12EC9FA00A59089D"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -4.0d
 		}
 	]
 	title: "{gravitas.chapters.31.title}"

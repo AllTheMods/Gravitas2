@@ -21,11 +21,23 @@
 			description: ["{gravitas.quest.igneous.desc.igneous_zinc_alloy}"]
 			id: "0F1D52151DC0470B"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "1122FA23CBDCC274"
-				item: "create:andesite_alloy"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "create:andesite_alloy"
+				}
+				random_bonus: 2
 				type: "item"
 			}]
+			shape: "rsquare"
+			size: 1.25d
 			tasks: [{
 				id: "01C17EB990474DD2"
 				item: "create:andesite_alloy"
@@ -40,9 +52,10 @@
 			description: ["{gravitas.quest.igneous.desc.shaft}"]
 			id: "1966BDA6A4C93D06"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "4D34329900628719"
 				item: "create:shaft"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -51,7 +64,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.igneous.shaft}"
-			x: 1.0d
+			x: 1.5d
 			y: 0.0d
 		}
 		{
@@ -68,8 +81,7 @@
 				item: "create:water_wheel"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.water_wheel}"
-			x: 2.0d
+			x: 3.0d
 			y: 0.0d
 		}
 		{
@@ -77,9 +89,10 @@
 			description: ["{gravitas.quest.igneous.desc.moving_stress}"]
 			id: "226BFC3D1E0C48D4"
 			rewards: [{
-				count: 10
+				count: 5
 				id: "2174E0AA0996D90D"
 				item: "gtceu:treated_wood_planks"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
@@ -87,7 +100,7 @@
 				title: "{gravitas.quest.igneous.moving_stress}"
 				type: "checkmark"
 			}]
-			x: 1.0d
+			x: 2.0d
 			y: -1.5d
 		}
 		{
@@ -96,15 +109,16 @@
 			id: "2B1CEF9E7A01F816"
 			rewards: [
 				{
-					count: 3
+					count: 2
 					id: "5906370D6F10BD5E"
 					item: "create:cogwheel"
+					random_bonus: 2
 					type: "item"
 				}
 				{
-					count: 2
 					id: "5FCB467D6200E194"
 					item: "create:large_cogwheel"
+					random_bonus: 1
 					type: "item"
 				}
 			]
@@ -121,7 +135,7 @@
 				}
 			]
 			title: "{gravitas.quest.igneous.cogwheel}"
-			x: 0.0d
+			x: 1.0d
 			y: -1.5d
 		}
 		{
@@ -129,9 +143,10 @@
 			description: ["{gravitas.quest.igneous.desc.changing_direction}"]
 			id: "2A91F572B1E9636A"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "293E937C4CD5599D"
 				item: "create:andesite_casing"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -164,10 +179,10 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.igneous.changing_direction}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.changing_direction}"
-			x: 1.0d
+			x: 2.0d
 			y: -2.5d
 		}
 		{
@@ -175,9 +190,9 @@
 			description: ["{gravitas.quest.igneous.desc.small_machines}"]
 			id: "3E5E415565A744CE"
 			rewards: [{
-				count: 4
 				id: "3F7E18364B22D3AD"
 				item: "create:andesite_casing"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
@@ -185,7 +200,7 @@
 				title: "{gravitas.quest.igneous.small_machines}"
 				type: "checkmark"
 			}]
-			x: 3.0d
+			x: 4.0d
 			y: 1.5d
 		}
 		{
@@ -193,7 +208,7 @@
 			description: ["{gravitas.quest.igneous.desc.mechanical_press}"]
 			id: "7B7C7F707BD90FF3"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "0DB69532D7CB3A58"
 				item: {
 					Count: 1
@@ -205,6 +220,7 @@
 					}
 					id: "tfc:food/sugarcane"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -212,8 +228,7 @@
 				item: "create:mechanical_press"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.mechanical_press}"
-			x: 5.0d
+			x: 6.0d
 			y: 1.0d
 		}
 		{
@@ -237,8 +252,7 @@
 				item: "create:mechanical_mixer"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.mechanical_mixer}"
-			x: 5.0d
+			x: 6.0d
 			y: 2.0d
 		}
 		{
@@ -255,7 +269,7 @@
 				title: "{gravitas.quest.igneous.testing_stress_and_speed}"
 				type: "checkmark"
 			}]
-			x: 1.0d
+			x: 2.0d
 			y: 1.5d
 		}
 		{
@@ -263,8 +277,10 @@
 			description: ["{gravitas.quest.igneous.desc.speedometer}"]
 			id: "0CDA1D2981C64323"
 			rewards: [{
+				count: 2
 				id: "33FCD478A688CFFA"
 				item: "create:shaft"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -272,8 +288,7 @@
 				item: "create:speedometer"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.speedometer}"
-			x: 0.0d
+			x: 1.0d
 			y: 1.5d
 		}
 		{
@@ -281,8 +296,10 @@
 			description: ["{gravitas.quest.igneous.desc.stressometer}"]
 			id: "61C7329189BE34C9"
 			rewards: [{
+				count: 2
 				id: "0C2EFDAD1F008F79"
 				item: "create:shaft"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -290,8 +307,7 @@
 				item: "create:stressometer"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.stressometer}"
-			x: 1.0d
+			x: 2.0d
 			y: 2.5d
 		}
 		{
@@ -308,8 +324,7 @@
 				item: "create:basin"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.basin}"
-			x: 4.0d
+			x: 5.0d
 			y: 1.5d
 		}
 		{
@@ -319,6 +334,7 @@
 			rewards: [{
 				id: "117FC39778D7A6D2"
 				item: "create:cogwheel"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
@@ -327,7 +343,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.igneous.millstone}"
-			x: 3.0d
+			x: 4.0d
 			y: 2.5d
 		}
 		{
@@ -335,9 +351,10 @@
 			description: ["{gravitas.quest.igneous.desc.windmill}"]
 			id: "2C4E8D6F5F9F76A9"
 			rewards: [{
-				count: 8
+				count: 5
 				id: "5BE884CBC52C029F"
 				item: "create:white_sail"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [
@@ -354,7 +371,7 @@
 				}
 			]
 			title: "{gravitas.quest.igneous.windmill}"
-			x: 3.5d
+			x: 4.5d
 			y: 0.0d
 		}
 		{
@@ -362,9 +379,10 @@
 			description: ["{gravitas.quest.igneous.desc.moving_items}"]
 			id: "4B5693E15D5A9FA3"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "0D8AE37AD318178A"
 				item: "minecraft:leather"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
@@ -372,7 +390,7 @@
 				title: "{gravitas.quest.igneous.moving_items}"
 				type: "checkmark"
 			}]
-			x: 3.0d
+			x: 4.0d
 			y: -1.5d
 		}
 		{
@@ -380,9 +398,10 @@
 			description: ["{gravitas.quest.igneous.desc.mechanical_belt}"]
 			id: "2FA1AEB40F55EE04"
 			rewards: [{
-				count: 10
+				count: 4
 				id: "3D1729EBCA73E6E9"
 				item: "create:belt_connector"
+				random_bonus: 4
 				type: "item"
 			}]
 			tasks: [{
@@ -390,8 +409,7 @@
 				item: "create:belt_connector"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.mechanical_belt}"
-			x: 3.0d
+			x: 4.0d
 			y: -2.5d
 		}
 		{
@@ -399,9 +417,10 @@
 			description: ["{gravitas.quest.igneous.desc.depot}"]
 			id: "189144799E04699F"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "681C26F7DA8BF36D"
 				item: "create:belt_connector"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -409,8 +428,7 @@
 				item: "create:depot"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.depot}"
-			x: 4.0d
+			x: 5.0d
 			y: -2.5d
 		}
 		{
@@ -420,6 +438,7 @@
 			rewards: [{
 				id: "1F4E308E127A91A7"
 				item: "create:chute"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
@@ -427,8 +446,7 @@
 				item: "create:chute"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.chute}"
-			x: 4.0d
+			x: 5.0d
 			y: -1.5d
 		}
 		{
@@ -446,7 +464,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.igneous.encased_fan}"
-			x: 4.0d
+			x: 5.0d
 			y: 2.5d
 		}
 		{
@@ -454,9 +472,10 @@
 			description: ["{gravitas.quest.igneous.desc.blaze_burner}"]
 			id: "4363A85AA84102B8"
 			rewards: [{
-				count: 16
+				count: 8
 				id: "56358A42D8E6C9D1"
 				item: "tfc:ore/bituminous_coal"
+				random_bonus: 8
 				type: "item"
 			}]
 			tasks: [{
@@ -464,9 +483,34 @@
 				item: "create:blaze_burner"
 				type: "item"
 			}]
-			title: "{gravitas.quest.igneous.blaze_burner}"
-			x: 5.0d
+			x: 6.0d
 			y: 3.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "7BB3242BD7095FD5"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "738EE7C10B060832"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 0.0d
 		}
 	]
 	title: "{gravitas.chapters.11.title}"

@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:nano_processor_mainframe"
 	id: "4EE3472592886486"
-	order_index: 6
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -59,6 +59,32 @@
 			}]
 			x: 11.5d
 			y: 0.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "2894862661F61AFC"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "3EF9905C8CA72938"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: -1.5d
 		}
 	]
 	title: "{gravitas.chapters.21.title}"

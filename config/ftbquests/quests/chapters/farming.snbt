@@ -11,31 +11,6 @@
 		{
 			description: ["{gravitas.quest.farm.desc.need}"]
 			id: "7FEBCBBBD4FD3B5C"
-			rewards: [
-				{
-					id: "3A869AC619240A51"
-					item: {
-						Count: 1
-						id: "gtceu:wrought_iron_hoe"
-						tag: {
-							DisallowContainerItem: 0b
-							GT.Behaviours: { }
-							GT.Tool: {
-								Damage: 0
-								MaxDamage: 383
-							}
-							HideFlags: 2
-						}
-					}
-					type: "item"
-				}
-				{
-					advancement: "minecraft:husbandry/plant_seed"
-					criterion: ""
-					id: "278073706AB51624"
-					type: "advancement"
-				}
-			]
 			tasks: [{
 				advancement: "tfc:world/seeds"
 				criterion: ""
@@ -50,11 +25,6 @@
 			dependencies: ["7FEBCBBBD4FD3B5C"]
 			description: ["{gravitas.quest.farm.desc.hydration}"]
 			id: "0C6662072EB8BD48"
-			rewards: [{
-				id: "57E7030BFBCB7CDD"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [{
 				id: "3D6F6B1887B989D8"
 				item: "tfc:wooden_bucket"
@@ -68,17 +38,11 @@
 			dependencies: ["7FEBCBBBD4FD3B5C"]
 			description: ["{gravitas.quest.farm.desc.temperature}"]
 			id: "322A52B4D084D68B"
-			rewards: [{
-				id: "01E3B7FFE0E18CB5"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [{
 				id: "11E6F3B016708090"
-				title: "Temperature"
+				title: "{gravitas.quest.farm.temperature}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.farm.temperature}"
 			x: 7.0d
 			y: 2.0d
 		}
@@ -87,9 +51,10 @@
 			description: ["{gravitas.quest.farm.desc.moving_water}"]
 			id: "2BB315E610D88139"
 			rewards: [{
-				count: 16
+				count: 5
 				id: "35EB98725D62EFE9"
 				item: "tfc:mortar"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
@@ -182,6 +147,7 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.aqueducts}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.moving_water}"
@@ -225,17 +191,11 @@
 			description: ["{gravitas.quest.farm.desc.season}"]
 			icon: "minecraft:clock"
 			id: "64B686A83A7C5D47"
-			rewards: [{
-				id: "5C10B07D4997A52C"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
 			tasks: [{
 				id: "2CF58F09C4926A3C"
-				title: "Time and Season"
+				title: "{gravitas.quest.farm.season}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.farm.season}"
 			x: 7.5d
 			y: 3.0d
 		}
@@ -269,10 +229,9 @@
 			}]
 			tasks: [{
 				id: "7AC0A12D92068CDB"
-				title: "Y-Level"
+				title: "{gravitas.quest.farm.y_level}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.farm.y_level}"
 			x: 8.5d
 			y: 3.0d
 		}
@@ -281,17 +240,12 @@
 			description: ["{gravitas.quest.farm.desc.climate}"]
 			icon: "tfc:wood/sapling/oak"
 			id: "7FEF46A575DDDD1F"
-			rewards: [{
-				id: "779980DDA782F771"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
 			tasks: [{
 				dimension: "minecraft:overworld"
 				id: "207244BA9C17E0A6"
+				title: "{gravitas.quest.farm.climate}"
 				type: "dimension"
 			}]
-			title: "{gravitas.quest.farm.climate}"
 			x: 9.5d
 			y: 3.0d
 		}
@@ -310,7 +264,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.compost}"
-			x: 10.0d
+			x: 12.5d
 			y: 1.0d
 		}
 		{
@@ -385,7 +339,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.P}"
-			x: 9.0d
+			x: 11.5d
 			y: 2.0d
 		}
 		{
@@ -460,7 +414,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.N}"
-			x: 10.0d
+			x: 12.5d
 			y: 2.0d
 		}
 		{
@@ -535,7 +489,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.K}"
-			x: 11.0d
+			x: 13.5d
 			y: 2.0d
 		}
 		{
@@ -654,9 +608,10 @@
 			hide_dependency_lines: true
 			id: "2936A0213A2D9CD7"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "03CEF21A812FB60E"
 				item: "tfc:compost"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -835,8 +790,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.axle}"
-			x: 6.0d
-			y: 6.5d
+			x: 7.0d
+			y: 7.0d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.pipe}"]
@@ -853,16 +808,17 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.pipe}"
-			x: 6.0d
-			y: 4.5d
+			x: 5.5d
+			y: 5.5d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.waterwheel}"]
 			id: "6CFDA7FA4D944B6D"
 			rewards: [{
-				count: 10
+				count: 5
 				id: "6FEB6F63233E2B19"
 				item: "tfc:wood/axle/white_cedar"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
@@ -958,8 +914,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.waterwheel}"
-			x: 5.0d
-			y: 7.5d
+			x: 7.0d
+			y: 8.5d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.windmill}"]
@@ -1048,8 +1004,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.windmill}"
-			x: 5.0d
-			y: 5.5d
+			x: 5.5d
+			y: 7.0d
 		}
 		{
 			id: "3F9B99AEBDADB0AF"
@@ -1239,6 +1195,32 @@
 			x: 14.5d
 			y: 8.5d
 		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "1EE67293579AF191"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "32C84754AE82D9B3"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: -0.5d
+		}
 	]
-	title: "{gravitas.chapters.9.title}"
+	title: "{gravitas.chapters.7.title}"
 }

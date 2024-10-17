@@ -1,0 +1,586 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "apotheosis_gear"
+	group: "4D27B882A1217B68"
+	icon: "apotheosis:mythic_material"
+	id: "6693050B0EE71CEB"
+	images: [
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/apotheosis/apotheosis_gear.png"
+			rotation: 0.0d
+			width: 7.135483870967742d
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/apotheosis/gear_simple.png"
+			rotation: 0.0d
+			width: 1.9281437125748504d
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/apotheosis/gear_reforge.png"
+			rotation: 0.0d
+			width: 1.844155844155844d
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/apotheosis/gear_augment.png"
+			rotation: 0.0d
+			width: 1.7777777777777777d
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/apotheosis/gear_smith.png"
+			rotation: 0.0d
+			width: 1.8533333333333333d
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/apotheosis/gear_gem.png"
+			rotation: 0.0d
+			width: 2.0709219858156027d
+			x: -5.5d
+			y: 3.0d
+		}
+		{
+			height: 1.0d
+			image: "apotheosis:items/sigils/enhancement"
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.5d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "apotheosis:items/sigils/rebirth"
+			rotation: 0.0d
+			width: 1.0d
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "apotheosis:items/sigils/withdrawal"
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.5d
+			y: 1.0d
+		}
+		{
+			height: 1.0d
+			image: "apotheosis:items/sigils/unnaming"
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			height: 1.0d
+			image: "apotheosis:items/sigils/socketing"
+			rotation: 0.0d
+			width: 1.0d
+			x: 4.5d
+			y: 0.0d
+		}
+	]
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5A0305BB1F8EA932"]
+			description: ["{gravitas.quest.affixes.desc.dust}"]
+			id: "40926361B5A17F74"
+			rewards: [{
+				count: 5
+				id: "2579209BE96C413A"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			size: 1.2d
+			tasks: [{
+				id: "2610766334068246"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.dust}"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["40926361B5A17F74"]
+			description: ["{gravitas.quest.affixes.desc.sigils}"]
+			id: "6BB9490E23CBD287"
+			rewards: [{
+				count: 3
+				id: "3D07F792B52E614B"
+				item: "apotheosis:gem_fused_slate"
+				random_bonus: 2
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "4CB60F642D59915E"
+				item: "apotheosis:gem_fused_slate"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.sigils}"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6BB9490E23CBD287"]
+			description: ["{gravitas.quest.affixes.desc.unnaming}"]
+			id: "1124A964E1B8E0EE"
+			rewards: [{
+				id: "04010920EA4A1A7E"
+				item: "apotheosis:sigil_of_unnaming"
+				random_bonus: 1
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "05850580F87C8745"
+				item: "apotheosis:sigil_of_unnaming"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.unnaming}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6BB9490E23CBD287"]
+			description: ["{gravitas.quest.affixes.desc.socket}"]
+			id: "482190A9DBE834BE"
+			rewards: [{
+				id: "22A4AC549D2F3233"
+				item: "apotheosis:sigil_of_socketing"
+				random_bonus: 1
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "1354E0A2E840D42D"
+				item: "apotheosis:sigil_of_socketing"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.socket}"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			description: ["{gravitas.quest.affixes.desc.gems}"]
+			id: "5A0305BB1F8EA932"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "67C1A576212976AB"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "octagon"
+			size: 1.3d
+			tasks: [{
+				advancement: "apotheosis:affix/gem"
+				criterion: ""
+				id: "61A0FDFECECB6FFF"
+				type: "advancement"
+			}]
+			title: "{gravitas.quest.affixes.gems}"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["40926361B5A17F74"]
+			description: ["{gravitas.quest.affixes.desc.salvaging_table}"]
+			id: "1A507E77BF750F60"
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{
+				id: "14B79330933FD83E"
+				item: "apotheosis:salvaging_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.salvaging_table}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1A507E77BF750F60"]
+			id: "70D60687AAB145FE"
+			rewards: [{
+				count: 3
+				id: "26ABC6C223985753"
+				item: "apotheosis:common_material"
+				type: "item"
+			}]
+			size: 0.95d
+			subtitle: "{gravitas.quest.affixes.subt.common}"
+			tasks: [{
+				id: "650CAE5254152FB9"
+				item: "apotheosis:common_material"
+				type: "item"
+			}]
+			title: "&7Mysterious Scrap Materials&n"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1A507E77BF750F60"]
+			id: "0A70CC1A0F4F1CD1"
+			rewards: [{
+				count: 3
+				id: "4BBFAD124EE92BED"
+				item: "apotheosis:uncommon_material"
+				type: "item"
+			}]
+			size: 0.95d
+			subtitle: "{gravitas.quest.affixes.subt.uncommon}"
+			tasks: [{
+				id: "70594E0D8666EB60"
+				item: "apotheosis:uncommon_material"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.uncommon}"
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1A507E77BF750F60"]
+			id: "40C8A9DF4581FF8C"
+			rewards: [{
+				count: 3
+				id: "0B6CB6E01FDAC37E"
+				item: "apotheosis:rare_material"
+				type: "item"
+			}]
+			size: 0.95d
+			subtitle: "{gravitas.quest.affixes.subt.rare}"
+			tasks: [{
+				id: "71D7450548341CEB"
+				item: "apotheosis:rare_material"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.rare}"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1A507E77BF750F60"]
+			id: "061244C38F05CBFE"
+			rewards: [{
+				count: 3
+				id: "5D401F212458026B"
+				item: "apotheosis:epic_material"
+				type: "item"
+			}]
+			shape: "circle"
+			size: 0.95d
+			subtitle: "{gravitas.quest.affixes.subt.epic}"
+			tasks: [{
+				id: "6BED70FB7EF343B8"
+				item: "apotheosis:epic_material"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.epic}"
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1A507E77BF750F60"]
+			id: "738FB4AC92679507"
+			rewards: [{
+				id: "151067FE2B8D5BEE"
+				item: "apotheosis:mythic_material"
+				type: "item"
+			}]
+			size: 0.95d
+			subtitle: "{gravitas.quest.affixes.subt.mythic}"
+			tasks: [{
+				id: "68C43D5FAB4FB1FB"
+				item: "apotheosis:mythic_material"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.mythic_material}"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0A70CC1A0F4F1CD1"]
+			description: ["{gravitas.quest.affixes.desc.simple}"]
+			id: "375359043E71349C"
+			rewards: [{
+				count: 3
+				id: "79DD1566F31F63C9"
+				item: "apotheosis:uncommon_material"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "2D2CA0A0899233C5"
+				item: "apotheosis:simple_reforging_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.simple}"
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"375359043E71349C"
+				"061244C38F05CBFE"
+			]
+			description: ["{gravitas.quest.affixes.desc.reforge}"]
+			id: "166DF03D93BC11F1"
+			rewards: [{
+				count: 3
+				id: "705ACD5F9E420F18"
+				item: "apotheosis:epic_material"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "34D325EA464BEEEC"
+				item: "apotheosis:reforging_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.reforge}"
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["359E1FFAB18FE50F"]
+			description: ["{gravitas.quest.affixes.desc.gem_cutting}"]
+			id: "544011D1C48D8E65"
+			rewards: [{
+				count: 5
+				id: "3B0E731D612ECA80"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "4241A0F3897E9DF0"
+				item: "apotheosis:gem_cutting_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.gem_cutting}"
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["40926361B5A17F74"]
+			description: ["{gravitas.quest.affixes.desc.smith}"]
+			id: "359E1FFAB18FE50F"
+			rewards: [{
+				id: "79AD079AB6E3A277"
+				item: "tfc:wood/planks/oak_workbench"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "69CF59A7A4E03D1F"
+				item: "minecraft:smithing_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.smith}"
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["544011D1C48D8E65"]
+			description: ["{gravitas.quest.affixes.desc.flawless}"]
+			id: "47317516A98016C0"
+			rewards: [{
+				id: "314A0EB4D43A8162"
+				item: "apotheosis:mythic_material"
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [{
+				advancement: "apotheosis:affix/mythic_gem"
+				criterion: ""
+				id: "2CA5B077B6357FB0"
+				type: "advancement"
+			}]
+			title: "{gravitas.quest.affixes.flawless}"
+			x: -4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["40926361B5A17F74"]
+			description: ["{gravitas.quest.affixes.desc.affix}"]
+			id: "67422A235EBAD4CF"
+			rewards: [{
+				count: 5
+				id: "28175FB7B29B97F4"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [{
+				advancement: "apotheosis:affix/root"
+				criterion: ""
+				id: "1129E77C7FCEC1CA"
+				type: "advancement"
+			}]
+			title: "{gravitas.quest.affixes.affix}"
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["67422A235EBAD4CF"]
+			description: ["{gravitas.quest.affixes.desc.mythic}"]
+			id: "68DD99B788216006"
+			rewards: [{
+				id: "078C3AA7A00D3A57"
+				item: "apotheosis:mythic_material"
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [{
+				advancement: "apotheosis:affix/mythic"
+				criterion: ""
+				id: "2FF1889B361964B9"
+				type: "advancement"
+			}]
+			title: "{gravitas.quest.affixes.mythic}"
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6BB9490E23CBD287"]
+			description: ["{gravitas.quest.affixes.desc.withdrawal}"]
+			id: "12FF7B644D595DB8"
+			rewards: [{
+				id: "2789B8FBD22C9082"
+				item: "apotheosis:sigil_of_withdrawal"
+				random_bonus: 1
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "05BB4B9BC2AD334E"
+				item: "apotheosis:sigil_of_withdrawal"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.withdrawal}"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6BB9490E23CBD287"]
+			description: ["{gravitas.quest.affixes.desc.enhancement}"]
+			id: "0DE2806193C95C76"
+			rewards: [{
+				id: "5FEBD2D3E6625E4B"
+				item: "apotheosis:sigil_of_enhancement"
+				random_bonus: 1
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "79C38B2C3E81465D"
+				item: "apotheosis:sigil_of_enhancement"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.enhancement}"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6BB9490E23CBD287"]
+			description: ["{gravitas.quest.affixes.desc.rebirth}"]
+			id: "46429C82843C6433"
+			rewards: [{
+				id: "7994B6940E0C4A3C"
+				item: "apotheosis:sigil_of_rebirth"
+				random_bonus: 1
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "57897C809F49C7D9"
+				item: "apotheosis:sigil_of_rebirth"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.rebirth}"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"738FB4AC92679507"
+				"0DE2806193C95C76"
+			]
+			description: ["{gravitas.quest.affixes.desc.augment}"]
+			id: "19D0D7433C5B43EE"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "622924E5D10096F1"
+				item: "apotheosis:augmenting_table"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.augment}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			can_repeat: false
+			description: [
+				"This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks."
+				"As all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."
+			]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "1AA94E54CA6F011B"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [
+				{
+					disable_toast: true
+					id: "33D05E0254401672"
+					title: "Quests By AllTheMods"
+					type: "checkmark"
+				}
+				{
+					id: "67BD6B7EF48B9CA4"
+					title: "Quests By AllTheMods"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+	title: "{gravitas.chapters.8.title}"
+}
