@@ -3,7 +3,16 @@
 	default_quest_shape: ""
 	filename: "gravitaschaptersnew1title"
 	group: "20028FE0986EEEC1"
-	icon: "minecraft:dirt"
+	icon: {
+		Count: 1
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "tfc:metal/anvil/copper"
+	}
 	id: "56764857387AF75C"
 	images: [
 		{
@@ -68,9 +77,10 @@
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
-				id: "624D36C64A6CD88C"
+				dimension: "minecraft:overworld"
+				id: "6FBAB7FF7C629BBA"
 				title: "{gravitas.quest.stage1.welcome}"
-				type: "checkmark"
+				type: "dimension"
 			}]
 			x: -11.0d
 			y: 0.5d
@@ -349,7 +359,7 @@
 				Count: 1
 				ForgeCaps: {
 					"tfc:food": {
-						creationDate: 366000L
+						creationDate: -9223372036854775808L
 						traits: [ ]
 					}
 					"tfc:item_heat": {
@@ -730,15 +740,16 @@
 				item: "tfc:torch"
 				type: "item"
 			}]
+			title: "{gravitas.quest.caveman.torch}"
 			x: -4.0d
 			y: -0.75d
 		}
 		{
 			dependencies: ["1004EAFAA862A722"]
 			description: [
-				"{gravitas.quest.stage1.desc.charcoal}"
-				""
+				"{gravitas.quest.stage1.desc.charcoal}\\n"
 				"{image:gravitas:textures/quests/charcoalpit.png width:150 height:100 align:1}"
+				"{@pagebreak}"
 			]
 			id: "6E1C067AE04CE077"
 			rewards: [{
@@ -787,31 +798,7 @@
 			}]
 			tasks: [
 				{
-					id: "14BEC66FC0A3460F"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:castable_pickaxe_heads"
-						}
-					}
-					title: "{gravitas.quest.caveman.pickHead}"
-					type: "item"
-				}
-				{
-					id: "7EB48FD1B4FFEF78"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "tfc:castable_propick_heads"
-						}
-					}
-					title: "Any #tfc:castable_propick_heads"
-					type: "item"
-				}
-				{
-					id: "26C50A9BC6F1B701"
+					id: "622538B06A215DD3"
 					item: {
 						Count: 1
 						ForgeCaps: {
@@ -820,7 +807,21 @@
 								ticks: 0L
 							}
 						}
-						id: "tfc:metal/saw_blade/copper"
+						id: "tfc:metal/pickaxe_head/copper"
+					}
+					type: "item"
+				}
+				{
+					id: "5B774E80C2A46192"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/propick_head/copper"
 					}
 					type: "item"
 				}
@@ -901,8 +902,8 @@
 			description: ["{gravitas.quest.stage1.desc.lumber}"]
 			id: "791DA52F7A377FB2"
 			rewards: [{
-				id: "332DAB8FACBAC89E"
-				item: "tfc:wood/sapling/oak"
+				id: "581C2EC023B5DC1C"
+				item: "tfc:wood/lumber/oak"
 				type: "item"
 			}]
 			size: 1.5d
@@ -1036,8 +1037,8 @@
 			icon: "minecraft:lava_bucket"
 			id: "360533FB6366ACEF"
 			rewards: [{
-				id: "1A24D7689E2B45B2"
-				item: "tfc:ore/bituminous_coal"
+				id: "509F4C4074FDDEE5"
+				item: "minecraft:charcoal"
 				type: "item"
 			}]
 			size: 1.25d
@@ -1061,9 +1062,9 @@
 			id: "35A3AC579169C6E6"
 			min_width: 350
 			rewards: [{
-				count: 32
+				count: 16
 				id: "14FD2221EECE7500"
-				item: "tfc:wood/lumber/oak"
+				item: "tfc:wood/support/oak"
 				type: "item"
 			}]
 			tasks: [{
@@ -1090,28 +1091,17 @@
 			]
 			id: "1F2AE955933F52CE"
 			rewards: [{
-				id: "1C9AEB0658DE01EB"
+				count: 3
+				id: "5AEB8CC8EA6B40EA"
 				item: {
 					Count: 1
-					id: "gtceu:bronze_mining_hammer"
-					tag: {
-						DisallowContainerItem: 0b
-						GT.Behaviours: {
-							AoEColumn: 1
-							AoELayer: 0
-							AoERow: 1
-							MaxAoEColumn: 1
-							MaxAoELayer: 0
-							MaxAoERow: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
 						}
-						GT.Tool: {
-							Damage: 0
-							HarvestLevel: 2
-							MaxDamage: 575
-							ToolSpeed: 5.2f
-						}
-						HideFlags: 2
 					}
+					id: "tfc:metal/ingot/copper"
 				}
 				type: "item"
 			}]
@@ -1173,7 +1163,7 @@
 			description: ["{gravitas.quest.caveman.desc.big_barrel}"]
 			id: "526A9CB2DF6FF1E1"
 			rewards: [{
-				count: 16
+				count: 10
 				id: "300B1D38EE1AE68A"
 				item: "tfc:wood/lumber/oak"
 				type: "item"
@@ -1233,7 +1223,6 @@
 				item: "minecraft:clay_ball"
 				type: "item"
 			}]
-			subtitle: "{gravitas.quest.stage1.subt.sheepsk}"
 			tasks: [{
 				id: "2A9E786D66E9629B"
 				item: {
@@ -1243,11 +1232,11 @@
 						value: "tfc:sheepskin_hides"
 					}
 				}
+				title: "{gravitas.quest.stage1.sheepsk}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.stage1.sheepsk}"
 			x: 3.0d
-			y: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["3EA1FB850C0282C5"]
@@ -1379,9 +1368,24 @@
 			}]
 			subtitle: "{gravitas.quest.stage1.subt.soaked2}"
 			tasks: [{
-				count: 3L
-				id: "46702DB06FE5C33E"
-				item: { Count: 3, id: "minecraft:leather" }
+				id: "030DD939F625E6E2"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "firmalife:pineapple_leather"
+							}
+							{
+								Count: 1b
+								id: "minecraft:leather"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.caveman.leathers}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.leather}"
@@ -1391,13 +1395,7 @@
 		{
 			dependencies: ["42DEE32BEAF4F9DB"]
 			description: ["{gravitas.quest.stage1.desc.bellows}"]
-			hide_dependent_lines: true
 			id: "4C3B53255AE41111"
-			rewards: [{
-				id: "682AEB37FBA9CCA1"
-				item: "minecraft:golden_apple"
-				type: "item"
-			}]
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
@@ -1405,7 +1403,7 @@
 				item: "tfc:bellows"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 5.25d
 			y: -2.25d
 		}
 		{
@@ -1454,13 +1452,7 @@
 		}
 		{
 			dependencies: ["0910F66534A2275B"]
-			hide_dependent_lines: true
 			id: "7C2AC560097A01BE"
-			rewards: [{
-				id: "14894200BDE14024"
-				item: "tfc:plant/red_apple_sapling"
-				type: "item"
-			}]
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "{gravitas.quest.stage1.subt.copperanvil}"
@@ -1483,64 +1475,52 @@
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
-			description: ["&aSpindles&r are used to break down Wool into &eWool Yarn&r, which can eventually be turned into the Wool in vanilla!"]
+			description: ["{gravitas.quest.caveman.desc.spindle}"]
 			id: "1DE8F31E48EE32BE"
-			tasks: [
-				{
-					id: "58A5A8EAAB974C06"
-					item: {
-						Count: 1
-						id: "tfc:spindle"
-						tag: {
-							Damage: 0
-						}
+			tasks: [{
+				id: "58A5A8EAAB974C06"
+				item: {
+					Count: 1
+					id: "tfc:spindle"
+					tag: {
+						Damage: 0
 					}
-					type: "item"
 				}
-				{
-					id: "2936024B72AAD2D3"
-					item: "tfc:ceramic/spindle_head"
-					type: "item"
-				}
-				{
-					id: "61D6592A58DA026D"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:ceramic/unfired_spindle_head"
-					}
-					type: "item"
-				}
-			]
-			x: 3.5d
-			y: 3.0d
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
 				"1DE8F31E48EE32BE"
 				"369A08553515BF34"
 			]
-			description: ["Gather up some &aWool&r from the local wildlife. Using your Spindle, turn the Wool into &aWool Yarn&r."]
+			description: ["Gather up some &aWool&r from the local wildlife. Using your Spindle, turn the Wool into &aWool Yarn&r.\\n\\nAlternatively collect some String."]
 			id: "3B3414C2273DDFA7"
-			tasks: [
-				{
-					id: "2BB1D4D5C41B8512"
-					item: "tfc:wool"
-					type: "item"
+			tasks: [{
+				id: "4FFD8984D4D3308A"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc:wool_yarn"
+							}
+							{
+								Count: 1b
+								id: "minecraft:string"
+							}
+						]
+					}
 				}
-				{
-					id: "4FFD8984D4D3308A"
-					item: "tfc:wool_yarn"
-					type: "item"
-				}
-			]
-			x: 4.0d
-			y: 1.5d
+				title: "{gravitas.quest.caveman.yarn}"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["42DEE32BEAF4F9DB"]
@@ -1569,11 +1549,7 @@
 		}
 		{
 			dependencies: ["3B3414C2273DDFA7"]
-			description: [
-				"The &bLoom&r can be used to turn 16 Wool Yarn into &aWool Cloth&r."
-				""
-				"To do this, place the Loom down and right click on it with Wool Yarn. Once it has enough, you can hold right click to begin working the yarn. When finished, right click to get your Wool Cloth!"
-			]
+			description: ["{gravitas.quest.caveman.desc.loom}"]
 			id: "5073C89A492B23C4"
 			tasks: [
 				{
@@ -1585,26 +1561,43 @@
 							value: "tfc:looms"
 						}
 					}
-					title: "Any #tfc:looms"
+					title: "{gravitas.quest.caveman.looms}"
 					type: "item"
 				}
 				{
 					id: "38E9C9A5D5F185E9"
-					item: "tfc:wool_cloth"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "tfc:silk_cloth"
+								}
+								{
+									Count: 1b
+									id: "tfc:wool_cloth"
+								}
+							]
+						}
+					}
+					title: "{gravitas.quest.caveman.cloth}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.quest.caveman.loom}"
-			x: 4.5d
-			y: 2.5d
+			x: 5.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["5073C89A492B23C4"]
 			hide_dependent_lines: true
 			id: "5A42BDE5AD15F1DF"
 			rewards: [{
-				id: "30EC8398537FAACC"
-				item: "minecraft:golden_apple"
+				count: 3
+				id: "3F31EF3CDEDF18D6"
+				item: "tfc:wood/lumber/oak"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1615,8 +1608,8 @@
 				item: "minecraft:white_bed"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 2.25d
+			x: 7.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["24AF409A22897A89"]
@@ -1648,23 +1641,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["045737499F7531D3"]
-			description: [""]
-			hide_dependent_lines: true
-			id: "3D008B1624FDB7FC"
-			shape: "rsquare"
-			size: 1.5d
-			subtitle: "{gravitas.quest.stage1.subt.treated}"
-			tasks: [{
-				count: 8L
-				id: "4CEB4037B93CDBE0"
-				item: "firmalife:treated_lumber"
-				type: "item"
-			}]
-			x: 5.5d
-			y: 4.5d
-		}
-		{
 			dependencies: ["526A9CB2DF6FF1E1"]
 			description: ["{gravitas.quest.stage1.desc.drink}"]
 			icon: "minecraft:water_bucket"
@@ -1683,7 +1659,7 @@
 				type: "checkmark"
 			}]
 			x: 3.0d
-			y: 0.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7C2AC560097A01BE"]
@@ -1752,22 +1728,24 @@
 				type: "checkmark"
 			}]
 			title: "{gravitas.quest.stage1.win}"
-			x: 9.0d
-			y: 1.0d
+			x: 3.75d
+			y: -5.0d
 		}
 		{
 			dependencies: ["791DA52F7A377FB2"]
 			id: "7A932904C1789E86"
-			rewards: [{
-				id: "7B3BD5FDF9164356"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
 			shape: "gear"
 			subtitle: "{gravitas.quest.stage1.subt.rack}"
 			tasks: [{
 				id: "6239A54378EDCF2C"
-				item: "tfc:wood/planks/oak_tool_rack"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:tool_racks"
+					}
+				}
+				title: "{gravitas.quest.stage1.racks}"
 				type: "item"
 			}]
 			x: -0.5d
@@ -1777,9 +1755,9 @@
 			dependencies: ["791DA52F7A377FB2"]
 			id: "7EDC1CC1DC256673"
 			rewards: [{
-				id: "75929A7C6D8F4BD5"
-				type: "xp"
-				xp: 100
+				id: "62861CFA3BD1DEA4"
+				item: "tfc:wood/lumber/oak"
+				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "{gravitas.quest.stage1.subt.bucket}"
@@ -1832,6 +1810,43 @@
 			}]
 			x: 5.0d
 			y: 0.5d
+		}
+		{
+			dependencies: ["045737499F7531D3"]
+			id: "0BB3BE8C3B79D2FB"
+			tasks: [{
+				id: "13D7D6618494FC5A"
+				item: "firmalife:treated_lumber"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "566AA6D8C2813A2D"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "500F917A7BF83B18"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -11.0d
+			y: -1.5d
 		}
 	]
 	title: "{gravitas.chapters.1.title}"

@@ -21,10 +21,22 @@
 			description: ["{gravitas.quest.create_copper.desc.copper_ingot}"]
 			id: "48C8D0CB8C53A8A4"
 			rewards: [{
-				id: "05E7FE9233117D7E"
-				type: "xp_levels"
-				xp_levels: 2
+				id: "0116C8E7DFD780BD"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				random_bonus: 1
+				type: "item"
 			}]
+			shape: "rsquare"
+			size: 1.25d
 			tasks: [{
 				id: "3183CF05DC3CA174"
 				item: {
@@ -48,9 +60,10 @@
 			description: ["{gravitas.quest.create_copper.desc.fluid_pipe}"]
 			id: "27C77CC41F85409A"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "31E0E1B29F114FEC"
 				item: "create:fluid_pipe"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -67,9 +80,10 @@
 			description: ["{gravitas.quest.create_copper.desc.fluid_valve}"]
 			id: "2BF7D2D871FB5F51"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "55E64C938CA07860"
 				item: "create:fluid_pipe"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -189,9 +203,9 @@
 			description: ["{gravitas.quest.create_copper.desc.blaze_cake}"]
 			id: "604D6431D206B274"
 			rewards: [{
-				id: "70F78F667CE14321"
-				type: "xp_levels"
-				xp_levels: 5
+				id: "44C58D1C9994238C"
+				item: "create:blaze_cake_base"
+				type: "item"
 			}]
 			tasks: [{
 				id: "4EBC44C6FA138AFF"
@@ -226,9 +240,10 @@
 			description: ["{gravitas.quest.create_copper.desc.rolling_mill}"]
 			id: "5F432D056516C7E8"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "672952EB84322BDA"
 				item: "createaddition:copper_wire"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -244,9 +259,10 @@
 			description: ["{gravitas.quest.create_copper.desc.empty_spool}"]
 			id: "787D0A5C25350A84"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "2745628E32EBEF81"
 				item: "createaddition:spool"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -267,7 +283,7 @@
 			description: ["{gravitas.quest.create_copper.desc.copper_spool}"]
 			id: "6ED05B4615C473EC"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "13B79FB6DFE6ACD3"
 				item: {
 					Count: 1
@@ -279,6 +295,7 @@
 					}
 					id: "tfc:metal/ingot/copper"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -295,9 +312,10 @@
 			description: ["{gravitas.quest.create_copper.desc.copper_wires}"]
 			id: "280D2DD0B985DB7B"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "747673429996E574"
 				item: "createaddition:electrum_spool"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [
@@ -353,6 +371,32 @@
 			title: "{gravitas.quest.create_copper.copper_wires}"
 			x: -3.0d
 			y: 1.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "1B642BE36739BA0E"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "3CF57C1308E8CEBE"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.0d
 		}
 	]
 	title: "{gravitas.chapters.13.title}"
