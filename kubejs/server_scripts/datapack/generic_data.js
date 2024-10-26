@@ -104,8 +104,6 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
 
     addTFCFuels('coal_coke', 'gtceu:coke_gem', 1100, 1415)
     addTFCFuels('coal_coke_block', 'gtceu:coke_block', 9900, 1415)
-    addTFCFuels('coal_coke_chipped', 'gtceu:chipped_coke_gem', 275, 1415)
-    addTFCFuels('coal_coke_flawed', 'gtceu:flawed_coke_gem', 550, 1415)
     addTFCFuels('coal_coke_flawless', 'gtceu:flawless_coke_gem', 2200, 1415)
     addTFCFuels('coal_coke_exquisite', 'gtceu:exquisite_coke_gem', 4400, 1415)
 
@@ -130,15 +128,15 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
     addTFCItemDamageResistances('create_diving_boots', 'create:diving_boots', 2, 2, 2)
     addTFCItemDamageResistances('create_copper_backtank', 'create:copper_backtank', 2, 2, 2)
 
-    addTFCItemDamageResistances('ie_faraday_head', 'immersiveengineering:armor_faraday_head', 5, 3, 5)
-    addTFCItemDamageResistances('ie_faraday_chest', 'immersiveengineering:armor_faraday_chest', 5, 3, 5)
-    addTFCItemDamageResistances('ie_faraday_legs', 'immersiveengineering:armor_faraday_legs', 5, 3, 5)
-    addTFCItemDamageResistances('ie_faraday_feet', 'immersiveengineering:armor_faraday_feet', 5, 3, 5)
+    addTFCItemDamageResistances('ie_faraday_helmet', 'immersiveengineering:armor_faraday_helmet', 5, 3, 5)
+    addTFCItemDamageResistances('ie_faraday_chestplate', 'immersiveengineering:armor_faraday_chestplate', 5, 3, 5)
+    addTFCItemDamageResistances('ie_faraday_leggings', 'immersiveengineering:armor_faraday_leggings', 5, 3, 5)
+    addTFCItemDamageResistances('ie_faraday_boots', 'immersiveengineering:armor_faraday_boots', 5, 3, 5)
 
-    addTFCItemDamageResistances('ie_steel_head', 'immersiveengineering:armor_steel_head', 7, 4, 6)
-    addTFCItemDamageResistances('ie_steel_chest', 'immersiveengineering:armor_steel_chest', 7, 4, 6)
-    addTFCItemDamageResistances('ie_steel_legs', 'immersiveengineering:armor_steel_legs', 7, 4, 6)
-    addTFCItemDamageResistances('ie_steel_feet', 'immersiveengineering:armor_steel_feet', 7, 4, 6)
+    addTFCItemDamageResistances('ie_steel_helmet', 'immersiveengineering:armor_steel_helmet', 7, 4, 6)
+    addTFCItemDamageResistances('ie_steel_chestplate', 'immersiveengineering:armor_steel_chestplate', 7, 4, 6)
+    addTFCItemDamageResistances('ie_steel_leggings', 'immersiveengineering:armor_steel_leggings', 7, 4, 6)
+    addTFCItemDamageResistances('ie_steel_boots', 'immersiveengineering:armor_steel_boots', 7, 4, 6)
 
     let addTFCItemHeatsItem = (id, item, heat, forge, weld) => {
         let json = JsonIO.toObject(
