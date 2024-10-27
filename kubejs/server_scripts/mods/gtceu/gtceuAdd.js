@@ -291,8 +291,8 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.rock_breaker(`rock/cobble/${type.stone}`)
             .notConsumable(`tfc:rock/cobble/${type.stone}`)
             .itemOutputs(`tfc:rock/cobble/${type.stone}`)
-            ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
-            ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+            .addDataString("fluidA", "minecraft:lava")
+            .addDataString("fluidB", "minecraft:water")
             .duration(16)
             .EUt(24)
             .addCondition(RockBreakerCondition.INSTANCE)
@@ -513,7 +513,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(2000)
 	
         event.recipes.gtceu.fermenter('yeast_starter_duplicate')
-            .itemInputs(Ingredient.of({
+            .itemInputs(InputItem.of({
                 "type": "tfc:not_rotten",
                 "ingredient": {
                   "tag": "firmalife:feeds_yeast"
