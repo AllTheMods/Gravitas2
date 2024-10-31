@@ -280,4 +280,8 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 //gcyr
 
   event.replaceInput({ id: "gcyr:shaped/space_chest"}, "gtceu:tungstensteel_fluid_cell", "gtceu:titanium_fluid_cell")
+
+  //SCGuns
+  event.replaceInput({ mod: "scguns"}, "minecraft:stone", "#tfc:rock/smooth")
+
 }

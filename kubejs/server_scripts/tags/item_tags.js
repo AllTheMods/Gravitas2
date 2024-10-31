@@ -333,4 +333,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   
   event.add("tfc:glassworking_potash", ["gtceu:saltpeter_dust"])
 
+  event.add("scguns:advanced_bullet_material", "gtceu:steel_ingot")
+ 
+  event.add("scguns:cryoniter_ingredient","#forge:dusts/saltpeter")
 }

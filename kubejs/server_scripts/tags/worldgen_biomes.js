@@ -55,9 +55,7 @@ const addStargateBiomes = (/** @type {TagEvent.Biome} */ event) => {
 
 const removeBiomesFromStructures = (/** @type {TagEvent.Biome} */ event) => {
   event.get("minecraft:has_structure/stronghold").remove("#is_overworld")
-  event.get("minecraft:has_structure/mineshaft").removeAll()
-  event.get("minecraft:has_structure/mineshaft_mesa").removeAll()
-  event.get("ad_astra:has_structure/oil_well_biomes").removeAll()
+
   event.get("repurposed_structures:has_structure/strongholds/nether").removeAll()
 }
 

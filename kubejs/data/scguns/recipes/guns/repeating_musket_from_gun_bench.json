@@ -1,0 +1,34 @@
+{
+  "type": "scguns:gun_bench",
+  "result": {
+    "item": "scguns:repeating_musket",
+    "count": 1
+  },
+  "ingredients": {
+
+    "gun_internal_1": {
+      "item": "minecraft:flint"
+    },
+    "gun_internal_2": {
+      "tag": "tfc:rock/smooth"
+    },
+    "gun_top_internal_1": {
+      "item": "scguns:rapid_firing_unit"
+    },
+    "gun_top_internal_2": {
+      "item": "scguns:gun_parts"
+    },
+    "gun_barrel_2": {
+      "item": "scguns:stone_gun_barrel"
+    },
+    "gun_barrel_1": {
+      "item": "scguns:stone_gun_barrel"
+    },
+    "gun_grip": {
+      "item": "scguns:gun_grip"
+    },
+    "gun_magazine": {
+      "item": "scguns:gun_magazine"
+    }
+  }
+}

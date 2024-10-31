@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "Q": {
+      "tag": "tfc:rock/smooth"
+    }
+  },
+  "pattern": [
+    "QQQ",
+    "   ",
+    "QQQ"
+  ],
+  "result": {
+    "item": "scguns:stone_gun_barrel"
+  }
+}

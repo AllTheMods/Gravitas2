@@ -454,6 +454,13 @@ event.recipes.gtceu.forming_press(`gregitas:fire_brick`)
 .duration(100)
 .EUt(LV)
 
+event.custom({
+  type: "create:compacting",
+  ingredients: [
+    { tag: "tfc:seeds" },
+  ],
+  results: [{ amount: 100,  fluid: 'createdieselgenerators:plant_oil' }]
+})
 
 event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
 
@@ -2633,4 +2640,53 @@ event.recipes.gtceu.mixer('raw_thorium')
       "heatRequirement": "heated",
       results: [{ item: "createdieselgenerators:asphalt_block", amount: 4 }]
     })
+
+    event.custom(
+      {
+          type: 'tfc:knapping',
+          knapping_type: 'tfc:rock',
+          outside_slot_required: false,
+          pattern: [
+              'XX XX',
+              'XX XX',
+              '     ',
+              'XX XX',
+              'XX XX'
+          ],
+          result: {
+              item: 'scguns:pebbles',
+              count: 4
+
+          },
+          ingredient: {
+              tag: 'tfc:any_knapping'
+          }
+      }
+  ).id('gregitas:knapping/pebbles')
+
+  event.recipes.kubejs.shaped("scguns:small_casing_mold" , ["W  ", "M  ","   "], {
+    W: "#forge:tools/wire_cutters",
+    M: "scguns:blank_mold"
+})
+
+event.recipes.kubejs.shaped("scguns:medium_casing_mold" , ["   ", "MW ","   "], {
+  W: "#forge:tools/wire_cutters",
+  M: "scguns:blank_mold"
+})
+event.recipes.kubejs.shaped("scguns:large_casing_mold" , ["   ", "M  ","W  "], {
+  W: "#forge:tools/wire_cutters",
+  M: "scguns:blank_mold"
+})
+event.recipes.kubejs.shaped("scguns:bullet_mold" , ["   ", "M  "," W "], {
+  W: "#forge:tools/wire_cutters",
+  M: "scguns:blank_mold"
+})
+event.recipes.kubejs.shaped("scguns:gun_parts_mold" , ["   ", " M ","W  "], {
+  W: "#forge:tools/wire_cutters",
+  M: "scguns:blank_mold"
+})
+event.recipes.kubejs.shaped("scguns:disc_mold" , ["W  ", " M ","   "], {
+  W: "#forge:tools/wire_cutters",
+  M: "scguns:blank_mold"
+})
 }

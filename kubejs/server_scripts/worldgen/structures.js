@@ -46,6 +46,8 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:carrots": "tfc:crop/carrot",
   "minecraft:wheat": "tfc:crop/wheat",
   "minecraft:potatoes": "tfc:crop/potato",
+  "minecraft:melon": "tfc:melon",
+  "minecraft:pumpkin": "tfc:pumpkin",
   // "minecraft:cobblestone_wall": "tfc:rock/cobble/granite_wall",
   // "minecraft:cobblestone_stairs": "tfc:rock/cobble/granite_stairs",
   // "minecraft:cobblestone_slab": "tfc:rock/cobble/granite_slab",
@@ -137,7 +139,7 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("immersiveengineering") ||
     event.id.startsWith("ae2") ||
     event.id.startsWith("iceandfire") ||
-    event.id.startsWith("scorched-guns") 
+    event.id.startsWith("scguns") 
   ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {
