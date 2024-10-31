@@ -284,7 +284,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:plates/aluminum", "#forge:plates/aluminium")
   event.add("forge:nuggets/aluminum", "#forge:nuggets/aluminium")
 
-  event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:chipped_coke_gem", "gtceu:flawed_coke_gem", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
+  event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
   event.add("tfc:blast_furnace_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
   
   event.add("forge:dusts/sulfur", "tfc:powder/sulfur")
