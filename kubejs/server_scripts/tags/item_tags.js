@@ -302,4 +302,24 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   //Thorium Reactors
   event.removeAllTagsFrom('thoriumreactors:fluorite')
+
+  // Scorched Guns
+  const weakCompostables = [
+    event.get("tfc:compost_greens_low"),
+    event.get("tfc:compost_browns_low")
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+
+  const normalCompostables = [
+    event.get("tfc:compost_greens"),
+    event.get("tfc:compost_browns")
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+
+  const strongCompostables = [
+    event.get("tfc:compost_greens_high"),
+    event.get("tfc:compost_browns_high")
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+
+  weakCompostables.forEach(c => event.add("scguns:weak_compost", c));
+  normalCompostables.forEach(c => event.add("scguns:normal_compost", c));
+  strongCompostables.forEach(c => event.add("scguns:strong_compost", c));
 }
