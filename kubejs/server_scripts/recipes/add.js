@@ -1459,8 +1459,7 @@ event.recipes.gtceu.assembler('thoriumreactors:thermal_controller')
 event.recipes.gtceu.assembler('thoriumreactors:turbine_glass')
   .itemInputs(
     'thoriumreactors:turbine_casing',
-    '2x immersiveengineering:insulating_glass',
-    '2x gtceu:reactorglass'
+    '2x immersiveengineering:insulating_glass'
   )
   .itemOutputs(
     '2x thoriumreactors:turbine_glass'
