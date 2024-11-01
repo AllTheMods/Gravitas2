@@ -355,4 +355,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   weakCompostables.forEach(c => event.add("scguns:weak_compost", c));
   normalCompostables.forEach(c => event.add("scguns:normal_compost", c));
   strongCompostables.forEach(c => event.add("scguns:strong_compost", c));
+
+  event.add("forge:dusts", "createdieselgenerators:wood_chip");
+  event.add("forge:dusts/wood", "createdieselgenerators:wood_chip");
 }
