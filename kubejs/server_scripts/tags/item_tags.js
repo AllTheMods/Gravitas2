@@ -358,4 +358,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("forge:dusts", "createdieselgenerators:wood_chip");
   event.add("forge:dusts/wood", "createdieselgenerators:wood_chip");
+
+  event.add("forge:netherrack", "beneath:cobblerack");
+  event.add("forge:dusts", "create:cinder_flour");
+  event.add("forge:dusts/netherrack", "create:cinder_flour");
 }
