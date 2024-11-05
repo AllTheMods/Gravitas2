@@ -365,4 +365,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:dusts", "create:cinder_flour");
   event.add("forge:dusts/netherrack", "create:cinder_flour");
 
+  event.add("gregitas_core:apple", "minecraft:apple");
+  event.add("gregitas_core:apple", "tfc:food/green_apple");
+  event.add("gregitas_core:apple", "tfc:food/red_apple");
 }

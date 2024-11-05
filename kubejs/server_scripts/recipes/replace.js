@@ -290,4 +290,6 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ input: "immersiveengineering:treated_wood_packaged" }, "immersiveengineering:treated_wood_packaged", "#forge:treated_wood");
   event.replaceInput({ input: "immersiveengineering:treated_wood_vertical" }, "immersiveengineering:treated_wood_vertical", "#forge:treated_wood");
   event.replaceInput({ input: "immersiveengineering:treated_wood_horizontal" }, "immersiveengineering:treated_wood_horizontal", "#forge:treated_wood");
+
+  event.replaceInput({ input: "minecraft:apple"} ,"minecraft:apple", "#gregitas_core:apple")
 }
