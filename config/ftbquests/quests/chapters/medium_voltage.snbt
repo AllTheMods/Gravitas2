@@ -812,7 +812,7 @@
 			optional: true
 			rewards: [{
 				id: "32792BF84A213FBF"
-				item: "minecraft:diorite"
+				item: "tfc:rock/raw/diorite"
 				type: "item"
 			}]
 			subtitle: "Passive aluminium"
