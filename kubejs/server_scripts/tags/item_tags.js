@@ -335,7 +335,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("scguns:advanced_bullet_material", "gtceu:steel_ingot")
  
-  event.add("#forge:dusts/saltpeter","scguns:niter_dust")
+  event.add("forge:dusts/saltpeter","scguns:niter_dust")
 
   const weakCompostables = [
     event.get("tfc:compost_greens_low"),
