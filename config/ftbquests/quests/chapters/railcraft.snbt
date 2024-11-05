@@ -292,7 +292,7 @@
 			rewards: [{
 				count: 32
 				id: "288486493DF95B3F"
-				item: "minecraft:gravel"
+				item: "tfc:rock/gravel/andesite"
 				type: "item"
 			}]
 			tasks: [{
