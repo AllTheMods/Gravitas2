@@ -32,8 +32,7 @@
     "forge:double_sheets/{material}",
     "forge:sheets/{material}",
     "forge:thorium",
-    "forge:rods/treated_wood",
-    "scguns:cryoniter_ingredient"
+    "forge:rods/treated_wood"
   ],
   "materials": [
     "aeternium",
