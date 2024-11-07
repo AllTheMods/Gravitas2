@@ -364,5 +364,12 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:netherrack", "beneath:cobblerack");
   event.add("forge:dusts", "create:cinder_flour");
   event.add("forge:dusts/netherrack", "create:cinder_flour");
-
+  
+  const tfcFermentables = [
+    event.get("tfc:foods/fruits"),
+    event.get("tfc:foods/grains"),
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+  tfcFermentables.forEach(c => event.add("forge:fermentable", c));
+  
+  event.add("forge:fermentable", "tfc:food/potato");
 }
