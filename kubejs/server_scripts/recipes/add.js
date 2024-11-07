@@ -2690,6 +2690,5 @@ event.recipes.kubejs.shaped("scguns:disc_mold" , ["W  ", " M ","   "], {
   M: "scguns:blank_mold"
 })
 
-  event.replaceInput({ input: "minecraft:netherrack" }, "minecraft:netherrack", "#forge:netherrack");
-  event.replaceInput({ input: "create:cinder_flour" }, "create:cinder_flour", "#forge:dusts/netherrack");
+
 }
