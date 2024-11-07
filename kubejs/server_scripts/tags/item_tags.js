@@ -375,4 +375,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:fermentable", "tfc:food/potato")
 
 
+  event.add("gregitas_core:apple", "minecraft:apple");
+  event.add("gregitas_core:apple", "tfc:food/green_apple");
+  event.add("gregitas_core:apple", "tfc:food/red_apple");
 }
