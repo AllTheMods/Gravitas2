@@ -146,6 +146,9 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
     )
   })
 
+  event.replaceInput({ input: "minecraft:melon_slice" }, "minecraft:melon_slice", "tfc:food/melon_slice");
+  event.replaceOutput({ output: "minecraft:melon_seeds" }, "minecraft:melon_seeds", "tfc:seeds/melon");
+
   //Railways (Steam n Rails)
   event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_[^_]+$/}, r => {
     let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
