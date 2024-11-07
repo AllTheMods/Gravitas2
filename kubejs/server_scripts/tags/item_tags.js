@@ -340,29 +340,29 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   const weakCompostables = [
     event.get("tfc:compost_greens_low"),
     event.get("tfc:compost_browns_low")
-  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds())
 
   const normalCompostables = [
     event.get("tfc:compost_greens"),
     event.get("tfc:compost_browns")
-  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds())
 
   const strongCompostables = [
     event.get("tfc:compost_greens_high"),
     event.get("tfc:compost_browns_high")
-  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds())
 
-  weakCompostables.forEach(c => event.add("scguns:weak_compost", c));
-  normalCompostables.forEach(c => event.add("scguns:normal_compost", c));
-  strongCompostables.forEach(c => event.add("scguns:strong_compost", c));
+  weakCompostables.forEach(c => event.add("scguns:weak_compost", c))
+  normalCompostables.forEach(c => event.add("scguns:normal_compost", c))
+  strongCompostables.forEach(c => event.add("scguns:strong_compost", c))
 
-  event.add("forge:dusts", "createdieselgenerators:wood_chip");
-  event.add("forge:dusts/wood", "createdieselgenerators:wood_chip");
+  event.add("forge:dusts", "createdieselgenerators:wood_chip")
+  event.add("forge:dusts/wood", "createdieselgenerators:wood_chip")
 
-  event.add("forge:dusts/nether_quartz", "createmoredrillheads:quartz_dusts");
-  event.add("forge:dusts/quartz", "gtceu:quartz_sand_dust");
-  event.add("forge:netherrack", "beneath:cobblerack");
-  event.add("forge:dusts", "create:cinder_flour");
-  event.add("forge:dusts/netherrack", "create:cinder_flour");
+  event.add("forge:dusts/nether_quartz", "createmoredrillheads:quartz_dusts")
+  event.add("forge:dusts/quartz", "gtceu:quartz_sand_dust")
+  event.add("forge:netherrack", "beneath:cobblerack")
+  event.add("forge:dusts", "create:cinder_flour")
+  event.add("forge:dusts/netherrack", "create:cinder_flour")
 
 }
