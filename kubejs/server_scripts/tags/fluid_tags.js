@@ -62,4 +62,8 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
 
     event.add("forge:water", "tfc:river_water")
     event.add('gregitas:water', "minecraft:water")
+
+    event.add('forge:crude_oil', 'gtceu:oil_medium')
+    event.add('forge:diesel', 'gtceu:diesel')
+    event.add('forge:bio_diesel', 'gtceu:bio_diesel')
 }
