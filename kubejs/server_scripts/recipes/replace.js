@@ -146,6 +146,9 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
     )
   })
 
+  event.replaceInput({ input: "minecraft:melon_slice" }, "minecraft:melon_slice", "tfc:food/melon_slice");
+  event.replaceOutput({ output: "minecraft:melon_seeds" }, "minecraft:melon_seeds", "tfc:seeds/melon");
+
   //Railways (Steam n Rails)
   event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_[^_]+$/}, r => {
     let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
@@ -285,11 +288,17 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ mod: "scguns"}, "minecraft:stone", "#tfc:rock/smooth")
 
   // treated wood
+
   event.replaceInput({ input: "firmalife:treated_wood" }, "firmalife:treated_wood", "#forge:treated_wood")
   event.replaceInput({ input: "gtceu:treated_wood_planks" }, "gtceu:treated_wood_planks", "#forge:treated_wood")
   event.replaceInput({ input: "immersiveengineering:treated_wood_packaged" }, "immersiveengineering:treated_wood_packaged", "#forge:treated_wood")
   event.replaceInput({ input: "immersiveengineering:treated_wood_vertical" }, "immersiveengineering:treated_wood_vertical", "#forge:treated_wood")
   event.replaceInput({ input: "immersiveengineering:treated_wood_horizontal" }, "immersiveengineering:treated_wood_horizontal", "#forge:treated_wood")
+  
+  //netherrack/cinder flour
   event.replaceInput({ input: "minecraft:netherrack" }, "minecraft:netherrack", "#forge:netherrack")
   event.replaceInput({ input: "create:cinder_flour" }, "create:cinder_flour", "#forge:dusts/netherrack")
+  
+  //apples
+  event.replaceInput({ input: "minecraft:apple"} ,"minecraft:apple", "#gregitas_core:apple")
 }
