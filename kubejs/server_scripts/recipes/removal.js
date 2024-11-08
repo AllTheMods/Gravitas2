@@ -526,4 +526,5 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: 'gtceu:quantum_processor_mainframe'})
   
   event.remove({id: "scguns:pebbles_from_gravel"})
+  event.remove({id: "minecraft:bamboo_planks"})
 }
