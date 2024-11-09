@@ -378,4 +378,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("gregitas_core:apple", "minecraft:apple");
   event.add("gregitas_core:apple", "tfc:food/green_apple");
   event.add("gregitas_core:apple", "tfc:food/red_apple");
+
+  event.add("forge:coal_coke", "gtceu:coke_dust");
+  event.add("forge:coal_coke", "gtceu:coke_gem");
+  event.add("forge:storage_blocks/coal_coke", "gtceu:coke_block");
 }
