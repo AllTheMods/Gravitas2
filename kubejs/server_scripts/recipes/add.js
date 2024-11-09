@@ -1693,6 +1693,13 @@ event.recipes.gtceu.mixer('raw_thorium')
                 .EUt(LV)
     })
 
+    event.recipes.gtceu.macerator(`netherpebble`)
+      .itemInputs("beneath:nether_pebble")
+      .itemOutputs("gtceu:small_netherrack_dust")
+      .chancedOutput("minecraft:gold_nugget", 125, 1.2)
+      .duration(37.5)
+      .EUt(ULV)
+
     event.recipes.gtceu.electric_blast_furnace('steel')
     .itemInputs(
               '#forge:ingots/wrought_iron'
