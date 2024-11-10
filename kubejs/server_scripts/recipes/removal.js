@@ -527,4 +527,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   
   event.remove({id: "scguns:pebbles_from_gravel"})
   event.remove({id: "minecraft:bamboo_planks"})
+
+  event.remove({ id: "gtceu:shaped/charcoal_pile_igniter"});
+  event.remove({ id: "scguns:treated_iron/treated_iron_bucket"});
 }
