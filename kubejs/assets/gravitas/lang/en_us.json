@@ -1235,5 +1235,7 @@
 	"death.attack.frostbite": "%s died of frostbite",
 	"death.attack.gtceu.electric": "%s was electrocuted",
 	"material.gtceu.red_steel": "Red Steel?",
-	"material.gtceu.blue_steel": "Blue Steel?"
+	"material.gtceu.blue_steel": "Blue Steel?",
+
+	"gregitas_core.freeze_dried": "Freeze Dried"
 }
