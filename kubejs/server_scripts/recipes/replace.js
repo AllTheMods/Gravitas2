@@ -301,4 +301,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   
   //apples
   event.replaceInput({ input: "minecraft:apple"} ,"minecraft:apple", "#gregitas_core:apple")
+
+  //gtceu
+  event.replaceInput({ mod: "gtceu"}, "minecraft:chest", "#forge:chests/wooden") //fix ULV buses requiring vanilla chest
 }
