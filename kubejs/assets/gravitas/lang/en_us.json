@@ -899,6 +899,8 @@
 	"gravitas.quest.railcraft.crusher": "Crusher",
 	"gravitas.quest.railcraft.manual_roller": "Manual Rolling Machine",
 	"gravitas.quest.railcraft.powered_roller": "Powered Rolling Machine",
+	"gravitas.quest.railcraft.iron_tank":"Iron Tanks", 
+	"gravitas.quest.railcraft.steel_tank":"Steel Tanks",
 
 	"gravitas.quest.railcraft.desc.rail": "RailCraft is the perfect mod for transportation or just those who hyperfocus on trains! A great place to start is with the normal Minecraft rails.",
 	"gravitas.quest.railcraft.desc.types_tracks": "In RailCraft normal rails won't suffice for everything. You're gonna need new better rails!",
@@ -951,7 +953,8 @@
 	"gravitas.quest.railcraft.desc.crusher": "The Crusher is just as the name suggests. It can crush blocks to get the crafting materials, like bricks from a brick staircase, or dusts from ingots. It needs power to work though! To build one it's 3x2x2 of Crusher blocks.",
 	"gravitas.quest.railcraft.desc.manual_roller": "The Manual Rolling Machine will be your little crafting machine for many things material for railcraft! When you put the recipe in and it can make more than 1 it will autocraft while you're still looking at it. When you leave the Rolling Machine while crafting it will abort the crafting and put it in your inventory. You must manually build the last recipe!",
 	"gravitas.quest.railcraft.desc.powered_roller": "The Powered Rolling Machine is much better version of the Manual Rolling Machine. You don't have to keep looking in the machine to craft things and it will automatically craft all of them. The only problem is it needs power!",
-
+	"gravitas.quest.railcraft.desc.iron_tank":"While GregTech drums and Create copper tanks provide compact storage, they fall short when it comes to scalability and capacity. Railcraft Iron Tanks, on the other hand, take fluid storage to an industrial level.\n\nA 3x4x3 can store 576 buckets of fluid, which should be plenty for all of your early game needs.",
+	"gravitas.quest.railcraft.desc.steel_tank": "The Steel Tank is identical to the Iron Tank, but it can hold twice as much.",
 
 	"gravitas.shop.requirement.walk.1": "Walked 20,000 blocks",
 	"gravitas.shop.requirement.ride_horse.1": "Traveled by Horse for 40,000 blocks",

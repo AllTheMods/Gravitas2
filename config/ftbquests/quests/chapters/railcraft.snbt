@@ -303,7 +303,7 @@
 			}]
 			title: "{gravitas.quest.railcraft.crusher}"
 			x: 7.0d
-			y: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
@@ -323,7 +323,7 @@
 			}]
 			title: "{gravitas.quest.railcraft.water_tank}"
 			x: 7.0d
-			y: 1.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["302C27B3E947EC2F"]
@@ -1276,6 +1276,83 @@
 			}]
 			x: 0.0d
 			y: 1.0d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["{gravitas.quest.railcraft.desc.iron_tank}"]
+			id: "7A3376F81D32B5D3"
+			rewards: [{
+				count: 8
+				id: "2F2E6FE2EFD6D1FA"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "0F15DDD5F1AAE2B4"
+					item: "railcraft:white_iron_tank_valve"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "5DEE182FA00AF451"
+					item: { Count: 30, id: "railcraft:white_iron_tank_wall" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "46F1EB9DBCA02019"
+					item: { Count: 8, id: "railcraft:white_iron_tank_gauge" }
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.railcraft.iron_tank}"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7A3376F81D32B5D3"]
+			description: ["{gravitas.quest.railcraft.desc.steel_tank}"]
+			id: "7F14661940C61C57"
+			rewards: [{
+				count: 8
+				id: "03A37D694E45BE74"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "61B3F330C162B5D7"
+					item: "railcraft:white_steel_tank_valve"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "71250FC3CA8BE153"
+					item: { Count: 24, id: "railcraft:white_steel_tank_wall" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "21361B24502526AC"
+					item: { Count: 8, id: "railcraft:white_steel_tank_gauge" }
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.railcraft.steel_tank}"
+			x: 8.5d
+			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.28.title}"
