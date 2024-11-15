@@ -196,6 +196,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 
 
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
+  event.replaceOutput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
   event.replaceInput({ mod: "iceandfire" }, "minecraft:stone_bricks", "#forge:stone_bricks")
 
