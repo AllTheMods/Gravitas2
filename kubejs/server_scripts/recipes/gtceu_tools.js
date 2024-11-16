@@ -43,7 +43,7 @@ const gtceuToolsTFC = [
     id: 'aluminium',
     fluid: 'gtceu:aluminium',
     tier: 3,
-    double: 'gregitas:double_aluminium_ingot'
+    double: 'tfc_ie_addon:metal/double_ingot/aluminum'
   },
   {
     id: 'titanium',
