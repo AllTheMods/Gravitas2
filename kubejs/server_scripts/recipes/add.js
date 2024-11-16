@@ -281,6 +281,19 @@ const tfcSaplings = [
   "white_cedar",
   "willow"
 ]
+
+const tfcFruitSaplings = [
+  "cherry",
+  "green_apple",
+  "lemon",
+  "olive",
+  "orange",
+  "peach",
+  "plum",
+  "red_apple",
+  "banana"
+];
+
 const TFCGrains = [
  "oat",
  "barley",
@@ -736,6 +749,55 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
               .itemOutputs("minecraft:enchanting_table")
               .duration(2500)
               .EUt(HV)
+
+  event.recipes.gtceu
+    .greenhouse(`gregitas:menril`)
+    .circuit(1)
+    .notConsumable(`integrateddynamics:menril_sapling`)
+    .inputFluids(Fluid.of("minecraft:water", 1000))
+    .itemOutputs(`64x integrateddynamics:menril_log`, `4x integrateddynamics:menril_sapling`, "8x integrateddynamics:menril_berries")
+    .duration(640)
+    .EUt(MV)
+
+  event.recipes.gtceu
+    .greenhouse(`gregitas:menril_boosted`)
+    .circuit(2)
+    .notConsumable(`integrateddynamics:menril_sapling`)
+    .itemInputs("4x gtceu:fertilizer")
+    .inputFluids(Fluid.of("minecraft:water", 1000))
+    .itemOutputs(`64x integrateddynamics:menril_log`, `64x integrateddynamics:menril_log`, `8x integrateddynamics:menril_sapling`, "16x integrateddynamics:menril_berries")
+    .duration(640)
+    .EUt(MV)
+
+  tfcFruitSaplings.forEach((sapling) => {
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${sapling}`)
+      .circuit(1)
+      .notConsumable(`tfc:plant/${sapling}_sapling`)
+      .inputFluids(Fluid.of("minecraft:water", 1000))
+      .itemOutputs(
+        `32x tfc:food/${sapling}`, 
+        `32x minecraft:stick`, 
+        `4x tfc:plant/${sapling}_sapling`,
+      )
+      .duration(640)
+      .EUt(MV)
+
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${sapling}_boosted`)
+      .circuit(2)
+      .notConsumable(`tfc:plant/${sapling}_sapling`)
+      .itemInputs("4x gtceu:fertilizer")
+      .inputFluids(Fluid.of("minecraft:water", 1000))
+      .itemOutputs(
+        `32x tfc:food/${sapling}`, 
+        `32x tfc:food/${sapling}`, 
+        `64x minecraft:stick`, 
+        `8x tfc:plant/${sapling}_sapling`,
+      )
+      .duration(640)
+      .EUt(MV)
+  });
 
   tfcSaplings.forEach((sapling) => {
     shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
