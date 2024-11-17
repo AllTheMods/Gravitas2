@@ -86,6 +86,7 @@ let registerMachines = (/** @type {Registry.Machine} */ event) => {
                 .or(Predicates.blocks("tfc:wood/sapling/sycamore"))
                 .or(Predicates.blocks("tfc:wood/sapling/white_cedar"))
                 .or(Predicates.blocks("tfc:wood/sapling/willow"))
+                .or(Predicates.air())
             )
             .where("G", Predicates.blocks("ae2:quartz_glass"))
             .build())
