@@ -76,6 +76,7 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
         "createdieselgenerators:plant_oil",
         "createaddition:seed_oil",
         "gtceu:seed_oil",
+        "tfc:olive_oil"
     ];
 
     plantTags.forEach(tag => {
