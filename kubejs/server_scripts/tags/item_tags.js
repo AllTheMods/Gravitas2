@@ -382,4 +382,29 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:coal_coke", "gtceu:coke_dust");
   event.add("forge:coal_coke", "gtceu:coke_gem");
   event.add("forge:storage_blocks/coal_coke", "gtceu:coke_block");
+
+  const tfcCoral = [
+    "tube",
+    "tube_dead",
+    "tube_dead_coral_fan",
+    "tube_coral_fan",
+    "brain_dead_coral",
+    "brain_coral",
+    "bubble_dead_coral",
+    "bubble_coral",
+    "bubble_dead_coral_fan",
+    "bubble_coral_fan",
+    "fire_dead_coral",
+    "fire_coral",
+    "fire_dead_coral_fan",
+    "fire_coral_fan",
+    "horn_dead_coral",
+    "horn_coral",
+    "horn_dead_coral_fan",
+    "horn_coral_fan",
+  ];
+  
+  tfcCoral.forEach(coral => {
+    event.add("create:upgrade_aquatic/coral", `tfc:coral/${coral}`);
+  });
 }
