@@ -287,17 +287,20 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
 
     // Rock breaker recipes
-    tfcCobbleToSand.forEach((type) => {
-        event.recipes.gtceu.rock_breaker(`rock/cobble/${type.stone}`)
-            .notConsumable(`tfc:rock/cobble/${type.stone}`)
-            .itemOutputs(`tfc:rock/cobble/${type.stone}`)
+    const tfcRockbreakerCobbles = tfcCobbleToSand
+        .map(t => t.stone)
+        .concat(["quartzite",]);
+        
+    tfcRockbreakerCobbles.forEach((type) => {
+        event.recipes.gtceu.rock_breaker(`rock/cobble/${type}`)
+            .notConsumable(`tfc:rock/cobble/${type}`)
+            .itemOutputs(`tfc:rock/cobble/${type}`)
             .addDataString("fluidA", "minecraft:lava")
             .addDataString("fluidB", "minecraft:water")
             .duration(16)
             .EUt(24)
             .addCondition(RockBreakerCondition.INSTANCE)
     })
-
 
     //Modification
     event.replaceInput({ mod: 'gtceu', }, 'minecraft:sand', '#forge:sand')
