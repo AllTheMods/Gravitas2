@@ -349,6 +349,9 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             "tfc:metal/tin":        "gtceu:tin",            
             "tfc:metal/silver":     "gtceu:silver",
             "gtceu:chromium": "gtceu:chromium",
+            "tfc_ie_addon:metal/uranium": "gtceu:uranium",
+            "tfc_ie_addon:metal/aluminum": "gtceu:aluminium",
+            "tfc_ie_addon:metal/lead": "gtceu:lead"
         }
         /// Mainly here just if someone wants to tweak later
         const TFCFluidEUMap = {
@@ -372,6 +375,23 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
             .EUt(LV)
     })
+
+    event.forEachRecipe( {input: `/^tfc_ie_addon:ore\/?(small|poor|normal|rich).*/`, type: "tfc:heating"}, r => {
+        let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
+        let fluidIngredient = unwrapValue(r.get("result_fluid"))
+
+        let fluidRemap = TFCFluidGTFluidMap[fluidIngredient.getId()];
+        if (fluidRemap == null) { return }
+        let orePieceId = orePiece.toString().replace("\"", "");
+        orePieceId = orePieceId.substring("tfc_ie_addon:ore/".length);
+        
+        event.recipes.gtceu.extractor(`extract_${orePieceId}`)
+            .itemInputs(orePiece)
+            .outputFluids(Fluid.of(fluidRemap,fluidIngredient.getAmount()))
+            .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
+            .EUt(LV)
+    })
+
     event.forEachRecipe( {input: `/^firmalife:ore\/?(small|poor|normal|rich).*/`, type: "tfc:heating"}, r => {
             let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
             let fluidIngredient = unwrapValue(r.get("result_fluid"))
@@ -500,7 +520,20 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .outputFluids(Fluid.of('gtceu:seed_oil', 10))
             .EUt(LV)
             .duration(50)
-			
+
+    const plantballExtractables = [
+        "#tfc:foods", 
+        "#tfc:plants",
+    ];
+
+    plantballExtractables.forEach(tag => {
+        event.recipes.gtceu.compressor(`tfc_plantball_${tag.substring(5)}`)
+            .itemInputs(`8x ${tag}`)
+            .itemOutputs('1x gtceu:plant_ball')
+            .EUt(2)
+            .duration(300)
+    });
+
     //yeast starter
 	
         event.recipes.gtceu.fermenter('yeast_starter_create')
