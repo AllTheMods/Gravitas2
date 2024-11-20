@@ -2364,6 +2364,78 @@ event.recipes.gtceu.mixer('raw_thorium')
       .duration(40)
       .EUt(HV)
 
+    event.recipes.gtceu.compressor(`gregitas:conversion_rich_uraninite`)
+      .itemInputs(`3x tfc_ie_addon:ore/rich_uraninite`)
+      .itemOutputs(`gtceu:crushed_uraninite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_uraninite`)
+      .itemInputs(`4x tfc_ie_addon:ore/normal_uraninite`)
+      .itemOutputs(`gtceu:crushed_uraninite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_uraninite`)
+      .itemInputs(`6x tfc_ie_addon:ore/poor_uraninite`)
+      .itemOutputs(`gtceu:crushed_uraninite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_uraninite`)
+      .itemInputs(`9x tfc_ie_addon:ore/small_uraninite`)
+      .itemOutputs(`gtceu:crushed_uraninite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+      event.recipes.gtceu.compressor(`gregitas:conversion_rich_bauxite`)
+      .itemInputs(`3x tfc_ie_addon:ore/rich_bauxite`)
+      .itemOutputs(`gtceu:crushed_bauxite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_bauxite`)
+      .itemInputs(`4x tfc_ie_addon:ore/normal_bauxite`)
+      .itemOutputs(`gtceu:crushed_bauxite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_bauxite`)
+      .itemInputs(`6x tfc_ie_addon:ore/poor_bauxite`)
+      .itemOutputs(`gtceu:crushed_bauxite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_bauxite`)
+      .itemInputs(`9x tfc_ie_addon:ore/small_bauxite`)
+      .itemOutputs(`gtceu:crushed_bauxite_ore`)
+      .duration(40)
+      .EUt(HV)
+
+      event.recipes.gtceu.compressor(`gregitas:conversion_rich_galena`)
+      .itemInputs(`3x firmalife:ore/rich_galena`)
+      .itemOutputs(`gtceu:crushed_galena_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_normal_galena`)
+      .itemInputs(`4x firmalife:ore/normal_galena`)
+      .itemOutputs(`gtceu:crushed_galena_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_poor_galena`)
+      .itemInputs(`6x firmalife:ore/poor_galena`)
+      .itemOutputs(`gtceu:crushed_galena_ore`)
+      .duration(40)
+      .EUt(HV)
+
+    event.recipes.gtceu.compressor(`gregitas:conversion_small_galena`)
+      .itemInputs(`9x firmalife:ore/small_galena`)
+      .itemOutputs(`gtceu:crushed_galena_ore`)
+      .duration(40)
+      .EUt(HV)
+
     event.recipes.gtceu.compressor(`gregitas:conversion_rich_limonite`)
       .itemInputs(`3x tfc:ore/rich_limonite`)
       .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
@@ -2758,6 +2830,4 @@ event.recipes.kubejs.shaped("scguns:disc_mold" , ["W  ", " M ","   "], {
   W: "#forge:tools/wire_cutters",
   M: "scguns:blank_mold"
 })
-
-
 }
