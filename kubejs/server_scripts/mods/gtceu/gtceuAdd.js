@@ -500,7 +500,20 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .outputFluids(Fluid.of('gtceu:seed_oil', 10))
             .EUt(LV)
             .duration(50)
-			
+
+    const plantballExtractables = [
+        "#tfc:foods", 
+        "#tfc:plants",
+    ];
+
+    plantballExtractables.forEach(tag => {
+        event.recipes.gtceu.compressor(`tfc_plantball_${tag.substring(5)}`)
+            .itemInputs(`8x ${tag}`)
+            .itemOutputs('1x gtceu:plant_ball')
+            .EUt(2)
+            .duration(300)
+    });
+
     //yeast starter
 	
         event.recipes.gtceu.fermenter('yeast_starter_create')
