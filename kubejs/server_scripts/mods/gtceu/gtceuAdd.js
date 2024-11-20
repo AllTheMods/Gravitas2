@@ -349,6 +349,9 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             "tfc:metal/tin":        "gtceu:tin",            
             "tfc:metal/silver":     "gtceu:silver",
             "gtceu:chromium": "gtceu:chromium",
+            "tfc_ie_addon:metal/uranium": "gtceu:uranium",
+            "tfc_ie_addon:metal/aluminum": "gtceu:aluminium",
+            "tfc_ie_addon:metal/lead": "gtceu:lead"
         }
         /// Mainly here just if someone wants to tweak later
         const TFCFluidEUMap = {
@@ -372,6 +375,23 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
             .EUt(LV)
     })
+
+    event.forEachRecipe( {input: `/^tfc_ie_addon:ore\/?(small|poor|normal|rich).*/`, type: "tfc:heating"}, r => {
+        let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
+        let fluidIngredient = unwrapValue(r.get("result_fluid"))
+
+        let fluidRemap = TFCFluidGTFluidMap[fluidIngredient.getId()];
+        if (fluidRemap == null) { return }
+        let orePieceId = orePiece.toString().replace("\"", "");
+        orePieceId = orePieceId.substring("tfc_ie_addon:ore/".length);
+        
+        event.recipes.gtceu.extractor(`extract_${orePieceId}`)
+            .itemInputs(orePiece)
+            .outputFluids(Fluid.of(fluidRemap,fluidIngredient.getAmount()))
+            .duration(TFCFluidEUMap[fluidIngredient.getAmount()])
+            .EUt(LV)
+    })
+
     event.forEachRecipe( {input: `/^firmalife:ore\/?(small|poor|normal|rich).*/`, type: "tfc:heating"}, r => {
             let orePiece = unwrapValue(r.get("ingredient")).get("ingredient").get("item")
             let fluidIngredient = unwrapValue(r.get("result_fluid"))
