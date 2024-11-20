@@ -405,7 +405,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   //water source do not give recipe
   
   event.remove({ id: 'thoriumreactors:thorium_crafting/water_source_block'})
-  
+
   //jumbo furnace
 
   event.remove({ type: "jumbofurnace:jumbo_furnace" })
@@ -515,6 +515,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'thoriumreactors:electrolysing/potassium'})
   event.remove({ id: 'thoriumreactors:concentrating/yellow_cake'})
   event.remove({ id: 'thoriumreactors:crystallizing/enriched_uranium_pellet'})
+  event.remove({ id: 'thoriumreactors:titanium_block_craft_from_ingot'})
 
   //wireless chargers
 
