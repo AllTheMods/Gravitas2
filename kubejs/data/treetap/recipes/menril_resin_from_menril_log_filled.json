@@ -1,0 +1,23 @@
+{
+  "type": "treetap:tap_extract",
+  "log": {
+    "item": "integrateddynamics:menril_log_filled"
+  },
+  "processing_time": 7200,
+  "metal_result": {
+    "item": "integrateddynamics:bucket_menril_resin"
+  },
+  "wooden_result": {
+    "item": "tfc:wooden_bucket",
+    "nbt": "{fluid: {FluidName: \"integrateddynamics:bucket_menril_resin\", Amount: 1000}}"
+  },
+  "life_cycle": [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0],
+  "collect_bucket": true,
+  "fluid_color": "#57B3D1",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "integrateddynamics"
+    }
+  ]
+}
