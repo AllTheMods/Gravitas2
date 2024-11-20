@@ -2830,4 +2830,12 @@ event.recipes.kubejs.shaped("scguns:disc_mold" , ["W  ", " M ","   "], {
   W: "#forge:tools/wire_cutters",
   M: "scguns:blank_mold"
 })
+
+
+  event.recipes.gtceu.compressor(`gregitas:netherite_block`)
+    .itemInputs(`9x minecraft:netherite_ingot`)
+    .itemOutputs(`minecraft:netherite_block`)
+    .duration(300)
+    .EUt(2)
+  
 }
