@@ -15,14 +15,16 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
         "gregitas:maple_syrup",
         "gregitas:raw_resin",
         "gtceu:creosote",
-        "gtceu:rubber"
+        "gtceu:rubber",
+        "integrateddynamics:menril_resin"
     ])
 
     event.add("tfc:usable_in_barrel", [
         "gregitas:raw_syrup",
         "gregitas:maple_syrup",
         "gregitas:raw_resin",
-        "gtceu:creosote"
+        "gtceu:creosote",
+        "integrateddynamics:menril_resin"
     ])
 
     event.add("tfc:usable_in_pot", [
