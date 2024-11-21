@@ -156,7 +156,8 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
     addTFCItemHeatsItem('andesite_alloy', 'create:andesite_alloy', 4.762, 252, 336)
     addTFCItemHeatsItem('compressed_coke_clay', 'gtceu:compressed_coke_clay', 1.0, 1.0, 1.0)
     addTFCItemHeatsItem('igneous_alloy_dust', 'gregitas_core:igneous_alloy_dust', 4.762, 4.762, 4.762)
-
+    addTFCItemHeatsItem('pebbles', 'scguns:pebbles', 1.0, 1.0, 1.0)
+    
     let addTFCKnappingTypes = (id, tag, count, sound, consume_after, disabled_texture, particles, icon_item) => {
         let json = JsonIO.toObject(
             {
