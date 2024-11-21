@@ -57,6 +57,8 @@ const removeBiomesFromStructures = (/** @type {TagEvent.Biome} */ event) => {
   event.get("minecraft:has_structure/stronghold").remove("#is_overworld")
 
   event.get("repurposed_structures:has_structure/strongholds/nether").removeAll()
+  event.get("alekiships:has_structure/unfinished_rowboat").removeAll()
+  event.get("alekiships:has_structure/unfinished_sloop").removeAll()
 }
 
 const addBiomesToStructures = (/** @type {TagEvent.Biome} */ event) => {
