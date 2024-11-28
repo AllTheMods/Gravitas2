@@ -2837,5 +2837,13 @@ event.recipes.kubejs.shaped("scguns:disc_mold" , ["W  ", " M ","   "], {
     .itemOutputs(`minecraft:netherite_block`)
     .duration(300)
     .EUt(2)
-  
+
+  event.recipes.gtceu.centrifuge("gregitas:crimson_resin")
+    .inputFluids(Fluid.of("gregitas:crimson_resin", 100))
+    .chancedOutput("gtceu:sulfur_dust",1500,1)
+    .chancedOutput("minecraft:redstone",375,1)
+    .chancedOutput("gtceu:coal_dust",375,1)
+    .chancedOutput("gtceu:gold_dust",42,1)
+    .duration(160)
+    .EUt(20)
 }
