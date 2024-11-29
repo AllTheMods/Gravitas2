@@ -88,6 +88,7 @@
 			}]
 			x: -2.5d
 			y: -2.0d
+			description: ["{gravitas.quest.iv.desc.tungsten}"]
 		}
 		{
 			id: "0A848E0B9F485B2C"
