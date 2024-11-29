@@ -11,7 +11,7 @@
 		{
 			id: "70C952B8FF3418F6"
 			size: 1.5d
-			subtitle: "Buckle up"
+			subtitle: "{gravitas.quest.hv.subtitle.advanced_integrated_circuit}"
 			tasks: [{
 				id: "12A2731FC755513E"
 				item: "gtceu:advanced_integrated_circuit"
@@ -27,7 +27,7 @@
 				"0AC6B223857CAE94"
 			]
 			id: "54EDFCD65E088296"
-			subtitle: "On the cheap"
+			subtitle: "{gravitas.quest.hv.subtitle.nand_chip}"
 			tasks: [{
 				id: "28B1CB0A8A7BDC67"
 				item: "gtceu:nand_chip"
@@ -348,7 +348,7 @@
 			y: -2.5d
 		}
 		{
-			description: ["If you cannot find electrotine, you can create it by mixing electrum and redstone in a mixer"]
+			description: ["{gravitas.quest.hv.desc.electrotine_dust}"]
 			id: "68526BA198AADD8E"
 			tasks: [{
 				id: "2A56E86FD7FAD5C3"
@@ -486,7 +486,7 @@
 						]
 					}
 				}
-				title: "Any HV Energy Converter"
+				title: "{gravitas.quest.hv.title.any_hv_converter}"
 				type: "item"
 			}]
 			x: -9.5d
@@ -554,20 +554,6 @@
 		}
 		{
 			id: "012366E4E4095FC4"
-			rewards: [{
-				id: "1ED49BD4715F5C22"
-				item: {
-					Count: 1
-					id: "gtceu:neutronium_wrench"
-					tag: {
-						Damage: 0
-						GT.Tool: {
-							Damage: 0
-						}
-					}
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "2BEFA1048918A566"
 				item: "gtceu:filter_casing"
@@ -590,10 +576,10 @@
 		}
 		{
 			dependencies: ["70C952B8FF3418F6"]
-			description: ["Time to upgrade that boiler perhaps?"]
+			description: ["{gravitas.quest.hv.desc.hv_steam_turbine}"]
 			id: "0115271C840CD387"
 			optional: true
-			subtitle: "So much steam"
+			subtitle: "{gravitas.quest.hv.subtitle.hv_steam_turbine}"
 			tasks: [{
 				id: "419FB15F3A540B74"
 				item: "gtceu:hv_steam_turbine"
@@ -646,9 +632,7 @@
 		}
 		{
 			description: [
-				"Electrolyze tantalite dust to acquire tantalum dust"
-				""
-				"Also comes as a byproduct of tantalite ore processing!"
+				"{gravitas.quest.hv.desc.tantalite}"
 			]
 			id: "173FF8D7B6C1569A"
 			tasks: [{
@@ -684,6 +668,21 @@
 			}]
 			x: -7.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["0115271C840CD387"]
+			id: "71DBBA598873B29C"
+			subtitle: "{gravitas.quest.hv.subtitle.watercover}"
+			tasks: [{
+				id: "2569235D3FE6B94C"
+				item: "gtceu:infinite_water_cover"
+				type: "item"
+			}]
+			description: [
+			    "{gravitas.quest.hv.desc.watercover}"
+			]
+			x: -10.5d
+			y: -2.5d
 		}
 	]
 	title: "{gravitas.chapters.18.title}"
