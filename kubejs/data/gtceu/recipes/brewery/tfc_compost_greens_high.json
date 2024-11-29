@@ -1,0 +1,67 @@
+{
+    "type": "gtceu:brewery",
+    "duration": 160,
+    "inputs": {
+        "item": [
+            {
+                "content": {
+                    "type": "gtceu:sized",
+                    "count": 1,
+                    "ingredient": {
+                        "tag": "tfc:compost_greens_high"
+                    }
+                },
+                "chance": 10000,
+                "maxChance": 10000,
+                "tierChanceBoost": 0
+            }
+        ],
+        "fluid": [
+            {
+                "content": {
+                    "amount": 100,
+                    "value": [
+                        {
+                            "tag": "forge:water"
+                        }
+                    ]
+                },
+                "chance": 10000,
+                "maxChance": 10000,
+                "tierChanceBoost": 0
+            }
+        ]
+    },
+    "outputs": {
+        "fluid": [
+            {
+                "content": {
+                    "amount": 100,
+                    "value": [
+                        {
+                            "fluid": "gtceu:biomass"
+                        }
+                    ]
+                },
+                "chance": 10000,
+                "maxChance": 10000,
+                "tierChanceBoost": 0
+            }
+        ]
+    },
+    "tickInputs": {
+        "eu": [
+            {
+                "content": 3,
+                "chance": 10000,
+                "maxChance": 10000,
+                "tierChanceBoost": 0
+            }
+        ]
+    },
+    "tickOutputs": {},
+    "inputChanceLogics": {},
+    "outputChanceLogics": {},
+    "tickInputChanceLogics": {},
+    "tickOutputChanceLogics": {}
+}
