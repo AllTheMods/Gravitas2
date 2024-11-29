@@ -644,7 +644,7 @@
 						items: [
 							{
 								Count: 1b
-								id: "gtceu:saltpeter_ore"
+								id: "gtceu:raw_saltpeter"
 							}
 							{
 								Count: 1b
