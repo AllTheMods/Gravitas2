@@ -799,6 +799,33 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
       .EUt(MV)
   });
 
+  const beneathSaplings = [
+    "crimson",
+    "warped"
+  ];
+
+  beneathSaplings.forEach(sapling => {
+    //Greenhouse
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${sapling}`)
+      .circuit(1)
+      .notConsumable(`beneath:wood/sapling/${sapling}`)
+      .inputFluids(Fluid.of("gtceu:nether_air", 250))
+      .itemOutputs(`64x beneath:wood/log/${sapling}`, `4x beneath:wood/sapling/${sapling}`)
+      .duration(640)
+      .EUt(480)
+
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${sapling}_boosted`)
+      .circuit(2)
+      .notConsumable(`beneath:wood/sapling/${sapling}`)
+      .itemInputs("4x gtceu:fertilizer")
+      .inputFluids(Fluid.of("gtceu:nether_air", 250))
+      .itemOutputs(`64x beneath:wood/log/${sapling}`, `64x beneath:wood/log/${sapling}`, `8x beneath:wood/sapling/${sapling}`)
+      .duration(640)
+      .EUt(480)
+  })
+
   tfcSaplings.forEach((sapling) => {
     shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
                P: `tfc:wood/planks/${sapling}`,
