@@ -1141,6 +1141,8 @@
     "gravitas.quest.hv.desc.hv_steam_turbine": "Time to upgrade that boiler perhaps?",
     "gravitas.quest.hv.desc.electrotine_dust": "If you cannot find electrotine, you can create it by mixing electrum and redstone in a mixer",
 
+    "gravitas.quest.iv.desc.tungsten": "Tungsten is primarily obtained by processing Scheelite, and Wolframite, though it can be found in the form of Tungstate Dust in the lairs of Lightning Dragons far underground.",
+
 	"gravitas.quest.id.hi": "Welcome To &bIntegrated Dynamics",
 	"gravitas.quest.id.taste": "A Taste of &bIntegrated Dynamics",
 	"gravitas.quest.id.network": "Our First Network!",
