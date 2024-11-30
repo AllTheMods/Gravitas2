@@ -359,6 +359,22 @@ const gtVacuumShit = [
   "hastelloy_c_276"
 ]
 
+const thermalDepositsMap = {
+  "tfcthermaldeposits:mineral/salt": "gtceu:salt_dust",
+  "tfcthermaldeposits:mineral/saltpeter": "gtceu:saltpeter_dust",
+  "tfcthermaldeposits:mineral/calcite": "gtceu:calcite_dust",
+  "tfcthermaldeposits:mineral/brimstone": "gtceu:sulfur_dust",
+  "tfcthermaldeposits:mineral/salmiak": "tfcthermaldeposits:mineral/powder/salmiak",
+  "tfcthermaldeposits:mineral/zabuyelite": "tfcthermaldeposits:mineral/powder/zabuyelite",
+  "tfcthermaldeposits:mineral/magnesite":"tfcthermaldeposits:mineral/powder/magnesite",
+  "tfcthermaldeposits:mineral/spherocobaltite": "tfcthermaldeposits:mineral/powder/spherocobaltite",
+  "tfcthermaldeposits:mineral/alabandite": "tfcthermaldeposits:mineral/powder/alabandite",
+  "tfcthermaldeposits:mineral/smithsonite": "tfcthermaldeposits:mineral/powder/smithsonite",
+  "tfcthermaldeposits:mineral/greigite": "tfcthermaldeposits:mineral/powder/greigite",
+  "tfcthermaldeposits:mineral/apatite": "tfcthermaldeposits:mineral/powder/apatite",
+  "tfcthermaldeposits:mineral/bastnasite": "tfcthermaldeposits:mineral/powder/bastnasite",
+};
+
 // ingot/plates/etc. to convert to GT equivalents
 const gtMetalReplaceMap = {
   "alltheores:brass_ingot": "gtceu:brass_ingot",
@@ -444,38 +460,41 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .notConsumable(`tfc:ceramic/${mold}_mold`)
     .duration(100)
     .EUt(LV)
-  })
-proMolds.forEach((mold) => {
-  event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
-  .itemInputs(`5x minecraft:clay_ball`)
-  .itemOutputs(`precisionprospecting:ceramic/unfired_${mold}_mold`)
-  .notConsumable(`precisionprospecting:ceramic/${mold}_mold`)
-  .duration(100)
-  .EUt(LV)
-})
-event.recipes.gtceu.forming_press(`gregitas:molds/heart`)
-.itemInputs(`5x minecraft:clay_ball`)
-.itemOutputs(`tfcchannelcasting:unfired_heart_mold`)
-.notConsumable(`tfcchannelcasting:heart_mold`)
-.duration(100)
-.EUt(LV)
+  });
 
-event.recipes.gtceu.forming_press(`gregitas:fire_brick`)
-.itemInputs(`tfc:fire_clay`)
-.itemOutputs(`tfc:ceramic/unfired_fire_brick`)
-.notConsumable(`tfc:ceramic/ingot_mold`)
-.duration(100)
-.EUt(LV)
+  proMolds.forEach((mold) => {
+    event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
+      .itemInputs(`5x minecraft:clay_ball`)
+      .itemOutputs(`precisionprospecting:ceramic/unfired_${mold}_mold`)
+      .notConsumable(`precisionprospecting:ceramic/${mold}_mold`)
+      .duration(100)
+      .EUt(LV)
+  });
 
-event.custom({
-  type: "create:compacting",
-  ingredients: [
-    { tag: "tfc:seeds" },
-  ],
-  results: [{ amount: 100,  fluid: 'createdieselgenerators:plant_oil' }]
-})
+  event.recipes.gtceu.forming_press(`gregitas:molds/heart`)
+    .itemInputs(`5x minecraft:clay_ball`)
+    .itemOutputs(`tfcchannelcasting:unfired_heart_mold`)
+    .notConsumable(`tfcchannelcasting:heart_mold`)
+    .duration(100)
+    .EUt(LV);
 
-event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
+  event.recipes.gtceu.forming_press(`gregitas:fire_brick`)
+    .itemInputs(`tfc:fire_clay`)
+    .itemOutputs(`tfc:ceramic/unfired_fire_brick`)
+    .notConsumable(`tfc:ceramic/ingot_mold`)
+    .duration(100)
+    .EUt(LV);
+
+  event.custom({
+    type: "create:compacting",
+    ingredients: [
+      { tag: "tfc:seeds" },
+    ],
+    results: [{ amount: 100,  fluid: 'createdieselgenerators:plant_oil' }]
+  });
+
+  event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"]);
+  event.recipes.create.pressing("gtceu:black_bronze_plate", ["#forge:ingots/black_bronze"]);
 
   colorMap.forEach((color) => {
     event.custom({
@@ -493,15 +512,15 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
         item: `chalk:${color}_chalk`
       },
       duration: 1200
-    }).id(`gregitas:barrel/${color}_chalk`)
-    event.recipes.gtceu.chemical_bath(`${color}_chalk`)
-    .itemInputs('chalk:white_chalk')
-    .inputFluids(Fluid.of(`tfc:${color}_dye`, 25))
-    .itemOutputs(Item.of(`chalk:${color}_chalk`))
-    .duration(500)
-    .EUt(LV)
+    }).id(`gregitas:barrel/${color}_chalk`);
 
-  })
+    event.recipes.gtceu.chemical_bath(`${color}_chalk`)
+      .itemInputs('chalk:white_chalk')
+      .inputFluids(Fluid.of(`tfc:${color}_dye`, 25))
+      .itemOutputs(Item.of(`chalk:${color}_chalk`))
+      .duration(500)
+      .EUt(LV);
+  });
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
   event.custom({
@@ -798,6 +817,33 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
       .duration(640)
       .EUt(MV)
   });
+
+  const beneathSaplings = [
+    "crimson",
+    "warped"
+  ];
+
+  beneathSaplings.forEach(sapling => {
+    //Greenhouse
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${sapling}`)
+      .circuit(1)
+      .notConsumable(`beneath:wood/sapling/${sapling}`)
+      .inputFluids(Fluid.of("gtceu:nether_air", 250))
+      .itemOutputs(`64x beneath:wood/log/${sapling}`, `4x beneath:wood/sapling/${sapling}`)
+      .duration(640)
+      .EUt(480)
+
+    event.recipes.gtceu
+      .greenhouse(`gregitas:${sapling}_boosted`)
+      .circuit(2)
+      .notConsumable(`beneath:wood/sapling/${sapling}`)
+      .itemInputs("4x gtceu:fertilizer")
+      .inputFluids(Fluid.of("gtceu:nether_air", 250))
+      .itemOutputs(`64x beneath:wood/log/${sapling}`, `64x beneath:wood/log/${sapling}`, `8x beneath:wood/sapling/${sapling}`)
+      .duration(640)
+      .EUt(480)
+  })
 
   tfcSaplings.forEach((sapling) => {
     shaped(`gregitas:${sapling}_hull_segment`, ["P P", "PLP", "SSS"], {
@@ -1651,7 +1697,7 @@ event.recipes.gtceu.mixer('raw_thorium')
   .duration(200)
   .EUt(HV)  
 
-//End of Thorium Reactors
+  //End of Thorium Reactors
 	
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
@@ -1705,55 +1751,75 @@ event.recipes.gtceu.mixer('raw_thorium')
     "topaz"
    ]
 
-   gemPowders.forEach(powder => {
+  gemPowders.forEach(powder => {
     event.recipes.gtceu.centrifuge("tfc_powder_to_dust/" + powder)
     .itemInputs([`4x tfc:powder/${powder}`])
     .itemOutputs([`gtceu:impure_${powder.replace("_lazuli", "")}_dust`])
     .EUt(ULV).duration(200)
    })
-   event.recipes.gtceu.alloy_smelter('brick')
-           .itemInputs(
-               '4x minecraft:clay_ball'
-           )
-           .notConsumable('gtceu:ingot_casting_mold')
-           .itemOutputs(
-               '4x minecraft:brick'
-           )
-           .duration(80)
-           .EUt(LV)
+  event.recipes.gtceu.alloy_smelter('brick')
+   .itemInputs('4x minecraft:clay_ball')
+   .notConsumable('gtceu:ingot_casting_mold')
+   .itemOutputs('4x minecraft:brick')
+   .duration(80)
+   .EUt(LV)
 
-    tfcStone.forEach(stone => {
-        event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
-               .itemInputs(
-                   `4x tfc:rock/loose/${stone}`
-               )
-               .notConsumable('gtceu:ingot_casting_mold')
-               .itemOutputs(
-                   `4x tfc:brick/${stone}`               )
-               .duration(80)
-               .EUt(LV)
-        event.recipes.gtceu.forge_hammer(`loose_${stone}`)
-                .itemInputs(`tfc:rock/raw/${stone}`)
-                .itemOutputs(`4x tfc:rock/loose/${stone}`)
-                .duration(60)
-                .EUt(LV)
-    })
-    tfcStone2.forEach(stone => {
-      event.recipes.gtceu.macerator(`${stone}_dust`)
-                .itemInputs(`tfc:rock/loose/${stone}`)
-                .itemOutputs(`gregitas_core:${stone}_dust`)
-                .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
-                .duration(60)
-                .EUt(LV)
-    })
-    vanStone.forEach(stone => {
-      event.recipes.gtceu.macerator(`${stone}_dust`)
-                .itemInputs(`tfc:rock/loose/${stone}`)
-                .itemOutputs(`gtceu:${stone}_dust`)
-                .chancedOutput(`gtceu:${stone}_dust`,1000,1)
-                .duration(60)
-                .EUt(LV)
-    })
+  tfcStone.forEach(stone => {
+    event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
+      .itemInputs(`4x tfc:rock/loose/${stone}`)
+      .notConsumable('gtceu:ingot_casting_mold')
+      .itemOutputs(
+      `4x tfc:brick/${stone}`               )
+      .duration(80)
+      .EUt(LV)
+
+    event.recipes.gtceu.forge_hammer(`loose_${stone}`)
+      .itemInputs(`tfc:rock/raw/${stone}`)
+      .itemOutputs(`4x tfc:rock/loose/${stone}`)
+      .duration(60)
+      .EUt(LV)
+  });
+
+  tfcStone2.forEach(stone => {
+    event.recipes.gtceu.macerator(`${stone}_dust`)
+      .itemInputs(`tfc:rock/loose/${stone}`)
+      .itemOutputs(`gregitas_core:${stone}_dust`)
+      .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
+      .duration(60)
+      .EUt(LV)
+  });
+
+  vanStone.forEach(stone => {
+    event.recipes.gtceu.macerator(`${stone}_dust`)
+      .itemInputs(`tfc:rock/loose/${stone}`)
+      .itemOutputs(`gtceu:${stone}_dust`)
+      .chancedOutput(`gtceu:${stone}_dust`,1000,1)
+      .duration(60)
+      .EUt(LV)
+  });
+
+
+  Object.keys(thermalDepositsMap).forEach(input => {
+    const output = thermalDepositsMap[input];
+
+    event.recipes.gtceu.macerator(input)
+      .itemInputs(input)
+      .itemOutputs(output)
+      .duration(400)
+      .EUt(2);
+
+    event.recipes.create.crushing(
+      [output],
+      input,
+      250
+    );
+
+    event.recipes.create.milling(
+      output,
+      input,
+      250
+    );
+  });
 
     event.recipes.gtceu.macerator(`netherpebble`)
       .itemInputs("beneath:nether_pebble")
@@ -2837,5 +2903,13 @@ event.recipes.kubejs.shaped("scguns:disc_mold" , ["W  ", " M ","   "], {
     .itemOutputs(`minecraft:netherite_block`)
     .duration(300)
     .EUt(2)
-  
+
+  event.recipes.gtceu.centrifuge("gregitas:crimson_resin")
+    .inputFluids(Fluid.of("gregitas:crimson_resin", 100))
+    .chancedOutput("gtceu:sulfur_dust",1500,1)
+    .chancedOutput("minecraft:redstone",375,1)
+    .chancedOutput("gtceu:coal_dust",375,1)
+    .chancedOutput("gtceu:gold_dust",42,1)
+    .duration(160)
+    .EUt(20)
 }

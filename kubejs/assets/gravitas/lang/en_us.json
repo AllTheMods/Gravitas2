@@ -1092,6 +1092,7 @@
 	"gravitas.quest.lv.title.wiremill": "Simple Wiremill",
 	"gravitas.quest.lv.title.oxy_line": "Free Oxygen for Everyone!",
 	"gravitas.quest.lv.title.maint": "Machine Maintenance",
+    "gravitas.quest.lv.title.aqueduct": "Unlimited Water",
 
 	"gravitas.quest.lv.desc.starter_1": "Upgrading your machines with basic circuits will grant access to new recipes and increase their speed.",
 	"gravitas.quest.lv.desc.starter_2": "You can run any lower tier recipe on a higher tier machine. This is called Overclocking and can be configured in the machines GUI.",
@@ -1126,7 +1127,21 @@
 	"gravitas.quest.lv.desc.maint": "You broke it all ready? Thats what the Maintenance Hatch is for I guess. Click tools into the hatch until the problem is fixed, or use duct-tape.",
 	"gravitas.quest.lv.desc.oxy_bucket": "This is sign TWO that you should probably make that passive oxygen line. There are many ways to obtain it, so i'll leave it to you and JEI.",
 	"gravitas.quest.lv.desc.ars_triox": "Put Cobaltite dust in with 3 buckets of oxygen to your EBF to get Arsenic Trioxide. You can process some of the byproducts for some of your O2 back.",
+    "gravitas.quest.lv.desc.aqueduct": "Aqueducts provide an unlimited source of water. By placing a line of aqueducts starting next to a source block, the Aqueducts will transport the water until it reaches the end of the Aqueduct.\n\nAdditionally, interacting with the Aqueduct while holding a bucket will fill the bucket with the water inside of the Aqueduct. Aqueducts also support transporting liquids other than just water. Lava, and salt water can be transported as well.",
 
+    "gravitas.quest.hv.title.any_hv_converter": "Any HV Energy Converter",
+
+    "gravitas.quest.hv.subtitle.watercover": "So Much Water",
+    "gravitas.quest.hv.subtitle.hv_steam_turbine": "So much steam",
+    "gravitas.quest.hv.subtitle.nand_chip": "On the cheap",
+    "gravitas.quest.hv.subtitle.advanced_integrated_circuit": "Buckle up",
+
+    "gravitas.quest.hv.desc.tantalite": "Electrolyze tantalite dust to acquire tantalum dust\n\nAlso comes as a byproduct of tantalite ore processing!",
+    "gravitas.quest.hv.desc.watercover": "Why pump fluid into a Steam Boiler when you can just slap one of these in, and have infinite water.",
+    "gravitas.quest.hv.desc.hv_steam_turbine": "Time to upgrade that boiler perhaps?",
+    "gravitas.quest.hv.desc.electrotine_dust": "If you cannot find electrotine, you can create it by mixing electrum and redstone in a mixer",
+
+    "gravitas.quest.iv.desc.tungsten": "Tungsten is primarily obtained by processing Scheelite, and Wolframite, though it can be found in the form of Tungstate Dust in the lairs of Lightning Dragons far underground.",
 
 	"gravitas.quest.id.hi": "Welcome To &bIntegrated Dynamics",
 	"gravitas.quest.id.taste": "A Taste of &bIntegrated Dynamics",
