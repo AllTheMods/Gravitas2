@@ -444,38 +444,41 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .notConsumable(`tfc:ceramic/${mold}_mold`)
     .duration(100)
     .EUt(LV)
-  })
-proMolds.forEach((mold) => {
-  event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
-  .itemInputs(`5x minecraft:clay_ball`)
-  .itemOutputs(`precisionprospecting:ceramic/unfired_${mold}_mold`)
-  .notConsumable(`precisionprospecting:ceramic/${mold}_mold`)
-  .duration(100)
-  .EUt(LV)
-})
-event.recipes.gtceu.forming_press(`gregitas:molds/heart`)
-.itemInputs(`5x minecraft:clay_ball`)
-.itemOutputs(`tfcchannelcasting:unfired_heart_mold`)
-.notConsumable(`tfcchannelcasting:heart_mold`)
-.duration(100)
-.EUt(LV)
+  });
 
-event.recipes.gtceu.forming_press(`gregitas:fire_brick`)
-.itemInputs(`tfc:fire_clay`)
-.itemOutputs(`tfc:ceramic/unfired_fire_brick`)
-.notConsumable(`tfc:ceramic/ingot_mold`)
-.duration(100)
-.EUt(LV)
+  proMolds.forEach((mold) => {
+    event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
+      .itemInputs(`5x minecraft:clay_ball`)
+      .itemOutputs(`precisionprospecting:ceramic/unfired_${mold}_mold`)
+      .notConsumable(`precisionprospecting:ceramic/${mold}_mold`)
+      .duration(100)
+      .EUt(LV)
+  });
 
-event.custom({
-  type: "create:compacting",
-  ingredients: [
-    { tag: "tfc:seeds" },
-  ],
-  results: [{ amount: 100,  fluid: 'createdieselgenerators:plant_oil' }]
-})
+  event.recipes.gtceu.forming_press(`gregitas:molds/heart`)
+    .itemInputs(`5x minecraft:clay_ball`)
+    .itemOutputs(`tfcchannelcasting:unfired_heart_mold`)
+    .notConsumable(`tfcchannelcasting:heart_mold`)
+    .duration(100)
+    .EUt(LV);
 
-event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
+  event.recipes.gtceu.forming_press(`gregitas:fire_brick`)
+    .itemInputs(`tfc:fire_clay`)
+    .itemOutputs(`tfc:ceramic/unfired_fire_brick`)
+    .notConsumable(`tfc:ceramic/ingot_mold`)
+    .duration(100)
+    .EUt(LV);
+
+  event.custom({
+    type: "create:compacting",
+    ingredients: [
+      { tag: "tfc:seeds" },
+    ],
+    results: [{ amount: 100,  fluid: 'createdieselgenerators:plant_oil' }]
+  });
+
+  event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"]);
+  event.recipes.create.pressing("gtceu:black_bronze_plate", ["#forge:ingots/black_bronze"]);
 
   colorMap.forEach((color) => {
     event.custom({
@@ -493,15 +496,15 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
         item: `chalk:${color}_chalk`
       },
       duration: 1200
-    }).id(`gregitas:barrel/${color}_chalk`)
-    event.recipes.gtceu.chemical_bath(`${color}_chalk`)
-    .itemInputs('chalk:white_chalk')
-    .inputFluids(Fluid.of(`tfc:${color}_dye`, 25))
-    .itemOutputs(Item.of(`chalk:${color}_chalk`))
-    .duration(500)
-    .EUt(LV)
+    }).id(`gregitas:barrel/${color}_chalk`);
 
-  })
+    event.recipes.gtceu.chemical_bath(`${color}_chalk`)
+      .itemInputs('chalk:white_chalk')
+      .inputFluids(Fluid.of(`tfc:${color}_dye`, 25))
+      .itemOutputs(Item.of(`chalk:${color}_chalk`))
+      .duration(500)
+      .EUt(LV);
+  });
   // event.replaceOutput({ type: "tfc:anvil" }, "gtceu:wrought_iron_rod", "minecraft:apple")
   /*
   event.custom({
