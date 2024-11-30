@@ -359,6 +359,22 @@ const gtVacuumShit = [
   "hastelloy_c_276"
 ]
 
+const thermalDepositsMap = {
+  "tfcthermaldeposits:mineral/salt": "gtceu:salt_dust",
+  "tfcthermaldeposits:mineral/saltpeter": "gtceu:saltpeter_dust",
+  "tfcthermaldeposits:mineral/calcite": "gtceu:calcite_dust",
+  "tfcthermaldeposits:mineral/brimstone": "gtceu:sulfur_dust",
+  "tfcthermaldeposits:mineral/salmiak": "tfcthermaldeposits:mineral/powder/salmiak",
+  "tfcthermaldeposits:mineral/zabuyelite": "tfcthermaldeposits:mineral/powder/zabuyelite",
+  "tfcthermaldeposits:mineral/magnesite":"tfcthermaldeposits:mineral/powder/magnesite",
+  "tfcthermaldeposits:mineral/spherocobaltite": "tfcthermaldeposits:mineral/powder/spherocobaltite",
+  "tfcthermaldeposits:mineral/alabandite": "tfcthermaldeposits:mineral/powder/alabandite",
+  "tfcthermaldeposits:mineral/smithsonite": "tfcthermaldeposits:mineral/powder/smithsonite",
+  "tfcthermaldeposits:mineral/greigite": "tfcthermaldeposits:mineral/powder/greigite",
+  "tfcthermaldeposits:mineral/apatite": "tfcthermaldeposits:mineral/powder/apatite",
+  "tfcthermaldeposits:mineral/bastnasite": "tfcthermaldeposits:mineral/powder/bastnasite",
+};
+
 // ingot/plates/etc. to convert to GT equivalents
 const gtMetalReplaceMap = {
   "alltheores:brass_ingot": "gtceu:brass_ingot",
@@ -1654,7 +1670,7 @@ event.recipes.gtceu.mixer('raw_thorium')
   .duration(200)
   .EUt(HV)  
 
-//End of Thorium Reactors
+  //End of Thorium Reactors
 	
   //Ender Tanks & Chests
   shaped('enderchests:ender_chest', ['eOs', 'cCc', 'OfO'], {
@@ -1708,55 +1724,75 @@ event.recipes.gtceu.mixer('raw_thorium')
     "topaz"
    ]
 
-   gemPowders.forEach(powder => {
+  gemPowders.forEach(powder => {
     event.recipes.gtceu.centrifuge("tfc_powder_to_dust/" + powder)
     .itemInputs([`4x tfc:powder/${powder}`])
     .itemOutputs([`gtceu:impure_${powder.replace("_lazuli", "")}_dust`])
     .EUt(ULV).duration(200)
    })
-   event.recipes.gtceu.alloy_smelter('brick')
-           .itemInputs(
-               '4x minecraft:clay_ball'
-           )
-           .notConsumable('gtceu:ingot_casting_mold')
-           .itemOutputs(
-               '4x minecraft:brick'
-           )
-           .duration(80)
-           .EUt(LV)
+  event.recipes.gtceu.alloy_smelter('brick')
+   .itemInputs('4x minecraft:clay_ball')
+   .notConsumable('gtceu:ingot_casting_mold')
+   .itemOutputs('4x minecraft:brick')
+   .duration(80)
+   .EUt(LV)
 
-    tfcStone.forEach(stone => {
-        event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
-               .itemInputs(
-                   `4x tfc:rock/loose/${stone}`
-               )
-               .notConsumable('gtceu:ingot_casting_mold')
-               .itemOutputs(
-                   `4x tfc:brick/${stone}`               )
-               .duration(80)
-               .EUt(LV)
-        event.recipes.gtceu.forge_hammer(`loose_${stone}`)
-                .itemInputs(`tfc:rock/raw/${stone}`)
-                .itemOutputs(`4x tfc:rock/loose/${stone}`)
-                .duration(60)
-                .EUt(LV)
-    })
-    tfcStone2.forEach(stone => {
-      event.recipes.gtceu.macerator(`${stone}_dust`)
-                .itemInputs(`tfc:rock/loose/${stone}`)
-                .itemOutputs(`gregitas_core:${stone}_dust`)
-                .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
-                .duration(60)
-                .EUt(LV)
-    })
-    vanStone.forEach(stone => {
-      event.recipes.gtceu.macerator(`${stone}_dust`)
-                .itemInputs(`tfc:rock/loose/${stone}`)
-                .itemOutputs(`gtceu:${stone}_dust`)
-                .chancedOutput(`gtceu:${stone}_dust`,1000,1)
-                .duration(60)
-                .EUt(LV)
-    })
+  tfcStone.forEach(stone => {
+    event.recipes.gtceu.alloy_smelter(`${stone}_brick`)
+      .itemInputs(`4x tfc:rock/loose/${stone}`)
+      .notConsumable('gtceu:ingot_casting_mold')
+      .itemOutputs(
+      `4x tfc:brick/${stone}`               )
+      .duration(80)
+      .EUt(LV)
+
+    event.recipes.gtceu.forge_hammer(`loose_${stone}`)
+      .itemInputs(`tfc:rock/raw/${stone}`)
+      .itemOutputs(`4x tfc:rock/loose/${stone}`)
+      .duration(60)
+      .EUt(LV)
+  });
+
+  tfcStone2.forEach(stone => {
+    event.recipes.gtceu.macerator(`${stone}_dust`)
+      .itemInputs(`tfc:rock/loose/${stone}`)
+      .itemOutputs(`gregitas_core:${stone}_dust`)
+      .chancedOutput(`gregitas_core:${stone}_dust`,1000,1)
+      .duration(60)
+      .EUt(LV)
+  });
+
+  vanStone.forEach(stone => {
+    event.recipes.gtceu.macerator(`${stone}_dust`)
+      .itemInputs(`tfc:rock/loose/${stone}`)
+      .itemOutputs(`gtceu:${stone}_dust`)
+      .chancedOutput(`gtceu:${stone}_dust`,1000,1)
+      .duration(60)
+      .EUt(LV)
+  });
+
+
+  Object.keys(thermalDepositsMap).forEach(input => {
+    const output = thermalDepositsMap[input];
+
+    event.recipes.gtceu.macerator(input)
+      .itemInputs(input)
+      .itemOutputs(output)
+      .duration(400)
+      .EUt(2);
+
+    event.recipes.create.crushing(
+      [output],
+      input,
+      250
+    );
+
+    event.recipes.create.milling(
+      output,
+      input,
+      250
+    );
+  });
 
     event.recipes.gtceu.macerator(`netherpebble`)
       .itemInputs("beneath:nether_pebble")

@@ -407,4 +407,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   tfcCoral.forEach(coral => {
     event.add("create:upgrade_aquatic/coral", `tfc:coral/${coral}`);
   });
+
+  event.add("forge:dusts/apatite", "tfcthermaldeposits:mineral/powder/apatite")
 }
