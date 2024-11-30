@@ -798,31 +798,27 @@
 			}]
 			tasks: [
 				{
-					id: "622538B06A215DD3"
+					id: "45A0096C7BEA4C20"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:castable_pickaxe_heads"
 						}
-						id: "tfc:metal/pickaxe_head/copper"
 					}
+					title: "Any #tfc:castable_pickaxe_heads"
 					type: "item"
 				}
 				{
-					id: "5B774E80C2A46192"
+					id: "5450429AADFAB0AD"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:castable_propick_heads"
 						}
-						id: "tfc:metal/propick_head/copper"
 					}
+					title: "Any #tfc:castable_propick_heads"
 					type: "item"
 				}
 			]
@@ -1531,8 +1527,8 @@
 				item: "sophisticatedbackpacks:backpack"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.0d
+			x: 6.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["42DEE32BEAF4F9DB"]
@@ -1544,8 +1540,8 @@
 				item: "minecraft:saddle"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 6.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["3B3414C2273DDFA7"]
@@ -1808,7 +1804,7 @@
 				}
 				type: "item"
 			}]
-			x: 5.0d
+			x: 6.5d
 			y: 0.5d
 		}
 		{
@@ -1847,6 +1843,26 @@
 			}]
 			x: -11.0d
 			y: -1.5d
+		}
+		{
+			dependencies: ["70A456AB04DA948E"]
+			description: ["{gravitas.quest.lv.desc.aqueduct}"]
+			id: "016310A96433BB96"
+			tasks: [{
+				id: "58635757455330EF"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:rock/aqueducts"
+					}
+				}
+				title: "Any #tfc:rock/aqueducts"
+				type: "item"
+			}]
+			title: "{gravitas.quest.lv.title.aqueduct}"
+			x: 4.0d
+			y: 0.5d
 		}
 	]
 	title: "{gravitas.chapters.1.title}"
