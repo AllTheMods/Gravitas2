@@ -1,20 +1,25 @@
-const $FusionReactorMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.FusionReactorMachine")
+const $FusionReactorMachine = Java.loadClass(
+  "com.gregtechceu.gtceu.common.machine.multiblock.electric.FusionReactorMachine"
+)
 
-GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    event.create('mega_fusion_reactor')
-        .category('gregstar')
-        .setEUIO('in')
-        .setMaxIOSize(2, 2, 4, 2)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ARC);
+GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
+  event
+    .create("mega_fusion_reactor")
+    .category("gregstar")
+    .setEUIO("in")
+    .setMaxIOSize(2, 2, 4, 2)
+    .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, FillDirection.LEFT_TO_RIGHT)
+    .setSound(GTSoundEntries.ARC)
 
-    GTRecipeTypes.FUSION_RECIPES.onRecipeBuild((builder, provider) => {
-        GTRecipeTypes.get('mega_fusion_reactor').copyFrom(builder)
-            .duration(Math.max((builder.duration / 2), 1))
-            .EUt(builder.EUt() * 1.5)
-            .save(provider);
-    });
+  GTRecipeTypes.FUSION_RECIPES.onRecipeBuild((builder, provider) => {
+    GTRecipeTypes.get("mega_fusion_reactor")
+      .copyFrom(builder)
+      .duration(Math.max(builder.duration / 2, 1))
+      .EUt(builder.EUt() * 1.5)
+      .save(provider)
+  })
 })
+
 let ULV = 0
 let LV = 1
 let MV = 2
@@ -31,34 +36,118 @@ let UXV = 12
 let OpV = 13
 let MAX = 14
 
-let VA = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920]
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create('mega_fusion_reactor', 'multiblock', (holder) => new $FusionReactorMachine(holder, UHV))
-        .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes(GTRecipeTypes.get('mega_fusion_reactor'))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
-        .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
-        .pattern(definition => FactoryBlockPattern.start()
-            .aisle("                                ", "                                ", "C  N C                    C N  C", "C  N C                    C N  C", "C  N C                    C N  C", "C  N C                    C N  C", "                                ", "                                ")
-            .aisle("                                ", "C  N C        AAAA        C N  C", "ATT#H#H C    CAAAAC    C H#H#TTA", "ATT#H#H CS  SCAGGACS  SC H#H#TTA", "ATT#H#H CS  SCAGGACS  SC H#H#TTA", "ATT#H#H C    CAAAAC    C H#H#TTA", "C  N C        AAAA        C N  C", "                                ")
-            .aisle("C  N C                    C N  C", "ATT#HC  C    CAAAAC    C  CH#TTA", "A#####H C    C####C    C H#####A", "A#####HH#CAACC####CCAAC#HH#####A", "A#####HH#CAACC####CCAAC#HH#####A", "A#####H C    C####C    C H#####A", "ATT#HC  C    CAAAAC    C  CH#TTA", "C  N C                    C N  C")
-            .aisle("C  N C                    C N  C", "ATT#H#H CS  SCAAAACS  SC H#H#TTA", "A######H#CAAC######CAAC#H######A", "G##############################G", "G##############################G", "A######H#CAAC######CAAC#H######A", "ATT#H#H CS  SCAAAACS  SC H#H#TTA", "C  N C                    C N  C")
-            .aisle("C  N C                    C N  C", "ATT#H#H CS  SCAAAACS  SC H#H#TTA", "A######H#CAAC######CAAC#H######A", "G##############################G", "G##############################G", "A######H#CAAC######CAAC#H######A", "ATT#H#H CS  SCAAAACS  SC H#H#TTA", "C  N C                    C N  C")
-            .aisle("C  N C                    C N  C", "ATT#HC  C    CAAAAC    C  CH#TTA", "A#####H C    C####C    C H#####A", "A#####HH#CAACC####CCAAC#HH#####A", "A#####HH#CAACC####CCAAC#HH#####A", "A#####H C    C####C    C H#####A", "ATT#HC  C    CAAAAC    C  CH#TTA", "C  N C                    C N  C")
-            .aisle("                                ", "C  N C        AAAA        C N  C", "ATT#H#H C    CAMAAC    C H#H#TTA", "ATT#H#H CS  SCAGGACS  SC H#H#TTA", "ATT#H#H CS  SCAGGACS  SC H#H#TTA", "ATT#H#H C    CAAAAC    C H#H#TTA", "C  N C        AAAA        C N  C", "                                ")
-            .aisle("                                ", "                                ", "C  N C                    C N  C", "C  N C                    C N  C", "C  N C                    C N  C", "C  N C                    C N  C", "                                ", "                                ")
-            .where('M', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('H', Predicates.blocks("gtceu:fusion_coil"))
-            .where('T', Predicates.blocks("gtceu:tritanium_coil"))
-            .where('N', Predicates.blocks("gtceu:heatproof_machine_casing"))
-            .where('C', Predicates.blocks("gtceu:fusion_casing_mk3"))
-            .where('G', Predicates.blocks("gtceu:fusion_glass"))
-            .where('S', Predicates.blocks("minecraft:air")) // TODO change to some actual block
-            .where('A', Predicates.blocks('gtceu:atomic_casing').setMinGlobalLimited(35)
-                .or(Predicates.autoAbilities(definition.recipeTypes)))
-            .where(' ', Predicates.any())
-            .where('#', Predicates.air())
-            .build())/*
+let VA = [
+  7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920
+]
+GTCEuStartupEvents.registry("gtceu:machine", (event) => {
+  event
+    .create("mega_fusion_reactor", "multiblock", (holder) => new $FusionReactorMachine(holder, UHV))
+    .rotationState(RotationState.NON_Y_AXIS)
+    .recipeTypes(GTRecipeTypes.get("mega_fusion_reactor"))
+    .recipeModifiers([
+      GTRecipeModifiers.PARALLEL_HATCH,
+      GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)
+    ])
+    .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
+    .pattern((definition) =>
+      FactoryBlockPattern.start()
+        .aisle(
+          "                                ",
+          "                                ",
+          "C  N C                    C N  C",
+          "C  N C                    C N  C",
+          "C  N C                    C N  C",
+          "C  N C                    C N  C",
+          "                                ",
+          "                                "
+        )
+        .aisle(
+          "                                ",
+          "C  N C        AAAA        C N  C",
+          "ATT#H#H C    CAAAAC    C H#H#TTA",
+          "ATT#H#H CS  SCAGGACS  SC H#H#TTA",
+          "ATT#H#H CS  SCAGGACS  SC H#H#TTA",
+          "ATT#H#H C    CAAAAC    C H#H#TTA",
+          "C  N C        AAAA        C N  C",
+          "                                "
+        )
+        .aisle(
+          "C  N C                    C N  C",
+          "ATT#HC  C    CAAAAC    C  CH#TTA",
+          "A#####H C    C####C    C H#####A",
+          "A#####HH#CAACC####CCAAC#HH#####A",
+          "A#####HH#CAACC####CCAAC#HH#####A",
+          "A#####H C    C####C    C H#####A",
+          "ATT#HC  C    CAAAAC    C  CH#TTA",
+          "C  N C                    C N  C"
+        )
+        .aisle(
+          "C  N C                    C N  C",
+          "ATT#H#H CS  SCAAAACS  SC H#H#TTA",
+          "A######H#CAAC######CAAC#H######A",
+          "G##############################G",
+          "G##############################G",
+          "A######H#CAAC######CAAC#H######A",
+          "ATT#H#H CS  SCAAAACS  SC H#H#TTA",
+          "C  N C                    C N  C"
+        )
+        .aisle(
+          "C  N C                    C N  C",
+          "ATT#H#H CS  SCAAAACS  SC H#H#TTA",
+          "A######H#CAAC######CAAC#H######A",
+          "G##############################G",
+          "G##############################G",
+          "A######H#CAAC######CAAC#H######A",
+          "ATT#H#H CS  SCAAAACS  SC H#H#TTA",
+          "C  N C                    C N  C"
+        )
+        .aisle(
+          "C  N C                    C N  C",
+          "ATT#HC  C    CAAAAC    C  CH#TTA",
+          "A#####H C    C####C    C H#####A",
+          "A#####HH#CAACC####CCAAC#HH#####A",
+          "A#####HH#CAACC####CCAAC#HH#####A",
+          "A#####H C    C####C    C H#####A",
+          "ATT#HC  C    CAAAAC    C  CH#TTA",
+          "C  N C                    C N  C"
+        )
+        .aisle(
+          "                                ",
+          "C  N C        AAAA        C N  C",
+          "ATT#H#H C    CAMAAC    C H#H#TTA",
+          "ATT#H#H CS  SCAGGACS  SC H#H#TTA",
+          "ATT#H#H CS  SCAGGACS  SC H#H#TTA",
+          "ATT#H#H C    CAAAAC    C H#H#TTA",
+          "C  N C        AAAA        C N  C",
+          "                                "
+        )
+        .aisle(
+          "                                ",
+          "                                ",
+          "C  N C                    C N  C",
+          "C  N C                    C N  C",
+          "C  N C                    C N  C",
+          "C  N C                    C N  C",
+          "                                ",
+          "                                "
+        )
+        .where("M", Predicates.controller(Predicates.blocks(definition.get())))
+        .where("H", Predicates.blocks("gtceu:fusion_coil"))
+        .where("T", Predicates.blocks("gtceu:tritanium_coil"))
+        .where("N", Predicates.blocks("gtceu:heatproof_machine_casing"))
+        .where("C", Predicates.blocks("gtceu:fusion_casing_mk3"))
+        .where("G", Predicates.blocks("gtceu:fusion_glass"))
+        .where("S", Predicates.blocks("minecraft:air")) // TODO change to some actual block
+        .where(
+          "A",
+          Predicates.blocks("gtceu:atomic_casing")
+            .setMinGlobalLimited(35)
+            .or(Predicates.autoAbilities(definition.recipeTypes))
+        )
+        .where(" ", Predicates.any())
+        .where("#", Predicates.air())
+        .build()
+    ) /*
         .shapeInfo(controller => MultiblockShapeInfo.builder()
             .aisle("                              ", "                              ", "C  C C                  C C  C", "C  C C                  C C  C", "C  C C                  C C  C", "C  C C                  C C  C", "                              ", "                              ")
             .aisle("                              ", "C  C C       AAAA       C C  C", "AHH#H#H     CAIOAC     H#H#HHA", "AHH#H#H U  UCAGGACU  U H#H#HHA", "AHH#H#H U  UCAGGACU  U H#H#HHA", "AHH#H#H     CAAAAC     H#H#HHA", "C  C C       AAAA       C C  C", "                              ")
@@ -85,6 +174,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where(' ', Blocks.AIR)
             .where('#', Blocks.AIR)
             .build())*/
-        .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing",
-            "gtceu:block/multiblock/fusion_reactor", false)
+    .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing", "gtceu:block/multiblock/fusion_reactor", false)
 })

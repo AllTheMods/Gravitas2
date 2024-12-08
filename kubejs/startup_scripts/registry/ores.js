@@ -105,9 +105,9 @@ const gregOreBlockProps = {
   pyrope: { color: 0x783264, overlay: "ruby" },
   sapphire: { color: 0x6464c8, overlay: "gem_vertical" },
   green_sapphire: { color: 0x64c882, overlay: "gem_horizontal" },
-  thorium: { color: 0xc65500, overlay: "metallic"},
-  chromite: { color: 0xdbe2e9, overlay: "flint"},
-  uraninite: { color: 0xe0ff66, overlay: "dull"}
+  thorium: { color: 0xc65500, overlay: "metallic" },
+  chromite: { color: 0xdbe2e9, overlay: "flint" },
+  uraninite: { color: 0xe0ff66, overlay: "dull" }
 }
 
 const registerGTCOres = (/** @type {Registry.Block} */ event) => {
@@ -116,9 +116,9 @@ const registerGTCOres = (/** @type {Registry.Block} */ event) => {
   blocks.addAll(Object.keys(gregOreBlockProps))
   stones.addAll(tfcStonez)
 
-  for (const blocksIt = blocks.iterator(); blocksIt.hasNext();) {
+  for (const blocksIt = blocks.iterator(); blocksIt.hasNext(); ) {
     let block = blocksIt.next()
-    for (const stonesIt = stones.iterator(); stonesIt.hasNext();) {
+    for (const stonesIt = stones.iterator(); stonesIt.hasNext(); ) {
       let stone = stonesIt.next()
       let ore = event
         .create(`gregitas:ore/${block}/${stone}`, "basic")
