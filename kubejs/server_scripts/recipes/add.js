@@ -2117,6 +2117,19 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .EUt(LV)
   })
 
+  // tfc plant dyes
+
+  dyes.forEach((dye) => {
+    event.recipes.create.crushing([`2x minecraft:${dye}_dye`], `#tfc:makes_${dye}_dye`, 250)
+
+    event.recipes.gtceu
+      .macerator(`gregitas:macerator_tfc_${dye}_dye`)
+      .itemInputs(`#tfc:makes_${dye}_dye`)
+      .itemOutputs(`2x minecraft:${dye}_dye`)
+      .duration(20)
+      .EUt(LV)
+  })
+
   //tfc liquid dyes
 
   dyes.forEach((dyes) => {
