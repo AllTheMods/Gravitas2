@@ -409,37 +409,10 @@
 			tasks: [{
 				id: "38B8B02C44957784"
 				item: {
-					Count: 1
-					id: "itemfilters:or"
+                    Count: 1
+					id: "itemfilters:tag"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								ForgeCaps: {
-									"tfc:item_heat": {
-										heat: 0.0f
-										ticks: 0L
-									}
-								}
-								id: "tfc:metal/chisel/copper"
-								tag: {
-									Damage: 0
-								}
-							}
-							{
-								Count: 1b
-								ForgeCaps: {
-									"tfc:item_heat": {
-										heat: 0.0f
-										ticks: 0L
-									}
-								}
-								id: "tfc:metal/chisel/bronze"
-								tag: {
-									Damage: 0
-								}
-							}
-						]
+						value: "tfc:chisels"
 					}
 				}
 				title: "{gravitas.quest.stage2.chisel}"
