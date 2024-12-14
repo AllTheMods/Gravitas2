@@ -360,7 +360,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "computercraft:turtle_normal"})
 
   //Corail
-  event.remove({ id: "tombstone:familiar_receptacle"})
+  event.remove({ id: "tombstone:receptacle_of_familiar"})
 
   //SimplePlanes
   event.remove({ id: "simpleplanes:liquid_engine"})

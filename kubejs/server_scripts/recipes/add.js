@@ -1770,7 +1770,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     c: "#forge:chests"
   })
 
-  shaped("tombstone:familiar_receptacle", ["twt", "wdw", "twt"], {
+  shaped("tombstone:receptacle_of_familiar", ["twt", "wdw", "twt"], {
     w: "tfc:metal/ingot/cast_iron",
     d: "tombstone:impregnated_diamond",
     t: "minecraft:ghast_tear"
