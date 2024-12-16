@@ -492,7 +492,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.assembler('gregitas:pattern_terminal')
             .itemInputs(
                 'ae2:crafting_terminal',
-                'gtceu:digital_interface_cover',
+                'gtceu:storage_cover',
                 'ae2:blank_pattern',
                 'ae2:engineering_processor'
             )
@@ -1564,7 +1564,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.assembler('gregitas:wireless_pattern_terminal')
             .itemInputs(
                 'ae2:wireless_crafting_terminal',
-                'gtceu:digital_interface_cover',
+                'gtceu:storage_cover',
                 'ae2:blank_pattern',
                 'ae2:engineering_processor'
             )
