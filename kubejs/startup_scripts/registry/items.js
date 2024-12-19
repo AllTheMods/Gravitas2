@@ -430,4 +430,9 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
   event.create("gregitas:packaged_greenhouse").modelJson(pkgJson)
   event.create("gregitas:cane_pulp").texture("gtceu:item/material_sets/dull/dust").color(0, 0xdc6f51)
   event.create("gregitas:triuranium_octoxide").texture("kubejs:item/triuranium_octoxide")
+
+  event.create("gregitas:crushed_crackle").texture("kubejs:item/triuranium_octoxide").color(0, 0x555555)
+  event.create("gregitas:crushed_char").texture("kubejs:item/triuranium_octoxide").color(0, 0x111111)
+  event.create("gregitas:crushed_frostburn").texture("kubejs:item/triuranium_octoxide").color(0, 0xFFFFFF)
+
 }

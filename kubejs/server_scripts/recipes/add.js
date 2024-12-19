@@ -2704,4 +2704,59 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .chancedOutput("gtceu:gold_dust", 42, 1)
     .duration(160)
     .EUt(20)
+
+    event.recipes.gtceu
+    .macerator("gregitas:crushed_crackle")
+    .itemInputs("#iceandfire:crackled_blocks")
+    .itemOutputs("2x gregitas:crushed_crackle")
+    .chancedOutput("gregitas:crushed_crackle", 420, 1)
+    .duration(180)
+    .EUt(80)
+
+    event.recipes.gtceu
+    .macerator("gregitas:crushed_char")
+    .itemInputs("#iceandfire:charred_blocks")
+    .itemOutputs("2x gregitas:crushed_char")
+    .chancedOutput("gregitas:crushed_char", 420, 1)
+    .duration(180)
+    .EUt(80)
+
+    event.recipes.gtceu
+    .macerator("gregitas:crushed_frostburn")
+    .itemInputs("#iceandfire:frozen_blocks")
+    .itemOutputs("2x gregitas:crushed_frostburn")
+    .chancedOutput("gregitas:crushed_frostburn", 420, 1)
+    .duration(180)
+    .EUt(80)
+
+    event.recipes.gtceu
+    .centrifuge("gregitas:crushed_crackle_outputs")
+    .itemInputs("gregitas:crushed_crackle")
+    .chancedOutput("gtceu:impure_tungstate_dust", 320, 1)
+    .chancedOutput("gtceu:tungsten_dust", 25, 1)
+    .chancedOutput("gtceu:tungstate_dust", 100, 1)
+    .chancedOutput("gtceu:stone_dust", 1200, 1)
+    .duration(160)
+    .EUt(420)
+
+    event.recipes.gtceu
+    .centrifuge("gregitas:crushed_char_outputs")
+    .itemInputs("gregitas:crushed_char")
+    .chancedOutput("gtceu:tiny_plutonium_dust", 1320, 1)
+    .chancedOutput("gtceu:tiny_uranium_dust", 660, 1)
+    .chancedOutput("gtceu:ash_dust", 1200, 1)
+    .duration(160)
+    .EUt(420)
+
+    event.recipes.gtceu
+    .centrifuge("gregitas:crushed_frostburn_outputs")
+    .itemInputs("gregitas:crushed_frostburn")
+    .chancedOutput("gtceu:tiny_platinum_group_sludge_dust", 1320, 3)
+    .chancedOutput("gtceu:tiny_platinum_group_sludge_dust", 660, 1)
+    .chancedOutput("gtceu:ice_dust", 1200, 1)
+    .outputFluids(Fluid.of("gtceu:liquid_air", 10))
+    .duration(160)
+    .EUt(128)
+
+
 }
