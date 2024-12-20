@@ -307,4 +307,8 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ mod: "gtceu"}, "minecraft:chest", "#forge:chests/wooden") //fix ULV buses requiring vanilla chest
 
   event.replaceInput({ input: "minecraft:phantom_membrane" }, "minecraft:phantom_membrane", "#gravitas:phantom")
+
+  //tfcea
+  event.replaceInput({ mod: "tfcea"}, "tfc:metal/double_sheet/red_steel", "tfc:metal/double_ingot/red_steel")
+  event.replaceInput({ mod: "tfcea"}, "tfc:metal/double_sheet/blue_steel", "tfc:metal/double_ingot/blue_steel")
 }
