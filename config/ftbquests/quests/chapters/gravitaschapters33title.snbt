@@ -1,0 +1,514 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "gravitaschapters33title"
+	group: "3CB58C688DD23BD2"
+	icon: "integrateddynamics:on_the_dynamics_of_integration"
+	id: "69299302373C4CBC"
+	images: [{
+		height: 0.7d
+		image: "configuration:icons/warning"
+		rotation: 0.0d
+		width: 0.7d
+		x: 1.5d
+		y: -1.8d
+	}]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["291A5F97C601D53D"]
+			description: ["{gravitas.quest.id.desc.hi}"]
+			icon: "gtceu:quantum_eye"
+			id: "499CF9F39CED8899"
+			rewards: [{
+				id: "5F3D74719F40F8AB"
+				item: "integrateddynamics:on_the_dynamics_of_integration"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "0349117B2A4773A3"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:saplings"
+					}
+				}
+				title: "{gravitas.quest.id.sapling}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.id.hi}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"15D2550DA16B7B90"
+				"0E1C30538FFE58E8"
+				"557B9D05D419CE9A"
+			]
+			description: ["{gravitas.quest.id.desc.sap}"]
+			id: "10E73A82868C2F17"
+			subtitle: "{gravitas.quest.id.subt.3x3}"
+			tasks: [{
+				id: "2094B9FD7397ABC2"
+				item: "integrateddynamics:menril_sapling"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["499CF9F39CED8899"]
+			id: "15D2550DA16B7B90"
+			subtitle: "{gravitas.quest.id.subt.ing}"
+			tasks: [{
+				id: "35A20519ECFCA2DF"
+				item: "minecraft:ender_eye"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["499CF9F39CED8899"]
+			id: "0E1C30538FFE58E8"
+			subtitle: "{gravitas.quest.id.subt.ing}"
+			tasks: [{
+				id: "23127B0CBD15011F"
+				item: "gtceu:uranium_dust"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["10E73A82868C2F17"]
+			id: "23787E06547BB90D"
+			subtitle: "{gravitas.quest.id.subt.wood}"
+			tasks: [{
+				id: "1B7E41B599613FDB"
+				item: "integrateddynamics:menril_log"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["23787E06547BB90D"]
+			id: "72F57D77C3FB366D"
+			subtitle: "{gravitas.quest.id.subt.menril}"
+			tasks: [{
+				count: 10L
+				id: "4126D0DCE63BDB5C"
+				item: { Count: 10, id: "integrateddynamics:crystalized_menril_chunk" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72F57D77C3FB366D"]
+			id: "4A05C037C0EE40BD"
+			subtitle: "{gravitas.quest.id.desc.cable}"
+			tasks: [{
+				count: 5L
+				id: "6B66A1F27CB47748"
+				item: { Count: 5, id: "integrateddynamics:cable" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A05C037C0EE40BD"]
+			description: ["{gravitas.quest.id.desc.varcards}"]
+			id: "79C1105A84B8BF8F"
+			tasks: [{
+				count: 24L
+				id: "5BEC0340898370FE"
+				item: { Count: 24, id: "integrateddynamics:variable" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["72F57D77C3FB366D"]
+			description: ["{gravitas.quest.id.desc.interface}"]
+			id: "450EDE68EC992A5A"
+			tasks: [{
+				id: "7246DC66A8255454"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integratedtunnels:part_interface_energy"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_interface_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_interface_fluid"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.id.interface}"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79C1105A84B8BF8F"]
+			description: ["{gravitas.quest.id.desc.import}"]
+			id: "3BC94B0B922C0708"
+			tasks: [{
+				id: "609FBA95C685FD1F"
+				item: "integrateddynamics:variable_transformer_input"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["79C1105A84B8BF8F"]
+			description: [""]
+			id: "6D9FA4DF842C1010"
+			subtitle: "{gravitas.quest.id.subt.export}"
+			tasks: [{
+				id: "712E74999429B0C7"
+				item: "integrateddynamics:variable_transformer_output"
+				type: "item"
+			}]
+			x: 10.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["3BC94B0B922C0708"]
+			description: ["{gravitas.quest.id.desc.imports}"]
+			id: "73EA326304C01C3B"
+			tasks: [{
+				id: "33132403E4371A0F"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_block"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_fluid"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_fluid"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_energy"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_energy"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.id.import}"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6D9FA4DF842C1010"]
+			description: [""]
+			id: "33F4A7613764A016"
+			subtitle: "{gravitas.quest.id.subt.export}"
+			tasks: [{
+				id: "201F20AD0AF91374"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_energy"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_energy"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_fluid"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_fluid"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_block"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.id.export}"
+				type: "item"
+			}]
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"73EA326304C01C3B"
+				"33F4A7613764A016"
+				"450EDE68EC992A5A"
+			]
+			description: ["{gravitas.quest.id.desc.network}"]
+			icon: "createdeco:decal_electrical"
+			id: "65FA86357BC60573"
+			min_width: 275
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "{gravitas.quest.id.subt.network}"
+			tasks: [{
+				id: "22CCBBC66D509404"
+				title: "{gravitas.quest.id.network}"
+				type: "checkmark"
+			}]
+			x: 10.125d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65FA86357BC60573"]
+			description: ["{gravitas.quest.id.desc.varprog}"]
+			id: "4D4152032F0410D2"
+			subtitle: "{gravitas.quest.id.subt.varprog}"
+			tasks: [{
+				id: "066869EF9D01A1C6"
+				item: "integrateddynamics:logic_programmer"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4D4152032F0410D2"]
+			description: ["{gravitas.quest.id.subt.varprogp}"]
+			id: "1568CBFA09827137"
+			shape: "gear"
+			tasks: [{
+				id: "2224024EFA45C065"
+				item: "integrateddynamics:portable_logic_programmer"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["65FA86357BC60573"]
+			description: ["{gravitas.quest.id.desc.intinfo}"]
+			id: "1B5C86AE05678420"
+			min_width: 300
+			tasks: [{
+				id: "2656ACB55A33D4FE"
+				title: "{gravitas.quest.id.interfaces}"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65FA86357BC60573"]
+			description: ["{gravitas.quest.id.desc.intexpinfo}"]
+			id: "437F4945AFBE0825"
+			min_width: 275
+			tasks: [{
+				id: "4209A06A392362DB"
+				title: "{gravitas.quest.id.impexporters}"
+				type: "checkmark"
+			}]
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4D4152032F0410D2"]
+			description: ["{gravitas.quest.id.desc.craft}"]
+			id: "65D89991A45BC042"
+			shape: "rsquare"
+			tasks: [{
+				id: "1AB298B080A3C17D"
+				item: "integratedcrafting:part_interface_crafting"
+				type: "item"
+			}]
+			title: "{gravitas.quest.id.craft}"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["23787E06547BB90D"]
+			description: ["{gravitas.quest.id.desc.drying}"]
+			id: "4E9883C76640F172"
+			rewards: [{
+				count: 2
+				id: "1241F1070CC4A3A5"
+				item: "integrateddynamics:cable"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4E777CEB122B96D4"
+				item: "integrateddynamics:drying_basin"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4E9883C76640F172"]
+			description: ["{gravitas.quest.id.desc.menglass}"]
+			id: "71CB097E78D838E0"
+			rewards: [{
+				count: 4
+				id: "3F8CE490AA4CBD3A"
+				item: "integrateddynamics:cable"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.id.subt.menglass}"
+			tasks: [{
+				id: "25DDAA0266975AEC"
+				item: "integratedterminals:menril_glass"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4D4152032F0410D2"]
+			description: ["{gravitas.quest.id.desc.varstore}"]
+			id: "60D9F04E91171D16"
+			shape: "pentagon"
+			size: 1.25d
+			tasks: [{
+				id: "2E1507FCFF3EBBF3"
+				item: "integrateddynamics:variablestore"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			id: "557B9D05D419CE9A"
+			subtitle: "{gravitas.quest.id.subt.tomake}"
+			tasks: [{
+				id: "08DBEC9284AA1F23"
+				item: "ae2:inscriber"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65D89991A45BC042"]
+			id: "56BF647EA84FFF7E"
+			subtitle: "{gravitas.quest.id.subt.craftingterm}"
+			tasks: [{
+				id: "4DC71B7A351D1503"
+				item: "integratedterminals:part_terminal_crafting_job"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["72F57D77C3FB366D"]
+			description: ["{gravitas.quest.id.desc.battery}"]
+			id: "6D75CF34957ECCD9"
+			subtitle: "{gravitas.quest.id.subt.battery}"
+			tasks: [{
+				id: "6A96E9CE15682919"
+				item: {
+					Count: 1
+					id: "integrateddynamics:energy_battery"
+					tag: {
+						energy: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6D75CF34957ECCD9"]
+			description: [""]
+			id: "4D62C62B523C69EC"
+			subtitle: "{gravitas.quest.id.subt.gen}"
+			tasks: [{
+				id: "4F213D9104A40A2F"
+				item: "integrateddynamics:coal_generator"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "6E3A806F828DE2B1"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "1DDCED66D5DB816A"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+	]
+	title: "{gravitas.chapters.33.title}"
+}

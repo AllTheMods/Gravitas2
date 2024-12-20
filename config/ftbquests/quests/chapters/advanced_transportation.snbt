@@ -4,7 +4,7 @@
 	filename: "advanced_transportation"
 	group: "095899370DDF48CB"
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "simpleplanes:plane"
 		tag: {
 			EntityTag: {
@@ -20,9 +20,10 @@
 			description: ["{gravitas.quest.adv_transportation.desc.sail}"]
 			id: "3C81E3881D542B3F"
 			rewards: [{
-				count: 10
+				count: 5
 				id: "53669E2F089D86DE"
-				item: "minecraft:white_wool"
+				item: "immersiveengineering:hemp_fabric"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
@@ -38,23 +39,16 @@
 			dependencies: ["3C81E3881D542B3F"]
 			description: ["{gravitas.quest.adv_transportation.desc.cog}"]
 			id: "0C5E29669F26C25A"
-			rewards: [
-				{
-					count: 2
-					id: "2CA6FF1DB8BAC129"
-					item: "minecraft:lead"
-					type: "item"
-				}
-				{
-					id: "76E772DC8390DD25"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
+			rewards: [{
+				count: 2
+				id: "2CA6FF1DB8BAC129"
+				item: "minecraft:lead"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7155AC8769ECD7E5"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -141,9 +135,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.adv_transportation.cogs}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.adv_transportation.cog}"
 			x: -1.0d
 			y: 1.0d
 		}
@@ -151,23 +145,16 @@
 			dependencies: ["3C81E3881D542B3F"]
 			description: ["{gravitas.quest.adv_transportation.desc.brigg}"]
 			id: "7293A4624CF0379B"
-			rewards: [
-				{
-					count: 3
-					id: "1AE82D294727E34A"
-					item: "tfc:wood/chest/oak"
-					type: "item"
-				}
-				{
-					id: "2C092255D290AA11"
-					type: "xp_levels"
-					xp_levels: 3
-				}
-			]
+			rewards: [{
+				count: 3
+				id: "1AE82D294727E34A"
+				item: "tfc:wood/chest/oak"
+				type: "item"
+			}]
 			tasks: [{
 				id: "10EA6F086BDC32BA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -254,9 +241,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.adv_transportation.briggs}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.adv_transportation.brigg}"
 			x: 0.0d
 			y: 1.0d
 		}
@@ -277,16 +264,12 @@
 					item: "minecraft:lead"
 					type: "item"
 				}
-				{
-					id: "43D595F96EE82197"
-					type: "xp_levels"
-					xp_levels: 2
-				}
 			]
+			subtitle: "{gravitas.quest.adv_transportation.subt.galleys}"
 			tasks: [{
 				id: "329F005595C4C649"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -373,9 +356,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.adv_transportation.galleys}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.adv_transportation.galley}"
 			x: 1.0d
 			y: 1.0d
 		}
@@ -389,9 +372,10 @@
 			description: ["{gravitas.quest.adv_transportation.desc.cannon}"]
 			id: "5B18FBAB4AD7DEC7"
 			rewards: [{
-				count: 15
+				count: 5
 				id: "133927A5BD0170B9"
 				item: "smallships:cannon_ball"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [
@@ -414,9 +398,9 @@
 			description: ["{gravitas.quest.adv_transportation.desc.workbench}"]
 			id: "3678D8A20915C39E"
 			rewards: [{
-				count: 2
 				id: "6B5733E73B3FAD4F"
 				item: "simpleplanes:propeller"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
@@ -425,8 +409,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.adv_transportation.workbench}"
-			x: 5.0d
-			y: 0.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3678D8A20915C39E"]
@@ -440,12 +424,11 @@
 			}]
 			tasks: [{
 				id: "33A282B15FB8FE3B"
-				title: "Floaty things"
+				title: "{gravitas.quest.adv_transportation.flying_things}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.adv_transportation.flying_things}"
-			x: 5.0d
-			y: 2.0d
+			x: -1.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3678D8A20915C39E"]
@@ -457,8 +440,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.adv_transportation.energy}"
-			x: 4.0d
-			y: 1.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3678D8A20915C39E"]
@@ -466,21 +449,19 @@
 			id: "3E31D05E653A92F1"
 			tasks: [{
 				id: "564E8008D0500C34"
-				title: "Upgrades!"
+				title: "{gravitas.quest.adv_transportation.upgrades}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.adv_transportation.upgrades}"
-			x: 6.0d
-			y: 1.0d
+			x: 1.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1AA7033604AAB5B3"]
 			description: ["{gravitas.quest.adv_transportation.desc.furnace}"]
 			id: "7585C2F4C81CD845"
 			rewards: [{
-				count: 16
-				id: "76D3D3CE71FF082C"
-				item: "minecraft:coal"
+				id: "29D969E371750955"
+				item: "simpleplanes:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -489,48 +470,58 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.adv_transportation.furnace}"
-			x: 3.0d
-			y: 0.0d
+			x: -1.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["1AA7033604AAB5B3"]
 			description: ["{gravitas.quest.adv_transportation.desc.electric}"]
 			id: "6C38BCC24AEB445A"
+			rewards: [{
+				id: "5F1DC3D970B2BDFC"
+				item: "simpleplanes:propeller"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7752448402D769FD"
 				item: "simpleplanes:electric_engine"
 				type: "item"
 			}]
 			title: "{gravitas.quest.adv_transportation.electric}"
-			x: 3.0d
-			y: 1.0d
+			x: 0.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["1AA7033604AAB5B3"]
 			description: ["{gravitas.quest.adv_transportation.desc.liquid}"]
 			id: "42DF0C4C52B62BCE"
+			rewards: [{
+				id: "745D5DF3B5E847B6"
+				item: "simpleplanes:propeller"
+				type: "item"
+			}]
 			tasks: [{
 				id: "68134AC382C713BD"
 				item: "simpleplanes:liquid_engine"
 				type: "item"
 			}]
 			title: "{gravitas.quest.adv_transportation.liquid}"
-			x: 3.0d
-			y: 2.0d
+			x: 1.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["248B2D085F8A107D"]
 			description: ["{gravitas.quest.adv_transportation.desc.small}"]
 			id: "045B36DC70647FC0"
 			rewards: [{
-				id: "208F6DF772237D3C"
-				type: "xp_levels"
-				xp_levels: 5
+				id: "1777AC036F8924EB"
+				item: "simpleplanes:propeller"
+				type: "item"
 			}]
 			tasks: [{
 				id: "7AC78CFFB9C89F2A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -636,11 +627,11 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.adv_transportation.small}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.adv_transportation.small}"
-			x: 4.0d
-			y: 3.0d
+			x: -2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["248B2D085F8A107D"]
@@ -650,14 +641,14 @@
 			]
 			id: "52D7BBCAC4974F0F"
 			rewards: [{
-				id: "78B92CE724A0AD11"
-				type: "xp_levels"
-				xp_levels: 10
+				id: "69D7AF009B6FE4E2"
+				item: "simpleplanes:propeller"
+				type: "item"
 			}]
 			tasks: [{
 				id: "6C6C56D6786A5C6D"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -763,25 +754,25 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.adv_transportation.big}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.adv_transportation.big}"
-			x: 5.0d
-			y: 3.0d
+			x: -2.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["248B2D085F8A107D"]
 			description: ["{gravitas.quest.adv_transportation.desc.heli}"]
 			id: "53E53114FCA97EBF"
 			rewards: [{
-				id: "5D6CDB09A216A17F"
-				type: "xp_levels"
-				xp_levels: 7
+				id: "16105B983FECE659"
+				item: "simpleplanes:propeller"
+				type: "item"
 			}]
 			tasks: [{
 				id: "2BCF67B2DAF13633"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -887,21 +878,16 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.adv_transportation.heli}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.adv_transportation.heli}"
-			x: 6.0d
-			y: 3.0d
+			x: -2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3E31D05E653A92F1"]
 			description: ["{gravitas.quest.adv_transportation.desc.armor}"]
 			id: "636D8D0253B8BD77"
-			rewards: [{
-				id: "482807126AB7406A"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [
 				{
 					id: "156A9022CEA0B817"
@@ -915,18 +901,13 @@
 				}
 			]
 			title: "{gravitas.quest.adv_transportation.armor}"
-			x: 7.0d
-			y: 0.0d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3E31D05E653A92F1"]
 			description: ["{gravitas.quest.adv_transportation.desc.extras}"]
 			id: "6038799E9DA85DDD"
-			rewards: [{
-				id: "19BD65A7BACCAB66"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [
 				{
 					id: "79C20C00B1CC84D9"
@@ -940,8 +921,8 @@
 				}
 			]
 			title: "{gravitas.quest.adv_transportation.extras}"
-			x: 7.0d
-			y: 1.0d
+			x: 2.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3E31D05E653A92F1"]
@@ -966,8 +947,34 @@
 				}
 			]
 			title: "{gravitas.quest.adv_transportation.shooting}"
-			x: 7.0d
-			y: 2.0d
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "5BDDDA797A51E91D"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "36F8AD1929BB33D9"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 3.0d
 		}
 	]
 	title: "{gravitas.chapters.27.title}"

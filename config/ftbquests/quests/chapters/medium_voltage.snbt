@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:good_electronic_circuit"
 	id: "574AC3A76DC03364"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -119,7 +119,7 @@
 			rewards: [{
 				count: 4
 				id: "0477033EDE72D79B"
-				item: "gtceu:tin_fine_wire"
+				item: "gtceu:fine_tin_wire"
 				random_bonus: 6
 				type: "item"
 			}]
@@ -473,11 +473,7 @@
 				"589F47DE51213920"
 				"2CBC21079AB18569"
 			]
-			description: [
-				"Holding a hot ingot will damage you, but you have to for this quest because I'm a little evil"
-				""
-				"You will need to cool it, in this case with a chemical bath"
-			]
+			description: ["Holding a hot ingot will damage you, but you have to for this quest because I'm a 'little' evil.\\n\\nYou will need to cool it, in this case with a chemical bath."]
 			id: "2AB457E29360E3B8"
 			rewards: [
 				{
@@ -495,10 +491,10 @@
 					type: "item"
 				}
 			]
-			subtitle: "Hot potato"
+			subtitle: "Hot Potato"
 			tasks: [{
 				id: "00676E5631ED2A66"
-				item: "gtceu:silicon_hot_ingot"
+				item: "gtceu:hot_silicon_ingot"
 				type: "item"
 			}]
 			x: 0.5d
@@ -506,13 +502,7 @@
 		}
 		{
 			dependencies: ["262AE37765B139BE"]
-			description: [
-				"You can find raw aluminium in the End"
-				""
-				"Alternatively, you can acquire aluminium by processing a variety of items like bauxite in an electrolyzer for example"
-				""
-				"We'll also generate aluminium passively in the clay line process"
-			]
+			description: ["You can acquire Aluminum by processing Bauxite in an Electrolyzer."]
 			id: "1C1802ABF3EE3120"
 			rewards: [{
 				count: 8
@@ -521,7 +511,6 @@
 				random_bonus: 4
 				type: "item"
 			}]
-			subtitle: "Aluminum is that you?"
 			tasks: [{
 				id: "7B46FA23AF26BF76"
 				item: "gtceu:aluminium_ingot"
@@ -803,7 +792,7 @@
 			id: "159F43C0C0D91776"
 			rewards: [{
 				id: "6DDD4C022DDE3A33"
-				item: "chemlib:sulfur_dust"
+				item: "gtceu:sulfur_dust"
 				random_bonus: 2
 				type: "item"
 			}]
@@ -823,7 +812,7 @@
 			optional: true
 			rewards: [{
 				id: "32792BF84A213FBF"
-				item: "minecraft:diorite"
+				item: "tfc:rock/raw/diorite"
 				type: "item"
 			}]
 			subtitle: "Passive aluminium"
@@ -1098,7 +1087,7 @@
 			tasks: [{
 				id: "71567A9437A86C2F"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [

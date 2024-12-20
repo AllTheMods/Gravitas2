@@ -1,0 +1,5 @@
+
+[compat]
+	#Only takes effect if Immersive Petroleum is installed.
+	enableImmersivePetorlumCompat = true
+

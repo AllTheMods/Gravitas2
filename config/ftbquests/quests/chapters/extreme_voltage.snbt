@@ -83,8 +83,17 @@
 		{
 			id: "78A295D4D1A21BCA"
 			tasks: [{
-				id: "7AB26B5B4167E5EC"
-				item: "chemlib:titanium_ingot"
+				id: "0C15E205681BAC38"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:titanium_ingot"
+				}
 				type: "item"
 			}]
 			x: 0.0d
@@ -95,7 +104,7 @@
 			tasks: [{
 				id: "2CCBC531A22F3091"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -204,6 +213,32 @@
 			}]
 			x: 4.5d
 			y: -4.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "1BDF2D16779C436F"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "134684289D7E3854"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.5d
 		}
 	]
 	title: "{gravitas.chapters.19.title}"

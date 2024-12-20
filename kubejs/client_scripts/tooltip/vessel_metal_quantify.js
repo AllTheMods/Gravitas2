@@ -3,6 +3,8 @@
 const $HeatCapability = Java.loadClass("net.dries007.tfc.common.capabilities.heat.HeatCapability").CAPABILITY
 const $VesselCap = Java.loadClass("net.dries007.tfc.common.items.VesselItem$VesselCapability")
 const $Helpers = Java.loadClass("net.dries007.tfc.util.Helpers")
+const $Metal = Java.loadClass("net.dries007.tfc.util.Metal")
+const $Alloy = Java.loadClass("net.dries007.tfc.util.Alloy")
 const $ItemStackInventory = Java.loadClass("net.dries007.tfc.common.recipes.inventory.ItemStackInventory")
 
 const addMetalRatioToVessels = (/** @type {Internal.ItemTooltipEventJS} */ event) => {
@@ -22,6 +24,7 @@ const addMetalRatioToVessels = (/** @type {Internal.ItemTooltipEventJS} */ event
         if (vesselCap.mode() == "INVENTORY") {
           recipes = getPrivateField(vesselCap, "cachedRecipes")
           let fluidMap = Utils.newMap()
+          let alloyResult = $Alloy(getPrivateField(vesselCap, "alloy").getMaxUnits())
           for (let index = 0; index < vesselCap.slots; index++) {
             let recipe = recipes[index]
             let inventory = new $ItemStackInventory()
@@ -42,7 +45,20 @@ const addMetalRatioToVessels = (/** @type {Internal.ItemTooltipEventJS} */ event
             let percentil = (amount / total) * 100
             let newComponent = Text.gold(`(${percentil % 1 ? "~" : ""}${Math.floor(percentil)}%) `).append(Text.yellow(Fluid.of(fluid).fluidStack.name)).append(` - ${amount} mB`)
             components.add(components.length, newComponent)
+            alloyResult.add($Metal.get(fluid), amount, false)
           })
+          if (!fluidMap.isEmpty()) {
+            let resultComp = Text.gold(Text.translate("gravitas.tooltip.alloyresult",Text.yellow(alloyResult.getResult().getDisplayName())));
+            components.add(components.length, resultComp)
+          }
+        } else {
+          let total = getPrivateField(vesselCap, "alloy").getAmount()
+          if (!total > 0) return
+          getPrivateField(vesselCap, "alloy").getMetals().forEach((metal,amount) => {
+            let percentil = (amount / total) * 100
+            let newComponent = Text.gold(`(${percentil % 1 ? "~" : ""}${Math.floor(percentil)}%) `).append(Text.yellow(Fluid.of(metal.getFluid()).fluidStack.name)).append(` - ${amount} mB`)
+            components.add(components.length, newComponent)
+          });
         }
       } catch (error) {
         console.log("Something went wrong with tooltips for vessels! Object:" + item, error)

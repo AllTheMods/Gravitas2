@@ -3,8 +3,9 @@
 	default_quest_shape: ""
 	filename: "circuits"
 	group: "6A4ED78F1D529DE3"
+	icon: "gtceu:max_battery"
 	id: "560EF4C38DEACA03"
-	order_index: 9
+	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
@@ -520,7 +521,7 @@
 			tasks: [{
 				id: "6683D0BC6A2C871C"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -539,7 +540,7 @@
 			tasks: [{
 				id: "7DB56B55ABF0376C"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -608,7 +609,7 @@
 			tasks: [{
 				id: "7BEB4A258BB8C759"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -656,7 +657,7 @@
 			id: "3F591BADFF8585FE"
 			tasks: [{
 				id: "3371F13082C01141"
-				item: "gtceu:tungstensteel_coil_block"
+				item: "gtceu:rtm_alloy_coil_block"
 				type: "item"
 			}]
 			x: 1.0d
@@ -796,7 +797,7 @@
 			tasks: [{
 				id: "2F80DF5A840CFEAB"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -863,8 +864,17 @@
 		{
 			id: "41B376AFE2564807"
 			tasks: [{
-				id: "2D9B8AF6C76D9CEA"
-				item: "chemlib:tungsten_ingot"
+				id: "6D21EDDE5A3CC7AA"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:tungsten_ingot"
+				}
 				type: "item"
 			}]
 			x: 1.0d
@@ -902,6 +912,32 @@
 			title: "Steam Age"
 			x: -5.0d
 			y: -6.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "74A70CF5492A2225"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "4B13017DE6F5BCFB"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: -9.0d
 		}
 	]
 	title: "{gravitas.chapters.25.title}"

@@ -15,6 +15,7 @@ const replaceGoldBlocksWithPiles = (event) => {
           .setValue($IngotPileBlock.COUNT, $Integer.valueOf(Number(count).toFixed()))
         level.setBlock(pos, pileBlockState, 2)
         pile = level.getBlockEntity(pos)
+        if (pile == null) return // thanks DH
         pile.load(nbt)
       }
     })

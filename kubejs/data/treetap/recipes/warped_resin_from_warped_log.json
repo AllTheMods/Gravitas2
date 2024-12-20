@@ -1,0 +1,13 @@
+{
+  "type": "treetap:tap_extract",
+  "log": {
+    "item": "beneath:wood/log/warped"
+  },
+  "processing_time": 9600,
+  "metal_result": {
+    "item": "gregitas:warped_resin_bucket"
+  },
+  "life_cycle": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  "collect_bucket": true,
+  "fluid_color": "#000F75"
+}

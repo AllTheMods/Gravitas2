@@ -1,0 +1,30 @@
+{
+	"name": "solar_system.sgjourney.terra",
+	"symbols": "sgjourney:terra",
+	"symbol_prefix": 1,
+	"extragalactic_address": {"address": [1, 35, 4, 31, 15, 30, 32], "randomizable": true},
+	"addresses":
+	[
+		{"galaxy": "sgjourney:milky_way", "address": {"address": [27, 25, 4, 35, 10, 28], "randomizable": true}}
+	],
+
+	"point_of_origin": "sgjourney:terra",
+
+	"dimensions":
+	[
+		"minecraft:overworld",
+		"gcyr:overworld_orbit",
+
+		"gcyr:luna",
+		"gcyr:luna_orbit",
+
+		"gcyr:mars",
+		"gcyr:mars_orbit",
+
+		"gcyr:mercury",
+		"gcyr:mercury_orbit",
+
+		"gcyr:venus",
+		"gcyr:venus_orbit"
+	]
+}

@@ -1,0 +1,267 @@
+{
+  "Replace": false,
+  "Tamable": true,
+  "Attributes": {
+    "MaxHealth": 25.0,
+    "MaxHunger": 10.0,
+    "MaxEnergy": 50.0,
+    "MovementSpeed": 0.1,
+    "SwimSpeed": 3.0,
+    "FollowRange": 48.0,
+    "AttackDamage": 3.0
+  },
+  "SpawnData": {
+    "SpawnCount": "2-2",
+    "SpawnWeight": 2,
+    "RandomChance": 1,
+    "Biomes": [
+      {
+        "ID": "minecraft:jungle"
+      },
+      {
+        "ID": "minecraft:savanna"
+      },
+      {
+        "ID": "minecraft:savanna_plateau"
+      },
+      {
+        "ID": "minecraft:old_growth_birch_forest"
+      },
+      {
+        "ID": "minecraft:old_growth_pine_taiga"
+      },
+      {
+        "ID": "minecraft:old_growth_spruce_taiga"
+      }
+    ]
+  },
+  "TameMethod": {
+    "ID": "dawnera:feed_from_ground",
+    "Chance": 3
+  },
+  "AI": {
+    "TargetGoals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:target_hit_by_owner"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_owner_hit_by"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_hit_by",
+        "AlertOthers": true
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:target_hunt"
+      }
+    ],
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:float_on_water"
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 3000
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:dimorphodon.fly_or_attack"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:lay_egg",
+        "Speed": 1.0,
+        "EggBlock": "dawnera:dimorphodon_eggs",
+        "PositionChooser": "LAND"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 1.0
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:dimorphodon.climb_on_tree"
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:melee_attack",
+        "Speed": 2.5,
+        "MeleeRange": 1.4,
+        "ShouldSeeTarget": false,
+        "CanUse": [
+          "dawnera:is_not_sleeping",
+          "dawnera:is_grown_up",
+          "dawnera:distance_to_target,\u003c,4"
+        ],
+        "StartAggression": {
+          "Conditions": [
+            "dawnera:is_not_flying",
+            "dawnera:distance_to_target,\u003c,4"
+          ],
+          "Actions": [
+            "dawnera:stop_action,StateController",
+            "dawnera:play_action,ActionController,scream"
+          ]
+        },
+        "PerformAttack": {
+          "Conditions": [
+            "dawnera:is_no_action",
+            "dawnera:is_on_ground"
+          ],
+          "Actions": [
+            "dawnera:focus_on_target",
+            "dawnera:play_action,ActionController,attack"
+          ]
+        }
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:follow_owner",
+        "Speed": 2.5,
+        "StartFollowDistance": 5,
+        "StopFollowDistance": 3,
+        "TeleportDistance": 20,
+        "CanFly": true
+      },
+      {
+        "Priority": 5,
+        "ID": "dawnera:eat_food",
+        "Speed": 2.0,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 10,
+        "MaxItemCountCanEat": 1,
+        "SpatialSearch": true,
+        "CanUse": [
+          "dawnera:has_no_rider",
+          "dawnera:is_no_action",
+          "dawnera:is_not_sleeping_or_resting",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "FoodEat": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 6,
+        "ID": "dawnera:look_around"
+      },
+      {
+        "Priority": 7,
+        "ID": "dawnera:random_stroll",
+        "Speed": 1.0,
+        "PositionChooser": "CLIMB",
+        "CanUse": [
+          "dawnera:is_not_flying"
+        ],
+        "CanContinueUse": [
+          "dawnera:is_not_flying"
+        ]
+      }
+    ]
+  },
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "attack",
+          "Length": 0.56
+        },
+        {
+          "ID": "down",
+          "Length": 0.84
+        },
+        {
+          "ID": "scream",
+          "Length": 0.96
+        },
+        {
+          "ID": "fall_asleep",
+          "Length": 0.72
+        },
+        {
+          "ID": "wake_up",
+          "Length": 0.72
+        },
+        {
+          "ID": "up",
+          "Length": 1
+        },
+        {
+          "ID": "eat",
+          "Length": 2.4
+        }
+      ]
+    },
+    {
+      "ID": "StateController",
+      "Actions": [
+        {
+          "ID": "rest"
+        },
+        {
+          "ID": "sleep"
+        }
+      ]
+    }
+  ],
+  "FoodRation": {
+    "Items": [
+      {
+        "Tag": "dawnera:meat_food"
+      }
+    ],
+    "Entities": [
+      {
+        "Tag": "dawnera:small_animal"
+      }
+    ]
+  },
+  "MobSchedule": {
+    "Conditions": [
+      "dawnera:is_alive",
+      "dawnera:is_on_ground",
+      "dawnera:has_no_target"
+    ],
+    "Tasks": [
+      {
+        "Start": "02:00",
+        "End": "02:20",
+        "Actions": [
+          "dawnera:lie_down"
+        ]
+      },
+      {
+        "Start": "02:20",
+        "End": "10:40",
+        "Actions": [
+          "dawnera:sleep"
+        ]
+      },
+      {
+        "Start": "10:40",
+        "End": "10:50",
+        "Actions": [
+          "dawnera:wake_up"
+        ]
+      },
+      {
+        "Start": "10:50",
+        "End": "02:00",
+        "Actions": [
+          "dawnera:stand_up"
+        ]
+      }
+    ]
+  }
+}

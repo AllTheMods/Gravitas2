@@ -1,0 +1,8 @@
+#Range: > 1
+timerTriggerMinimumIntervalInTicks = 20
+#Range: > 1
+timerTriggerMinimumIntervalInTicksWhenOnlyForgeEnergyIOStatementsPresent = 1
+#The number of scenarios to check is 2^n where n is the number of if statements in a trigger
+#Range: > 0
+maxIfStatementsInTriggerBeforeSimulationIsntAllowed = 10
+

@@ -1,0 +1,8 @@
+#
+# The preview size the preview screen will have when first opened
+# Conversion to km:
+#     (2 ^ (defaultPreviewSize + 5)) * 128 / 1000
+#
+#Range: 0 ~ 6
+defaultPreviewSize = 3
+

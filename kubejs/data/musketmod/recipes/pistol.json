@@ -1,0 +1,47 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "R F",
+        " SM",
+        " HW"
+    ],
+    
+    "key": {
+        "F": {
+            "item": "minecraft:flint_and_steel"
+        },
+        
+        "S": {
+            "item": "tfc:metal/sheet/wrought_iron"
+        },
+        
+        "M": {
+            "item": "tfc:brass_mechanisms"
+        },
+        
+        "W": {
+            "tag": "tfc:lumber"
+        },
+        
+        "H": {
+            "item": "minecraft:tripwire_hook"
+        },
+        
+        "R": {
+            "item": "tfc:metal/rod/wrought_iron"
+        }
+        
+    },
+    
+    "result": {
+        "item": "musketmod:pistol"
+        }
+    
+}
+
+
+
+
+
+
+

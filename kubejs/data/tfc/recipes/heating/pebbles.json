@@ -1,0 +1,10 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "scguns:pebbles"
+  },
+  "result_item": {
+    "item": "scguns:hardened_pebbles"
+  },
+  "temperature": 650
+}

@@ -1,0 +1,290 @@
+{
+  "Replace": false,
+  "PassengerZoom": 3,
+  "RidingSpeed": 0.02,
+  "RidingSprintSpeed": 0.05,
+  "PushModifier": 0.5,
+  "CanSprint": true,
+  "CanBreakLeaves": false,
+  "CanDropTrees": false,
+  "Rideable": true,
+  "Tamable": true,
+  "Attributes": {
+    "MaxHealth": 74.0,
+    "MaxHunger": 20.0,
+    "MaxEnergy": 100.0,
+    "Armor": 8.0,
+    "MovementSpeed": 1,
+    "KnockbackResistance": 0.75,
+    "FollowRange": 32.0,
+    "AttackDamage": 6.75
+  },
+  "TameMethod": {
+    "ID": "dawnera:feed_from_ground",
+    "Chance": 0.5
+  },
+  "SpawnData": {
+    "SpawnCount": "1",
+    "SpawnWeight": 1,
+    "RandomChance": 0.25,
+    "Biomes": [
+      {
+        "ID": "minecraft:deep_ocean"
+      },
+      {
+        "ID": "minecraft:deep_lukewarm_ocean"
+      }
+    ]
+  },
+  "RandomActions": {
+    "attack_random": [
+      {
+        "Action": "attack1,50%"
+      },
+      {
+        "Action": "attack2,50%",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      }
+    ]
+  },
+  "AI": {
+    "TargetGoals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:target_hit_by_owner",
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ]
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_owner_hit_by",
+        "SpatialSearch": true,
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ]
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:target_hit_by",
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ]
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:target_hunt",
+        "SpatialSearch": true,
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ]
+      }
+    ],
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 3000
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:try_to_find_water",
+        "Speed": 1.0
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:eat_food",
+        "Speed": 0.8,
+        "HorizontalDistance": 20,
+        "VerticalDistance": 20,
+        "MaxItemCountCanEat": 4,
+        "CanUse": [
+          "dawnera:is_in_water"
+        ],
+        "TargetConditions": [
+          "dawnera:is_in_water"
+        ],
+        "FoodEat": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:melee_attack",
+        "Speed": 1.0,
+        "ShouldSeeTarget": false,
+        "CanUse": [
+          "dawnera:is_in_water"
+        ],
+        "PerformAttack": {
+          "Conditions": [
+            "dawnera:is_no_action"
+          ],
+          "Actions": [
+            "dawnera:focus_on_target",
+            "dawnera:play_random_action,ActionController,attack_random"
+          ]
+        }
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 1.0
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:follow_owner",
+        "Speed": 1.0,
+        "StartFollowDistance": 7,
+        "StopFollowDistance": 3,
+        "TeleportDistance": 20,
+        "CanFly": false
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:lay_egg",
+        "Speed": 0.8,
+        "CanUse": [
+          "dawnera:is_in_water"
+        ],
+        "EggBlock": {
+          "ID": "dawnera:dunkleosteus_egg",
+          "Properties": {
+            "waterlogged": true
+          }
+        },
+        "PositionChooser": "WATER"
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:move_to_block",
+        "Blocks": [
+          {
+            "ID": "minecraft:glass"
+          }
+        ],
+        "Speed": 0.8,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 10,
+        "Interval": 200,
+        "AcceptableDistance": 4,
+        "AchievePos": {
+          "Actions": [
+            "dawnera:look_at_pos",
+            "dawnera:motion_to_pos,0.25",
+            "dawnera:play_action,ActionController,attack2"
+          ]
+        }
+      },
+      {
+        "Priority": 6,
+        "ID": "dawnera:random_stroll",
+        "Speed": 0.8,
+        "Interval": 50,
+        "PositionChooser": "WATER"
+      }
+    ]
+  },
+  "Trades": [
+    {
+      "From": "minecraft:bone",
+      "To": "minecraft:bone_meal",
+      "Amount": "4-6"
+    },
+    {
+      "From": "minecraft:scute",
+      "To": "minecraft:bone_meal",
+      "Amount": "6-10"
+    },
+    {
+      "From": "minecraft:nautilus_shell",
+      "To": "minecraft:bone_meal",
+      "Amount": "10-14"
+    }
+  ],
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "attack1",
+          "Length": 0.48
+        },
+        {
+          "ID": "attack2",
+          "Length": 0.6
+        },
+        {
+          "ID": "eat",
+          "Length": 0.48
+        }
+      ]
+    }
+  ],
+  "FoodRation": {
+    "Items": [
+      {
+        "ID": "minecraft:bone"
+      },
+      {
+        "ID": "minecraft:bone_block"
+      },
+      {
+        "ID": "minecraft:scute"
+      }
+    ],
+    "Entities": [
+      {
+        "ID": "minecraft:squid"
+      },
+      {
+        "ID": "minecraft:glow_squid"
+      },
+      {
+        "ID": "minecraft:skeleton",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      },
+      {
+        "ID": "minecraft:player",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ],
+        "TargetConditions": [
+          "dawnera:has_turtle_helmet"
+        ]
+      },
+      {
+        "ID": "minecraft:turtle",
+        "Conditions": [
+          "dawnera:is_baby"
+        ],
+        "TargetConditions": [
+          "dawnera:is_baby"
+        ]
+      },
+      {
+        "ID": "minecraft:turtle",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      }
+    ]
+  },
+  "InputControls": {
+    "Buttons": [
+      {
+        "ID": "attack",
+        "Type": "mouse",
+        "Action": "on_click",
+        "Button": "mouse_button_left",
+        "Cooldown": 40
+      }
+    ]
+  }
+}

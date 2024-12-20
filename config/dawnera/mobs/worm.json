@@ -1,0 +1,59 @@
+{
+  "Replace": false,
+  "StepHeight": 0,
+  "ExperienceDrop": 0,
+  "Attributes": {
+    "MaxHealth": 1.0,
+    "MaxHunger": 10.0,
+    "MaxEnergy": 10.0,
+    "MovementSpeed": 0.1,
+    "FollowRange": 8.0
+  },
+  "SpawnData": {
+    "SpawnCount": 1,
+    "SpawnWeight": 1,
+    "RandomChance": 5,
+    "Biomes": [
+      {
+        "ID": "minecraft:plains"
+      },
+      {
+        "ID": "minecraft:sunflower_plains"
+      },
+      {
+        "ID": "minecraft:forest"
+      },
+      {
+        "ID": "minecraft:birch_forest"
+      },
+      {
+        "ID": "minecraft:dark_forest"
+      },
+      {
+        "ID": "minecraft:taiga"
+      },
+      {
+        "ID": "minecraft:old_growth_birch_forest"
+      },
+      {
+        "ID": "minecraft:old_growth_pine_taiga"
+      },
+      {
+        "ID": "minecraft:old_growth_spruce_taiga"
+      },
+      {
+        "ID": "minecraft:swamp"
+      }
+    ]
+  },
+  "AI": {
+    "Goals": [
+      {
+        "Priority": 1,
+        "ID": "dawnera:random_stroll",
+        "Speed": 0.6,
+        "PositionChooser": "LAND"
+      }
+    ]
+  }
+}

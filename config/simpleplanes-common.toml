@@ -18,4 +18,7 @@
 	#Capacity of the liquid engine
 	#Range: > 1
 	liquid_engine_capacity = 4000
+	#Fuel cost of a cargo plane
+	#Range: > 0
+	cargo_plane_fuel_cost = 10
 

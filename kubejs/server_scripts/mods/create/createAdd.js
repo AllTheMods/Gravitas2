@@ -559,6 +559,14 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.recipes.create.milling(`tfc:rock/gravel/${type.stone}`, `tfc:rock/cobble/${type.stone}`, 250)
     })
 
+    tfcCobbleToSand.forEach((type) => {
+        event.recipes.create.crushing([
+            `tfc:rock/gravel/${type.stone}`,
+            Item.of('gtceu:plant_ball').withChance(0.2),
+            ],
+            `tfc:rock/mossy_cobble/${type.stone}` , 250)
+    });
+
     event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
 
     event.recipes.create.milling('gregitas_core:igneous_dust', '#tfc:igneous_extrusive_rock', 250)

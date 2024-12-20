@@ -1,0 +1,52 @@
+
+[general]
+	#Enable debug mode?
+	enableDebug = false
+
+#Enable or disable (un)desired features
+[clientFeatures]
+	#Enables current coordinates to render under minimap
+	displayCoords = true
+	#Enables markers showing the location of nearby friendly mobs
+	displayFriendlyMobs = true
+	#Enables markers showing the location of nearby hostile mobs
+	displayHostileMobs = true
+	#Enables markers showing the location of other players
+	displayOtherPlayers = true
+	#Enables waypoints to be shown on the map itself
+	displayWaypointsOnMap = true
+	#Enables waypoints to be rendered in the world
+	renderWaypointsInWorld = false
+
+[worldmap]
+	#List of disabled Layers, comma separated
+	activeMap = "cartography:temperature"
+	#List of disabled Layers, comma separated
+	disabledLayers = []
+	#Zoom level. Must be a power of 2
+	#Range: 0.125 ~ 8.0
+	zoom = 4.0
+
+[minimap]
+	#List of disabled Layers, comma separated
+	activeMap = "blazemap:aerial_view"
+	#List of disabled Layers, comma separated
+	disabledLayers = []
+	#Zoom level. Must be a power of 2
+	#Range: 0.5 ~ 8.0
+	zoom = 1.0
+	#Enable the minimap?
+	enabled = false
+	#Minimap horizontal position on screen
+	#Range: 0 ~ 16000
+	positionX = 15
+	#Minimap vertical position on screen
+	#Range: 0 ~ 9000
+	positionY = 15
+	#Minimap widget width
+	#Range: 128 ~ 1600
+	width = 256
+	#Minimap widget height
+	#Range: 128 ~ 1600
+	height = 256
+

@@ -26,9 +26,13 @@ usernamecache.json
 /XaeroWorldMap
 .vscode
 kubejs/server_scripts/debug/
+kubejs/server_scripts/jsconfig.json
 kubejs/startup_scripts/debug/
+kubejs/startup_scripts/jsconfig.json
 kubejs/client_scripts/debug/
+kubejs/client_scripts/jsconfig.json
 kubejs/config/probejs.json
+kubejs/config/modpack_config.json
 kubejs/jsconfig.json
 kubejs/documentation/
 kubejs/probe/
@@ -40,3 +44,7 @@ package-lock.json
 package.json
 node-tail.js
 /icon-exports-x32
+.probe
+ESM
+texturepacks
+ldlib

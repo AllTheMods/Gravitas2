@@ -1,0 +1,25 @@
+{
+  "type": "scguns:gun_bench",
+  "result": {
+    "item": "scguns:flintlock_pistol",
+    "count": 1
+  },
+  "ingredients": {
+
+    "gun_internal_1": {
+      "item": "minecraft:flint"
+    },
+    "gun_internal_2": {
+      "tag": "tfc:rock/smooth"
+    },
+    "gun_barrel_1": {
+      "item": "scguns:stone_gun_barrel"
+    },
+    "gun_grip": {
+      "item": "scguns:gun_grip"
+    },
+    "gun_magazine": {
+      "tag": "minecraft:planks"
+    }
+  }
+}

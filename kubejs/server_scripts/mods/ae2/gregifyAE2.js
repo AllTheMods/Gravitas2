@@ -492,7 +492,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.assembler('gregitas:pattern_terminal')
             .itemInputs(
                 'ae2:crafting_terminal',
-                'gtceu:digital_interface_cover',
+                'gtceu:storage_cover',
                 'ae2:blank_pattern',
                 'ae2:engineering_processor'
             )
@@ -1564,7 +1564,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
         event.recipes.gtceu.assembler('gregitas:wireless_pattern_terminal')
             .itemInputs(
                 'ae2:wireless_crafting_terminal',
-                'gtceu:digital_interface_cover',
+                'gtceu:storage_cover',
                 'ae2:blank_pattern',
                 'ae2:engineering_processor'
             )
@@ -1638,8 +1638,7 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
                 '4x #gtceu:circuits/luv',
                 '16x gtceu:hpic_chip',
                 '2x ae2:wireless_access_point',
-                '2x gtceu:iv_field_generator',
-                '2x ae2:wireless_receiver'
+                '2x gtceu:iv_field_generator'
             )
             .inputFluids(
                 Fluid.of('gtceu:soldering_alloy', 576)
@@ -2408,11 +2407,10 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
     event.recipes.gtceu.assembler('gregitas:bulk_cell_component')
     .itemInputs(
-                'megacells:cell_component_1m',
+                'ae2:cell_component_256k',
                 '4x megacells:sky_steel_block',
                 '4x megacells:accumulation_processor',
-				'2x #gtceu:circuits/ev',
-				'ae2:spatial_cell_component'
+				'2x #gtceu:circuits/ev'
     )
     .itemOutputs(
         'megacells:bulk_cell_component'

@@ -4,7 +4,7 @@
 	filename: "railcraft"
 	group: "095899370DDF48CB"
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "railcraft:steam_locomotive"
 		tag: { }
 	}
@@ -30,10 +30,9 @@
 			id: "3F3DE2CE9676EB1E"
 			tasks: [{
 				id: "3A429C81E18477B6"
-				title: "Types of Tracks"
+				title: "{gravitas.quest.railcraft.types_tracks}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.railcraft.types_tracks}"
 			x: -1.0d
 			y: 1.0d
 		}
@@ -43,10 +42,9 @@
 			id: "03DF939800D749DF"
 			tasks: [{
 				id: "39656813AA1D728D"
-				title: "Types of Track kits"
+				title: "{gravitas.quest.railcraft.track_kits}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.railcraft.track_kits}"
 			x: 1.0d
 			y: 1.0d
 		}
@@ -169,11 +167,10 @@
 			id: "0938DBC3D637DC56"
 			tasks: [{
 				id: "71B7926A98AEA64F"
-				title: "Machines!"
+				title: "{gravitas.quest.railcraft.machines}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.railcraft.machines}"
-			x: 5.0d
+			x: 6.0d
 			y: 1.5d
 		}
 		{
@@ -184,7 +181,7 @@
 				count: 5
 				id: "013F8CB8C6B70201"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -198,7 +195,7 @@
 			tasks: [{
 				id: "77C07403D2BA2CE4"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -210,7 +207,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.steel}"
-			x: 4.0d
+			x: 5.0d
 			y: 2.0d
 		}
 		{
@@ -229,7 +226,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.coke}"
-			x: 4.0d
+			x: 5.0d
 			y: 1.0d
 		}
 		{
@@ -246,7 +243,7 @@
 				{
 					id: "332699E2DCE5CB88"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -266,7 +263,7 @@
 				{
 					id: "6088DE4C5E7AD1A3"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -285,7 +282,7 @@
 				}
 			]
 			title: "{gravitas.quest.railcraft.making_steam}"
-			x: 5.0d
+			x: 6.0d
 			y: 0.5d
 		}
 		{
@@ -295,7 +292,7 @@
 			rewards: [{
 				count: 32
 				id: "288486493DF95B3F"
-				item: "minecraft:gravel"
+				item: "tfc:rock/gravel/andesite"
 				type: "item"
 			}]
 			tasks: [{
@@ -305,13 +302,19 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.crusher}"
-			x: 6.0d
-			y: 2.0d
+			x: 7.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0938DBC3D637DC56"]
 			description: ["{gravitas.quest.railcraft.desc.water_tank}"]
 			id: "73201DA5C818B565"
+			rewards: [{
+				count: 5
+				id: "55A0AD6CC5233E29"
+				item: "tfc:glue"
+				type: "item"
+			}]
 			tasks: [{
 				count: 26L
 				id: "0EDADEAC1B76AAD7"
@@ -319,8 +322,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.water_tank}"
-			x: 6.0d
-			y: 1.0d
+			x: 7.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["302C27B3E947EC2F"]
@@ -339,7 +342,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.steam_furnace}"
-			x: 5.5d
+			x: 6.5d
 			y: -0.5d
 		}
 		{
@@ -361,7 +364,7 @@
 				{
 					id: "742CB4E32C19D9A0"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "railcraft:turbine_rotor"
 						tag: {
 							Damage: 0
@@ -371,7 +374,7 @@
 				}
 			]
 			title: "{gravitas.quest.railcraft.steam_energy}"
-			x: 4.5d
+			x: 5.5d
 			y: -0.5d
 		}
 		{
@@ -382,7 +385,7 @@
 				count: 3
 				id: "0437EC58568BC757"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -399,7 +402,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.manual_roller}"
-			x: 5.0d
+			x: 6.0d
 			y: 2.5d
 		}
 		{
@@ -410,7 +413,7 @@
 				count: 9
 				id: "12A692B9FA72658F"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -427,7 +430,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.powered_roller}"
-			x: 5.0d
+			x: 6.0d
 			y: 3.5d
 		}
 		{
@@ -442,7 +445,7 @@
 			tasks: [{
 				id: "2E80B7BBA24B714A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -470,15 +473,14 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.railcraft.crowbars}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.crowbars}"
 			x: -1.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["5F8DBCC1A33B6B6F"]
-			description: ["{gravitas.quest.railcraft.desc.seasonal_crowbar}"]
 			hide: true
 			hide_dependency_lines: true
 			id: "73DE896A75A95B6D"
@@ -490,7 +492,7 @@
 			tasks: [{
 				id: "1A24EDEF90D13776"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:seasons_crowbar"
 					tag: {
 						Damage: 0
@@ -516,7 +518,7 @@
 			tasks: [{
 				id: "508109BCA683A87B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -544,6 +546,7 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.railcraft.spike_mauls}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.spike_maul}"
@@ -669,7 +672,7 @@
 			rewards: [{
 				id: "2E9FFD841584AF65"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:iron_crowbar"
 					tag: {
 						Damage: 0
@@ -748,7 +751,7 @@
 			rewards: [{
 				id: "124FD1607DDB25FA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:whistle_tuner"
 					tag: {
 						Damage: 0
@@ -788,11 +791,9 @@
 			description: ["{gravitas.quest.railcraft.desc.turnout}"]
 			id: "0534F5CA071B6FCD"
 			tasks: [{
-				id: "26F098C4690EA0FF"
-				observe_type: 0
-				timer: 0L
-				to_observe: "railcraft:iron_turnout_track"
-				type: "observation"
+				id: "19F4A0D534B64E39"
+				item: "railcraft:iron_turnout_track"
+				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.turnout}"
 			x: -0.5d
@@ -803,11 +804,9 @@
 			description: ["{gravitas.quest.railcraft.desc.wye}"]
 			id: "2AE0775C2CB4B553"
 			tasks: [{
-				id: "374A7639F8A2BDA6"
-				observe_type: 0
-				timer: 0L
-				to_observe: "railcraft:iron_wye_track"
-				type: "observation"
+				id: "280CAD3BCF32779C"
+				item: "railcraft:iron_wye_track"
+				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.wye}"
 			x: 0.5d
@@ -818,11 +817,9 @@
 			description: ["{gravitas.quest.railcraft.desc.junction}"]
 			id: "5FFB1032DA1CBCA0"
 			tasks: [{
-				id: "497816D81F657121"
-				observe_type: 0
-				timer: 0L
-				to_observe: "railcraft:iron_junction_track"
-				type: "observation"
+				id: "1EB73A77443F79BF"
+				item: "railcraft:iron_junction_track"
+				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.junction}"
 			x: 1.5d
@@ -862,7 +859,7 @@
 			tasks: [{
 				id: "51999B0113C01326"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:electric_locomotive"
 					tag: { }
 				}
@@ -877,10 +874,9 @@
 			id: "0CB074A02EE4283E"
 			tasks: [{
 				id: "49B01C68ADE2622D"
-				title: "Trains!"
+				title: "{gravitas.quest.railcraft.trains}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.railcraft.trains}"
 			x: 0.0d
 			y: 3.5d
 		}
@@ -900,7 +896,7 @@
 			tasks: [{
 				id: "431EC0383D8F537B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "railcraft:steam_locomotive"
 					tag: { }
 				}
@@ -917,7 +913,7 @@
 			rewards: [{
 				id: "5DD6B1679819564D"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:enchanted_book"
 					tag: {
 						StoredEnchantments: [{
@@ -931,7 +927,7 @@
 			tasks: [{
 				id: "7CE6962D2439E3A5"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -977,10 +973,10 @@
 			description: ["{gravitas.quest.railcraft.desc.minecart}"]
 			id: "59519D358EA863C3"
 			rewards: [{
-				count: 10
+				count: 5
 				id: "72757F9FEAB8EC43"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1004,15 +1000,10 @@
 			dependencies: ["59519D358EA863C3"]
 			description: ["{gravitas.quest.railcraft.desc.new_carts}"]
 			id: "0B17ECC15E911A55"
-			rewards: [{
-				id: "4F9F10865D6B28B3"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
 			tasks: [{
 				id: "4FC1C55D3320AA2C"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -1031,9 +1022,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.railcraft.new_carts}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.new_carts}"
 			x: -1.0d
 			y: 4.5d
 		}
@@ -1042,7 +1033,7 @@
 			description: ["{gravitas.quest.railcraft.desc.carts_and_tracks}"]
 			id: "7DD8A1613A5ECB40"
 			rewards: [{
-				count: 64
+				count: 32
 				id: "3679BEE54F385DC7"
 				item: "railcraft:abandoned_track"
 				type: "item"
@@ -1050,7 +1041,7 @@
 			tasks: [{
 				id: "45620A01FB424298"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -1073,9 +1064,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.railcraft.carts_and_tracks}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.carts_and_tracks}"
 			x: 1.0d
 			y: 4.5d
 		}
@@ -1084,17 +1075,8 @@
 			description: ["{gravitas.quest.railcraft.desc.item_loader}"]
 			id: "448BB5F53AE1B987"
 			rewards: [{
-				id: "70E4CE668003B83F"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:metal/ingot/cast_iron"
-				}
+				id: "18A22F9841F1F27B"
+				item: "railcraft:item_detector"
 				type: "item"
 			}]
 			tasks: [{
@@ -1111,17 +1093,8 @@
 			description: ["{gravitas.quest.railcraft.desc.item_unloader}"]
 			id: "38D178573D0273AC"
 			rewards: [{
-				id: "5E565FE35ACE1746"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:metal/ingot/cast_iron"
-				}
+				id: "047CF73E894CC7E7"
+				item: "railcraft:item_detector"
 				type: "item"
 			}]
 			tasks: [{
@@ -1137,6 +1110,11 @@
 			dependencies: ["59519D358EA863C3"]
 			description: ["{gravitas.quest.railcraft.desc.fluid_loader}"]
 			id: "7281623F2F834AB8"
+			rewards: [{
+				id: "59358AB5E59A0408"
+				item: "railcraft:detector_track_kit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "0AF6CE3D38F9FAC9"
 				item: "railcraft:fluid_loader"
@@ -1169,8 +1147,8 @@
 			description: ["{gravitas.quest.railcraft.desc.advanced_item_loader}"]
 			id: "324690E5EB620BCC"
 			rewards: [{
-				id: "73149A0F53AA34A7"
-				item: "tfc:gem/diamond"
+				id: "256887C781D70D95"
+				item: "railcraft:item_loader"
 				type: "item"
 			}]
 			tasks: [{
@@ -1187,8 +1165,8 @@
 			description: ["{gravitas.quest.railcraft.desc.advanced_item_unloader}"]
 			id: "372370A354253721"
 			rewards: [{
-				id: "3E540EBF7E811BA2"
-				item: "tfc:gem/diamond"
+				id: "5C9198B23F050985"
+				item: "railcraft:item_unloader"
 				type: "item"
 			}]
 			tasks: [{
@@ -1204,6 +1182,11 @@
 			dependencies: ["7281623F2F834AB8"]
 			description: ["{gravitas.quest.railcraft.desc.fluid_unloader}"]
 			id: "113B372172841780"
+			rewards: [{
+				id: "02998B2532379A67"
+				item: "railcraft:detector_track_kit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "60832B8C4F28EF63"
 				item: "railcraft:fluid_unloader"
@@ -1218,12 +1201,8 @@
 			description: ["{gravitas.quest.railcraft.desc.train_dispenser}"]
 			id: "08AC966DEED98A92"
 			rewards: [{
-				id: "18A7D8025C8597EA"
-				item: {
-					Count: 1b
-					id: "railcraft:steam_locomotive"
-					tag: { }
-				}
+				id: "240A48A22AF5870E"
+				item: "railcraft:cart_dispenser"
 				type: "item"
 			}]
 			tasks: [{
@@ -1271,6 +1250,109 @@
 			title: "{gravitas.quest.railcraft.track_switch}"
 			x: 0.5d
 			y: -3.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "15F61E5E679498D6"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "300CE367E646FB9B"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0938DBC3D637DC56"]
+			description: ["{gravitas.quest.railcraft.desc.iron_tank}"]
+			id: "7A3376F81D32B5D3"
+			rewards: [{
+				count: 8
+				id: "2F2E6FE2EFD6D1FA"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "0F15DDD5F1AAE2B4"
+					item: "railcraft:white_iron_tank_valve"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "5DEE182FA00AF451"
+					item: { Count: 30, id: "railcraft:white_iron_tank_wall" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "46F1EB9DBCA02019"
+					item: { Count: 8, id: "railcraft:white_iron_tank_gauge" }
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.railcraft.iron_tank}"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7A3376F81D32B5D3"]
+			description: ["{gravitas.quest.railcraft.desc.steel_tank}"]
+			id: "7F14661940C61C57"
+			rewards: [{
+				count: 8
+				id: "03A37D694E45BE74"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "61B3F330C162B5D7"
+					item: "railcraft:white_steel_tank_valve"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "71250FC3CA8BE153"
+					item: { Count: 24, id: "railcraft:white_steel_tank_wall" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "21361B24502526AC"
+					item: { Count: 8, id: "railcraft:white_steel_tank_gauge" }
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.railcraft.steel_tank}"
+			x: 8.5d
+			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.28.title}"

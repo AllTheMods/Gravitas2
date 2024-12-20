@@ -13,69 +13,51 @@
 			unique_symbols = false
 			#If true Wormholes will produce Vortex after a Kawoosh
 			enable_vortex = false
-			#If true the Event Horizon will be completely flat
-			flat_event_horizon = false
 			#Decide if Milky Way Stargate should use the Movie Stargate model
 			use_movie_stargate_model = false
 			#Decide if Chevrons on the back of Milky Way Stargate should light up
 			milky_way_stargate_back_lights_up = false
 			#Decide if Chevrons on the back of Pegasus Stargate should light up
 			pegasus_stargate_back_lights_up = true
-			#Decide if Chevrons on the back of Tollan Stargate should light up
-			tollan_stargate_back_lights_up = true
+			#If true you will be able to see Stargate Variants
+			stargate_variants = true
+			#Decide if Event Horizons should be shinier
+			shiny_event_horizons = true
+			#The amount of distortion the Stargate Event Horizon will experience
+			#Range: 0 ~ 25
+			event_horizon_distortion = 25
+			#If true only the front of the Universe Stargate will rotate
+			universe_front_rotates = false
+			#Decide if the Primary Chevron on the Movie Stargate model should open
+			movie_primary_chevron_opens = false
+			#Decide if Movie Stargate model should use alternate chevron locking
+			alternate_movie_chevron_locking = false
+			#The distance at which the sounds a Stargate makes can still be heard at full volume
+			#Range: 0 ~ 128
+			stargate_full_sound_distance = 32
+			#The distance at which the sounds a Stargate makes can still be heard
+			#Range: 16 ~ 128
+			stargate_max_sound_distance = 64
 
-			["Stargate Journey Client Config"."Stargate Config".client.universe_stargate]
-				#The RGBA values in Universe Stargate's Event Horizon
-				#Range: 0 ~ 255
-				red = 255
-				#Range: 0 ~ 255
-				green = 255
-				#Range: 0 ~ 255
-				blue = 255
-				#Range: 0 ~ 255
-				alpha = 255
+	["Stargate Journey Client Config"."DHD Config"]
 
-			["Stargate Journey Client Config"."Stargate Config".client.milky_way_stargate]
-				#The RGBA values in Milky Way Stargate's Event Horizon
-				#Range: 0 ~ 255
-				red = 55
-				#Range: 0 ~ 255
-				green = 55
-				#Range: 0 ~ 255
-				blue = 255
-				#Range: 0 ~ 255
-				alpha = 255
+		["Stargate Journey Client Config"."DHD Config".client]
+			#If true, Milky Way DHD symbol positions won't be ordered and instead be based on the canon
+			milky_way_dhd_canon_symbol_positions = false
+			#If true, Pegasus DHD symbol positions won't be ordered and instead be based on the canon
+			pegasus_dhd_canon_symbol_positions = false
 
-			["Stargate Journey Client Config"."Stargate Config".client.pegasus_stargate]
-				#The RGBA values in Pegasus Stargate's Event Horizon
-				#Range: 0 ~ 255
-				red = 25
-				#Range: 0 ~ 255
-				green = 25
-				#Range: 0 ~ 255
-				blue = 255
-				#Range: 0 ~ 255
-				alpha = 255
+	["Stargate Journey Client Config"."Sky Config"]
 
-			["Stargate Journey Client Config"."Stargate Config".client.classic_stargate]
-				#The RGBA values in Classic Stargate's Event Horizon
-				#Range: 0 ~ 255
-				red = 39
-				#Range: 0 ~ 255
-				green = 113
-				#Range: 0 ~ 255
-				blue = 255
-				#Range: 0 ~ 255
-				alpha = 255
-
-			["Stargate Journey Client Config"."Stargate Config".client.tollan_stargate]
-				#The RGBA values in Tollan Stargate's Event Horizon
-				#Range: 0 ~ 255
-				red = 50
-				#Range: 0 ~ 255
-				green = 100
-				#Range: 0 ~ 255
-				blue = 240
-				#Range: 0 ~ 255
-				alpha = 255
+		["Stargate Journey Client Config"."Sky Config".client]
+			#If true you will render a custom Abydos sky
+			custom_abydos_sky = true
+			#If true you will render a custom Chulak sky
+			custom_chulak_sky = true
+			#If true you will render a custom Cavum Tenebrae sky
+			custom_cavum_tenebrae_sky = true
+			#If true you will render a custom Lantea sky
+			custom_lantea_sky = true
+			#If true you will render a custom Athos sky
+			custom_athos_sky = true
 

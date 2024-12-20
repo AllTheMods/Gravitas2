@@ -163,8 +163,36 @@ let tfcMetalz = [
   'aluminium',
   'titanium'
 ]
+const fire = [
+  "red",
+  "green",
+  "bronze",
+  "gray"
+]
+const ice = [
+  "blue",
+  "white",
+  "sapphire",
+  "silver"
+]
+const lightning = [
+  "electric",
+  "amethyst",
+  "copper",
+  "black"
+]
 
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
+
+  fire.forEach((color) => {
+    event.add("gregitas:eggs/dragon/fire", `iceandfire:dragonegg_${color}`)
+  })
+  ice.forEach((color) => {
+    event.add("gregitas:eggs/dragon/ice", `iceandfire:dragonegg_${color}`)
+  })
+  lightning.forEach((color) => {
+    event.add("gregitas:eggs/dragon/lightning", `iceandfire:dragonegg_${color}`)
+  })
 
   event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
@@ -256,7 +284,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:plates/aluminum", "#forge:plates/aluminium")
   event.add("forge:nuggets/aluminum", "#forge:nuggets/aluminium")
 
-  event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:chipped_coke_gem", "gtceu:flawed_coke_gem", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
+  event.add("tfc:forge_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
   event.add("tfc:blast_furnace_fuel", ["gtceu:coke_gem", "gtceu:coke_block", "gtceu:flawless_coke_gem", "gtceu:exquisite_coke_gem"])
   
   event.add("forge:dusts/sulfur", "tfc:powder/sulfur")
@@ -299,7 +327,89 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
   event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
+  event.add("forge:rods/aluminium", ["vintageimprovements:aluminum_rod","alltheores:aluminum_rod"])
+ 
+  event.removeAllTagsFrom("immersiveengineering:storage_steel")
+  
+  event.add("tfc:glassworking_potash", ["gtceu:saltpeter_dust"])
 
-  //Thorium Reactors
-  event.removeAllTagsFrom('thoriumreactors:fluorite')
+  event.add("scguns:advanced_bullet_material", "gtceu:steel_ingot")
+ 
+  event.add("forge:dusts/saltpeter","scguns:niter_dust")
+
+  const weakCompostables = [
+    event.get("tfc:compost_greens_low"),
+    event.get("tfc:compost_browns_low")
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds())
+
+  const normalCompostables = [
+    event.get("tfc:compost_greens"),
+    event.get("tfc:compost_browns")
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds())
+
+  const strongCompostables = [
+    event.get("tfc:compost_greens_high"),
+    event.get("tfc:compost_browns_high")
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds())
+
+  weakCompostables.forEach(c => event.add("scguns:weak_compost", c))
+  normalCompostables.forEach(c => event.add("scguns:normal_compost", c))
+  strongCompostables.forEach(c => event.add("scguns:strong_compost", c))
+
+  event.add("forge:dusts", "createdieselgenerators:wood_chip")
+  event.add("forge:dusts/wood", "createdieselgenerators:wood_chip")
+
+
+  event.add("forge:dusts/nether_quartz", "createmoredrillheads:quartz_dusts")
+  event.add("forge:dusts/quartz", "gtceu:quartz_sand_dust")
+  event.add("forge:netherrack", "beneath:cobblerack")
+  event.add("forge:dusts", "create:cinder_flour")
+  event.add("forge:dusts/netherrack", "create:cinder_flour")
+  
+  const tfcFermentables = [
+    event.get("tfc:foods/fruits"),
+    event.get("tfc:foods/grains"),
+  ].reduce((arr, iter) => arr.concat(iter), []).map(i => i.getObjectIds());
+  tfcFermentables.forEach(c => event.add("forge:fermentable", c))
+  
+  event.add("forge:fermentable", "tfc:food/potato")
+
+
+  event.add("gregitas_core:apple", "minecraft:apple");
+  event.add("gregitas_core:apple", "tfc:food/green_apple");
+  event.add("gregitas_core:apple", "tfc:food/red_apple");
+
+  event.add("forge:coal_coke", "gtceu:coke_dust");
+  event.add("forge:coal_coke", "gtceu:coke_gem");
+  event.add("forge:storage_blocks/coal_coke", "gtceu:coke_block");
+
+  const tfcCoral = [
+    "tube",
+    "tube_dead",
+    "tube_dead_coral_fan",
+    "tube_coral_fan",
+    "brain_dead_coral",
+    "brain_coral",
+    "bubble_dead_coral",
+    "bubble_coral",
+    "bubble_dead_coral_fan",
+    "bubble_coral_fan",
+    "fire_dead_coral",
+    "fire_coral",
+    "fire_dead_coral_fan",
+    "fire_coral_fan",
+    "horn_dead_coral",
+    "horn_coral",
+    "horn_dead_coral_fan",
+    "horn_coral_fan",
+  ];
+  
+  tfcCoral.forEach(coral => {
+    event.add("create:upgrade_aquatic/coral", `tfc:coral/${coral}`);
+  });
+
+  event.add("forge:dusts/apatite", "tfcthermaldeposits:mineral/powder/apatite")
+
+  event.add("gravitas:phantom", "minecraft:warped_fungus")
+  event.add("gravitas:phantom", "beneath:wood/sapling/warped")
 }

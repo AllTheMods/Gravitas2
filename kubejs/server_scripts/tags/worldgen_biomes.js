@@ -55,10 +55,10 @@ const addStargateBiomes = (/** @type {TagEvent.Biome} */ event) => {
 
 const removeBiomesFromStructures = (/** @type {TagEvent.Biome} */ event) => {
   event.get("minecraft:has_structure/stronghold").remove("#is_overworld")
-  event.get("minecraft:has_structure/mineshaft").removeAll()
-  event.get("minecraft:has_structure/mineshaft_mesa").removeAll()
-  event.get("ad_astra:has_structure/oil_well_biomes").removeAll()
+
   event.get("repurposed_structures:has_structure/strongholds/nether").removeAll()
+  event.get("alekiships:has_structure/unfinished_rowboat").removeAll()
+  event.get("alekiships:has_structure/unfinished_sloop").removeAll()
 }
 
 const addBiomesToStructures = (/** @type {TagEvent.Biome} */ event) => {
@@ -70,6 +70,6 @@ const addBiomesToStructures = (/** @type {TagEvent.Biome} */ event) => {
   event.add("minecraft:has_structure/ruined_portal_swamp", ["#minecraft:is_lowland"])
   event.add("repurposed_structures:has_structure/mineshafts/desert", ["#minecraft:is_badlands"])
   event.get("ae2:has_meteorites").remove("#is_overworld")
-
+  event.add("repurposed_structures:has_structure/strongholds/nether",["gcyr:martian_wastelands"])
 
 }

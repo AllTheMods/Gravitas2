@@ -1,0 +1,68 @@
+{
+  "Replace": false,
+  "StepHeight": 0,
+  "ExperienceDrop": 0,
+  "Attributes": {
+    "MaxHealth": 3.0,
+    "MaxHunger": 10.0,
+    "MaxEnergy": 10.0,
+    "MovementSpeed": 0.1,
+    "FollowRange": 8.0
+  },
+  "AI": {
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 3000
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 0.6
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:snail.lay_egg",
+        "Speed": 0.6
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:random_stroll",
+        "Speed": 0.6,
+        "Interval": 40,
+        "PositionChooser": "CLIMB"
+      }
+    ]
+  },
+  "SpawnData": {
+    "SpawnCount": 1,
+    "SpawnWeight": 1,
+    "RandomChance": 0.3,
+    "Biomes": [
+      {
+        "ID": "minecraft:river"
+      },
+      {
+        "ID": "minecraft:swamp"
+      },
+      {
+        "ID": "minecraft:mangrove_swamp"
+      }
+    ]
+  },
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "open",
+          "Length": 0.8
+        },
+        {
+          "ID": "hide"
+        }
+      ]
+    }
+  ]
+}

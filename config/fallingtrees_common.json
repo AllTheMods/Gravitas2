@@ -2,19 +2,19 @@
   "disableCrouchMining": true,
   "disableExtraToolDamage": false,
   "disableExtraFoodExhaustion": false,
-  "onlyFallWithRequiredTool": false,
   "treeLifetimeLength": 4.0,
   "dynamicMiningSpeed": {
     "disable": true,
     "speedMultiplication": 0.5,
-    "minimumSpeed": 1.0E-4
+    "maxSpeedMultiplication": 16.0
   },
   "trees": {
     "standardTree": {
       "algorithm": {
         "maxLeavesRadius": 10,
         "maxLogAmount": 256,
-        "shouldFallOnMaxLogAmount": false
+        "shouldFallOnMaxLogAmount": false,
+        "shouldIgnorePersistentLeaves": true
       },
       "logFilter": {
         "whitelistedTags": [
@@ -39,7 +39,15 @@
         ],
         "blacklist": []
       },
-      "enabled": true
+      "enabled": true,
+      "onlyFallWithRequiredTool": false,
+      "allowedToolFilter": {
+        "whitelistedTags": [
+          "minecraft:axes"
+        ],
+        "whitelist": [],
+        "blacklist": []
+      }
     },
     "verticalTree": {
       "filter": {
@@ -50,10 +58,46 @@
         ],
         "blacklist": []
       },
-      "enabled": true
+      "enabled": true,
+      "onlyFallWithRequiredTool": false,
+      "allowedToolFilter": {
+        "whitelistedTags": [],
+        "whitelist": [],
+        "blacklist": []
+      }
     },
     "chorusTree": {
-      "enabled": true
+      "enabled": true,
+      "onlyFallWithRequiredTool": false,
+      "allowedToolFilter": {
+        "whitelistedTags": [],
+        "whitelist": [],
+        "blacklist": []
+      }
+    },
+    "mushroomTree": {
+      "stemFilter": {
+        "whitelistedTags": [],
+        "whitelist": [
+          "minecraft:mushroom_stem"
+        ],
+        "blacklist": []
+      },
+      "capFilter": {
+        "whitelistedTags": [],
+        "whitelist": [
+          "minecraft:red_mushroom_block",
+          "minecraft:brown_mushroom_block"
+        ],
+        "blacklist": []
+      },
+      "enabled": true,
+      "onlyFallWithRequiredTool": false,
+      "allowedToolFilter": {
+        "whitelistedTags": [],
+        "whitelist": [],
+        "blacklist": []
+      }
     }
   }
 }

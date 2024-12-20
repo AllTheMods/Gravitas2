@@ -3,8 +3,6 @@
 [player_death]
 	#Whether to unlock access to a grave if the player has been killed by another player [false/true|default:true]
 	pvp_unlock_grave = true
-	#Whether to handle player death [false/true|default:true]
-	handle_player_death = true
 	#Whether to restore beneficial effects after a player dies [false/true|default:true]
 	restore_effects_on_death = false
 	#Only abandoned graves can have losses of items (based on the decay_time) [false/true|default:true]
@@ -141,6 +139,8 @@
 	#Duration of voodoo poppet's effects in seconds when preventing death [5..60000|default:60]
 	#Range: 5 ~ 60000
 	duration_voodoo_poppet_effects = 60
+	#The worlds that can't be discovered by lost tablets
+	lost_tablet_denied_worlds = []
 
 #For settings related to decorative tombs and magic items
 [decorative_grave]
@@ -199,7 +199,7 @@
 	#Range: 1 ~ 200000
 	max_xp_lost_page = 2000
 	#Entities that can't found as loot in a Familiar Receptacle
-	unhandled_tameable_entities = []
+	unhandled_tamable_entities = []
 
 #Allows to enable some features related to others mods
 [compatibility]

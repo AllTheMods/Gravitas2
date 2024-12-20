@@ -5,37 +5,12 @@
 	group: "4D27B882A1217B68"
 	icon: "tfc:seeds/tomato"
 	id: "5063B0E3B65A6863"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			description: ["{gravitas.quest.farm.desc.need}"]
 			id: "7FEBCBBBD4FD3B5C"
-			rewards: [
-				{
-					id: "3A869AC619240A51"
-					item: {
-						Count: 1b
-						id: "gtceu:wrought_iron_hoe"
-						tag: {
-							DisallowContainerItem: 0b
-							GT.Behaviours: { }
-							GT.Tool: {
-								Damage: 0
-								MaxDamage: 383
-							}
-							HideFlags: 2
-						}
-					}
-					type: "item"
-				}
-				{
-					advancement: "minecraft:husbandry/plant_seed"
-					criterion: ""
-					id: "278073706AB51624"
-					type: "advancement"
-				}
-			]
 			tasks: [{
 				advancement: "tfc:world/seeds"
 				criterion: ""
@@ -50,11 +25,6 @@
 			dependencies: ["7FEBCBBBD4FD3B5C"]
 			description: ["{gravitas.quest.farm.desc.hydration}"]
 			id: "0C6662072EB8BD48"
-			rewards: [{
-				id: "57E7030BFBCB7CDD"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [{
 				id: "3D6F6B1887B989D8"
 				item: "tfc:wooden_bucket"
@@ -68,17 +38,11 @@
 			dependencies: ["7FEBCBBBD4FD3B5C"]
 			description: ["{gravitas.quest.farm.desc.temperature}"]
 			id: "322A52B4D084D68B"
-			rewards: [{
-				id: "01E3B7FFE0E18CB5"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [{
 				id: "11E6F3B016708090"
-				title: "Temperature"
+				title: "{gravitas.quest.farm.temperature}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.farm.temperature}"
 			x: 7.0d
 			y: 2.0d
 		}
@@ -87,15 +51,16 @@
 			description: ["{gravitas.quest.farm.desc.moving_water}"]
 			id: "2BB315E610D88139"
 			rewards: [{
-				count: 16
+				count: 5
 				id: "35EB98725D62EFE9"
 				item: "tfc:mortar"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
 				id: "00D4E1C10EC4A323"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -182,6 +147,7 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.aqueducts}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.moving_water}"
@@ -195,7 +161,7 @@
 			rewards: [{
 				id: "73D834E3DD02F340"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:paper"
 					tag: {
 						display: {
@@ -208,7 +174,7 @@
 			tasks: [{
 				id: "6E735DBCDF1214FB"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "firmalife:watering_can"
 					tag: {
 						Damage: 0
@@ -225,17 +191,11 @@
 			description: ["{gravitas.quest.farm.desc.season}"]
 			icon: "minecraft:clock"
 			id: "64B686A83A7C5D47"
-			rewards: [{
-				id: "5C10B07D4997A52C"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
 			tasks: [{
 				id: "2CF58F09C4926A3C"
-				title: "Time and Season"
+				title: "{gravitas.quest.farm.season}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.farm.season}"
 			x: 7.5d
 			y: 3.0d
 		}
@@ -243,7 +203,7 @@
 			dependencies: ["322A52B4D084D68B"]
 			description: ["{gravitas.quest.farm.desc.y_level}"]
 			icon: {
-				Count: 1b
+				Count: 1
 				ForgeCaps: {
 					"tfc:item_heat": {
 						heat: 0.0f
@@ -256,7 +216,7 @@
 			rewards: [{
 				id: "16E9F1FE18EF8B7B"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -269,10 +229,9 @@
 			}]
 			tasks: [{
 				id: "7AC0A12D92068CDB"
-				title: "Y-Level"
+				title: "{gravitas.quest.farm.y_level}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.farm.y_level}"
 			x: 8.5d
 			y: 3.0d
 		}
@@ -281,17 +240,12 @@
 			description: ["{gravitas.quest.farm.desc.climate}"]
 			icon: "tfc:wood/sapling/oak"
 			id: "7FEF46A575DDDD1F"
-			rewards: [{
-				id: "779980DDA782F771"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
 			tasks: [{
 				dimension: "minecraft:overworld"
 				id: "207244BA9C17E0A6"
+				title: "{gravitas.quest.farm.climate}"
 				type: "dimension"
 			}]
-			title: "{gravitas.quest.farm.climate}"
 			x: 9.5d
 			y: 3.0d
 		}
@@ -310,7 +264,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.compost}"
-			x: 10.0d
+			x: 12.5d
 			y: 1.0d
 		}
 		{
@@ -327,7 +281,7 @@
 			tasks: [{
 				id: "369D1C2DC409FA69"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -385,7 +339,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.P}"
-			x: 9.0d
+			x: 11.5d
 			y: 2.0d
 		}
 		{
@@ -402,7 +356,7 @@
 			tasks: [{
 				id: "694ED05F71FEE948"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -460,7 +414,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.N}"
-			x: 10.0d
+			x: 12.5d
 			y: 2.0d
 		}
 		{
@@ -477,7 +431,7 @@
 			tasks: [{
 				id: "2169288A22DA82FA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -535,7 +489,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.K}"
-			x: 11.0d
+			x: 13.5d
 			y: 2.0d
 		}
 		{
@@ -553,7 +507,7 @@
 			tasks: [{
 				id: "25F26A9C1585B0EA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -618,7 +572,7 @@
 				{
 					id: "21040C11C73C7153"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -654,15 +608,16 @@
 			hide_dependency_lines: true
 			id: "2936A0213A2D9CD7"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "03CEF21A812FB60E"
 				item: "tfc:compost"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
 				id: "302EDBF90AB136EC"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -693,6 +648,7 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.planters}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.planters}"
@@ -744,7 +700,7 @@
 			tasks: [{
 				id: "1555AE51E595EC9A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -834,8 +790,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.axle}"
-			x: 6.0d
-			y: 6.5d
+			x: 7.0d
+			y: 7.0d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.pipe}"]
@@ -852,22 +808,23 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.pipe}"
-			x: 6.0d
-			y: 4.5d
+			x: 5.5d
+			y: 5.5d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.waterwheel}"]
 			id: "6CFDA7FA4D944B6D"
 			rewards: [{
-				count: 10
+				count: 5
 				id: "6FEB6F63233E2B19"
 				item: "tfc:wood/axle/white_cedar"
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
 				id: "1FB33F5816421672"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -957,8 +914,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.waterwheel}"
-			x: 5.0d
-			y: 7.5d
+			x: 7.0d
+			y: 8.5d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.windmill}"]
@@ -972,7 +929,7 @@
 			tasks: [{
 				id: "53830EC7B59EBB44"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -1043,12 +1000,227 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.blades}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.windmill}"
-			x: 5.0d
+			x: 5.5d
+			y: 7.0d
+		}
+		{
+			id: "3F9B99AEBDADB0AF"
+			tasks: [{
+				id: "126E9234E0069DD7"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:brass_ingot"
+				}
+				type: "item"
+			}]
+			x: 13.5d
 			y: 5.5d
 		}
+		{
+			dependencies: ["3F9B99AEBDADB0AF"]
+			description: [
+				"{gravitas.quest.bronze.desc.climate_station.1}"
+				"{gravitas.quest.bronze.desc.climate_station.2}"
+			]
+			id: "3BB1D3FCB985FC87"
+			tasks: [{
+				id: "3B280FD0D85F86B2"
+				item: "firmalife:climate_station"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["3BB1D3FCB985FC87"]
+			description: [
+				"{gravitas.quest.bronze.desc.cellar.1}"
+				"{gravitas.quest.bronze.desc.cellar.2}"
+			]
+			id: "0AFAF7178C0805EF"
+			tasks: [
+				{
+					id: "230A912AC9A764B4"
+					item: "firmalife:sealed_door"
+					type: "item"
+				}
+				{
+					id: "7CDC75B6D325E49E"
+					item: "firmalife:sealed_bricks"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.bronze.cellar}"
+			x: 12.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["0AFAF7178C0805EF"]
+			id: "3F3C7E5A1F0C46EA"
+			tasks: [{
+				id: "4342A6DE26E696C0"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "firmalife:food_shelves"
+					}
+				}
+				title: "{gravitas.quest.bronze.food_shelf}"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["0AFAF7178C0805EF"]
+			id: "3E225E353A085850"
+			tasks: [{
+				id: "7EE82C312DF0BAF3"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "firmalife:hangers"
+					}
+				}
+				title: "{gravitas.quest.bronze.hangers}"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3BB1D3FCB985FC87"]
+			description: [
+				"{gravitas.quest.bronze.desc.greenhouse.1}"
+				"{gravitas.quest.bronze.desc.greenhouse.2}"
+				"{gravitas.quest.bronze.desc.greenhouse.3}"
+			]
+			id: "29080D2FE2948302"
+			tasks: [{
+				id: "43C41A467C560623"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "firmalife:greenhouse"
+					}
+				}
+				title: "{gravitas.quest.bronze.greenhouse}"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["29080D2FE2948302"]
+			description: ["{gravitas.quest.bronze.desc.quad}"]
+			id: "19C1FA386510A39E"
+			tasks: [{
+				id: "22FAC9CC5CC448D7"
+				item: "firmalife:quad_planter"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["29080D2FE2948302"]
+			description: ["{gravitas.quest.bronze.desc.hanging}"]
+			id: "634C5DF84CC8828A"
+			tasks: [{
+				id: "395287A7B77CE355"
+				item: "firmalife:hanging_planter"
+				type: "item"
+			}]
+			x: 15.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["29080D2FE2948302"]
+			description: ["{gravitas.quest.bronze.desc.hydro}"]
+			id: "04075FE3C123DA1B"
+			tasks: [{
+				id: "161EF5670E3671B2"
+				item: "firmalife:hydroponic_planter"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["29080D2FE2948302"]
+			description: ["{gravitas.quest.bronze.desc.large}"]
+			id: "31E9A02BCD4B9616"
+			tasks: [{
+				id: "5E3AF4AF602751DB"
+				item: "firmalife:large_planter"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["29080D2FE2948302"]
+			description: ["{gravitas.quest.bronze.desc.bonsai}"]
+			id: "3960848FBE27EDA2"
+			tasks: [{
+				id: "1E9C0214FC5FB6C4"
+				item: "firmalife:bonsai_planter"
+				type: "item"
+			}]
+			x: 15.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["29080D2FE2948302"]
+			description: ["{gravitas.quest.bronze.desc.trellis}"]
+			id: "565E14AE8A096DE3"
+			tasks: [{
+				id: "743A191E6A0A84BB"
+				item: "firmalife:trellis_planter"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 8.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "1EE67293579AF191"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "32C84754AE82D9B3"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: -0.5d
+		}
 	]
-	title: "{gravitas.chapters.9.title}"
+	title: "{gravitas.chapters.7.title}"
 }

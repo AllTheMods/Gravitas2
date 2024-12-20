@@ -146,6 +146,9 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
     )
   })
 
+  event.replaceInput({ input: "minecraft:melon_slice" }, "minecraft:melon_slice", "tfc:food/melon_slice");
+  event.replaceOutput({ output: "minecraft:melon_seeds" }, "minecraft:melon_seeds", "tfc:seeds/melon");
+
   //Railways (Steam n Rails)
   event.forEachRecipe({mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_[^_]+$/}, r => {
     let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
@@ -193,6 +196,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 
 
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
+  event.replaceOutput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceInput({}, "minecraft:stone_button", "#minecraft:stone_buttons")
   event.replaceInput({ mod: "iceandfire" }, "minecraft:stone_bricks", "#forge:stone_bricks")
 
@@ -202,7 +206,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceOutput({ id: `/^gtceu:smelting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceOutput({ id: `/^gtceu:blasting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceOutput({ id: `/^minecraft:iron_ingot_from_.*/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
-  event.replaceInput({ mod: "computercraft"}, "minecraft:redstone", "gtceu:basic_electronic_circuit")
+  event.replaceInput({ mod: "computercraft"}, "minecraft:redstone", "#gtceu:circuits/lv")
 
   event.replaceInput({ mod: "immersiveengineering"}, "#forge:rods/aluminum", "gtceu:aluminium_rod")
 
@@ -276,4 +280,31 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 //simple planes
 
   event.replaceInput({ id: "simpleplanes:seats"}, "minecraft:phantom_membrane", "#create:seats")
+
+//gcyr
+
+  event.replaceInput({ id: "gcyr:shaped/space_chest"}, "gtceu:tungstensteel_fluid_cell", "gtceu:titanium_fluid_cell")
+
+  //SCGuns
+  event.replaceInput({ mod: "scguns"}, "minecraft:stone", "#tfc:rock/smooth")
+
+  // treated wood
+
+  event.replaceInput({ input: "firmalife:treated_wood" }, "firmalife:treated_wood", "#forge:treated_wood")
+  event.replaceInput({ input: "gtceu:treated_wood_planks" }, "gtceu:treated_wood_planks", "#forge:treated_wood")
+  event.replaceInput({ input: "immersiveengineering:treated_wood_packaged" }, "immersiveengineering:treated_wood_packaged", "#forge:treated_wood")
+  event.replaceInput({ input: "immersiveengineering:treated_wood_vertical" }, "immersiveengineering:treated_wood_vertical", "#forge:treated_wood")
+  event.replaceInput({ input: "immersiveengineering:treated_wood_horizontal" }, "immersiveengineering:treated_wood_horizontal", "#forge:treated_wood")
+  
+  //netherrack/cinder flour
+  event.replaceInput({ input: "minecraft:netherrack" }, "minecraft:netherrack", "#forge:netherrack")
+  event.replaceInput({ input: "create:cinder_flour" }, "create:cinder_flour", "#forge:dusts/netherrack")
+  
+  //apples
+  event.replaceInput({ input: "minecraft:apple"} ,"minecraft:apple", "#gregitas_core:apple")
+
+  //gtceu
+  event.replaceInput({ mod: "gtceu"}, "minecraft:chest", "#forge:chests/wooden") //fix ULV buses requiring vanilla chest
+
+  event.replaceInput({ input: "minecraft:phantom_membrane" }, "minecraft:phantom_membrane", "#gravitas:phantom")
 }

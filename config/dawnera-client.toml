@@ -1,0 +1,10 @@
+
+["Client Settings"]
+	#Show Dinosaur Roar Particles
+	roarParticles = true
+	#Dinosaur Gui Position
+	#Range: -1000 ~ 1000
+	dinoGuiX = 55
+	#Range: -1000 ~ 1000
+	dinoGuiY = 144
+

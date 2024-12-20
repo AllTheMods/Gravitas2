@@ -7,6 +7,7 @@ const $EventResult = Java.loadClass("dev.architectury.event.EventResult")
 const $UtilsJS = Java.loadClass("dev.latvian.mods.kubejs.util.UtilsJS")
 /** @type {Internal.Stream} */
 const $Stream = Java.loadClass("java.util.stream.Stream")
+const $ArrayList = Java.loadClass("java.util.ArrayList")
 
 const pkgJson = {
 	"credit": "Made with Blockbench",

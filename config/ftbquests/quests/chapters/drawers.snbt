@@ -3,18 +3,19 @@
 	default_quest_shape: ""
 	filename: "drawers"
 	group: "3CB58C688DD23BD2"
-	icon: "storagedrawers:controller"
+	icon: "everycomp:sd/tfc/oak_full_drawers_4"
 	id: "4E112C587DAC7B12"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			description: ["{gravitas.quest.drawer.desc.drawer}"]
+			icon: "everycomp:sd/tfc/oak_full_drawers_1"
 			id: "495B2BDF498A6CA1"
 			tasks: [{
 				id: "10536EA4B2E69660"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -105,9 +106,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.drawer}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.drawer}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -123,10 +124,9 @@
 			}]
 			tasks: [{
 				id: "25E366C5E228AF94"
-				title: "Types of Drawers"
+				title: "{gravitas.quest.drawer.types}"
 				type: "checkmark"
 			}]
-			title: "{gravitas.quest.drawer.types}"
 			x: -1.5d
 			y: 0.0d
 		}
@@ -156,7 +156,7 @@
 			rewards: [{
 				id: "00FBDE5CD320C4ED"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -170,7 +170,7 @@
 			tasks: [{
 				id: "35D6F37C877D8C56"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -206,12 +206,13 @@
 		{
 			dependencies: ["12F02E2416673200"]
 			description: ["{gravitas.quest.drawer.desc.1x2}"]
+			icon: "everycomp:sd/tfc/oak_full_drawers_4"
 			id: "6CD40AED4F2014C4"
 			tasks: [
 				{
 					id: "6B51F8E969BAFB96"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -302,12 +303,13 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.1x2}"
 					type: "item"
 				}
 				{
 					id: "1502B154DC2B3BE9"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -398,22 +400,23 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.1x2}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.drawer.1x2}"
 			x: -2.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["12F02E2416673200"]
 			description: ["{gravitas.quest.drawer.desc.2x2}"]
+			icon: "everycomp:sd/tfc/oak_half_drawers_1"
 			id: "683DAC76BC412533"
 			tasks: [
 				{
 					id: "4F0408279DBFAF59"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -504,12 +507,13 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 				{
 					id: "7A7E66FCEEBDEEB3"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -600,12 +604,13 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 				{
 					id: "42D8ED619A63567E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -696,21 +701,22 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.drawer.2x2}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.drawer.2x2}"
 			x: -2.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["12F02E2416673200"]
 			description: ["{gravitas.quest.drawer.desc.trim}"]
+			icon: "everycomp:sd/tfc/oak_trim"
 			id: "12C429330257E66C"
 			tasks: [{
 				id: "2E623D494167D4BC"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -801,9 +807,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.trim}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.trim}"
 			x: -2.5d
 			y: 0.0d
 		}
@@ -814,7 +820,7 @@
 			tasks: [{
 				id: "2D05E35301C5998E"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -849,9 +855,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.more}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.more}"
 			x: 0.5d
 			y: 2.5d
 		}
@@ -868,7 +874,7 @@
 			tasks: [{
 				id: "7C7951728CB0ABA7"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -887,9 +893,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.redstone}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.redstone}"
 			x: -1.0d
 			y: 1.5d
 		}
@@ -900,7 +906,7 @@
 			tasks: [{
 				id: "32E72B7DF003B121"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -915,9 +921,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.drawer.show}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.drawer.show}"
 			x: -0.5d
 			y: 2.5d
 		}
@@ -1011,6 +1017,32 @@
 			title: "{gravitas.quest.drawer.controller}"
 			x: 0.0d
 			y: -2.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "5E735798274FDF69"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "12EC9FA00A59089D"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -4.0d
 		}
 	]
 	title: "{gravitas.chapters.31.title}"

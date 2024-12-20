@@ -8,112 +8,76 @@
 	id: "2E58B32F9A1289D6"
 	images: [
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "kubejs:textures/biomes_text.png"
 			rotation: 0.0d
 			width: 4.5d
-			x: -3.0d
-			y: -16.0d
+			x: 1.2857142857142847d
+			y: -1.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/aquatic.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: -4.5d
-			y: -14.5d
+			x: -1.7142857142857153d
+			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/high_altitude.png"
 			rotation: 0.0d
 			width: 4.0d
-			x: -5.285714285714285d
-			y: -10.0d
+			x: -2.5d
+			y: 4.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/low_altitude.png"
 			rotation: 0.0d
 			width: 3.5d
-			x: -5.142857142857139d
-			y: -13.0d
+			x: -2.357142857142854d
+			y: 1.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/mid_altitude.png"
 			rotation: 0.0d
 			width: 3.5d
-			x: -5.142857142857139d
-			y: -11.5d
+			x: -2.357142857142854d
+			y: 3.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/shores.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: -4.464285714285715d
-			y: -7.0d
+			x: -1.6785714285714306d
+			y: 7.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/water.png"
 			rotation: 0.0d
 			width: 1.5d
-			x: -4.285714285714285d
-			y: -8.535714285714285d
+			x: -1.5d
+			y: 5.964285714285715d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/lakes.png"
 			rotation: 0.0d
 			width: 1.5d
-			x: -4.28d
-			y: -5.5d
+			x: -1.4942857142857155d
+			y: 9.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "kubejs:textures/nether.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: -4.5d
-			y: -4.0d
+			x: -1.7142857142857153d
+			y: 10.5d
 		}
 	]
 	order_index: 0
@@ -139,7 +103,7 @@
 					disable_toast: true
 					id: "554D0CF89F994B9F"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -156,13 +120,13 @@
 					disable_toast: true
 					id: "2C0FA13DB3C7C0B5"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -171,19 +135,19 @@
 					disable_toast: true
 					id: "3419CD4167C00630"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.badlands}"
-			x: -3.0d
-			y: -11.5d
+			x: 0.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -205,7 +169,7 @@
 					disable_toast: true
 					id: "34D3A2ABE63A4E69"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -222,13 +186,13 @@
 					disable_toast: true
 					id: "49ABB45AC71E825A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -237,19 +201,19 @@
 					disable_toast: true
 					id: "2FA62A7C70673302"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.inverted_badlands}"
-			x: -2.0d
-			y: -11.5d
+			x: 1.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -271,7 +235,7 @@
 					disable_toast: true
 					id: "373361598194E3FD"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -288,13 +252,13 @@
 					disable_toast: true
 					id: "1F6CCAC0BD39AC27"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -303,19 +267,19 @@
 					disable_toast: true
 					id: "651EA37030407231"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.canyons}"
-			x: 0.0d
-			y: -11.5d
+			x: 3.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -337,7 +301,7 @@
 					disable_toast: true
 					id: "233F0A5DC2B96F11"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -354,13 +318,13 @@
 					disable_toast: true
 					id: "03F842E6D4C33308"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -369,19 +333,19 @@
 					disable_toast: true
 					id: "686EF426B93C9A86"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.low_canyons}"
-			x: -3.0d
-			y: -13.0d
+			x: 0.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -403,7 +367,7 @@
 					disable_toast: true
 					id: "40CE0908588FE31C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -420,13 +384,13 @@
 					disable_toast: true
 					id: "0548634BB908A7CC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -435,19 +399,19 @@
 					disable_toast: true
 					id: "4B1F046E9C5B1186"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.plains}"
-			x: 0.0d
-			y: -13.0d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -469,7 +433,7 @@
 					disable_toast: true
 					id: "3B73C4FCA2391661"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -486,13 +450,13 @@
 					disable_toast: true
 					id: "7CA0960024E2DA9A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -501,19 +465,19 @@
 					disable_toast: true
 					id: "0E536DF458D5CDE4"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.plateau}"
-			x: -1.0d
-			y: -11.5d
+			x: 2.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -535,7 +499,7 @@
 					disable_toast: true
 					id: "45DCCA98D83DF80C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -552,13 +516,13 @@
 					disable_toast: true
 					id: "27A1B70BAC9EF0A8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -567,19 +531,19 @@
 					disable_toast: true
 					id: "722547729AAFFC28"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.hills}"
-			x: -1.0d
-			y: -13.0d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -601,7 +565,7 @@
 					disable_toast: true
 					id: "728931BA0B7589EC"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -618,13 +582,13 @@
 					disable_toast: true
 					id: "409ECFA8451D5DFC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -633,19 +597,19 @@
 					disable_toast: true
 					id: "7D24089395A294E1"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.rolling_hills}"
-			x: 1.0d
-			y: -11.5d
+			x: 4.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -667,7 +631,7 @@
 					disable_toast: true
 					id: "0F4C51964F5EB48E"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -684,13 +648,13 @@
 					disable_toast: true
 					id: "39AE11AB253C8F41"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -699,19 +663,19 @@
 					disable_toast: true
 					id: "7BE714091FFAE5BB"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.lake}"
-			x: -2.0d
-			y: -8.5d
+			x: 1.0d
+			y: 6.0d
 		}
 		{
 			can_repeat: true
@@ -733,7 +697,7 @@
 					disable_toast: true
 					id: "1ECDB706CFF34BC7"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -750,13 +714,13 @@
 					disable_toast: true
 					id: "6309898AEDB7B279"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -765,19 +729,19 @@
 					disable_toast: true
 					id: "7982F5C7823279E0"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.lowlands}"
-			x: -2.0d
-			y: -13.0d
+			x: 1.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -799,7 +763,7 @@
 					disable_toast: true
 					id: "00333C4BF120B21E"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -816,13 +780,13 @@
 					disable_toast: true
 					id: "327AAEC85E74DA57"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -831,19 +795,19 @@
 					disable_toast: true
 					id: "5BCF2D2F935F963F"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.mountains}"
-			x: -1.0d
-			y: -10.0d
+			x: 2.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -884,7 +848,7 @@
 					disable_toast: true
 					id: "498C598EB2721DD2"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -897,8 +861,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_mountains}"
-			x: -2.0d
-			y: -10.0d
+			x: 1.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -920,7 +884,7 @@
 					disable_toast: true
 					id: "1E8B4C02254CD28F"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -937,13 +901,13 @@
 					disable_toast: true
 					id: "35FAA859FAB675D0"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -952,19 +916,19 @@
 					disable_toast: true
 					id: "265E9C221CCEE2B9"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.old_mountains}"
-			x: -3.0d
-			y: -10.0d
+			x: 0.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -1005,7 +969,7 @@
 					disable_toast: true
 					id: "57787EDA93F5BB24"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1018,8 +982,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.oceanic_mountains}"
-			x: 0.0d
-			y: -10.0d
+			x: 3.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -1060,7 +1024,7 @@
 					disable_toast: true
 					id: "10F4AEDF5B995C77"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1073,8 +1037,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountains}"
-			x: 1.0d
-			y: -10.0d
+			x: 4.0d
+			y: 4.5d
 		}
 		{
 			can_repeat: true
@@ -1116,7 +1080,7 @@
 					disable_toast: true
 					id: "3B5D2A252F710FA6"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1129,8 +1093,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.ocean}"
-			x: -3.0d
-			y: -14.5d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1172,7 +1136,7 @@
 					disable_toast: true
 					id: "08D81AE155AC7A9C"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1185,8 +1149,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.ocean_reef}"
-			x: -2.0d
-			y: -14.5d
+			x: 1.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1217,18 +1181,14 @@
 					type: "item"
 				}
 				{
-					consume_items: true
-					disable_toast: true
-					id: "63879166586F27B5"
+					id: "039BE63ECF871513"
 					item: "minecraft:iron_block"
 					type: "item"
 				}
 				{
-					consume_items: true
-					disable_toast: true
-					id: "2AFF463E7084EE0B"
+					id: "6448E681841175F2"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1241,8 +1201,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.deep_ocean}"
-			x: -1.0d
-			y: -14.5d
+			x: 2.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1283,7 +1243,7 @@
 					disable_toast: true
 					id: "6C4AD2B883251DDF"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1296,8 +1256,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.deep_ocean_trench}"
-			x: 0.0d
-			y: -14.5d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -1319,7 +1279,7 @@
 					disable_toast: true
 					id: "0DFFE66328515B09"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1336,13 +1296,13 @@
 					disable_toast: true
 					id: "47FCA6AA2F5473A2"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1351,19 +1311,19 @@
 					disable_toast: true
 					id: "792029C42B6F197E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.river}"
-			x: -3.0d
-			y: -8.5d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			can_repeat: true
@@ -1404,7 +1364,7 @@
 					disable_toast: true
 					id: "784FF04D84470367"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1417,8 +1377,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.shore}"
-			x: -3.0d
-			y: -7.0d
+			x: 0.0d
+			y: 7.5d
 		}
 		{
 			can_repeat: true
@@ -1440,7 +1400,7 @@
 					disable_toast: true
 					id: "7180FA81B570D5F4"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1457,13 +1417,13 @@
 					disable_toast: true
 					id: "39EB36400159E438"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1472,19 +1432,19 @@
 					disable_toast: true
 					id: "24ECC66708F1818A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.mountain_lake}"
-			x: -3.0d
-			y: -5.5d
+			x: 0.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1525,7 +1485,7 @@
 					disable_toast: true
 					id: "78EF9A59AA630B29"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1538,8 +1498,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_mountain_lake}"
-			x: 0.0d
-			y: -5.5d
+			x: 3.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1561,7 +1521,7 @@
 					disable_toast: true
 					id: "1964FA913A8DA592"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1578,13 +1538,13 @@
 					disable_toast: true
 					id: "704023EC44623A4E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1593,19 +1553,19 @@
 					disable_toast: true
 					id: "620E4992F80039DD"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.old_mountain_lake}"
-			x: -2.0d
-			y: -5.5d
+			x: 1.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1646,7 +1606,7 @@
 					disable_toast: true
 					id: "4A547DCAA8B68203"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1659,8 +1619,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.oceanic_mountain_lake}"
-			x: -1.0d
-			y: -5.5d
+			x: 2.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1701,7 +1661,7 @@
 					disable_toast: true
 					id: "3119208825D684AE"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1714,8 +1674,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.volcanic_oceanic_mountain_lake}"
-			x: 1.0d
-			y: -5.5d
+			x: 4.0d
+			y: 9.0d
 		}
 		{
 			can_repeat: true
@@ -1737,7 +1697,7 @@
 					disable_toast: true
 					id: "55D3D05C4C9E93F2"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -1754,13 +1714,13 @@
 					disable_toast: true
 					id: "429D12C794CED7C8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -1769,19 +1729,19 @@
 					disable_toast: true
 					id: "6D78E92776AD6E11"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.plateau_lake}"
-			x: 2.0d
-			y: -5.5d
+			x: 5.0d
+			y: 9.0d
 		}
 		{
 			id: "50EC0F521D31465C"
@@ -1789,7 +1749,7 @@
 			size: 1.5d
 			tasks: [{
 				icon: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1807,8 +1767,8 @@
 				type: "stat"
 				value: 2000000
 			}]
-			x: 3.75d
-			y: -12.0d
+			x: 6.75d
+			y: 2.5d
 		}
 		{
 			id: "246FF66E4D1AC9B8"
@@ -1816,7 +1776,7 @@
 			size: 1.5d
 			tasks: [{
 				icon: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -1831,8 +1791,8 @@
 				type: "stat"
 				value: 4000000
 			}]
-			x: 3.75d
-			y: -9.0d
+			x: 6.75d
+			y: 5.5d
 		}
 		{
 			can_repeat: true
@@ -1872,8 +1832,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.warped_forest}"
-			x: -3.0d
-			y: -4.0d
+			x: 0.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -1913,8 +1873,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.nether_wastes}"
-			x: -2.0d
-			y: -4.0d
+			x: 1.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -1954,8 +1914,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.crimson_forest}"
-			x: -1.0d
-			y: -4.0d
+			x: 2.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -1995,8 +1955,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.soul_sand_valley}"
-			x: 0.0d
-			y: -4.0d
+			x: 3.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -2036,8 +1996,8 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.minecraft.basalt_deltas}"
-			x: 1.0d
-			y: -4.0d
+			x: 4.0d
+			y: 10.5d
 		}
 		{
 			can_repeat: true
@@ -2059,7 +2019,7 @@
 					disable_toast: true
 					id: "7EDA0F0138593B0F"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -2076,13 +2036,13 @@
 					disable_toast: true
 					id: "3AD2C5FF4AB65F1A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -2091,19 +2051,19 @@
 					disable_toast: true
 					id: "575483C1236FA497"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.salt_marsh}"
-			x: 1.0d
-			y: -13.0d
+			x: 4.0d
+			y: 1.5d
 		}
 		{
 			can_repeat: true
@@ -2125,7 +2085,7 @@
 					disable_toast: true
 					id: "5B9C642117BA5E97"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -2142,13 +2102,13 @@
 					disable_toast: true
 					id: "7F312426A5171EEC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:log_pile_logs"
 						}
 					}
-					title: "Any #tfc:log_pile_logs"
+					title: "{gravitas.shop.map.wood}"
 					type: "item"
 				}
 				{
@@ -2157,19 +2117,19 @@
 					disable_toast: true
 					id: "6BAF50DDF117FAE8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "tfc:seeds"
 						}
 					}
-					title: "Any #tfc:seeds"
+					title: "{gravitas.shop.map.seeds}"
 					type: "item"
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.highlands}"
-			x: 2.0d
-			y: -11.5d
+			x: 5.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: true
@@ -2210,7 +2170,7 @@
 					disable_toast: true
 					id: "47C8D430A5735BE9"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -2223,8 +2183,34 @@
 				}
 			]
 			title: "{gravitas.shop.map.biome.tfc.tidal_flats}"
-			x: -2.0d
-			y: -7.0d
+			x: 1.0d
+			y: 7.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "2E54D926D2173DF2"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "2A14900811D3FEAA"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: -1.5d
 		}
 	]
 	tags: ["biome:tfc.maps"]

@@ -1,4 +1,8 @@
 // priority 0
+
+const $FuelUtil = Java.loadClass("mods.railcraft.api.fuel.FuelUtil")
+const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
+
 StartupEvents.init((e) => {
   if (!Platform.isClientEnvironment()) return
   $CustomClickEvent.register($UtilsJS.makeFunctionProxy("startup", $EventActor, handleFTBCustomClick))
@@ -26,6 +30,12 @@ StartupEvents.postInit((event) => {
 })
 
 StartupEvents.postInit((event) => {
+  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:creosote"), 4800)
+  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:crude_oil"), 18000)
+  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:ethanol"), 32000)
+  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:diesel"), 96000)
+  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:bio_diesel"), 96000)
+
   if (!Platform.isClientEnvironment()) return
   addTooltipToBlocks(event)
 })
@@ -44,16 +54,13 @@ GTCEuStartupEvents.registry("gtceu:element", (event) => {
 
 ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", event => {
   addTooltipIngots(event)
+  addMoreInfoTooltips(event)
 })
 
 ForgeEvents.onEvent(
   "blusunrize.immersiveengineering.api.multiblocks.MultiblockHandler$MultiblockFormEvent",
   (event) => {
-    if (
-      event.getMultiblock().getUniqueName().namespace == "immersiveengineering" &&
-      event.getMultiblock().getUniqueName().path != "feedthrough") {
-      event.setCanceled(true)
-    }
+    banIEMultiblocks(event)
   }
 )
 
@@ -70,3 +77,18 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerAe2ChargerSchema(event)
   registerAe2InscriberSchema(event)
 })
+
+// Server only
+const configPath = "kubejs/config/modpack_config.json"
+const config = JsonIO.read(configPath)
+let bannedBlockEntities
+if (config) {
+  /** @type {Internal.ArrayList<string>} */
+  bannedBlockEntities = config?.server.banned_block_entities
+
+  if (bannedBlockEntities instanceof $ArrayList && !bannedBlockEntities.isEmpty()) {
+    ForgeEvents.onEvent("net.minecraftforge.event.level.ChunkEvent$Load", event => {
+      removeBlockEntities(event)
+    })
+  }
+}

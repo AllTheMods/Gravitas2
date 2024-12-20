@@ -1,0 +1,23 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    },
+    {
+      "fluidTag": "forge:creosote",
+      "amount": 125
+    }
+  ],
+  "results": [
+    {
+      "item": "gtceu:treated_wood_planks"
+    }
+  ],
+  "conditions": [
+    {
+      "fluidTag": "forge:creosote",
+      "type": "createaddition:has_fluid_tag"
+    }
+  ]
+}

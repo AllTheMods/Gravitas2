@@ -46,6 +46,8 @@ const strucBlocksWithPropertiesMap = {
   "minecraft:carrots": "tfc:crop/carrot",
   "minecraft:wheat": "tfc:crop/wheat",
   "minecraft:potatoes": "tfc:crop/potato",
+  "minecraft:melon": "tfc:melon",
+  "minecraft:pumpkin": "tfc:pumpkin",
   // "minecraft:cobblestone_wall": "tfc:rock/cobble/granite_wall",
   // "minecraft:cobblestone_stairs": "tfc:rock/cobble/granite_stairs",
   // "minecraft:cobblestone_slab": "tfc:rock/cobble/granite_slab",
@@ -136,7 +138,8 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
     event.id.startsWith("waystones") ||
     event.id.startsWith("immersiveengineering") ||
     event.id.startsWith("ae2") ||
-    event.id.startsWith("iceandfire")
+    event.id.startsWith("iceandfire") ||
+    event.id.startsWith("scguns") 
   ) {
     event.forEachPalettes((palette) => {
       palette.forEach((struc) => {
@@ -154,7 +157,7 @@ const replaceVanillaBlocks = (/** @type {Internal.StructureLoadEventJS} */ event
           palette.add(struc.position, getState(newBlock))
           return
         }
-        if (!event.id.includes("village")) {
+        if ((!event.id.includes("village")) && (!event.id.includes("pyramid"))) {
           let newWoodBlock = getWoodReplacement(struc.block.idLocation)
           if (newWoodBlock) {
             palette.add(struc.position, getState(newWoodBlock, struc.state()))

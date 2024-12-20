@@ -1,0 +1,374 @@
+{
+  "Replace": false,
+  "PassengerZoom": 8,
+  "RidingSpeed": 0.2,
+  "RidingSprintSpeed": 1.8,
+  "PushModifier": 0,
+  "StepHeight": 2,
+  "ExperienceDrop": "30-50",
+  "CanSprint": true,
+  "CanBreakLeaves": true,
+  "CanDropTrees": true,
+  "Rideable": true,
+  "Tamable": true,
+  "CanWearArmor": true,
+  "RequiresSaddle": true,
+  "Attributes": {
+    "MaxHealth": 256.0,
+    "MaxHunger": 60.0,
+    "MaxEnergy": 200.0,
+    "Armor": 9.0,
+    "MovementSpeed": 0.25,
+    "SwimSpeed": 2.0,
+    "KnockbackResistance": 1.0,
+    "FollowRange": 64.0,
+    "AttackDamage": 14.0
+  },
+  "TameMethod": {
+    "ID": "dawnera:feed_from_ground",
+    "Chance": 1
+  },
+  "RandomActions": {
+    "attack_random": [
+      {
+        "Action": "attack1,50%"
+      },
+      {
+        "Action": "attack2,50%",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      },
+      {
+        "Action": "attack3,30%",
+        "Conditions": [
+          "dawnera:is_grown_up"
+        ]
+      },
+      {
+        "Action": "attack4,30%",
+        "Conditions": [
+          "dawnera:is_on_ground",
+          "dawnera:is_grown_up"
+        ]
+      }
+    ]
+  },
+  "SpawnData": {
+    "SpawnCount": 1,
+    "SpawnWeight": 1,
+    "RandomChance": 0.25,
+    "Biomes": [
+      {
+        "ID": "minecraft:plains"
+      },
+      {
+        "ID": "minecraft:old_growth_pine_taiga"
+      },
+      {
+        "ID": "minecraft:old_growth_spruce_taiga"
+      }
+    ]
+  },
+  "AI": {
+    "TargetGoals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:target_hit_by_owner"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_owner_hit_by"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_hit_by"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_has_baby"
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:target_hunt"
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:target_guard_territory",
+        "AwareDistance": 12,
+        "CanAttackDistance": 9,
+        "CanUse": [
+          "dawnera:is_grown_up",
+          "dawnera:is_not_sleeping",
+          "dawnera:is_not_tamed",
+          "dawnera:has_no_rider",
+          "dawnera:is_no_action",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "TargetConditions": "dawnera:is_player || dawnera:is_big || dawnera:is_giant",
+        "TryToAware": {
+          "Actions": [
+            "dawnera:stop_action,StateController",
+            "dawnera:look_at_target",
+            "dawnera:stop_navigation",
+            "dawnera:anger_particles",
+            "dawnera:play_action,ActionController,roar"
+          ]
+        }
+      }
+    ],
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:float_on_water"
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 5000
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:lay_egg",
+        "Speed": 0.8,
+        "EggBlock": "dawnera:tyrannosaurus_egg",
+        "PositionChooser": "LAND"
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 0.8
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:melee_attack",
+        "Speed": 1.7,
+        "MeleeRange": 1.75,
+        "ShouldSeeTarget": false,
+        "CanUse": [
+          "dawnera:is_not_sleeping"
+        ],
+        "StartAggression": {
+          "Conditions": [
+            "dawnera:is_not_in_water"
+          ],
+          "Actions": [
+            "dawnera:look_at_target",
+            "dawnera:stop_action,StateController",
+            "dawnera:play_action,ActionController,roar"
+          ]
+        },
+        "PerformAttack": {
+          "Conditions": [
+            "dawnera:is_no_action"
+          ],
+          "Actions": [
+            "dawnera:focus_on_target",
+            "dawnera:play_random_action,ActionController,attack_random"
+          ]
+        }
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:follow_owner",
+        "Speed": 1.7,
+        "StartFollowDistance": 10,
+        "StopFollowDistance": 3,
+        "TeleportDistance": 20,
+        "CanFly": false
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:eat_food",
+        "Speed": 0.8,
+        "HorizontalDistance": 20,
+        "VerticalDistance": 2,
+        "MaxItemCountCanEat": 10,
+        "CanUse": [
+          "dawnera:has_no_rider",
+          "dawnera:is_no_action",
+          "dawnera:is_not_sleeping_or_resting",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "FoodEat": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:follow_parent",
+        "Speed": 1.7,
+        "VisibilityDistance": 12,
+        "AcceptableDistance": 10
+      },
+      {
+        "Priority": 5,
+        "ID": "dawnera:look_around"
+      },
+      {
+        "Priority": 6,
+        "ID": "dawnera:random_stroll",
+        "Speed": 0.8,
+        "PositionChooser": "LAND"
+      }
+    ]
+  },
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "attack1",
+          "Length": 0.72
+        },
+        {
+          "ID": "attack2",
+          "Length": 0.92
+        },
+        {
+          "ID": "attack3",
+          "Length": 0.96
+        },
+        {
+          "ID": "attack4",
+          "Length": 1.2
+        },
+        {
+          "ID": "roar",
+          "Length": 4.04
+        },
+        {
+          "ID": "sniff",
+          "Length": 1.92
+        },
+        {
+          "ID": "down",
+          "Length": 1.52
+        },
+        {
+          "ID": "fall_asleep",
+          "Length": 2.96
+        },
+        {
+          "ID": "wake_up",
+          "Length": 3.72
+        },
+        {
+          "ID": "up",
+          "Length": 2.24
+        },
+        {
+          "ID": "eat",
+          "Length": 3.28
+        }
+      ]
+    },
+    {
+      "ID": "StateController",
+      "Actions": [
+        {
+          "ID": "rest"
+        },
+        {
+          "ID": "sleep"
+        }
+      ]
+    }
+  ],
+  "FoodRation": {
+    "Items": [
+      {
+        "Tag": "dawnera:meat_food"
+      }
+    ],
+    "Entities": [
+      {
+        "ID": "alexscaves:tremorsaurus"
+      },
+      {
+        "ID": "alexscaves:relicheirus"
+      },
+      {
+        "ID": "alexscaves:grottoceratops"
+      },
+      {
+        "ID": "alexscaves:vallumraptor"
+      },
+      {
+        "Tag": "dawnera:giant_animal"
+      },
+      {
+        "Tag": "dawnera:big_animal"
+      },
+      {
+        "Tag": "dawnera:medium_animal"
+      }
+    ]
+  },
+  "MobSchedule": {
+    "Conditions": [
+      "dawnera:is_alive",
+      "dawnera:is_on_ground",
+      "dawnera:has_no_target"
+    ],
+    "Tasks": [
+      {
+        "Start": "23:00",
+        "End": "23:20",
+        "Actions": [
+          "dawnera:lie_down"
+        ]
+      },
+      {
+        "Start": "23:20",
+        "End": "05:40",
+        "Actions": [
+          "dawnera:sleep"
+        ]
+      },
+      {
+        "Start": "05:40",
+        "End": "06:00",
+        "Actions": [
+          "dawnera:wake_up"
+        ]
+      },
+      {
+        "Start": "06:00",
+        "End": "23:00",
+        "Actions": [
+          "dawnera:stand_up"
+        ]
+      }
+    ]
+  },
+  "InputControls": {
+    "Buttons": [
+      {
+        "ID": "attack",
+        "Type": "mouse",
+        "Action": "on_click",
+        "Button": "mouse_button_left",
+        "Cooldown": 40
+      },
+      {
+        "ID": "roar",
+        "Type": "mouse",
+        "Action": "on_click",
+        "Button": "mouse_button_right",
+        "Cooldown": 40
+      },
+      {
+        "ID": "attack_ground",
+        "Type": "key",
+        "Action": "on_click",
+        "Button": "key_space",
+        "Cooldown": 40
+      }
+    ]
+  }
+}

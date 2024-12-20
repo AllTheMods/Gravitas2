@@ -1,0 +1,1432 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "gravitaschaptersnew2title"
+	group: "20028FE0986EEEC1"
+	icon: {
+		Count: 1
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+		id: "tfc:metal/anvil/bronze"
+	}
+	id: "7B9452977B7D7BE1"
+	order_index: 1
+	quest_links: [{
+		id: "412F3582380A8B5A"
+		linked_quest: "735C1C31C684CC3E"
+		x: 8.0d
+		y: -5.0d
+	}]
+	quests: [
+		{
+			description: ["{gravitas.quest.stage2.desc.start}"]
+			icon: "gtceu:quantum_eye"
+			id: "7DFCB6CF6B7824B1"
+			rewards: [{
+				id: "3A50AF6E9F1CE57A"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:tin_ingot"
+				}
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				id: "56D76AB0EA3D5D95"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/copper"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.stage2.start}"
+			x: -0.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7DFCB6CF6B7824B1"]
+			description: ["{gravitas.quest.stage2.desc.Bronze}"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "gtceu:bronze_ingot"
+			}
+			id: "5EE0CF563FDF196C"
+			rewards: [{
+				count: 2
+				id: "02221E94D4521195"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:bronze_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1838536A66C966E9"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:bronze_ingot"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:black_bronze_ingot"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:bismuth_bronze_ingot"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.bronze.bronzeIngots}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.bronze.bronzeIngot}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7DFCB6CF6B7824B1"]
+			description: ["{gravitas.quest.stage2.desc.zn}"]
+			id: "1B84424E1011328B"
+			rewards: [{
+				id: "7E90D190B1126C09"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:zinc_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "72DD8C179C5A2F79"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/small_sphalerite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/poor_sphalerite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/normal_sphalerite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:ore/rich_sphalerite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:raw_sphalerite"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:zinc_ingot"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.stage2.zn}"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5EE0CF563FDF196C"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:metal/double_ingot/bronze"
+			}
+			id: "5135ABF24F96F3F0"
+			subtitle: "{gravitas.quest.stage2.subt.doublebronze}"
+			tasks: [{
+				count: 7L
+				id: "0C67EE58EF7A3804"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/double_ingot/bismuth_bronze"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/double_ingot/black_bronze"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/double_ingot/bronze"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.bronze.BDIs}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.bronze.BDI}"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5135ABF24F96F3F0"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:metal/anvil/bronze"
+			}
+			id: "44F8C37DD9151C22"
+			size: 1.25d
+			subtitle: "{gravitas.quest.stage2.subt.anvilbronze}"
+			tasks: [{
+				id: "16E585C32EB39528"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:bronze_anvils"
+					}
+				}
+				title: "{gravitas.quest.bronze.bronze_anvils}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.bronze.bronze_anvil}"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1B84424E1011328B"]
+			id: "3A6A2E6A9E75C645"
+			subtitle: "{gravitas.quest.stage2.mortarf}"
+			tasks: [{
+				id: "216076AB3951A24B"
+				item: {
+					Count: 1
+					id: "gtceu:flint_mortar"
+					tag: {
+						DisallowContainerItem: 0b
+						GT.Behaviours: { }
+						GT.Tool: {
+							Damage: 0
+							MaxDamage: 63
+						}
+						HideFlags: 2
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A6A2E6A9E75C645"]
+			id: "482EBEA7C1754B4C"
+			subtitle: "{gravitas.quest.stage2.subt.zinci}"
+			tasks: [{
+				count: 4L
+				id: "4E97938DADDD4FD5"
+				item: { Count: 4, id: "gtceu:small_zinc_dust" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["482EBEA7C1754B4C"]
+			description: ["{gravitas.quest.stage2.desc.igneousd}"]
+			id: "5A094944E06D050A"
+			tasks: [{
+				id: "778ED2E6618FB2C6"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gregitas_core:igneous_alloy_dust"
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A094944E06D050A"]
+			description: ["{gravitas.quest.stage2.desc.zinalloy}"]
+			id: "1B33A78990E2FF6C"
+			tasks: [{
+				id: "70CE3072FD4742D4"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "create:andesite_alloy"
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["44F8C37DD9151C22"]
+			id: "139A1628E970A1F1"
+			subtitle: "{gravitas.quest.stage2.subt.chisel}"
+			tasks: [{
+				id: "38B8B02C44957784"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/chisel/copper"
+								tag: {
+									Damage: 0
+								}
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "tfc:metal/chisel/bronze"
+								tag: {
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.stage2.chisel}"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["44F8C37DD9151C22"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "gtceu:bronze_plate"
+			}
+			id: "510708C4BDFBB6EF"
+			subtitle: "{gravitas.quest.stage2.subt.anuse}"
+			tasks: [{
+				id: "074C51733E7DEA95"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:bronze_plate"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:black_bronze_plate"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:bismuth_bronze_plate"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.bronze.bronzePlates}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.bronze.bronzePlate}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4771ECA6958AEFDC"]
+			description: ["{gravitas.quest.steel.desc.press}"]
+			icon: "create:mechanical_press"
+			id: "780A932B4C424064"
+			subtitle: "{gravitas.quest.stage2.subt.mechpress}"
+			tasks: [
+				{
+					id: "7F94786747BCC87E"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "6F1B17D462DF2CE5"
+					item: "create:depot"
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1B33A78990E2FF6C"
+				"614C240D2569582C"
+			]
+			description: ["{gravitas.quest.stage2.desc.encfan}"]
+			id: "0D4DD1C4F56B23CE"
+			subtitle: "{gravitas.quest.stage2.subt.encfan}"
+			tasks: [{
+				id: "39CF7622FE21752E"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"1B33A78990E2FF6C"
+				"7C49CD14D67F4215"
+			]
+			id: "000CF8AEF83DEC40"
+			subtitle: "{gravitas.quest.stage2.subt.millstone}"
+			tasks: [{
+				id: "2FCE150C913E8B23"
+				item: "create:millstone"
+				type: "item"
+			}]
+			x: 6.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["139A1628E970A1F1"]
+			id: "7C49CD14D67F4215"
+			subtitle: "{gravitas.quest.stage2.subt.quern}"
+			tasks: [
+				{
+					count: 2L
+					id: "69268A232C652D63"
+					item: "tfc:quern"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5BD367653655BA1C"
+					item: {
+						Count: 1
+						id: "tfc:handstone"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["44F8C37DD9151C22"]
+			id: "2FB772C17B0067E8"
+			shape: "gear"
+			tasks: [{
+				id: "7D8466FA49B457A0"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:raw_graphite"
+							}
+							{
+								Count: 1b
+								id: "tfc:ore/graphite"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.stage2.graphite}"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["44F8C37DD9151C22"]
+			description: ["{gravitas.quest.stage2.desc.kaolin}"]
+			id: "63626742A6CAE4B7"
+			shape: "gear"
+			subtitle: "{gravitas.quest.stage2.subt.kaolin}"
+			tasks: [{
+				id: "52BC642B9C0F9B33"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:kaolin_clay"
+				}
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"2FB772C17B0067E8"
+				"000CF8AEF83DEC40"
+			]
+			id: "10CC2F9265A66C65"
+			subtitle: "{gravitas.quest.stage2.desc.graph}"
+			tasks: [{
+				id: "3EC50439519505DD"
+				item: "tfc:powder/graphite"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["63626742A6CAE4B7"]
+			description: ["{gravitas.quest.stage2.desc.kaolinp}"]
+			id: "5E1B133EB8F3936B"
+			tasks: [{
+				id: "40870096EEA0C0CC"
+				item: "tfc:powder/kaolinite"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"10CC2F9265A66C65"
+				"5E1B133EB8F3936B"
+			]
+			description: ["{gravitas.quest.stage2.desc.fireClay}"]
+			id: "522B7371AFA22E0B"
+			subtitle: "{gravitas.quest.stage2.subt.fireClay}"
+			tasks: [{
+				count: 5L
+				id: "1E4A29588889C768"
+				item: "tfc:fire_clay"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["510708C4BDFBB6EF"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "gtceu:double_bronze_plate"
+			}
+			id: "429F18F04A9AB276"
+			subtitle: "{gravitas.quest.stage2.subt.doublep}"
+			tasks: [{
+				id: "2EC7687F492AE43E"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:double_bronze_plate"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:double_black_bronze_plate"
+							}
+							{
+								Count: 1b
+								ForgeCaps: {
+									"tfc:item_heat": {
+										heat: 0.0f
+										ticks: 0L
+									}
+								}
+								id: "gtceu:double_bismuth_bronze_plate"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.bronze.DBronzePlates}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.bronze.DBronzePlate}"
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"429F18F04A9AB276"
+				"306A44199156BE86"
+				"4299505E2954A413"
+			]
+			description: ["{gravitas.quest.stage2.desc.bloomery}"]
+			icon: "tfc:bloomery"
+			id: "2FCF02569DBD07C9"
+			size: 1.25d
+			subtitle: "{gravitas.quest.stage2.subt.bloomery}"
+			tasks: [
+				{
+					id: "17E036399F3011F7"
+					item: "tfc:bloomery"
+					type: "item"
+				}
+				{
+					count: 11L
+					id: "27519167D338DC05"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "tfc:rock/bricks"
+						}
+					}
+					title: "{gravitas.quest.iron.brick}"
+					type: "item"
+				}
+			]
+			x: 3.125d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2FCF02569DBD07C9"]
+			id: "79AA44B7FAA9FB8E"
+			subtitle: "{gravitas.quest.stage2.subt.tanvil}"
+			tasks: [{
+				id: "041E8CEF9AA8E3A7"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:raw_iron_bloom"
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["79AA44B7FAA9FB8E"]
+			id: "65D59AF3C649CFEA"
+			subtitle: "{gravitas.quest.stage2.subt.tanvil}"
+			tasks: [{
+				id: "2FE52D640AC49EAE"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:refined_iron_bloom"
+				}
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["65D59AF3C649CFEA"]
+			description: ["{gravitas.quest.stage2.desc.weldagain}"]
+			id: "67DD027E0B0B3FE3"
+			tasks: [{
+				id: "1EB3F614BC58ADE2"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:wrought_iron_ingot"
+				}
+				type: "item"
+			}]
+			x: 5.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["67DD027E0B0B3FE3"]
+			id: "4771ECA6958AEFDC"
+			tasks: [{
+				id: "69D9A622E34B7A7B"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/double_ingot/wrought_iron"
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4771ECA6958AEFDC"]
+			id: "7E0E95E46C24E405"
+			size: 1.5d
+			tasks: [{
+				id: "29C793885636DD4E"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/wrought_iron"
+				}
+				type: "item"
+			}]
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E0E95E46C24E405"]
+			icon: "createdeco:decal_warning"
+			id: "7D790105D03659BF"
+			shape: "hexagon"
+			subtitle: "{gravitas.quest.stage2.subt.warning}"
+			tasks: [{
+				id: "739203CB461F0160"
+				title: "{gravitas.quest.stage2.warn}"
+				type: "checkmark"
+			}]
+			x: 7.5d
+			y: 6.25d
+		}
+		{
+			dependencies: ["522B7371AFA22E0B"]
+			id: "514BA24579AE363B"
+			subtitle: "{gravitas.quest.stage2.subt.cruc}"
+			tasks: [{
+				id: "5B550DC083AAA8F8"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:ceramic/unfired_crucible"
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["514BA24579AE363B"]
+			description: ["{gravitas.quest.stage2.desc.cruc}"]
+			id: "1B037FBF07ED2DE2"
+			tasks: [{
+				id: "545DEBAC7F42203B"
+				item: "tfc:crucible"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"7E0E95E46C24E405"
+				"780A932B4C424064"
+			]
+			description: ["{gravitas.quest.stage2.desc.wroughtp}"]
+			id: "614C240D2569582C"
+			subtitle: "{gravitas.quest.stage2.subt.wroughtp}"
+			tasks: [{
+				id: "04640B21CA04365A"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:wrought_iron_plate"
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"614C240D2569582C"
+				"1B037FBF07ED2DE2"
+			]
+			description: ["{gravitas.quest.stage2.desc.blastf}\\n\\n{gravitas.quest.steel.desc.blast_furnace}"]
+			icon: "tfc:blast_furnace"
+			id: "0581CCA230D37C0B"
+			rewards: [{
+				count: 2
+				id: "794EDB758A99EE6F"
+				item: "integratedtunnels:part_interface_item"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "0AB9ED802E4C4D13"
+					item: "tfc:blast_furnace"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "15B59CCC7B6E6F01"
+					item: { Count: 4, id: "gtceu:firebricks" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "7FFEE1BC308DEB03"
+					item: {
+						Count: 12
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:wrought_iron_plate"
+					}
+					type: "item"
+				}
+				{
+					id: "57532763ED22174A"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/tuyere/wrought_iron"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 9.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0D4DD1C4F56B23CE"
+				"7D50B0BB00362F02"
+				"735C1C31C684CC3E"
+			]
+			id: "5249B4D0415DBC97"
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "{gravitas.quest.stage2.subt.vairon}"
+			tasks: [{
+				id: "7A6C680CE5F8DFC0"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			x: 8.75d
+			y: -3.75d
+		}
+		{
+			dependencies: ["0581CCA230D37C0B"]
+			id: "1B28424B63B9C07E"
+			subtitle: "{gravitas.quest.stage2.subt.press}"
+			tasks: [{
+				id: "732800EC45A73D70"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/pig_iron"
+				}
+				type: "item"
+			}]
+			x: 10.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1B28424B63B9C07E"]
+			id: "4A906677C486F581"
+			subtitle: "{gravitas.quest.stage2.subt.press}"
+			tasks: [{
+				id: "637ADAB73097C8E9"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/high_carbon_steel"
+				}
+				type: "item"
+			}]
+			x: 11.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A906677C486F581"]
+			description: ["{gravitas.quest.stage2.desc.steel}"]
+			id: "48F40B8850D384F9"
+			tasks: [{
+				id: "2139DCE2E062E1D9"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			x: 11.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5249B4D0415DBC97"]
+			id: "7F3EB4DC75F3D693"
+			rewards: [{
+				id: "44F6EB45F9065443"
+				item: "minecraft:iron_ingot"
+				random_bonus: 1
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.stage2.subt.ironb}"
+			tasks: [{
+				id: "390056D335F8AFD0"
+				item: "sophisticatedbackpacks:iron_backpack"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"5249B4D0415DBC97"
+				"1B33A78990E2FF6C"
+			]
+			description: ["{gravitas.quest.steel.desc.rolling}"]
+			id: "2EC83871682EC0DB"
+			subtitle: "{gravitas.quest.stage2.subt.rollmill}"
+			tasks: [{
+				id: "2305023E9769F572"
+				item: "createaddition:rolling_mill"
+				type: "item"
+			}]
+			x: 8.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["522B7371AFA22E0B"]
+			id: "16C85CC3477ADB86"
+			subtitle: "{gravitas.quest.stage2.subt.85}"
+			tasks: [{
+				count: 85L
+				id: "2E6CE242E4268822"
+				item: {
+					Count: 85
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:ceramic/unfired_fire_brick"
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["16C85CC3477ADB86"]
+			id: "688AC089CC960D93"
+			subtitle: "{gravitas.quest.stage2.subt.34}"
+			tasks: [{
+				count: 34L
+				id: "41FC63C4C91B892E"
+				item: "gtceu:firebricks"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"2EC83871682EC0DB"
+				"48F40B8850D384F9"
+			]
+			dependency_requirement: "one_completed"
+			id: "5F893F9F93BCE653"
+			tasks: [{
+				count: 3L
+				id: "5D462442CC2A4CD3"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_rod"
+				}
+				type: "item"
+			}]
+			x: 10.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["48F40B8850D384F9"]
+			id: "0F678DC99120442E"
+			tasks: [{
+				id: "3F0E0ED5730FB3D3"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_plate"
+				}
+				type: "item"
+			}]
+			x: 11.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["48F40B8850D384F9"]
+			id: "316E4878864D9390"
+			subtitle: "{gravitas.quest.stage2.subt.screw}"
+			tasks: [{
+				count: 2L
+				id: "4B03CEEAAB6D4323"
+				item: "gtceu:steel_screw"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"316E4878864D9390"
+				"5F893F9F93BCE653"
+				"0F678DC99120442E"
+				"688AC089CC960D93"
+				"5249B4D0415DBC97"
+			]
+			description: ["{gravitas.quest.stage2.desc.prim}"]
+			id: "0379ACDF990F4BDA"
+			shape: "rsquare"
+			size: 2.5d
+			tasks: [{
+				id: "1BFE98A80A1884E6"
+				item: "gtceu:primitive_blast_furnace"
+				type: "item"
+			}]
+			x: 11.25d
+			y: -2.5d
+		}
+		{
+			dependency_requirement: "one_started"
+			description: [
+				"{gravitas.quest.iron.desc.mortar.1}"
+				"{gravitas.quest.iron.desc.mortar.2}"
+			]
+			id: "306A44199156BE86"
+			tasks: [{
+				count: 16L
+				id: "31BABC3E05BC7754"
+				item: "tfc:mortar"
+				type: "item"
+			}]
+			title: "{gravitas.quest.iron.mortar}"
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependency_requirement: "all_started"
+			description: ["{gravitas.quest.iron.desc.cutting}"]
+			id: "4299505E2954A413"
+			tasks: [{
+				count: 16L
+				id: "2FA9340D49696BB3"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:bricks"
+					}
+				}
+				title: "Any #tfc:bricks"
+				type: "item"
+			}]
+			title: "{gravitas.quest.iron.cutting}"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["48F40B8850D384F9"]
+			id: "262189001F2C1C75"
+			rewards: [{
+				count: 3
+				id: "42390CE75F4670C6"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				random_bonus: 2
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				id: "481497C7C19B9B58"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/steel"
+				}
+				type: "item"
+			}]
+			x: 13.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7C49CD14D67F4215"]
+			description: ["{gravitas.quest.stage2.desc.gemd}"]
+			id: "4CEC74B892EA3A64"
+			subtitle: "{gravitas.quest.stage2.subt.gemd}"
+			tasks: [{
+				id: "4B275EFEC03008BB"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:gem_powders"
+					}
+				}
+				title: "{gravitas.quest.stage2.gemd}"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["48F40B8850D384F9"]
+			id: "12AC2CCD46FF3476"
+			rewards: [{
+				count: 4
+				id: "592C2AEC96E13AA7"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:wrought_iron_plate"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "7C4E85479421B1C4"
+				item: "gtceu:steel_crate"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7E0E95E46C24E405"]
+			description: ["{gravitas.quest.id.desc.taste}"]
+			icon: "integrateddynamics:on_the_dynamics_of_integration"
+			id: "291A5F97C601D53D"
+			min_width: 275
+			rewards: [
+				{
+					id: "1897751F8766C14D"
+					item: "integratedterminals:part_terminal_storage"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "005BAEFCB77234AD"
+					item: "integrateddynamics:cable"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0FBF991C5C8962DA"
+					item: "integratedtunnels:part_interface_item"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			tasks: [{
+				id: "7C1554AE918688BE"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.id.taste}"
+			x: 9.0d
+			y: 5.25d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "0BD2B01EE35DF7C8"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "0C7BCA6B167BD3D2"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+	]
+	title: "{gravitas.chapters.2.title}"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "tfc:barrel_instant",
+  "input_item":{
+    "ingredient":{
+      "type":"tfc:not_rotten",
+      "ingredient":{
+        "type":"tfc:lacks_trait",
+        "trait":"gregitas_core:freeze_dried",
+        "ingredient": {
+          "tag": "tfc:foods"
+        }
+      }
+    }
+  },
+  "input_fluid": {
+    "ingredient": "gtceu:liquid_air",
+    "amount": 50
+  },
+  "output_item":{"modifiers":["tfc:copy_input",{"type":"tfc:add_trait","trait":"gregitas_core:freeze_dried"}]}
+}

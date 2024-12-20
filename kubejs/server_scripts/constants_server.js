@@ -5,17 +5,38 @@ const $Integer = Java.loadClass("java.lang.Integer")
 const $Registries = Java.loadClass("net.minecraft.core.registries.Registries")
 const $FluidHelper = Java.loadClass("com.lowdragmc.lowdraglib.side.fluid.FluidHelper")
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
-const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition")
+const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.condition.RockBreakerCondition")
 const $CraftingComponent = Java.loadClass("com.gregtechceu.gtceu.data.recipe.CraftingComponent")
 const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
 const $Fluid = Java.loadClass("net.minecraft.world.level.material.Fluid")
 const $UnboundFluidStackJS = Java.loadClass("dev.latvian.mods.kubejs.fluid.UnboundFluidStackJS")
 const $CreateInputFluid = Java.loadClass("dev.latvian.mods.kubejs.create.CreateInputFluid")
-// const $Class = Java.loadClass("java.lang.Class")
 const $ChunkProvider = Java.loadClass("net.dries007.tfc.world.chunkdata.ChunkDataProvider")
 const $ForestConfig = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestConfig")
 const $ForestFeature = Java.loadClass("net.dries007.tfc.world.feature.tree.ForestFeature")
-// const $BlockContainerJS = Java.loadClass("dev.latvian.mods.kubejs.level.BlockContainerJS")
+const $TFCFeatures = Java.loadClass("net.dries007.tfc.world.feature.TFCFeatures")
+const $Helpers = Java.loadClass("net.dries007.tfc.util.Helpers")
+const $ChunkGeneratorExtension = Java.loadClass("net.dries007.tfc.world.ChunkGeneratorExtension")
+const $RandomSource = Java.loadClass("net.minecraft.util.RandomSource")
+const $ChunkPos = Java.loadClass("net.minecraft.world.level.ChunkPos")
+const $Util = Java.loadClass("net.minecraft.Util")
+const $HashSet = Java.loadClass("java.util.HashSet")
+const $ArrayList = Java.loadClass("java.util.ArrayList")
+
+/** @type {Internal.ForestFeature} */
+const $ForestFeatureObj = $TFCFeatures.FOREST.get()
+/**  @type {Internal.Method} */
+const ForestFeature$getTree = $ForestFeatureObj
+  .getClass()
+  .getDeclaredMethods()
+  .filter((m) => m.name.startsWith("getTree"))[0]
+let $TreeForest
+let $ForestConfigObj
+
+let loadRegistryVariables = (/** @type {Internal.ServerEventJS} */ event) => {
+  $TreeForest = event.server.registryAccess().registry($Registries.CONFIGURED_FEATURE).get().get("tfc:forest")
+  $ForestConfigObj = $TreeForest.config()
+}
 
 let enderTC = [
   {
@@ -223,7 +244,6 @@ const regexStoneArray = [
   [new RegExp(/^infested_stone$/), "tfc:rock/hardened/$1"],
 
   [new RegExp(/^andesite$/), "tfc:rock/hardened/andesite"]
-
 ]
 
 const tfcWoodVanillaToTFC = {
@@ -242,100 +262,100 @@ const tfcWoodVanillaToTFC = {
 
 const tfcCobbleToSand = [
   {
-      stone: 'granite',
-      sand: 'white'
+    stone: "granite",
+    sand: "white"
   },
   {
-      stone: 'diorite',
-      sand: 'white'
+    stone: "diorite",
+    sand: "white"
   },
   {
-      stone: 'gabbro',
-      sand: 'black'
+    stone: "gabbro",
+    sand: "black"
   },
   {
-      stone: 'shale',
-      sand: 'black'
+    stone: "shale",
+    sand: "black"
   },
   {
-      stone: 'claystone',
-      sand: 'brown'
+    stone: "claystone",
+    sand: "brown"
   },
   {
-      stone: 'limestone',
-      sand: 'white'
+    stone: "limestone",
+    sand: "white"
   },
   {
-      stone: 'conglomerate',
-      sand: 'green'
+    stone: "conglomerate",
+    sand: "green"
   },
   {
-      stone: 'dolomite',
-      sand: 'black'
+    stone: "dolomite",
+    sand: "black"
   },
   {
-      stone: 'chert',
-      sand: 'yellow'
+    stone: "chert",
+    sand: "yellow"
   },
   {
-      stone: 'chalk',
-      sand: 'white'
+    stone: "chalk",
+    sand: "white"
   },
   {
-      stone: 'rhyolite',
-      sand: 'red'
+    stone: "rhyolite",
+    sand: "red"
   },
   {
-      stone: 'basalt',
-      sand: 'red'
+    stone: "basalt",
+    sand: "red"
   },
   {
-      stone: 'andesite',
-      sand: 'red'
+    stone: "andesite",
+    sand: "red"
   },
   {
-      stone: 'dacite',
-      sand: 'yellow'
+    stone: "dacite",
+    sand: "yellow"
   },
   {
-      stone: 'slate',
-      sand: 'yellow'
+    stone: "slate",
+    sand: "yellow"
   },
   {
-      stone: 'phyllite',
-      sand: 'brown'
+    stone: "phyllite",
+    sand: "brown"
   },
   {
-      stone: 'schist',
-      sand: 'green'
+    stone: "schist",
+    sand: "green"
   },
   {
-      stone: 'gneiss',
-      sand: 'green'
+    stone: "gneiss",
+    sand: "green"
   },
   {
-      stone: 'marble',
-      sand: 'yellow'
+    stone: "marble",
+    sand: "yellow"
   }
 ]
 
 let tfcMetalFluids = [
-  'bismuth',
-  'bismuth_bronze',
-  'black_bronze',
-  'black_steel',
-  'blue_steel',
-  'bronze',
-  'brass',
-  'copper',
-  'gold',
-  'nickel',
-  'red_steel',
-  'rose_gold',
-  'silver',
-  'steel',
-  'sterling_silver',
-  'tin',
-  'wrought_iron',
-  'zinc'
+  "bismuth",
+  "bismuth_bronze",
+  "black_bronze",
+  "black_steel",
+  "blue_steel",
+  "bronze",
+  "brass",
+  "copper",
+  "gold",
+  "nickel",
+  "red_steel",
+  "rose_gold",
+  "silver",
+  "steel",
+  "sterling_silver",
+  "tin",
+  "wrought_iron",
+  "zinc"
 ]

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:creosote"
+    "#forge:creosote",
+    "gtceu:liquid_air"
   ]
 }

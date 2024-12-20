@@ -7,23 +7,16 @@
 	id: "5B00676D79306EA2"
 	images: [
 		{
-			click: ""
 			corner: true
-			dev: false
 			height: 8.0d
-			hover: [ ]
 			image: "atm:textures/logo.png"
 			rotation: 0.0d
 			width: 14.222222222222221d
-			x: 0.0d
+			x: 0.3d
 			y: -5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["whatthedrunk"]
 			image: "atm:textures/questpics/welcome/whatthedrunkcharacter.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -31,11 +24,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["theVortex"]
 			image: "atm:textures/questpics/welcome/thevortexcharacter.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -43,11 +32,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/whatthedrunk.png"
 			rotation: 0.0d
 			width: 5.601941747572815d
@@ -55,11 +40,7 @@
 			y: 8.15d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 2.9083503054989817d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/name_bar.png"
 			order: -1
 			rotation: 0.0d
@@ -68,11 +49,7 @@
 			y: 8.15d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -81,11 +58,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -94,11 +67,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -107,11 +76,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -120,11 +85,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -133,11 +94,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -147,8 +104,6 @@
 		}
 		{
 			click: "https://discord.gg/3paFjuRfz9"
-			corner: false
-			dev: false
 			height: 1.0d
 			hover: ["Join the Discord!"]
 			image: "ftbchunks:textures/waypoint_default.png"
@@ -158,11 +113,7 @@
 			y: -0.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 2.9083503054989817d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/name_bar.png"
 			order: -1
 			rotation: 0.0d
@@ -171,11 +122,7 @@
 			y: 16.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -184,11 +131,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["Uncandango"]
 			image: "atm:textures/questpics/welcome/uncandango.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -196,11 +139,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -209,11 +148,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["Drack_Ion"]
 			image: "atm:textures/questpics/welcome/drack_ion.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -221,11 +156,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -234,11 +165,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -247,11 +174,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -260,11 +183,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.0d
-			hover: [ ]
 			image: "ftbquests:textures/block/base_input.png"
 			order: -3
 			rotation: 0.0d
@@ -273,11 +192,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["screret"]
 			image: "atm:textures/questpics/welcome/screret.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -285,11 +200,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["Len_Kagamine"]
 			image: "atm:textures/questpics/welcome/len_kagamine.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -297,11 +208,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["LobsterJonn"]
 			image: "atm:textures/questpics/welcome/lobsterjonn.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -309,11 +216,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["AlfredGG"]
 			image: "atm:textures/questpics/welcome/alfredcharacter.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -321,11 +224,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["KuramA"]
 			image: "atm:textures/questpics/welcome/kurama.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -333,11 +232,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["MutantGumDrop"]
 			image: "atm:textures/questpics/welcome/mutantgumdrop.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -345,11 +240,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["ToshibaMicrowave"]
 			image: "atm:textures/questpics/welcome/toshibamicrowave.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -357,11 +248,7 @@
 			y: 13.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/alfredgg_name.png"
 			rotation: 0.0d
 			width: 3.396039603960396d
@@ -369,11 +256,7 @@
 			y: 8.173516147803305d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/mutant_name.png"
 			rotation: 0.0d
 			width: 5.209677419354839d
@@ -381,11 +264,7 @@
 			y: 8.274706623993787d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: ["oly2o6"]
 			image: "atm:textures/questpics/welcome/oly206character.png"
 			rotation: 0.0d
 			width: 3.75d
@@ -393,11 +272,7 @@
 			y: 5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/oly2o6.png"
 			rotation: 0.0d
 			width: 3.492063492063492d
@@ -405,11 +280,7 @@
 			y: 8.244944719231881d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/thevortex_name.png"
 			rotation: 0.0d
 			width: 3.9711538461538463d
@@ -417,11 +288,7 @@
 			y: 8.15565900494618d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/drack_ion.png"
 			rotation: 0.0d
 			width: 3.4741379310344827d
@@ -429,11 +296,7 @@
 			y: 16.530659004946173d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/uncandango.png"
 			rotation: 0.0d
 			width: 3.4803149606299213d
@@ -441,9 +304,6 @@
 			y: 16.567563766850938d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
 			hover: ["KuramA"]
 			image: "atm:textures/questpics/welcome/signs/kurama.png"
@@ -453,11 +313,7 @@
 			y: 16.508039957327128d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/toshiba.png"
 			rotation: 0.0d
 			width: 6.894230769230769d
@@ -465,11 +321,7 @@
 			y: 16.54256376685094d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/lobsterjonn.png"
 			rotation: 0.0d
 			width: 4.836538461538462d
@@ -477,11 +329,7 @@
 			y: 16.483039957327122d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/lenkagamine.png"
 			rotation: 0.0d
 			width: 4.196850393700787d
@@ -489,11 +337,7 @@
 			y: 16.578278052565217d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "atm:textures/questpics/welcome/signs/screret.png"
 			rotation: 0.0d
 			width: 3.0961538461538463d
@@ -505,13 +349,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"ATM Gravitas² combines modern remakes of classics like TerraFirmaCraft, GregTech, RailCraft, with newer entries such as Thorium Reactors, Create New Age, And Steam N Rails!"
-				""
-				"&lATM Gravitas² is currently in the beta stages of modpack development&r. Modlist is mostly final, but breaking changes may occur!"
-				""
-				"If you have any questions or issues, feel free to join the ATM discord!"
-			]
+			description: ["{gravitas.quest.main.desc.welcome}"]
 			icon: "allthetweaks:atm_star"
 			id: "3BC0A50886A3222B"
 			rewards: [{
@@ -523,18 +361,19 @@
 			size: 3.0d
 			tasks: [{
 				id: "5A1784C5676CDC62"
-				title: "Welcome to All The Mods 9!"
+				title: "{gravitas.quest.main.welcome2}"
 				type: "checkmark"
 			}]
-			title: "&dWelcome to AllTheMods Gravitas²!"
+			title: "{gravitas.quest.main.welcome}"
 			x: 0.0d
 			y: -0.5d
 		}
 		{
 			description: [
-				"In this modpack, Quests are optional. Mods are not gated behind completing any quests!"
+				"{gravitas.quest.main.desc.quests}"
+				"{ \"text\": \"CLICK\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"58AC0AF9F4895FEA\" } }"
 				""
-				"The individual questlines outside of the Main questline are meant to serve as mod guides. If you want to follow the progression, make sure to check out the Main Questline!"
+				"{image:gravitas:textures/quests/questlocation.png width:135 height:100 align:1}"
 			]
 			icon: "ftbquests:book"
 			id: "3708A4780ACEB34E"
@@ -551,20 +390,14 @@
 				title: "Quests"
 				type: "checkmark"
 			}]
-			title: "Quests"
+			title: "{gravitas.quest.main.quests}"
 			x: 2.5d
 			y: -0.5d
 		}
 		{
-			description: [
-				"To claim chunks, open up your map using &6M&r, then click the &aClaim Map&r icon in the top left."
-				""
-				"To claim a chunk, left click and drag to claim. "
-				""
-				"To force load a chunk, shift-left click the chunk. If done properly, you'll see lines across the chunk."
-			]
+			description: ["{gravitas.quest.main.desc.chunks}"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "ftbquests:custom_icon"
 				tag: {
 					Icon: "ftbchunks:textures/waypoint_home.png"
@@ -579,16 +412,16 @@
 			size: 1.5d
 			tasks: [{
 				id: "103C42C743E2A2DB"
-				title: "Claiming Chunks"
+				title: "{gravitas.quest.main.chunks}"
 				type: "checkmark"
 			}]
 			x: 4.5d
 			y: -0.5d
 		}
 		{
-			description: ["If you want to create a team for you and your friends, use the command &a/ftbteams party create (name of team)&r to create the team!"]
+			description: ["{gravitas.quest.main.desc.teams}"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "ftbquests:custom_icon"
 				tag: {
 					Icon: "ftbteams:textures/teams.png"
@@ -606,8 +439,35 @@
 				title: "Creating a Team"
 				type: "checkmark"
 			}]
+			title: "{gravitas.quest.main.teams}"
 			x: -4.5d
 			y: -0.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "42563A130ABDEB51"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "1645DDE5DE2BC034"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.0.title}"

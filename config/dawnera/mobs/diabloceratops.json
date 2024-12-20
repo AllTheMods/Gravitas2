@@ -1,0 +1,368 @@
+{
+  "Replace": false,
+  "PassengerZoom": 2,
+  "RidingSpeed": 0.2,
+  "RidingSprintSpeed": 1.5,
+  "PushModifier": 0,
+  "StepHeight": 1,
+  "Tamable": true,
+  "Rideable": true,
+  "CanSprint": true,
+  "CanBreakLeaves": true,
+  "CanDropTrees": false,
+  "CanWearArmor": true,
+  "RequiresSaddle": true,
+  "Attributes": {
+    "MaxHealth": 90.0,
+    "MaxHunger": 40.0,
+    "MaxEnergy": 150.0,
+    "Armor": 10.0,
+    "MovementSpeed": 0.2,
+    "SwimSpeed": 2.0,
+    "KnockbackResistance": 1.0,
+    "FollowRange": 32.0,
+    "AttackDamage": 6.0,
+    "AttackKnockback": 1.65
+  },
+  "TameMethod": {
+    "ID": "dawnera:feed_from_ground",
+    "Chance": 3
+  },
+  "SpawnData": {
+    "SpawnCount": "1-2",
+    "SpawnWeight": 2,
+    "RandomChance": 3,
+    "Biomes": [
+      {
+        "ID": "minecraft:plains"
+      },
+      {
+        "ID": "minecraft:sunflower_plains"
+      },
+      {
+        "ID": "minecraft:sparse_jungle"
+      }
+    ]
+  },
+  "AI": {
+    "TargetGoals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:target_hit_by_owner"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_owner_hit_by"
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_hit_by",
+        "AlertOthers": true
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:target_has_baby"
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:target_guard_territory",
+        "AwareDistance": 8,
+        "CanAttackDistance": 5,
+        "CanUse": [
+          "dawnera:is_not_tamed",
+          "dawnera:is_grown_up",
+          "dawnera:is_not_sleeping",
+          "dawnera:has_no_rider",
+          "dawnera:is_no_action",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "TargetConditions": "dawnera:is_player || dawnera:is_big || dawnera:is_giant",
+        "TryToAware": {
+          "Actions": [
+            "dawnera:stop_action,StateController",
+            "dawnera:look_at_target",
+            "dawnera:stop_navigation",
+            "dawnera:anger_particles",
+            "dawnera:play_action,ActionController,scream"
+          ]
+        }
+      }
+    ],
+    "Goals": [
+      {
+        "Priority": 0,
+        "ID": "dawnera:float_on_water"
+      },
+      {
+        "Priority": 0,
+        "ID": "dawnera:love_timed",
+        "Delay": 5000
+      },
+      {
+        "Priority": 1,
+        "ID": "dawnera:avoid_low_health",
+        "WalkSpeed": 1.75,
+        "SprintSpeed": 1.75,
+        "MaxDistance": 20
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:panic_of_damage",
+        "WalkSpeed": 1.75,
+        "SprintSpeed": 1.75,
+        "CanUse": [
+          "dawnera:is_baby"
+        ]
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:lay_egg",
+        "Speed": 0.6,
+        "EggBlock": "dawnera:diabloceratops_eggs",
+        "PositionChooser": "LAND"
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:breed_pregnancy",
+        "Speed": 0.6
+      },
+      {
+        "Priority": 2,
+        "ID": "dawnera:melee_attack",
+        "Speed": 1.75,
+        "MeleeRange": 2.0,
+        "ShouldSeeTarget": false,
+        "CanUse": [
+          "dawnera:is_not_sleeping",
+          "dawnera:is_grown_up"
+        ],
+        "StartAggression": {
+          "Conditions": [
+            "dawnera:is_not_in_water"
+          ],
+          "Actions": [
+            "dawnera:stop_action,StateController",
+            "dawnera:play_action,ActionController,scream"
+          ]
+        },
+        "PerformAttack": {
+          "Conditions": [
+            "dawnera:is_no_action"
+          ],
+          "Actions": [
+            "dawnera:focus_on_target",
+            "dawnera:play_action,ActionController,attack"
+          ]
+        }
+      },
+      {
+        "Priority": 3,
+        "ID": "dawnera:follow_owner",
+        "Speed": 1.75,
+        "StartFollowDistance": 7,
+        "StopFollowDistance": 3,
+        "TeleportDistance": 20,
+        "CanFly": false
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:eat_food",
+        "Speed": 0.6,
+        "HorizontalDistance": 20,
+        "VerticalDistance": 3,
+        "MaxItemCountCanEat": 5,
+        "CanUse": [
+          "dawnera:has_no_rider",
+          "dawnera:is_no_action",
+          "dawnera:is_not_sleeping_or_resting",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "FoodEat": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:eat_block",
+        "Speed": 0.6,
+        "HorizontalDistance": 10,
+        "VerticalDistance": 2,
+        "Interval": 200,
+        "AcceptableDistance": 2.5,
+        "CanUse": [
+          "dawnera:has_no_rider",
+          "dawnera:is_no_action",
+          "dawnera:is_not_sleeping_or_resting",
+          "dawnera:is_not_in_water"
+        ],
+        "ShouldCanBeUsedToContinue": true,
+        "Blocks": [
+          {
+            "ID": "minecraft:grass"
+          },
+          {
+            "ID": "minecraft:tall_grass"
+          },
+          {
+            "ID": "minecraft:wheat"
+          }
+        ],
+        "AchievePos": {
+          "Actions": [
+            "dawnera:play_action,ActionController,eat"
+          ]
+        }
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:follow_entity",
+        "Speed": 0.6,
+        "VisibilityDistance": 32,
+        "AcceptableDistance": 15,
+        "CanUse": [
+          "dawnera:is_not_tamed",
+          "dawnera:is_not_sleeping"
+        ],
+        "CanContinueUse": [
+          "dawnera:is_not_tamed",
+          "dawnera:is_not_sleeping"
+        ],
+        "TargetConditions": [
+          "dawnera:is_entity_type,dawnera:diabloceratops"
+        ]
+      },
+      {
+        "Priority": 4,
+        "ID": "dawnera:follow_parent",
+        "Speed": 1.75,
+        "VisibilityDistance": 10,
+        "AcceptableDistance": 8
+      },
+      {
+        "Priority": 5,
+        "ID": "dawnera:look_around"
+      },
+      {
+        "Priority": 6,
+        "ID": "dawnera:random_stroll",
+        "Speed": 0.6,
+        "PositionChooser": "LAND"
+      }
+    ]
+  },
+  "StateMachine": [
+    {
+      "ID": "ActionController",
+      "Actions": [
+        {
+          "ID": "attack",
+          "Length": 0.6
+        },
+        {
+          "ID": "scream",
+          "Length": 1.4
+        },
+        {
+          "ID": "down",
+          "Length": 1.4
+        },
+        {
+          "ID": "fall_asleep",
+          "Length": 1
+        },
+        {
+          "ID": "wake_up",
+          "Length": 0.76
+        },
+        {
+          "ID": "up",
+          "Length": 2.32
+        },
+        {
+          "ID": "eat",
+          "Length": 5
+        }
+      ]
+    },
+    {
+      "ID": "StateController",
+      "Actions": [
+        {
+          "ID": "rest"
+        },
+        {
+          "ID": "sleep"
+        }
+      ]
+    }
+  ],
+  "FoodRation": {
+    "Items": [
+      {
+        "Tag": "dawnera:plant_food"
+      },
+      {
+        "Tag": "dawnera:fruit_food"
+      }
+    ]
+  },
+  "MobSchedule": {
+    "Conditions": [
+      "dawnera:is_alive",
+      "dawnera:is_on_ground",
+      "dawnera:has_no_target"
+    ],
+    "Tasks": [
+      {
+        "Start": "22:00",
+        "End": "22:20",
+        "Actions": [
+          "dawnera:lie_down"
+        ]
+      },
+      {
+        "Start": "22:20",
+        "End": "05:50",
+        "Actions": [
+          "dawnera:sleep"
+        ]
+      },
+      {
+        "Start": "05:50",
+        "End": "06:00",
+        "Actions": [
+          "dawnera:wake_up"
+        ]
+      },
+      {
+        "Start": "06:00",
+        "End": "22:00",
+        "Actions": [
+          "dawnera:stand_up"
+        ]
+      }
+    ]
+  },
+  "InputControls": {
+    "Buttons": [
+      {
+        "ID": "attack",
+        "Type": "mouse",
+        "Action": "on_click",
+        "Button": "mouse_button_left",
+        "Cooldown": 40
+      },
+      {
+        "ID": "roar",
+        "Type": "mouse",
+        "Action": "on_click",
+        "Button": "mouse_button_right",
+        "Cooldown": 40
+      }
+    ]
+  }
+}

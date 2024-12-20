@@ -9,16 +9,26 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["I recommend you go through Create Crafts and Additions before Create New Age. Some work together but it also just helps you get the basic idea of Energy and Create."]
+			description: ["{gravitas.quest.new_age.desc.crafts}"]
 			id: "161A461EF4072877"
-			optional: true
+			shape: "rsquare"
+			size: 1.25d
 			tasks: [{
-				id: "7F5F79A27EDC57D2"
-				title: "Go through Create Crafts and Additions"
-				type: "checkmark"
+				id: "030EB8103B7B5130"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
 			}]
 			title: "{gravitas.quest.new_age.crafts}"
-			x: 1.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -26,7 +36,7 @@
 				"711E0E0B0315D90E"
 				"1CDDA789D2EC2118"
 			]
-			description: ["The Basic Motor is a lot like the Electric Motor from Create Crafts and Additions. It can turn Energy into Kinetic Energy. Its speed can be configured with a Wrench."]
+			description: ["{gravitas.quest.new_age.desc.motor}"]
 			id: "7DA0E0142A7853C9"
 			rewards: [{
 				count: 2
@@ -39,18 +49,18 @@
 				item: "create_new_age:basic_motor"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.motor}"
-			x: 4.0d
+			x: 3.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["161A461EF4072877"]
-			description: ["Connectors and Wires are how you move Energy to and from Create machines. The Connectors need to be attached to the machines, and the wires go between them. The type of wire determines the amount of energy it transfers. (Create Crafts and Additions connectors and wires do the same)."]
+			description: ["{gravitas.quest.new_age.desc.connector}"]
 			id: "711E0E0B0315D90E"
 			rewards: [{
-				count: 5
+				count: 3
 				id: "43E08CE9F38CB61E"
 				item: "create_new_age:copper_wire"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [
@@ -63,7 +73,7 @@
 				{
 					id: "1869AB5D8193DB51"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:or"
 						tag: {
 							items: [
@@ -90,32 +100,23 @@
 				}
 			]
 			title: "{gravitas.quest.new_age.connector}"
-			x: 2.5d
+			x: 1.5d
 			y: -1.0d
 		}
 		{
 			dependencies: ["7DA0E0142A7853C9"]
-			description: ["The Energizer will be needed to make the Materials needed for progressing into Create New Age. When powered with Energy and Kinetic Energy it will ZAP the items beneath it."]
+			description: ["{gravitas.quest.new_age.desc.energizer}"]
 			id: "34DD3F7BE2C6D7FC"
 			rewards: [
 				{
 					id: "4D80636BB6F52992"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/ingot/cast_iron"
-					}
+					item: "minecraft:iron_ingot"
 					type: "item"
 				}
 				{
 					id: "1A6078E04EC8ACC5"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -127,7 +128,7 @@
 					type: "item"
 				}
 				{
-					id: "4B0D23EB2EEE38B5"
+					id: "1245546B6150A554"
 					item: "tfc:gem/diamond"
 					type: "item"
 				}
@@ -137,13 +138,12 @@
 				item: "create_new_age:energiser_t1"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.energizer}"
-			x: 6.0d
+			x: 5.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["161A461EF4072877"]
-			description: ["A good way of making power through Create New Age is the Magnets. You need a Generator Coil spinning at a certain speed, with a Carbon Brush attached. The Carbon Brush is where the Energy will go. But you also need..."]
+			description: ["{gravitas.quest.new_age.desc.magnet}"]
 			id: "4765781833CE1888"
 			tasks: [
 				{
@@ -157,13 +157,13 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.new_age.magnet}"
-			x: 1.0d
+			title: "{gravitas.quest.new_age.magnets}"
+			x: 0.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["34DD3F7BE2C6D7FC"]
-			description: ["By using 1k of Forge Energy or 250 EU you can ZAP a cast iron ingot into an Overcharged Iron Ingot."]
+			description: ["{gravitas.quest.new_age.desc.iron}"]
 			id: "2F61AEB27357B362"
 			rewards: [{
 				count: 3
@@ -176,13 +176,12 @@
 				item: "create_new_age:overcharged_iron"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.overcharged_iron}"
-			x: 4.0d
+			x: 3.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["34DD3F7BE2C6D7FC"]
-			description: ["By using 2k Forge Energy or 500 EU you can ZAP a Gold Ingot into an Overcharged Gold Ingot."]
+			description: ["{gravitas.quest.new_age.desc.gold}"]
 			id: "7F60AA3D226CF4C3"
 			rewards: [{
 				count: 3
@@ -195,13 +194,12 @@
 				item: "create_new_age:overcharged_gold"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.overcharged_gold}"
-			x: 6.0d
+			x: 5.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["34DD3F7BE2C6D7FC"]
-			description: ["With 10K Forge Energy or 2500 EU you can ZAP a Cut Diamond to get an Overcharged Diamond."]
+			description: ["{gravitas.quest.new_age.desc.diamond}"]
 			id: "1B5F6CDB02587D6D"
 			rewards: [{
 				count: 3
@@ -214,8 +212,7 @@
 				item: "create_new_age:overcharged_diamond"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.overcharged_diamond}"
-			x: 8.0d
+			x: 7.0d
 			y: 1.5d
 		}
 		{
@@ -226,17 +223,18 @@
 				item: "create_new_age:magnetite_block"
 				type: "item"
 			}]
-			x: 2.5d
+			x: 1.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["4765781833CE1888"]
-			description: ["To actually use Magnets to make Energy the Generator Coil will need to be surrounded by some form of Magnets. The first magnets you can make is the Redstone Magnet. They have 1 Magnet Power."]
+			description: ["{gravitas.quest.new_age.desc.permalloy}"]
 			id: "5E3ECB5F0B65B0F1"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "77B92C50C665879E"
 				item: "create_new_age:redstone_magnet"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -244,7 +242,7 @@
 				item: "create_new_age:redstone_magnet"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 2.0d
 			y: 3.0d
 		}
 		{
@@ -253,12 +251,13 @@
 				"2F61AEB27357B362"
 				"7F60AA3D226CF4C3"
 			]
-			description: ["Layered Magnets are twice the power of a Redstone Magnet at 4 Magnet Power. You'll need 6 Overcharged Iron Ingots and 3 Overcharged Gold Ingots."]
+			description: ["{gravitas.quest.new_age.desc.alnico}"]
 			id: "035405FABB4BBEE0"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "06DC974512135500"
 				item: "create_new_age:layered_magnet"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -266,7 +265,7 @@
 				item: "create_new_age:layered_magnet"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.0d
 			y: 3.0d
 		}
 		{
@@ -277,9 +276,10 @@
 			]
 			id: "4473011A7FEFE7F2"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "0391D687F1F05622"
 				item: "create_new_age:fluxuated_magnetite"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -287,7 +287,7 @@
 				item: "create_new_age:fluxuated_magnetite"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 6.0d
 			y: 3.0d
 		}
 		{
@@ -297,9 +297,10 @@
 			]
 			id: "499E4BCDA5EDC540"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "4FCF3D30294B54A2"
 				item: "create_new_age:netherite_magnet"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -307,7 +308,7 @@
 				item: "create_new_age:netherite_magnet"
 				type: "item"
 			}]
-			x: 9.0d
+			x: 8.0d
 			y: 3.0d
 		}
 		{
@@ -315,33 +316,31 @@
 				"2F61AEB27357B362"
 				"29AFD1F176B9B9C7"
 			]
-			description: ["The Boiler Heater does the same a Blaze Burner does but instead uses Heat to heat it. I know its confusing just go with it."]
+			description: ["{gravitas.quest.new_age.desc.boiler}"]
 			id: "7784D240696594A0"
 			rewards: [{
-				id: "30C95C599BE2153C"
-				type: "xp_levels"
-				xp_levels: 5
+				count: 2
+				id: "531AEB540ACE1C6A"
+				item: "create_new_age:heat_pipe"
+				random_bonus: 2
+				type: "item"
 			}]
 			tasks: [{
 				id: "2F6DCF444306EDCD"
 				item: "create_new_age:heater"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.boiler_heater}"
-			x: 4.0d
+			x: 3.0d
 			y: 4.5d
 		}
 		{
-			description: [
-				""
-				"Heat is a Unit of Create New Age. It can be used to get more Kinetic Energy, Forge Energy, or Heat for mixing and processing. Be careful not to overheat!"
-			]
+			description: ["{gravitas.quest.new_age.desc.heat}"]
 			id: "6AFC2297D03EB64F"
 			rewards: [{
 				count: 9
 				id: "402D1616ED34356A"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -353,22 +352,32 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "12038E2649361493"
-				title: "Is it Hot in here?"
-				type: "checkmark"
+				id: "043AA6D1A4780BAA"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:copper_plate"
+				}
+				type: "item"
 			}]
 			title: "{gravitas.quest.new_age.heat}"
-			x: 1.0d
+			x: 0.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["6AFC2297D03EB64F"]
-			description: ["Heat Pipes are your main man for moving Heat. "]
+			description: ["{gravitas.quest.new_age.desc.pipe}"]
 			id: "29AFD1F176B9B9C7"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "6405E4D330595BDB"
 				item: "create_new_age:heat_pipe"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -376,59 +385,62 @@
 				item: "create_new_age:heat_pipe"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.heat_pipe}"
-			x: 2.5d
+			x: 1.5d
 			y: 4.5d
 		}
 		{
 			dependencies: ["29AFD1F176B9B9C7"]
-			description: ["The Heat Pump is an upgraded version of the Heat Pipes. They push more heat toward other machines."]
+			description: ["{gravitas.quest.new_age.desc.pump}"]
 			id: "20E94B842E96F58D"
+			rewards: [{
+				count: 2
+				id: "5FFC8301D110D2C5"
+				item: "create_new_age:heat_pipe"
+				random_bonus: 2
+				type: "item"
+			}]
 			tasks: [{
 				id: "7AFD86F3D2203A9A"
 				item: "create_new_age:heat_pump"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.heat_pump}"
-			x: 2.5d
+			x: 1.5d
 			y: 6.0d
 		}
 		{
 			dependencies: ["29AFD1F176B9B9C7"]
-			description: ["The Reactor Vent is where the Heat will leave the Reactor. Attach Heat Pumps to move the heat away. Make sure the heat gets out so you don't have a meltdown."]
+			description: ["{gravitas.quest.new_age.desc.vent}"]
 			id: "5D5993BDAFFC6F6C"
+			rewards: [{
+				count: 2
+				id: "09A7E50511BD1110"
+				item: "create_new_age:heat_pipe"
+				random_bonus: 2
+				type: "item"
+			}]
 			tasks: [{
 				id: "675A6A6C6C93A340"
 				item: "create_new_age:reactor_heat_vent"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.heat_vent}"
-			x: 4.0d
+			x: 3.0d
 			y: 6.0d
 		}
 		{
 			dependencies: ["29AFD1F176B9B9C7"]
-			description: ["The Solar Plates automatically create Heat when in the Sun. Your main automatic source of heat!"]
+			description: ["{gravitas.quest.new_age.desc.solarPlates}"]
 			id: "0111ABBF8FF9A62A"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "26ECFF7E480AFEEA"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:metal/ingot/cast_iron"
-				}
+				item: "minecraft:iron_ingot"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
 				id: "527C134433386552"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -443,19 +455,20 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.new_age.solarPlates}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.solar_plates}"
-			x: 1.0d
+			x: 0.0d
 			y: 6.0d
 		}
 		{
-			description: ["The Reactor Fuel Inserter will be on the front of your reactor. You'll need a funnel to bring the Reactor Fuel into it. Once Fuel is in it'll automatically start."]
+			description: ["{gravitas.quest.new_age.desc.inputtingFuel}"]
 			id: "2AED53502F5B9B12"
 			rewards: [{
-				count: 5
+				count: 3
 				id: "7FFAB522F8438F37"
 				item: "create:belt_connector"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [
@@ -470,17 +483,18 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.new_age.inputting_fuel}"
-			x: 4.0d
+			title: "{gravitas.quest.new_age.inputtingFuel}"
+			x: 3.0d
 			y: 9.0d
 		}
 		{
-			description: ["Reactor Fuel is needed to start and use the Reactor. The Fuel Rods will be the middle of the Reactor and is where the Fuel will be moved to process. They will light up when active."]
+			description: ["{gravitas.quest.new_age.desc.fuel}"]
 			id: "631CD91E20A188ED"
 			rewards: [{
-				count: 10
+				count: 3
 				id: "3EDBA2DB468356ED"
 				item: "create_new_age:nuclear_fuel"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [
@@ -496,7 +510,7 @@
 				}
 			]
 			title: "{gravitas.quest.new_age.fuel}"
-			x: 5.5d
+			x: 4.5d
 			y: 7.5d
 		}
 		{
@@ -505,41 +519,34 @@
 				"5D5993BDAFFC6F6C"
 				"631CD91E20A188ED"
 			]
-			description: ["The Reactor Casing and Reactor Glass is what makes up the frame of your reactor. The floor of the reactor and corners must be Reactor Casings. For the smallest Reactor use 3x3x3. For the middle layer the Heat Vent and Fuel Inserter must be opposite sides of each other with a Reactor Rod between them. You can use Glass next to the other sides of the Reactor Rod but the corners must be Casings. And for top layer it will be 3 Reactor Casings, 3 Reactor Glass, then 3 Reactor Casings."]
+			description: ["{gravitas.quest.new_age.desc.reactor}"]
 			id: "4166F9C86941AC7E"
-			rewards: [
-				{
-					id: "58D3C81E97158F07"
-					type: "xp_levels"
-					xp_levels: 5
-				}
-				{
-					id: "6006230EDF06A90C"
-					item: {
-						Count: 1b
-						ForgeCaps: {
-							"tfc:food": {
-								creationDate: -2L
-								foodData: {
-									dairy: 0.0f
-									decay: 0.0f
-									food: 0
-									fruit: 0.0f
-									grain: 0.0f
-									meat: 0.0f
-									sat: 0.0f
-									veg: 0.0f
-									water: 0.0f
-								}
-								ingredients: [ ]
-								traits: [ ]
+			rewards: [{
+				id: "6006230EDF06A90C"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: -2L
+							foodData: {
+								dairy: 0.0f
+								decay: 0.0f
+								food: 0
+								fruit: 0.0f
+								grain: 0.0f
+								meat: 0.0f
+								sat: 0.0f
+								veg: 0.0f
+								water: 0.0f
 							}
+							ingredients: [ ]
+							traits: [ ]
 						}
-						id: "tfc:food/barley_bread_jam_sandwich"
 					}
-					type: "item"
+					id: "tfc:food/barley_bread_jam_sandwich"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [
 				{
 					count: 19L
@@ -555,7 +562,7 @@
 				}
 			]
 			title: "{gravitas.quest.new_age.reactor}"
-			x: 4.0d
+			x: 3.0d
 			y: 7.5d
 		}
 		{
@@ -564,12 +571,13 @@
 				"0111ABBF8FF9A62A"
 			]
 			dependency_requirement: "one_completed"
-			description: ["The Stirling Engine uses Heat to create Kinetic Energy. It all comes back in a circle!"]
+			description: ["{gravitas.quest.new_age.desc.engine}"]
 			id: "307062426E000211"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "746FE41B1D47B54D"
 				item: "create:shaft"
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -577,30 +585,26 @@
 				item: "create_new_age:stirling_engine"
 				type: "item"
 			}]
-			title: "{gravitas.quest.new_age.stirling_engine}"
-			x: 1.0d
+			title: "{gravitas.quest.new_age.engine}"
+			x: 0.0d
 			y: 7.5d
 		}
 		{
 			dependencies: ["4166F9C86941AC7E"]
-			description: ["Congrats you broke it. Make sure to clean up the lava and hopefully retrieve the Corium before it enters the core of the Earth!"]
+			description: ["{gravitas.quest.new_age.desc.meltdown}"]
 			hide: true
 			id: "19FE3EBF7B744F8F"
+			optional: true
 			rewards: [{
-				id: "3DAA994402654049"
-				item: {
-					Count: 1b
-					id: "minecraft:potion"
-					tag: {
-						Potion: "minecraft:fire_resistance"
-					}
-				}
+				id: "45AD2607E6264713"
+				item: "create_new_age:corium"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
 				id: "33A1992891D55CE8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -615,11 +619,38 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.new_age.corium}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.new_age.meltdown}"
-			x: 2.5d
+			x: 1.5d
 			y: 9.0d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "1F01A513F45A98E9"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "19CBC3712526864B"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.5d
 		}
 	]
 	title: "{gravitas.chapters.15.title}"

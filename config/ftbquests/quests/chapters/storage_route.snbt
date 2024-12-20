@@ -10,6 +10,7 @@
 	quests: [
 		{
 			description: ["{gravitas.quest.storage.desc.start}"]
+			icon: "minecraft:chest"
 			id: "44BBC0C030C09D81"
 			rewards: [{
 				count: 10
@@ -18,37 +19,23 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "396C229D36526EF0"
-				title: "Storage in Gregitas"
-				type: "checkmark"
+				count: 5L
+				id: "423680C73372D715"
+				item: { Count: 5, id: "minecraft:clay_ball" }
+				type: "item"
 			}]
-			title: "{gravitas.quest.storage.start}"
-			x: 5.0d
-			y: 2.5d
+			title: "Storage"
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["44BBC0C030C09D81"]
 			description: ["{gravitas.quest.storage.desc.vessel}"]
 			id: "58018258B24045E1"
-			rewards: [{
-				id: "2A178075B76CB1A6"
-				item: {
-					Count: 1b
-					ForgeCaps: {
-						Parent: {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "tfc:ceramic/vessel"
-					tag: { }
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "575A7010B13D0F78"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						Parent: {
 							heat: 0.0f
@@ -60,32 +47,28 @@
 				}
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.vessel}"
-			x: 6.5d
-			y: 2.5d
+			x: 1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["58018258B24045E1"]
 			description: ["{gravitas.quest.storage.desc.large_vessel}"]
 			id: "518BB09D7C1286B8"
-			rewards: [{
-				count: 2
-				id: "4E780E862CE14921"
-				item: "tfc:ceramic/large_vessel"
-				type: "item"
-			}]
 			tasks: [{
 				id: "3602F4B365045351"
 				item: "tfc:ceramic/large_vessel"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.large_vessel}"
-			x: 8.0d
-			y: 2.5d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["518BB09D7C1286B8"]
+			dependencies: [
+				"518BB09D7C1286B8"
+				"791DA52F7A377FB2"
+			]
 			description: ["{gravitas.quest.storage.desc.chest}"]
+			icon: "tfc:wood/chest/oak"
 			id: "69F1C7C818C1C6A2"
 			rewards: [{
 				count: 4
@@ -96,7 +79,7 @@
 			tasks: [{
 				id: "22F37D83B43EADD6"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -179,18 +162,18 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.storage.chest}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.chest}"
-			x: 9.5d
-			y: 2.5d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
 			description: ["{gravitas.quest.storage.desc.bucket}"]
 			id: "17E73AABA487834A"
 			rewards: [{
 				id: "6E0DDBE6219941AD"
-				item: "gtceu:wood_long_rod"
+				item: "gtceu:long_wood_rod"
 				type: "item"
 			}]
 			tasks: [{
@@ -199,8 +182,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.storage.bucket}"
-			x: 5.5d
-			y: 3.5d
+			x: 0.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["17E73AABA487834A"]
@@ -214,7 +197,7 @@
 			tasks: [{
 				id: "6CC598E9B8E5853F"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -301,11 +284,11 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.storage.barrel}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.barrel}"
-			x: 7.0d
-			y: 3.5d
+			x: 1.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["437663FA90E3EEDD"]
@@ -322,8 +305,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.storage.greg_barrel}"
-			x: 9.0d
-			y: 3.5d
+			x: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["5A839677D3976126"]
@@ -341,8 +324,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.storage.watertank}"
-			x: 10.5d
-			y: 3.5d
+			x: 4.5d
+			y: 5.0d
 		}
 		{
 			description: ["{gravitas.quest.storage.desc.echest}"]
@@ -358,16 +341,17 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.storage.echest}"
-			x: 12.0d
-			y: 3.5d
+			x: 7.5d
+			y: 1.5d
 		}
 		{
+			dependencies: ["71FD4157C05B7F08"]
 			description: ["{gravitas.quest.storage.desc.e_chest}"]
 			id: "794D2A4CD50B9849"
 			rewards: [{
 				id: "0920A594934898DA"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_chest"
 					tag: {
 						code: "000"
@@ -379,7 +363,7 @@
 			tasks: [{
 				id: "3D9BDD3C91A03044"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_chest"
 					tag: {
 						code: "000"
@@ -389,16 +373,17 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.storage.e_chest}"
-			x: 12.0d
-			y: 4.5d
+			x: 7.5d
+			y: 2.5d
 		}
 		{
+			dependencies: ["5246E0AE1C8769FB"]
 			description: ["{gravitas.quest.storage.desc.etank}"]
 			id: "0CD34B6098AE1977"
 			rewards: [{
 				id: "25FFCE0B9477F1B8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "endertanks:ender_tank"
 					tag: {
 						code: "000"
@@ -410,7 +395,7 @@
 			tasks: [{
 				id: "12D16D9132BEBF6B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "endertanks:ender_tank"
 					tag: {
 						code: "000"
@@ -419,9 +404,8 @@
 				}
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.etank}"
-			x: 12.0d
-			y: 5.5d
+			x: 7.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["69F1C7C818C1C6A2"]
@@ -431,7 +415,7 @@
 				count: 4
 				id: "738FA153BFF455D9"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -442,196 +426,197 @@
 				}
 				type: "item"
 			}]
+			subtitle: "{gravitas.quest.storage.subt.wood}"
 			tasks: [{
 				id: "4BD568B33E94330C"
 				item: "gtceu:wood_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.wood}"
-			x: 11.0d
-			y: 2.5d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["792E750F2BBD3E39"]
 			dependency_requirement: "one_completed"
 			id: "54B3C3740CF7B6BD"
+			subtitle: "{gravitas.quest.storage.subt.bronze}"
 			tasks: [{
 				id: "0C981A8C4813C305"
 				item: "gtceu:bronze_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.bronze}"
-			x: 5.5d
-			y: 5.5d
+			x: 6.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["54B3C3740CF7B6BD"]
 			id: "41C1B4FFC9140707"
+			subtitle: "{gravitas.quest.storage.subt.steel}"
 			tasks: [{
 				id: "206127230296AE50"
 				item: "gtceu:steel_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.steel}"
-			x: 6.5d
-			y: 5.5d
+			x: 5.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["41C1B4FFC9140707"]
 			id: "64AC4D940E364311"
+			subtitle: "{gravitas.quest.storage.subt.aluminum}"
 			tasks: [{
 				id: "1620EE486E2EE062"
 				item: "gtceu:aluminium_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.aluminium}"
-			x: 7.5d
-			y: 5.5d
+			x: 4.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["64AC4D940E364311"]
 			id: "0B5B0C023813EBAC"
+			subtitle: "{gravitas.quest.storage.subt.stainless}"
 			tasks: [{
 				id: "7C40EB8EE9F5441E"
 				item: "gtceu:stainless_steel_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.stainless_steel}"
-			x: 8.5d
-			y: 5.5d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0B5B0C023813EBAC"]
 			id: "4C200ED362718DC4"
+			subtitle: "{gravitas.quest.storage.subt.titanium}"
 			tasks: [{
 				id: "23ED6A87FF1C1C09"
 				item: "gtceu:titanium_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.titanium}"
-			x: 9.5d
-			y: 5.5d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["4C200ED362718DC4"]
 			id: "511053CD780AD44C"
+			subtitle: "{gravitas.quest.storage.subt.tungstensteel}"
 			tasks: [{
 				id: "1FD879DD42F12388"
 				item: "gtceu:tungsten_steel_crate"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.tungstensteel}"
-			x: 10.5d
-			y: 5.5d
+			x: 1.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["41C1B4FFC9140707"]
 			id: "71FD4157C05B7F08"
+			subtitle: "{gravitas.quest.storage.subt.SC1}"
 			tasks: [{
 				id: "0E3FA4A2A7EF6A58"
 				item: "gtceu:lv_super_chest"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.chest_I}"
-			x: 6.5d
-			y: 6.5d
+			x: 5.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["64AC4D940E364311"]
 			id: "6AA1BDB088BCED66"
+			subtitle: "{gravitas.quest.storage.subt.SC2}"
 			tasks: [{
 				id: "51EB4E0433601DB3"
 				item: "gtceu:mv_super_chest"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.chest_II}"
-			x: 7.5d
-			y: 6.5d
+			x: 4.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0B5B0C023813EBAC"]
 			id: "59BBF993D4BFE236"
+			subtitle: "{gravitas.quest.storage.subt.SC3}"
 			tasks: [{
 				id: "3F793F6FCA62D76E"
 				item: "gtceu:hv_super_chest"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.chest_III}"
-			x: 8.5d
-			y: 6.5d
+			x: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["4C200ED362718DC4"]
 			id: "37BD6A3CC2DBF92E"
+			subtitle: "{gravitas.quest.storage.subt.SC4}"
 			tasks: [{
 				id: "78DD3D8992A8CB49"
 				item: "gtceu:ev_super_chest"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.chest_IV}"
-			x: 9.5d
-			y: 6.5d
+			x: 2.0d
+			y: 2.5d
 		}
 		{
 			id: "5246E0AE1C8769FB"
+			subtitle: "{gravitas.quest.storage.subt.ST1}"
 			tasks: [{
 				id: "76BF10189364BC3C"
 				item: "gtceu:lv_super_tank"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.tank_I}"
-			x: 6.5d
-			y: 7.5d
+			x: 5.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["5246E0AE1C8769FB"]
 			id: "2923F9A2C87D14BB"
+			subtitle: "{gravitas.quest.storage.subt.ST2}"
 			tasks: [{
 				id: "5CDFD1C6D445E2B4"
 				item: "gtceu:mv_super_tank"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.tank_II}"
-			x: 7.5d
-			y: 7.5d
+			x: 4.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2923F9A2C87D14BB"]
 			id: "1EDA2C945B7AB650"
+			subtitle: "{gravitas.quest.storage.subt.ST3}"
 			tasks: [{
 				id: "0C9648A8E11C24C1"
 				item: "gtceu:hv_super_tank"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.tank_III}"
-			x: 8.5d
-			y: 7.5d
+			x: 3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1EDA2C945B7AB650"]
 			id: "3FF5385F51E66938"
+			subtitle: "{gravitas.quest.storage.subt.ST4}"
 			tasks: [{
 				id: "5A3937BC1261E0F2"
 				item: "gtceu:ev_super_tank"
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.tank_IV}"
-			x: 9.5d
-			y: 7.5d
+			x: 2.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["0CD34B6098AE1977"]
 			description: ["{gravitas.quest.storage.desc.ebucket}"]
 			id: "55D7E38DC7FCFB08"
 			rewards: [{
-				id: "786E29674B035E78"
-				type: "xp_levels"
-				xp_levels: 5
+				count: 3
+				id: "3D6632681FA823AD"
+				item: "minecraft:obsidian"
+				type: "item"
 			}]
 			tasks: [{
 				id: "30CE4917E7DC0168"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "endertanks:ender_bucket"
 					tag: {
 						code: "000"
@@ -641,23 +626,23 @@
 				}
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.ebucket}"
-			x: 13.0d
-			y: 5.5d
+			x: 8.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["794D2A4CD50B9849"]
 			description: ["{gravitas.quest.storage.desc.ebag}"]
 			id: "59D6096109A074A5"
 			rewards: [{
-				id: "00BC713CED454C2F"
-				type: "xp_levels"
-				xp_levels: 5
+				count: 3
+				id: "6BF8D12772BB2646"
+				item: "minecraft:obsidian"
+				type: "item"
 			}]
 			tasks: [{
 				id: "24F00006FC3DF1FC"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_bag"
 					tag: {
 						code: "000"
@@ -667,23 +652,23 @@
 				}
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.ebag}"
-			x: 13.0d
-			y: 4.5d
+			x: 8.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0126E15E3C737D26"]
 			description: ["{gravitas.quest.storage.desc.epouch}"]
 			id: "26E68393C4D72E4E"
 			rewards: [{
-				id: "4939924C3CFDDF20"
-				type: "xp_levels"
-				xp_levels: 5
+				count: 3
+				id: "0F9580D15CD965F4"
+				item: "minecraft:obsidian"
+				type: "item"
 			}]
 			tasks: [{
 				id: "500505062B6F8BF6"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "enderchests:ender_pouch"
 					tag: {
 						open: 0b
@@ -691,9 +676,34 @@
 				}
 				type: "item"
 			}]
-			title: "{gravitas.quest.storage.epouch}"
-			x: 13.0d
-			y: 3.5d
+			x: 8.5d
+			y: 1.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "3DABBD53FECB57CD"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "171A3B08658F6994"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.5d
 		}
 	]
 	title: "{gravitas.chapters.30.title}"

@@ -4,7 +4,7 @@
 	filename: "hanggliders"
 	group: "095899370DDF48CB"
 	icon: {
-		Count: 1b
+		Count: 1
 		id: "hangglider:hang_glider"
 		tag: {
 			Damage: 0
@@ -13,14 +13,12 @@
 	id: "068A7B40DE5F65C9"
 	images: [{
 		click: "custom:patchouli:tfc/firmaciv/canoe"
-		corner: false
-		dev: false
 		height: 1.0d
 		hover: ["Click For Info!"]
-		image: "firmaciv:item/canoe_with_paddle_icon"
+		image: "firmaciv:textures/gui/book/canoe_isometric.png"
 		rotation: 0.0d
 		width: 1.0d
-		x: 9.5d
+		x: 0.0d
 		y: -1.0d
 	}]
 	order_index: 0
@@ -29,15 +27,10 @@
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.hang_glider}"]
 			id: "30B2B1CEB12737B1"
-			rewards: [{
-				id: "4211FC0B7CF431CA"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
 			tasks: [{
 				id: "22AB22945F2AD0C9"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "hangglider:hang_glider"
 					tag: {
 						Damage: 0
@@ -46,22 +39,17 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.hang_glider}"
-			x: 5.0d
-			y: -1.0d
+			x: -2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["30B2B1CEB12737B1"]
 			description: ["{gravitas.quest.simple_transportation.desc.reinforced}"]
 			id: "216A514F3CB3B5DB"
-			rewards: [{
-				id: "070DAD81B947F787"
-				type: "xp_levels"
-				xp_levels: 10
-			}]
 			tasks: [{
 				id: "2097E67794BA916F"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "hangglider:reinforced_hang_glider"
 					tag: {
 						Damage: 0
@@ -70,17 +58,17 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.reinforced}"
-			x: 5.0d
-			y: 0.0d
+			x: -2.0d
+			y: -0.5d
 		}
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.carts}"]
 			id: "2C14B2E5050FBD65"
 			rewards: [{
-				count: 16
+				count: 5
 				id: "4E1EB13ED91EB86D"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -89,12 +77,13 @@
 					}
 					id: "tfc:wood/twig/douglas_fir"
 				}
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
 				id: "33C0522C953F5347"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -181,11 +170,11 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.carts}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.carts}"
-			x: 7.5d
-			y: -1.0d
+			x: 0.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["2C14B2E5050FBD65"]
@@ -199,7 +188,7 @@
 			tasks: [{
 				id: "4AE4D93861F1B0AE"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -286,11 +275,11 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.animal}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.animal}"
-			x: 6.5d
-			y: 0.0d
+			x: -1.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["2C14B2E5050FBD65"]
@@ -304,7 +293,7 @@
 			tasks: [{
 				id: "1F77CEC83A0FD913"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -391,11 +380,11 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.supply}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.supply}"
-			x: 7.5d
-			y: 0.0d
+			x: 0.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["2C14B2E5050FBD65"]
@@ -404,7 +393,7 @@
 			rewards: [{
 				id: "02F047AA01494B0B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "tfc:stone/hoe/sedimentary"
 					tag: {
 						Damage: 0
@@ -415,7 +404,7 @@
 			tasks: [{
 				id: "7FAB018BCB922C06"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:or"
 					tag: {
 						items: [
@@ -502,20 +491,15 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.simple_transportation.plow}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.simple_transportation.plow}"
-			x: 8.5d
-			y: 0.0d
+			x: 1.0d
+			y: 2.5d
 		}
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.dugout_canoe}"]
 			id: "36731C807BA975C4"
-			rewards: [{
-				id: "6E5A2181FC8976AE"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
 			shape: "octagon"
 			tasks: [
 				{
@@ -531,19 +515,14 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.dugout_canoe}"
-			x: 10.5d
-			y: -1.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["36731C807BA975C4"]
 			description: ["{gravitas.quest.simple_transportation.desc.kayak}"]
 			icon: "firmaciv:kayak"
 			id: "78FB40D61FB91F38"
-			rewards: [{
-				id: "289BDDF6BDAB9957"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
 			tasks: [
 				{
 					id: "0150CBE2D60EE39E"
@@ -557,23 +536,18 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.kayak}"
-			x: 10.0d
-			y: 0.0d
+			x: -1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["36731C807BA975C4"]
 			description: ["{gravitas.quest.simple_transportation.desc.tools}"]
 			id: "59398C0E72B0BE61"
-			rewards: [{
-				id: "0E8F622A3AD1C3CD"
-				type: "xp_levels"
-				xp_levels: 10
-			}]
 			tasks: [
 				{
 					id: "641E1B5769661B64"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -587,7 +561,7 @@
 				{
 					id: "27369E3505CC7798"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -601,7 +575,7 @@
 				{
 					id: "09AC50AD1A2E5C50"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
@@ -619,17 +593,17 @@
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.tools}"
-			x: 11.0d
-			y: 0.0d
+			x: 1.0d
+			y: -1.0d
 		}
 		{
 			description: ["{gravitas.quest.simple_transportation.desc.rowboat1}"]
 			id: "4105E42ADCA71D92"
 			rewards: [{
-				count: 12
+				count: 5
 				id: "2AA5AA94D4074FD5"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -638,17 +612,18 @@
 					}
 					id: "firmaciv:copper_bolt"
 				}
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [{
 				count: 6L
 				id: "4BD3CCF75E3DE968"
-				item: { Count: 32b, id: "firmaciv:watercraft_frame_angled" }
+				item: { Count: 32, id: "firmaciv:watercraft_frame_angled" }
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.rowboat1}"
-			x: 9.5d
-			y: 1.0d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["4105E42ADCA71D92"]
@@ -656,24 +631,25 @@
 			id: "366151FAF15BEC3E"
 			rewards: [{
 				count: 2
-				id: "4A8854468C81CA41"
+				id: "7FC95AA6EB430BBE"
 				item: {
-					Count: 1b
+					Count: 1
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/double_ingot/wrought_iron"
+					id: "tfc:metal/ingot/copper"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
 				count: 24L
 				id: "58A9C964E845D4AF"
 				item: {
-					Count: 16b
+					Count: 16
 					ForgeCaps: {
 						"tfc:item_heat": {
 							heat: 0.0f
@@ -685,8 +661,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.simple_transportation.rowboat2}"
-			x: 10.5d
-			y: 1.0d
+			x: 2.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["366151FAF15BEC3E"]
@@ -697,27 +673,53 @@
 					count: 2L
 					id: "1D354C14BE1228C4"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							"tfc:item_heat": {
 								heat: 0.0f
 								ticks: 0L
 							}
 						}
-						id: "firmaciv:oarlock"
+						id: "alekiships:oarlock"
 					}
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "75A77C3C8800A25E"
-					item: "firmaciv:oar"
+					item: "alekiships:oar"
 					type: "item"
 				}
 			]
 			title: "{gravitas.quest.simple_transportation.rowboat3}"
-			x: 11.5d
-			y: 1.0d
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			can_repeat: false
+			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
+			disable_toast: true
+			hide: true
+			hide_details_until_startable: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "4A4CFC781ABFD2E5"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [{
+				disable_toast: true
+				id: "5633ED2846997C1A"
+				title: "Quests By AllTheMods"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.5d
 		}
 	]
 	title: "{gravitas.chapters.26.title}"
