@@ -1835,7 +1835,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     X: "#forge:dusts/redstone",
     T: "minecraft:piston"
   })
-  event.shapeless("gtceu:zinc_dust", ["#forge:tools/mortars", "#forge:ingots/zinc"])
+ 
   event.shapeless("storagedrawers:one_stack_upgrade", ["2x #tfc:rock_knapping", "storagedrawers:upgrade_template"])
   event.shapeless("storagedrawers:obsidian_storage_upgrade", [
     "2x #forge:plates/any_bronze",

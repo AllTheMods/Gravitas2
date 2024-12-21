@@ -254,8 +254,10 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
               })
             */
             event.shapeless(`gtceu:${metal.id}_mortar`, ['gregitas:stone_bowl', `gregitas:${metal.id}_pestle`]).id(`gregitas:shapeless/${metal.id}_mortar`)
+            event.remove({id: `gtceu:shaped/mortar_${metal.id}`})
         }) 
-    
+        event.remove({id: 'gtceu:shaped/mortar_flint'})
+        event.remove({id: 'gtceu:shaped/mortar_iron'})
     //File
         gtceuToolsTFC.forEach((metal) => {
             event.recipes.tfc.anvil(`gregitas:${metal.id}_file_head`, metal.double, ['shrink_last', 'draw_second_last', 'hit_third_last']).tier(metal.tier)
@@ -824,7 +826,6 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ id: /gtceu:shaped\/knife_.*/ })
     event.remove({ id: /gtceu:shaped\/screwdriver_.*/ })
     event.remove({ id: /gtceu:shaped\/crowbar_.*/ })
-    event.remove({ id: /gtceu:shaped\/mortar_.*/ })
     event.remove({ id: /gtceu:shaped\/soft_mallet_.*/ })
     event.remove({ id: /gtceu:shaped\/wire_cutter_.*/ })
     event.remove({ id: /gtceu:shaped\/sword_.*/ })
