@@ -821,7 +821,6 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ id: /gtceu:shaped\/wrench_.*/ })
     event.remove({ id: /gtceu:shaped\/saw_.*/ })
     event.remove({ id: /gtceu:shaped\/plunger_.*/ })
-    event.remove({ id: /gtceu:shaped\/plunger_.*/ })
     event.remove({ id: /gtceu:shaped\/hammer_.*/ })
     event.remove({ id: /gtceu:shaped\/knife_.*/ })
     event.remove({ id: /gtceu:shaped\/screwdriver_.*/ })
