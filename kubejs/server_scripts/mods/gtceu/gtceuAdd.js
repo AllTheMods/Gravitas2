@@ -1543,26 +1543,4 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("wirelesschargers:advanced_wireless_block_charger")
     .duration(200)
     .EUt(HV)
-
-  //I&F stuff
-  event.recipes.gtceu
-    .macerator("gregitas:crushed_crackle_material")
-    .itemInputs("1x #iceandfire:crackled_blocks")
-    .itemOutputs("gregitas:crushed_crackle_material")
-    .duration(100)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .macerator("gregitas:crushed_charred_material")
-    .itemInputs("1x #iceandfire:charred_blocks")
-    .itemOutputs("gregitas:crushed_charred_material")
-    .duration(100)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .macerator("gregitas:crushed_frostburn_material")
-    .itemInputs("1x #iceandfire:frozen_blocks")
-    .itemOutputs("gregitas:crushed_frostburn_material")
-    .duration(100)
-    .EUt(HV)
 }
