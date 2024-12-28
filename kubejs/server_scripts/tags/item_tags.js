@@ -412,4 +412,14 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("gravitas:phantom", "minecraft:warped_fungus")
   event.add("gravitas:phantom", "beneath:wood/sapling/warped")
+
+  event.add("forge:magma", ["minecraft:magma_block",
+                            "tfc:rock/magma/basalt",
+                            "tfc:rock/magma/granite",
+                            "tfc:rock/magma/diorite",
+                            "tfc:rock/magma/gabbro",
+                            "tfc:rock/magma/rhyolite",
+                            "tfc:rock/magma/andesite",
+                            "tfc:rock/magma/dacite"
+                           ])
 }
