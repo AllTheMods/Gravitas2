@@ -1,0 +1,13 @@
+{
+    "type": "tfc:welding",
+    "first_input": {
+      "item": "gtceu:cobalt_brass_ingot"
+    },
+    "second_input": {
+        "item": "gtceu:cobalt_brass_ingot"
+    },
+    "tier": 2,
+    "result": {
+      "item": "gregitas:double_cobalt_brass_ingot"
+    }
+}
