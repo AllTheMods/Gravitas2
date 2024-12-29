@@ -167,7 +167,7 @@
 			id: "2512A0E115F4A300"
 			min_width: 400
 			rewards: [{
-				count: 10
+				count: 5
 				id: "0FDDAEA92AC4B517"
 				item: {
 					Count: 1
@@ -179,6 +179,7 @@
 					}
 					id: "minecraft:stick"
 				}
+				random_bonus: 5
 				type: "item"
 			}]
 			tasks: [
@@ -242,7 +243,7 @@
 			description: ["{gravitas.quest.stage1.desc.stick}"]
 			id: "5BF6B73A12E196A1"
 			rewards: [{
-				count: 4
+				count: 2
 				id: "49E935A1EEC29C91"
 				item: {
 					Count: 1
@@ -254,6 +255,7 @@
 					}
 					id: "minecraft:stick"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			subtitle: "{gravitas.quest.stage1.subt.stick}"
@@ -291,6 +293,7 @@
 					}
 					id: "minecraft:stick"
 				}
+				random_bonus: 4
 				type: "item"
 			}]
 			subtitle: "{gravitas.quest.stage1.subt.stickB}"
@@ -318,6 +321,7 @@
 			rewards: [{
 				id: "023AAC74B5B68A58"
 				item: "tfc:stick_bundle"
+				random_bonus: 1
 				type: "item"
 			}]
 			shape: "gear"
@@ -446,7 +450,7 @@
 			id: "177E7D3A7B2B48FA"
 			min_width: 300
 			rewards: [{
-				count: 16
+				count: 8
 				id: "7DC830672E0C910C"
 				item: {
 					Count: 1
@@ -458,6 +462,7 @@
 					}
 					id: "minecraft:stick"
 				}
+				random_bonus: 8
 				type: "item"
 			}]
 			shape: "square"
@@ -679,13 +684,22 @@
 			rewards: [{
 				id: "79C95B351B598D24"
 				item: "tfc:wood/sapling/hickory"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
-				id: "51A767FD8AFC1AC2"
-				title: "{gravitas.quest.stage1.logpiles}"
-				type: "checkmark"
+				id: "3018DA36745A7AEF"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:log_pile_logs"
+					}
+				}
+				title: "Any #tfc:log_pile_logs"
+				type: "item"
 			}]
+			title: "{gravitas.quest.stage1.logpiles}"
 			x: -6.0d
 			y: -1.5d
 		}
@@ -698,7 +712,7 @@
 			id: "20F61C521879413B"
 			min_width: 300
 			rewards: [{
-				count: 5
+				count: 3
 				id: "287574BAD2A2DE0A"
 				item: {
 					Count: 1
@@ -710,11 +724,12 @@
 					}
 					id: "tfc:ore/small_malachite"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			shape: "octagon"
 			tasks: [{
-				count: 10L
+				count: 9L
 				id: "11C6912DFF83961E"
 				item: {
 					Count: 1
@@ -734,6 +749,12 @@
 			dependencies: ["177E7D3A7B2B48FA"]
 			description: ["{gravitas.quest.stage1.desc.torch}"]
 			id: "18A7123E7EC22490"
+			rewards: [{
+				id: "697E38878DE6777A"
+				item: "tfc:torch"
+				random_bonus: 1
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "279E2DCF9E3C0A53"
@@ -753,9 +774,10 @@
 			]
 			id: "6E1C067AE04CE077"
 			rewards: [{
-				count: 10
+				count: 4
 				id: "7A9E838308A7CBFE"
 				item: "minecraft:charcoal"
+				random_bonus: 4
 				type: "item"
 			}]
 			tasks: [{
@@ -794,6 +816,7 @@
 					}
 					id: "tfc:metal/ingot/copper"
 				}
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [
@@ -900,6 +923,7 @@
 			rewards: [{
 				id: "581C2EC023B5DC1C"
 				item: "tfc:wood/lumber/oak"
+				random_bonus: 1
 				type: "item"
 			}]
 			size: 1.5d
@@ -922,11 +946,6 @@
 		{
 			dependencies: ["791DA52F7A377FB2"]
 			id: "429A660FABB36C9F"
-			rewards: [{
-				id: "6CE9B726AA819439"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "{gravitas.quest.stage1.subt.workbench}"
 			tasks: [{
 				id: "5579D13834D9DA01"
@@ -937,9 +956,10 @@
 						value: "tfc:workbenches"
 					}
 				}
-				title: "{gravitas.quest.caveman.workbench}"
+				title: "{gravitas.quest.caveman.workbenches}"
 				type: "item"
 			}]
+			title: "{gravitas.quest.caveman.workbench}"
 			x: 0.0d
 			y: 4.0d
 		}
@@ -947,18 +967,9 @@
 			dependencies: ["429A660FABB36C9F"]
 			id: "78ABF3C50265136D"
 			rewards: [{
-				id: "106F0B9AAAF4B0ED"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 0L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/red_apple"
-				}
-				type: "item"
+				id: "565905D17EAEE72E"
+				type: "xp"
+				xp: 50
 			}]
 			tasks: [{
 				id: "71D8E7FECAFBC417"
@@ -1035,6 +1046,7 @@
 			rewards: [{
 				id: "509F4C4074FDDEE5"
 				item: "minecraft:charcoal"
+				random_bonus: 1
 				type: "item"
 			}]
 			size: 1.25d
@@ -1087,7 +1099,7 @@
 			]
 			id: "1F2AE955933F52CE"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "5AEB8CC8EA6B40EA"
 				item: {
 					Count: 1
@@ -1099,6 +1111,7 @@
 					}
 					id: "tfc:metal/ingot/copper"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			subtitle: "{gravitas.quest.stage1.subt.foranvil}"
@@ -1159,9 +1172,10 @@
 			description: ["{gravitas.quest.caveman.desc.big_barrel}"]
 			id: "526A9CB2DF6FF1E1"
 			rewards: [{
-				count: 10
+				count: 4
 				id: "300B1D38EE1AE68A"
 				item: "tfc:wood/lumber/oak"
+				random_bonus: 4
 				type: "item"
 			}]
 			tasks: [{
@@ -1202,7 +1216,7 @@
 						value: "tfc:raw_hides"
 					}
 				}
-				title: "{gravitas.quest.caveman.any_raw_hide}"
+				title: "{gravitas.quest.caveman.raw_hides}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.caveman.raw_hide}"
@@ -1400,7 +1414,7 @@
 				type: "item"
 			}]
 			x: 5.25d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -1473,6 +1487,11 @@
 			dependencies: ["791DA52F7A377FB2"]
 			description: ["{gravitas.quest.caveman.desc.spindle}"]
 			id: "1DE8F31E48EE32BE"
+			rewards: [{
+				id: "65E7BF4A1A3E3B33"
+				item: "tfc:ceramic/spindle_head"
+				type: "item"
+			}]
 			tasks: [{
 				id: "58A5A8EAAB974C06"
 				item: {
@@ -1494,6 +1513,20 @@
 			]
 			description: ["Gather up some &aWool&r from the local wildlife. Using your Spindle, turn the Wool into &aWool Yarn&r.\\n\\nAlternatively collect some String."]
 			id: "3B3414C2273DDFA7"
+			rewards: [
+				{
+					id: "5D2DCFED5208C94F"
+					item: "minecraft:string"
+					random_bonus: 1
+					type: "item"
+				}
+				{
+					id: "733E642BD8684CF2"
+					item: "tfc:wool_yarn"
+					random_bonus: 1
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "4FFD8984D4D3308A"
 				item: {
@@ -1534,6 +1567,11 @@
 			dependencies: ["42DEE32BEAF4F9DB"]
 			description: ["{gravitas.quest.stage1.desc.taming}"]
 			id: "5594260A36F6E78F"
+			rewards: [{
+				id: "67C007C4EE16981C"
+				item: "minecraft:string"
+				type: "item"
+			}]
 			subtitle: "{gravitas.quest.stage1.subt.taming}"
 			tasks: [{
 				id: "7E87EBE24BAB4334"
@@ -1591,9 +1629,10 @@
 			hide_dependent_lines: true
 			id: "5A42BDE5AD15F1DF"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "3F31EF3CDEDF18D6"
 				item: "tfc:wood/lumber/oak"
+				random_bonus: 2
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1642,9 +1681,10 @@
 			icon: "minecraft:water_bucket"
 			id: "70A456AB04DA948E"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "33B42F09629FB230"
 				item: "minecraft:clay_ball"
+				random_bonus: 2
 				type: "item"
 			}]
 			shape: "gear"
@@ -1662,9 +1702,9 @@
 			description: ["{gravitas.quest.stage1.desc.canvil}"]
 			id: "4BACE8240C9B3B29"
 			rewards: [{
-				id: "0C8FAF81E1E7C736"
-				type: "xp_levels"
-				xp_levels: 2
+				id: "79A1F516006B3019"
+				type: "xp"
+				xp: 10
 			}]
 			shape: "pentagon"
 			subtitle: "{gravitas.quest.stage1.subt.canvil}"
@@ -1695,13 +1735,14 @@
 			id: "1D9415D1B587080E"
 			rewards: [
 				{
-					count: 32
+					count: 16
 					id: "19ED60037BD51783"
 					item: "minecraft:charcoal"
+					random_bonus: 16
 					type: "item"
 				}
 				{
-					count: 4
+					count: 3
 					id: "67C1DB3BCF2F1611"
 					item: {
 						Count: 1
@@ -1713,18 +1754,19 @@
 						}
 						id: "tfc:metal/ingot/copper"
 					}
+					random_bonus: 3
 					type: "item"
 				}
 			]
 			shape: "pentagon"
-			size: 2.5d
+			size: 2.0d
 			subtitle: "{gravitas.quest.stage1.subt.win}"
 			tasks: [{
 				id: "199F693B00975A9C"
 				type: "checkmark"
 			}]
 			title: "{gravitas.quest.stage1.win}"
-			x: 3.75d
+			x: 4.0d
 			y: -5.0d
 		}
 		{
@@ -1753,6 +1795,7 @@
 			rewards: [{
 				id: "62861CFA3BD1DEA4"
 				item: "tfc:wood/lumber/oak"
+				random_bonus: 1
 				type: "item"
 			}]
 			size: 0.75d
@@ -1857,7 +1900,7 @@
 						value: "tfc:rock/aqueducts"
 					}
 				}
-				title: "Any #tfc:rock/aqueducts"
+				title: "{gravitas.quest.farm.aqueducts}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.lv.title.aqueduct}"
