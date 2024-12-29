@@ -187,6 +187,17 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "createdieselgenerators:crafting/asphalt_block" })
   event.remove({ id: "createdieselgenerators:mixing/asphalt_block" })
 
+  // create railways
+  const railwayWoodsToRemove = ["oak", "birch", "dark_oak", "jungle", "acacia", "spruce", "mangrove", "cherry"]
+  railwayWoodsToRemove.forEach((wood) => {
+    event.remove({ output: `railways:track_${wood}`, mod: "railways" })
+    event.remove({ output: `railways:track_incomplete_${wood}`, mod: "railways" })
+    event.remove({ output: `railways:track_${wood}_wide`, mod: "railways" })
+    event.remove({ output: `railways:track_incomplete_${wood}_wide`, mod: "railways" })
+    event.remove({ output: `railways:track_${wood}_narrow`, mod: "railways" })
+    event.remove({ output: `railways:track_incomplete_${wood}_narrow`, mod: "railways" })
+  })
+
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "create:pressing/iron_ingot" })
@@ -358,7 +369,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "computercraft:turtle_normal" })
 
   //Corail
-  event.remove({ id: "tombstone:receptacle_of_familiar"})
+  event.remove({ id: "tombstone:receptacle_of_familiar" })
 
   //SimplePlanes
   event.remove({ id: "simpleplanes:liquid_engine" })
