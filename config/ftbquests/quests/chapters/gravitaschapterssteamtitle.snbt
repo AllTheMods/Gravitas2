@@ -19,8 +19,8 @@
 			image: "gtceu:textures/gui/arrows/l7.png"
 			rotation: -90.0d
 			width: 0.8d
-			y: -0.8d
 			x: 5.5d
+			y: -0.8d
 		}
 		{
 			height: 0.6d
@@ -110,7 +110,7 @@
 						value: "forge:tools/wrenches"
 					}
 				}
-				title: "{gravitas.quest.steam.wrench}"
+				title: "{gravitas.quest.steam.wrenches}"
 				type: "item"
 			}]
 			x: 4.5d
@@ -143,7 +143,7 @@
 						value: "forge:tools/screwdrivers"
 					}
 				}
-				title: "{gravitas.quest.steam.screwd}"
+				title: "{gravitas.quest.steam.screwdrivers}"
 				type: "item"
 			}]
 			x: 3.0d
@@ -152,6 +152,19 @@
 		{
 			dependencies: ["69E44C6CAF03C0B5"]
 			description: ["{gravitas.quest.steam.desc.file}"]
+			icon: {
+				Count: 1
+				id: "gtceu:bronze_file"
+				tag: {
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						Damage: 0
+						MaxDamage: 191
+					}
+					HideFlags: 2
+				}
+			}
 			id: "09C2B236014FC094"
 			tasks: [{
 				id: "58A5C6FCCB08AC64"
@@ -165,7 +178,6 @@
 				title: "{gravitas.quest.stage2.files}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.steam.file}"
 			x: 2.5d
 			y: 0.5d
 		}
@@ -229,6 +241,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.steam.brassPlates}"
 			x: 2.5d
 			y: -0.5d
 		}
@@ -301,7 +314,7 @@
 			description: ["{gravitas.quest.steam.desc.pipes}"]
 			id: "682CCD6B55410ABE"
 			tasks: [{
-				count: 7L
+				count: 6L
 				id: "20D2EE90B32A03B7"
 				item: "gtceu:bronze_small_fluid_pipe"
 				type: "item"

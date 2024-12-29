@@ -18,8 +18,8 @@
 				type: "advancement"
 			}]
 			title: "{gravitas.quest.farm.need}"
-			x: 6.0d
-			y: 1.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7FEBCBBBD4FD3B5C"]
@@ -31,8 +31,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.hydration}"
-			x: 5.0d
-			y: 2.0d
+			x: -1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["7FEBCBBBD4FD3B5C"]
@@ -43,8 +43,8 @@
 				title: "{gravitas.quest.farm.temperature}"
 				type: "checkmark"
 			}]
-			x: 7.0d
-			y: 2.0d
+			x: 1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["0C6662072EB8BD48"]
@@ -151,8 +151,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.moving_water}"
-			x: 6.0d
-			y: 3.0d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["0C6662072EB8BD48"]
@@ -183,8 +183,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.hydration_levels}"
-			x: 4.0d
-			y: 3.0d
+			x: -2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["322A52B4D084D68B"]
@@ -196,8 +196,8 @@
 				title: "{gravitas.quest.farm.season}"
 				type: "checkmark"
 			}]
-			x: 7.5d
-			y: 3.0d
+			x: 1.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["322A52B4D084D68B"]
@@ -232,8 +232,8 @@
 				title: "{gravitas.quest.farm.y_level}"
 				type: "checkmark"
 			}]
-			x: 8.5d
-			y: 3.0d
+			x: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["322A52B4D084D68B"]
@@ -246,8 +246,8 @@
 				title: "{gravitas.quest.farm.climate}"
 				type: "dimension"
 			}]
-			x: 9.5d
-			y: 3.0d
+			x: 3.5d
+			y: 2.0d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.compost}"]
@@ -264,8 +264,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.compost}"
-			x: 12.5d
-			y: 1.0d
+			x: 6.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["48CDA7090E7D74DA"]
@@ -339,8 +339,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.P}"
-			x: 11.5d
-			y: 2.0d
+			x: 5.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["48CDA7090E7D74DA"]
@@ -414,8 +414,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.N}"
-			x: 12.5d
-			y: 2.0d
+			x: 6.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["48CDA7090E7D74DA"]
@@ -489,8 +489,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.K}"
-			x: 13.5d
-			y: 2.0d
+			x: 7.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -530,11 +530,12 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.walls}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.greenhouse}"
-			x: 9.0d
-			y: 5.5d
+			x: 3.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["4D67A5506D245F98"]
@@ -551,8 +552,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.climate_station}"
-			x: 9.0d
-			y: 6.5d
+			x: 3.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["522FE1262C949963"]
@@ -595,12 +596,12 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.farm.ports}"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.farm.sprinkler}"
-			x: 8.0d
-			y: 5.5d
+			x: 2.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["48CDA7090E7D74DA"]
@@ -651,9 +652,8 @@
 				title: "{gravitas.quest.farm.planters}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.farm.planters}"
-			x: 10.0d
-			y: 5.5d
+			x: 4.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -681,8 +681,8 @@
 				}
 			]
 			title: "{gravitas.quest.farm.station}"
-			x: 7.0d
-			y: 5.5d
+			x: 1.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -692,11 +692,6 @@
 			dependency_requirement: "one_completed"
 			description: ["{gravitas.quest.farm.desc.axle}"]
 			id: "57EFAAE8E22F107B"
-			rewards: [{
-				id: "529F1D4F797A3BC4"
-				item: "tfc:brass_mechanisms"
-				type: "item"
-			}]
 			tasks: [{
 				id: "1555AE51E595EC9A"
 				item: {
@@ -787,19 +782,30 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.axles}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.axle}"
-			x: 7.0d
-			y: 7.0d
+			x: 1.0d
+			y: 6.0d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.pipe}"]
 			id: "744CD94E6A1DF01E"
 			rewards: [{
-				count: 5
+				count: 3
 				id: "3D5058DC60C4F677"
-				item: "firmalife:copper_pipe"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "firmalife:copper_pipe"
+				}
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -808,17 +814,17 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.pipe}"
-			x: 5.5d
-			y: 5.5d
+			x: -0.5d
+			y: 4.5d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.waterwheel}"]
 			id: "6CFDA7FA4D944B6D"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "6FEB6F63233E2B19"
 				item: "tfc:wood/axle/white_cedar"
-				random_bonus: 5
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -911,19 +917,20 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.farm.waterwheels}"
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.waterwheel}"
-			x: 7.0d
-			y: 8.5d
+			x: 1.0d
+			y: 7.5d
 		}
 		{
 			description: ["{gravitas.quest.farm.desc.windmill}"]
 			id: "10A5198F6260FDC2"
 			rewards: [{
-				count: 4
 				id: "3893330049A4606B"
 				item: "tfc:wool_cloth"
+				random_bonus: 1
 				type: "item"
 			}]
 			tasks: [{
@@ -1004,42 +1011,27 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.farm.windmill}"
-			x: 5.5d
-			y: 7.0d
+			x: -0.5d
+			y: 6.0d
 		}
 		{
-			id: "3F9B99AEBDADB0AF"
-			tasks: [{
-				id: "126E9234E0069DD7"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "gtceu:brass_ingot"
-				}
-				type: "item"
-			}]
-			x: 13.5d
-			y: 5.5d
-		}
-		{
-			dependencies: ["3F9B99AEBDADB0AF"]
 			description: [
 				"{gravitas.quest.bronze.desc.climate_station.1}"
 				"{gravitas.quest.bronze.desc.climate_station.2}"
 			]
 			id: "3BB1D3FCB985FC87"
+			rewards: [{
+				id: "4AD3A47566490739"
+				item: "tfc:brass_mechanisms"
+				type: "item"
+			}]
 			tasks: [{
 				id: "3B280FD0D85F86B2"
 				item: "firmalife:climate_station"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 6.5d
+			x: 7.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["3BB1D3FCB985FC87"]
@@ -1048,6 +1040,12 @@
 				"{gravitas.quest.bronze.desc.cellar.2}"
 			]
 			id: "0AFAF7178C0805EF"
+			rewards: [{
+				id: "614420BD6DA99675"
+				item: "firmalife:beeswax"
+				random_bonus: 1
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "230A912AC9A764B4"
@@ -1061,8 +1059,8 @@
 				}
 			]
 			title: "{gravitas.quest.bronze.cellar}"
-			x: 12.0d
-			y: 6.5d
+			x: 6.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0AFAF7178C0805EF"]
@@ -1079,12 +1077,18 @@
 				title: "{gravitas.quest.bronze.food_shelf}"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 5.5d
+			x: 6.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["0AFAF7178C0805EF"]
 			id: "3E225E353A085850"
+			rewards: [{
+				id: "6986A2EB029D3279"
+				item: "minecraft:string"
+				random_bonus: 1
+				type: "item"
+			}]
 			tasks: [{
 				id: "7EE82C312DF0BAF3"
 				item: {
@@ -1097,8 +1101,8 @@
 				title: "{gravitas.quest.bronze.hangers}"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 7.5d
+			x: 6.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["3BB1D3FCB985FC87"]
@@ -1120,80 +1124,110 @@
 				title: "{gravitas.quest.bronze.greenhouse}"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 6.5d
+			x: 9.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["29080D2FE2948302"]
 			description: ["{gravitas.quest.bronze.desc.quad}"]
 			id: "19C1FA386510A39E"
+			rewards: [{
+				id: "65A5AA81FCCEFAAD"
+				item: "tfc:compost"
+				type: "item"
+			}]
 			tasks: [{
 				id: "22FAC9CC5CC448D7"
 				item: "firmalife:quad_planter"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 4.5d
+			x: 9.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["29080D2FE2948302"]
 			description: ["{gravitas.quest.bronze.desc.hanging}"]
 			id: "634C5DF84CC8828A"
+			rewards: [{
+				id: "1A5B35FE9D5B6B39"
+				item: "tfc:compost"
+				type: "item"
+			}]
 			tasks: [{
 				id: "395287A7B77CE355"
 				item: "firmalife:hanging_planter"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 5.0d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["29080D2FE2948302"]
 			description: ["{gravitas.quest.bronze.desc.hydro}"]
 			id: "04075FE3C123DA1B"
+			rewards: [{
+				id: "524E23BCE82F4452"
+				item: "tfc:compost"
+				type: "item"
+			}]
 			tasks: [{
 				id: "161EF5670E3671B2"
 				item: "firmalife:hydroponic_planter"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 6.0d
+			x: 10.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["29080D2FE2948302"]
 			description: ["{gravitas.quest.bronze.desc.large}"]
 			id: "31E9A02BCD4B9616"
+			rewards: [{
+				id: "5D391989E343BBD0"
+				item: "tfc:compost"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5E3AF4AF602751DB"
 				item: "firmalife:large_planter"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 7.0d
+			x: 10.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["29080D2FE2948302"]
 			description: ["{gravitas.quest.bronze.desc.bonsai}"]
 			id: "3960848FBE27EDA2"
+			rewards: [{
+				id: "2CA04CC9280740C9"
+				item: "tfc:compost"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1E9C0214FC5FB6C4"
 				item: "firmalife:bonsai_planter"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 8.0d
+			x: 10.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["29080D2FE2948302"]
 			description: ["{gravitas.quest.bronze.desc.trellis}"]
 			id: "565E14AE8A096DE3"
+			rewards: [{
+				id: "7A6C437A6F75FDCC"
+				item: "tfc:compost"
+				type: "item"
+			}]
 			tasks: [{
 				id: "743A191E6A0A84BB"
 				item: "firmalife:trellis_planter"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 8.5d
+			x: 9.0d
+			y: 7.5d
 		}
 		{
 			can_repeat: false
@@ -1218,8 +1252,8 @@
 				title: "Quests By AllTheMods"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: -0.5d
+			x: 0.0d
+			y: -1.5d
 		}
 	]
 	title: "{gravitas.chapters.7.title}"

@@ -409,7 +409,7 @@
 			tasks: [{
 				id: "38B8B02C44957784"
 				item: {
-                    Count: 1
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "tfc:chisels"

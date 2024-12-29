@@ -30,7 +30,7 @@
 			id: "3F3DE2CE9676EB1E"
 			tasks: [{
 				id: "3A429C81E18477B6"
-				title: "{gravitas.quest.railcraft.types_tracks}"
+				title: "{gravitas.quest.railcraft.tracks}"
 				type: "checkmark"
 			}]
 			x: -1.0d
@@ -41,10 +41,11 @@
 			description: ["{gravitas.quest.railcraft.desc.track_kits}"]
 			id: "03DF939800D749DF"
 			tasks: [{
-				id: "39656813AA1D728D"
-				title: "{gravitas.quest.railcraft.track_kits}"
-				type: "checkmark"
+				id: "5AC3AE4D61FCB292"
+				item: "minecraft:redstone"
+				type: "item"
 			}]
+			title: "{gravitas.quest.railcraft.track_kits}"
 			x: 1.0d
 			y: 1.0d
 		}
@@ -53,9 +54,10 @@
 			description: ["{gravitas.quest.railcraft.desc.abandoned}"]
 			id: "12A67032FD55398E"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "1CF622A2F046F788"
 				item: "railcraft:abandoned_track"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -72,9 +74,10 @@
 			description: ["{gravitas.quest.railcraft.desc.electric}"]
 			id: "1B0573E497A9F04A"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "3AF74AFAF158338B"
 				item: "railcraft:electric_track"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -91,9 +94,10 @@
 			description: ["{gravitas.quest.railcraft.desc.reinforced}"]
 			id: "2CD636F6077FE695"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "7338824F164C5388"
 				item: "railcraft:reinforced_track"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -110,9 +114,10 @@
 			description: ["{gravitas.quest.railcraft.desc.strap_iron}"]
 			id: "06DA4C7C2738D0B0"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "533DEC0E2C9FF918"
 				item: "railcraft:strap_iron_track"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -129,9 +134,10 @@
 			description: ["{gravitas.quest.railcraft.desc.high_speed}"]
 			id: "01179E58503AE9DD"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "73D70A0F52B039B2"
 				item: "railcraft:high_speed_track"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -148,9 +154,10 @@
 			description: ["{gravitas.quest.railcraft.desc.high_speed_electric}"]
 			id: "74615CE61EE7EBCD"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "173C2A205E7B1B2D"
 				item: "railcraft:high_speed_electric_track"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -178,7 +185,7 @@
 			description: ["{gravitas.quest.railcraft.desc.steel}"]
 			id: "197119AAE56E222D"
 			rewards: [{
-				count: 5
+				count: 2
 				id: "013F8CB8C6B70201"
 				item: {
 					Count: 1
@@ -190,6 +197,7 @@
 					}
 					id: "gtceu:steel_ingot"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -215,9 +223,10 @@
 			description: ["{gravitas.quest.railcraft.desc.coke}"]
 			id: "642D21D54A9B9325"
 			rewards: [{
-				count: 16
+				count: 8
 				id: "55A921BA74BA223C"
 				item: "gtceu:coke_gem"
+				random_bonus: 8
 				type: "item"
 			}]
 			tasks: [{
@@ -234,9 +243,10 @@
 			description: ["{gravitas.quest.railcraft.desc.making_steam}"]
 			id: "302C27B3E947EC2F"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "22EAE92549B23108"
-				item: "minecraft:coal"
+				item: "tfc:ore/bituminous_coal"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [
@@ -258,6 +268,7 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.railcraft.fireboxes}"
 					type: "item"
 				}
 				{
@@ -278,6 +289,7 @@
 							]
 						}
 					}
+					title: "{gravitas.quest.railcraft.boilers}"
 					type: "item"
 				}
 			]
@@ -290,9 +302,10 @@
 			description: ["{gravitas.quest.railcraft.desc.crusher}"]
 			id: "5E5165BD2575E880"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "288486493DF95B3F"
 				item: "tfc:rock/gravel/andesite"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -330,9 +343,10 @@
 			description: ["{gravitas.quest.railcraft.desc.steam_furnace}"]
 			id: "4DA77FB15F75C830"
 			rewards: [{
-				count: 15
+				count: 8
 				id: "6AB47A4754672EE6"
 				item: "gtceu:iron_ore"
+				random_bonus: 8
 				type: "item"
 			}]
 			tasks: [{
@@ -382,7 +396,7 @@
 			description: ["{gravitas.quest.railcraft.desc.manual_roller}"]
 			id: "027F78A41813D436"
 			rewards: [{
-				count: 3
+				count: 2
 				id: "0437EC58568BC757"
 				item: {
 					Count: 1
@@ -392,8 +406,9 @@
 							ticks: 0L
 						}
 					}
-					id: "gtceu:steel_ingot"
+					id: "gtceu:bronze_ingot"
 				}
+				random_bonus: 2
 				type: "item"
 			}]
 			tasks: [{
@@ -410,7 +425,7 @@
 			description: ["{gravitas.quest.railcraft.desc.powered_roller}"]
 			id: "59348B6131C57A1F"
 			rewards: [{
-				count: 9
+				count: 4
 				id: "12A692B9FA72658F"
 				item: {
 					Count: 1
@@ -422,6 +437,7 @@
 					}
 					id: "gtceu:steel_ingot"
 				}
+				random_bonus: 4
 				type: "item"
 			}]
 			tasks: [{
@@ -438,9 +454,9 @@
 			description: ["{gravitas.quest.railcraft.desc.crowbars}"]
 			id: "5F8DBCC1A33B6B6F"
 			rewards: [{
-				id: "59DCE8CF66706092"
-				type: "xp_levels"
-				xp_levels: 5
+				id: "530092295AE3E83A"
+				type: "xp"
+				xp: 50
 			}]
 			tasks: [{
 				id: "2E80B7BBA24B714A"
@@ -480,39 +496,14 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["5F8DBCC1A33B6B6F"]
-			hide: true
-			hide_dependency_lines: true
-			id: "73DE896A75A95B6D"
-			rewards: [{
-				id: "0DC29DA5FBB0C0A7"
-				type: "xp_levels"
-				xp_levels: 10
-			}]
-			tasks: [{
-				id: "1A24EDEF90D13776"
-				item: {
-					Count: 1
-					id: "railcraft:seasons_crowbar"
-					tag: {
-						Damage: 0
-						season: 1
-					}
-				}
-				type: "item"
-			}]
-			title: "{gravitas.quest.railcraft.seasonal_crowbar}"
-			x: -1.5d
-			y: -2.0d
-		}
-		{
 			dependencies: ["1FD4C83A45724F37"]
 			description: ["{gravitas.quest.railcraft.desc.spike_maul}"]
 			id: "581B2CC1D6A63DFD"
 			rewards: [{
-				count: 16
+				count: 8
 				id: "60221DA8FC3E6940"
 				item: "railcraft:reinforced_track"
+				random_bonus: 8
 				type: "item"
 			}]
 			tasks: [{
@@ -549,7 +540,6 @@
 				title: "{gravitas.quest.railcraft.spike_mauls}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.spike_maul}"
 			x: 1.0d
 			y: -1.0d
 		}
@@ -638,9 +628,10 @@
 			id: "22DCF11D8FA06939"
 			rewards: [
 				{
-					count: 11
+					count: 5
 					id: "5516D0EA35D8A844"
 					item: "minecraft:redstone"
+					random_bonus: 5
 					type: "item"
 				}
 				{
@@ -796,7 +787,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.turnout}"
-			x: -0.5d
+			x: 0.0d
 			y: -2.0d
 		}
 		{
@@ -809,7 +800,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.wye}"
-			x: 0.5d
+			x: 1.0d
 			y: -2.0d
 		}
 		{
@@ -822,7 +813,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.junction}"
-			x: 1.5d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -830,9 +821,10 @@
 			description: ["{gravitas.quest.railcraft.desc.frame}"]
 			id: "629F06190975FAAE"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "4D347311767DA826"
 				item: "railcraft:frame"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -870,6 +862,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["1FD4C83A45724F37"]
 			description: ["{gravitas.quest.railcraft.desc.trains}"]
 			id: "0CB074A02EE4283E"
 			tasks: [{
@@ -881,16 +874,14 @@
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"0CB074A02EE4283E"
-				"1FD4C83A45724F37"
-			]
+			dependencies: ["0CB074A02EE4283E"]
 			description: ["{gravitas.quest.railcraft.desc.steam_locomotive}"]
 			id: "1EBA4F40AD02F3E0"
 			rewards: [{
-				count: 32
+				count: 8
 				id: "012E65156CA39B9D"
-				item: "minecraft:coal"
+				item: "tfc:ore/bituminous_coal"
+				random_bonus: 8
 				type: "item"
 			}]
 			tasks: [{
@@ -911,18 +902,9 @@
 			description: ["{gravitas.quest.railcraft.desc.bore_head}"]
 			id: "53C8A71ABFE529E1"
 			rewards: [{
-				id: "5DD6B1679819564D"
-				item: {
-					Count: 1
-					id: "minecraft:enchanted_book"
-					tag: {
-						StoredEnchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 3s
-						}]
-					}
-				}
-				type: "item"
+				id: "4C067871A8EB511D"
+				type: "xp"
+				xp: 50
 			}]
 			tasks: [{
 				id: "7CE6962D2439E3A5"
@@ -962,9 +944,9 @@
 						]
 					}
 				}
+				title: "{gravitas.quest.railcraft.bore_head}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.bore_head}"
 			x: 1.0d
 			y: 3.5d
 		}
@@ -973,26 +955,16 @@
 			description: ["{gravitas.quest.railcraft.desc.minecart}"]
 			id: "59519D358EA863C3"
 			rewards: [{
-				count: 5
-				id: "72757F9FEAB8EC43"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-					id: "gtceu:steel_plate"
-				}
-				type: "item"
+				id: "51BF0FF8989D2D77"
+				type: "xp"
+				xp: 10
 			}]
+			subtitle: "{gravitas.quest.railcraft.subt.minecart}"
 			tasks: [{
 				id: "51BBDA297B2F7B7F"
 				item: "minecraft:minecart"
 				type: "item"
 			}]
-			title: "{gravitas.quest.railcraft.minecart}"
 			x: 0.0d
 			y: 4.5d
 		}
@@ -1219,9 +1191,10 @@
 			description: ["{gravitas.quest.railcraft.desc.tunnel_bore}"]
 			id: "441D6219A1E98B26"
 			rewards: [{
-				count: 32
+				count: 16
 				id: "03CE94111ED04A5D"
-				item: "minecraft:coal"
+				item: "tfc:ore/bituminous_coal"
+				random_bonus: 16
 				type: "item"
 			}]
 			tasks: [{
@@ -1248,7 +1221,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.railcraft.track_switch}"
-			x: 0.5d
+			x: 1.0d
 			y: -3.0d
 		}
 		{
@@ -1316,7 +1289,7 @@
 			description: ["{gravitas.quest.railcraft.desc.steel_tank}"]
 			id: "7F14661940C61C57"
 			rewards: [{
-				count: 8
+				count: 4
 				id: "03A37D694E45BE74"
 				item: {
 					Count: 1
@@ -1328,6 +1301,7 @@
 					}
 					id: "gtceu:steel_ingot"
 				}
+				random_bonus: 4
 				type: "item"
 			}]
 			tasks: [

@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:max_battery"
 	id: "560EF4C38DEACA03"
-	order_index: 8
+	order_index: 10
 	quest_links: [ ]
 	quests: [
 		{
