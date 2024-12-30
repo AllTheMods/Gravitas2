@@ -1835,7 +1835,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     X: "#forge:dusts/redstone",
     T: "minecraft:piston"
   })
- 
+
   event.shapeless("storagedrawers:one_stack_upgrade", ["2x #tfc:rock_knapping", "storagedrawers:upgrade_template"])
   event.shapeless("storagedrawers:obsidian_storage_upgrade", [
     "2x #forge:plates/any_bronze",
@@ -1910,6 +1910,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
     event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
   }
+
+  // railways locometal
+  event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
 
   //TFC Jars
   event.recipes.gtceu
@@ -2718,7 +2721,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(20)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .macerator("gregitas:crushed_crackle")
     .itemInputs("#iceandfire:crackled_blocks")
     .itemOutputs("2x gregitas:crushed_crackle")
@@ -2726,7 +2729,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .macerator("gregitas:crushed_char")
     .itemInputs("#iceandfire:charred_blocks")
     .itemOutputs("2x gregitas:crushed_char")
@@ -2734,7 +2737,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .macerator("gregitas:crushed_frostburn")
     .itemInputs("#iceandfire:frozen_blocks")
     .itemOutputs("2x gregitas:crushed_frostburn")
@@ -2742,7 +2745,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .centrifuge("gregitas:crushed_crackle_outputs")
     .itemInputs("gregitas:crushed_crackle")
     .chancedOutput("gtceu:impure_tungstate_dust", 320, 1)
@@ -2752,7 +2755,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(420)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .centrifuge("gregitas:crushed_char_outputs")
     .itemInputs("gregitas:crushed_char")
     .chancedOutput("gtceu:tiny_plutonium_dust", 1320, 1)
@@ -2761,7 +2764,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(420)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .centrifuge("gregitas:crushed_frostburn_outputs")
     .itemInputs("gregitas:crushed_frostburn")
     .chancedOutput("gtceu:tiny_platinum_group_sludge_dust", 1320, 3)
@@ -2770,6 +2773,4 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .outputFluids(Fluid.of("gtceu:liquid_air", 10))
     .duration(160)
     .EUt(128)
-
-
 }
