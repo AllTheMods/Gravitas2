@@ -128,6 +128,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   /// Railways (Steam n Rails)
   event.remove({ mod: "railways", id: /^railways:crafting\/smokestack.*/ })
+  event.remove({ mod: "railways", id: "railways:stonecutting/riveted_locometal" })
 
   //ATO
   event.remove({ id: /^alltheores:.*/, mod: "alltheores" })
