@@ -197,12 +197,24 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.replaceInput({ id: `tfships:${wood}_galley` }, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
   })
   event.replaceInput({ id: "smallships:sail" }, "#minecraft:wool", "immersiveengineering:hemp_fabric")
+
   //Storage Drawers
   event.replaceInput({ id: "storagedrawers:controller" }, "minecraft:stone", "#forge:stone")
   event.replaceInput({ id: "storagedrawers:controller" }, "minecraft:diamond", "create:pulse_repeater")
   event.replaceInput({ id: "storagedrawers:controller_slave" }, "minecraft:stone", "#forge:stone")
   event.replaceInput({ id: "storagedrawers:controller_slave" }, "minecraft:gold_ingot", "minecraft:repeater")
+  event.replaceInput({ id: "storagedrawers:compacting_drawers_2" }, "minecraft:stone", "#forge:stone")
   event.replaceInput({ id: "storagedrawers:compacting_drawers_3" }, "minecraft:stone", "#forge:stone")
+  event.replaceInput(
+    { id: "storagedrawers:compacting_drawers_2" },
+    "#storagedrawers:full_drawers",
+    "#storagedrawers:drawers"
+  )
+  event.replaceInput(
+    { id: "storagedrawers:compacting_drawers_3" },
+    "#storagedrawers:full_drawers",
+    "#storagedrawers:drawers"
+  )
 
   event.replaceInput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
   event.replaceOutput({}, "minecraft:compass", "firmaciv:firmaciv_compass")
