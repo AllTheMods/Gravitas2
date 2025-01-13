@@ -2089,4 +2089,161 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:engineering_processor")
     .duration(200)
     .EUt(MV)
+
+  //Advanced AE2
+  event.remove([
+    {
+      id: "advanced_ae:quantum_alloy"
+    },
+    {
+      id: 'advanced_ae:quantum_processor_press'
+    },
+    {
+      id: 'advanced_ae:quantum_processor_press_from_iron'
+    },
+    {
+      id: 'advanced_ae:quantum_processor_print'
+    },
+    {
+      id: 'advanced_ae:quantum_processor'
+    },
+    {
+      id: 'advanced_ae:quantum_storage_component'
+    },
+    {
+      id: 'advanced_ae:stock_export_bus'
+    },
+    {
+      id: 'advanced_ae:quantumunit'
+    },
+    {
+      id: 'advanced_ae:quantumstorage128'
+    },
+    {
+      id: 'advanced_ae:quantumstorage256'
+    }
+  ])
+
+  event.custom({
+    type: "advanced_ae:reaction",
+    energy: 200000,
+    fluid: {
+      "fluidStack": {
+        "Amount": 1000,
+        "FluidName": "advanced_ae:quantum_infusion_source"
+      }
+    },
+    input_items: [
+      {
+        amount: 4,
+        ingredient: {
+          item: 'tfc:metal/ingot/copper'
+        }
+      },
+      {
+        amount: 4,
+        ingredient: {
+          item: "advanced_ae:shattered_singularity"
+        }
+      },
+      {
+        amount: 4,
+        ingredient: {
+          item: "ae2:singularity"
+        }
+      }
+    ],
+    output: {
+      "#": 1,
+      "#c": "ae2:i",
+      "id": "advanced_ae:quantum_alloy"
+    }
+  }).id('kubejs:quantum_alloy')
+
+  event.custom({
+    type: "ae2:inscriber",
+    ingredients: {
+      bottom: {
+        item: 'megacells:printed_accumulation_processor'
+      },
+      middle: {
+        item: "advanced_ae:quantum_alloy"
+      },
+      top: {
+        item: "advanced_ae:quantum_processor_press"
+      }
+    },
+    mode: "inscribe",
+    result: {
+      item: "advanced_ae:printed_quantum_processor"
+    }
+  }).id('kubejs:printed_quantum_processor')
+
+  event.recipes.gtceu
+    .assembler("gregitas:quantum_processor_press")
+    .circuit(1)
+    .itemInputs(
+      "2x advanced_ae:quantum_alloy_plate",
+      "2x gtceu:double_tungsten_steel_plate",
+      "16x ae2:logic_processor",
+      "16x ae2:calculation_processor",
+      "16x ae2:engineering_processor",
+      "2x advanced_ae:shattered_singularity",
+    )
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 576))
+    .itemOutputs('advanced_ae:quantum_processor_press')
+    .duration(400)
+    .EUt(EV)
+
+  event.recipes.gtceu
+    .cutter("quantum_processor")
+    .itemInputs('advanced_ae:printed_quantum_processor')
+    .itemOutputs('advanced_ae:quantum_processor')
+    .inputFluids(Fluid.of("gtceu:lubricant", 200))
+    .duration(1000)
+    .EUt(EV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:quantum_storage_component")
+    .itemInputs("3x ae2:cell_component_256k", 'advanced_ae:quantum_processor', "#gtceu:circuits/iv")
+    .inputFluids(Fluid.of("gtceu:red_alloy", 576))
+    .itemOutputs('advanced_ae:quantum_storage_component')
+    .duration(200)
+    .EUt(IV)
+
+  //Export bus
+  event.recipes.gtceu
+    .assembler("gregitas:stock_export_bus_part")
+    .itemInputs("2x gtceu:vanadium_steel_plate", "ae2:export_bus", 'gtceu:iv_robot_arm', 'gtceu:iv_electric_pump')
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 72))
+    .itemOutputs('advanced_ae:stock_export_bus_part')
+    .duration(100)
+    .EUt(MV)
+
+  //Crafting Computer
+  event.recipes.gtceu
+    .assembler("gregitas:quantum_unit")
+    .itemInputs(
+      "4x gtceu:titanium_tungsten_carbide_plate",
+      "#gtceu:circuits/ev",
+      "ae2:crafting_unit",
+      "2x advanced_ae:quantum_processor"
+    )
+    .itemOutputs("advanced_ae:quantum_unit")
+    .duration(100)
+    .EUt(LuV)
+
+  event.recipes.gtceu
+    .canner("gregitas:quantum_storage_128")
+    .itemInputs('advanced_ae:quantum_unit', '2x megacells:cell_component_64m')
+    .itemOutputs("advanced_ae:quantum_storage_128")
+    .duration(200)
+    .EUt(LuV)
+
+  event.recipes.gtceu
+    .canner("gregitas:quantum_storage_256")
+    .itemInputs('advanced_ae:quantum_unit', 'megacells:cell_component_256m')
+    .itemOutputs("advanced_ae:quantum_storage_256")
+    .duration(200)
+    .EUt(ZPM)
 }
