@@ -371,7 +371,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //gtceu
   event.replaceInput({ mod: "gtceu" }, "minecraft:chest", "#forge:chests/wooden") //fix ULV buses requiring vanilla chest
-
+  event.replaceInput({ mod: "gtceu" , not: { output: 'minecraft:magma_cream' }}, "minecraft:slime_ball", "tfc:glue")
   event.replaceInput({ input: "minecraft:phantom_membrane" }, "minecraft:phantom_membrane", "#gravitas:phantom")
 
   //tfcea
