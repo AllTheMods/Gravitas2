@@ -2121,6 +2121,12 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     },
     {
       id: 'advanced_ae:quantumstorage256'
+    },
+    {
+      id: 'advanced_ae:smalladvpatpro'
+    },
+    {
+      id: 'advanced_ae:eaeadvpatpro'
     }
   ])
 
@@ -2218,7 +2224,32 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .inputFluids(Fluid.of("gtceu:soldering_alloy", 72))
     .itemOutputs('advanced_ae:stock_export_bus_part')
     .duration(100)
-    .EUt(MV)
+    .EUt(IV)
+
+  //Pattern providers
+  event.recipes.gtceu
+    .assembler("gregitas:small_adv_pattern_provider")
+    .itemInputs(
+      '4x gtceu:tungsten_steel_plate',
+      'ae2:pattern_provider',
+      "#gtceu:circuits/ev",
+      'advanced_ae:quantum_processor'
+    )
+    .itemOutputs('advanced_ae:small_adv_pattern_provider')
+    .duration(400)
+    .EUt(EV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:adv_pattern_provider")
+    .itemInputs(
+      '4x gtceu:tungsten_steel_plate',
+      'expatternprovider:ex_pattern_provider',
+      "#gtceu:circuits/ev",
+      '4x advanced_ae:quantum_processor'
+    )
+    .itemOutputs('advanced_ae:adv_pattern_provider')
+    .duration(400)
+    .EUt(EV)
 
   //Crafting Computer
   event.recipes.gtceu
@@ -2246,4 +2277,5 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("advanced_ae:quantum_storage_256")
     .duration(200)
     .EUt(ZPM)
+
 }
