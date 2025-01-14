@@ -75,4 +75,17 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
     fluidIngredient.computeIfPresent("amount", (key, val) => convertFluidValues(val))
     r.fluid(fluidIngredient)
   })
+
+  //Aluminum heating Fix
+  event.custom({
+    type: "tfc:heating",
+    ingredient: {
+      item: 'gregitas:double_aluminium_ingot'
+    },
+    result_fluid: {
+      fluid: "gtceu:aluminium",
+      amount: 288
+    },
+    temperature: 650
+  })
 }
