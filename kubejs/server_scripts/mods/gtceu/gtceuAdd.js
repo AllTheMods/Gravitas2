@@ -235,14 +235,14 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   ]
 
   createTfcWeldable.forEach((mod) => {
-    const { result, ingots } = mod
+    const { result, items, ingots } = mod
     ingots.forEach((ingot) => {
       event
         .custom({
           type: "create:compacting",
           ingredients: [
             {
-              item: `#forge:ingots/${ingot}`,
+              item: items(ingot),
               count: 2
             },
             {

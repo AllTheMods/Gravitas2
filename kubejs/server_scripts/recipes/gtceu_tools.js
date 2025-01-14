@@ -38,7 +38,7 @@ const gtceuToolsTFC = [
     id: "aluminium",
     fluid: "gtceu:aluminium",
     tier: 3,
-    double: "tfc_ie_addon:metal/double_ingot/aluminum"
+    double: 'gregitas:double_aluminium_ingot'
   },
   {
     id: "titanium",
@@ -739,6 +739,22 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
         H: "gregitas:small_tool_handle"
       })
       .id(`gregitas:shaped/${metal.id}_butchery_knife`)
+  })
+
+  //Aluminum sheet fix
+  event.recipes.tfc.anvil('tfc_ie_addon:metal/sheet/aluminum', 'gregitas:double_aluminium_ingot',  ["hit_last", "hit_second_last", "hit_third_last"]).tier(1)
+  event.custom({
+    type: "tfc:welding",
+    first_input: {
+      tag: "forge:ingots/aluminum"
+    },
+    second_input: {
+      tag: "forge:ingots/aluminum"
+    },
+    tier: 0,
+    result: {
+      "item": 'gregitas:double_aluminium_ingot'
+    }
   })
 
   //Removal & Misc
