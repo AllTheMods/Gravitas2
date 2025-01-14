@@ -188,14 +188,11 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   const createTfcWeldable = [
     {
-      result: (ingot) => `tfc:metal/double_ingot/${ingot}`,
       ingots: [
         "bismuth",
         "bismuth_bronze",
         "black_bronze",
         "bronze",
-        "copper",
-        "gold",
         "nickel",
         "rose_gold",
         "silver",
@@ -208,14 +205,28 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         "black_steel",
         "blue_steel",
         "red_steel"
-      ]
+      ],
+      items: (ingot) => `gtceu:${ingot}_ingot`,
+      result: (ingot) => `tfc:metal/double_ingot/${ingot}`,
     },
     {
+      ingots: ["constantan"],
+      items: (ingot) => `immersiveengineering:ingot_${ingot}`,
+      result: (ingot) => `tfc_ie_addon:metal/double_ingot/${ingot}`
+    },
+    {
+      ingots: ["gold","copper"],
+      items: (ingot) => `tfc:metal/ingot/${ingot}`,
+      result: (ingot) => `tfc:metal/double_ingot/${ingot}`,
+    },
+    {
+      ingots: ["stainless_steel","chromium"],
+      items: (ingot) => `firmalife:metal/ingot/${ingot}`,
       result: (ingot) => `firmalife:metal/double_ingot/${ingot}`,
-      ingots: ["chromium", "stainless_steel"]
     },
     {
-      ingots: ["electrum", "constantan", "aluminum", "lead", "uranium"],
+      ingots: ["electrum", "lead", "uranium"],
+      items: (ingot) => `gtceu:${ingot}_ingot`,
       result: (ingot) => `tfc_ie_addon:metal/double_ingot/${ingot}`
     },
     {
@@ -230,6 +241,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         "cobalt_brass",
         "vanadium_steel"
       ],
+      items: (ingot) => `gtceu:${ingot}_ingot`,
       result: (ingot) => `gregitas:double_${ingot}_ingot`
     }
   ]
