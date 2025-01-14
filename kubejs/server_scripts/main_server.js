@@ -12,6 +12,7 @@ ServerEvents.recipes((event) => {
   spaceDustChain(event)
   certusSemiconductors(event)
   gregifyAE2(event)
+  replaceDisc(event)
 })
 
 LootJS.modifiers((event) => {
