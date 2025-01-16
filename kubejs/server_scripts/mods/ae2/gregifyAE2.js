@@ -2127,6 +2127,18 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     },
     {
       id: 'advanced_ae:eaeadvpatpro'
+    },
+    {
+      id: 'advanced_ae:smallappupgrade'
+    },
+    {
+      id: 'advanced_ae:largeappupgrade'
+    },
+    {
+      id: 'advanced_ae:reactionchamber'
+    },
+    {
+      id: 'advanced_ae:quantumstructure'
     }
   ])
 
@@ -2251,7 +2263,48 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(400)
     .EUt(EV)
 
+  event.recipes.gtceu
+    .assembler("gregitas:adv_pattern_provider_upgrade")
+    .circuit(2)
+    .itemInputs(
+      '4x gtceu:tungsten_steel_plate',
+      "#gtceu:circuits/ev",
+      'advanced_ae:quantum_processor'
+    )
+    .itemOutputs('advanced_ae:adv_pattern_provider_upgrade')
+    .duration(500)
+    .EUt(EV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:adv_pattern_provider_capacity_upgrade")
+    .circuit(2)
+    .itemInputs(
+      'ae2:pattern_provider',
+      "#gtceu:circuits/ev",
+      '2x gregitas:crafting_core',
+      'ae2:annihilation_core',
+      'ae2:formation_core',
+      '3x advanced_ae:quantum_processor'
+    )
+    .itemOutputs('advanced_ae:adv_pattern_provider_capacity_upgrade')
+    .duration(500)
+    .EUt(EV)
+
   //Crafting Computer
+  event.recipes.gtceu
+    .assembler("gregitas:reaction_chamber")
+    .circuit(2)
+    .itemInputs(
+      'ae2:condenser',
+      'ae2:vibration_chamber',
+      "#gtceu:circuits/iv",
+      'gtceu:iv_field_generator',
+      'gtceu:iv_electric_motor'
+    )
+    .itemOutputs('advanced_ae:reaction_chamber')
+    .duration(100)
+    .EUt(IV)
+
   event.recipes.gtceu
     .assembler("gregitas:quantum_unit")
     .itemInputs(
@@ -2263,6 +2316,14 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("advanced_ae:quantum_unit")
     .duration(100)
     .EUt(LuV)
+
+  event.recipes.gtceu
+    .assembler('gregitas:quantum_structure')
+    .itemInputs('4x ae2:sky_stone_block', '4x ae2:quartz_vibrant_glass')
+    .inputFluids(Fluid.of("advanced_ae:quantum_infusion_source", 4000))
+    .itemOutputs('advanced_ae:quantum_structure')
+    .duration(100)
+    .EUt(IV)
 
   event.recipes.gtceu
     .canner("gregitas:quantum_storage_128")
@@ -2277,5 +2338,4 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("advanced_ae:quantum_storage_256")
     .duration(200)
     .EUt(ZPM)
-
 }
