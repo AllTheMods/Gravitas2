@@ -2773,4 +2773,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .outputFluids(Fluid.of("gtceu:liquid_air", 10))
     .duration(160)
     .EUt(128)
+
+  //Sophisticated Backpacks
+  shaped("sophisticatedbackpacks:tool_swapper_upgrade", ["BFB", "CGD", "AEA"], {
+    A: "#forge:ingots/iron",
+    B: "#forge:dusts/redstone",
+    G: "sophisticatedbackpacks:upgrade_base",
+    C: Item.of("tfc:metal/pickaxe/copper", '{Damage:0}'),
+    D: Item.of("tfc:metal/axe/copper", '{Damage:0}'),
+    E: Item.of("tfc:metal/shovel/copper", '{Damage:0}'),
+    F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
+  }).id("gregitas:tool_swapper_upgrade")
 }

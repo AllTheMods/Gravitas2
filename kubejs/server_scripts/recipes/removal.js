@@ -540,4 +540,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: "gtceu:shaped/charcoal_pile_igniter" })
   event.remove({ id: "scguns:treated_iron/treated_iron_bucket" })
+
+  //Sophisticated Backpacks
+  event.remove({ id: "sophisticatedbackpacks:tool_swapper_upgrade" })
 }
