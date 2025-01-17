@@ -2139,6 +2139,24 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     },
     {
       id: 'advanced_ae:quantumstructure'
+    },
+    {
+      id: 'advanced_ae:quantumcore'
+    },
+    {
+      id: 'advanced_ae:quantumaccel'
+    },
+    {
+      id: 'advanced_ae:quantummultithreader'
+    },
+    {
+      id: 'advanced_ae:quantumdataentangler'
+    },
+    {
+      id: 'advanced_ae:advpartenc'
+    },
+    {
+      id: 'advanced_ae:strength_card'
     }
   ])
 
@@ -2196,6 +2214,13 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
       item: "advanced_ae:printed_quantum_processor"
     }
   }).id('kubejs:printed_quantum_processor')
+
+  event.recipes.gtceu
+    .macerator("gregitas:quantum_infused_dust")
+    .itemInputs('advanced_ae:shattered_singularity')
+    .itemOutputs('2x advanced_ae:quantum_infused_dust')
+    .duration(50)
+    .EUt(HV)
 
   event.recipes.gtceu
     .assembler("gregitas:quantum_processor_press")
@@ -2290,6 +2315,20 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(500)
     .EUt(EV)
 
+  event.recipes.gtceu
+    .assembler("gregitas:adv_pattern_encoder")
+    .itemInputs(
+      "gtceu:ev_machine_hull",
+      "2x #gtceu:circuits/ev",
+      "4x ae2:annihilation_core",
+      "4x ae2:formation_core",
+      "advanced_ae:quantum_storage_component",
+      "32x ae2:blank_pattern"
+    )
+    .itemOutputs('advanced_ae:adv_pattern_encoder')
+    .duration(400)
+    .EUt(EV)
+
   //Crafting Computer
   event.recipes.gtceu
     .assembler("gregitas:reaction_chamber")
@@ -2338,4 +2377,63 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("advanced_ae:quantum_storage_256")
     .duration(200)
     .EUt(ZPM)
+
+  event.recipes.gtceu
+    .assembler("gregitas:quantum_core")
+    .itemInputs(
+      'advanced_ae:quantum_unit',
+      'advanced_ae:quantum_accelerator',
+      'advanced_ae:quantum_storage_128',
+      'gtceu:luv_emitter',
+      '4x ae2:singularity')
+    .inputFluids(Fluid.of("advanced_ae:quantum_infusion_source", 2000))
+    .itemOutputs('advanced_ae:quantum_core')
+    .duration(800)
+    .EUt(LuV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:quantum_accelerator")
+    .itemInputs(
+      'advanced_ae:quantum_unit',
+      '2x advanced_ae:quantum_processor',
+      '4x ae2:logic_processor',
+      '4x ae2:calculation_processor',
+      '4x ae2:engineering_processor',
+      "#gtceu:circuits/luv")
+    .itemOutputs('advanced_ae:quantum_accelerator')
+    .duration(200)
+    .EUt(LuV)
+
+  //Multipliers
+  event.recipes.gtceu
+    .assembler("gregitas:quantum_multi_threader")
+    .itemInputs(
+      '4x advanced_ae:quantum_accelerator',
+      'advanced_ae:quantum_core',
+      '32x gtceu:fine_cobalt_wire',
+      '32x gtceu:fine_ruridit_wire')
+    .itemOutputs('advanced_ae:quantum_multi_threader')
+    .duration(800)
+    .EUt(LuV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:data_entangler")
+    .itemInputs(
+      '4x advanced_ae:quantum_storage_128',
+      'advanced_ae:quantum_core',
+      '32x gtceu:fine_cobalt_wire',
+      '32x gtceu:fine_ruridit_wire')
+    .itemOutputs('advanced_ae:data_entangler')
+    .duration(800)
+    .EUt(LuV)
+
+  //Cards
+  event.shaped('advanced_ae:strength_card', [" D ", "BAC", " E "], {
+    A: 'advanced_ae:quantum_upgrade_base',
+    B: Item.of('tfc:metal/sword/red_steel', '{Damage:0}'),
+    C: Item.of('tfc:metal/sword/blue_steel', '{Damage:0}'),
+    D: Item.of('tfc:metal/sword/black_steel', '{Damage:0}'),
+    E: 'gtceu:iv_robot_arm'
+  })
+
 }
