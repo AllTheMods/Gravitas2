@@ -77,6 +77,12 @@
 			x: 14.5d
 			y: -3.5d
 		}
+		{
+			id: "676CB3732F82EB76"
+			linked_quest: "7E0E95E46C24E405"
+			x: 6.5d
+			y: 3.0d
+		}
 	]
 	quests: [
 		{
@@ -182,6 +188,7 @@
 			y: 0.5d
 		}
 		{
+			dependencies: ["5EE0CF563FDF196C"]
 			description: ["{gravitas.quest.steam.desc.start}"]
 			id: "69E44C6CAF03C0B5"
 			rewards: [{
@@ -355,7 +362,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["69E44C6CAF03C0B5"]
 			description: ["{gravitas.quest.steam.desc.brass}"]
 			id: "1A4997864B428389"
 			tasks: [{
@@ -373,7 +379,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["1A4997864B428389"]
@@ -485,7 +491,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["7F4BA1BB0D1EAF58"]
+			dependencies: ["735C1C31C684CC3E"]
 			description: ["{gravitas.quest.steam.desc.compress}"]
 			id: "3930D67CFD9D9F8E"
 			subtitle: "{gravitas.quest.steam.subt.compress}"
@@ -650,7 +656,10 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["3930D67CFD9D9F8E"]
+			dependencies: [
+				"3930D67CFD9D9F8E"
+				"7F4BA1BB0D1EAF58"
+			]
 			id: "3800D1A117D03D92"
 			tasks: [{
 				count: 2L
@@ -659,7 +668,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["1D334201A334B15A"]
@@ -679,7 +688,6 @@
 				"20600615ABB0D722"
 				"5E8D1A7156E56401"
 			]
-			hide_dependent_lines: true
 			id: "517A1BE482156696"
 			shape: "rsquare"
 			size: 1.5d
@@ -690,8 +698,8 @@
 				item: "gtceu:resin_printed_circuit_board"
 				type: "item"
 			}]
-			x: 13.0d
-			y: -1.0d
+			x: 12.75d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -741,7 +749,6 @@
 				"44280A8DA796BA10"
 				"4DECC226C4B2F9AD"
 			]
-			hide_dependent_lines: true
 			id: "7ED6BED707F5074F"
 			shape: "rsquare"
 			size: 1.5d
@@ -805,7 +812,6 @@
 				"20600615ABB0D722"
 				"554DA4CDDAC7CBB1"
 			]
-			hide_dependent_lines: true
 			id: "2EDA1A79B4E8B77B"
 			shape: "rsquare"
 			size: 1.5d
@@ -820,6 +826,7 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["48F40B8850D384F9"]
 			id: "636F3F2CF60D1BCE"
 			tasks: [{
 				count: 12L
@@ -871,7 +878,7 @@
 				item: "gtceu:sulfur_dust"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 13.0d
 			y: -2.0d
 		}
 		{
