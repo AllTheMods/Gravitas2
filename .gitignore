@@ -24,6 +24,7 @@ usercache.json
 usernamecache.json
 /XaeroWaypoints*
 /XaeroWorldMap
+/xaero
 .vscode
 kubejs/server_scripts/debug/
 kubejs/server_scripts/jsconfig.json
@@ -48,3 +49,8 @@ node-tail.js
 ESM
 texturepacks
 ldlib
+.curseclient
+manifest.json
+minecraftinstance.json
+modlist.html
+/downloads

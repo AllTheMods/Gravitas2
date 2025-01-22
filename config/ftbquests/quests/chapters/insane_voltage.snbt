@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:micro_processor_mainframe"
 	id: "00E59A3B38CB7EEA"
-	order_index: 4
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -71,6 +71,7 @@
 			y: -2.5d
 		}
 		{
+			description: ["{gravitas.quest.iv.desc.tungsten}"]
 			id: "08D48D7C2C6EEF54"
 			tasks: [{
 				id: "1B9C19DAD6E6C23C"
@@ -88,7 +89,6 @@
 			}]
 			x: -2.5d
 			y: -2.0d
-			description: ["{gravitas.quest.iv.desc.tungsten}"]
 		}
 		{
 			id: "0A848E0B9F485B2C"

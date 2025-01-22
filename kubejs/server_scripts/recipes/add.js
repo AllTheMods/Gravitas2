@@ -1911,6 +1911,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
   }
 
+  // railways locometal
+  event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
+
   //TFC Jars
   event.recipes.gtceu
     .alloy_smelter("empty_jar")
@@ -2114,6 +2117,19 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .inputFluids(Fluid.of("minecraft:water", 500))
       .itemOutputs(`4x tfc:jar/${jams}`)
       .duration(40)
+      .EUt(LV)
+  })
+
+  // tfc plant dyes
+
+  dyes.forEach((dye) => {
+    event.recipes.create.crushing([`2x minecraft:${dye}_dye`], `#tfc:makes_${dye}_dye`, 250)
+
+    event.recipes.gtceu
+      .macerator(`gregitas:macerator_tfc_${dye}_dye`)
+      .itemInputs(`#tfc:makes_${dye}_dye`)
+      .itemOutputs(`2x minecraft:${dye}_dye`)
+      .duration(20)
       .EUt(LV)
   })
 
@@ -2705,7 +2721,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(20)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .macerator("gregitas:crushed_crackle")
     .itemInputs("#iceandfire:crackled_blocks")
     .itemOutputs("2x gregitas:crushed_crackle")
@@ -2713,7 +2729,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .macerator("gregitas:crushed_char")
     .itemInputs("#iceandfire:charred_blocks")
     .itemOutputs("2x gregitas:crushed_char")
@@ -2721,7 +2737,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .macerator("gregitas:crushed_frostburn")
     .itemInputs("#iceandfire:frozen_blocks")
     .itemOutputs("2x gregitas:crushed_frostburn")
@@ -2729,7 +2745,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .centrifuge("gregitas:crushed_crackle_outputs")
     .itemInputs("gregitas:crushed_crackle")
     .chancedOutput("gtceu:impure_tungstate_dust", 320, 1)
@@ -2739,7 +2755,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(420)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .centrifuge("gregitas:crushed_char_outputs")
     .itemInputs("gregitas:crushed_char")
     .chancedOutput("gtceu:tiny_plutonium_dust", 1320, 1)
@@ -2748,7 +2764,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(420)
 
-    event.recipes.gtceu
+  event.recipes.gtceu
     .centrifuge("gregitas:crushed_frostburn_outputs")
     .itemInputs("gregitas:crushed_frostburn")
     .chancedOutput("gtceu:tiny_platinum_group_sludge_dust", 1320, 3)
@@ -2758,5 +2774,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(128)
 
-
+  //Sophisticated Backpacks
+  shaped("sophisticatedbackpacks:tool_swapper_upgrade", ["BFB", "CGD", "AEA"], {
+    A: "#forge:ingots/iron",
+    B: "#forge:dusts/redstone",
+    G: "sophisticatedbackpacks:upgrade_base",
+    C: Item.of("tfc:metal/pickaxe/copper", '{Damage:0}'),
+    D: Item.of("tfc:metal/axe/copper", '{Damage:0}'),
+    E: Item.of("tfc:metal/shovel/copper", '{Damage:0}'),
+    F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
+  }).id("gregitas:tool_swapper_upgrade")
 }

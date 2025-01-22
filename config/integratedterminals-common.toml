@@ -55,7 +55,7 @@
 
 	[core.general]
 		#If an anonymous mod startup analytics request may be sent to our analytics service.
-		analytics = true
+		analytics = false
 		#If the crafting planners can work on separate thread.
 		craftingPlannerEnableMultithreading = false
 		#The maximum number of terminal storage crafting recipes that can be sent in a single packet. Reduce this when you have packet overflows.
@@ -65,7 +65,7 @@
 		#The maximum number of terminal storage instances that can be sent in a single packet. Reduce this when you have packet overflows.
 		terminalStoragePacketMaxInstances = 1024
 		#If the version checker should be enabled.
-		versionChecker = true
+		versionChecker = false
 		#The limit for the number of leaves in a tree-based crafting plan after which it won't be sent to the client anymore.
 		terminalStorageMaxTreePlanSize = 64
 		#If crafting plans should default to the tree-based view. If false, it will default to the flattened view.

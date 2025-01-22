@@ -1,0 +1,13 @@
+{
+    "type": "tfc:welding",
+    "first_input": {
+      "item": "gtceu:tungsten_steel_ingot"
+    },
+    "second_input": {
+        "item": "gtceu:tungsten_steel_ingot"
+    },
+    "tier": 2,
+    "result": {
+      "item": "gregitas:double_tungsten_steel_ingot"
+    }
+}

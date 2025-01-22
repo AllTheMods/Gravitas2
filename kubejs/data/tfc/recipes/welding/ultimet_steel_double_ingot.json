@@ -1,0 +1,13 @@
+{
+    "type": "tfc:welding",
+    "first_input": {
+      "item": "gtceu:ultimet_ingot"
+    },
+    "second_input": {
+        "item": "gtceu:ultimet_ingot"
+    },
+    "tier": 2,
+    "result": {
+      "item": "gregitas:double_ultimet_ingot"
+    }
+}

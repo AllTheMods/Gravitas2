@@ -215,4 +215,16 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
 
   event.add("tfc:toughness_3", ["gtceu:steel_frame"])
   event.add("treetap:tappable", ["integrateddynamics:menril_log", "integrateddynamics:menril_log_filled"])
+
+  event.add("forge:magma", ["minecraft:magma_block",
+                            "tfc:rock/magma/basalt",
+                            "tfc:rock/magma/granite",
+                            "tfc:rock/magma/diorite",
+                            "tfc:rock/magma/gabbro",
+                            "tfc:rock/magma/rhyolite",
+                            "tfc:rock/magma/andesite",
+                            "tfc:rock/magma/dacite"
+                           ])
+
+                         
 }

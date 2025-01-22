@@ -5,7 +5,7 @@
 	group: "6A4ED78F1D529DE3"
 	icon: "gtceu:advanced_integrated_circuit"
 	id: "37A5A4A81CCB67E5"
-	order_index: 2
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -144,7 +144,16 @@
 			id: "61262BC1C525E6F1"
 			tasks: [{
 				id: "2BBF580104DF2C41"
-				item: "gtceu:stainless_steel_ingot"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "firmalife:metal/ingot/stainless_steel"
+				}
 				type: "item"
 			}]
 			x: -5.0d
@@ -631,9 +640,7 @@
 			y: 6.0d
 		}
 		{
-			description: [
-				"{gravitas.quest.hv.desc.tantalite}"
-			]
+			description: ["{gravitas.quest.hv.desc.tantalite}"]
 			id: "173FF8D7B6C1569A"
 			tasks: [{
 				id: "0A48D0CC1E37971F"
@@ -671,6 +678,7 @@
 		}
 		{
 			dependencies: ["0115271C840CD387"]
+			description: ["{gravitas.quest.hv.desc.watercover}"]
 			id: "71DBBA598873B29C"
 			subtitle: "{gravitas.quest.hv.subtitle.watercover}"
 			tasks: [{
@@ -678,9 +686,6 @@
 				item: "gtceu:infinite_water_cover"
 				type: "item"
 			}]
-			description: [
-			    "{gravitas.quest.hv.desc.watercover}"
-			]
 			x: -10.5d
 			y: -2.5d
 		}

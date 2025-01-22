@@ -19,8 +19,8 @@
 			image: "gtceu:textures/gui/arrows/l7.png"
 			rotation: -90.0d
 			width: 0.8d
-			y: -0.8d
 			x: 5.5d
+			y: -0.8d
 		}
 		{
 			height: 0.6d
@@ -77,6 +77,12 @@
 			x: 14.5d
 			y: -3.5d
 		}
+		{
+			id: "676CB3732F82EB76"
+			linked_quest: "7E0E95E46C24E405"
+			x: 6.5d
+			y: 3.0d
+		}
 	]
 	quests: [
 		{
@@ -110,7 +116,7 @@
 						value: "forge:tools/wrenches"
 					}
 				}
-				title: "{gravitas.quest.steam.wrench}"
+				title: "{gravitas.quest.steam.wrenches}"
 				type: "item"
 			}]
 			x: 4.5d
@@ -143,7 +149,7 @@
 						value: "forge:tools/screwdrivers"
 					}
 				}
-				title: "{gravitas.quest.steam.screwd}"
+				title: "{gravitas.quest.steam.screwdrivers}"
 				type: "item"
 			}]
 			x: 3.0d
@@ -152,6 +158,19 @@
 		{
 			dependencies: ["69E44C6CAF03C0B5"]
 			description: ["{gravitas.quest.steam.desc.file}"]
+			icon: {
+				Count: 1
+				id: "gtceu:bronze_file"
+				tag: {
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						Damage: 0
+						MaxDamage: 191
+					}
+					HideFlags: 2
+				}
+			}
 			id: "09C2B236014FC094"
 			tasks: [{
 				id: "58A5C6FCCB08AC64"
@@ -165,11 +184,11 @@
 				title: "{gravitas.quest.stage2.files}"
 				type: "item"
 			}]
-			title: "{gravitas.quest.steam.file}"
 			x: 2.5d
 			y: 0.5d
 		}
 		{
+			dependencies: ["5EE0CF563FDF196C"]
 			description: ["{gravitas.quest.steam.desc.start}"]
 			id: "69E44C6CAF03C0B5"
 			rewards: [{
@@ -229,6 +248,7 @@
 				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.steam.brassPlates}"
 			x: 2.5d
 			y: -0.5d
 		}
@@ -301,7 +321,7 @@
 			description: ["{gravitas.quest.steam.desc.pipes}"]
 			id: "682CCD6B55410ABE"
 			tasks: [{
-				count: 7L
+				count: 6L
 				id: "20D2EE90B32A03B7"
 				item: "gtceu:bronze_small_fluid_pipe"
 				type: "item"
@@ -342,7 +362,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["69E44C6CAF03C0B5"]
 			description: ["{gravitas.quest.steam.desc.brass}"]
 			id: "1A4997864B428389"
 			tasks: [{
@@ -360,7 +379,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["1A4997864B428389"]
@@ -472,7 +491,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["7F4BA1BB0D1EAF58"]
+			dependencies: ["735C1C31C684CC3E"]
 			description: ["{gravitas.quest.steam.desc.compress}"]
 			id: "3930D67CFD9D9F8E"
 			subtitle: "{gravitas.quest.steam.subt.compress}"
@@ -637,7 +656,10 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["3930D67CFD9D9F8E"]
+			dependencies: [
+				"3930D67CFD9D9F8E"
+				"7F4BA1BB0D1EAF58"
+			]
 			id: "3800D1A117D03D92"
 			tasks: [{
 				count: 2L
@@ -646,7 +668,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["1D334201A334B15A"]
@@ -666,7 +688,6 @@
 				"20600615ABB0D722"
 				"5E8D1A7156E56401"
 			]
-			hide_dependent_lines: true
 			id: "517A1BE482156696"
 			shape: "rsquare"
 			size: 1.5d
@@ -677,8 +698,8 @@
 				item: "gtceu:resin_printed_circuit_board"
 				type: "item"
 			}]
-			x: 13.0d
-			y: -1.0d
+			x: 12.75d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -728,7 +749,6 @@
 				"44280A8DA796BA10"
 				"4DECC226C4B2F9AD"
 			]
-			hide_dependent_lines: true
 			id: "7ED6BED707F5074F"
 			shape: "rsquare"
 			size: 1.5d
@@ -792,7 +812,6 @@
 				"20600615ABB0D722"
 				"554DA4CDDAC7CBB1"
 			]
-			hide_dependent_lines: true
 			id: "2EDA1A79B4E8B77B"
 			shape: "rsquare"
 			size: 1.5d
@@ -807,6 +826,7 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["48F40B8850D384F9"]
 			id: "636F3F2CF60D1BCE"
 			tasks: [{
 				count: 12L
@@ -858,7 +878,7 @@
 				item: "gtceu:sulfur_dust"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 13.0d
 			y: -2.0d
 		}
 		{

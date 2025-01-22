@@ -410,36 +410,9 @@
 				id: "38B8B02C44957784"
 				item: {
 					Count: 1
-					id: "itemfilters:or"
+					id: "itemfilters:tag"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								ForgeCaps: {
-									"tfc:item_heat": {
-										heat: 0.0f
-										ticks: 0L
-									}
-								}
-								id: "tfc:metal/chisel/copper"
-								tag: {
-									Damage: 0
-								}
-							}
-							{
-								Count: 1b
-								ForgeCaps: {
-									"tfc:item_heat": {
-										heat: 0.0f
-										ticks: 0L
-									}
-								}
-								id: "tfc:metal/chisel/bronze"
-								tag: {
-									Damage: 0
-								}
-							}
-						]
+						value: "tfc:chisels"
 					}
 				}
 				title: "{gravitas.quest.stage2.chisel}"
@@ -934,6 +907,7 @@
 				"7E0E95E46C24E405"
 				"780A932B4C424064"
 			]
+			dependency_requirement: "one_completed"
 			description: ["{gravitas.quest.stage2.desc.wroughtp}"]
 			id: "614C240D2569582C"
 			subtitle: "{gravitas.quest.stage2.subt.wroughtp}"
