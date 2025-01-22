@@ -193,8 +193,11 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   //Firmalife
-  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot")
-  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot")
+  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/chromium", "#forge:ingots/chromium")
+  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/stainless_steel", "#forge:ingots/stainless_steel")
+
+  event.replaceInput({ mod: "firmalife", id: /^firmalife:crafting\/greenhouse\/stainless_steel*/}, "firmalife:metal/rod/stainless_steel", "#forge:rods/aluminium")
+
   //Firebricks/Cokebricks etc
   event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay" }, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks" }, "tfc:fire_bricks", "gtceu:firebricks")
