@@ -99,6 +99,6 @@ ItemEvents.dropped("immersiveengineering:toolbox", event => {
 })
 
 
-ServerEvents.loaded((event) => {
+LevelEvents.loaded((event) => {
   loadRegistryVariables(event)
 })
