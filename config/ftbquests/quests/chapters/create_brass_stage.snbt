@@ -176,11 +176,12 @@
 					id: "329CD5038624CE7D"
 					item: {
 						Count: 1
-						id: "create:sand_paper"
+						id: "itemfilters:tag"
 						tag: {
-							Damage: 0
+							value: "create:sandpaper"
 						}
 					}
+					title: "Any #create:sandpaper"
 					type: "item"
 				}
 			]
@@ -226,7 +227,10 @@
 		}
 		{
 			dependencies: ["07F2692B488525A9"]
-			description: ["{gravitas.quest.brass.desc.mechanical_crafter}"]
+			description: [
+				"{gravitas.quest.stage3.desc.mechcraft}"
+				"{gravitas.quest.brass.desc.mechanical_crafter}"
+			]
 			id: "1764A3635A95D162"
 			rewards: [{
 				count: 6
@@ -235,6 +239,7 @@
 				type: "item"
 			}]
 			tasks: [{
+				count: 15L
 				id: "12406A8C54F12327"
 				item: "create:mechanical_crafter"
 				type: "item"
@@ -252,6 +257,7 @@
 				item: "gtceu:diamond_ore"
 				type: "item"
 			}]
+			subtitle: "{gravitas.quest.stage3.subt.crushing}"
 			tasks: [{
 				count: 2L
 				id: "7F2CFE8877CA3F03"
