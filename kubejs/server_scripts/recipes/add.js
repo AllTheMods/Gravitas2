@@ -2773,4 +2773,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .outputFluids(Fluid.of("gtceu:liquid_air", 10))
     .duration(160)
     .EUt(128)
+
+
+  //Firmalife
+  event.replaceInput(
+    { id: 'firmalife:crafting/solar_drier' },
+    'firmalife:metal/rod/stainless_steel',
+    '#forge:rods/aluminium'
+  )
 }
