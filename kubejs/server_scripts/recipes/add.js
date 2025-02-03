@@ -2774,6 +2774,17 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(128)
 
+  event.recipes.gtceu
+    .centrifuge("gregitas:centrifuged_kapok_log")
+    .itemInputs("tfc:wood/log/kapok")
+    .chancedOutput("gtceu:sticky_resin", 5000, 1)
+    .chancedOutput("gtceu:plant_ball", 3750, 1)
+    .chancedOutput("gtceu:carbon_dust", 2500, 1)
+    .chancedOutput("gtceu:wood_dust", 2500, 1)
+    .outputFluids(Fluid.of("gtceu:methane", 60))
+    .duration(200)
+    .EUt(20)
+
   //Sophisticated Backpacks
   shaped("sophisticatedbackpacks:tool_swapper_upgrade", ["BFB", "CGD", "AEA"], {
     A: "#forge:ingots/iron",
