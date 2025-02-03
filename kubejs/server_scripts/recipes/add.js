@@ -2774,6 +2774,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(128)
 
+
   event.recipes.gtceu
     .centrifuge("gregitas:centrifuged_kapok_log")
     .itemInputs("tfc:wood/log/kapok")
@@ -2795,4 +2796,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     E: Item.of("tfc:metal/shovel/copper", '{Damage:0}'),
     F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
   }).id("gregitas:tool_swapper_upgrade")
+  
+   //Firmalife
+  event.replaceInput(
+    { id: 'firmalife:crafting/solar_drier' },
+    'firmalife:metal/rod/stainless_steel',
+    '#forge:rods/aluminium'
+  )
 }
