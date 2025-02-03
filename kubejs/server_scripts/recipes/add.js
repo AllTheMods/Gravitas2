@@ -2775,7 +2775,29 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(128)
 
 
-  //Firmalife
+  event.recipes.gtceu
+    .centrifuge("gregitas:centrifuged_kapok_log")
+    .itemInputs("tfc:wood/log/kapok")
+    .chancedOutput("gtceu:sticky_resin", 5000, 1)
+    .chancedOutput("gtceu:plant_ball", 3750, 1)
+    .chancedOutput("gtceu:carbon_dust", 2500, 1)
+    .chancedOutput("gtceu:wood_dust", 2500, 1)
+    .outputFluids(Fluid.of("gtceu:methane", 60))
+    .duration(200)
+    .EUt(20)
+
+  //Sophisticated Backpacks
+  shaped("sophisticatedbackpacks:tool_swapper_upgrade", ["BFB", "CGD", "AEA"], {
+    A: "#forge:ingots/iron",
+    B: "#forge:dusts/redstone",
+    G: "sophisticatedbackpacks:upgrade_base",
+    C: Item.of("tfc:metal/pickaxe/copper", '{Damage:0}'),
+    D: Item.of("tfc:metal/axe/copper", '{Damage:0}'),
+    E: Item.of("tfc:metal/shovel/copper", '{Damage:0}'),
+    F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
+  }).id("gregitas:tool_swapper_upgrade")
+  
+   //Firmalife
   event.replaceInput(
     { id: 'firmalife:crafting/solar_drier' },
     'firmalife:metal/rod/stainless_steel',

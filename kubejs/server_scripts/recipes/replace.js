@@ -156,6 +156,30 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ input: "minecraft:melon_slice" }, "minecraft:melon_slice", "tfc:food/melon_slice")
   event.replaceOutput({ output: "minecraft:melon_seeds" }, "minecraft:melon_seeds", "tfc:seeds/melon")
 
+  //I didnt found a better way (:
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/ore/poor_bauxite",'tfc_ie_addon:ore/poor_bauxite',24)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/ore/normal_bauxite",'tfc_ie_addon:ore/normal_bauxite',36)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/ore/rich_bauxite",'tfc_ie_addon:ore/rich_bauxite',48)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/ore/small_bauxite",'tfc_ie_addon:ore/small_bauxite',16)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/metal/aluminum_block",'tfc_ie_addon:metal/block/aluminum',72)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/metal/aluminum_block_stairs",'tfc_ie_addon:metal/block/aluminum_stairs',54)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/metal/aluminum_block_slab",'tfc_ie_addon:metal/block/aluminum_slab',36)
+  replaceHatingRecipeAluminum("tfc_ie_addon:heating/metal/aluminum_sheet",'tfc_ie_addon:metal/sheet/aluminum',144)
+  function replaceHatingRecipeAluminum(recipeId,meltingItem,amount){
+    event.remove({id: recipeId})
+    event.custom({
+      type: "tfc:heating",
+      ingredient: {
+        item: meltingItem
+      },
+      result_fluid: {
+        fluid: "gtceu:aluminium",
+        amount: amount
+      },
+      temperature: 650
+    }).id("gravitas"+recipeId.substring(12))
+  }
+
   //Railways (Steam n Rails)
   event.forEachRecipe({ mod: "railways", id: /^railways:sequenced_assembly\/track_tfc_[^_]+$/ }, (r) => {
     let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
@@ -169,8 +193,11 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   //Firmalife
-  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot")
-  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot")
+  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/chromium", "#forge:ingots/chromium")
+  event.replaceInput({ mod: "firmalife" }, "firmalife:metal/ingot/stainless_steel", "#forge:ingots/stainless_steel")
+
+  event.replaceInput({ mod: "firmalife", id: /^firmalife:crafting\/greenhouse\/stainless_steel*/}, "firmalife:metal/rod/stainless_steel", "#forge:rods/aluminium")
+
   //Firebricks/Cokebricks etc
   event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay" }, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks" }, "tfc:fire_bricks", "gtceu:firebricks")

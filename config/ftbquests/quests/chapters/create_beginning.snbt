@@ -204,7 +204,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["02D053C7ADA0C55C"]
+			dependencies: ["3E5E415565A744CE"]
 			description: ["{gravitas.quest.igneous.desc.mechanical_press}"]
 			id: "7B7C7F707BD90FF3"
 			rewards: [{
@@ -228,11 +228,11 @@
 				item: "create:mechanical_press"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 1.0d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
-			dependencies: ["02D053C7ADA0C55C"]
+			dependencies: ["3E5E415565A744CE"]
 			description: ["{gravitas.quest.igneous.desc.mechanical_mixer}"]
 			id: "38311AA253AF8A8C"
 			rewards: [
@@ -252,8 +252,8 @@
 				item: "create:mechanical_mixer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 2.0d
+			x: 4.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["4E8D7F89699F4A8D"]
@@ -311,7 +311,11 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["3E5E415565A744CE"]
+			dependencies: [
+				"38311AA253AF8A8C"
+				"7B7C7F707BD90FF3"
+			]
+			dependency_requirement: "one_completed"
 			description: ["{gravitas.quest.igneous.desc.basin}"]
 			id: "02D053C7ADA0C55C"
 			rewards: [{
@@ -324,8 +328,8 @@
 				item: "create:basin"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 1.5d
+			x: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["3E5E415565A744CE"]
@@ -343,8 +347,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.igneous.millstone}"
-			x: 4.0d
-			y: 2.5d
+			x: 5.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["4E8D7F89699F4A8D"]
@@ -484,7 +488,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 3.0d
+			y: 3.5d
 		}
 		{
 			can_repeat: false

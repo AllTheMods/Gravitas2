@@ -1059,6 +1059,8 @@
 	"gravitas.quest.steam.wrenches": "Wrenches",
 	"gravitas.quest.steam.wirec": "Wire Cutters",
 	"gravitas.quest.steam.firstcirc": "Our First Setup",
+	"gravitas.quest.steam.steamminer": "Miners",
+	"gravitas.quest.steam.steammultiblocks": "Steam Multiblocks",
 
 	"gravitas.quest.steam.desc.start": "Welcome to &b&lGregTech&r! To begin, we need 25 Bronze Ingots, not cheap. This is to be able to get our tools and machines!\\n\\nThe goal of this first part is going to get a setup for &bCrushed Raw Magnetite&r, needed to get Iron.",
 	"gravitas.quest.steam.desc.bronzep": "20 of those ingots are going to become plates, all necessary for crafting.",
@@ -1066,17 +1068,19 @@
 	"gravitas.quest.steam.desc.wrench": "You will probably be making a &6Bronze&r wrench, which needs 2 parts and a screw. Don't worry about &aPerfectly Forging&r any of the parts though, the tool will always turn out the same.",
 	"gravitas.quest.steam.desc.brass": "Brass is going to be needed for our first piston, this is made from &bZinc&r and &6Copper&r.",
 	"gravitas.quest.steam.desc.piston": "Hey, once we make this setup, we will get &aVanilla&r Iron, and use that recipe for pistons, much easier.",
-	"gravitas.quest.steam.desc.steamgen": "This machine uses &9Water&r and &0Coal&r to create steam. Steam is like the power source for all &6Steam Machines&r.",
+	"gravitas.quest.steam.desc.steamgen": "This machine uses &9Water&r and &0Coal&r to create steam. Steam is like the power source for all &6Steam Machines&r. \\n\\nYou can get all the &9Water&r that you may need by using water tanks from railcraft or if you want to keep your self on GregTech you can use the Primitive Pump",
 	"gravitas.quest.steam.desc.forgeh": "The forge hammer can crush ores into crushed ores, particularly useful for &bMagnetite&r. It can also compress ingots into plates.",
 	"gravitas.quest.steam.desc.pipes": "These pipes can transfer fluids, in our case, we want to transfer steam.",
 	"gravitas.quest.steam.desc.firstcirc": "To make the required &bCrushed Raw Magnetite&r, follow these steps:\\n\\n&l1.&r Place and fill the &eBoiler&r with water by clicking the middle bar with a filled water bucket. \\n\\n&l2. &rConnect a pipe from the boiler to the forge hammer using a &bWrench&r. \\n\\n&l3.&r Place coal in the boiler and raw magnetite in the forge hammer. \\n\\n&l&cMAKE SURE NOTHING IS BLOCKING THE VENT ON THE BACK OF THE FORGE HAMMER, NOT EVEN THE PIPE&r",
 	"gravitas.quest.steam.desc.alloysm": "Makes alloys.. needed for red alloy.",
-	"gravitas.quest.steam.desc.redstone": "Need redstone? Look for &cCinnabar&r, the &6TFC Guidebook&r will help as always.",
+	"gravitas.quest.steam.desc.redstone": "Need redstone? Look for &cCinnabar&r or &cCryolite&r, the &6TFC Guidebook&r will help as always.",
 	"gravitas.quest.steam.desc.wirec": "Wire cutters can turn plates into cables, and later be used for connecting and disconnecting cables.",
 	"gravitas.quest.steam.desc.rubber": "You can either use an alloy smelter, or TFC casting to get these. Either way, it's &eSulfur&r + &bRaw Rubber Pulp&r.",
 	"gravitas.quest.steam.desc.rubberplate": "Forge hammer into a heated basin",
 	"gravitas.quest.steam.desc.compress": "This can also be used to compress TFC ores into GregTech versions, which can be &6Bulk Blasted&r.",
 	"gravitas.quest.steam.desc.lv": "Well done, you've completed the Steam Age! The LV circuit is going to be used to get your first &bElectric&r machines, much faster and more powerful!\\n\\nOh and by the way, you will need dozens of these circuits, just so you know :)",
+	"gravitas.quest.steam.desc.steamminer": "This machines help you mine all ores in a certail radius the steam miner is a 9x9 around the miner as you progress on the voltage you will get better and bigger miners.",
+	"gravitas.quest.steam.desc.steammultiblocks": "These are the two multiblocks that are in the steam age they only use these hatch and buses\\n\\nThe Grinder is a great opcion for processing ores because it does 8 pararel recipes. \\nNote that it doesnt gives byproducts which is the same as all the macerators until HV\\n\\nThe Steam Oven works as a vanilla furnace and it does 8 recipes in pararel\\n\\nPD: GregTech hatchs and buses including the steam ones can auto import from inventories that are in the input or output face",
 
 	"gravitas.quest.steam.subt.start": "Who is this Greg guy?",
 	"gravitas.quest.steam.subt.screwdriver": "File + Hammer + Long Metal Rod",
@@ -1098,6 +1102,7 @@
 	"gravitas.quest.steam.subt.woodp": "Macerate Logs",
 	"gravitas.quest.steam.subt.coald": "Macerate Charcoal",
 	"gravitas.quest.steam.subt.compress": "To compress Wood Pulp",
+	"gravitas.quest.steam.subt.steamminer": "No more manual mining",
 
 
 	"gravitas.quest.lv.title.chem": "Chemical Reactor",
@@ -1114,6 +1119,8 @@
 	"gravitas.quest.lv.title.oxy_line": "Free Oxygen for Everyone!",
 	"gravitas.quest.lv.title.maint": "Machine Maintenance",
     "gravitas.quest.lv.title.aqueduct": "Unlimited Water",
+	"gravitas.quest.lv.title.mixer": "Basic Mixer",
+	"gravitas.quest.lv.title.terminal": "Multiblock Helper",
 
 	"gravitas.quest.lv.desc.starter_1": "Upgrading your machines with basic circuits will grant access to new recipes and increase their speed.",
 	"gravitas.quest.lv.desc.starter_2": "You can run any lower tier recipe on a higher tier machine. This is called Overclocking and can be configured in the machines GUI.",
@@ -1149,6 +1156,7 @@
 	"gravitas.quest.lv.desc.oxy_bucket": "This is sign TWO that you should probably make that passive oxygen line. There are many ways to obtain it, so i'll leave it to you and JEI.",
 	"gravitas.quest.lv.desc.ars_triox": "Put Cobaltite dust in with 3 buckets of oxygen to your EBF to get Arsenic Trioxide. You can process some of the byproducts for some of your O2 back.",
     "gravitas.quest.lv.desc.aqueduct": "Aqueducts provide an unlimited source of water. By placing a line of aqueducts starting next to a source block, the Aqueducts will transport the water until it reaches the end of the Aqueduct.\n\nAdditionally, interacting with the Aqueduct while holding a bucket will fill the bucket with the water inside of the Aqueduct. Aqueducts also support transporting liquids other than just water. Lava, and salt water can be transported as well.",
+	"gravitas.quest.lv.desc.terminal": "This item lets you autobuild any GregTech multiblock you just need to Shift and R-Click on the controller of the multiblock and you got your multiblock.\\nAll blocks that are missing will not be place any and hatchs or buses will be place somewhere in the multiblock is recommended to not have those blocks on the inventory and place them manually",
 
     "gravitas.quest.hv.title.any_hv_converter": "Any HV Energy Converter",
 

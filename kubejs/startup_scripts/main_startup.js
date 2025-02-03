@@ -20,12 +20,14 @@ StartupEvents.registry("fluid", (event) => {
   registerFluids(event)
 })
 
-const $GtceuConfigs = Java.loadClass("com.gregtechceu.gtceu.config.ConfigHolder").INSTANCE
+const $ConfigHolder = Java.loadClass("com.gregtechceu.gtceu.config.ConfigHolder")
 
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
   Platform.setModName("gregitas-core", "Gravitas²")
-  if ($GtceuConfigs.machines.highTierContent && $GtceuConfigs.compat.energy.enablePlatformConverters) return
+  let $ConfigHolder$INSTANCE = $ConfigHolder.INSTANCE
+  if ($ConfigHolder$INSTANCE == null) $ConfigHolder.init()
+  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enablePlatformConverters) return
   console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enablePlatformConverters` to true!")
 })
 

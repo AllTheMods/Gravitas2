@@ -471,6 +471,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: `/^tfcgroomer:.*_grooming_station/` })
 
+  //TFC IE ADDON (aluminium fix)
+  event.remove({id: "tfc_ie_addon:welding/aluminum_double_ingot"})
+  event.remove({id: "tfc_ie_addon:anvil/aluminum_sheet"})
+  event.remove({id: "tfc_ie_addon:heating/metal/aluminum_ingot"})
+
   //gcyr
 
   event.remove({ id: "gcyr:mixer/co_mn_br_catalyst" })
@@ -540,4 +545,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: "gtceu:shaped/charcoal_pile_igniter" })
   event.remove({ id: "scguns:treated_iron/treated_iron_bucket" })
+
+  //Sophisticated Backpacks
+  event.remove({ id: "sophisticatedbackpacks:tool_swapper_upgrade" })
 }

@@ -15,12 +15,32 @@
 	}
 	id: "19898B501BE117B8"
 	order_index: 2
-	quest_links: [{
-		id: "6E83ED38B516791A"
-		linked_quest: "4FE3DADFDC32A6B0"
-		x: 3.5d
-		y: -3.5d
-	}]
+	quest_links: [
+		{
+			id: "6E83ED38B516791A"
+			linked_quest: "4FE3DADFDC32A6B0"
+			x: 3.5d
+			y: -3.5d
+		}
+		{
+			id: "36941D51077A1180"
+			linked_quest: "6861A1F65BD12BB9"
+			x: -9.0d
+			y: 3.5d
+		}
+		{
+			id: "23B745C27A7164B5"
+			linked_quest: "1764A3635A95D162"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			id: "70748678A4DFD422"
+			linked_quest: "7F8C6F7EA5F4CC8F"
+			x: -6.0d
+			y: 0.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: [
@@ -303,8 +323,8 @@
 				item: "treetap:tap"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 0.0d
+			x: -2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["368A89D88BB382E6"]
@@ -316,8 +336,8 @@
 				item: { Count: 5, id: "tfc:wooden_bucket" }
 				type: "item"
 			}]
-			x: -6.0d
-			y: 0.0d
+			x: -2.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1D14DA5F4040ABB4"]
@@ -328,8 +348,8 @@
 				item: "create:basin"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 1.5d
+			x: -6.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2F41686356FA093E"]
@@ -349,8 +369,8 @@
 				}
 				type: "item"
 			}]
-			x: -6.0d
-			y: 1.5d
+			x: -4.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["00F25F9C1F5B5DBB"]
@@ -490,37 +510,35 @@
 			dependencies: ["35C75E911D6BDE12"]
 			id: "0E2E6B398D3F5CF1"
 			subtitle: "{gravitas.quest.stage3.subt.sanded}"
-			tasks: [{
-				count: 2L
-				id: "5C55397017332856"
-				item: "tfc:ore/diamond"
-				type: "item"
-			}]
+			tasks: [
+				{
+					count: 2L
+					id: "5C55397017332856"
+					item: "tfc:ore/diamond"
+					type: "item"
+				}
+				{
+					id: "647A2EA955572BC2"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "create:sandpaper"
+						}
+					}
+					title: "Any #create:sandpaper"
+					type: "item"
+				}
+			]
 			x: 1.5d
 			y: 0.0d
 		}
 		{
-			id: "32BCB3B8DAF972E5"
-			subtitle: "{gravitas.quest.stage3.desc.sandp}"
-			tasks: [{
-				id: "5D8CC9B8B35B17BD"
-				item: {
-					Count: 1
-					id: "create:sand_paper"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: 2.5d
-			y: -1.0d
-		}
-		{
 			dependencies: [
-				"32BCB3B8DAF972E5"
 				"0E2E6B398D3F5CF1"
+				"78729E7428CA3CC5"
 			]
+			dependency_requirement: "one_completed"
 			id: "5ACD19E705D43C48"
 			tasks: [{
 				count: 2L
@@ -532,45 +550,23 @@
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"6861A1F65BD12BB9"
+				"257651D19A132E5B"
+			]
 			id: "554DA4CDDAC7CBB1"
 			tasks: [{
 				id: "7D2F6883D6F87797"
 				item: "gtceu:sticky_resin"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["00F25F9C1F5B5DBB"]
-			description: ["{gravitas.quest.stage3.desc.mechcraft}"]
-			id: "46BE30EFB8425540"
-			tasks: [{
-				count: 15L
-				id: "0CCE93B76AEC025C"
-				item: { Count: 21, id: "create:mechanical_crafter" }
-				type: "item"
-			}]
-			x: -2.5d
-			y: 2.0d
-		}
-		{
-			dependencies: ["46BE30EFB8425540"]
-			id: "693B46904121EA55"
-			subtitle: "{gravitas.quest.stage3.subt.crushing}"
-			tasks: [{
-				count: 2L
-				id: "672EC68A84EA54F9"
-				item: { Count: 2, id: "create:crushing_wheel" }
-				type: "item"
-			}]
-			x: -2.5d
-			y: 3.5d
+			x: -7.5d
+			y: 2.5d
 		}
 		{
 			dependencies: [
-				"693B46904121EA55"
 				"554DA4CDDAC7CBB1"
+				"7F8C6F7EA5F4CC8F"
 			]
 			id: "7389402160789056"
 			subtitle: "{gravitas.quest.stage3.subt.rawrubber}"
@@ -579,8 +575,8 @@
 				item: "gtceu:raw_rubber_dust"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 3.5d
+			x: -7.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["5ACD19E705D43C48"]
@@ -931,6 +927,16 @@
 			}]
 			x: -4.0d
 			y: -1.5d
+		}
+		{
+			id: "78729E7428CA3CC5"
+			tasks: [{
+				id: "70DF45F0F5DBDB8D"
+				item: "gtceu:raw_diamond"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -1.0d
 		}
 	]
 	title: "{gravitas.chapters.3.title}"

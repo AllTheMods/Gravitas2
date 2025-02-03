@@ -907,6 +907,7 @@
 				"7E0E95E46C24E405"
 				"780A932B4C424064"
 			]
+			dependency_requirement: "one_completed"
 			description: ["{gravitas.quest.stage2.desc.wroughtp}"]
 			id: "614C240D2569582C"
 			subtitle: "{gravitas.quest.stage2.subt.wroughtp}"

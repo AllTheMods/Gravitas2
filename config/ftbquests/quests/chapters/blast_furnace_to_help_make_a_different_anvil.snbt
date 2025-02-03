@@ -134,7 +134,7 @@
 			id: "679D7B1E110BE18E"
 			tasks: [
 				{
-					count: 30L
+					count: 25L
 					id: "4D221A36C8F952DF"
 					item: "gtceu:coke_oven_bricks"
 					type: "item"
@@ -154,7 +154,7 @@
 			id: "584E1EADFF9DB1FC"
 			tasks: [
 				{
-					count: 25L
+					count: 32L
 					id: "371BDAFC059C182F"
 					item: "gtceu:firebricks"
 					type: "item"
