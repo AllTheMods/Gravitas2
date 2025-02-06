@@ -274,6 +274,11 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
       amount: 72
     },
     {
+      ore:  "gtceu:raw_nickel",
+      liquid: "tfc:metal/nickel",
+      amount: 72
+    },
+    {
       ore: "gtceu:raw_magnetite",
       liquid: "tfc:metal/cast_iron",
       amount: 72
