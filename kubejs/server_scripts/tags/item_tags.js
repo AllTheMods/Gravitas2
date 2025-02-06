@@ -238,7 +238,13 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     "gtceu:polybenzimidazole_plate"
   ])
 
-  GTMaterialRegistry.registeredMaterials.forEach((id) => {
+  let refreshGTMaterials = false
+  if (refreshGTMaterials) {
+    JsonIO.write("kubejs/server_scripts/tags/gt_materials.json", {materials: GTMaterialRegistry.registeredMaterials.stream().map(mat => mat.toString()).toList()})
+  }
+
+  let registeredMaterials = JsonIO.read("kubejs/server_scripts/tags/gt_materials.json")
+  registeredMaterials.materials.forEach((id) => {
     event.add("tfc:saws", `${id}_saw`)
     event.add("tfc:hammers", `${id}_hammer`)
     event.add("tfc:knives", `${id}_knife`)
