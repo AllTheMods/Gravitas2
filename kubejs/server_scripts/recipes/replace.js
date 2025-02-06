@@ -415,6 +415,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_aircraft" }, "immersive_aircraft:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_machinery" }, "immersive_aircraft:propeller", "create:propeller")
-  
+  event.replaceInput({ mod: "immersive_machinery" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")
+  event.replaceInput({ mod: "immersive_aircraft" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")
+  event.replaceInput({ id: "immersive_aircraft:telescope" }, "#railways:internal/ingots/copper_ingots", "create:metal_bracket")
 }
 
