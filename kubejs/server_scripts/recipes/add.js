@@ -1777,11 +1777,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   shaped("simpleplanes:liquid_engine", ["iOi", "BLB", "HcH"], {
     i: "tfc:metal/ingot/cast_iron",
-    O: "simpleplanes:propeller",
+    O: "create:propeller",
     B: "minecraft:bucket",
     L: "railcraft:fluid_fueled_firebox",
     H: "minecraft:heavy_weighted_pressure_plate",
-    c: "#forge:ingots/copper"
+    c: "#forge:plates/copper"
   })
 
   shaped("create_new_age:magnetite_block", ["PCP", "CRC", "PCP"], {
@@ -2803,4 +2803,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     'firmalife:metal/rod/stainless_steel',
     '#forge:rods/aluminium'
   )
+
+
 }

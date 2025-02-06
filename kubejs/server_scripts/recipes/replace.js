@@ -411,4 +411,10 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //tfcea
   event.replaceInput({ mod: "tfcea" }, "tfc:metal/double_sheet/red_steel", "tfc:metal/double_ingot/red_steel")
   event.replaceInput({ mod: "tfcea" }, "tfc:metal/double_sheet/blue_steel", "tfc:metal/double_ingot/blue_steel")
+
+  event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
+  event.replaceInput({ mod: "immersive_aircraft" }, "immersive_aircraft:propeller", "create:propeller")
+  event.replaceInput({ mod: "immersive_machinery" }, "immersive_aircraft:propeller", "create:propeller")
+  
 }
+

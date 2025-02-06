@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:anvil",
+  "input": {
+    "item": "tfc_ie_addon:metal/double_ingot/aluminum"
+  },
+  "result": {
+    "item": "gtceu:aluminium_plate"
+  },
+  "tier": 4,
+  "rules": [
+    "hit_last",
+    "hit_second_last",
+    "hit_third_last"
+  ]
+}

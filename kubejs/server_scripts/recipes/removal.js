@@ -11,6 +11,8 @@ const toolsToRemove = [
   "red_steel"
 ]
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
+  event.remove({ id: "simpleplanes:propeller" })
+  event.remove({ id: "immersive_aircraft:propeller" })
   event.remove({ id: "tfc:crafting/bloomery" })
   event.remove({ id: "computercraft:computer_normal" })
   event.remove({ id: "computercraft:computer_advanced_upgrade" })
@@ -548,4 +550,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Sophisticated Backpacks
   event.remove({ id: "sophisticatedbackpacks:tool_swapper_upgrade" })
+
+  //piston fixes
+  event.remove({ id: "minecraft:piston" })
+  event.remove({ id: `/^gtceu:shaped\/piston.*/` })
 }
