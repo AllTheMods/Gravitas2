@@ -2965,5 +2965,10 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(260)
     .EUt(MV)  
 
-    
+    shaped("headlight:headlight", [" I ", "LPL", "S S"], {
+      I: "minecraft:item_frame",
+      L: "#forge:leather",
+      P: "tfc:wool_cloth",
+      S: "minecraft:string"
+    })
 }

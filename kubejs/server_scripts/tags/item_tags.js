@@ -448,4 +448,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
                             "tfc:rock/magma/andesite",
                             "tfc:rock/magma/dacite"
                            ])
+
+  event.add("headlight:lights", ["tfc:torch"])
 }
