@@ -226,5 +226,5 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
                             "tfc:rock/magma/dacite"
                            ])
 
-                         
+  event.add("minecraft:crops", ["#tfc:crops"])
 }

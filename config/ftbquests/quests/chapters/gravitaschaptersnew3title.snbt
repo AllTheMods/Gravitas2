@@ -28,6 +28,18 @@
 			x: -9.0d
 			y: 3.5d
 		}
+		{
+			id: "23B745C27A7164B5"
+			linked_quest: "1764A3635A95D162"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			id: "70748678A4DFD422"
+			linked_quest: "7F8C6F7EA5F4CC8F"
+			x: -6.0d
+			y: 0.0d
+		}
 	]
 	quests: [
 		{
@@ -506,14 +518,15 @@
 					type: "item"
 				}
 				{
-					id: "2C78BC403E033364"
+					id: "647A2EA955572BC2"
 					item: {
 						Count: 1
-						id: "create:sand_paper"
+						id: "itemfilters:tag"
 						tag: {
-							Damage: 0
+							value: "create:sandpaper"
 						}
 					}
+					title: "Any #create:sandpaper"
 					type: "item"
 				}
 			]
@@ -551,35 +564,9 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["00F25F9C1F5B5DBB"]
-			description: ["{gravitas.quest.stage3.desc.mechcraft}"]
-			id: "46BE30EFB8425540"
-			tasks: [{
-				count: 15L
-				id: "0CCE93B76AEC025C"
-				item: { Count: 21, id: "create:mechanical_crafter" }
-				type: "item"
-			}]
-			x: -4.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["46BE30EFB8425540"]
-			id: "693B46904121EA55"
-			subtitle: "{gravitas.quest.stage3.subt.crushing}"
-			tasks: [{
-				count: 2L
-				id: "672EC68A84EA54F9"
-				item: { Count: 2, id: "create:crushing_wheel" }
-				type: "item"
-			}]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
 			dependencies: [
-				"693B46904121EA55"
 				"554DA4CDDAC7CBB1"
+				"7F8C6F7EA5F4CC8F"
 			]
 			id: "7389402160789056"
 			subtitle: "{gravitas.quest.stage3.subt.rawrubber}"

@@ -238,7 +238,13 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     "gtceu:polybenzimidazole_plate"
   ])
 
-  GTMaterialRegistry.registeredMaterials.forEach((id) => {
+  let refreshGTMaterials = false
+  if (refreshGTMaterials) {
+    JsonIO.write("kubejs/server_scripts/tags/gt_materials.json", {materials: GTMaterialRegistry.registeredMaterials.stream().map(mat => mat.toString()).toList()})
+  }
+
+  let registeredMaterials = JsonIO.read("kubejs/server_scripts/tags/gt_materials.json")
+  registeredMaterials.materials.forEach((id) => {
     event.add("tfc:saws", `${id}_saw`)
     event.add("tfc:hammers", `${id}_hammer`)
     event.add("tfc:knives", `${id}_knife`)
@@ -290,6 +296,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.remove("forge:dusts/copper", ["tfc:powder/malachite", "tfc:powder/tetrahedrite", "tfc:powder/native_copper"])
   event.add("forge:plates/aluminum", "#forge:plates/aluminium")
   event.add("forge:nuggets/aluminum", "#forge:nuggets/aluminium")
+  event.add("forge:ingots/aluminum", "#forge:ingots/aluminium")
+  event.add("forge:rods/aluminum", "#forge:rods/aluminium")
 
   event.add("tfc:forge_fuel", [
     "gtceu:coke_gem",
@@ -440,4 +448,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
                             "tfc:rock/magma/andesite",
                             "tfc:rock/magma/dacite"
                            ])
+
+  event.add("headlight:lights", ["tfc:torch"])
 }

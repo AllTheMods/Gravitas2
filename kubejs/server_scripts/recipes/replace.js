@@ -90,6 +90,13 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   furnacent.forEach((furnace) => {
     event.replaceInput(furnace, "minecraft:furnace", "tfc:crucible")
   })
+  event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:furnace", "tfc:crucible")
+  event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:blast_furnace", "railcraft:solid_fueled_firebox")
+  event.replaceInput({ id: "immersive_aircraft:engine"}, "minecraft:piston", "createdieselgenerators:engine_piston")
+  event.replaceInput({ id: "immersive_aircraft:engine"}, "minecraft:cobblestone", "gtceu:steel_plate")
+  event.replaceInput({ id: "immersive_aircraft:boiler"}, "#forge:ingots/copper", "#forge:plates/copper")
+  event.replaceInput({ id: "immersive_aircraft:steel_boiler"}, "#forge:ingots/steel", "#forge:plates/steel")
+  event.replaceInput({ mod: "immersive_aircraft" }, "minecraft:white_carpet", "immersiveengineering:hemp_fabric")
   //Simpleplanes
   event.replaceInput({ mod: "simpleplanes" }, "minecraft:iron_axe", "tfc:metal/axe/steel")
   event.replaceInput({ mod: "simpleplanes" }, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/steel")
@@ -404,4 +411,12 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //tfcea
   event.replaceInput({ mod: "tfcea" }, "tfc:metal/double_sheet/red_steel", "tfc:metal/double_ingot/red_steel")
   event.replaceInput({ mod: "tfcea" }, "tfc:metal/double_sheet/blue_steel", "tfc:metal/double_ingot/blue_steel")
+
+  event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
+  event.replaceInput({ mod: "immersive_aircraft" }, "immersive_aircraft:propeller", "create:propeller")
+  event.replaceInput({ mod: "immersive_machinery" }, "immersive_aircraft:propeller", "create:propeller")
+  event.replaceInput({ mod: "immersive_machinery" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")
+  event.replaceInput({ mod: "immersive_aircraft" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")
+  event.replaceInput({ id: "immersive_aircraft:telescope" }, "#railways:internal/ingots/copper_ingots", "create:metal_bracket")
 }
+

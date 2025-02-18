@@ -9,6 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["6A6D074B57ACB447"]
 			description: [
 				"{gravitas.quest.lv.desc.starter_1}"
 				""
@@ -200,10 +201,26 @@
 			description: ["{gravitas.quest.lv.desc.mixer}"]
 			id: "2BE4B6F1CCAA36AC"
 			tasks: [{
-				id: "18293B4BFE73030A"
-				item: "gtceu:lv_mixer"
+				id: "37A2314DE2DE95F3"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:lv_kinetic_mixer"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lv_mixer"
+							}
+						]
+					}
+				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.lv.title.mixer}"
 			x: 0.5d
 			y: 3.5d
 		}
@@ -774,6 +791,22 @@
 			}]
 			x: -1.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"67DD027E0B0B3FE3"
+				"2A3517E5B9B0D69D"
+			]
+			description: ["{gravitas.quest.lv.desc.terminal}"]
+			id: "48B82C4DB40C2FFA"
+			tasks: [{
+				id: "61DF91112DA2465F"
+				item: "gtceu:terminal"
+				type: "item"
+			}]
+			title: "{gravitas.quest.lv.title.terminal}"
+			x: 0.5d
+			y: -0.5d
 		}
 	]
 	title: "{gravitas.chapters.16.title}"

@@ -33,8 +33,8 @@ const ForestFeature$getTree = $ForestFeatureObj
 let $TreeForest
 let $ForestConfigObj
 
-let loadRegistryVariables = (/** @type {Internal.ServerEventJS} */ event) => {
-  $TreeForest = event.server.registryAccess().registry($Registries.CONFIGURED_FEATURE).get().get("tfc:forest")
+let loadRegistryVariables = (/** @type {Internal.SimpleLevelEventJS} */ event) => {
+  $TreeForest = event.level.registryAccess().registry($Registries.CONFIGURED_FEATURE).get().get("tfc:forest")
   $ForestConfigObj = $TreeForest.config()
 }
 

@@ -907,6 +907,114 @@
 			x: 0.0d
 			y: -2.0d
 		}
+		{
+			dependencies: [
+				"735C1C31C684CC3E"
+				"5ACD19E705D43C48"
+			]
+			description: ["{gravitas.quest.steam.desc.steamminer}"]
+			icon: "gtceu:steam_miner"
+			id: "7ACD7DF43D0A5DD5"
+			optional: true
+			rewards: [{
+				id: "68ADA00E2834271E"
+				item: "gtceu:aluminium_crate"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.steam.subt.steamminer}"
+			tasks: [{
+				id: "6C497EC5B4880DE8"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:steam_miner"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lv_miner"
+							}
+							{
+								Count: 1b
+								id: "gtceu:mv_miner"
+							}
+							{
+								Count: 1b
+								id: "gtceu:hv_miner"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.steam.steamminer}"
+			x: 7.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["59BDE76B679AB4CC"]
+			description: ["{gravitas.quest.steam.desc.steammultiblocks}"]
+			id: "2D510A0E786AB46E"
+			optional: true
+			rewards: [{
+				count: 8
+				id: "116819DE043F1B35"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:bronze_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "63E2276B323580AE"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "gtceu:steam_grinder"
+								}
+								{
+									Count: 1b
+									id: "gtceu:steam_oven"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "31D80C62A94D0619"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+				{
+					id: "289155023AF3D43D"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "4419099246C6CF0A"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.steam.steammultiblocks}"
+			x: 8.5d
+			y: -5.5d
+		}
 	]
 	title: "{gravitas.chapters.32.title}"
 }
