@@ -147,17 +147,19 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
     .id("gregitas:heated_pressing/rubber_plate")
 
+    /*HAD TO CHANGE FROM TAG black_steel_ingot to specific gtceu:black_steel_ingot*/
+    
   const createTfcSteelWelding = [
     {
       ingredients: ["tfc:metal/ingot/weak_steel", "#forge:ingots/pig_iron"],
       result: "high_carbon_black_steel"
     },
     {
-      ingredients: ["tfc:metal/ingot/weak_blue_steel", "#forge:ingots/black_steel"],
+      ingredients: ["tfc:metal/ingot/weak_blue_steel", "gtceu:black_steel_ingot"],
       result: "high_carbon_blue_steel"
     },
     {
-      ingredients: ["tfc:metal/ingot/weak_red_steel", "#forge:ingots/black_steel"],
+      ingredients: ["tfc:metal/ingot/weak_red_steel", "gtceu:black_steel_ingot"],
       result: "high_carbon_red_steel"
     }
   ]
