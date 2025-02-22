@@ -429,6 +429,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["063F5023D56CA6B1"]
 			id: "557B9D05D419CE9A"
 			subtitle: "{gravitas.quest.id.subt.tomake}"
 			tasks: [{

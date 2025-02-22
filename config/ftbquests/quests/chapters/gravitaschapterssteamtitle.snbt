@@ -184,8 +184,8 @@
 				title: "{gravitas.quest.stage2.files}"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 0.5d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["5EE0CF563FDF196C"]
@@ -249,8 +249,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.steam.brassPlates}"
-			x: 2.5d
-			y: -0.5d
+			x: 3.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["46765C2E3D0224DD"]
@@ -268,7 +268,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -0.5d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -327,7 +327,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 0.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1014,6 +1014,27 @@
 			title: "{gravitas.quest.steam.steammultiblocks}"
 			x: 8.5d
 			y: -5.5d
+		}
+		{
+			dependencies: ["09C2B236014FC094"]
+			description: ["{gravitas.quest.steam.desc.mining_hammer}"]
+			id: "1D3EE99667998CEE"
+			shape: "rsquare"
+			subtitle: "{gravitas.quest.steam.subt.mining_hammer}"
+			tasks: [{
+				id: "78DEFAB9A04C7A17"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/mining_hammers"
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.steam.mining_hammer}"
+			x: 1.5d
+			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.32.title}"
