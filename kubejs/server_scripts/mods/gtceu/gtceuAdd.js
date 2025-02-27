@@ -1011,6 +1011,35 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
     .duration(80)
 
+
+  //wet mud
+
+  event.recipes.gtceu
+    .mixer("gt_loam_mud_bricks")
+    .itemInputs("1x tfc:dirt/loam")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/loam")
+    .EUt(ULV)
+    .duration(160)
+
+  event.recipes.gtceu
+    .mixer("gt_silty_mud_bricks")
+    .itemInputs("1x tfc:dirt/silty_loam")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/silty_loam")
+    .EUt(ULV)
+    .duration(160)
+
+  event.recipes.gtceu
+    .mixer("gt_sandy_mud_bricks")
+    .itemInputs("1x tfc:dirt/sandy_loam")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/sandy_loam")
+    .EUt(ULV)
+    .duration(160)
   //Clay Using Ore Washer
 
   event.recipes.gtceu
