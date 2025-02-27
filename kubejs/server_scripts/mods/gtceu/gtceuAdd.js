@@ -475,6 +475,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "gtceu" }, "minecraft:dirt", "#minecraft:dirt")
   event.replaceOutput({ mod: "gtceu" }, "minecraft:dirt", "tfc:dirt/loam")
   event.replaceInput({ id: "gtceu:sifter/gravel_sifting" }, "minecraft:gravel", "#tfc:rock/gravel")
+  event.replaceOutput({ mod: "gtceu" }, "#minecraft:stone_tool_materials", "#forge:cobblestone")
   event.remove({ id: "gtceu:rock_breaker/deepslate" })
   event.remove({ id: "gtceu:compressor/red_sandstone" })
 
