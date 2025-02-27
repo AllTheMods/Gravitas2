@@ -474,6 +474,9 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ mod: "gtceu" }, "minecraft:sand", "tfc:sand/yellow")
   event.replaceInput({ mod: "gtceu" }, "minecraft:dirt", "#minecraft:dirt")
   event.replaceOutput({ mod: "gtceu" }, "minecraft:dirt", "tfc:dirt/loam")
+  event.replaceInput({ id: "gtceu:sifter/gravel_sifting" }, "minecraft:gravel", "#tfc:rock/gravel")
+  event.replaceOutput({ mod: "gtceu" }, "#minecraft:stone_tool_materials", "#forge:cobblestone")
+  event.remove({ id: "gtceu:rock_breaker/deepslate" })
   event.remove({ id: "gtceu:compressor/red_sandstone" })
 
   enderTC.forEach((ender) => {
@@ -1005,6 +1008,29 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("4x tfc:mud_brick/sandy_loam")
     .EUt(LV)
     .duration(80)
+
+  //Clay Using Ore Washer
+
+  event.recipes.gtceu
+    .ore_washer("gt_sand_to_clay")
+    .itemInputs("1x #forge:sand")
+    .inputFluids(Fluid.of("minecraft:water", 1000))
+    .chancedOutput("1x minecraft:clay_ball", 7500, 1000)
+    .chancedOutput("1x minecraft:clay_ball", 2500, 600)
+    .duration(100)
+    .EUt(8)
+
+  //deepslate
+
+  event.recipes.gtceu
+    .rock_breaker("chep_deepslate")
+    .notConsumable("minecraft:deepslate")
+    .itemOutputs("minecraft:deepslate")
+    .addDataString("fluidA", "minecraft:lava")
+    .addDataString("fluidB", "minecraft:water")
+    .duration(16)
+    .EUt(24)
+    .addCondition(RockBreakerCondition.INSTANCE)
 
   //alabaster brick
 

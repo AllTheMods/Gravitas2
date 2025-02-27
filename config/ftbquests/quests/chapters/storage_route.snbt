@@ -109,86 +109,9 @@
 				id: "22F37D83B43EADD6"
 				item: {
 					Count: 1
-					id: "itemfilters:or"
+					id: "itemfilters:tag"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "tfc:wood/chest/acacia"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/ash"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/aspen"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/birch"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/blackwood"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/douglas_fir"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/hickory"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/kapok"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/mangrove"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/maple"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/oak"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/palm"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/pine"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/rosewood"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/sequoia"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/spruce"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/sycamore"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/white_cedar"
-							}
-							{
-								Count: 1b
-								id: "tfc:wood/chest/willow"
-							}
-						]
+						value: "forge:chests/wooden"
 					}
 				}
 				title: "{gravitas.quest.storage.chest}"

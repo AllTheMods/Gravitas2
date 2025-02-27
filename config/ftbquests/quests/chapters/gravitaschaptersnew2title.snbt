@@ -15,12 +15,20 @@
 	}
 	id: "7B9452977B7D7BE1"
 	order_index: 1
-	quest_links: [{
-		id: "412F3582380A8B5A"
-		linked_quest: "735C1C31C684CC3E"
-		x: 8.0d
-		y: -5.0d
-	}]
+	quest_links: [
+		{
+			id: "412F3582380A8B5A"
+			linked_quest: "735C1C31C684CC3E"
+			x: 8.0d
+			y: -5.0d
+		}
+		{
+			id: "2A071C762008D783"
+			linked_quest: "1D3EE99667998CEE"
+			x: -0.5d
+			y: 4.0d
+		}
+	]
 	quests: [
 		{
 			description: ["{gravitas.quest.stage2.desc.start}"]
