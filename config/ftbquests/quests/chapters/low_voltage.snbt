@@ -420,7 +420,7 @@
 				item: "gtceu:arsenic_trioxide_dust"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 4.5d
 			y: 0.5d
 		}
 		{
@@ -511,7 +511,7 @@
 				item: "gtceu:oxygen_bucket"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 4.5d
 			y: -0.5d
 		}
 		{
@@ -522,12 +522,50 @@
 			tasks: [
 				{
 					id: "30667DF7F6540C0B"
-					item: "gtceu:lv_macerator"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "gtceu:lp_steam_macerator"
+								}
+								{
+									Count: 1b
+									id: "gtceu:hp_steam_macerator"
+								}
+								{
+									Count: 1b
+									id: "gtceu:lv_macerator"
+								}
+								{
+									Count: 1b
+									id: "gtceu:steam_grinder"
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "0BFF441E2D88D565"
-					item: "gtceu:lv_ore_washer"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "gtceu:lv_ore_washer"
+								}
+								{
+									Count: 1b
+									id: "minecraft:cauldron"
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -549,10 +587,14 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 2.0d
+			y: 0.5d
 		}
 		{
-			dependencies: ["74EE98F95F483C37"]
+			dependencies: [
+				"74EE98F95F483C37"
+				"2613D6996C0D7C0C"
+			]
+			dependency_requirement: "one_completed"
 			id: "2E2B6921723681C7"
 			tasks: [{
 				id: "26E1467CEA5DF223"
@@ -560,7 +602,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 0.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["6E2F24117ACF3694"]
@@ -578,7 +620,7 @@
 				type: "checkmark"
 			}]
 			x: 1.5d
-			y: 1.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -603,7 +645,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -807,6 +849,49 @@
 			title: "{gravitas.quest.lv.title.terminal}"
 			x: 0.5d
 			y: -0.5d
+		}
+		{
+			dependencies: ["5C1BB559DD83E88F"]
+			description: ["{gravitas.quest.lv.desc.arc_furnace}"]
+			id: "0FB0ED39D9E79787"
+			subtitle: "{gravitas.quest.lv.title.arc_furnace}"
+			tasks: [{
+				id: "0D13211E31FA7ED4"
+				item: "gtceu:lv_arc_furnace"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["5C1BB559DD83E88F"]
+			description: ["{gravitas.quest.lv.desc.ore_prospector}"]
+			id: "103C0C57708C36E5"
+			rewards: [{
+				id: "5E424A0B197FD1C3"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.mv.subtitle.ore_prospector}"
+			tasks: [{
+				id: "7103FD8BC3DD6CE9"
+				item: "gtceu:prospector.lv"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["25DBFE887B041E94"]
+			description: ["{gravitas.quest.lv.desc.realgar}"]
+			id: "2613D6996C0D7C0C"
+			tasks: [{
+				id: "4BFA3CE63638B745"
+				item: "gtceu:realgar_dust"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
 		}
 	]
 	title: "{gravitas.chapters.16.title}"

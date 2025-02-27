@@ -552,7 +552,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //piston fixes
   event.remove({ id: "minecraft:piston" })
-  event.remove({ id: `/^gtceu:shaped\/piston.*/` })
+  event.remove({ id: /^gtceu:shaped\/piston.*/ })
 
   //immersive aircraft and simpleplanes tweaks
 
