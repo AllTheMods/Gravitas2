@@ -418,5 +418,6 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "immersive_machinery" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")
   event.replaceInput({ mod: "immersive_aircraft" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")
   event.replaceInput({ id: "immersive_aircraft:telescope" }, "#railways:internal/ingots/copper_ingots", "create:metal_bracket")
+  event.replaceInput({ id: "minecraft:book"}, "minecraft:leather", "#forge:leather")
 }
 

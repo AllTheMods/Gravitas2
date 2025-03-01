@@ -584,5 +584,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:conduit" })
   event.remove({ id: "minecraft:crossbow" })
   event.remove({ id: "headlight:headlight"})
+  event.remove({ id: "buildinggadgets2:gadget_cut_paste"})
 
 }
