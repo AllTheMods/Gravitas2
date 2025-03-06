@@ -1474,6 +1474,15 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(100)
     .EUt(LV)
 
+  //yarn
+
+  event.recipes.gtceu
+    .compressor("gregitas:wool_yarn_from_wool")
+    .itemInputs("1x tfc:wool")
+    .itemOutputs("8x tfc:wool_yarn")
+    .duration(100)
+    .EUt(ULV)
+
   //wool
 
   event.recipes.gtceu
