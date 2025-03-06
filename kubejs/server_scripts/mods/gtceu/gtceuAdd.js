@@ -1483,6 +1483,13 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(100)
     .EUt(ULV)
 
+  event.recipes.gtceu
+    .compressor("gregitas:string_from_jute")
+    .itemInputs("1x tfc:jute_fiber")
+    .itemOutputs("2x minecraft:string")
+    .duration(100)
+    .EUt(ULV)
+
   //wool
 
   event.recipes.gtceu
