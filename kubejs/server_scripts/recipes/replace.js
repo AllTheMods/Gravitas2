@@ -165,7 +165,6 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot" )
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot" )
   //Firebricks/Cokebricks etc
-  event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
   event.replaceInput({ id: "firmalife:crafting/vat"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
   event.replaceInput({ id: "firmalife:crafting/jarring_station"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
