@@ -32,6 +32,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:smelting/fireclay_brick"})
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
   event.remove([{ id: 'gtceu:shaped/pump_deck' }, { id: 'gtceu:shaped/pump_hatch' }, { id: 'gtceu:shaped/primitive_pump' }])
+  event.remove([{ id: "gtceu:shaped/small_wooden_pipe" }, { id: "gtceu:shaped/normal_wooden_pipe" }, { id: "gtceu:shaped/large_wooden_pipe" }])
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
