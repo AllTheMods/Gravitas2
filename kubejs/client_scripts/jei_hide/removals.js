@@ -93,6 +93,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("astikorcarts:wheel")
 
     event.hide(`/^.*deepslate.*/`)
+
+    // Vanilla
     event.hide(`/^minecraft:.*dark_oak.*/`)
     event.hide(`/^minecraft:.*oak.*/`)
     event.hide(`/^minecraft:.*acacia.*/`)
@@ -103,7 +105,12 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^minecraft:.*andesite.*/`)
     event.hide(`/^minecraft:.*diorite.*/`)
     event.hide(`/^minecraft:.*granite.*/`)
-
+    event.hide("minecraft:smoker")
+    event.hide("minecraft:furnace")
+    event.hide("minecraft:furnace_minecart")
+    event.hide("minecraft:blast_furnace")
+    event.hide("minecraft:campfire")
+    event.hide("minecraft:soul_campfire")
 
     // EnderIO
     event.hide(`/^enderio:end_steel.*/`)
@@ -115,8 +122,9 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('gtceu:lp_steam_extractor')
     event.hide('gtceu:hp_steam_extractor')
     event.hide('gtceu:lv_extruder')
+    event.hide('gtceu:wood_mallet')
 
-  // Thorium Reactors
+    // Thorium Reactors
     event.hide('thoriumreactors:generator_block')
     event.hide('thoriumreactors:fluid_evaporation_block')
     event.hide('thoriumreactors:electrolytic_salt_separator')
@@ -133,6 +141,11 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('thoriumreactors:raw_uranium')
     event.hide('thoriumreactors:fluorite')
     event.hide('thoriumreactors:uran_three_chloride')
+
+    // Immersive Aircraft
     event.hide('immersive_aircraft:gyrodyne')
     event.hide('immersive_aircraft:propeller')
+
+    // Jumbo Furnace
+    event.hide('jumbofurnace:jumbo_furnace')
 }

@@ -19,4 +19,9 @@ let hideCats = (event) => {
    event.remove("enderio:sag_mill")
    event.remove("enderio:alloy_smelting")
    event.remove("enderio:primitive_alloy_smelting")
+
+   event.remove("minecraft:blasting")
+   event.remove("minecraft:campfire_cooking")
+
+   event.remove("jumbofurnace:jumbo_smelting")
 }
