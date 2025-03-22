@@ -183,6 +183,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:calcite_from_stone_types_calcite_stonecutting"})
   event.remove({ id: "create:milling/dripstone_block"})
   event.remove({ id: "create:milling/calcite"})
+  event.remove({ id: "create:splashing/sand" })
   event.remove({ id: "create:compacting/diorite_from_flint"})
   event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
   event.remove({ id: "vintageimprovements:crushing/scoria"})
