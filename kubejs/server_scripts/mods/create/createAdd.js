@@ -679,4 +679,15 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             event.custom(new_recipe)
         }
     })
+
+    // GT ore washing to Create washing (no byproducts)
+    event.forEachRecipe({ type: "gtceu:ore_washer" }, r => {
+        let ingredient = `${r.json.get("inputs").get("item").get(0).get("content").get("ingredient").get("tag")}`
+        ingredient = ingredient.substring(1, ingredient.length - 1);
+
+        let result = `${r.json.get("outputs").get("item").get(0).get("content").get("ingredient").get("item")}`
+        result = result.substring(1, result.length - 1);
+
+        event.recipes.create.splashing([result], "#" + ingredient)
+    })
 }
