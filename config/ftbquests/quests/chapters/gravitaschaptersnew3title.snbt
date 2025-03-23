@@ -925,8 +925,8 @@
 				title: "Quests By AllTheMods"
 				type: "checkmark"
 			}]
-			x: -4.0d
-			y: -1.5d
+			x: -1.0d
+			y: -2.0d
 		}
 		{
 			id: "78729E7428CA3CC5"
@@ -937,6 +937,57 @@
 			}]
 			x: 2.5d
 			y: -1.0d
+		}
+		{
+			dependencies: [
+				"6D4C17EC5FAE5B56"
+				"00F25F9C1F5B5DBB"
+			]
+			description: ["{gravitas.quest.stage3.desc.ankh}"]
+			id: "083350648FB5B236"
+			rewards: [{
+				id: "1ACB6AC139E7818E"
+				item: "tombstone:scroll_of_knowledge"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "752328799C693DF6"
+					item: {
+						Count: 1
+						id: "tombstone:ankh_of_prayer"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "39E550D74E76FE79"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "tombstone:decorative_graves"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			description: ["{gravitas.quest.stage3.desc.undeath}"]
+			id: "6D4C17EC5FAE5B56"
+			shape: "gear"
+			tasks: [{
+				id: "7073C9B46A245141"
+				item: "tombstone:essence_of_undeath"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -2.0d
 		}
 	]
 	title: "{gravitas.chapters.3.title}"

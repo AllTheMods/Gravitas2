@@ -10,8 +10,8 @@
 		image: "configuration:icons/warning"
 		rotation: 0.0d
 		width: 0.7d
-		x: 1.5d
-		y: -1.8d
+		x: 2.0d
+		y: -2.0d
 	}]
 	order_index: 2
 	quest_links: [ ]
@@ -70,7 +70,7 @@
 				item: "minecraft:ender_eye"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 2.0d
 			y: 1.0d
 		}
 		{
@@ -82,7 +82,7 @@
 				item: "gtceu:uranium_dust"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 2.0d
 			y: -1.0d
 		}
 		{
@@ -429,7 +429,10 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["063F5023D56CA6B1"]
+			dependencies: [
+				"063F5023D56CA6B1"
+				"3B95CD7D51DDFBD0"
+			]
 			id: "557B9D05D419CE9A"
 			subtitle: "{gravitas.quest.id.subt.tomake}"
 			tasks: [{
@@ -437,8 +440,8 @@
 				item: "ae2:inscriber"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 0.0d
+			x: 3.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["65D89991A45BC042"]
@@ -509,6 +512,18 @@
 			}]
 			x: 0.0d
 			y: -2.0d
+		}
+		{
+			id: "3B95CD7D51DDFBD0"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				id: "11A6E9A61FEFFF06"
+				item: "gtceu:mv_assembler"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
 		}
 	]
 	title: "{gravitas.chapters.33.title}"

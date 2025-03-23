@@ -158,6 +158,7 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["4306F1F11DEE9DE5"]
 			description: ["{gravitas.quest.brass.desc.rose_quartz}"]
 			id: "498D71964F6D9BB8"
 			rewards: [{
@@ -532,6 +533,33 @@
 			}]
 			x: 0.0d
 			y: -1.5d
+		}
+		{
+			description: ["{gravitas.quest.brass.desc.quartz}"]
+			id: "4306F1F11DEE9DE5"
+			tasks: [{
+				id: "520F9AE14D88574B"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc_ie_addon:mineral/quartz_shard"
+							}
+							{
+								Count: 1b
+								id: "minecraft:quartz"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.quartz}"
+			x: -1.0d
+			y: -3.5d
 		}
 	]
 	title: "{gravitas.chapters.12.title}"

@@ -311,4 +311,9 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   //laserio
 
   event.replaceInput({ mod: "laserio" }, "minecraft:iron_ingot", "#forge:plates/iron")
+
+  // change realgar->arsenic to MV to gate progression behind EBF
+  event.forEachRecipe({id: "gtceu:centrifuge/decomposition_centrifuging__realgar"}, r => {
+    r.json.get("tickInputs").get("eu").get(0).add("content", 36)
+  })
 }
