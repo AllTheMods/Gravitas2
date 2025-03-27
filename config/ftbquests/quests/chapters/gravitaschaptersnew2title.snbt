@@ -1409,6 +1409,38 @@
 			x: -2.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["63C836404CDEEF25"]
+			description: ["{gravitas.quest.stage2.desc.wrought_nugget}"]
+			id: "6F1FFC4E469C2B33"
+			rewards: [{
+				count: 2
+				id: "18C7FBB18AFB010B"
+				item: "gtceu:wrought_iron_ingot"
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "239022A0CC00F00F"
+				item: { Count: 9, id: "gtceu:wrought_iron_nugget" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["5249B4D0415DBC97"]
+			description: ["{gravitas.quest.stage2.desc.iron_nugget}"]
+			id: "63C836404CDEEF25"
+			tasks: [{
+				count: 9L
+				id: "7AD7EE6C5FB2E82A"
+				item: { Count: 9, id: "minecraft:iron_nugget" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: -3.75d
+		}
 	]
 	title: "{gravitas.chapters.2.title}"
 }

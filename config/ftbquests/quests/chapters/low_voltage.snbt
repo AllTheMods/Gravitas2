@@ -71,8 +71,8 @@
 				item: "gtceu:good_electronic_circuit"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.09999999999999998d
+			x: 7.4d
+			y: 0.3d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -121,18 +121,11 @@
 			description: ["{gravitas.quest.lv.desc.fluid_solid_1}"]
 			id: "78C51E9B7B8315F6"
 			subtitle: "Need that fluid to be solid?"
-			tasks: [
-				{
-					id: "091F155D7F3E3BB9"
-					item: "gtceu:lv_fluid_solidifier"
-					type: "item"
-				}
-				{
-					id: "56EEABA0FADCB3D7"
-					item: "gtceu:ingot_casting_mold"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "091F155D7F3E3BB9"
+				item: "gtceu:lv_fluid_solidifier"
+				type: "item"
+			}]
 			title: "{gravitas.quest.lv.title.fluid_solidifier}"
 			x: -1.5d
 			y: 2.5d
@@ -147,7 +140,7 @@
 				type: "item"
 			}]
 			x: 0.5d
-			y: -2.5d
+			y: -2.6d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -174,7 +167,7 @@
 				type: "item"
 			}]
 			x: 0.5d
-			y: -3.5d
+			y: -3.6d
 		}
 		{
 			dependencies: [
@@ -194,7 +187,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 3.5d
+			y: 3.6d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -222,7 +215,7 @@
 			}]
 			title: "{gravitas.quest.lv.title.mixer}"
 			x: 0.5d
-			y: 3.5d
+			y: 3.6d
 		}
 		{
 			dependencies: ["0F9829B0A5EEE67B"]
@@ -242,7 +235,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 3.5d
+			y: 3.6d
 		}
 		{
 			dependencies: ["59BE2AD1CD0C4ECE"]
@@ -260,7 +253,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -2.5d
+			y: -2.6d
 		}
 		{
 			dependencies: ["7A8242E6D0BC6294"]
@@ -278,8 +271,8 @@
 				item: "gtceu:glue_bucket"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -3.5d
+			x: 2.8999999999999995d
+			y: -3.6d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -374,8 +367,8 @@
 				item: "gtceu:phenolic_circuit_board"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -2.5d
+			x: 2.9d
+			y: -2.6d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -415,6 +408,7 @@
 			]
 			description: ["{gravitas.quest.lv.desc.ars_triox}"]
 			id: "74EE98F95F483C37"
+			optional: true
 			tasks: [{
 				id: "1D82282268F050A6"
 				item: "gtceu:arsenic_trioxide_dust"
@@ -495,8 +489,8 @@
 					type: "item"
 				}
 			]
-			x: 1.5d
-			y: 0.5d
+			x: 4.5d
+			y: -1.0d
 		}
 		{
 			description: ["{gravitas.quest.lv.desc.oxy_bucket}"]
@@ -506,13 +500,14 @@
 				type: "xp"
 				xp: 100
 			}]
+			shape: "gear"
 			tasks: [{
 				id: "41E980F316610E20"
 				item: "gtceu:oxygen_bucket"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -0.5d
+			x: 3.6d
+			y: -0.3d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -581,13 +576,14 @@
 		{
 			dependencies: ["25DBFE887B041E94"]
 			id: "14C017569BECA2CE"
+			optional: true
 			tasks: [{
 				id: "1FC622A82F527A54"
 				item: "gtceu:cobaltite_dust"
 				type: "item"
 			}]
 			x: 3.0d
-			y: 0.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -619,8 +615,8 @@
 				title: "{gravitas.quest.lv.title.maint}"
 				type: "checkmark"
 			}]
-			x: 1.5d
-			y: -0.5d
+			x: 4.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -645,26 +641,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["5C1BB559DD83E88F"]
-			description: ["{gravitas.quest.lv.desc.wrought_nugget}"]
-			id: "313AA0A45CD2BBB9"
-			rewards: [{
-				count: 2
-				id: "50FC7B684543C55A"
-				item: "gtceu:wrought_iron_ingot"
-				random_bonus: 2
-				type: "item"
-			}]
-			tasks: [{
-				id: "7D2E6775D39566B8"
-				item: "gtceu:wrought_iron_nugget"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -676,8 +653,8 @@
 				item: "gtceu:cupronickel_ingot"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 0.5d
+			x: 1.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -841,14 +818,15 @@
 			]
 			description: ["{gravitas.quest.lv.desc.terminal}"]
 			id: "48B82C4DB40C2FFA"
+			optional: true
 			tasks: [{
 				id: "61DF91112DA2465F"
 				item: "gtceu:terminal"
 				type: "item"
 			}]
 			title: "{gravitas.quest.lv.title.terminal}"
-			x: 0.5d
-			y: -0.5d
+			x: 5.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["5C1BB559DD83E88F"]
@@ -864,7 +842,7 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["5C1BB559DD83E88F"]
+			dependencies: ["180322C8A7D2BB7B"]
 			description: ["{gravitas.quest.lv.desc.ore_prospector}"]
 			id: "103C0C57708C36E5"
 			rewards: [{
@@ -878,20 +856,70 @@
 				item: "gtceu:prospector.lv"
 				type: "item"
 			}]
-			x: -4.5d
+			x: -6.5d
 			y: 2.5d
 		}
 		{
 			dependencies: ["25DBFE887B041E94"]
 			description: ["{gravitas.quest.lv.desc.realgar}"]
 			id: "2613D6996C0D7C0C"
+			optional: true
 			tasks: [{
 				id: "4BFA3CE63638B745"
 				item: "gtceu:realgar_dust"
 				type: "item"
 			}]
 			x: 3.0d
-			y: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5C1BB559DD83E88F"]
+			description: ["{gravitas.quest.lv.desc.canner_1}"]
+			icon: "gtceu:lv_canner"
+			id: "180322C8A7D2BB7B"
+			subtitle: "Can it!"
+			tasks: [{
+				id: "6B5C6F16E49A8F26"
+				item: "gtceu:lv_canner"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["180322C8A7D2BB7B"]
+			description: [""]
+			id: "4C6FE5948A732B43"
+			subtitle: "Increase pickup distance"
+			tasks: [{
+				id: "3B5EA26163B679A3"
+				item: "gtceu:lv_item_magnet"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6E2F24117ACF3694"]
+			id: "13E3A4194AA04E9F"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				id: "32DE6BAB05794ACD"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:aluminium_ingot"
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.3d
 		}
 	]
 	title: "{gravitas.chapters.16.title}"
