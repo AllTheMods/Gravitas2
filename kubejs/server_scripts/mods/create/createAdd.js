@@ -645,4 +645,49 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ).transitionalItem('tfc:metal/ingot/high_carbon_red_steel').loops(3)
 
     event.recipes.create.filling("gregitas:maple_glazed_roll", ["#tfc:foods/breads", Fluid.of("gregitas:maple_syrup", 250)]).id("gregitas:maple_glazed_roll")
+
+    // Quern to create crushing (avoiding duplicates)
+    let existing_crushing_recipes = new Set()
+    event.forEachRecipe({ type: "create:crushing" }, r => {
+        // No quern recipes with milling recipes and no crushing recipe, so fine to just check crushing
+        existing_crushing_recipes.add(`${r.json.get("ingredients").get(0)}`);
+    })
+    event.forEachRecipe({ type: "tfc:quern" }, r => {
+        let ingredient = `${r.json.get("ingredient")}`
+        if(!existing_crushing_recipes.has(ingredient)){
+            let new_recipe = r.json
+            let ingredientValue = new_recipe.remove("ingredient")
+            let resultValue = new_recipe.remove("result")
+            new_recipe.add("ingredients", [ingredientValue])
+
+            if(resultValue.has("count") && resultValue.get("count") > 1) {
+                // create-style result display, rather than using item count
+                let count = resultValue.remove("count")
+                let resultsArray = []
+                for (let i = 0; i < count; i++) {
+                    resultsArray.push(resultValue)
+                }
+                new_recipe.add("results", resultsArray)
+            } else {
+                new_recipe.add("results", [resultValue])
+            }
+
+            new_recipe.add("type", "create:crushing")
+            event.custom(new_recipe)
+
+            new_recipe.add("type", "create:milling")
+            event.custom(new_recipe)
+        }
+    })
+
+    // GT ore washing to Create washing (no byproducts)
+    event.forEachRecipe({ type: "gtceu:ore_washer" }, r => {
+        let ingredient = `${r.json.get("inputs").get("item").get(0).get("content").get("ingredient").get("tag")}`
+        ingredient = ingredient.substring(1, ingredient.length - 1);
+
+        let result = `${r.json.get("outputs").get("item").get(0).get("content").get("ingredient").get("item")}`
+        result = result.substring(1, result.length - 1);
+
+        event.recipes.create.splashing([result], "#" + ingredient)
+    })
 }

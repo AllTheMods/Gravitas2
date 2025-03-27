@@ -110,6 +110,10 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceInput({ mod: "create" }, "#minecraft:planks", "#forge:treated_wood")
+  event.replaceInput(
+    { mod: "petrolsparts" },
+    "#minecraft:planks", "#forge:treated_wood"
+  )
   event.replaceInput({ mod: "create" }, "#forge:plates/iron", "#forge:plates/wrought_iron")
   event.forEachRecipe({id: "woodencog:crafting/kinetics/fluid_tank"}, r => {
     event.recipes.kubejs.shaped("create:fluid_tank", r.json.asMap().pattern, r.json.asMap().key).replaceIngredient("#tfc:barrels", Item.empty).id(r.getId())
@@ -165,7 +169,6 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot" )
   event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot" )
   //Firebricks/Cokebricks etc
-  event.replaceInput({ id: "gtceu:shaped/compressed_coke_clay"}, "minecraft:clay_ball", "tfc:fire_clay")
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
   event.replaceInput({ id: "firmalife:crafting/vat"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
   event.replaceInput({ id: "firmalife:crafting/jarring_station"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")

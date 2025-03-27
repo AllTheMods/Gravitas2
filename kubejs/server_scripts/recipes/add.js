@@ -640,6 +640,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     results: [{ item: "create:large_cogwheel" }]
   })
+  event.shapeless("petrolsparts:large_coaxial_gear", ["petrolsparts:coaxial_gear", "#forge:treated_wood"])
   //Create End
 
   //GTCEU Start
