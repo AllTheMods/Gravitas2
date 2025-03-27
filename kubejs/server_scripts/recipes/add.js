@@ -477,6 +477,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
   event.recipes.create.pressing("gtceu:black_bronze_plate", ["#forge:ingots/black_bronze"])
+  event.recipes.create.pressing("gtceu:bismuth_bronze_plate", ["#forge:ingots/bismuth_bronze"])
 
   colorMap.forEach((color) => {
     event
