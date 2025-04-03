@@ -31,7 +31,7 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
       GTRecipeModifiers.PARALLEL_HATCH,
       GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)
     ])
-    .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
+    .appearanceBlock(GCYMBlocks.CASING_ATOMIC)
     .pattern((definition) =>
       FactoryBlockPattern.start()
         .aisle(
