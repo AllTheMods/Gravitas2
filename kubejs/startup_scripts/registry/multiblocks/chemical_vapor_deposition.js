@@ -12,6 +12,7 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   event
     .create("chemical_vapor_depositor", "simple")
     .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV, GTValues.UEV, GTValues.UIV, GTValues.UXV, GTValues.OpV, GTValues.MAX)
+    .tankScalingFunction((tier) => tier * 9600)
     .definition((tier, builder) => {
       builder
     .langValue(`${GTValues.VA[tier]} Chemical Vapor Deposition`)

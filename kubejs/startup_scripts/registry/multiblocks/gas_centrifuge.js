@@ -12,6 +12,7 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   event
     .create("gas_centrifuge", "simple")
     .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV, GTValues.UEV, GTValues.UIV, GTValues.UXV, GTValues.OpV, GTValues.MAX)
+    .tankScalingFunction((tier) => tier * 3200)
     .definition((tier, builder) => {
       builder
     .rotationState(RotationState.NON_Y_AXIS)
