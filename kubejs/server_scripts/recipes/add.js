@@ -1655,6 +1655,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(300)
     .EUt(MV)
 
+    event.recipes.gtceu
+    .electric_blast_furnace("terracotta")
+    .itemInputs("#tfc:mud")
+    .inputFluids(Fluid.of("gtceu:oxygen", 50))
+    .itemOutputs("minecraft:terracotta")
+    .blastFurnaceTemp(1000)
+    .duration(10)
+    .EUt(MV)
+
   event.recipes.gtceu
     .alloy_smelter("copper_alloy")
     .itemInputs("#forge:silicon", "#forge:ingots/copper")
@@ -2646,6 +2655,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     heatRequirement: "heated",
     results: [{ item: "createdieselgenerators:asphalt_block", amount: 4 }]
+  })
+
+  // Create Addition rolling
+  event.custom({
+    type: "createaddition:rolling",
+    input: {
+      item: "gtceu:potin_ingot"
+    },
+    result: {
+      item: "gtceu:potin_rod",
+      count: 2
+    },
   })
 
   event
