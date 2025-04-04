@@ -567,6 +567,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             `tfc:rock/mossy_cobble/${type.stone}` , 250)
     });
 
+    tfcSandColors.forEach((color) => {
+        event.recipes.create.crushing([
+            `tfc:sand/${color}`
+            ],
+            `tfc:raw_sandstone/${color}`)
+    });
+
     event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
 
     event.recipes.create.milling('gregitas_core:igneous_dust', '#tfc:igneous_extrusive_rock', 250)

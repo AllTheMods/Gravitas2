@@ -106,6 +106,9 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^minecraft:.*diorite.*/`)
     event.hide(`/^minecraft:.*granite.*/`)
     event.hide("minecraft:smoker")
+    event.hide("minecraft:mud")
+    event.hide("minecraft:packed_mud")
+    event.hide("minecraft:dirt")
     event.hide("minecraft:furnace")
     event.hide("minecraft:furnace_minecart")
     event.hide("minecraft:blast_furnace")
@@ -114,6 +117,10 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     // EnderIO
     event.hide(`/^enderio:end_steel.*/`)
+    event.hide("enderio:sag_mill")
+    event.hide("enderio:wood_gear")
+    event.hide("enderio:vibrant_gear")
+    event.hide("enderio:dark_bimetal_gear")
 
     //SFM
     event.hide("sfm:water_tank")
@@ -123,6 +130,7 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('gtceu:hp_steam_extractor')
     event.hide('gtceu:lv_extruder')
     event.hide('gtceu:wood_mallet')
+    event.hide('gtceu:mega_fusion_reactor')
 
     // Thorium Reactors
     event.hide('thoriumreactors:generator_block')

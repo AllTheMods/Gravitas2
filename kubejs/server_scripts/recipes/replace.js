@@ -20,7 +20,10 @@ const furnacent = [
   "enderio:primitive_alloy_smelter",
   "ae2:network/blocks/energy_vibration_chamber",
   "railcraft:tunnel_bore",
-  "integrateddynamics:crafting/coal_generator"
+  "integrateddynamics:crafting/coal_generator",
+  "immersive_aircraft:boiler",
+  "scguns:macerator",
+  "scguns:mechanical_press"
 ]
 const tfcMetallics = [
   'bismuth',
