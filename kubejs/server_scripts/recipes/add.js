@@ -1675,7 +1675,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(MV)
   event.recipes.gtceu
     .alloy_smelter("vanilla_iron")
-    .itemInputs("#forge:ingots/cast_iron", "tfc:powder/lime")
+    .itemInputs("#forge:ingots/cast_iron", "#forge:dusts/quicklime")
     .itemOutputs("minecraft:iron_ingot")
     .duration(250)
     .EUt(LV)

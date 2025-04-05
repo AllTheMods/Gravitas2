@@ -361,11 +361,12 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.removeAllTagsFrom("immersiveengineering:storage_steel")
 
-  event.add("tfc:glassworking_potash", ["gtceu:saltpeter_dust"])
-
   event.add("scguns:advanced_bullet_material", "gtceu:steel_ingot")
 
   event.add("forge:dusts/saltpeter", "scguns:niter_dust")
+  event.add("forge:dusts/quicklime", "tfc:powder/lime")  
+  event.add("tfc:glassworking_potash", "#forge:dusts/soda_ash")
+  event.add("forge:dusts/soda_ash", "tfc:powder/soda_ash")
 
   const weakCompostables = [event.get("tfc:compost_greens_low"), event.get("tfc:compost_browns_low")]
     .reduce((arr, iter) => arr.concat(iter), [])
