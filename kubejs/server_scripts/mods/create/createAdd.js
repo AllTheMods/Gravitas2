@@ -623,7 +623,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
     event.recipes.create.cutting(["2x immersiveengineering:slab_treated_wood_horizontal"], "gtceu:treated_wood_planks", 150)
 
-    
+    // Paper making with Create, same recipes as in Gregtech chemical reactor
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('water', 100)])
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('water', 100)])
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('gtceu:distilled_water', 100)])
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('gtceu:distilled_water', 100)])
+
+    // TFC metallurgy
     event.recipes.create.sequenced_assembly('tfc:metal/ingot/high_carbon_steel', 'tfc:metal/ingot/pig_iron', 
         event.recipes.create.pressing('tfc:metal/ingot/pig_iron', 'tfc:metal/ingot/pig_iron')
     ).transitionalItem('tfc:metal/ingot/pig_iron').loops(3)
