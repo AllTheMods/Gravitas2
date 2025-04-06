@@ -11,6 +11,7 @@ ServerEvents.recipes((event) => {
   createAdd(event)
   centrifugeAdd(event)
   coilingTweak(event)
+  pressurizedBasinAdd(event)
   spaceDustChain(event)
   certusSemiconductors(event)
   gregifyAE2(event)
