@@ -584,6 +584,22 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
       }
     })
+    event.custom({
+      type: "vintageimprovements:polishing",
+      speedLimits: 1,
+      ingredients: [
+        {
+          item: `tfc:ore\/${gemStone}`
+        }
+      ],
+      results: [
+        {
+          item: `tfc:gem\/${gemStone}`,
+          count: 1
+        }
+      ],
+      processingTime: 40
+    })
   })
   event.shapeless("2x minecraft:blaze_powder", ["#forge:tools/mortars", "minecraft:blaze_rod"])
   event.shapeless("1x gtceu:saltpeter_dust", ["4x tfc:powder/saltpeter"])
