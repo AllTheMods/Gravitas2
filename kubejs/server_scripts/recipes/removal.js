@@ -10,7 +10,17 @@ const toolsToRemove = [
   "blue_steel",
   "red_steel"
 ]
+function logRecipeCategories() {
+  let categories = global.jeiRuntime.recipeManager.createRecipeCategoryLookup().get().toList()
+  categories.forEach(category => {
+      console.log(category.getRecipeType().getUid());
+  })
+}
+
 let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
+  // After adding mods, use this to update client_scripts/recipe_categories:
+  // logRecipeCategories();
+
   event.remove({ id: "tfc:crafting/bloomery" })
   event.remove({ id: "computercraft:computer_normal" })
   event.remove({ id: "computercraft:computer_advanced_upgrade" })
@@ -32,11 +42,14 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:smelting/fireclay_brick"})
   event.remove({ id: "gtceu:shaped/bronze_primitive_blast_furnace" })
   event.remove([{ id: 'gtceu:shaped/pump_deck' }, { id: 'gtceu:shaped/pump_hatch' }, { id: 'gtceu:shaped/primitive_pump' }])
+  event.remove([{ id: "gtceu:shaped/small_wooden_pipe" }, { id: "gtceu:shaped/normal_wooden_pipe" }, { id: "gtceu:shaped/large_wooden_pipe" }])
   event.remove({ id: "gtceu:shapeless/rubber_wood_planks" })
   event.remove([{ id: "gtceu:shaped/steam_extractor_bronze" }, { id: "gtceu:shaped/steam_extractor_steel" }])
   event.remove({ id: "gtceu:shaped/treated_wood_planks"})
   event.remove({ id: "gtceu:alloy_smelter/form_brick" })
   event.remove({ id: "gtceu:assembler/chest"})
+  event.remove({ id: "gtceu:assembler/furnace_minecart"})
+  event.remove({ id: "gtceu:assembler/smoker"})
   event.remove({ id: "gtceu:assembler/enchanting_table"})
   event.remove({ id: "gtceu:assembler/wool_from_string"})
   event.remove({ id: 'gtceu:smelting/sticky_resin_from_slime'})
@@ -87,6 +100,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({ id: "gtceu:shaped/wooden_shape_brick"})
     event.remove({ id: "gtceu:smelting/coke_oven_brick", mod: "gtceu" })
     event.remove({ id: "gtceu:macerator/macerate_blaze_rod"})
+    event.remove({ id: "gtceu:macerator/macerate_furnace"})
     event.remove(
         [
             {
@@ -160,6 +174,10 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:crafting/kinetics/empty_blaze_burner"})
   event.remove({ id: "create:filling/sweet_roll"})
   event.remove({ id: "create:crafting/kinetics/belt_connector"})
+  event.remove({ id: "woodencog:crafting/kinetics/encased_fan"})
+  event.remove({ id: "woodencog:heating/terracotta.json"})
+  event.remove({ id: "woodencog:crafting/kinetics/fluid_pipe"})
+  event.remove({ id: "woodencog:crafting/kinetics/fluid_pipe_vertical"})
   event.remove({ id: "create:crushing/crimsite"})
   event.remove({ id: "create:crushing/crimsite_recycling"})
   event.remove({ id: "create:crushing/ochrum"})
@@ -179,6 +197,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:calcite_from_stone_types_calcite_stonecutting"})
   event.remove({ id: "create:milling/dripstone_block"})
   event.remove({ id: "create:milling/calcite"})
+  event.remove({ id: "create:splashing/sand" })
   event.remove({ id: "create:compacting/diorite_from_flint"})
   event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
   event.remove({ id: "vintageimprovements:crushing/scoria"})
@@ -195,6 +214,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "framedblocks:framed_torch" })
   event.remove({ id: "framedblocks:framed_soul_torch" })
   event.remove({ id: "framedblocks:framed_chest" })
+  event.remove({ id: "framedblocks:framing_saw/framed_chest" })
   event.remove({ id: "framedblocks:framed_secret_storage" })
 
   //Storage Drawers / Framed Drawers
@@ -326,6 +346,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ output: "minecraft:furnace"})
   event.remove({ output: "minecraft:blast_furnace"})
   event.remove({ id: "minecraft:andesite" })
+  event.remove({ id: "minecraft:furnace_minecart" })
   event.remove({ id: "minecraft:brick" })
   event.remove({ id: "minecraft:blaze_powder"})
   event.remove({ id: "minecraft:diorite"})
@@ -337,7 +358,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //EnderIO
   event.remove({ id: "enderio:stick"})
-  event.remove({ id: "enderio:sag_milling/blaze_powder"})
   event.remove({ id: "enderio:primitive_alloy_smelter"})
   event.remove({ id: "enderio:sag_mill"})
   event.remove({ id: "enderio:alloy_smelter"})
@@ -345,6 +365,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "enderio:stirling_generator"})
   event.remove({ id: "enderio:fluid_tank"})
   event.remove({ id: "enderio:pressurized_fluid_tank"})
+  event.remove({ id: "enderio:wood_gear"})
+  event.remove({ id: "enderio:vibrant_gear"})
+  event.remove({ id: "enderio:dark_bimetal_gear"})
 
 
   //Waystones

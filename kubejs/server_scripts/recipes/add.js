@@ -477,6 +477,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
   event.recipes.create.pressing("gtceu:black_bronze_plate", ["#forge:ingots/black_bronze"])
+  event.recipes.create.pressing("gtceu:bismuth_bronze_plate", ["#forge:ingots/bismuth_bronze"])
 
   colorMap.forEach((color) => {
     event
@@ -583,6 +584,22 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
       }
     })
+    event.custom({
+      type: "vintageimprovements:polishing",
+      speedLimits: 1,
+      ingredients: [
+        {
+          item: `tfc:ore\/${gemStone}`
+        }
+      ],
+      results: [
+        {
+          item: `tfc:gem\/${gemStone}`,
+          count: 1
+        }
+      ],
+      processingTime: 40
+    })
   })
   event.shapeless("2x minecraft:blaze_powder", ["#forge:tools/mortars", "minecraft:blaze_rod"])
   event.shapeless("1x gtceu:saltpeter_dust", ["4x tfc:powder/saltpeter"])
@@ -640,6 +657,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     results: [{ item: "create:large_cogwheel" }]
   })
+  event.shapeless("petrolsparts:large_coaxial_gear", ["petrolsparts:coaxial_gear", "#forge:treated_wood"])
   //Create End
 
   //GTCEU Start
@@ -1653,6 +1671,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(300)
     .EUt(MV)
 
+    event.recipes.gtceu
+    .electric_blast_furnace("terracotta")
+    .itemInputs("#tfc:mud")
+    .inputFluids(Fluid.of("gtceu:oxygen", 50))
+    .itemOutputs("minecraft:terracotta")
+    .blastFurnaceTemp(1000)
+    .duration(10)
+    .EUt(MV)
+
   event.recipes.gtceu
     .alloy_smelter("copper_alloy")
     .itemInputs("#forge:silicon", "#forge:ingots/copper")
@@ -2644,6 +2671,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     heatRequirement: "heated",
     results: [{ item: "createdieselgenerators:asphalt_block", amount: 4 }]
+  })
+
+  // Create Addition rolling
+  event.custom({
+    type: "createaddition:rolling",
+    input: {
+      item: "gtceu:potin_ingot"
+    },
+    result: {
+      item: "gtceu:potin_rod",
+      count: 2
+    },
   })
 
   event

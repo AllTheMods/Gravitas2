@@ -547,6 +547,27 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       s: "#forge:tools/screwdrivers"
     })
     .damageIngredient(["#forge:tools"])
+  event.recipes.kubejs
+    .shaped("gtceu:wood_small_fluid_pipe", ["   ", "sPf", "   "], {
+      s: "#forge:tools/saws",
+      P: "#minecraft:planks",
+      f: "#forge:tools/files"
+    })
+    .damageIngredient(["#forge:tools"])
+  event.recipes.kubejs
+    .shaped("gtceu:wood_normal_fluid_pipe", ["   ", "PPP", "s f"], {
+      s: "#forge:tools/saws",
+      P: "#minecraft:planks",
+      f: "#forge:tools/files"
+    })
+    .damageIngredient(["#forge:tools"])
+  event.recipes.kubejs
+    .shaped("gtceu:wood_large_fluid_pipe", ["PPP", "s f", "PPP"], {
+      s: "#forge:tools/saws",
+      P: "#minecraft:planks",
+      f: "#forge:tools/files"
+    })
+    .damageIngredient(["#forge:tools"])
   event.recipes.kubejs.shaped("gtceu:improved_coke_oven", ["CCC", "LPL", "TLT"], {
     C: "gtceu:lv_voltage_coil",
     P: "gregitas:bronze_plated_bricks",

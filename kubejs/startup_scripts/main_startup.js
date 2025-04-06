@@ -27,8 +27,8 @@ StartupEvents.postInit((event) => {
   Platform.setModName("gregitas-core", "Gravitas²")
   let $ConfigHolder$INSTANCE = $ConfigHolder.INSTANCE
   if ($ConfigHolder$INSTANCE == null) $ConfigHolder.init()
-  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enablePlatformConverters) return
-  console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enablePlatformConverters` to true!")
+  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enableFEConverters) return
+  console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enableFEConverters` to true!")
 })
 
 StartupEvents.postInit((event) => {

@@ -11,23 +11,15 @@
 			image: "gtceu:textures/gui/icon/gregtech_logo.png"
 			rotation: 0.0d
 			width: 3.0d
-			x: 4.0d
-			y: -3.0d
-		}
-		{
-			height: 0.6d
-			image: "gtceu:textures/gui/arrows/l7.png"
-			rotation: -90.0d
-			width: 0.8d
-			x: 5.5d
-			y: -0.8d
+			x: 2.5d
+			y: -2.5d
 		}
 		{
 			height: 0.6d
 			image: "gtceu:textures/gui/arrows/l7.png"
 			rotation: 90.0d
 			width: 0.8d
-			x: 4.0d
+			x: 5.0d
 			y: 3.8d
 		}
 		{
@@ -35,16 +27,8 @@
 			image: "gtceu:textures/gui/arrows/l7.png"
 			rotation: 90.0d
 			width: 0.8d
-			x: 7.0d
+			x: 7.5d
 			y: 2.2d
-		}
-		{
-			height: 0.6d
-			image: "gtceu:textures/gui/arrows/l7.png"
-			rotation: 180.0d
-			width: 0.8d
-			x: 7.8d
-			y: -4.0d
 		}
 		{
 			height: 1.0d
@@ -61,8 +45,8 @@
 			id: "717A0AA55E341B22"
 			linked_quest: "5ACD19E705D43C48"
 			shape: "gear"
-			x: 7.0d
-			y: -3.5d
+			x: 7.5d
+			y: -2.5d
 		}
 		{
 			id: "0DFBF3493037B1CB"
@@ -80,7 +64,7 @@
 		{
 			id: "676CB3732F82EB76"
 			linked_quest: "7E0E95E46C24E405"
-			x: 6.5d
+			x: 7.0d
 			y: 3.0d
 		}
 	]
@@ -119,8 +103,8 @@
 				title: "{gravitas.quest.steam.wrenches}"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 1.5d
+			x: 6.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["09C2B236014FC094"]
@@ -152,8 +136,8 @@
 				title: "{gravitas.quest.steam.screwdrivers}"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 1.5d
+			x: 5.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["69E44C6CAF03C0B5"]
@@ -185,7 +169,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 0.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["5EE0CF563FDF196C"]
@@ -226,8 +210,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.stage2.greg}"
-			x: 0.0d
-			y: 0.0d
+			x: 1.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["69E44C6CAF03C0B5"]
@@ -250,10 +234,9 @@
 			}]
 			title: "{gravitas.quest.steam.brassPlates}"
 			x: 3.0d
-			y: -1.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["46765C2E3D0224DD"]
 			id: "34FF68125977821B"
 			rewards: [{
 				count: 3
@@ -273,7 +256,6 @@
 		{
 			dependencies: [
 				"34FF68125977821B"
-				"50A456816C43C486"
 				"3C3C29A38BA7E365"
 			]
 			description: ["{gravitas.quest.steam.desc.steamgen}"]
@@ -297,21 +279,8 @@
 				item: "gtceu:lp_steam_solid_boiler"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 7.0d
 			y: 0.0d
-		}
-		{
-			id: "50A456816C43C486"
-			shape: "gear"
-			subtitle: "{gravitas.quest.steam.subt.brick}"
-			tasks: [{
-				count: 10L
-				id: "05A97450913EE540"
-				item: { Count: 10, id: "minecraft:brick" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -326,8 +295,8 @@
 				item: "gtceu:bronze_small_fluid_pipe"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 0.0d
+			x: 5.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -358,7 +327,7 @@
 				item: "gtceu:lp_steam_forge_hammer"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 7.0d
 			y: 1.5d
 		}
 		{
@@ -378,7 +347,7 @@
 				}
 				type: "item"
 			}]
-			x: 1.5d
+			x: 2.5d
 			y: 3.0d
 		}
 		{
@@ -390,7 +359,7 @@
 				item: "tfc:brass_mechanisms"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 4.0d
 			y: 3.0d
 		}
 		{
@@ -405,7 +374,7 @@
 				item: "minecraft:piston"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: 3.0d
 		}
 		{
@@ -425,7 +394,7 @@
 				}
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: 4.5d
 		}
 		{
@@ -448,7 +417,7 @@
 							ticks: 0L
 						}
 					}
-					id: "tfc:metal/ingot/wrought_iron"
+					id: "gtceu:wrought_iron_ingot"
 				}
 				type: "item"
 			}]
@@ -488,7 +457,7 @@
 				type: "item"
 			}]
 			x: 8.5d
-			y: -3.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["735C1C31C684CC3E"]
@@ -904,8 +873,8 @@
 				title: "Quests By AllTheMods"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -2.0d
+			x: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -951,12 +920,15 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.steam.steamminer}"
-			x: 7.0d
-			y: -1.5d
+			x: 7.5d
+			y: -1.0d
 		}
 		{
-			dependencies: ["59BDE76B679AB4CC"]
-			description: ["{gravitas.quest.steam.desc.steammultiblocks}"]
+			dependencies: [
+				"59BDE76B679AB4CC"
+				"556AA8E08D2B8E82"
+			]
+			description: ["{gravitas.quest.steam.desc.steamgrinder}"]
 			id: "2D510A0E786AB46E"
 			optional: true
 			rewards: [{
@@ -976,49 +948,24 @@
 			}]
 			tasks: [
 				{
-					id: "63E2276B323580AE"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:steam_grinder"
-								}
-								{
-									Count: 1b
-									id: "gtceu:steam_oven"
-								}
-							]
-						}
-					}
+					id: "152B954D6A92F4C5"
+					item: "gtceu:steam_grinder"
 					type: "item"
 				}
 				{
-					id: "31D80C62A94D0619"
+					id: "74C7099D420D65E8"
 					item: "gtceu:steam_input_hatch"
 					type: "item"
 				}
-				{
-					id: "289155023AF3D43D"
-					item: "gtceu:steam_input_bus"
-					type: "item"
-				}
-				{
-					id: "4419099246C6CF0A"
-					item: "gtceu:steam_output_bus"
-					type: "item"
-				}
 			]
-			title: "{gravitas.quest.steam.steammultiblocks}"
-			x: 8.5d
-			y: -5.5d
+			x: 7.5d
+			y: -4.5d
 		}
 		{
 			dependencies: ["09C2B236014FC094"]
 			description: ["{gravitas.quest.steam.desc.mining_hammer}"]
 			id: "1D3EE99667998CEE"
+			optional: true
 			shape: "rsquare"
 			subtitle: "{gravitas.quest.steam.subt.mining_hammer}"
 			tasks: [{
@@ -1033,8 +980,80 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.steam.mining_hammer}"
-			x: 1.5d
-			y: 1.5d
+			x: 4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["34FF68125977821B"]
+			id: "5EE49592E821DE29"
+			subtitle: "{gravitas.quest.steam.subt.furnace}"
+			tasks: [{
+				id: "5F3DEF2888775792"
+				item: "gtceu:lp_steam_furnace"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"5EE49592E821DE29"
+				"556AA8E08D2B8E82"
+			]
+			description: ["{gravitas.quest.steam.desc.steamoven}"]
+			icon: "gtceu:steam_oven"
+			id: "7E7BA8D5521BD546"
+			optional: true
+			rewards: [{
+				count: 8
+				id: "4C01E2754FDDEF28"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:bronze_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "52AD71705A785083"
+					item: "gtceu:steam_oven"
+					type: "item"
+				}
+				{
+					id: "03484F8C5AE73BAC"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1DD021DEDB46C704"]
+			description: ["{gravitas.quest.steam.desc.ulvbusses}"]
+			id: "556AA8E08D2B8E82"
+			optional: true
+			tasks: [
+				{
+					id: "5230697586A6E85A"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+				{
+					id: "380D8D6E575601DF"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+			]
+			title: "I/O Buses"
+			x: 6.5d
+			y: -3.0d
 		}
 	]
 	title: "{gravitas.chapters.32.title}"
