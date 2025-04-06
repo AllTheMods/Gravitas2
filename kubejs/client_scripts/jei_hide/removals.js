@@ -124,6 +124,10 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('gtceu:lv_extruder')
     event.hide('gtceu:wood_mallet')
 
+    // Vintage Improvements
+    event.hide('vintageimprovements:spring_coiling_machine_wheel')
+    event.hide(/^vintageimprovements:.*_spring/)
+
     // Thorium Reactors
     event.hide('thoriumreactors:generator_block')
     event.hide('thoriumreactors:fluid_evaporation_block')

@@ -9,6 +9,7 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   gtceuAdd(event)
   createAdd(event)
+  coilingTweak(event)
   spaceDustChain(event)
   certusSemiconductors(event)
   gregifyAE2(event)
