@@ -26,9 +26,9 @@ let wiresAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 	})
 	
 	// Import all Gregtech wire -> cable recipes
-    event.forEachRecipe({ mod: 'gtceu', type: 'gtceu:assembler', id: /^gtceu:assembler\/cover_.*_wire_gt_(single|double|quadruple|octal|hex)_(rubber|silicone|styrene_butadiene)/}, (recipe) => {
+	event.forEachRecipe({ mod: 'gtceu', type: 'gtceu:assembler', id: /^gtceu:assembler\/cover_.*_wire_gt_(single|double|quadruple|octal|hex)_(rubber|silicone|styrene_butadiene)/}, (recipe) => {
 		// UGLY HACKS are used here to wrangle Gregtech recipes
-        let recipe_json = JSON.parse(recipe.json)
+		let recipe_json = JSON.parse(recipe.json)
 		
 		let input_fluid = recipe_json.inputs.fluid[0].content
 		let output_cable = recipe_json.outputs.item[0].content.ingredient
