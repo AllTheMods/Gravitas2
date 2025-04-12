@@ -75,6 +75,10 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:coke")
     event.hide(`/^immersiveengineering:.*hemp_seed.*/`)
 
+    //ID
+    event.hide("integrateddynamics:squeezer")
+    event.hide("integrateddynamics:mechanical_squeezer")
+
     //ATM
     event.hide("allthemodium:teleport_pad")
 
