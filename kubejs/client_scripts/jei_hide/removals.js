@@ -23,7 +23,7 @@ const toolsToRemove = [
 
 ]
 
-let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
+let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
   oresToRemove.forEach((ore) => {
     event.hide(`potionsmaster:${ore}_powder`)
     event.hide(`potionsmaster:calcinated${ore}_powder`)

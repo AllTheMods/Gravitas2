@@ -1080,19 +1080,25 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "minecraft:fire_charge",
     F: "tfc:crucible"
   })
+  //Railcraft End
 
   shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "#forge:chests/wooden"
   })
-
   shaped("framedblocks:framed_secret_storage", ["RFR", "FCF", "RFR"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "framedblocks:framed_chest"
   })
-  //Railcraft End
+  // Blocks needed for schematicannon
+  shaped("framedblocks:framed_double_slab", ["S", "S"], {
+    S: "framedblocks:framed_slab"
+  })
+  shaped("framedblocks:framed_double_panel", ["PP"], {
+    P: "framedblocks:framed_panel"
+  })
 
   //ThoriumReactors Start
   event.recipes.gtceu
