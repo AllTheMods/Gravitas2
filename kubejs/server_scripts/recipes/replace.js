@@ -248,6 +248,37 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ mod: "createdeco"}, "create:ochrum", "tfc:rock/raw/claystone")
   event.replaceInput({ mod: "createdeco"}, "create:brass_block", "#forge:storage_blocks/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_block", "#forge:storage_blocks/zinc")
+
+  event
+    .custom({
+      type: "create:compacting",
+      ingredients: [
+        {
+          item: "tfc:raw_iron_bloom"
+        },
+      ],
+      results: [
+        {
+          item: "tfc:refined_iron_bloom"
+        }
+      ],
+      heatRequirement: "superheated"
+    })
+  event
+    .custom({
+      type: "create:compacting",
+      ingredients: [
+        {
+          item: "tfc:refined_iron_bloom"
+        },
+      ],
+      results: [
+        {
+          item: "gtceu:wrought_iron_ingot"
+        }
+      ],
+      heatRequirement: "superheated"
+    })
   
 //honey
 

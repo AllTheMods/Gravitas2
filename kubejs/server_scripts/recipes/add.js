@@ -614,30 +614,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       S: 'gtceu:saltpeter_dust'
     }
   )
-  event.recipes.create.pressing(
-    [{ item: "tfc:refined_iron_bloom" }],
-    [
-      {
-        type: "tfc:heatable",
-        min_temp: 921,
-        ingredient: {
-          item: "tfc:raw_iron_bloom"
-        }
-      }
-    ]
-  )
-  event.recipes.create.pressing(
-    [{ item: "gtceu:wrought_iron_ingot" }],
-    [
-      {
-        type: "tfc:heatable",
-        min_temp: 921,
-        ingredient: {
-          item: "tfc:refined_iron_bloom"
-        }
-      }
-    ]
-  )
   event.custom({
     type: "create:deploying",
     ingredients: [
