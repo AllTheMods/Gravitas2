@@ -371,6 +371,25 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
+                    fluid: 'tfc:salt_water',
+                    nbt: {},
+                    amount: 1000
+                },
+            ],
+            results: [
+                {
+                    item: 'gtceu:salt_dust',
+                    count: 1
+                }
+            ],
+            heatRequirement: "heated"
+        }
+    )
+    event.custom(
+        {
+            type: 'create:mixing',
+            ingredients: [
+                {
                     fluid: 'minecraft:water',
                     nbt: {},
                     amount: 1000
