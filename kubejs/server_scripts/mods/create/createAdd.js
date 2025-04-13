@@ -385,6 +385,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             heatRequirement: "heated"
         }
     )
+
     event.custom(
         {
             type: 'create:mixing',
@@ -644,8 +645,11 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     addMoldChiselDeploying("create:andesite_alloy", "tfc:ceramic/ingot_mold", 0.1, "gregitas_core:igneous_alloy", 144)
     tfcSaplings.forEach(wood => {
         event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
-        event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
-        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_log/${wood}`, 150)
+        event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`, 50)
+        event.recipes.create.cutting([`tfc:wood/stripped_wood/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/wood/${wood}`, 50)
+        event.recipes.create.cutting(`4x tfc:wood/support/${wood}`, `tfc:wood/stripped_log/${wood}`, 150)
+        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/wood/${wood}`, 150)
+        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_wood/${wood}`, 150)
     })
     event.recipes.create.cutting(["2x immersiveengineering:slab_treated_wood_horizontal"], "gtceu:treated_wood_planks", 150)
 
