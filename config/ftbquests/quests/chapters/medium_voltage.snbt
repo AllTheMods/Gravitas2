@@ -711,6 +711,7 @@
 			dependencies: ["262AE37765B139BE"]
 			description: ["Also makes those magnetic iron rods for just some energy - save your redstone!"]
 			id: "1BD5B25B80EC0F97"
+			optional: true
 			rewards: [{
 				count: 2
 				id: "46C552EDE88FDAF3"
@@ -781,24 +782,6 @@
 			title: "{gravitas.quest.mv.title.extruder_molds}"
 			x: 0.0d
 			y: -3.0d
-		}
-		{
-			dependencies: ["1BD5B25B80EC0F97"]
-			description: ["You'll need these for MV Electric Motors, a component for many MV machines"]
-			id: "497028C92F886AE0"
-			rewards: [{
-				id: "7A94DDAC0325A87A"
-				item: "gtceu:magnetic_steel_rod"
-				random_bonus: 2
-				type: "item"
-			}]
-			tasks: [{
-				id: "638FE467700933F2"
-				item: "gtceu:magnetic_steel_rod"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 3.0d
 		}
 		{
 			dependencies: ["72DACA35906D7E5B"]
@@ -1131,7 +1114,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["262AE37765B139BE"]
+			dependencies: ["6A82827978D3483B"]
 			description: ["{gravitas.quest.mv.desc.greenhouse}"]
 			id: "17B205E2864BF572"
 			optional: true
@@ -1140,8 +1123,8 @@
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 9.0d
+			x: 3.0d
+			y: 4.5d
 		}
 	]
 	title: "{gravitas.chapters.17.title}"

@@ -1178,7 +1178,7 @@
     "gravitas.quest.mv.title.raw_oil": "Oil",
     "gravitas.quest.mv.title.extruder_molds": "Extruder Molds",
     "gravitas.quest.mv.title.brewery": "Brewery",
-    "gravitas.quest.mv.title.pre_ethylene": "Now you can Make",
+    "gravitas.quest.mv.title.pre_ethylene": "Ethylene Time!",
     "gravitas.quest.mv.title.integrated_circuits": "Advanced Integrated Circuit",
     "gravitas.quest.mv.title.gems": "Ruby and Emerald",
 
@@ -1191,7 +1191,7 @@
     "gravitas.quest.mv.subtitle.sulfur_acid": "Just add water!",
     "gravitas.quest.mv.subtitle.brewery": "Not that kind of brewery",
     "gravitas.quest.mv.subtitle.ethanol": "Not for drinking",
-    "gravitas.quest.mv.subtitle.pre_ethylene": "Are you ready for getting ethylene",
+    "gravitas.quest.mv.subtitle.pre_ethylene": "Me when it's ethylene time",
     "gravitas.quest.mv.subtitle.polyethylene": "Even more oxygen",
     "gravitas.quest.mv.subtitle.advance_assembler": "Greggers, ASSEMBLE!",
     "gravitas.quest.mv.subtitle.integrated_circuits": "A new era",
