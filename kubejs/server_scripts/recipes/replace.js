@@ -130,6 +130,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/cobble/quartzite", "tfc:rock/raw/quartzite")
 
+  event.replaceOutput([{id: "woodencog:crushing/crushing_saltpeter"}, {id: "woodencog:crushing/milling_saltpeter"}], "gtceu:saltpeter_dust", "tfc:powder/saltpeter")
+  event.remove("tfc:quern/saltpeter")
+
   //Functional Storage
   event.replaceInput(
     { id: "functionalstorage:framed_storage_controller" },
