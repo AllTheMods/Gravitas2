@@ -659,6 +659,13 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('gtceu:distilled_water', 100)])
     event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('gtceu:distilled_water', 100)])
 
+    // Fire clay knapping automation
+    // Player will need to use recipe filter
+    event.recipes.create.compacting('tfc:ceramic/unfired_crucible', '5x tfc:fire_clay')
+    event.recipes.create.compacting('tfcchannelcasting:unfired_mold_table', '5x tfc:fire_clay')
+    event.recipes.create.compacting('4x tfcchannelcasting:unfired_channel', '5x tfc:fire_clay')
+    event.recipes.create.compacting('2x tfc:ceramic/unfired_fire_ingot_mold', '5x tfc:fire_clay')
+
     // TFC metallurgy
     event.recipes.create.sequenced_assembly('tfc:metal/ingot/high_carbon_steel', 'tfc:metal/ingot/pig_iron', 
         event.recipes.create.pressing('tfc:metal/ingot/pig_iron', 'tfc:metal/ingot/pig_iron')
