@@ -249,6 +249,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "railcraft", id: `/^railcraft:.*coke.*/`})
   event.remove({ mod: "railcraft", id: `/^railcraft:crusher\/.*cobbleston.*/`})
   event.remove({ id: "railcraft:invar_ingot_crafted_with_ingots"})
+  event.remove({ id: "railcraft:steel_anvil"})
   //Woodencog
   event.remove({ id: /^woodencog:cutting\/.*_rod/, mod: "woodencog" })
   event.remove({ id: /^woodencog:cutting\/.*_alloy/, mod: "woodencog" })
