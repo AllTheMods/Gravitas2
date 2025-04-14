@@ -168,6 +168,11 @@ const ice = ["blue", "white", "sapphire", "silver"]
 const lightning = ["electric", "amethyst", "copper", "black"]
 
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
+  // Global remove + hides
+  global.itemsToRemove.forEach(item => event.removeAllTagsFrom(item))
+  global.fluidsToRemove.forEach(item => event.removeAllTagsFrom(item))
+  global.fluidsWithBucketsToRemove.forEach(item => event.removeAllTagsFrom(item))
+
   fire.forEach((color) => {
     event.add("gregitas:eggs/dragon/fire", `iceandfire:dragonegg_${color}`)
   })

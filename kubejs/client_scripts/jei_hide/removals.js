@@ -164,4 +164,18 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     // Jumbo Furnace
     event.hide('jumbofurnace:jumbo_furnace')
+
+    // AllTheTweaks
+    // Later unhide ender pearl + nether star block
+    event.hide(`/^allthetweaks:.*/`)
+
+    // Global remove + hides
+    global.itemsToRemove.forEach(item => event.hide(item))
+    global.fluidsWithBucketsToRemove.forEach(item => event.hide(item + "_bucket"))
+}
+
+
+let hideFluids = (/** @type {Internal.HideJEIEventJS}*/ event) => {
+  global.fluidsToRemove.forEach(item => event.hide(item))
+  global.fluidsWithBucketsToRemove.forEach(item => event.hide(item))
 }

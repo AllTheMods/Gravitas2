@@ -11,6 +11,10 @@ JEIEvents.hideItems(event => {
   hideItems(event)
 })
 
+JEIEvents.hideFluids(event => {
+  hideFluids(event)
+})
+
 JEIEvents.removeCategories(event => {
   hideCats(event)
 })

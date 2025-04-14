@@ -21,6 +21,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   // After adding mods, use this to update client_scripts/recipe_categories:
   // logRecipeCategories();
 
+  // Global remove + hides
+  global.itemsToRemove.forEach(item => event.remove({output: item}))
+  // Create bucket filling
+  global.fluidsWithBucketsToRemove.forEach(item => event.remove({input: item}))
+
   event.remove({ id: "tfc:crafting/bloomery" })
   event.remove({ id: "computercraft:computer_normal" })
   event.remove({ id: "computercraft:computer_advanced_upgrade" })
@@ -31,6 +36,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "computercraft:wireless_modem_normal" })
   event.remove({ id: "computercraft:wireless_modem_advanced"})
   event.remove({ id: "vintageimprovements:curving/iron_sheet"})
+  event.remove({ id: "vintageimprovements:rolling/andesite_plate"})
+  event.remove({ id: "vintageimprovements:pressing/andesite_alloy"})
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:cutter/cut_glass_block_to_plate_water"})
@@ -315,6 +322,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "immersiveengineering:crafting/craftingtable"})
   event.remove({ id: "immersiveengineering:crafting/workbench"})
   event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
+  event.remove({ id: "createaddition:pressing/constantan_ingot"})
+  event.remove({output: `/^immersiveengineering:plate_.*/`, input: "immersiveengineering:wirecutter"})
   
 
   //Firmalife
