@@ -146,6 +146,8 @@
     "gravitas.quest.stage2.gemd": "Gem Dusts",
 	"gravitas.quest.stage2.files": "Files",
     "gravitas.quest.stage2.greg": "GregTech - Steam Age",
+	"gravitas.quest.stage2.graphite_ore_path": "Option 1: Graphite Ore",
+	"gravitas.quest.stage2.graphite_coke_path": "Option 2: Coke",
 
     "gravitas.quest.stage2.desc.start": "Tin is going to be the first ore we want to find, since it allows us to create &6Bronze&r, needed for the next tier Anvil and &4&lGregTech&r.\\n\\nCassiterite is the most common tin ore, now would be a good time to tell you to &c&lCHECK JEI&r on greg ores, since they have vein info.",
     "gravitas.quest.stage2.desc.zn": "Zinc, most commonly found in &bSphalerite&r, is needed to get started with create. This one's a little harder to find, but as always, check the &6TFC Guidebook&r.",
@@ -153,7 +155,7 @@
     "gravitas.quest.stage2.desc.file": "At the end of this questline you need Steel Screws. Don't &oscrew&r yourself over by not making this, and later having to come back and make more Bronze.",
     "gravitas.quest.stage2.desc.kaolin": "This clay is a nightmare to get, sometimes taking over &c10K Blocks&r of travel.\\n\\nIt is located &lVERY&r far southeast, in rainforests. Check the temp and rainfall stats in your inventory as you explore, you need at least 18C avg temps and 300mm yearly rainfall.\\n\\nPlease tell me you brought a Waystone...",
     "gravitas.quest.stage2.desc.kaolinp": "Smelt kaolin clay down in your charcoal forge for 20%% of it to become powder. Use &6Create Bulk Blasting&r for 100%% conversion.",
-    "gravitas.quest.stage2.desc.graph": "Throw Graphite into the Millstone",
+    "gravitas.quest.stage2.desc.graph": "You have 2 options...",
     "gravitas.quest.stage2.desc.igneousd": "Crush some Igneous Extrusive rocks, like &bBasalt&r, to get Igneous dust. Combine with small zinc dust for igneous alloy dust!",
     "gravitas.quest.stage2.desc.wroughtp": "20 is how many you need for the Blast Furnace, you'll need more for other stuff like the Encased Fan.",
     "gravitas.quest.stage2.desc.bloomery": "I'm guessing you have encountered &osome&r form of iron while mining, whether it be &blimonite&r, &bmagnetite&r, &bhematite&r, or some other form of it. Those smelt down into cast iron, but we want the much stronger &cWrought Iron&r, for this we need to build the bloomery, check the details in the &6TFC Guidebook&r.",
@@ -168,6 +170,9 @@
     "gravitas.quest.stage2.desc.fireClay": "A much stronger Clay that is used for Crucibles, unbreakable molds, and multiblocks",
     "gravitas.quest.stage2.desc.wrought_nugget": "Wrought iron just got a lot less tedious! &bJust smelt purified iron nuggets.&r \\n\\nYou'll need a GregTech compressor or alloy smelter to make them into ingots.",
     "gravitas.quest.stage2.desc.iron_nugget": "Craft these using a saw. \\n\\nSmelt them and see what happens...",
+    "gravitas.quest.stage2.desc.graphite": "Finding graphite ore in the world can be a pain to find since it spawns so low. You have two options to get graphite. If you haven't already found it, consider making a coke oven rather than searching for the ore.",
+    "gravitas.quest.stage2.desc.graphite_ore_path": "The first way of getting graphite is simple. Just mill or crush graphite ore! This relies on you FINDING Graphite Ore first, which can be very time-consuming.",
+    "gravitas.quest.stage2.desc.graphite_coke_path": "If you can't find graphite ore, you can use a coke oven instead! This can take a while, but it might be easier than hoping you find some graphite ore.",
 
     "gravitas.quest.stage2.subt.doublebronze": "Same deal as Copper Anvil",
     "gravitas.quest.stage2.subt.file": "You'll regret ignoring this",
