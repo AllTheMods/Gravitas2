@@ -78,6 +78,7 @@ const tfcShipTypes = [
 ]
 let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
+  event.replaceInput({ id: "minecraft:writable_book" }, "minecraft:ink_sac", "minecraft:black_dye")
 
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:anvil", "tfc:metal/anvil/wrought_iron")
@@ -121,12 +122,16 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.forEachRecipe({id: "woodencog:crafting/kinetics/fluid_tank"}, r => {
     event.recipes.kubejs.shaped("create:fluid_tank", r.json.asMap().pattern, r.json.asMap().key).replaceIngredient("#tfc:barrels", Item.empty).id(r.getId())
   })
+  event.replaceInput({id: "create_connected:crafting/kinetics/fluid_vessel"}, "minecraft:barrel", "#tfc:barrels")
   event.forEachRecipe({id: "woodencog:crafting/sequenced_assembly/track"}, r => {
     let modifiedResult = unwrapValue(r.get("results"))[0].get("item")
     modifiedResult = Item.of(modifiedResult, 6)
     r.results(modifiedResult)
   })
 event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/cobble/quartzite", "tfc:rock/raw/quartzite")
+
+  event.replaceOutput([{id: "woodencog:crushing/crushing_saltpeter"}, {id: "woodencog:crushing/milling_saltpeter"}], "gtceu:saltpeter_dust", "tfc:powder/saltpeter")
+  event.remove("tfc:quern/saltpeter")
 
   //Functional Storage
   event.replaceInput(
@@ -210,6 +215,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ id: "iceandfire:dragon_meal"}, "#iceandfire:dragon_food_meat", "#tfc:foods/meats")
   event.replaceInput({ id: "woodencog:crafting/schematics/schematicannon"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
   event.replaceInput({ id: "create:haunting/poisonous_potato"}, "minecraft:potato", "tfc:food/potato")
+  event.replaceInput({ id: "create:haunting/glow_ink_sac" }, "minecraft:ink_sac", "minecraft:black_dye")
   event.replaceOutput({ id: `/^gtceu:smelting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceOutput({ id: `/^gtceu:blasting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceOutput({ id: `/^minecraft:iron_ingot_from_.*/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
@@ -242,6 +248,37 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ mod: "createdeco"}, "create:ochrum", "tfc:rock/raw/claystone")
   event.replaceInput({ mod: "createdeco"}, "create:brass_block", "#forge:storage_blocks/brass")
   event.replaceInput({ mod: "createdeco"}, "create:zinc_block", "#forge:storage_blocks/zinc")
+
+  event
+    .custom({
+      type: "create:compacting",
+      ingredients: [
+        {
+          item: "tfc:raw_iron_bloom"
+        },
+      ],
+      results: [
+        {
+          item: "tfc:refined_iron_bloom"
+        }
+      ],
+      heatRequirement: "superheated"
+    })
+  event
+    .custom({
+      type: "create:compacting",
+      ingredients: [
+        {
+          item: "tfc:refined_iron_bloom"
+        },
+      ],
+      results: [
+        {
+          item: "gtceu:wrought_iron_ingot"
+        }
+      ],
+      heatRequirement: "superheated"
+    })
   
 //honey
 

@@ -584,7 +584,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .damageIngredient(["#forge:tools"])
   event.recipes.kubejs
     .shaped("3x gtceu:compressed_coke_clay", ["CCC", "SFS", "SSS"], {
-      C: "tfc:fire_clay",
+      C: "minecraft:clay_ball",
       S: "#forge:sand",
       F: "gtceu:brick_wooden_form"
     })
@@ -1532,7 +1532,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(60)
     .EUt(LV)
 
-  //wrought iron anvil
+  // anvils
 
   event.recipes.gtceu
     .fluid_solidifier("gregitas:wrought_iron_anvil")
@@ -1541,6 +1541,14 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("tfc:metal/anvil/wrought_iron")
     .duration(400)
     .EUt(LV)
+
+  event.recipes.gtceu
+    .fluid_solidifier("gregitas:steel_anvil")
+    .notConsumable("gtceu:anvil_casting_mold")
+    .inputFluids(Fluid.of("gtceu:steel", 2016))
+    .itemOutputs("railcraft:steel_anvil")
+    .duration(400)
+    .EUt(MV)
 
   //amethyst conversion (cut amethyst only has 1 source as of adding, from tfc ore)
 

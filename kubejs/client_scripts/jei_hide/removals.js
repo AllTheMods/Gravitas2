@@ -23,7 +23,7 @@ const toolsToRemove = [
 
 ]
 
-let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
+let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
   oresToRemove.forEach((ore) => {
     event.hide(`potionsmaster:${ore}_powder`)
     event.hide(`potionsmaster:calcinated${ore}_powder`)
@@ -74,6 +74,10 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:dust_coke")
     event.hide("immersiveengineering:coke")
     event.hide(`/^immersiveengineering:.*hemp_seed.*/`)
+
+    //ID
+    event.hide("integrateddynamics:squeezer")
+    event.hide("integrateddynamics:mechanical_squeezer")
 
     //ATM
     event.hide("allthemodium:teleport_pad")
@@ -160,4 +164,18 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     // Jumbo Furnace
     event.hide('jumbofurnace:jumbo_furnace')
+
+    // AllTheTweaks
+    // Later unhide ender pearl + nether star block
+    event.hide(`/^allthetweaks:.*/`)
+
+    // Global remove + hides
+    global.itemsToRemove.forEach(item => event.hide(item))
+    global.fluidsWithBucketsToRemove.forEach(item => event.hide(item + "_bucket"))
+}
+
+
+let hideFluids = (/** @type {Internal.HideJEIEventJS}*/ event) => {
+  global.fluidsToRemove.forEach(item => event.hide(item))
+  global.fluidsWithBucketsToRemove.forEach(item => event.hide(item))
 }

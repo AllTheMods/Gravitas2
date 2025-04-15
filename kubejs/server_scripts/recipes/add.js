@@ -603,29 +603,16 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   event.shapeless("2x minecraft:blaze_powder", ["#forge:tools/mortars", "minecraft:blaze_rod"])
   event.shapeless("1x gtceu:saltpeter_dust", ["4x tfc:powder/saltpeter"])
-  event.recipes.create.pressing(
-    [{ item: "tfc:refined_iron_bloom" }],
+  event.shaped(
+    'tfc:powder/saltpeter',
     [
-      {
-        type: "tfc:heatable",
-        min_temp: 921,
-        ingredient: {
-          item: "tfc:raw_iron_bloom"
-        }
-      }
-    ]
-  )
-  event.recipes.create.pressing(
-    [{ item: "gtceu:wrought_iron_ingot" }],
-    [
-      {
-        type: "tfc:heatable",
-        min_temp: 921,
-        ingredient: {
-          item: "tfc:refined_iron_bloom"
-        }
-      }
-    ]
+      '  S',
+      '   ',
+      '   ',
+    ],
+    {
+      S: 'gtceu:saltpeter_dust'
+    }
   )
   event.custom({
     type: "create:deploying",
@@ -1080,19 +1067,25 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "minecraft:fire_charge",
     F: "tfc:crucible"
   })
+  //Railcraft End
 
   shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "#forge:chests/wooden"
   })
-
   shaped("framedblocks:framed_secret_storage", ["RFR", "FCF", "RFR"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "framedblocks:framed_chest"
   })
-  //Railcraft End
+  // Blocks needed for schematicannon
+  shaped("framedblocks:framed_double_slab", ["S", "S"], {
+    S: "framedblocks:framed_slab"
+  })
+  shaped("framedblocks:framed_double_panel", ["PP"], {
+    P: "framedblocks:framed_panel"
+  })
 
   //ThoriumReactors Start
   event.recipes.gtceu
