@@ -10,6 +10,7 @@ ServerEvents.recipes((event) => {
   gtceuAdd(event)
   createAdd(event)
   centrifugeAdd(event)
+  wiresAdd(event)
   coilingTweak(event)
   pressurizedBasinAdd(event)
   spaceDustChain(event)
