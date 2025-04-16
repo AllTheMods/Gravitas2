@@ -1930,7 +1930,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
     event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
   }
-
+// railways locometal
+event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
   //TFC Jars
   event.recipes.gtceu
     .alloy_smelter("empty_jar")
@@ -2136,7 +2137,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(40)
       .EUt(LV)
   })
+ // tfc plant dyes
 
+ dyes.forEach((dye) => {
+  event.recipes.create.crushing([`2x minecraft:${dye}_dye`], `#tfc:makes_${dye}_dye`, 250)
+
+  event.recipes.gtceu
+    .macerator(`gregitas:macerator_tfc_${dye}_dye`)
+    .itemInputs(`#tfc:makes_${dye}_dye`)
+    .itemOutputs(`2x minecraft:${dye}_dye`)
+    .duration(20)
+    .EUt(LV)
+})
   //tfc liquid dyes
 
   dyes.forEach((dyes) => {
@@ -2790,8 +2802,203 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(128)
 
+    event.recipes.gtceu
+    .centrifuge("gregitas:centrifuged_kapok_log")
+    .itemInputs("tfc:wood/log/kapok")
+    .chancedOutput("gtceu:sticky_resin", 5000, 1)
+    .chancedOutput("gtceu:plant_ball", 3750, 1)
+    .chancedOutput("gtceu:carbon_dust", 2500, 1)
+    .chancedOutput("gtceu:wood_dust", 2500, 1)
+    .outputFluids(Fluid.of("gtceu:methane", 60))
+    .duration(200)
+    .EUt(20)
+
+  //Sophisticated Backpacks
+  shaped("sophisticatedbackpacks:tool_swapper_upgrade", ["BFB", "CGD", "AEA"], {
+    A: "#forge:ingots/iron",
+    B: "#forge:dusts/redstone",
+    G: "sophisticatedbackpacks:upgrade_base",
+    C: Item.of("tfc:metal/pickaxe/copper", '{Damage:0}'),
+    D: Item.of("tfc:metal/axe/copper", '{Damage:0}'),
+    E: Item.of("tfc:metal/shovel/copper", '{Damage:0}'),
+    F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
+  }).id("gregitas:tool_swapper_upgrade")
+
+   //Firmalife
+  event.replaceInput(
+    { id: 'firmalife:crafting/solar_drier' },
+    'firmalife:metal/rod/stainless_steel',
+    '#forge:rods/aluminium'
+  )
+
+  event.recipes.gtceu
+  .assembler("gregitas:industrial_gears")
+  .itemInputs("gtceu:small_bronze_gear", "gtceu:small_iron_gear", "gtceu:aluminium_rod")
+  .inputFluids(Fluid.of("gtceu:soldering_alloy", 50))
+  .itemOutputs("immersive_aircraft:industrial_gears")
+  .duration(160)
+  .EUt(MV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:steel_boiler")
+    .itemInputs("7x gtceu:steel_plate", "immersive_aircraft:boiler", "railcraft:solid_fueled_firebox")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:steel_boiler")
+    .duration(360)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:sturdy_pipes")
+    .itemInputs("3x gtceu:bronze_normal_fluid_pipe", "2x gtceu:steel_plate")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:sturdy_pipes")
+    .duration(260)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:air_hull")
+    .itemInputs("12x gtceu:stainless_steel_screw", "4x #tfc:lumber", "3x gtceu:aluminium_rod")
+    .itemOutputs("immersive_aircraft:hull")
+    .duration(160)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:landing_gear")
+    .itemInputs("4x gtceu:stainless_steel_screw", "2x gtceu:steel_minecart_wheels", "3x gtceu:aluminium_rod", "2x gtceu:rubber_sheet")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:improved_landing_gear")
+    .duration(260)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:hull_reinforcement")
+    .itemInputs("3x immersive_aircraft:hull", "6x gtceu:stainless_steel_plate", "32x gtceu:stainless_steel_screw", "2x gtceu:rubber_sheet")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:hull_reinforcement")
+    .duration(260)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:gyroscope")
+    .itemInputs("3x minecraft:redstone_comparator", "firmaciv:firmaciv_compass", "firmaciv:nav_clock", "firmaciv:sextant", "2x gtceu:aluminium_plate")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:gyroscope")
+    .duration(220)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:engine")
+    .itemInputs("2x createdieselgenerators:engine_piston", "gregitas:double_aluminium_ingot", "4x gtceu:aluminium_gear", "2x gtceu:copper_single_wire", "immersive_aircraft:steel_boiler", "gtceu:steel_rod")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:engine")
+    .duration(420)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:boiler")
+    .itemInputs("7x gtceu:bronze_plate", "tfc:crucible")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:boiler")
+    .duration(220)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:tunnel_digger")
+    .itemInputs("7x gtceu:bronze_plate", "6x gtceu:steel_frame", "4x immersive_aircraft:industrial_gears", "immersive_aircraft:engine", "12x gtceu:steel_minecart_wheels", "8x immersiveengineering:conveyor_basic", "immersive_machinery:iron_drill")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 500))
+    .itemOutputs("immersive_machinery:tunnel_digger")
+    .duration(420)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:rotary_cannon")
+    .itemInputs("scguns:rapid_firing_unit", "4x scguns:gun_barrel", "scguns:heavy_gun_parts", "scguns:gun_magazine", "scguns:treated_brass_gun_frame", "create:metal_bracket","create:mechanical_bearing")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:rotary_cannon")
+    .duration(320)
+    .EUt(MV)
 
 
+    event.recipes.gtceu
+    .assembler("gregitas:copperfin")
+    .itemInputs("immersive_aircraft:engine", "6x firmalife:reinforced_glass", "create:propeller", "create:copper_backtank", "4x #forge:plates/copper", "minecraft:conduit")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 1000))
+    .itemOutputs("immersive_machinery:copperfin")
+    .duration(320)
+    .EUt(MV)
+
+    shaped("minecraft:conduit", ["III", "IGI", "III"], {
+      I: "enderio:conduit_binder",
+      G: "create:propeller"
+    })
+
+    event.recipes.gtceu
+    .assembler("gregitas:quadrocopter")
+    .itemInputs("4x gtceu:lv_electric_motor", "8x minecraft:bamboo", "4x create:propeller", "4x minecraft:redstone_comparator")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 1000))
+    .itemOutputs("immersive_aircraft:quadrocopter")
+    .duration(420)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:biplane")
+    .itemInputs("immersive_aircraft:engine", "3x immersive_aircraft:hull", "create:propeller", "minecraft:lever")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:biplane")
+    .duration(420)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:airship")
+    .itemInputs("immersive_aircraft:engine", "6x immersive_aircraft:hull", "create:propeller", "6x immersive_aircraft:sail")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:airship")
+    .duration(320)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:cargo_airship")
+    .itemInputs("immersive_aircraft:engine", "6x immersive_aircraft:hull", "create:propeller", "6x immersive_aircraft:sail", "4x #forge:chests/wooden")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:cargo_airship")
+    .duration(360)
+    .EUt(MV)  
+
+    event.recipes.gtceu
+    .assembler("gregitas:warship")
+    .itemInputs("4x immersive_aircraft:engine", "9x immersive_aircraft:hull", "4x create:propeller", "12x immersive_aircraft:sail", "4x #forge:chests/wooden")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:warship")
+    .duration(420)
+    .EUt(MV)  
+
+    event.recipes.gtceu
+    .assembler("gregitas:crossbow")
+    .itemInputs("minecraft:crossbow","create:metal_bracket","create:mechanical_bearing")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:heavy_crossbow")
+    .duration(160)
+    .EUt(MV)  
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:bomb_bay")
+    .itemInputs("4x create:mechanical_bearing","2x create:metal_bracket", "6x gtceu:steel_plate", "minecraft:tripwire_hook")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:bomb_bay")
+    .duration(260)
+    .EUt(MV)  
+
+    shaped("headlight:headlight", [" I ", "LPL", "S S"], {
+      I: "minecraft:item_frame",
+      L: "#forge:leather",
+      P: "tfc:wool_cloth",
+      S: "minecraft:string"
+    })
+    
     //LaserIO
     event.recipes.gtceu
       .chemical_reactor("gregitas:logic_chip_raw")
