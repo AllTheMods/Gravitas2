@@ -582,4 +582,43 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "laserio:filter_mod" })
   event.remove({ id: "laserio:filter_tag" })
   event.remove({ id: "laserio:filter_count" })
+
+  //Sophisticated Backpacks
+  event.remove({ id: "sophisticatedbackpacks:tool_swapper_upgrade" })
+
+  //piston fixes
+  event.remove({ id: "minecraft:piston" })
+  event.remove({ id: /^gtceu:shaped\/piston.*/ })
+
+  //immersive aircraft and simpleplanes tweaks
+
+  event.remove({ id: "immersive_aircraft:hull" })
+  event.remove({ id: "immersive_aircraft:engine" })
+  event.remove({ id: "immersive_aircraft:boiler" })
+  event.remove({ id: "simpleplanes:propeller" })
+  event.remove({ id: "immersive_aircraft:propeller" })
+  event.remove({ id: "immersive_aircraft:airship"})
+  event.remove({ id: "immersive_aircraft:cargo_airship"})
+  event.remove({ id: "immersive_aircraft:warship"})
+  event.remove({ id: "immersive_aircraft:biplane"})
+  event.remove({ id: "immersive_aircraft:gyrodyne"})
+  event.remove({ id: "immersive_aircraft:quadrocopter"})
+  event.remove({ id: "immersive_aircraft:rotary_cannon"})
+  event.remove({ id: "immersive_aircraft:heavy_crossbow"})
+  event.remove({ id: "immersive_aircraft:bomb_bay"})
+  event.remove({ id: "immersive_aircraft:eco_engine"})
+  event.remove({ id: "immersive_aircraft:nether_engine"})
+  event.remove({ id: "immersive_aircraft:steel_boiler"})
+  event.remove({ id: "immersive_aircraft:industrial_gears"})
+  event.remove({ id: "immersive_aircraft:sturdy_pipes"})
+  event.remove({ id: "immersive_aircraft:hull_reinforcement"})
+  event.remove({ id: "immersive_aircraft:gyroscope"})
+  event.remove({ id: "immersive_aircraft:improved_landing_gear"})
+  event.remove({ id: "railcraft:tunnel_bore"})
+  event.remove({ id: "immersive_machinery:tunnel_digger"})
+  event.remove({ id: "immersive_machinery:copperfin" })
+  event.remove({ id: "minecraft:conduit" })
+  event.remove({ id: "minecraft:crossbow" })
+  event.remove({ id: "headlight:headlight"})
+  event.remove({ id: "buildinggadgets2:gadget_cut_paste"})
 }
