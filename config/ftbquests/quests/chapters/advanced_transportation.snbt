@@ -399,7 +399,7 @@
 			id: "3678D8A20915C39E"
 			rewards: [{
 				id: "6B5733E73B3FAD4F"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				random_bonus: 1
 				type: "item"
 			}]
@@ -417,8 +417,9 @@
 			description: ["{gravitas.quest.adv_transportation.desc.flying_things}"]
 			id: "248B2D085F8A107D"
 			rewards: [{
+				count: 2
 				id: "498E22406D491FBF"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -460,7 +461,7 @@
 			id: "7585C2F4C81CD845"
 			rewards: [{
 				id: "29D969E371750955"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -478,7 +479,7 @@
 			id: "6C38BCC24AEB445A"
 			rewards: [{
 				id: "5F1DC3D970B2BDFC"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -496,7 +497,7 @@
 			id: "42DF0C4C52B62BCE"
 			rewards: [{
 				id: "745D5DF3B5E847B6"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -514,7 +515,7 @@
 			id: "045B36DC70647FC0"
 			rewards: [{
 				id: "1777AC036F8924EB"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -641,7 +642,7 @@
 			id: "52D7BBCAC4974F0F"
 			rewards: [{
 				id: "69D7AF009B6FE4E2"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
@@ -765,7 +766,7 @@
 			id: "53E53114FCA97EBF"
 			rewards: [{
 				id: "16105B983FECE659"
-				item: "simpleplanes:propeller"
+				item: "create:propeller"
 				type: "item"
 			}]
 			tasks: [{
