@@ -108,11 +108,35 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 		S: "#gregitas:any_rubber_or_plastic_thin_sheet"
 	})
 	
+	// Making Create hose and elevator pulleys using Gregtech rubber
+	event.recipes.minecraft.crafting_shaped("create:hose_pulley", [" C ", " S ", " P "], {
+		C: "create:copper_casing",
+		S: "#gregitas:any_rubber_sheet",
+		P: "#forge:plates/copper"
+	})
+
+	event.recipes.minecraft.crafting_shaped("create:elevator_pulley", [" C ", " S ", " P "], {
+		C: "create:brass_casing",
+		S: "#gregitas:any_rubber_sheet",
+		P: "#forge:plates/wrought_iron"
+	})
+	
+	// Making a Create rope pulley using Firmaciv jute rope
+	event.recipes.minecraft.crafting_shaped("create:rope_pulley", [" C ", " S ", " P "], {
+		C: "create:andesite_casing",
+		S: "firmaciv:rope_coil",
+		P: "#forge:plates/wrought_iron"
+	})
+
+	
 	// Making a Create Diesel Generators pumpjack head using Gregtech rubber
 	event.recipes.minecraft.crafting_shaped("createdieselgenerators:pumpjack_head", ["A A", "ZSZ", "A A"], {
 		A: "create:andesite_alloy",
 		Z: "#forge:ingots/zinc",
 		S: "#gregitas:any_rubber_sheet"
 	})
+		
+	// Making a Create encased chain drive using TFC wrought iron chains
+	event.shapeless("create:encased_chain_drive", ["create:andesite_casing", "2x tfc:metal/chain/wrought_iron"])
 
 }
