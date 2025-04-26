@@ -25,8 +25,8 @@
 		{
 			id: "2A071C762008D783"
 			linked_quest: "1D3EE99667998CEE"
-			x: -0.5d
-			y: 4.0d
+			x: 1.5d
+			y: 2.9d
 		}
 	]
 	quests: [
@@ -1463,7 +1463,6 @@
 		}
 		{
 			dependencies: [
-				"7F8C6F7EA5F4CC8F"
 				"66B9834887F40FD2"
 				"0EF7B8AB3859A822"
 			]
@@ -1479,10 +1478,7 @@
 			y: 0.8d
 		}
 		{
-			dependencies: [
-				"679D7B1E110BE18E"
-				"59BCE9D352413724"
-			]
+			dependencies: ["59BCE9D352413724"]
 			id: "66B9834887F40FD2"
 			optional: true
 			tasks: [{
@@ -1494,7 +1490,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["23B745C27A7164B5"]
 			description: [""]
 			id: "0EF7B8AB3859A822"
 			optional: true
@@ -1510,6 +1505,7 @@
 			y: 0.8d
 		}
 		{
+			dependencies: ["3A54F11C48D05800"]
 			hide_dependency_lines: false
 			id: "59BCE9D352413724"
 			optional: true
@@ -1528,6 +1524,18 @@
 			]
 			x: 4.5d
 			y: 2.0d
+		}
+		{
+			dependencies: ["5249B4D0415DBC97"]
+			hide_dependent_lines: true
+			id: "3A54F11C48D05800"
+			tasks: [{
+				id: "2DDF051C64EB5915"
+				item: "gtceu:iron_plate"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -2.5d
 		}
 	]
 	title: "{gravitas.chapters.2.title}"
