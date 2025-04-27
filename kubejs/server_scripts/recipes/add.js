@@ -1067,6 +1067,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "minecraft:fire_charge",
     F: "tfc:crucible"
   })
+  
+  // Replace Railcraft cut firestone recipe
+  // (the original recipe requires vanilla netherite pickaxe, and thus is uncraftable)
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+	  type: "minecraft:crafting_shapeless",
+	  ingredients: [
+	    {item: "minecraft:netherite_ingot"},
+	    {item: "railcraft:raw_firestone"},
+	    {tag: "tfc:chisels"},
+	    {tag: "forge:tools/hammers"}
+	  ],
+      result: {item: "railcraft:cut_firestone"}
+    }
+  }).id('railcraft:cut_firestone')
+
   //Railcraft End
 
   shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
