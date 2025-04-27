@@ -1505,7 +1505,7 @@
 			y: 0.8d
 		}
 		{
-			dependencies: ["3A54F11C48D05800"]
+			description: ["{gravitas.quest.stage2.desc.coke_oven}"]
 			hide_dependency_lines: false
 			id: "59BCE9D352413724"
 			optional: true
@@ -1524,18 +1524,6 @@
 			]
 			x: 4.5d
 			y: 2.0d
-		}
-		{
-			dependencies: ["5249B4D0415DBC97"]
-			hide_dependent_lines: true
-			id: "3A54F11C48D05800"
-			tasks: [{
-				id: "2DDF051C64EB5915"
-				item: "gtceu:iron_plate"
-				type: "item"
-			}]
-			x: 9.5d
-			y: -2.5d
 		}
 	]
 	title: "{gravitas.chapters.2.title}"

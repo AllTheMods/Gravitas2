@@ -171,6 +171,7 @@
     "gravitas.quest.stage2.desc.wrought_nugget": "Wrought iron just got a lot less tedious! &bJust smelt purified iron nuggets.&r \\n\\nYou'll need a GregTech compressor or alloy smelter to make them into ingots.",
     "gravitas.quest.stage2.desc.iron_nugget": "Craft these using a saw. \\n\\nSmelt them and see what happens...",
     "gravitas.quest.stage2.desc.graphite": "Finding graphite ore in the world can be a pain to find since it spawns so low. You have two options to get graphite. If you haven't already found it, consider making a coke oven rather than searching for the ore.",
+    "gravitas.quest.stage2.desc.coke_oven": "This will need purified iron plates! See if you can do it without fire clay - I promise it's possible!",
     "gravitas.quest.stage2.desc.graphite_ore_path": "The first way of getting graphite is simple. Just mill or crush graphite ore! This relies on you FINDING Graphite Ore first, which can be very time-consuming.",
     "gravitas.quest.stage2.desc.graphite_coke_path": "If you can't find graphite ore, you can use a coke oven instead! This can take a while, but it might be easier than hoping you find some graphite ore.",
 
