@@ -1,0 +1,33 @@
+{
+  "type": "thoriumreactors:thorium_crafting",
+  "key": {
+    "A": {
+      "tag": "forge:nuggets/nickel"
+    },
+    "B": {
+      "tag": "forge:ingots/steel"
+    },
+    "C": {
+      "item": "minecraft:redstone"
+    },
+    "D": {
+      "tag": "forge:ingots/iron"
+    },
+    "E": {
+      "item": "thoriumreactors:simple_fluid_tank"
+    },
+    "F": {
+      "tag": "forge:nuggets/niobium"
+    }
+  },
+  "pattern": [
+    " DDD ",
+    " BAB ",
+    " CEC ",
+    " BFB ",
+    " DDD "
+  ],
+  "result": {
+    "item": "thoriumreactors:generic_fluid_tank"
+  }
+}

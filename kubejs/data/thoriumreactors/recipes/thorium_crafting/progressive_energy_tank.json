@@ -1,0 +1,33 @@
+{
+  "type": "thoriumreactors:thorium_crafting",
+  "key": {
+    "A": {
+      "tag": "forge:nuggets/niobium"
+    },
+    "B": {
+      "tag": "forge:ingots/steel"
+    },
+    "C": {
+      "item": "minecraft:redstone"
+    },
+    "D": {
+      "tag": "forge:ingots/iron"
+    },
+    "E": {
+      "item": "thoriumreactors:generic_energy_tank"
+    },
+    "F": {
+      "tag": "forge:nuggets/fluorite"
+    }
+  },
+  "pattern": [
+    " DDD ",
+    " BAB ",
+    " CEC ",
+    " BFB ",
+    " DDD "
+  ],
+  "result": {
+    "item": "thoriumreactors:progressive_energy_tank"
+  }
+}
