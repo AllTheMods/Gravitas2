@@ -25,6 +25,25 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event
     .custom({
+      type: "firmalife:vat",
+	  input_item: {
+        ingredient: {
+          tag: "forge:small_dusts/sulfur"
+        },
+		count: 2
+	  },
+      input_fluid: {
+        ingredient: "gregitas:raw_resin",
+        amount: 1000
+      },
+      output_item: {
+        item: "gtceu:sticky_resin"
+      }
+    })
+    .id("gregitas:vat/sticky_resin")
+
+  event
+    .custom({
       type: "create:crushing",
       ingredients: [
         {
