@@ -228,20 +228,16 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("firmalife:sweetener", "#tfc:sweetener")
   event.add("forge:treated_wood", "firmalife:treated_wood")
 
-  event.add("tfc:any_knapping", [
-    "minecraft:flint",
-    "gtceu:rubber_plate",
-    "gtceu:polyethylene_plate",
-    "gtceu:polytetrafluoroethylene_plate",
-    "gtceu:polybenzimidazole_plate"
-  ])
   event.add("tfc:flint_knapping", "minecraft:flint")
   event.add("tfc:rubber_knapping", [
     "gtceu:rubber_plate",
+    "gtceu:silicone_rubber_plate",
+    "gtceu:styrene_butadiene_rubber_plate",
     "gtceu:polyethylene_plate",
     "gtceu:polytetrafluoroethylene_plate",
     "gtceu:polybenzimidazole_plate"
   ])
+  event.add("tfc:any_knapping", ["#tfc:flint_knapping", "#tfc:rubber_knapping"])
 
   let refreshGTMaterials = false
   if (refreshGTMaterials) {
