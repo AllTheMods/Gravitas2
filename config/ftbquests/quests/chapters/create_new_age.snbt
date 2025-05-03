@@ -6,7 +6,12 @@
 	icon: "create_new_age:overcharged_diamond"
 	id: "7064603779F35B9E"
 	order_index: 4
-	quest_links: [ ]
+	quest_links: [{
+		id: "076047BCD63DA572"
+		linked_quest: "15BC783BB17EE2D4"
+		x: 8.0d
+		y: 7.5d
+	}]
 	quests: [
 		{
 			description: ["{gravitas.quest.new_age.desc.crafts}"]
@@ -29,19 +34,16 @@
 			}]
 			title: "{gravitas.quest.new_age.crafts}"
 			x: 0.0d
-			y: 0.0d
+			y: 1.0d
 		}
 		{
-			dependencies: [
-				"711E0E0B0315D90E"
-				"1CDDA789D2EC2118"
-			]
+			dependencies: ["1CDDA789D2EC2118"]
 			description: ["{gravitas.quest.new_age.desc.motor}"]
 			id: "7DA0E0142A7853C9"
 			rewards: [{
 				count: 2
 				id: "2601022D35A69CA7"
-				item: "create_new_age:copper_circuit"
+				item: "create:electron_tube"
 				type: "item"
 			}]
 			tasks: [{
@@ -50,7 +52,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 0.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["161A461EF4072877"]
@@ -100,11 +102,10 @@
 				}
 			]
 			title: "{gravitas.quest.new_age.connector}"
-			x: 1.5d
-			y: -1.0d
+			x: 2.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["7DA0E0142A7853C9"]
 			description: ["{gravitas.quest.new_age.desc.energizer}"]
 			id: "34DD3F7BE2C6D7FC"
 			rewards: [
@@ -123,7 +124,7 @@
 								ticks: 0L
 							}
 						}
-						id: "minecraft:gold_ingot"
+						id: "gtceu:neodymium_ingot"
 					}
 					type: "item"
 				}
@@ -133,18 +134,22 @@
 					type: "item"
 				}
 			]
+			shape: "hexagon"
+			size: 1.5d
 			tasks: [{
 				id: "2E56A07A17107A18"
 				item: "create_new_age:energiser_t1"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 0.0d
+			x: 8.0d
+			y: -1.25d
 		}
 		{
 			dependencies: ["161A461EF4072877"]
-			description: ["{gravitas.quest.new_age.desc.magnet}"]
+			description: ["{gravitas.quest.new_age.desc.generator}"]
 			id: "4765781833CE1888"
+			shape: "gear"
+			size: 1.5d
 			tasks: [
 				{
 					id: "7B834A494F456CEE"
@@ -157,7 +162,7 @@
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.new_age.magnets}"
+			title: "{gravitas.quest.new_age.generator}"
 			x: 0.0d
 			y: 3.0d
 		}
@@ -168,33 +173,33 @@
 			rewards: [{
 				count: 3
 				id: "2EBAF415D211BA75"
-				item: "create_new_age:overcharged_iron"
+				item: "gtceu:magnetic_iron_ingot"
 				type: "item"
 			}]
 			tasks: [{
 				id: "56837C39EC61F93D"
-				item: "create_new_age:overcharged_iron"
+				item: "gtceu:magnetic_iron_ingot"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 5.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["34DD3F7BE2C6D7FC"]
-			description: ["{gravitas.quest.new_age.desc.gold}"]
+			description: ["{gravitas.quest.new_age.desc.neodymium}"]
 			id: "7F60AA3D226CF4C3"
 			rewards: [{
 				count: 3
 				id: "6F79AD6BE46ABCB6"
-				item: "create_new_age:overcharged_gold"
+				item: "gtceu:magnetic_neodymium_ingot"
 				type: "item"
 			}]
 			tasks: [{
 				id: "76B6C9AC7328DB87"
-				item: "create_new_age:overcharged_gold"
+				item: "gtceu:magnetic_neodymium_ingot"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 7.0d
 			y: 1.5d
 		}
 		{
@@ -212,23 +217,24 @@
 				item: "create_new_age:overcharged_diamond"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 9.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["161A461EF4072877"]
+			dependencies: ["2F61AEB27357B362"]
+			description: ["{gravitas.quest.new_age.desc.magnet_ferrite}"]
 			id: "1CDDA789D2EC2118"
 			tasks: [{
 				id: "7F9E3D829C3C8318"
 				item: "create_new_age:magnetite_block"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 1.0d
+			x: 4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["4765781833CE1888"]
-			description: ["{gravitas.quest.new_age.desc.permalloy}"]
+			description: ["{gravitas.quest.new_age.desc.magnet_redstone}"]
 			id: "5E3ECB5F0B65B0F1"
 			rewards: [{
 				count: 2
@@ -251,7 +257,7 @@
 				"2F61AEB27357B362"
 				"7F60AA3D226CF4C3"
 			]
-			description: ["{gravitas.quest.new_age.desc.alnico}"]
+			description: ["{gravitas.quest.new_age.desc.magnet_neodymium_iron}"]
 			id: "035405FABB4BBEE0"
 			rewards: [{
 				count: 2
@@ -265,7 +271,7 @@
 				item: "create_new_age:layered_magnet"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 3.0d
 		}
 		{
@@ -274,6 +280,7 @@
 				"1B5F6CDB02587D6D"
 				"7F60AA3D226CF4C3"
 			]
+			description: ["{gravitas.quest.new_age.desc.magnet_advanced_neodymium}"]
 			id: "4473011A7FEFE7F2"
 			rewards: [{
 				count: 2
@@ -287,14 +294,16 @@
 				item: "create_new_age:fluxuated_magnetite"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 3.0d
 		}
 		{
 			dependencies: [
 				"4765781833CE1888"
 				"1B5F6CDB02587D6D"
+				"54CEE2BDC16F8D2E"
 			]
+			description: ["{gravitas.quest.new_age.desc.magnet_samarium_cobalt}"]
 			id: "499E4BCDA5EDC540"
 			rewards: [{
 				count: 2
@@ -308,13 +317,14 @@
 				item: "create_new_age:netherite_magnet"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 3.0d
 		}
 		{
 			dependencies: [
 				"2F61AEB27357B362"
 				"29AFD1F176B9B9C7"
+				"15BC783BB17EE2D4"
 			]
 			description: ["{gravitas.quest.new_age.desc.boiler}"]
 			id: "7784D240696594A0"
@@ -330,8 +340,8 @@
 				item: "create_new_age:heater"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 4.5d
+			x: 5.0d
+			y: 6.0d
 		}
 		{
 			description: ["{gravitas.quest.new_age.desc.heat}"]
@@ -351,6 +361,7 @@
 				}
 				type: "item"
 			}]
+			size: 1.25d
 			tasks: [{
 				id: "043AA6D1A4780BAA"
 				item: {
@@ -366,8 +377,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.new_age.heat}"
-			x: 0.0d
-			y: 4.5d
+			x: 0.625d
+			y: 7.5d
 		}
 		{
 			dependencies: ["6AFC2297D03EB64F"]
@@ -385,8 +396,8 @@
 				item: "create_new_age:heat_pipe"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 4.5d
+			x: 3.5d
+			y: 7.5d
 		}
 		{
 			dependencies: ["29AFD1F176B9B9C7"]
@@ -404,11 +415,15 @@
 				item: "create_new_age:heat_pump"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 6.0d
+			x: 5.0d
+			y: 7.5d
 		}
 		{
-			dependencies: ["29AFD1F176B9B9C7"]
+			dependencies: [
+				"29AFD1F176B9B9C7"
+				"15BC783BB17EE2D4"
+				"16951F04D47FBAD4"
+			]
 			description: ["{gravitas.quest.new_age.desc.vent}"]
 			id: "5D5993BDAFFC6F6C"
 			rewards: [{
@@ -423,8 +438,8 @@
 				item: "create_new_age:reactor_heat_vent"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 6.0d
+			x: 5.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["29AFD1F176B9B9C7"]
@@ -458,34 +473,34 @@
 				title: "{gravitas.quest.new_age.solarPlates}"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.0d
+			y: 9.0d
 		}
 		{
-			description: ["{gravitas.quest.new_age.desc.inputtingFuel}"]
+			dependencies: ["16951F04D47FBAD4"]
+			description: ["{gravitas.quest.new_age.desc.fuel_inserter}"]
 			id: "2AED53502F5B9B12"
-			rewards: [{
-				count: 3
-				id: "7FFAB522F8438F37"
-				item: "create:belt_connector"
-				random_bonus: 2
-				type: "item"
-			}]
-			tasks: [
+			rewards: [
 				{
-					id: "4695F61C8811DE38"
-					item: "create_new_age:reactor_fuel_acceptor"
+					count: 3
+					id: "7FFAB522F8438F37"
+					item: "create:belt_connector"
+					random_bonus: 2
 					type: "item"
 				}
 				{
-					id: "6CE7A36A39A098E2"
-					item: "create:andesite_funnel"
+					id: "060A49651806D772"
+					item: "create:brass_funnel"
 					type: "item"
 				}
 			]
-			title: "{gravitas.quest.new_age.inputtingFuel}"
-			x: 3.0d
-			y: 9.0d
+			tasks: [{
+				id: "4695F61C8811DE38"
+				item: "create_new_age:reactor_fuel_acceptor"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 12.0d
 		}
 		{
 			description: ["{gravitas.quest.new_age.desc.fuel}"]
@@ -497,29 +512,37 @@
 				random_bonus: 2
 				type: "item"
 			}]
-			tasks: [
-				{
-					id: "3340E7B5CDF24720"
-					item: "create_new_age:nuclear_fuel"
-					type: "item"
+			tasks: [{
+				id: "3340E7B5CDF24720"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:thorium_rod"
+							}
+							{
+								Count: 1b
+								id: "gtceu:uranium_rod"
+							}
+							{
+								Count: 1b
+								id: "gtceu:uranium_235_rod"
+							}
+						]
+					}
 				}
-				{
-					id: "08708797BD46D7D3"
-					item: "create_new_age:reactor_rod"
-					type: "item"
-				}
-			]
+				type: "item"
+			}]
 			title: "{gravitas.quest.new_age.fuel}"
-			x: 4.5d
-			y: 7.5d
+			x: 3.5d
+			y: 12.0d
 		}
 		{
-			dependencies: [
-				"2AED53502F5B9B12"
-				"5D5993BDAFFC6F6C"
-				"631CD91E20A188ED"
-			]
-			description: ["{gravitas.quest.new_age.desc.reactor}"]
+			dependencies: ["16951F04D47FBAD4"]
+			description: ["{gravitas.quest.new_age.desc.reactor_rod}"]
 			id: "4166F9C86941AC7E"
 			rewards: [{
 				id: "6006230EDF06A90C"
@@ -547,28 +570,18 @@
 				}
 				type: "item"
 			}]
-			tasks: [
-				{
-					count: 19L
-					id: "7350E39D2A0C89E2"
-					item: "create_new_age:reactor_casing"
-					type: "item"
-				}
-				{
-					count: 5L
-					id: "349D292CCA3CB16C"
-					item: "create_new_age:reactor_glass"
-					type: "item"
-				}
-			]
-			title: "{gravitas.quest.new_age.reactor}"
-			x: 3.0d
-			y: 7.5d
+			tasks: [{
+				id: "71456FD3D61040FC"
+				item: "create_new_age:reactor_rod"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 10.5d
 		}
 		{
 			dependencies: [
-				"4166F9C86941AC7E"
 				"0111ABBF8FF9A62A"
+				"6DCCF7087AB87A36"
 			]
 			dependency_requirement: "one_completed"
 			description: ["{gravitas.quest.new_age.desc.engine}"]
@@ -586,14 +599,15 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.new_age.engine}"
-			x: 0.0d
-			y: 7.5d
+			x: 2.0d
+			y: 10.5d
 		}
 		{
-			dependencies: ["4166F9C86941AC7E"]
+			dependencies: ["6DCCF7087AB87A36"]
 			description: ["{gravitas.quest.new_age.desc.meltdown}"]
 			hide: true
 			id: "19FE3EBF7B744F8F"
+			invisible: true
 			optional: true
 			rewards: [{
 				id: "45AD2607E6264713"
@@ -623,8 +637,8 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.new_age.meltdown}"
-			x: 1.5d
-			y: 9.0d
+			x: 2.0d
+			y: 12.0d
 		}
 		{
 			can_repeat: false
@@ -651,6 +665,167 @@
 			}]
 			x: 0.0d
 			y: -1.5d
+		}
+		{
+			dependencies: ["6DCCF7087AB87A36"]
+			description: ["{gravitas.quest.new_age.desc.reactor_casing}"]
+			id: "5C57E61584845A43"
+			optional: true
+			shape: "hexagon"
+			subtitle: "{gravitas.quest.new_age.subt.reactor_casing}"
+			tasks: [{
+				count: 24L
+				id: "75657901B3586D90"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create_new_age:reactor_casing"
+							}
+							{
+								Count: 1b
+								id: "create_new_age:reactor_glass"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.new_age.reactor_casing}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.new_age.reactor_casing}"
+			x: 3.5d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"2AED53502F5B9B12"
+				"5D5993BDAFFC6F6C"
+				"4166F9C86941AC7E"
+				"631CD91E20A188ED"
+			]
+			description: ["{gravitas.quest.new_age.desc.start_reactor}"]
+			icon: "createdeco:decal_radioactive"
+			id: "6DCCF7087AB87A36"
+			rewards: [{
+				count: 4
+				id: "4FEFD1BBF2E130AF"
+				item: "createdeco:decal_radioactive"
+				type: "item"
+			}]
+			size: 1.25d
+			tasks: [{
+				id: "1EEB70F4A68E8269"
+				observe_type: 0
+				timer: 0L
+				title: "{gravitas.quest.new_age.look_at_reactor}"
+				to_observe: "create_new_age:reactor_rod"
+				type: "observation"
+			}]
+			title: "{gravitas.quest.new_age.start_reactor}"
+			x: 3.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["34DD3F7BE2C6D7FC"]
+			description: ["{gravitas.quest.new_age.desc.samarium}"]
+			id: "54CEE2BDC16F8D2E"
+			rewards: [{
+				count: 3
+				id: "52461F16D38FCB0D"
+				item: "gtceu:magnetic_samarium_ingot"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.new_age.subt.samarium}"
+			tasks: [{
+				id: "5B6D51D96DB12617"
+				item: "gtceu:magnetic_samarium_ingot"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0AD7E4776AD99945"
+				"78C490B5D9F6ED1D"
+			]
+			description: ["{gravitas.quest.new_age.desc.reactor_casing_blocks}"]
+			id: "16951F04D47FBAD4"
+			rewards: [
+				{
+					id: "4D1D82A160FD46D1"
+					item: "gtceu:firebricks"
+					type: "item"
+				}
+				{
+					id: "4CDFAF86605C6E84"
+					item: "gtceu:lead_plate"
+					type: "item"
+				}
+			]
+			size: 1.25d
+			tasks: [
+				{
+					count: 4L
+					id: "4ED3CC07393542E5"
+					item: "create_new_age:reactor_casing"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "719ACE6DE267D651"
+					item: { Count: 4, id: "create_new_age:reactor_glass" }
+					type: "item"
+				}
+			]
+			x: 6.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["7DA0E0142A7853C9"]
+			description: ["{gravitas.quest.new_age.desc.motor_extension}"]
+			id: "74F60B1AFE206724"
+			tasks: [{
+				id: "1FCA207AE7763690"
+				item: "create_new_age:basic_motor_extension"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			id: "78C490B5D9F6ED1D"
+			tasks: [{
+				count: 10L
+				id: "614D6B417A47BF88"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:lead_ingot"
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: 10.0d
+		}
+		{
+			id: "0AD7E4776AD99945"
+			tasks: [{
+				count: 4L
+				id: "47912086B2FDF761"
+				item: "gtceu:firebricks"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 11.0d
 		}
 	]
 	title: "{gravitas.chapters.15.title}"
