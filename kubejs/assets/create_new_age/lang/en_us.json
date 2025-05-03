@@ -1,8 +1,13 @@
 {
-    "block.create_new_age.magnetite_block": "Ceramic Ferite Magnet",
-    "block.create_new_age.redstone_magnet": "Permalloy Magnet",
-    "block.create_new_age.layered_magnet": "Alnico Magnet",
-    "block.create_new_age.fluxuated_magnetite": "Neodymium Iron Boron Magnet",
+    "item.create_new_age.overcharged_iron_wire": "Iron Wire",
+    "item.create_new_age.overcharged_golden_wire": "Neodymium Wire",
+    "item.create_new_age.overcharged_diamond_wire": "Overcharged Graphene Wire",
+	
+    "block.create_new_age.magnetite_block": "Ferrite Magnet",
+    "block.create_new_age.redstone_magnet": "Redstone Magnet",
+    "block.create_new_age.layered_magnet": "Neodymium Iron Magnet",
+    "block.create_new_age.fluxuated_magnetite": "Advanced Neodymium Magnet",
     "block.create_new_age.netherite_magnet": "Samarium Cobalt Magnet",
-    "block.create_new_age.generator_coil": "Stator Coil"
+	
+    "block.create_new_age.generator_coil": "Rotor Coil"
 }

@@ -11,6 +11,7 @@ ServerEvents.recipes((event) => {
   createAdd(event)
   centrifugeAdd(event)
   wiresAdd(event)
+  create_new_age(event)
   coilingTweak(event)
   pressurizedBasinAdd(event)
   spaceDustChain(event)

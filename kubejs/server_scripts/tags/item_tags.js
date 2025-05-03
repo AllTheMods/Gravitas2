@@ -444,6 +444,12 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("gravitas:phantom", "beneath:wood/sapling/warped")
 
   event.add("forge:dusts/phosphorus", "scguns:phosphor_dust")
+  
+  // Create New Age nuclear fuel
+  event.add("create_new_age:nuclear/is_nuclear_fuel", ["#forge:rods/thorium", "#forge:rods/uranium", "#forge:rods/uranium_235"])
+  event.add("create_new_age:nuclear/time_28800", "#forge:rods/thorium") // Thorium rods last the same as the usual New Age fuel
+  event.add("create_new_age:nuclear/time_14400", "#forge:rods/uranium") // Uranium rods have 1/2 the lifetime
+  event.add("create_new_age:nuclear/time_230400", "#forge:rods/uranium_235") // Enriched Uranium rods - lasts 8 times longer
 
   event.add("forge:magma", ["minecraft:magma_block",
                             "tfc:rock/magma/basalt",
