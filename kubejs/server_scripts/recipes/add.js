@@ -135,8 +135,6 @@ const fish = [
   "tfc:food/tropical_fish"
 ]
 
-const ores = ["hematite", "cassiterite", "garnierite", "malachite", "magnetite", "sphalerite", "tetrahedrite"]
-
 const tfcgems = [
   "topaz",
   "sapphire",
@@ -149,8 +147,6 @@ const tfcgems = [
   "sylvite",
   "saltpeter"
 ]
-
-const natores = ["silver", "copper", "gold"]
 
 const createstone = ["veridium", "asurine", "crimsite", "ochrum"]
 
@@ -2038,82 +2034,6 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     T: "minecraft:redstone_torch"
   })
 
-  //tfc ore conversion
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_rich_${ores}`)
-      .itemInputs(`3x tfc:ore/rich_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_normal_${ores}`)
-      .itemInputs(`4x tfc:ore/normal_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_poor_${ores}`)
-      .itemInputs(`6x tfc:ore/poor_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_small_${ores}`)
-      .itemInputs(`9x tfc:ore/small_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  //tfc ore conversion native
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_rich_${natores}`)
-      .itemInputs(`3x tfc:ore/rich_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_normal_${natores}`)
-      .itemInputs(`4x tfc:ore/normal_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_poor_${natores}`)
-      .itemInputs(`6x tfc:ore/poor_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_small_${natores}`)
-      .itemInputs(`9x tfc:ore/small_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
   //tfc jams
 
   jams.forEach((jams) => {
@@ -2200,176 +2120,6 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
       .duration(40)
       .EUt(LV)
   })
-
-  //tfc ore conversion misc
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_chromite`)
-    .itemInputs(`3x firmalife:ore/rich_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_chromite`)
-    .itemInputs(`4x firmalife:ore/normal_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_chromite`)
-    .itemInputs(`6x firmalife:ore/poor_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_chromite`)
-    .itemInputs(`9x firmalife:ore/small_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_uraninite`)
-    .itemInputs(`3x tfc_ie_addon:ore/rich_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_uraninite`)
-    .itemInputs(`4x tfc_ie_addon:ore/normal_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_uraninite`)
-    .itemInputs(`6x tfc_ie_addon:ore/poor_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_uraninite`)
-    .itemInputs(`9x tfc_ie_addon:ore/small_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_bauxite`)
-    .itemInputs(`3x tfc_ie_addon:ore/rich_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_bauxite`)
-    .itemInputs(`4x tfc_ie_addon:ore/normal_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_bauxite`)
-    .itemInputs(`6x tfc_ie_addon:ore/poor_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_bauxite`)
-    .itemInputs(`9x tfc_ie_addon:ore/small_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_galena`)
-    .itemInputs(`3x firmalife:ore/rich_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_galena`)
-    .itemInputs(`4x firmalife:ore/normal_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_galena`)
-    .itemInputs(`6x firmalife:ore/poor_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_galena`)
-    .itemInputs(`9x firmalife:ore/small_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_limonite`)
-    .itemInputs(`3x tfc:ore/rich_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_limonite`)
-    .itemInputs(`4x tfc:ore/normal_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_limonite`)
-    .itemInputs(`6x tfc:ore/poor_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_limonite`)
-    .itemInputs(`9x tfc:ore/small_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_rich`)
-    .itemInputs(`3x tfc:ore/rich_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_normal`)
-    .itemInputs(`4x tfc:ore/normal_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_poor`)
-    .itemInputs(`6x tfc:ore/poor_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_small`)
-    .itemInputs(`9x tfc:ore/small_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
 
   //tfc gem macerating
 
