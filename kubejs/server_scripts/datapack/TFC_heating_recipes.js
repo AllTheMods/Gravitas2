@@ -28,9 +28,9 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 	let metals = [ 
 		// Metal name = GT name for easy part discovery.
 		// Properties found in mods' jar files. Heat cap per mb based on heat cap of ingot / 144. 
-		// GTCEu metals without a resmelting recipe OR resmenting tier HV+ OR very high temp OR radioactive isotope = can't be handled by heating.
+		// GTCEu metals that are added are those for which the ingot already had a heating recipe.
 		// Base Metals
-		// // MC / TFC
+		// // MC|TFC
 		{metal:"iron",									heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
 		{metal:"cast_iron",								heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						},
 		{metal:"wrought_iron",							heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
@@ -56,15 +56,14 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		{metal:"gallium",								heatCap:0.0198,			meltTemp:73,	fluidId:"gtceu:gallium"								},
 		{metal:"indium",								heatCap:0.0198,			meltTemp:200,	fluidId:"gtceu:indium"								},
 		{metal:"lanthanum",								heatCap:0.0198,			meltTemp:962,	fluidId:"gtceu:lanthanum"							},
-		{metal:"lithium",								heatCap:0.0198,			meltTemp:224,	fluidId:"gtceu:lithium"								},
-		{metal:"luctetium",								heatCap:0.0198,			meltTemp:1695,	fluidId:"gtceu:luctetium"							},
-		{metal:"magnesium",								heatCap:0.0198,			meltTemp:693,	fluidId:"gtceu:magnesium"							},
 		{metal:"manganese",								heatCap:0.0198,			meltTemp:1289,	fluidId:"gtceu:manganese"							},
-		{metal:"neodynium",								heatCap:0.0198,			meltTemp:1067,	fluidId:"gtceu:neodynium"							},
+		{metal:"neodymium",								heatCap:0.0198,			meltTemp:1067,	fluidId:"gtceu:neodymium"							},
 		{metal:"plutonium",								heatCap:0.0198,			meltTemp:683,	fluidId:"gtceu:plutonium"							},
+		{metal:"plutonium_241",							heatCap:0.0198,			meltTemp:683,	fluidId:"gtceu:plutonium_241"						},
 		{metal:"samarium",								heatCap:0.0198,			meltTemp:1115,	fluidId:"gtceu:samarium"							},
 		{metal:"thorium",								heatCap:0.0198,			meltTemp:1793,	fluidId:"gtceu:thorium"								},
 		{metal:"uranium",								heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:uranium"								},
+		{metal:"uranium_235",							heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:uranium_235"							},
 		{metal:"vanadium",								heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:vanadium"							},
 		{metal:"yttrium",								heatCap:0.0198,			meltTemp:1569,	fluidId:"gtceu:yttrium"								},
 		// Alloys
@@ -100,7 +99,7 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		{metal:"potin",									heatCap:0.0198,			meltTemp:854,	fluidId:"gtceu:potin"								},
 		{metal:"red_alloy",								heatCap:0.0198,			meltTemp:1170,	fluidId:"gtceu:red_alloy"							},
 		{metal:"blue_alloy",							heatCap:0.0198,			meltTemp:1170,	fluidId:"gtceu:blue_alloy"							},
-		// Steel
+		// Steels
 		// // TFC addons
 		{metal:"pig_iron",								heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/pig_iron"						},
 		{metal:"steel",									heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/steel"							},
@@ -312,6 +311,7 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		{partId:"createdeco:industrial_iron_ingot",					type:"ingot",				metal:"iron"			},
 		{partId:"scguns:treated_iron_ingot",						type:"ingot",				metal:"iron"			},
 		{partId:"vintageimprovements:vanadium_ingot",				type:"ingot",				metal:"vanadium"		},
+		{partId:"gtceu:thorium_ingot",								type:"ingot",				metal:"thorium"			}, // thorium ingot wasn't heatable even though the ore is
 		{partId:"scguns:treated_brass_ingot",						type:"ingot",				metal:"brass"			},
 		// Blocks		
 		{partId:"minecraft:iron_block",								type:"block",				metal:"iron"			},
@@ -493,7 +493,7 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		{partId:"sgjourney:golden_idol",							type:"ingot",				metal:"gold"			}  // Treat as ingot for fluid amount
 	]
 	
-	PartHeatingDebug = true
+	PartHeatingDebug = false
 	parts.forEach((part) => {
 		addPartHeatingRecipe(part.partId, part.type, part.metal)
 	})
