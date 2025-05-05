@@ -116,8 +116,8 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		{type:"ingot",				fluidAmount:144		}, // 1 ingot
 		{type:"ingot2x",			fluidAmount:288		}, // 1 ingot
 		{type:"block",				fluidAmount:1296	}, // 9 ingots
-		{type:"slab",				fluidAmount:648		}, // 9/2 ingots
-		{type:"slab",				fluidAmount:288		}, // 1/2 block
+		{type:"slab",				fluidAmount:648		}, // 1/2 block
+		{type:"stairs",				fluidAmount:972		}, // 3/4 block (although some stairs are made 6:4 instead of 6:8)
 		{type:"nugget",				fluidAmount:16		}, // 1/9 ingot
 		{type:"dust",				fluidAmount:144		}, // 1 ingot
 		{type:"smallDust",			fluidAmount:36		}, // 1/4 dust
@@ -293,6 +293,37 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		// Drill heads are made of 2 metals so no resmelting
 	})
 	
+	// All the godamme copper blocks...
+	PartHeatingDebug = false
+	let namespaces = ["minecraft:", "create:"]
+	let waxings = ["", "waxed_"]
+	let oxidizations = ["", "exposed_", "weathered_", "oxidized_"]	
+	let cuttings = ["", "cut_"]	
+	let shapes = [
+		{shape:"",					type:"block"	},
+		{shape:"_block",			type:"block"	},
+		{shape:"_slab",				type:"slab"		},
+		{shape:"_stairs",			type:"stairs"	},		
+		{shape:"_tiles",			type:"block"	},
+		{shape:"_tile_slab",		type:"slab"		},
+		{shape:"_tile_stairs",		type:"stairs"	},
+		{shape:"_shingles",			type:"block"	},
+		{shape:"_shingle_slab",		type:"slab"		},
+		{shape:"_shingle_stairs",	type:"stairs"	}
+	]
+	
+	namespaces.forEach((namespace) => {
+		waxings.forEach((waxing) => {
+			oxidizations.forEach((oxidization) => {
+				cuttings.forEach((cutting) => {
+					shapes.forEach((shape) => {			
+						addPartHeatingRecipe(namespace + waxing + oxidization + cutting + "copper" + shape.shape, shape.type, "copper")
+					})
+				})
+			})
+		})
+	})
+	
 	// All the other parts:
 	let parts = [
 		// Nuggets
@@ -320,8 +351,6 @@ let addTFCHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 		{partId:"create:industrial_iron_block",						type:"block",				metal:"iron"			},
 		{partId:"scguns:treated_iron_block",						type:"block",				metal:"iron"			},
 		{partId:"minecraft:gold_block",								type:"block",				metal:"gold"			},
-		{partId:"minecraft:copper_block",							type:"block",				metal:"copper"			},
-		{partId:"minecraft:waxed_copper_block",						type:"block",				metal:"copper"			},
 		{partId:"immersiveengineering:storage_aluminum",			type:"block",				metal:"aluminium"		},
 		{partId:"thoriumreactors:aluminum_block",					type:"block",				metal:"aluminium"		},
 		{partId:"scguns:ancient_brass_block",						type:"block",				metal:"brass"			},
