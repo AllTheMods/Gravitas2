@@ -2,19 +2,13 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 	// Advanced and alternate recipes for Create machines and materials
 
 	// Recycling TFC quern parts into a Create millstone
+	// The coaxial gear variant saves a shaft
 	event.recipes.minecraft.crafting_shaped("create:millstone", [" M ", " C ", " Q "], {
 		M: "tfc:handstone",
-		C: "create:cogwheel",
+		C: ["create:cogwheel", "petrolsparts:coaxial_gear"],
 		Q: "tfc:quern"
 	})
 	
-	// Coaxial gear variant - saves a shaft
-	event.recipes.minecraft.crafting_shaped("create:millstone", [" M ", " C ", " Q "], {
-		M: "tfc:handstone",
-		C: "petrolsparts:coaxial_gear",
-		Q: "tfc:quern"
-	})
-
 
 	// Making and upgrading gears with deployers
 	event.recipes.create.deploying("create:cogwheel", ["create:shaft", "#forge:treated_wood"])
