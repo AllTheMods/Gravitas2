@@ -133,4 +133,9 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 	// Making a Create encased chain drive using TFC wrought iron chains
 	event.shapeless("create:encased_chain_drive", ["create:andesite_casing", "2x tfc:metal/chain/wrought_iron"])
 
+	// Replace the Create Mechanical Saw recipe with one using GT Iron Buzz Saw Blade
+	event.recipes.minecraft.crafting_shaped("create:mechanical_saw", [" B ", " C ", "   "], {
+		B: ["gtceu:iron_buzz_saw_blade", "gtceu:wrought_iron_buzz_saw_blade"],
+		C: "create:andesite_casing"
+	}).id('create:crafting/kinetics/mechanical_saw')
 }
