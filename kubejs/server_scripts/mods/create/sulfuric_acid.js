@@ -3,7 +3,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	// The recipes remain the same, but inputs and outputs are replaced with Gregtech compatible ones
 	
 	
-	// Making sulfur dust out of Vintage Improvements sulfur gems
+	// Making GT sulfur dust out of Vintage Improvements sulfur gems
     event.recipes.gtceu.macerator("vintageimprovements:sulfur")
 		.itemInputs("#forge:gems/sulfur")
 		.itemOutputs("2x gtceu:sulfur_dust")
@@ -72,7 +72,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 
 
 	// Making Sulfur Trioxide with atmospheric O2 and a consumable metal catalyst
-	// Support both nugget (like the original) and dust catalysts
+	// Support both nugget (like the original) and dust (GregTech) catalysts
 	
 	// Vanadium catalyst + heated basin (buffed, 2x output per catalyst)
 	event.custom({
@@ -84,9 +84,14 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 				fluidTag: "forge:sulfur_dioxide",
 				amount: 500
 			},
-			{
-				tag: "forge:nuggets/vanadium"
-			}
+			[
+				{
+					tag: "forge:nuggets/vanadium"
+				},
+				{
+					tag: "forge:tiny_dusts/vanadium"
+				}
+			]
 		],
 		results: [
 			{
@@ -96,28 +101,6 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 		],
 		processingTime: 400
 	}).id("vintageimprovements:pressurizing/sulfur_trioxide")
-
-	event.custom({
-		type: "vintageimprovements:pressurizing",
-		secondaryFluidOutput: 0,
-		heatRequirement: "heated",
-		ingredients: [ 
-			{
-				fluidTag: "forge:sulfur_dioxide",
-				amount: 500
-			},
-			{
-				tag: "forge:tiny_dusts/vanadium"
-			}
-		],
-		results: [
-			{
-				fluid: "gtceu:sulfur_trioxide",
-				amount: 500
-			}
-		],
-		processingTime: 400
-	}).id("vintageimprovements:pressurizing/sulfur_trioxide_dust")
 
 	// Iron catalyst + superheated basin
 	event.custom({
@@ -129,9 +112,14 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 				fluidTag: "forge:sulfur_dioxide",
 				amount: 250
 			},
-			{
-				tag: "forge:nuggets/iron"
-			}
+			[
+				{
+					tag: "forge:nuggets/iron"
+				},
+				{
+					tag: "forge:tiny_dusts/iron"
+				}
+			]
 		],
 		results: [
 			{
@@ -141,29 +129,6 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 		],
 		processingTime: 400
 	}).id("vintageimprovements:pressurizing/sulfur_trioxide_alt")
-
-	event.custom({
-		type: "vintageimprovements:pressurizing",
-		secondaryFluidOutput: 0,
-		heatRequirement: "superheated",
-		ingredients: [ 
-			{
-				fluidTag: "forge:sulfur_dioxide",
-				amount: 250
-			},
-			{
-				tag: "forge:tiny_dusts/iron"
-			}
-		],
-		results: [
-			{
-				fluid: "gtceu:sulfur_trioxide",
-				amount: 250
-			}
-		],
-		processingTime: 400
-	}).id("vintageimprovements:pressurizing/sulfur_trioxide_alt_dust")
-
 
 	// Finally, making Sulfuric Acid
 	event.custom({
@@ -189,7 +154,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	}).id("vintageimprovements:pressurizing/sulfuric_acid")
 
 
-	// Gregtech compatible versions of the original Copper Sulfate recipe, just in case
+	// Gregtech compatible version of the original Copper Sulfate recipe, just in case
 	event.custom({
 		type: "vintageimprovements:pressurizing",
 		ingredients: [ 
@@ -201,9 +166,14 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 				fluid: "minecraft:water",
 				amount: 200
 			},
-			{
-				tag: "forge:ingots/copper"
-			}
+			[
+				{
+					tag: "forge:ingots/copper"
+				},
+				{
+					tag: "forge:dusts/copper"
+				}
+			]
 		],
 		results: [
 			{
@@ -212,30 +182,6 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 		],
 		processingTime: 800
 	}).id("vintageimprovements:pressurizing/copper_sulfate")
-
-	// Same but with copper dust as an input
-	event.custom({
-		type: "vintageimprovements:pressurizing",
-		ingredients: [ 
-			{
-				fluidTag: "forge:sulfuric_acid",
-				amount: 200
-			},
-			{
-				fluid: "minecraft:water",
-				amount: 200
-			},
-			{
-				tag: "forge:dusts/copper"
-			}
-		],
-		results: [
-			{
-				item: "vintageimprovements:copper_sulfate"
-			}
-		],
-		processingTime: 700
-	}).id("vintageimprovements:pressurizing/copper_sulfate_from_dust")
 	
 
 }
