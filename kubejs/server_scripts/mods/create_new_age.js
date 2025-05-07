@@ -64,36 +64,16 @@ let create_new_age = (/** @type {Internal.RecipesEventJS} */ event) => {
 		}
 	).id("create_new_age:shaped/advanced_solar_plate")
 
-	// Recipes for Carbon Brushes - using carbon/coal/charcoal dusts, same as Gregtech resistors
+	// Recipes for Carbon Brushes - using carbon/graphite/coal/charcoal dusts, same as Gregtech resistors
 	event.recipes.minecraft.crafting_shaped(
 		"create_new_age:carbon_brushes",
 		["A A", "CSC", "A A"], 
 		{
 			A: "create:andesite_alloy",
 			S: "create:shaft",
-			C: "#forge:dusts/carbon"
+			C: ["#forge:dusts/carbon", "#forge:dusts/graphite", "#forge:dusts/coal", "#forge:dusts/charcoal"]
 		}
 	).id("create_new_age:shaped/carbon_brushes")
-
-	event.recipes.minecraft.crafting_shaped(
-		"create_new_age:carbon_brushes",
-		["A A", "CSC", "A A"], 
-		{
-			A: "create:andesite_alloy",
-			S: "create:shaft",
-			C: "#forge:dusts/coal"
-		}
-	).id("create_new_age:shaped/carbon_brushes_coal")
-
-	event.recipes.minecraft.crafting_shaped(
-		"create_new_age:carbon_brushes",
-		["A A", "CSC", "A A"], 
-		{
-			A: "create:andesite_alloy",
-			S: "create:shaft",
-			C: "#forge:dusts/charcoal"
-		}
-	).id("create_new_age:shaped/carbon_brushes_charcoal")
 
 	// Recipes for motors
 	
@@ -122,24 +102,16 @@ let create_new_age = (/** @type {Internal.RecipesEventJS} */ event) => {
 
 	// Basic Force 2 magnet
 	// The only magnet that's available before you get access to electricity
+	// Takes both Iron and Wrought Iron for better early game access
 	event.recipes.minecraft.crafting_shaped(
 		"create_new_age:redstone_magnet", 
 		[" P ", " R ", " P "],
 		{
-			P: "#forge:plates/iron",
+			P: ["#forge:plates/iron", "#forge:plates/wrought_iron"],
 			R: "minecraft:redstone_block"
 		}
 	).id("create_new_age:shaped/redstone_magnet")
-	// Wrought Iron recipe for better early game access
-	event.recipes.minecraft.crafting_shaped(
-		"create_new_age:redstone_magnet", 
-		[" P ", " R ", " P "],
-		{
-			P: "#forge:plates/wrought_iron",
-			R: "minecraft:redstone_block"
-		}
-	)
-	
+		
 	// Force 4 magnet
 	// Renamed "Neodymium Iron Magnet" in this modpack
 	event.recipes.minecraft.crafting_shaped(
