@@ -499,6 +499,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .EUt(LV)
   })
 
+  event.remove({ id: "gtceu:shaped/wooden_barrel" })
   event.recipes.kubejs
     .shaped("gtceu:wood_drum", ["mRs", "PWP", "PWP"], {
       m: "#forge:tools/files",
@@ -508,7 +509,6 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       W: ["gtceu:long_iron_rod", "gtceu:long_wrought_iron_rod"]
     })
     .damageIngredient(["#forge:tools"])
-    .id("gtceu:shaped/wooden_barrel")
 
   event.recipes.kubejs.shaped("gtceu:lv_electric_motor", ["cwr", "wmw", "rwc"], {
     c: "gtceu:tin_single_cable",
