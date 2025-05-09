@@ -503,7 +503,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.recipes.kubejs
     .shaped("gtceu:wood_drum", ["mRs", "PWP", "PWP"], {
       m: "#forge:tools/files",
-      R: "gtceu:sticky_resin",
+      R: ["gtceu:sticky_resin", "firmalife:beeswax"],
       s: "#forge:tools/saws",
       P: "#minecraft:planks",
       W: ["gtceu:long_iron_rod", "gtceu:long_wrought_iron_rod"]
