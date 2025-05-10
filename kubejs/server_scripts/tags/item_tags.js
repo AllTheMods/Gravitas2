@@ -198,6 +198,12 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:tools/knives", ["#tfc:knives"])
 
   event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/knives", "#forge:tools/files"])
+  
+  // Adding GregTech hazmat protection to armor
+  event.add("gtceu:ppe_armor", "#scguns:gas_mask")
+  
+  // Add Scorched Guns gas mask protection to armor
+  event.add("scguns:gas_mask", ["gtceu:hazmat_headpiece", "gtceu:quarktech_helmet", "gcyr:space_helmet"])
 
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
