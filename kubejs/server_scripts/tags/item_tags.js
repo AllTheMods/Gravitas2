@@ -451,6 +451,10 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("create_new_age:nuclear/time_14400", "#forge:rods/uranium") // Uranium rods have 1/2 the lifetime
   event.add("create_new_age:nuclear/time_230400", "#forge:rods/uranium_235") // Enriched Uranium rods - lasts 8 times longer
 
+  // Create New Age radiation resistant armor
+  // Adds New Age radiation resistance to GregTech hazmats and advanced armor
+  event.add("create_new_age:nuclear/hazmat_suit", "#gtceu:ppe_armor")
+
   event.add("forge:magma", ["minecraft:magma_block",
                             "tfc:rock/magma/basalt",
                             "tfc:rock/magma/granite",
