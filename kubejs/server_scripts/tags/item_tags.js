@@ -201,6 +201,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   
   // Adding GregTech hazmat protection to armor
   event.add("gtceu:ppe_armor", "#scguns:gas_mask")
+  event.add("gtceu:ppe_armor", ["gcyr:space_helmet", "gcyr:space_chestplate", "gcyr:space_leggings", "gcyr:space_boots"])
   
   // Add Scorched Guns gas mask protection to armor
   event.add("scguns:gas_mask", ["gtceu:hazmat_headpiece", "gtceu:quarktech_helmet", "gcyr:space_helmet"])
