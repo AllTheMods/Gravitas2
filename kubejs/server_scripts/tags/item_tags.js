@@ -199,6 +199,12 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/wrench", "#forge:tools/knives", "#forge:tools/files"])
 
+  // Tagging TFC gems
+  let tfcUntaggedGems = ["amethyst", "opal", "pyrite", "ruby", "sapphire", "topaz"]
+  tfcUntaggedGems.forEach((gem) => {
+    event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
+  })
+  
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
