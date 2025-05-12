@@ -19,7 +19,7 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 	event.shapeless("petrolsparts:large_coaxial_gear", ["petrolsparts:coaxial_gear", "#forge:treated_wood"])
 
 
-	// Making Rose Quartz in Gregtech Alloy Smelter 
+	// Making Rose Quartz in GregTech Alloy Smelter 
 	// (uses just 4 redstone - manual crafting uses 8)
 	event.recipes.gtceu
 		.alloy_smelter("rose_quartz")
@@ -28,6 +28,14 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 		.duration(50)
 		.EUt(16)
 
+	// Making Create Glue Tube in GregTech Assembler
+	event.recipes.gtceu
+		.assembler("super_glue")
+		.itemInputs("#forge:foils/wrought_iron")
+		.inputFluids(Fluid.of("gtceu:glue", 100))
+		.itemOutputs("create:super_glue")
+		.duration(60)
+		.EUt(16)
 
 	// Making Create belts using leather
 	event.recipes.minecraft.crafting_shaped("3x create:belt_connector", ["   ", "LLL", "MRM"], {
