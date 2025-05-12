@@ -61,20 +61,12 @@ let centrifugeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         let results = []
         for (let i = 0; i < original_output_items.length; i++) {
             let output = original_output_items[i] 
-            results.push({
-                item: output.content.ingredient.item,
-                count: output.content.count,
-                chance: output.chance / 10000
-            })
+            results.push(Item.of(output.content.ingredient.item, output.content.count).withChance(output.chance / 10000))
         }
         
         for (let i = 0; i < original_output_fluids.length; i++) {
             let output = original_output_fluids[i]
-            results.push({
-                fluid: output.content.value[0].fluid, 
-                amount: output.content.amount,
-                chance: output.chance / 10000
-            })
+            results.push(Fluid.of(output.content.value[0].fluid, output.content.amount))
         }
         
         // Runs fast, but needs to be stopped for loading and unloading - clunky to use
@@ -83,12 +75,6 @@ let centrifugeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         // 64 RPM (128 SU) for ULV, 128 RPM (256 SU) for LV
         let rpm = eu_cost > 8 ? 128 : 64
         
-        event.custom({
-            type: 'vintageimprovements:centrifugation',
-            ingredients: ingredients,
-            results: results,
-            processingTime: duration,
-            minimalRPM: rpm
-        })
+		event.recipes.vintageimprovements.centrifugation(results, ingredients, duration).minimalRPM(rpm)
     })
 }
