@@ -162,7 +162,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
     event.replaceInput(
       { type: "minecraft:crafting_shaped" },
       `tfc:metal/double_sheet/${metal}`,
-      `#forge:plates/double/${metal}`
+      `#forge:double_plates/${metal}`
     )
   })
 
