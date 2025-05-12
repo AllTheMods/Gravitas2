@@ -324,6 +324,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
   event.remove({ id: "createaddition:pressing/constantan_ingot"})
   event.remove({output: `/^immersiveengineering:plate_.*/`, input: "immersiveengineering:wirecutter"})
+  event.remove({ id: "createaddition:compat/immersiveengineering/item_application/kiln_brick"})
+  event.remove({ id: "createaddition:compat/immersiveengineering/item_application/kiln_brick_using_deployer"})
   
 
   //Firmalife
