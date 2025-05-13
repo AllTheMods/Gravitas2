@@ -1602,6 +1602,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`4x tfc:rock/loose/${stone}`)
       .duration(60)
       .EUt(LV)
+
+    event.recipes.vintageimprovements
+      .polishing(`tfc:brick/${stone}`, [[`tfc:rock/loose/${stone}`, `tfc:rock/mossy_loose/${stone}`]], 10)
+      .id(`gregitas:polishing/brick/${stone}`)
+
+    event.recipes.vintageimprovements
+      .polishing(`tfc:rock/smooth/${stone}`, `tfc:rock/raw/${stone}`, 40)
+      .id(`gregitas:polishing/stone/${stone}`)
   })
 
   tfcStone2.forEach((stone) => {
