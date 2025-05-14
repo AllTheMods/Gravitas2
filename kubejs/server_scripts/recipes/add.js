@@ -2848,6 +2848,11 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     '#forge:rods/aluminium'
   )
 
+  // TFC Casting with Channels
+  event.recipes.minecraft.smelting('tfcchannelcasting:channel', 'tfcchannelcasting:unfired_channel')
+  event.recipes.minecraft.smelting('tfcchannelcasting:mold_table', 'tfcchannelcasting:unfired_mold_table')
+  event.recipes.minecraft.smelting('tfcchannelcasting:heart_mold', 'tfcchannelcasting:unfired_heart_mold')
+
   event.recipes.gtceu
   .assembler("gregitas:industrial_gears")
   .itemInputs("gtceu:small_bronze_gear", "gtceu:small_iron_gear", "gtceu:aluminium_rod")
