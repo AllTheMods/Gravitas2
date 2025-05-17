@@ -184,4 +184,215 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	}).id("vintageimprovements:pressurizing/copper_sulfate")
 	
 
+	// Making Sulfur Dioxide with atmospheric O2 and GregTech sulfide ores
+	// Same recipes as in GregTech EBF
+	
+	// Pyrite -> Hematite
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/pyrite"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 2000
+			},
+			{
+				item: "gtceu:hematite_dust"
+			},
+			{
+				item: "gtceu:ash_dust",
+				chance: 0.11
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_pyrite_dust")
+	
+	// Stibnite -> Antimony Trioxide
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/stibnite"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 1500
+			},
+			{
+				item: "gtceu:antimony_trioxide_dust"
+			},
+			{
+				item: "gtceu:ash_dust",
+				chance: 0.11
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_stibnite_dust")
+	
+	// Pentlandite -> Garnierite
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/pentlandite"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 1000
+			},
+			{
+				item: "gtceu:garnierite_dust"
+			},
+			{
+				item: "gtceu:ash_dust",
+				chance: 0.11
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_pentlandite_dust")
+	
+	// Chalcopyrite + Silicon Dioxide -> Cupric Oxide + Ferrosilite
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/chalcopyrite"
+			},
+			{
+				tag: "forge:dusts/silicon_dioxide"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 2000
+			},
+			{
+				item: "gtceu:cupric_oxide_dust"
+			},
+			{
+				item: "gtceu:ferrosilite_dust"
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_chalcopyrite_dust")
+	
+	// Cobaltite -> Cobalt Oxide + Arsenic Trioxide
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/cobaltite"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 1000
+			},
+			{
+				item: "gtceu:cobalt_oxide_dust"
+			},
+			{
+				item: "gtceu:arsenic_trioxide_dust"
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_cobaltite_dust")
+	
+	// Tetrahedrite -> Cupric Oxide + Antimony Trioxide
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/tetrahedrite"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 2000
+			},
+			{
+				item: "gtceu:cupric_oxide_dust"
+			},
+			{
+				item: "gtceu:tiny_antimony_trioxide_dust",
+				count: 3
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_tetrahedrite_dust")
+	
+	// Galena -> Massicot + Silver
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/galena"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 1000
+			},
+			{
+				item: "gtceu:massicot_dust"
+			},
+			{
+				item: "gtceu:silver_nugget",
+				count: 6
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_galena_dust")
+	
+	// Sphalerite -> Zincite
+	event.custom({
+		type: "vintageimprovements:pressurizing",
+		secondaryFluidOutput: 0,
+		heatRequirement: "heated",
+		ingredients: [ 
+			{
+				tag: "forge:dusts/sphalerite"
+			}
+		],
+		results: [
+			{
+				fluid: "gtceu:sulfur_dioxide",
+				amount: 1000
+			},
+			{
+				item: "gtceu:zincite_dust"
+			},
+			{
+				item: "gtceu:ash_dust",
+				chance: 0.11
+			}
+		],
+		processingTime: 200
+	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_sphalerite_dust")
 }
