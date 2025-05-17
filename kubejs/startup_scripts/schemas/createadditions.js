@@ -1,7 +1,7 @@
 // priority 100
 
 let registerCreateAdditionsSchemas = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event) => {
-	const keys = global.schemas.keys
+	const [comps, keys] = [global.schemas.components, global.schemas.keys]
 	const Component = (string, args) => event.components[string](args)
 	
 	const namespace = event.namespace("createaddition")
@@ -14,7 +14,7 @@ let registerCreateAdditionsSchemas = (/** @type {Internal.RecipeSchemaRegistryEv
 	namespace.register("rolling", rollingSchema)
 	
 	let liquidBurningSchema = new $RecipeSchema(
-		Component("inputFluid").key("input"),
+		comps.create_fluid_ingredient.or(Component("inputFluid")).key("input"),
 		Component("intNumber").key("burnTime"),
 		Component("bool").key("superheated").defaultOptional()
 	)
