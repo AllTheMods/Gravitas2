@@ -1454,8 +1454,8 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemInputs("#forge:ingots/brass")
     .notConsumable("gtceu:small_gear_extruder_mold")
     .itemOutputs("2x tfc:brass_mechanisms")
-    .duration(100)
-    .EUt(ULV)
+    .duration(80)
+    .EUt(64)
 
   //integrated omni/mono
 
