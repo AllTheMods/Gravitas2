@@ -592,6 +592,12 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             `tfc:sand/${color}`
             ],
             `tfc:raw_sandstone/${color}`)
+        event.recipes.vintageimprovements.polishing(
+            `tfc:smooth_sandstone/${color}`,
+            `tfc:raw_sandstone/${color}`,
+            40
+            )
+            .id(`gregitas:polishing/sandstone/${color}`)
     });
 
     event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
