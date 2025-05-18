@@ -1,0 +1,21 @@
+{
+  "type": "tfc:alloy",
+  "contents": [
+    {
+      "metal": "tfc:bronze",
+      "max": 0.80,
+      "min": 0.75
+    },
+    {
+      "metal": "tfc:tin",
+      "max": 0.15,
+      "min": 0.10
+    },
+	{
+      "metal": "tfc_ie_addon:lead",
+      "max": 0.15,
+      "min": 0.10
+    }
+  ],
+  "result": "gtceu:potin"
+}

@@ -696,31 +696,22 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         existing_crushing_recipes.add(`${r.json.get("ingredients").get(0)}`);
     })
     event.forEachRecipe({ type: "tfc:quern" }, r => {
-        let ingredient = `${r.json.get("ingredient")}`
-        if(!existing_crushing_recipes.has(ingredient)){
-            let new_recipe = r.json
-            let ingredientValue = new_recipe.remove("ingredient")
-            let resultValue = new_recipe.remove("result")
-            new_recipe.add("ingredients", [ingredientValue])
-
-            if(resultValue.has("count") && resultValue.get("count") > 1) {
-                // create-style result display, rather than using item count
-                let count = resultValue.remove("count")
-                let resultsArray = []
-                for (let i = 0; i < count; i++) {
-                    resultsArray.push(resultValue)
-                }
-                new_recipe.add("results", resultsArray)
-            } else {
-                new_recipe.add("results", [resultValue])
-            }
-
-            new_recipe.add("type", "create:crushing")
-            event.custom(new_recipe)
-
-            new_recipe.add("type", "create:milling")
-            event.custom(new_recipe)
+        let ingredient = r.json.get("ingredient")
+        let result = r.json.get("result")
+        
+        if (existing_crushing_recipes.has(`${ingredient}`))
+            return
+        
+        if (`${ingredient.get("type")}` == '"tfc:not_rotten"') {
+            if (existing_crushing_recipes.has(`${ingredient.get("ingredient")}`))
+                return
         }
+                
+        // Can't handle this kind of wacky recipe
+        if (result.get("modifiers"))
+            return
+
+        event.recipes.create.milling(result, ingredient)
     })
 
     // GT ore washing to Create washing (no byproducts)
