@@ -224,6 +224,13 @@
 			dependencies: ["2F61AEB27357B362"]
 			description: ["{gravitas.quest.new_age.desc.magnet_ferrite}"]
 			id: "1CDDA789D2EC2118"
+			rewards: [{
+				count: 2
+				id: "38C7B44223D5AE52"
+				item: "create_new_age:magnetite_block"
+				random_bonus: 2
+				type: "item"
+			}]
 			tasks: [{
 				id: "7F9E3D829C3C8318"
 				item: "create_new_age:magnetite_block"
