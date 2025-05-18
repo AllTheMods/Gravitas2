@@ -201,14 +201,23 @@ let create_new_age = (/** @type {Internal.RecipesEventJS} */ event) => {
 		}
 	).id("create_new_age:reactor/reactor_rod")
 	
-	// Add a Gregtech recipe for Overcharged Diamond
+	// Alternate recipes for Overcharged Diamond
+	// GregTech
 	event.recipes.gtceu
 		.polarizer("overcharged_diamond")
 		.itemInputs("#forge:gems/diamond")
 		.itemOutputs("create_new_age:overcharged_diamond")
 		.duration(125)
 		.EUt(20)
-
+	
+	// Crafts & Additions
+	event.recipes.createaddition.charging("create_new_age:overcharged_diamond", "#forge:gems/diamond", 10000).maxChargeRate(1000)
+		.id("create_new_age:charging/diamond")
+	
+	// AE2
+	event.recipes.ae2.charger("create_new_age:overcharged_diamond", "#forge:gems/diamond")
+		.id("create_new_age:ae2_charger/diamond")
+	
 	
 	// Import energizing recipes from Gregtech polarizer
 	event.forEachRecipe({ mod: 'gtceu', type: 'gtceu:polarizer'}, (recipe) => {
