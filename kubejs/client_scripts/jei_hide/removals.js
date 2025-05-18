@@ -53,6 +53,8 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     //IE
     event.hide("immersiveengineering:cokebrick")
     event.hide("immersiveengineering:slab_cokebrick")
+    event.hide("immersiveengineering:alloybrick")
+    event.hide("immersiveengineering:slab_alloybrick")
     event.hide("immersiveengineering:blastbrick")
     event.hide("immersiveengineering:blastbrick_reinforced")
     event.hide("immersiveengineering:blastfurnace_preheater")

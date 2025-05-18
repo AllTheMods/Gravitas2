@@ -120,6 +120,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ mod: "apotheosis"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/blue_steel")
   //Create
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
+  event.replaceInput({ id: "create:crafting/appliances/slime_ball" }, "create:dough", "#tfc:foods/dough")
   event.replaceOutput({ id: "minecraft:dried_kelp" }, "minecraft:dried_kelp", "tfc:food/dried_kelp")
   event.replaceInput({ mod: "create" }, "#minecraft:planks", "#forge:treated_wood")
   event.replaceInput(
@@ -162,7 +163,7 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
     event.replaceInput(
       { type: "minecraft:crafting_shaped" },
       `tfc:metal/double_sheet/${metal}`,
-      `#forge:plates/double/${metal}`
+      `#forge:double_plates/${metal}`
     )
   })
 

@@ -197,8 +197,14 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:tools/hammers", "#tfc:hammers")
   event.add("forge:tools/knives", ["#tfc:knives"])
 
-  event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/knives", "#forge:tools/files"])
+  event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/wrench", "#forge:tools/knives", "#forge:tools/files"])
 
+  // Tagging TFC gems
+  let tfcUntaggedGems = ["amethyst", "opal", "pyrite", "ruby", "sapphire", "topaz"]
+  tfcUntaggedGems.forEach((gem) => {
+    event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
+  })
+  
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
@@ -335,12 +341,20 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     "mininggadgets:mininggadget",
     "mininggadgets:mininggadget_fancy",
     "mininggadgets:mininggadget_simple",
-    "create:wrench",
+    "integrateddynamics:labeller",
+    "integrateddynamics:portable_logic_programmer",
+    "tfc:wool_cloth",
     "buildinggadgets2:gadget_building",
     "buildinggadgets2:gadget_exchanging",
     "buildinggadgets2:gadget_copy_paste",
     "buildinggadgets2:gadget_cut_paste",
     "buildinggadgets2:gadget_destruction",
+    "framedblocks:framed_hammer",
+    "framedblocks:framed_screwdriver",
+    "#immersiveengineering:toolbox/tools",
+    "gtceu:prospector.lv",
+    "gtceu:prospector.hv",
+    "gtceu:prospector.luv",
     "expatternprovider:fishbig",
     "#forge:tools",
     "enderio:dark_steel_sword"
