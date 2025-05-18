@@ -7,7 +7,13 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
         "tfc:metal/rose_gold",
         "firmalife:metal/stainless_steel",
         "gtceu:damascus_steel",
-        "gtceu:cobalt_brass"
+        "gtceu:cobalt_brass",
+        "gtceu:rubber",
+        "gtceu:silicone_rubber",
+        "gtceu:styrene_butadiene_rubber",
+        "gtceu:polyethylene",
+        "gtceu:polytetrafluoroethylene",
+        "gtceu:polybenzimidazole"
     ])
 
     event.add("tfc:usable_in_wooden_bucket", [

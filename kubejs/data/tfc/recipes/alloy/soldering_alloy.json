@@ -1,0 +1,21 @@
+{
+  "type": "tfc:alloy",
+  "contents": [
+    {
+      "metal": "tfc:tin",
+      "max": 0.70,
+      "min": 0.50
+    },
+    {
+      "metal": "tfc_ie_addon:lead",
+      "max": 0.35,
+      "min": 0.25
+    },
+    {
+      "metal": "gtceu:antimony",
+      "max": 0.12,
+      "min": 0.08
+    }
+  ],
+  "result": "gtceu:soldering_alloy"
+}
