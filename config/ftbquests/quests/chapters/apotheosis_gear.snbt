@@ -12,7 +12,7 @@
 			rotation: 0.0d
 			width: 7.135483870967742d
 			x: 0.0d
-			y: -2.5d
+			y: -3.0d
 		}
 		{
 			height: 2.0d
@@ -100,7 +100,10 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["5A0305BB1F8EA932"]
+			dependencies: [
+				"5A0305BB1F8EA932"
+				"597BF02F3CDA95BC"
+			]
 			description: ["{gravitas.quest.affixes.desc.dust}"]
 			id: "40926361B5A17F74"
 			rewards: [{
@@ -202,7 +205,7 @@
 			}]
 			title: "{gravitas.quest.affixes.gems}"
 			x: 0.0d
-			y: -0.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["40926361B5A17F74"]
@@ -580,6 +583,36 @@
 			]
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["1453F05BD3D1AB45"]
+			id: "597BF02F3CDA95BC"
+			tasks: [{
+				id: "3BF6CF316A0B6ED4"
+				item: "minecraft:anvil"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C1BB559DD83E88F"]
+			id: "1453F05BD3D1AB45"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "4446CB361BC6F776"
+					item: "gtceu:lv_fluid_solidifier"
+					type: "item"
+				}
+				{
+					id: "61C4E77F2224E777"
+					item: "gtceu:lv_extractor"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -1.0d
 		}
 	]
 	title: "{gravitas.chapters.8.title}"

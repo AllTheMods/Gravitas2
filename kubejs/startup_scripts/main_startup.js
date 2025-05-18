@@ -21,14 +21,14 @@ StartupEvents.registry("fluid", (event) => {
 })
 
 const $ConfigHolder = Java.loadClass("com.gregtechceu.gtceu.config.ConfigHolder")
-const $ConfigHolder$INSTANCE = $ConfigHolder.INSTANCE
 
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
   Platform.setModName("gregitas-core", "Gravitas²")
+  let $ConfigHolder$INSTANCE = $ConfigHolder.INSTANCE
   if ($ConfigHolder$INSTANCE == null) $ConfigHolder.init()
-  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enablePlatformConverters) return
-  console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enablePlatformConverters` to true!")
+  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enableFEConverters) return
+  console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enableFEConverters` to true!")
 })
 
 StartupEvents.postInit((event) => {
@@ -78,6 +78,10 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerWoodencogFillingSchema(event)
   registerAe2ChargerSchema(event)
   registerAe2InscriberSchema(event)
+  registerVintageImprovementsSchemas(event)
+  registerCreateAdditionsSchemas(event)
+  registerCreateDieselGeneratorsSchemas(event)
+  registerCreateNewAgeSchemas(event)
 })
 
 // Server only

@@ -226,5 +226,31 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
                             "tfc:rock/magma/dacite"
                            ])
 
-                         
+  event.add("minecraft:crops", ["#tfc:crops"])
+  
+  // New Age generator magnet blocks
+  event.add("create_new_age:magnets/strength_4", ["#forge:storage_blocks/magnetic_iron", "#forge:storage_blocks/magnetic_wrought_iron"])
+  event.add("create_new_age:magnets/strength_6", "#forge:storage_blocks/magnetic_steel")
+  event.add("create_new_age:magnets/strength_8", "#forge:storage_blocks/magnetic_neodymium")
+  event.add("create_new_age:magnets/strength_12", "#forge:storage_blocks/magnetic_samarium")
+  event.add("create_new_age:custom_magnet",
+    [
+      "#create_new_age:magnets/strength_4", "#create_new_age:magnets/strength_6",
+      "#create_new_age:magnets/strength_8", "#create_new_age:magnets/strength_12",
+    ]
+  )
+  
+  // New Age radiation shielding blocks
+  // Solid lead blocks
+  event.add("create_new_age:stops_radiation", ["#forge:storage_blocks/lead", "#forge:storage_blocks/raw_lead"])
+  // Partial lead blocks
+  event.add("create_new_age:stops_radiation", ["tfc_ie_addon:metal/block/lead", "immersiveengineering:concrete_leaded"])
+  // Reactor blocks from Thorium Reactors
+  event.add("create_new_age:stops_radiation", 
+    [
+      "thoriumreactors:reactor_casing", "thoriumreactors:reactor_glass", 
+      "thoriumreactors:reactor_valve", "thoriumreactors:reactor_core",
+      "thoriumreactors:reactor_controller", "thoriumreactors:reactor_rod_controller",
+    ]
+  )
 }

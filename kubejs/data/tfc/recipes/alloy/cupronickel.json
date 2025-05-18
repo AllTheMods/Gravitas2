@@ -1,0 +1,16 @@
+{
+  "type": "tfc:alloy",
+  "contents": [
+    {
+      "metal": "tfc:copper",
+      "max": 0.80,
+      "min": 0.40
+    },
+    {
+      "metal": "tfc:nickel",
+      "max": 0.60,
+      "min": 0.20
+    }
+  ],
+  "result": "gtceu:cupronickel"
+}

@@ -182,7 +182,7 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     temp = Math.max(230, temp) // set at minimum temp like Tin
     addTFCHeatCapability(ingot.toString(), 2.857, Math.floor(temp * 0.6), Math.floor(temp * 0.8))
     addTFCMetalFluid(fluid.toString(), 3, temp, 0.0085, "#forge:ingots/" + id, "#forge:plates/" + id, "#forge:double_ingots/" + id)
-    if (temp > 1540) return // skip if temp is over Red/Blue Steel
+    if (temp > 1650) return // skip if temp is over what a charcoal forge with bellows can reach
     addTFCHeatingRecipe(ingot.toString(), fluid.toString(), temp, 144)
     addTFCCastingRecipe(ingot.toString(), fluid.toString(), 144)
   })
@@ -270,6 +270,11 @@ let addGregTechIngotsToTFC = (/** @type {Internal.DataPackEventJS} */ event) => 
     },
     {
       ore: "gtceu:raw_garnierite",
+      liquid: "tfc:metal/nickel",
+      amount: 72
+    },
+    {
+      ore:  "gtceu:raw_nickel",
       liquid: "tfc:metal/nickel",
       amount: 72
     },

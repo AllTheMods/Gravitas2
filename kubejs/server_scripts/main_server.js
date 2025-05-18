@@ -9,6 +9,15 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   gtceuAdd(event)
   createAdd(event)
+  centrifugeAdd(event)
+  viSulfuricAcid(event)
+  wiresAdd(event)
+  addOreConversions(event)
+  create_new_age(event)
+  createMaterialProcessingAdd(event)
+  coilingTweak(event)
+  advancedCreateRecipes(event)
+  pressurizedBasinAdd(event)
   spaceDustChain(event)
   certusSemiconductors(event)
   gregifyAE2(event)
@@ -65,6 +74,7 @@ MoreJSEvents.structureAfterPlace((event) => {
 
 ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
+  addTFCPartHeatingRecipes(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
   addGenericData(event)

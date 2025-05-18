@@ -1,0 +1,16 @@
+{
+  "type": "tfc:alloy",
+  "contents": [
+    {
+      "metal": "tfc:tin",
+      "max": 0.60,
+      "min": 0.40
+    },
+    {
+      "metal": "tfc:cast_iron",
+      "max": 0.60,
+      "min": 0.40
+    }
+  ],
+  "result": "gtceu:tin_alloy"
+}

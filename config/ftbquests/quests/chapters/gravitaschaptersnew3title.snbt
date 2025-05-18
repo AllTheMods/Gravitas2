@@ -28,6 +28,18 @@
 			x: -9.0d
 			y: 3.5d
 		}
+		{
+			id: "23B745C27A7164B5"
+			linked_quest: "1764A3635A95D162"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			id: "70748678A4DFD422"
+			linked_quest: "7F8C6F7EA5F4CC8F"
+			x: -6.0d
+			y: 0.0d
+		}
 	]
 	quests: [
 		{
@@ -506,14 +518,15 @@
 					type: "item"
 				}
 				{
-					id: "2C78BC403E033364"
+					id: "647A2EA955572BC2"
 					item: {
 						Count: 1
-						id: "create:sand_paper"
+						id: "itemfilters:tag"
 						tag: {
-							Damage: 0
+							value: "create:sandpaper"
 						}
 					}
+					title: "Any #create:sandpaper"
 					type: "item"
 				}
 			]
@@ -551,35 +564,9 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["00F25F9C1F5B5DBB"]
-			description: ["{gravitas.quest.stage3.desc.mechcraft}"]
-			id: "46BE30EFB8425540"
-			tasks: [{
-				count: 15L
-				id: "0CCE93B76AEC025C"
-				item: { Count: 21, id: "create:mechanical_crafter" }
-				type: "item"
-			}]
-			x: -4.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["46BE30EFB8425540"]
-			id: "693B46904121EA55"
-			subtitle: "{gravitas.quest.stage3.subt.crushing}"
-			tasks: [{
-				count: 2L
-				id: "672EC68A84EA54F9"
-				item: { Count: 2, id: "create:crushing_wheel" }
-				type: "item"
-			}]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
 			dependencies: [
-				"693B46904121EA55"
 				"554DA4CDDAC7CBB1"
+				"7F8C6F7EA5F4CC8F"
 			]
 			id: "7389402160789056"
 			subtitle: "{gravitas.quest.stage3.subt.rawrubber}"
@@ -938,8 +925,8 @@
 				title: "Quests By AllTheMods"
 				type: "checkmark"
 			}]
-			x: -4.0d
-			y: -1.5d
+			x: -1.0d
+			y: -2.0d
 		}
 		{
 			id: "78729E7428CA3CC5"
@@ -950,6 +937,81 @@
 			}]
 			x: 2.5d
 			y: -1.0d
+		}
+		{
+			dependencies: [
+				"6D4C17EC5FAE5B56"
+				"00F25F9C1F5B5DBB"
+			]
+			description: ["{gravitas.quest.stage3.desc.ankh}"]
+			id: "083350648FB5B236"
+			rewards: [{
+				id: "1ACB6AC139E7818E"
+				item: "tombstone:scroll_of_knowledge"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "752328799C693DF6"
+					item: {
+						Count: 1
+						id: "tombstone:ankh_of_prayer"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "39E550D74E76FE79"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "tombstone:decorative_graves"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			description: ["{gravitas.quest.stage3.desc.undeath}"]
+			id: "6D4C17EC5FAE5B56"
+			shape: "gear"
+			tasks: [{
+				id: "7073C9B46A245141"
+				item: "tombstone:essence_of_undeath"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["15BC783BB17EE2D4"]
+			id: "50E6BB7EC1C5E898"
+			optional: true
+			tasks: [{
+				id: "15D1B7CA5074EB05"
+				item: "tfc:metal/bucket/red_steel"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4C8385E2ACE406EE"]
+			id: "604AEF071F2CDA71"
+			optional: true
+			tasks: [{
+				id: "011A6B96C7380976"
+				item: "tfc:metal/bucket/blue_steel"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.5d
 		}
 	]
 	title: "{gravitas.chapters.3.title}"

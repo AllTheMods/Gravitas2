@@ -135,8 +135,6 @@ const fish = [
   "tfc:food/tropical_fish"
 ]
 
-const ores = ["hematite", "cassiterite", "garnierite", "malachite", "magnetite", "sphalerite", "tetrahedrite"]
-
 const tfcgems = [
   "topaz",
   "sapphire",
@@ -149,8 +147,6 @@ const tfcgems = [
   "sylvite",
   "saltpeter"
 ]
-
-const natores = ["silver", "copper", "gold"]
 
 const createstone = ["veridium", "asurine", "crimsite", "ochrum"]
 
@@ -480,6 +476,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.recipes.create.pressing("gtceu:bismuth_bronze_plate", ["#forge:ingots/bismuth_bronze"])
 
 
+
   colorMap.forEach((color) => {
     event
       .custom({
@@ -556,11 +553,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Create Start
 
-  shaped("create:millstone", [" M ", " G ", " Q "], {
-    M: "tfc:handstone",
-    G: "create:cogwheel",
-    Q: "tfc:quern"
-  })
   gemStonesA.forEach((gemStone) => {
     event.custom({
       type: "tfc:damage_inputs_shapeless_crafting",
@@ -585,63 +577,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
       }
     })
+    event.recipes.vintageimprovements
+      .polishing(`tfc:gem/${gemStone}`, `tfc:ore/${gemStone}`, 40)
+      .speedLimits(1)
   })
   event.shapeless("2x minecraft:blaze_powder", ["#forge:tools/mortars", "minecraft:blaze_rod"])
   event.shapeless("1x gtceu:saltpeter_dust", ["4x tfc:powder/saltpeter"])
-  event.recipes.create.pressing(
-    [{ item: "tfc:refined_iron_bloom" }],
+  event.shaped(
+    'tfc:powder/saltpeter',
     [
-      {
-        type: "tfc:heatable",
-        min_temp: 921,
-        ingredient: {
-          item: "tfc:raw_iron_bloom"
-        }
-      }
-    ]
-  )
-  event.recipes.create.pressing(
-    [{ item: "gtceu:wrought_iron_ingot" }],
-    [
-      {
-        type: "tfc:heatable",
-        min_temp: 921,
-        ingredient: {
-          item: "tfc:refined_iron_bloom"
-        }
-      }
-    ]
-  )
-  event.custom({
-    type: "create:deploying",
-    ingredients: [
-      {
-        item: "create:shaft"
-      },
-      { tag: "forge:treated_wood" }
+      '  S',
+      '   ',
+      '   ',
     ],
-    results: [{ item: "create:cogwheel" }]
-  })
-  shaped("3x create:belt_connector", ["   ", "LLL", "MRM"], {
-    L: "#tfc:leather_knapping",
-    M: "tfc:brass_mechanisms",
-    R: "#forge:rods/wrought_iron"
-  })
-  shaped("6x create:belt_connector", ["   ", "LLL", "MRM"], {
-    L: "#tfc:leather_knapping",
-    M: "#forge:gears/wrought_iron",
-    R: "#forge:rods/steel"
-  })
-  event.custom({
-    type: "create:deploying",
-    ingredients: [
-      {
-        item: "create:cogwheel"
-      },
-      { tag: "forge:treated_wood" }
-    ],
-    results: [{ item: "create:large_cogwheel" }]
-  })
+    {
+      S: 'gtceu:saltpeter_dust'
+    }
+  )
   //Create End
 
   //GTCEU Start
@@ -1064,19 +1016,42 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "minecraft:fire_charge",
     F: "tfc:crucible"
   })
+  
+  // Replace Railcraft cut firestone recipe
+  // (the original recipe requires vanilla netherite pickaxe, and thus is uncraftable)
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+	  type: "minecraft:crafting_shapeless",
+	  ingredients: [
+	    {item: "minecraft:netherite_ingot"},
+	    {item: "railcraft:raw_firestone"},
+	    {tag: "tfc:chisels"},
+	    {tag: "forge:tools/hammers"}
+	  ],
+      result: {item: "railcraft:cut_firestone"}
+    }
+  }).id('railcraft:cut_firestone')
+
+  //Railcraft End
 
   shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "#forge:chests/wooden"
   })
-
   shaped("framedblocks:framed_secret_storage", ["RFR", "FCF", "RFR"], {
     F: "framedblocks:framed_cube",
     R: "#forge:rods/cast_iron",
     C: "framedblocks:framed_chest"
   })
-  //Railcraft End
+  // Blocks needed for schematicannon
+  shaped("framedblocks:framed_double_slab", ["S", "S"], {
+    S: "framedblocks:framed_slab"
+  })
+  shaped("framedblocks:framed_double_panel", ["PP"], {
+    P: "framedblocks:framed_panel"
+  })
 
   //ThoriumReactors Start
   event.recipes.gtceu
@@ -1593,6 +1568,14 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`4x tfc:rock/loose/${stone}`)
       .duration(60)
       .EUt(LV)
+
+    event.recipes.vintageimprovements
+      .polishing(`tfc:brick/${stone}`, [[`tfc:rock/loose/${stone}`, `tfc:rock/mossy_loose/${stone}`]], 10)
+      .id(`gregitas:polishing/brick/${stone}`)
+
+    event.recipes.vintageimprovements
+      .polishing(`tfc:rock/smooth/${stone}`, `tfc:rock/raw/${stone}`, 40)
+      .id(`gregitas:polishing/stone/${stone}`)
   })
 
   tfcStone2.forEach((stone) => {
@@ -1655,6 +1638,15 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(300)
     .EUt(MV)
 
+    event.recipes.gtceu
+    .electric_blast_furnace("terracotta")
+    .itemInputs("#tfc:mud")
+    .inputFluids(Fluid.of("gtceu:oxygen", 50))
+    .itemOutputs("minecraft:terracotta")
+    .blastFurnaceTemp(1000)
+    .duration(10)
+    .EUt(MV)
+
   event.recipes.gtceu
     .alloy_smelter("copper_alloy")
     .itemInputs("#forge:silicon", "#forge:ingots/copper")
@@ -1677,7 +1669,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(MV)
   event.recipes.gtceu
     .alloy_smelter("vanilla_iron")
-    .itemInputs("#forge:ingots/cast_iron", "tfc:powder/lime")
+    .itemInputs("#forge:ingots/cast_iron", "#forge:dusts/quicklime")
     .itemOutputs("minecraft:iron_ingot")
     .duration(250)
     .EUt(LV)
@@ -1912,10 +1904,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.stonecutting("3x railways:smokestack_streamlined", "#tfc:lamps")
     event.stonecutting("3x railways:smokestack_woodburner", "#tfc:lamps")
   }
-
-  // railways locometal
-  event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
-
+// railways locometal
+event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
   //TFC Jars
   event.recipes.gtceu
     .alloy_smelter("empty_jar")
@@ -2022,82 +2012,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: "minecraft:redstone_torch"
   })
 
-  //tfc ore conversion
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_rich_${ores}`)
-      .itemInputs(`3x tfc:ore/rich_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_normal_${ores}`)
-      .itemInputs(`4x tfc:ore/normal_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_poor_${ores}`)
-      .itemInputs(`6x tfc:ore/poor_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  ores.forEach((ores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_small_${ores}`)
-      .itemInputs(`9x tfc:ore/small_${ores}`)
-      .itemOutputs(`gtceu:crushed_${ores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  //tfc ore conversion native
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_rich_${natores}`)
-      .itemInputs(`3x tfc:ore/rich_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_normal_${natores}`)
-      .itemInputs(`4x tfc:ore/normal_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_poor_${natores}`)
-      .itemInputs(`6x tfc:ore/poor_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
-  natores.forEach((natores) => {
-    event.recipes.gtceu
-      .compressor(`gregitas:conversion_small_${natores}`)
-      .itemInputs(`9x tfc:ore/small_native_${natores}`)
-      .itemOutputs(`gtceu:crushed_${natores}_ore`)
-      .duration(40)
-      .EUt(HV)
-  })
-
   //tfc jams
 
   jams.forEach((jams) => {
@@ -2121,20 +2035,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(40)
       .EUt(LV)
   })
+ // tfc plant dyes
 
-  // tfc plant dyes
+ dyes.forEach((dye) => {
+  event.recipes.create.crushing([`2x minecraft:${dye}_dye`], `#tfc:makes_${dye}_dye`, 250)
 
-  dyes.forEach((dye) => {
-    event.recipes.create.crushing([`2x minecraft:${dye}_dye`], `#tfc:makes_${dye}_dye`, 250)
-
-    event.recipes.gtceu
-      .macerator(`gregitas:macerator_tfc_${dye}_dye`)
-      .itemInputs(`#tfc:makes_${dye}_dye`)
-      .itemOutputs(`2x minecraft:${dye}_dye`)
-      .duration(20)
-      .EUt(LV)
-  })
-
+  event.recipes.gtceu
+    .macerator(`gregitas:macerator_tfc_${dye}_dye`)
+    .itemInputs(`#tfc:makes_${dye}_dye`)
+    .itemOutputs(`2x minecraft:${dye}_dye`)
+    .duration(20)
+    .EUt(LV)
+})
   //tfc liquid dyes
 
   dyes.forEach((dyes) => {
@@ -2186,176 +2098,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(40)
       .EUt(LV)
   })
-
-  //tfc ore conversion misc
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_chromite`)
-    .itemInputs(`3x firmalife:ore/rich_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_chromite`)
-    .itemInputs(`4x firmalife:ore/normal_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_chromite`)
-    .itemInputs(`6x firmalife:ore/poor_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_chromite`)
-    .itemInputs(`9x firmalife:ore/small_chromite`)
-    .itemOutputs(`gtceu:crushed_chromite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_uraninite`)
-    .itemInputs(`3x tfc_ie_addon:ore/rich_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_uraninite`)
-    .itemInputs(`4x tfc_ie_addon:ore/normal_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_uraninite`)
-    .itemInputs(`6x tfc_ie_addon:ore/poor_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_uraninite`)
-    .itemInputs(`9x tfc_ie_addon:ore/small_uraninite`)
-    .itemOutputs(`gtceu:crushed_uraninite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_bauxite`)
-    .itemInputs(`3x tfc_ie_addon:ore/rich_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_bauxite`)
-    .itemInputs(`4x tfc_ie_addon:ore/normal_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_bauxite`)
-    .itemInputs(`6x tfc_ie_addon:ore/poor_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_bauxite`)
-    .itemInputs(`9x tfc_ie_addon:ore/small_bauxite`)
-    .itemOutputs(`gtceu:crushed_bauxite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_galena`)
-    .itemInputs(`3x firmalife:ore/rich_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_galena`)
-    .itemInputs(`4x firmalife:ore/normal_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_galena`)
-    .itemInputs(`6x firmalife:ore/poor_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_galena`)
-    .itemInputs(`9x firmalife:ore/small_galena`)
-    .itemOutputs(`gtceu:crushed_galena_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_rich_limonite`)
-    .itemInputs(`3x tfc:ore/rich_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_normal_limonite`)
-    .itemInputs(`4x tfc:ore/normal_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_poor_limonite`)
-    .itemInputs(`6x tfc:ore/poor_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_small_limonite`)
-    .itemInputs(`9x tfc:ore/small_limonite`)
-    .itemOutputs(`gtceu:crushed_yellow_limonite_ore`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_rich`)
-    .itemInputs(`3x tfc:ore/rich_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_normal`)
-    .itemInputs(`4x tfc:ore/normal_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_poor`)
-    .itemInputs(`6x tfc:ore/poor_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
-
-  event.recipes.gtceu
-    .compressor(`gregitas:conversion_bismuth_small`)
-    .itemInputs(`9x tfc:ore/small_bismuthinite`)
-    .itemOutputs(`gtceu:bismuth_dust`)
-    .duration(40)
-    .EUt(HV)
 
   //tfc gem macerating
 
@@ -2723,7 +2465,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(20)
 
-  event.recipes.gtceu
+    event.recipes.gtceu
     .macerator("gregitas:crushed_crackle")
     .itemInputs("#iceandfire:crackled_blocks")
     .itemOutputs("2x gregitas:crushed_crackle")
@@ -2731,7 +2473,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-  event.recipes.gtceu
+    event.recipes.gtceu
     .macerator("gregitas:crushed_char")
     .itemInputs("#iceandfire:charred_blocks")
     .itemOutputs("2x gregitas:crushed_char")
@@ -2739,7 +2481,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-  event.recipes.gtceu
+    event.recipes.gtceu
     .macerator("gregitas:crushed_frostburn")
     .itemInputs("#iceandfire:frozen_blocks")
     .itemOutputs("2x gregitas:crushed_frostburn")
@@ -2747,7 +2489,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(180)
     .EUt(80)
 
-  event.recipes.gtceu
+    event.recipes.gtceu
     .centrifuge("gregitas:crushed_crackle_outputs")
     .itemInputs("gregitas:crushed_crackle")
     .chancedOutput("gtceu:impure_tungstate_dust", 320, 1)
@@ -2757,7 +2499,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(420)
 
-  event.recipes.gtceu
+    event.recipes.gtceu
     .centrifuge("gregitas:crushed_char_outputs")
     .itemInputs("gregitas:crushed_char")
     .chancedOutput("gtceu:tiny_plutonium_dust", 1320, 1)
@@ -2766,7 +2508,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(160)
     .EUt(420)
 
-  event.recipes.gtceu
+    event.recipes.gtceu
     .centrifuge("gregitas:crushed_frostburn_outputs")
     .itemInputs("gregitas:crushed_frostburn")
     .chancedOutput("gtceu:tiny_platinum_group_sludge_dust", 1320, 3)
@@ -2775,6 +2517,17 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .outputFluids(Fluid.of("gtceu:liquid_air", 10))
     .duration(160)
     .EUt(128)
+
+    event.recipes.gtceu
+    .centrifuge("gregitas:centrifuged_kapok_log")
+    .itemInputs("tfc:wood/log/kapok")
+    .chancedOutput("gtceu:sticky_resin", 5000, 1200)
+    .chancedOutput("gtceu:plant_ball", 3750, 900)
+    .chancedOutput("gtceu:carbon_dust", 2500, 600)
+    .chancedOutput("gtceu:wood_dust", 2500, 700)
+    .outputFluids(Fluid.of("gtceu:methane", 60))
+    .duration(200)
+    .EUt(20)
 
   //Sophisticated Backpacks
   shaped("sophisticatedbackpacks:tool_swapper_upgrade", ["BFB", "CGD", "AEA"], {
@@ -2786,4 +2539,399 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     E: Item.of("tfc:metal/shovel/copper", '{Damage:0}'),
     F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
   }).id("gregitas:tool_swapper_upgrade")
+
+   //Firmalife
+  event.replaceInput(
+    { id: 'firmalife:crafting/solar_drier' },
+    'firmalife:metal/rod/stainless_steel',
+    '#forge:rods/aluminium'
+  )
+
+  // TFC Casting with Channels
+  event.recipes.minecraft.smelting('tfcchannelcasting:channel', 'tfcchannelcasting:unfired_channel')
+  event.recipes.minecraft.smelting('tfcchannelcasting:mold_table', 'tfcchannelcasting:unfired_mold_table')
+  event.recipes.minecraft.smelting('tfcchannelcasting:heart_mold', 'tfcchannelcasting:unfired_heart_mold')
+
+  event.recipes.gtceu
+  .assembler("gregitas:industrial_gears")
+  .itemInputs("gtceu:small_bronze_gear", "gtceu:small_iron_gear", "gtceu:aluminium_rod")
+  .inputFluids(Fluid.of("gtceu:soldering_alloy", 50))
+  .itemOutputs("immersive_aircraft:industrial_gears")
+  .duration(160)
+  .EUt(MV)
+
+  event.recipes.gtceu
+    .assembler("gregitas:steel_boiler")
+    .itemInputs("7x gtceu:steel_plate", "immersive_aircraft:boiler", "railcraft:solid_fueled_firebox")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:steel_boiler")
+    .duration(360)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:sturdy_pipes")
+    .itemInputs("3x gtceu:bronze_normal_fluid_pipe", "2x gtceu:steel_plate")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:sturdy_pipes")
+    .duration(260)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:air_hull")
+    .itemInputs("12x gtceu:stainless_steel_screw", "4x #tfc:lumber", "3x gtceu:aluminium_rod")
+    .itemOutputs("immersive_aircraft:hull")
+    .duration(160)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:landing_gear")
+    .itemInputs("4x gtceu:stainless_steel_screw", "2x gtceu:steel_minecart_wheels", "3x gtceu:aluminium_rod", "2x gtceu:rubber_sheet")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:improved_landing_gear")
+    .duration(260)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:hull_reinforcement")
+    .itemInputs("3x immersive_aircraft:hull", "6x gtceu:stainless_steel_plate", "32x gtceu:stainless_steel_screw", "2x gtceu:rubber_sheet")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:hull_reinforcement")
+    .duration(260)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:gyroscope")
+    .itemInputs("3x minecraft:redstone_comparator", "firmaciv:firmaciv_compass", "firmaciv:nav_clock", "firmaciv:sextant", "2x gtceu:aluminium_plate")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:gyroscope")
+    .duration(220)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:engine")
+    .itemInputs("2x createdieselgenerators:engine_piston", "gregitas:double_aluminium_ingot", "4x gtceu:aluminium_gear", "2x gtceu:copper_single_wire", "immersive_aircraft:steel_boiler", "gtceu:steel_rod")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:engine")
+    .duration(420)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:boiler")
+    .itemInputs("7x gtceu:bronze_plate", "tfc:crucible")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:boiler")
+    .duration(220)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:tunnel_digger")
+    .itemInputs("7x gtceu:bronze_plate", "6x gtceu:steel_frame", "4x immersive_aircraft:industrial_gears", "immersive_aircraft:engine", "12x gtceu:steel_minecart_wheels", "8x immersiveengineering:conveyor_basic", "immersive_machinery:iron_drill")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 500))
+    .itemOutputs("immersive_machinery:tunnel_digger")
+    .duration(420)
+    .EUt(MV)
+
+    event.recipes.gtceu
+    .assembler("gregitas:rotary_cannon")
+    .itemInputs("scguns:rapid_firing_unit", "4x scguns:gun_barrel", "scguns:heavy_gun_parts", "scguns:gun_magazine", "scguns:treated_brass_gun_frame", "create:metal_bracket","create:mechanical_bearing")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 200))
+    .itemOutputs("immersive_aircraft:rotary_cannon")
+    .duration(320)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:copperfin")
+    .itemInputs("immersive_aircraft:engine", "6x firmalife:reinforced_glass", "create:propeller", "create:copper_backtank", "4x #forge:plates/copper", "minecraft:conduit")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 1000))
+    .itemOutputs("immersive_machinery:copperfin")
+    .duration(320)
+    .EUt(MV)
+
+    shaped("minecraft:conduit", ["III", "IGI", "III"], {
+      I: "enderio:conduit_binder",
+      G: "create:propeller"
+    })
+
+    event.recipes.gtceu
+    .assembler("gregitas:quadrocopter")
+    .itemInputs("4x gtceu:lv_electric_motor", "8x minecraft:bamboo", "4x create:propeller", "4x minecraft:redstone_comparator")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 1000))
+    .itemOutputs("immersive_aircraft:quadrocopter")
+    .duration(420)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:biplane")
+    .itemInputs("immersive_aircraft:engine", "3x immersive_aircraft:hull", "create:propeller", "minecraft:lever")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:biplane")
+    .duration(420)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:airship")
+    .itemInputs("immersive_aircraft:engine", "6x immersive_aircraft:hull", "create:propeller", "6x immersive_aircraft:sail")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:airship")
+    .duration(320)
+    .EUt(MV)
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:cargo_airship")
+    .itemInputs("immersive_aircraft:engine", "6x immersive_aircraft:hull", "create:propeller", "6x immersive_aircraft:sail", "4x #forge:chests/wooden")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:cargo_airship")
+    .duration(360)
+    .EUt(MV)  
+
+    event.recipes.gtceu
+    .assembler("gregitas:warship")
+    .itemInputs("4x immersive_aircraft:engine", "9x immersive_aircraft:hull", "4x create:propeller", "12x immersive_aircraft:sail", "4x #forge:chests/wooden")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 400))
+    .itemOutputs("immersive_aircraft:warship")
+    .duration(420)
+    .EUt(MV)  
+
+    event.recipes.gtceu
+    .assembler("gregitas:crossbow")
+    .itemInputs("minecraft:crossbow","create:metal_bracket","create:mechanical_bearing")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:heavy_crossbow")
+    .duration(160)
+    .EUt(MV)  
+
+
+    event.recipes.gtceu
+    .assembler("gregitas:bomb_bay")
+    .itemInputs("4x create:mechanical_bearing","2x create:metal_bracket", "6x gtceu:steel_plate", "minecraft:tripwire_hook")
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 100))
+    .itemOutputs("immersive_aircraft:bomb_bay")
+    .duration(260)
+    .EUt(MV)  
+
+    shaped("headlight:headlight", [" I ", "LPL", "S S"], {
+      I: "minecraft:item_frame",
+      L: "#forge:leather",
+      P: "tfc:wool_cloth",
+      S: "minecraft:string"
+    })
+    
+    //LaserIO
+    event.recipes.gtceu
+      .chemical_reactor("gregitas:logic_chip_raw")
+      .itemInputs(
+        "1x gtceu:cpu_wafer",
+        "2x #forge:dusts/gold"
+      )
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs("4x laserio:logic_chip_raw")
+      .cleanroom(CleanroomType.CLEANROOM)
+      .duration(1200)
+      .EUt(482)
+
+    event.recipes.gtceu
+      .laser_engraver("gregitas:logic_chip")
+      .itemInputs('1x laserio:logic_chip_raw')
+      .notConsumable('1x #forge:lenses/white')
+      .itemOutputs('1x laserio:logic_chip')
+      .cleanroom(CleanroomType.CLEANROOM)
+      .duration(300)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:laser_node")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '4x #forge:plates/iron',
+        '4x gtceu:glass_plate'
+      )
+      .circuit(1)
+      .itemOutputs('1x laserio:laser_node')
+      .duration(80)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:laser_connector")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '3x #forge:plates/iron',
+        '1x gtceu:glass_plate'
+      )
+      .circuit(1)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:laser_connector')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:laser_connector_advanced")
+      .itemInputs(
+        '1x laserio:laser_connector',
+        '3x #forge:plates/gold',
+        '1x gtceu:quantum_eye'
+      )
+      .circuit(1)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:laser_connector_advanced')
+      .duration(360)
+      .EUt(1024)
+
+    event.recipes.gtceu
+      .assembler("gregitas:overclocker_card")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '4x #forge:plates/gold'
+      )
+      .circuit(1)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:overclocker_card')
+      .duration(320)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:overclocker_node")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '4x #forge:plates/diamond'
+      )
+      .circuit(1)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:overclocker_node')
+      .duration(320)
+      .EUt(1188)
+
+    event.recipes.gtceu
+      .assembler("gregitas:card_item")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '1x #forge:plates/gold',
+        '1x #forge:plates/steel'
+      )
+      .circuit(8)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:card_item')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:card_fluid_lapis")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '1x #forge:plates/gold',
+        '1x #forge:plates/lapis'
+      )
+      .circuit(8)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:card_fluid')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:card_fluid_lazurite")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '1x #forge:plates/gold',
+        '1x #forge:plates/lazurite'
+      )
+      .circuit(8)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:card_fluid')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:card_fluid_sodalite")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '1x #forge:plates/gold',
+        '1x #forge:plates/sodalite'
+      )
+      .circuit(8)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:card_fluid')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:card_redstone")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '1x #forge:plates/gold',
+        '4x #forge:fine_wires/red_alloy'
+      )
+      .circuit(8)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:card_redstone')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:card_energy")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '1x #forge:plates/gold',
+        '4x gtceu:red_alloy_single_cable'
+      )
+      .circuit(8)
+      .inputFluids(Fluid.of("gtceu:red_alloy", 144))
+      .itemOutputs('1x laserio:card_energy')
+      .duration(160)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .assembler("gregitas:filter_basic")
+      .itemInputs(
+        '1x laserio:logic_chip',
+        '3x #forge:rods/iron'
+      )
+      .circuit(1)
+      .inputFluids(Fluid.of("gtceu:glass", 144))
+      .itemOutputs('1x laserio:filter_basic')
+      .duration(40)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .canner("gregitas:filter_nbt")
+      .itemInputs(
+        '1x laserio:filter_basic',
+        '1x #minecraft:wool'
+      )
+      .itemOutputs('1x laserio:filter_nbt')
+      .duration(40)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .canner("gregitas:filter_mod")
+      .itemInputs(
+        '1x laserio:filter_basic',
+        '1x #minecraft:book'
+      )
+      .itemOutputs('1x laserio:filter_mod')
+      .duration(40)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .canner("gregitas:filter_tag")
+      .itemInputs(
+        '1x laserio:filter_basic',
+        '1x #minecraft:paper'
+      )
+      .itemOutputs('1x laserio:filter_tag')
+      .duration(40)
+      .EUt(512)
+
+    event.recipes.gtceu
+      .canner("gregitas:filter_count")
+      .itemInputs(
+        '1x laserio:filter_basic',
+        '1x minecraft:observer'
+      )
+      .itemOutputs('1x laserio:filter_count')
+      .duration(40)
+      .EUt(512)
+
 }

@@ -10,9 +10,14 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
 
 GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   event
-    .create("gas_centrifuge", "simple", 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
-    .rotationState(RotationState.NON_Y_AXIS)
-    ["recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)"]("gas_centrifuge", true, true)
+    .create("gas_centrifuge", "simple")
+    .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV, GTValues.UEV, GTValues.UIV, GTValues.UXV, GTValues.OpV, GTValues.MAX)
     .tankScalingFunction((tier) => tier * 3200)
-    .workableTieredHullRenderer(GTCEu.id("block/machines/gas_centrifuge"))
+    .definition((tier, builder) => {
+      builder
+    .rotationState(RotationState.NON_Y_AXIS)
+    .recipeType("gas_centrifuge")
+    .workableTieredHullRenderer("gtceu:block/machines/gas_centrifuge")
+    .langValue(`${GTValues.VA[tier]} Gas Centrifuge`)
+  })
 })

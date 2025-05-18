@@ -371,6 +371,26 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             type: 'create:mixing',
             ingredients: [
                 {
+                    fluid: 'tfc:salt_water',
+                    nbt: {},
+                    amount: 1000
+                },
+            ],
+            results: [
+                {
+                    item: 'gtceu:salt_dust',
+                    count: 1
+                }
+            ],
+            heatRequirement: "heated"
+        }
+    )
+
+    event.custom(
+        {
+            type: 'create:mixing',
+            ingredients: [
+                {
                     fluid: 'minecraft:water',
                     nbt: {},
                     amount: 1000
@@ -567,6 +587,19 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             `tfc:rock/mossy_cobble/${type.stone}` , 250)
     });
 
+    tfcSandColors.forEach((color) => {
+        event.recipes.create.crushing([
+            `tfc:sand/${color}`
+            ],
+            `tfc:raw_sandstone/${color}`)
+        event.recipes.vintageimprovements.polishing(
+            `tfc:smooth_sandstone/${color}`,
+            `tfc:raw_sandstone/${color}`,
+            40
+            )
+            .id(`gregitas:polishing/sandstone/${color}`)
+    });
+
     event.recipes.create.splashing(Item.of('minecraft:clay_ball').withChance(0.25), '#forge:sand', 250)
 
     event.recipes.create.milling('gregitas_core:igneous_dust', '#tfc:igneous_extrusive_rock', 250)
@@ -618,12 +651,28 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     addMoldChiselDeploying("create:andesite_alloy", "tfc:ceramic/ingot_mold", 0.1, "gregitas_core:igneous_alloy", 144)
     tfcSaplings.forEach(wood => {
         event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.1)], `tfc:wood/log/${wood}`, 150)
-        event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`)
-        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_log/${wood}`, 150)
+        event.recipes.create.cutting([`tfc:wood/stripped_log/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/log/${wood}`, 50)
+        event.recipes.create.cutting([`tfc:wood/stripped_wood/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/wood/${wood}`, 50)
+        event.recipes.create.cutting(`4x tfc:wood/support/${wood}`, `tfc:wood/stripped_log/${wood}`, 150)
+        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/wood/${wood}`, 150)
+        event.recipes.create.cutting([`12x tfc:wood/lumber/${wood}`, Item.of('gtceu:wood_dust').withChance(0.05)], `tfc:wood/stripped_wood/${wood}`, 150)
     })
     event.recipes.create.cutting(["2x immersiveengineering:slab_treated_wood_horizontal"], "gtceu:treated_wood_planks", 150)
 
-    
+    // Paper making with Create, same recipes as in Gregtech chemical reactor
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('water', 100)])
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('water', 100)])
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('gtceu:distilled_water', 100)])
+    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('gtceu:distilled_water', 100)])
+
+    // Fire clay knapping automation
+    // Player will need to use recipe filter
+    event.recipes.create.compacting('tfc:ceramic/unfired_crucible', '5x tfc:fire_clay')
+    event.recipes.create.compacting('tfcchannelcasting:unfired_mold_table', '5x tfc:fire_clay')
+    event.recipes.create.compacting('4x tfcchannelcasting:unfired_channel', '5x tfc:fire_clay')
+    event.recipes.create.compacting('2x tfc:ceramic/unfired_fire_ingot_mold', '5x tfc:fire_clay')
+
+    // TFC metallurgy
     event.recipes.create.sequenced_assembly('tfc:metal/ingot/high_carbon_steel', 'tfc:metal/ingot/pig_iron', 
         event.recipes.create.pressing('tfc:metal/ingot/pig_iron', 'tfc:metal/ingot/pig_iron')
     ).transitionalItem('tfc:metal/ingot/pig_iron').loops(3)
@@ -645,4 +694,40 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ).transitionalItem('tfc:metal/ingot/high_carbon_red_steel').loops(3)
 
     event.recipes.create.filling("gregitas:maple_glazed_roll", ["#tfc:foods/breads", Fluid.of("gregitas:maple_syrup", 250)]).id("gregitas:maple_glazed_roll")
+
+    // Quern to create crushing (avoiding duplicates)
+    let existing_crushing_recipes = new Set()
+    event.forEachRecipe({ type: "create:crushing" }, r => {
+        // No quern recipes with milling recipes and no crushing recipe, so fine to just check crushing
+        existing_crushing_recipes.add(`${r.json.get("ingredients").get(0)}`);
+    })
+    event.forEachRecipe({ type: "tfc:quern" }, r => {
+        let ingredient = r.json.get("ingredient")
+        let result = r.json.get("result")
+        
+        if (existing_crushing_recipes.has(`${ingredient}`))
+            return
+        
+        if (`${ingredient.get("type")}` == '"tfc:not_rotten"') {
+            if (existing_crushing_recipes.has(`${ingredient.get("ingredient")}`))
+                return
+        }
+                
+        // Can't handle this kind of wacky recipe
+        if (result.get("modifiers"))
+            return
+
+        event.recipes.create.milling(result, ingredient)
+    })
+
+    // GT ore washing to Create washing (no byproducts)
+    event.forEachRecipe({ type: "gtceu:ore_washer" }, r => {
+        let ingredient = `${r.json.get("inputs").get("item").get(0).get("content").get("ingredient").get("tag")}`
+        ingredient = ingredient.substring(1, ingredient.length - 1);
+
+        let result = `${r.json.get("outputs").get("item").get(0).get("content").get("ingredient").get("item")}`
+        result = result.substring(1, result.length - 1);
+
+        event.recipes.create.splashing([result], "#" + ingredient)
+    })
 }

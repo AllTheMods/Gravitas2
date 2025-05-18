@@ -64,6 +64,42 @@ const pkgJson = {
 	}
 }
 
+global.itemsToRemove = [
+	"tfc:metal/sheet/steel",
+	"immersiveengineering:plate_steel",
+	"vintageimprovements:andesite_sheet",
+	"alltheores:peridot",
+	`/^alltheores:.*_rod/`,
+	`/^alltheores:.*_dust/`,
+	`/^alltheores:.*_nugget/`,
+	`/^alltheores:.*_plate/`,
+	`/^alltheores:.*_gear/`,
+	`/^alltheores:.*_ore_hammer/`,
+	`/^alltheores:.*_block/`,
+	`/^alltheores:.*_ingot/`,
+	`/^alltheores:raw_.*/`,
+	`/^allthemodium:.*allthemodium.*/`,
+	`/^allthemodium:.*vibranium.*/`,
+	`/^allthemodium:.*unobtainium.*/`,
+	`/^allthemodium:alloy_.*/`,
+	`/^immersiveengineering:plate_.*/`,
+	`/^immersiveengineering:mold_.*/`,
+	`/^immersiveengineering:wire_.*/`,
+	`/^tfc_ie_addon:metal/sheet/.*/`,
+	`/^tfc:metal/sheet/.*/`,
+	]
+
+global.fluidsWithBucketsToRemove = [
+	"enderio:dew_of_the_void",
+]
+
+global.fluidsToRemove = [
+	"allthemodium:soul_lava",
+	"allthemodium:molten_allthemodium",
+	"allthemodium:molten_unobtainium",
+	"allthemodium:molten_vibranium",
+]
+
 global.gregVeins = [
 	{
 	  name: "apatite",

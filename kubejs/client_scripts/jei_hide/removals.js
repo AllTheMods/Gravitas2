@@ -23,7 +23,7 @@ const toolsToRemove = [
 
 ]
 
-let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
+let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
   oresToRemove.forEach((ore) => {
     event.hide(`potionsmaster:${ore}_powder`)
     event.hide(`potionsmaster:calcinated${ore}_powder`)
@@ -53,6 +53,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     //IE
     event.hide("immersiveengineering:cokebrick")
     event.hide("immersiveengineering:slab_cokebrick")
+    event.hide("immersiveengineering:alloybrick")
+    event.hide("immersiveengineering:slab_alloybrick")
     event.hide("immersiveengineering:blastbrick")
     event.hide("immersiveengineering:blastbrick_reinforced")
     event.hide("immersiveengineering:blastfurnace_preheater")
@@ -75,6 +77,10 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:coke")
     event.hide(`/^immersiveengineering:.*hemp_seed.*/`)
 
+    //ID
+    event.hide("integrateddynamics:squeezer")
+    event.hide("integrateddynamics:mechanical_squeezer")
+
     //ATM
     event.hide("allthemodium:teleport_pad")
 
@@ -93,6 +99,8 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("astikorcarts:wheel")
 
     event.hide(`/^.*deepslate.*/`)
+
+    // Vanilla
     event.hide(`/^minecraft:.*dark_oak.*/`)
     event.hide(`/^minecraft:.*oak.*/`)
     event.hide(`/^minecraft:.*acacia.*/`)
@@ -103,10 +111,22 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide(`/^minecraft:.*andesite.*/`)
     event.hide(`/^minecraft:.*diorite.*/`)
     event.hide(`/^minecraft:.*granite.*/`)
-
+    event.hide("minecraft:smoker")
+    event.hide("minecraft:mud")
+    event.hide("minecraft:packed_mud")
+    event.hide("minecraft:dirt")
+    event.hide("minecraft:furnace")
+    event.hide("minecraft:furnace_minecart")
+    event.hide("minecraft:blast_furnace")
+    event.hide("minecraft:campfire")
+    event.hide("minecraft:soul_campfire")
 
     // EnderIO
     event.hide(`/^enderio:end_steel.*/`)
+    event.hide("enderio:sag_mill")
+    event.hide("enderio:wood_gear")
+    event.hide("enderio:vibrant_gear")
+    event.hide("enderio:dark_bimetal_gear")
 
     //SFM
     event.hide("sfm:water_tank")
@@ -115,8 +135,23 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('gtceu:lp_steam_extractor')
     event.hide('gtceu:hp_steam_extractor')
     event.hide('gtceu:lv_extruder')
+    event.hide('gtceu:wood_mallet')
+    event.hide('gtceu:mega_fusion_reactor')
 
-  // Thorium Reactors
+	// Create New Age
+	event.hide('create_new_age:overcharged_iron')
+	event.hide('create_new_age:overcharged_iron_sheet')
+	event.hide('create_new_age:overcharged_gold')
+	event.hide('create_new_age:overcharged_golden_sheet')
+	event.hide('create_new_age:radioactive_thorium')
+	event.hide('create_new_age:blank_circuit')
+	event.hide('create_new_age:copper_circuit')
+
+    // Vintage Improvements
+    event.hide('vintageimprovements:spring_coiling_machine_wheel')
+    event.hide(/^vintageimprovements:.*_spring/)
+
+    // Thorium Reactors
     event.hide('thoriumreactors:generator_block')
     event.hide('thoriumreactors:fluid_evaporation_block')
     event.hide('thoriumreactors:electrolytic_salt_separator')
@@ -133,4 +168,25 @@ let hidePotions = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('thoriumreactors:raw_uranium')
     event.hide('thoriumreactors:fluorite')
     event.hide('thoriumreactors:uran_three_chloride')
+
+    // Immersive Aircraft
+    event.hide('immersive_aircraft:gyrodyne')
+    event.hide('immersive_aircraft:propeller')
+
+    // Jumbo Furnace
+    event.hide('jumbofurnace:jumbo_furnace')
+
+    // AllTheTweaks
+    // Later unhide ender pearl + nether star block
+    event.hide(`/^allthetweaks:.*/`)
+
+    // Global remove + hides
+    global.itemsToRemove.forEach(item => event.hide(item))
+    global.fluidsWithBucketsToRemove.forEach(item => event.hide(item + "_bucket"))
+}
+
+
+let hideFluids = (/** @type {Internal.HideJEIEventJS}*/ event) => {
+  global.fluidsToRemove.forEach(item => event.hide(item))
+  global.fluidsWithBucketsToRemove.forEach(item => event.hide(item))
 }
