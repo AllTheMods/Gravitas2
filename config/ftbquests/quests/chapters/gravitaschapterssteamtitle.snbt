@@ -254,10 +254,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"34FF68125977821B"
-				"3C3C29A38BA7E365"
-			]
+			dependencies: ["3C3C29A38BA7E365"]
 			description: ["{gravitas.quest.steam.desc.steamgen}"]
 			id: "7943F91C780E4DD3"
 			rewards: [{
@@ -275,10 +272,30 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "5978F6A15BEB9E34"
-				item: "gtceu:lp_steam_solid_boiler"
+				id: "320E77FF24F39517"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:lp_steam_solid_boiler"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lp_steam_solar_boiler"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lp_steam_liquid_boiler"
+							}
+						]
+					}
+				}
 				type: "item"
 			}]
+			title: "{gravitas.quest.steam.boilers}"
 			x: 7.0d
 			y: 0.0d
 		}
@@ -882,7 +899,7 @@
 				"5ACD19E705D43C48"
 			]
 			description: ["{gravitas.quest.steam.desc.steamminer}"]
-			icon: "gtceu:steam_miner"
+			icon: "gtceu:lp_steam_miner"
 			id: "7ACD7DF43D0A5DD5"
 			optional: true
 			rewards: [{
