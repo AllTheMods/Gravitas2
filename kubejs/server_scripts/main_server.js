@@ -12,6 +12,7 @@ ServerEvents.recipes((event) => {
   centrifugeAdd(event)
   viSulfuricAcid(event)
   wiresAdd(event)
+  addOreConversions(event)
   create_new_age(event)
   createMaterialProcessingAdd(event)
   coilingTweak(event)
