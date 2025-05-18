@@ -13,6 +13,14 @@ let registerCreateAdditionsSchemas = (/** @type {Internal.RecipeSchemaRegistryEv
 	)
 	namespace.register("rolling", rollingSchema)
 	
+	let chargingSchema = new $RecipeSchema(
+		Component("outputItem").key("result"),
+		Component("inputItem").key("input"),
+		Component("intNumber").key("energy"),
+		Component("intNumber").key("maxChargeRate").defaultOptional()
+	)
+	namespace.register("charging", chargingSchema)
+	
 	let liquidBurningSchema = new $RecipeSchema(
 		comps.create_fluid_ingredient.or(Component("inputFluid")).key("input"),
 		Component("intNumber").key("burnTime"),
