@@ -74,6 +74,7 @@ MoreJSEvents.structureAfterPlace((event) => {
 
 ServerEvents.lowPriorityData((event) => {
   addGregTechIngotsToTFC(event)
+  addTFCPartHeatingRecipes(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
   addGenericData(event)
