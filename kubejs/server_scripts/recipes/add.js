@@ -551,11 +551,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Create Start
 
-  shaped("create:millstone", [" M ", " G ", " Q "], {
-    M: "tfc:handstone",
-    G: "create:cogwheel",
-    Q: "tfc:quern"
-  })
   gemStonesA.forEach((gemStone) => {
     event.custom({
       type: "tfc:damage_inputs_shapeless_crafting",
@@ -610,37 +605,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       S: 'gtceu:saltpeter_dust'
     }
   )
-  event.custom({
-    type: "create:deploying",
-    ingredients: [
-      {
-        item: "create:shaft"
-      },
-      { tag: "forge:treated_wood" }
-    ],
-    results: [{ item: "create:cogwheel" }]
-  })
-  shaped("3x create:belt_connector", ["   ", "LLL", "MRM"], {
-    L: "#tfc:leather_knapping",
-    M: "tfc:brass_mechanisms",
-    R: "#forge:rods/wrought_iron"
-  })
-  shaped("6x create:belt_connector", ["   ", "LLL", "MRM"], {
-    L: "#tfc:leather_knapping",
-    M: "#forge:gears/wrought_iron",
-    R: "#forge:rods/steel"
-  })
-  event.custom({
-    type: "create:deploying",
-    ingredients: [
-      {
-        item: "create:cogwheel"
-      },
-      { tag: "forge:treated_wood" }
-    ],
-    results: [{ item: "create:large_cogwheel" }]
-  })
-  event.shapeless("petrolsparts:large_coaxial_gear", ["petrolsparts:coaxial_gear", "#forge:treated_wood"])
   //Create End
 
   //GTCEU Start

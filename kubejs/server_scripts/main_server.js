@@ -13,6 +13,7 @@ ServerEvents.recipes((event) => {
   wiresAdd(event)
   createMaterialProcessingAdd(event)
   coilingTweak(event)
+  advancedCreateRecipes(event)
   pressurizedBasinAdd(event)
   spaceDustChain(event)
   certusSemiconductors(event)

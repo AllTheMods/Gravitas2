@@ -438,6 +438,17 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add("create:upgrade_aquatic/coral", `tfc:coral/${coral}`)
   })
 
+  event.add("gregitas:any_rubber_ring", ["gtceu:rubber_ring", "gtceu:silicone_rubber_ring", "gtceu:styrene_butadiene_rubber_ring"])
+  event.add("gregitas:any_rubber_sheet", ["gtceu:rubber_plate", "gtceu:silicone_rubber_plate", "gtceu:styrene_butadiene_rubber_plate"])
+  event.add("gregitas:any_rubber_thin_sheet", ["gtceu:rubber_foil", "gtceu:silicone_rubber_foil", "gtceu:styrene_butadiene_rubber_foil"])
+  event.add("gregitas:any_plastic_thin_sheet", ["gtceu:polyvinyl_chloride_foil", "gtceu:polyphenylene_sulfide_foil", "gtceu:polybenzimidazole_foil", "gtceu:polyethylene_foil", "gtceu:polycaprolactam_foil", "gtceu:polytetrafluoroethylene_foil", "gcyr:kapton_k_foil", "gcyr:para_aramid_foil"])
+
+  event.add("gregitas:any_rubber_or_plastic_thin_sheet", "#gregitas:any_rubber_thin_sheet")
+  event.add("gregitas:any_rubber_or_plastic_thin_sheet", "#gregitas:any_plastic_thin_sheet")
+  
+  event.add("gregitas:create_circuit", "create:electron_tube")
+  event.add("gregitas:create_circuit", "#gtceu:circuits/ulv")
+
   event.add("forge:dusts/apatite", "tfcthermaldeposits:mineral/powder/apatite")
 
   event.add("gravitas:phantom", "minecraft:warped_fungus")
