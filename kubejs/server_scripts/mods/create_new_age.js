@@ -156,9 +156,9 @@ let create_new_age = (/** @type {Internal.RecipesEventJS} */ event) => {
 		["4x create_new_age:reactor_casing"], 
 		"gtceu:firebricks", 
 		[
-			event.custom({type: "create_new_age:energising", energy_needed: 500, ingredients: [t_item], results: [t_item]}),
+			event.recipes.create_new_age.energising(t_item, t_item, 500),
 			event.recipes.create.deploying(t_item, [t_item, "#forge:plates/lead"]),
-			event.recipes.create.pressing(t_item, [t_item])
+			event.recipes.create.pressing(t_item, t_item)
 		]
 	).transitionalItem(t_item).loops(1).id("create_new_age:reactor/reactor_casing")
 	
@@ -233,13 +233,7 @@ let create_new_age = (/** @type {Internal.RecipesEventJS} */ event) => {
 		let input_item = recipe_json.inputs.item[0].content.ingredient
 		let output_item = recipe_json.outputs.item[0].content.ingredient
 		
-		event.custom({
-			type: "create_new_age:energising",
-			energy_needed: fe_cost_total, 
-			ingredients: [input_item],
-			results: [output_item]
-		})
-
+		event.recipes.create_new_age.energising(output_item, input_item, fe_cost_total)
 	})
 
 }
