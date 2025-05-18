@@ -138,6 +138,15 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('gtceu:wood_mallet')
     event.hide('gtceu:mega_fusion_reactor')
 
+	// Create New Age
+	event.hide('create_new_age:overcharged_iron')
+	event.hide('create_new_age:overcharged_iron_sheet')
+	event.hide('create_new_age:overcharged_gold')
+	event.hide('create_new_age:overcharged_golden_sheet')
+	event.hide('create_new_age:radioactive_thorium')
+	event.hide('create_new_age:blank_circuit')
+	event.hide('create_new_age:copper_circuit')
+
     // Vintage Improvements
     event.hide('vintageimprovements:spring_coiling_machine_wheel')
     event.hide(/^vintageimprovements:.*_spring/)

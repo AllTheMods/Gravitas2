@@ -465,6 +465,19 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("gravitas:phantom", "beneath:wood/sapling/warped")
 
   event.add("forge:dusts/phosphorus", "scguns:phosphor_dust")
+  
+  // Create New Age nuclear fuel
+  event.add("create_new_age:nuclear/is_nuclear_fuel", ["#forge:rods/thorium", "#forge:rods/uranium", "#forge:rods/uranium_235"])
+  event.add("create_new_age:nuclear/time_28800", "#forge:rods/thorium") // Thorium rods last the same as the usual New Age fuel
+  event.add("create_new_age:nuclear/time_14400", "#forge:rods/uranium") // Uranium rods have 1/2 the lifetime
+  event.add("create_new_age:nuclear/time_230400", "#forge:rods/uranium_235") // Enriched Uranium rods - lasts 8 times longer
+
+  // Create New Age radiation resistant armor
+  // Adds New Age radiation resistance to GregTech hazmats and advanced armor
+  event.add("create_new_age:nuclear/hazmat_suit", "#gtceu:ppe_armor")
+  
+  // Create New Age magnet blocks
+  event.add("create_new_age:magnet", ["#forge:storage_blocks/magnetic_iron", "#forge:storage_blocks/magnetic_wrought_iron", "#forge:storage_blocks/magnetic_steel", "#forge:storage_blocks/magnetic_neodymium", "#forge:storage_blocks/magnetic_samarium"])
 
   event.add("forge:magma", ["minecraft:magma_block",
                             "tfc:rock/magma/basalt",
