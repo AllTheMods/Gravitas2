@@ -728,7 +728,7 @@
 	"gravitas.quest.new_age.desc.motor": "The Basic Motor is a lot like the Electric Motor from Create Crafts and Additions. It can turn Energy into Kinetic Energy. Its speed can be configured with a Wrench.",
 	"gravitas.quest.new_age.desc.motor_extension": "Motor Extensions can be attached to any Motor, allowing you to configure a Motor's Stress Unit output. The larger the Stress Unit multiplier, the more power a motor requires.",
 	"gravitas.quest.new_age.desc.energizer": "The Energizer will be needed to make the materials needed for progressing into Create New Age. It requires both Energy and Kinetic Energy - when powered, it will ZAP the items beneath it.",
-	"gravitas.quest.new_age.desc.iron": "Use the Energizer to magnetize a Purified Iron Ingot.",
+	"gravitas.quest.new_age.desc.iron": "Use the Energizer to magnetize a Purified Iron Ingot.\n\nMagnetic Iron ingots, and all other magnetic ingots, can be made into blocks and used as magnets directly. But that's not very material efficient.",
 	"gravitas.quest.new_age.desc.neodymium": "Use the Energizer to magnetize a Neodymium Ingot.",
 	"gravitas.quest.new_age.desc.diamond": "ZAP a Cut Diamond into an Overcharged Diamond.",
 	"gravitas.quest.new_age.desc.samarium": "Use the Energizer to magnetize a Samarium Ingot. It'll take a very long time and a lot of power though!",

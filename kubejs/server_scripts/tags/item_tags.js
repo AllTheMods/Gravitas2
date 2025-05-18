@@ -454,6 +454,9 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   // Create New Age radiation resistant armor
   // Adds New Age radiation resistance to GregTech hazmats and advanced armor
   event.add("create_new_age:nuclear/hazmat_suit", "#gtceu:ppe_armor")
+  
+  // Create New Age magnet blocks
+  event.add("create_new_age:magnet", ["#forge:storage_blocks/magnetic_iron", "#forge:storage_blocks/magnetic_wrought_iron", "#forge:storage_blocks/magnetic_steel", "#forge:storage_blocks/magnetic_neodymium", "#forge:storage_blocks/magnetic_samarium"])
 
   event.add("forge:magma", ["minecraft:magma_block",
                             "tfc:rock/magma/basalt",

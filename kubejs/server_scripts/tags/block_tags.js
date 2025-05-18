@@ -227,4 +227,16 @@ const addBlockTags = (/** @type {TagEvent.Block} */ event) => {
                            ])
 
   event.add("minecraft:crops", ["#tfc:crops"])
+  
+  // New Age generator magnet blocks
+  event.add("create_new_age:magnets/strength_4", ["#forge:storage_blocks/magnetic_iron", "#forge:storage_blocks/magnetic_wrought_iron"])
+  event.add("create_new_age:magnets/strength_6", "#forge:storage_blocks/magnetic_steel")
+  event.add("create_new_age:magnets/strength_8", "#forge:storage_blocks/magnetic_neodymium")
+  event.add("create_new_age:magnets/strength_12", "#forge:storage_blocks/magnetic_samarium")
+  event.add("create_new_age:custom_magnet",
+    [
+      "#create_new_age:magnets/strength_4", "#create_new_age:magnets/strength_6",
+      "#create_new_age:magnets/strength_8", "#create_new_age:magnets/strength_12",
+    ]
+  )
 }
