@@ -518,13 +518,14 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .EUt(LV)
   })
 
+  event.remove({ id: "gtceu:shaped/wooden_barrel" })
   event.recipes.kubejs
     .shaped("gtceu:wood_drum", ["mRs", "PWP", "PWP"], {
-      m: "#forge:tools/mallets",
-      R: "gtceu:sticky_resin",
+      m: "#forge:tools/files",
+      R: ["gtceu:sticky_resin", "firmalife:beeswax", "create:super_glue"],
       s: "#forge:tools/saws",
       P: "#minecraft:planks",
-      W: "gtceu:long_wrought_iron_rod"
+      W: ["gtceu:long_iron_rod", "gtceu:long_wrought_iron_rod"]
     })
     .damageIngredient(["#forge:tools"])
 
