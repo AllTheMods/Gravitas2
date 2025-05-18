@@ -80,6 +80,7 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerAe2InscriberSchema(event)
   registerVintageImprovementsSchemas(event)
   registerCreateAdditionsSchemas(event)
+  registerCreateDieselGeneratorsSchemas(event)
   registerCreateNewAgeSchemas(event)
 })
 
