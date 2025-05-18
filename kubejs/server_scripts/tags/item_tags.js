@@ -198,6 +198,14 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:tools/knives", ["#tfc:knives"])
 
   event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/wrench", "#forge:tools/knives", "#forge:tools/files"])
+  
+  // Adding GregTech hazmat protection to armor
+  event.add("gtceu:ppe_armor", "#scguns:gas_mask")
+  event.add("gtceu:ppe_armor", ["gcyr:space_helmet", "gcyr:space_chestplate", "gcyr:space_leggings", "gcyr:space_boots"])
+  
+  // Add Scorched Guns gas mask protection to armor
+  event.add("scguns:gas_mask", ["gtceu:hazmat_headpiece", "gtceu:quarktech_helmet", "gcyr:space_helmet"])
+
 
   // Tagging TFC gems
   let tfcUntaggedGems = ["amethyst", "opal", "pyrite", "ruby", "sapphire", "topaz"]
