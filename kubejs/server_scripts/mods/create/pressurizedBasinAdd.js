@@ -33,13 +33,10 @@ let pressurizedBasinAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         let recipe_results = []
         for (let i = 0; i < recipe_json.outputs.item.length; i++) {
             let output = recipe_json.outputs.item[i]
-            let new_output = output.content.ingredient
+            let new_output = Item.of(output.content.ingredient, output.content.count)
             
             if (output.chance && output.chance != 10000)
-                new_output.chance = output.chance / 10000
-            
-            if (output.content.count && output.content.count > 1)
-                new_output.count = output.content.count
+                new_output = new_output.withChance(output.chance / 10000)
             
             recipe_results.push(new_output)
         }
@@ -47,12 +44,8 @@ let pressurizedBasinAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         // LV requires a heated basin, MV requires a superheated one
         let heat = eu_cost <= 32 ? "heated" : "superheated"
         
-        event.custom({
-            type: "createdieselgenerators:basin_fermenting",
-            ingredients: recipe_ingredients,
-            results: recipe_results,
-            heatRequirement: heat,
-            processingTime: recipe_json.duration
-        })
+        event.recipes.createdieselgenerators.basin_fermenting(recipe_results, recipe_ingredients)
+            .heatRequirement(heat)
+            .processingTime(recipe_json.duration)
     })
 }

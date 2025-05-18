@@ -75,6 +75,6 @@ let centrifugeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         // 64 RPM (128 SU) for ULV, 128 RPM (256 SU) for LV
         let rpm = eu_cost > 8 ? 128 : 64
         
-		event.recipes.vintageimprovements.centrifugation(results, ingredients, duration).minimalRPM(rpm)
+        event.recipes.vintageimprovements.centrifugation(results, ingredients, duration).minimalRPM(rpm)
     })
 }
