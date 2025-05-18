@@ -475,10 +475,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     results: [{ amount: 100, fluid: "createdieselgenerators:plant_oil" }]
   })
 
-  event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
-  event.recipes.create.pressing("gtceu:black_bronze_plate", ["#forge:ingots/black_bronze"])
-  event.recipes.create.pressing("gtceu:bismuth_bronze_plate", ["#forge:ingots/bismuth_bronze"])
-
   colorMap.forEach((color) => {
     event
       .custom({
@@ -2676,18 +2672,6 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     ],
     heatRequirement: "heated",
     results: [{ item: "createdieselgenerators:asphalt_block", amount: 4 }]
-  })
-
-  // Create Addition rolling
-  event.custom({
-    type: "createaddition:rolling",
-    input: {
-      item: "gtceu:potin_ingot"
-    },
-    result: {
-      item: "gtceu:potin_rod",
-      count: 2
-    },
   })
 
   event
