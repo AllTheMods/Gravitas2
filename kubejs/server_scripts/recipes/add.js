@@ -471,10 +471,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     results: [{ amount: 100, fluid: "createdieselgenerators:plant_oil" }]
   })
 
-  event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrought_iron"])
-  event.recipes.create.pressing("gtceu:black_bronze_plate", ["#forge:ingots/black_bronze"])
-  event.recipes.create.pressing("gtceu:bismuth_bronze_plate", ["#forge:ingots/bismuth_bronze"])
-
   colorMap.forEach((color) => {
     event
       .custom({
@@ -551,11 +547,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Create Start
 
-  shaped("create:millstone", [" M ", " G ", " Q "], {
-    M: "tfc:handstone",
-    G: "create:cogwheel",
-    Q: "tfc:quern"
-  })
   gemStonesA.forEach((gemStone) => {
     event.custom({
       type: "tfc:damage_inputs_shapeless_crafting",
@@ -610,37 +601,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       S: 'gtceu:saltpeter_dust'
     }
   )
-  event.custom({
-    type: "create:deploying",
-    ingredients: [
-      {
-        item: "create:shaft"
-      },
-      { tag: "forge:treated_wood" }
-    ],
-    results: [{ item: "create:cogwheel" }]
-  })
-  shaped("3x create:belt_connector", ["   ", "LLL", "MRM"], {
-    L: "#tfc:leather_knapping",
-    M: "tfc:brass_mechanisms",
-    R: "#forge:rods/wrought_iron"
-  })
-  shaped("6x create:belt_connector", ["   ", "LLL", "MRM"], {
-    L: "#tfc:leather_knapping",
-    M: "#forge:gears/wrought_iron",
-    R: "#forge:rods/steel"
-  })
-  event.custom({
-    type: "create:deploying",
-    ingredients: [
-      {
-        item: "create:cogwheel"
-      },
-      { tag: "forge:treated_wood" }
-    ],
-    results: [{ item: "create:large_cogwheel" }]
-  })
-  event.shapeless("petrolsparts:large_coaxial_gear", ["petrolsparts:coaxial_gear", "#forge:treated_wood"])
   //Create End
 
   //GTCEU Start
@@ -1063,6 +1023,23 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     C: "minecraft:fire_charge",
     F: "tfc:crucible"
   })
+  
+  // Replace Railcraft cut firestone recipe
+  // (the original recipe requires vanilla netherite pickaxe, and thus is uncraftable)
+  event.custom({
+    type: "tfc:damage_inputs_shapeless_crafting",
+    recipe: {
+	  type: "minecraft:crafting_shapeless",
+	  ingredients: [
+	    {item: "minecraft:netherite_ingot"},
+	    {item: "railcraft:raw_firestone"},
+	    {tag: "tfc:chisels"},
+	    {tag: "forge:tools/hammers"}
+	  ],
+      result: {item: "railcraft:cut_firestone"}
+    }
+  }).id('railcraft:cut_firestone')
+
   //Railcraft End
 
   shaped("framedblocks:framed_chest", ["FRF", "RCR", "FRF"], {
@@ -2428,18 +2405,6 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     results: [{ item: "createdieselgenerators:asphalt_block", amount: 4 }]
   })
 
-  // Create Addition rolling
-  event.custom({
-    type: "createaddition:rolling",
-    input: {
-      item: "gtceu:potin_ingot"
-    },
-    result: {
-      item: "gtceu:potin_rod",
-      count: 2
-    },
-  })
-
   event
     .custom({
       type: "tfc:knapping",
@@ -2555,10 +2520,10 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     event.recipes.gtceu
     .centrifuge("gregitas:centrifuged_kapok_log")
     .itemInputs("tfc:wood/log/kapok")
-    .chancedOutput("gtceu:sticky_resin", 5000, 1)
-    .chancedOutput("gtceu:plant_ball", 3750, 1)
-    .chancedOutput("gtceu:carbon_dust", 2500, 1)
-    .chancedOutput("gtceu:wood_dust", 2500, 1)
+    .chancedOutput("gtceu:sticky_resin", 5000, 1200)
+    .chancedOutput("gtceu:plant_ball", 3750, 900)
+    .chancedOutput("gtceu:carbon_dust", 2500, 600)
+    .chancedOutput("gtceu:wood_dust", 2500, 700)
     .outputFluids(Fluid.of("gtceu:methane", 60))
     .duration(200)
     .EUt(20)
@@ -2580,6 +2545,11 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     'firmalife:metal/rod/stainless_steel',
     '#forge:rods/aluminium'
   )
+
+  // TFC Casting with Channels
+  event.recipes.minecraft.smelting('tfcchannelcasting:channel', 'tfcchannelcasting:unfired_channel')
+  event.recipes.minecraft.smelting('tfcchannelcasting:mold_table', 'tfcchannelcasting:unfired_mold_table')
+  event.recipes.minecraft.smelting('tfcchannelcasting:heart_mold', 'tfcchannelcasting:unfired_heart_mold')
 
   event.recipes.gtceu
   .assembler("gregitas:industrial_gears")

@@ -263,6 +263,33 @@ const tfcWoodTypes = [
     name: "Willow"
   }
 ]
+const gtToolPolymers = [
+  {
+    id: "rubber",
+    color: 0x101010,
+  },
+  {
+    id: "silicone_rubber",
+    color: 0xE0E0E0
+  },
+  {
+    id: "styrene_butadiene_rubber",
+    color: 0x101010
+  },
+  {
+    id: "polyethylene",
+    color: 0xc8c8c8
+  },
+  {
+    id: "polytetrafluoroethylene",
+    color: 0x646464
+  },
+  {
+    id: "polybenzimidazole",
+    color: 0x2d2d2d
+  }
+]
+
 let registerItems = (/** @type {Registry.Item} */ event) => {
   //GTCEu
   event.create("gregitas:creosote_treated_lumber").texture("kubejs:item/lumber").color(0x502800)
@@ -279,34 +306,18 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
   event.create("gregitas:small_tool_handle").texture("kubejs:item/tools/handle").unstackable()
   event.create("gregitas:stone_bowl").texture("kubejs:item/tools/stone_bowl").unstackable()
   event.create("gregitas:flint_pestle").texture("kubejs:item/tools/pestle").color(0, 0x002040).unstackable()
-  event.create("gregitas:rubber_mallet_head").texture("kubejs:item/tools/mallet").color(0, 0x000000).unstackable()
-  event.create("gregitas:polyethylene_mallet_head").texture("kubejs:item/tools/mallet").color(0, 0xc8c8c8).unstackable()
-  event
-    .create("gregitas:polytetrafluoroethylene_mallet_head")
-    .texture("kubejs:item/tools/mallet")
-    .color(0, 0x646464)
-    .unstackable()
-  event
-    .create("gregitas:polybenzimidazole_mallet_head")
-    .texture("kubejs:item/tools/mallet")
-    .color(0, 0x2d2d2d)
-    .unstackable()
-  event.create("gregitas:rubber_plunger_head").texture("kubejs:item/tools/plunger").color(0, 0x353529).unstackable()
-  event
-    .create("gregitas:polyethylene_plunger_head")
-    .texture("kubejs:item/tools/plunger")
-    .color(0, 0xf0f0f0)
-    .unstackable()
-  event
-    .create("gregitas:polytetrafluoroethylene_plunger_head")
-    .texture("kubejs:item/tools/plunger")
-    .color(0, 0xffffff)
-    .unstackable()
-  event
-    .create("gregitas:polybenzimidazole_plunger_head")
-    .texture("kubejs:item/tools/plunger")
-    .color(0, 0x464441)
-    .unstackable()
+   
+  function gtAddPolymerToolHead(tool_type, polymer) {
+    event.create(`gregitas:${polymer.id}_${tool_type}_head`)
+      .texture(`kubejs:item/tools/${tool_type}`)
+      .color(0, polymer.color)
+      .unstackable()
+  }
+  
+  gtToolPolymers.forEach((polymer) => {
+    gtAddPolymerToolHead("mallet", polymer)
+	gtAddPolymerToolHead("plunger", polymer)
+  })
 
   gtTFCTools.forEach((metal) => {
     event.create(`gregitas:${metal.id}_saw_blade`).texture("kubejs:item/tools/saw").color(0, metal.color).unstackable()

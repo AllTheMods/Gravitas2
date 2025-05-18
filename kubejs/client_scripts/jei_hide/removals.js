@@ -53,6 +53,8 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     //IE
     event.hide("immersiveengineering:cokebrick")
     event.hide("immersiveengineering:slab_cokebrick")
+    event.hide("immersiveengineering:alloybrick")
+    event.hide("immersiveengineering:slab_alloybrick")
     event.hide("immersiveengineering:blastbrick")
     event.hide("immersiveengineering:blastbrick_reinforced")
     event.hide("immersiveengineering:blastfurnace_preheater")
@@ -135,6 +137,15 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('gtceu:lv_extruder')
     event.hide('gtceu:wood_mallet')
     event.hide('gtceu:mega_fusion_reactor')
+
+	// Create New Age
+	event.hide('create_new_age:overcharged_iron')
+	event.hide('create_new_age:overcharged_iron_sheet')
+	event.hide('create_new_age:overcharged_gold')
+	event.hide('create_new_age:overcharged_golden_sheet')
+	event.hide('create_new_age:radioactive_thorium')
+	event.hide('create_new_age:blank_circuit')
+	event.hide('create_new_age:copper_circuit')
 
     // Vintage Improvements
     event.hide('vintageimprovements:spring_coiling_machine_wheel')
