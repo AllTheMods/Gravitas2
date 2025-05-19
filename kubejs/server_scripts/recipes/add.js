@@ -1771,8 +1771,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
   shaped("simpleplanes:liquid_engine", ["iOi", "BLB", "HcH"], {
     i: "tfc:metal/ingot/cast_iron",
-    O: "simpleplanes:propeller",
-    B: "minecraft:bucket",
+    O: "create:propeller",
+    B: "createdieselgenerators:engine_piston",
     L: "railcraft:fluid_fueled_firebox",
     H: "minecraft:heavy_weighted_pressure_plate",
     c: "#forge:ingots/copper"
