@@ -660,10 +660,8 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.cutting(["2x immersiveengineering:slab_treated_wood_horizontal"], "gtceu:treated_wood_planks", 150)
 
     // Paper making with Create, same recipes as in Gregtech chemical reactor
-    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('water', 100)])
-    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('water', 100)])
-    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/wood', Fluid.of('gtceu:distilled_water', 100)])
-    event.recipes.create.compacting('minecraft:paper', ['#forge:dusts/paper', Fluid.of('gtceu:distilled_water', 100)])
+    event.recipes.create.compacting('minecraft:paper', [['#forge:dusts/wood', '#forge:dusts/paper'], Fluid.of('water', 100)])
+    event.recipes.create.compacting('minecraft:paper', [['#forge:dusts/wood', '#forge:dusts/paper'], Fluid.of('gtceu:distilled_water', 100)])
 
     // Fire clay knapping automation
     // Player will need to use recipe filter
