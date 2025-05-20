@@ -198,9 +198,9 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 
   //Misc
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
-  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
-  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
-  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst_shard", "tfc:gem/amethyst")
+  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
+  event.replaceInput({ mod: "scguns"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
   
   //TFShips
   tfcShipTypes.forEach((wood) => {
