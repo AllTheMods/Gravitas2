@@ -37,21 +37,13 @@ let createMaterialProcessingAdd = (/** @type {Internal.RecipesEventJS} */ event)
 		event.recipes.create.pressing(
 			`gtceu:${material}_plate`,
 			[`#forge:ingots/${material}`]
-		).id(`kubejs:pressing_${material}_plate`)
+		).id(`gregitas:pressing/${material}_plate`)
 	})
 	
 	// Add ingot -> 2x rod recipes using Create Crafts and Additions rolling mill
 	gtRollingIngots.forEach((material) => {
-		event.custom({
-			type: "createaddition:rolling",
-			input: {
-				tag: `forge:ingots/${material}`
-			},
-			result: {
-				item: `gtceu:${material}_rod`,
-				count: 2
-			}
-		}).id(`kubejs:rolling_${material}_rod`)
+		event.recipes.createaddition.rolling(Item.of(`gtceu:${material}_rod`, 2), `#forge:ingots/${material}`)
+			.id(`gregitas:rolling/${material}_rod`)
 	})
 	
 }
