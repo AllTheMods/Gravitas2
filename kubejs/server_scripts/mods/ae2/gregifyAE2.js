@@ -34,12 +34,22 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
 
   event.recipes.gtceu
-    .mixer("gregitas:fluix")
-    .itemInputs("ae2:charged_certus_quartz_crystal", "minecraft:redstone", "minecraft:quartz")
-    .inputFluids(Fluid.of("minecraft:water", 500))
+    .mixer("gregitas:fluix_from_quartz")
+    .itemInputs("ae2:charged_certus_quartz_crystal", "minecraft:redstone", "#forge:gems/quartz")
+    .inputFluids(Fluid.of("minecraft:water", 250))
     .itemOutputs("2x ae2:fluix_crystal")
     .duration(100)
     .EUt(LV)
+
+  event.recipes.gtceu
+    .mixer("gregitas:fluix_from_dust")
+    .itemInputs("ae2:charged_certus_quartz_crystal", "#forge:dusts/fluix")
+    .inputFluids(Fluid.of("minecraft:water", 250))
+    .itemOutputs("2x ae2:fluix_crystal")
+    .duration(50)
+    .EUt(LV)
+  event.recipes.create.mixing("2x ae2:fluix_crystal", [Fluid.of("minecraft:water", 250), "ae2:charged_certus_quartz_crystal", "#forge:dusts/fluix"])
+    .id("gregitas:mixing/fluix_from_dust")
 
   //Cables
   event.remove([
@@ -91,10 +101,11 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.recipes.gtceu
     .wiremill("gregitas:quartz_fiber")
-    .itemInputs("minecraft:quartz")
+    .itemInputs("#forge:gems/quartz")
     .itemOutputs("2x ae2:quartz_fiber")
     .duration(50)
     .EUt(LV)
+
   //ME Cables
   event.recipes.gtceu
     .assembler("gregitas:me_fluix_cable_glass")
@@ -127,6 +138,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_glass_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.splashing("ae2:fluix_glass_cable", "#ae2:glass_cable")
+    .id("gregitas:splashing/me_fluix_glass_cleaning")
+
   //Covered Cables
   event.recipes.gtceu
     .assembler("gregitas:me_covered_cable_rubber")
@@ -135,14 +149,18 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_covered_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.filling("ae2:fluix_covered_cable", ["ae2:fluix_glass_cable", Fluid.of("gtceu:rubber", 144)])
+    .id("gregitas:filling/me_covered_cable_rubber")
 
   event.recipes.gtceu
-    .assembler("gregitas:me_covered_cable_silicon")
+    .assembler("gregitas:me_covered_cable_silicone")
     .itemInputs("ae2:fluix_glass_cable")
     .inputFluids(Fluid.of("gtceu:silicone_rubber", 72))
     .itemOutputs("ae2:fluix_covered_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.filling("ae2:fluix_covered_cable", ["ae2:fluix_glass_cable", Fluid.of("gtceu:silicone_rubber", 72)])
+    .id("gregitas:filling/me_covered_cable_silicone")
 
   event.recipes.gtceu
     .assembler("gregitas:me_covered_cable_styrene")
@@ -151,6 +169,8 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_covered_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.filling("ae2:fluix_covered_cable", ["ae2:fluix_glass_cable", Fluid.of("gtceu:styrene_butadiene_rubber", 36)])
+    .id("gregitas:filling/me_covered_cable_styrene")
 
   event.recipes.gtceu
     .chemical_bath("gregitas:me_covered_fluix_cleaning")
@@ -159,6 +179,8 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_covered_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.splashing("ae2:fluix_covered_cable", "#ae2:covered_cable")
+    .id("gregitas:splashing/me_covered_fluix_cleaning")
 
   event.recipes.gtceu
     .assembler("gregitas:me_dense_covered_fluix")
@@ -175,6 +197,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_covered_dense_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.splashing("ae2:fluix_covered_dense_cable", "#ae2:covered_dense_cable")
+    .id("gregitas:splashing/me_dense_covered_fluix_cleaning")
+
   //Smart Cables
   event.recipes.gtceu
     .chemical_bath("gregitas:me_smart_fluix_cleaning")
@@ -183,6 +208,8 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_smart_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.splashing("ae2:fluix_smart_cable", "#ae2:smart_cable")
+    .id("gregitas:splashing/me_smart_fluix_cleaning")
 
   event.recipes.gtceu
     .assembler("gregitas:me_smart_dense_fluix")
@@ -199,6 +226,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("ae2:fluix_smart_dense_cable")
     .duration(50)
     .EUt(LV)
+  event.recipes.create.splashing("ae2:fluix_smart_dense_cable", "#ae2:smart_dense_cable")
+    .id("gregitas:splashing/me_smart_dense_fluix_cleaning")
+
 
   event.recipes.gtceu
     .assembler("gregitas:me_smart_cable")
@@ -243,6 +273,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`8x ae2:${colour}_glass_cable`)
       .duration(100)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(`ae2:${colour}_glass_cable`, ["ae2:fluix_glass_cable", Fluid.of(`gtceu:${colour}_dye`, 18)])
+      .id(`gregitas:filling/${colour}_glass_fluix`)
 
     event.recipes.gtceu
       .chemical_bath(`gregitas:${colour}_covered_fluix`)
@@ -251,6 +284,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`8x ae2:${colour}_covered_cable`)
       .duration(100)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(`ae2:${colour}_covered_cable`, ["ae2:fluix_covered_cable", Fluid.of(`gtceu:${colour}_dye`, 18)])
+      .id(`gregitas:filling/${colour}_covered_cable`)
 
     event.recipes.gtceu
       .chemical_bath(`gregitas:${colour}_smart_fluix`)
@@ -259,6 +295,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`8x ae2:${colour}_smart_cable`)
       .duration(100)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(`ae2:${colour}_smart_cable`, ["ae2:fluix_smart_cable", Fluid.of(`gtceu:${colour}_dye`, 18)])
+      .id(`gregitas:filling/${colour}_smart_fluix`)
 
     event.recipes.gtceu
       .chemical_bath(`gregitas:${colour}_dense_covered_fluix`)
@@ -267,6 +306,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`8x ae2:${colour}_covered_dense_cable`)
       .duration(100)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(`ae2:${colour}_covered_dense_cable`, ["ae2:fluix_covered_dense_cable", Fluid.of(`gtceu:${colour}_dye`, 18)])
+      .id(`gregitas:filling/${colour}_dense_covered_fluix`)
 
     event.recipes.gtceu
       .chemical_bath(`gregitas:${colour}_dense_smart_fluix`)
@@ -275,6 +317,9 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
       .itemOutputs(`8x ae2:${colour}_smart_dense_cable`)
       .duration(100)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(`ae2:${colour}_smart_dense_cable`, ["ae2:fluix_smart_dense_cable", Fluid.of(`gtceu:${colour}_dye`, 18)])
+      .id(`gregitas:filling/${colour}_dense_smart_fluix`)
 
     event.remove([
       {
