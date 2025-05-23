@@ -501,21 +501,34 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:compressor/red_sandstone" })
 
   enderTC.forEach((ender) => {
+    let dye_fluid = Fluid.of(`gtceu:${ender.id}_dye`, 144)
+    let color_nbt = `{code:"${ender.colour}",owner:"all"}`
+
     event.recipes.gtceu
       .chemical_bath(`ender_chest_${ender.id}`)
       .itemInputs("enderchests:ender_chest")
-      .inputFluids(Fluid.of(`gtceu:${ender.id}_dye`, 216))
-      .itemOutputs(Item.of("enderchests:ender_chest", `{code:"${ender.colour}",owner:"all"}`))
-      .duration(500)
+      .inputFluids(dye_fluid)
+      .itemOutputs(Item.of("enderchests:ender_chest", color_nbt))
+      .duration(5 * 20)
       .EUt(LV)
-    console.log(`ender_chest_${ender.id} : ${ender.colour}`)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(
+        Item.of("enderchests:ender_chest", color_nbt), 
+        ["enderchests:ender_chest", dye_fluid]
+	  ).id(`gregitas:filling/ender_chest_${ender.id}`)
+
     event.recipes.gtceu
       .chemical_bath(`ender_tank_${ender.id}`)
       .itemInputs("endertanks:ender_tank")
-      .inputFluids(Fluid.of(`gtceu:${ender.id}_dye`, 216))
-      .itemOutputs(Item.of("endertanks:ender_tank", `{code:"${ender.colour}",owner:"all"}`))
-      .duration(500)
+      .inputFluids(dye_fluid)
+      .itemOutputs(Item.of("endertanks:ender_tank", color_nbt))
+      .duration(5 * 20)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(
+        [Item.of("endertanks:ender_tank", color_nbt)], 
+        ["endertanks:ender_tank", dye_fluid]
+	  ).id(`gregitas:filling/ender_tank_${ender.id}`)
   })
 
   event.remove({ id: "gtceu:shaped/wooden_barrel" })
