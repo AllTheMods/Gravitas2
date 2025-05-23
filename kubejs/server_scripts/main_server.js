@@ -10,6 +10,7 @@ ServerEvents.recipes((event) => {
   gtceuAdd(event)
   createAdd(event)
   centrifugeAdd(event)
+  oreWashingAdd(event)
   oreVibratingAdd(event)
   viSulfuricAcid(event)
   wiresAdd(event)
