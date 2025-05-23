@@ -994,10 +994,8 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   })
 
   event.shapeless("computercraft:wireless_modem_normal", ["computercraft:wired_modem", "minecraft:ender_pearl"])
-  event.shapeless("computercraft:wireless_modem_advanced", [
-    "computercraft:wireless_modem_normal",
-    "minecraft:eye_of_ender"
-  ])
+  event.shapeless("computercraft:wireless_modem_advanced", ["computercraft:wireless_modem_normal", "minecraft:ender_eye"])
+  
   //Rock and Stone!
   tfcStone.forEach((stone) => {
     event.recipes.gtceu
