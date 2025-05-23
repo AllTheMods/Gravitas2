@@ -102,13 +102,15 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ id: "immersive_aircraft:steel_boiler"}, "#forge:ingots/steel", "#forge:plates/steel")
   event.replaceInput({ mod: "immersive_aircraft" }, "minecraft:white_carpet", "immersiveengineering:hemp_fabric")
 
-  //Simpleplanes
+  // Simple Planes
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_axe", "tfc:metal/axe/steel")
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/steel")
+  event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
   event.replaceInput({ id: "simpleplanes:furnace_engine" }, "minecraft:blast_furnace", "railcraft:solid_fueled_firebox")
   event.replaceInput({ id: "simpleplanes:liquid_engine" }, "minecraft:blast_furnace", "railcraft:liquid_fueled_firebox")
   event.replaceInput({ id: "simpleplanes:electric_engine" }, "#forge:ingots/copper", "immersiveengineering:coil_lv")
   event.replaceInput({ id: "simpleplanes:supply_crate"}, "minecraft:barrel", "#tfc:barrels")
+  event.replaceInput({ id: "simpleplanes:seats"}, "minecraft:phantom_membrane", "#create:seats")
 
   //Corail
 
@@ -184,8 +186,10 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   })
 
   //Firmalife
-  event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "gtceu:chromium_ingot" )
-  event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/stainless_steel", "gtceu:stainless_steel_ingot" )
+  event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/chromium", "#forge:ingots/chromium" )
+  event.replaceInput({ mod: "firmalife"}, "firmalife:metal/ingot/stainless_steel", "#forge:ingots/stainless_steel" )
+  event.replaceInput({ mod: "firmalife", id: /^firmalife:crafting\/greenhouse\/stainless_steel*/}, "firmalife:metal/rod/stainless_steel", "#forge:rods/aluminium")
+
   //Firebricks/Cokebricks etc
   event.replaceOutput({ id: "tfc:crafting/fire_bricks"}, "tfc:fire_bricks", "gtceu:firebricks")
   event.replaceInput({ id: "firmalife:crafting/vat"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
@@ -196,9 +200,9 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
 
   //Misc
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
-  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst", "tfc:gem/amethyst")
-  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst", "tfc:gem/amethyst")
-  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst_shard", "tfc:gem/amethyst")
+  event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
+  event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
+  event.replaceInput({ mod: "scguns"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
   
   //TFShips
   tfcShipTypes.forEach((wood) => {
@@ -339,10 +343,6 @@ event.replaceInput(
 
   event.replaceInput({ mod: "morered"}, "morered:red_alloy_ingot", "gtceu:red_alloy_ingot")
 
-//simple planes
-
-  event.replaceInput({ id: "simpleplanes:seats"}, "minecraft:phantom_membrane", "#create:seats")
-
 //gcyr
 
   event.replaceInput({ id: "gcyr:shaped/space_chest"}, "gtceu:tungstensteel_fluid_cell", "gtceu:titanium_fluid_cell")
@@ -370,7 +370,13 @@ event.replaceInput(
 
   event.replaceInput({ input: "minecraft:phantom_membrane" }, "minecraft:phantom_membrane", "#gravitas:phantom")
 
+
+  //laserio
+
+  event.replaceInput({ mod: "laserio" }, "minecraft:iron_ingot", "#forge:plates/iron")
+
   event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
+
   event.replaceInput({ mod: "immersive_aircraft" }, "immersive_aircraft:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_machinery" }, "immersive_aircraft:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_machinery" }, "#railways:internal/ingots/copper_ingots", "#forge:plates/copper")

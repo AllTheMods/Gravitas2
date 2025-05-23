@@ -173,6 +173,9 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('immersive_aircraft:gyrodyne')
     event.hide('immersive_aircraft:propeller')
 
+    // Simple Planes
+    event.hide('simpleplanes:propeller')
+
     // Jumbo Furnace
     event.hide('jumbofurnace:jumbo_furnace')
 
