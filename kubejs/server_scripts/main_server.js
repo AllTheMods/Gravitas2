@@ -11,6 +11,7 @@ ServerEvents.recipes((event) => {
   createAdd(event)
   centrifugeAdd(event)
   oreWashingAdd(event)
+  oreVibratingAdd(event)
   viSulfuricAcid(event)
   wiresAdd(event)
   addOreConversions(event)
@@ -22,6 +23,7 @@ ServerEvents.recipes((event) => {
   spaceDustChain(event)
   certusSemiconductors(event)
   gregifyAE2(event)
+  gregifyLaserIO(event)
   replaceDisc(event)
 })
 

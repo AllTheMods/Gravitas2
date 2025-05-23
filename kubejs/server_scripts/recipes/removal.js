@@ -567,24 +567,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shaped/charcoal_pile_igniter"});
   event.remove({ id: "scguns:treated_iron/treated_iron_bucket"});
 
-  //laserio
-  event.remove({ id: "laserio:logic_chip" })
-  event.remove({ id: "laserio:logic_chip_raw" })
-  event.remove({ id: "laserio:laser_node" })
-  event.remove({ id: "laserio:laser_connector" })
-  event.remove({ id: "laserio:laser_connector_advanced" })
-  event.remove({ id: "laserio:overclocker_card" })
-  event.remove({ id: "laserio:overclocker_node" })
-  event.remove({ id: "laserio:card_item" })
-  event.remove({ id: "laserio:card_fluid" })
-  event.remove({ id: "laserio:card_redstone" })
-  event.remove({ id: "laserio:card_energy" })
-  event.remove({ id: "laserio:filter_basic" })
-  event.remove({ id: "laserio:filter_nbt" })
-  event.remove({ id: "laserio:filter_mod" })
-  event.remove({ id: "laserio:filter_tag" })
-  event.remove({ id: "laserio:filter_count" })
-
   //Sophisticated Backpacks
   event.remove({ id: "sophisticatedbackpacks:tool_swapper_upgrade" })
 
