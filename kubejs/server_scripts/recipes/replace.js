@@ -370,10 +370,6 @@ event.replaceInput(
 
   event.replaceInput({ input: "minecraft:phantom_membrane" }, "minecraft:phantom_membrane", "#gravitas:phantom")
 
-  //laserio
-
-  event.replaceInput({ mod: "laserio" }, "minecraft:iron_ingot", "#forge:plates/iron")
-
   event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_aircraft" }, "immersive_aircraft:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_machinery" }, "immersive_aircraft:propeller", "create:propeller")
