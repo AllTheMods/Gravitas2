@@ -663,6 +663,12 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.compacting('minecraft:paper', [['#forge:dusts/wood', '#forge:dusts/paper'], Fluid.of('water', 100)])
     event.recipes.create.compacting('minecraft:paper', [['#forge:dusts/wood', '#forge:dusts/paper'], Fluid.of('gtceu:distilled_water', 100)])
 
+    // GregTech wood planks in Create
+    event.recipes.create.pressing("gtceu:wood_plate", "#forge:dusts/wood")
+        .id("gregitas:pressing/wood_plate")
+    event.recipes.create.pressing("gtceu:treated_wood_plate", "#forge:dusts/treated_wood")
+        .id("gregitas:pressing/treated_wood_plate")
+
     // Fire clay knapping automation
     // Player will need to use recipe filter
     event.recipes.create.compacting('tfc:ceramic/unfired_crucible', '5x tfc:fire_clay')
