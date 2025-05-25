@@ -22,6 +22,7 @@ const $ChunkPos = Java.loadClass("net.minecraft.world.level.ChunkPos")
 const $Util = Java.loadClass("net.minecraft.Util")
 const $HashSet = Java.loadClass("java.util.HashSet")
 const $ArrayList = Java.loadClass("java.util.ArrayList")
+const $JSONObject = Java.loadClass('com.google.gson.JsonObject')
 
 /** @type {Internal.ForestFeature} */
 const $ForestFeatureObj = $TFCFeatures.FOREST.get()
@@ -104,6 +105,14 @@ let enderTC = [
     colour: "FFF"
   }
 ]
+
+function toJSONObject(object) {
+  let json = new $JSONObject()
+  for (const key of Object.keys(object)) {
+    json.add(key, object[key])
+  }
+  return json
+}
 
 const getJsonPath = (/** @type {Internal.JsonElement} */ jsonElement, /** @type {string} */ path) => {
   return path.split(".").reduce((acc, cur) => (acc != null ? acc.asJsonObject.get(cur) : null), jsonElement)
