@@ -2573,6 +2573,17 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     .duration(2 * 20)
     .EUt(7)
 
+  // Wood pulp -> treated wood pulp
+  event.recipes.create.mixing("gtceu:treated_wood_dust", ["#forge:dusts/wood", {fluidTag: "forge:creosote", amount: 100}])
+    .id("gregitas:mixing/treated_wood_dust")
+	
+  event.recipes.gtceu.chemical_bath("gregitas:treated_wood_dust")
+    .itemInputs("#forge:dusts/wood")
+    .itemOutputs("gtceu:treated_wood_dust")
+    .inputFluids(toJSONObject({value: {tag: "forge:creosote"}, amount: 100}))
+    .duration(1 * 20)
+    .EUt(4)
+
   // Scorched Guns blaze fuel
   event.recipes.create.filling("scguns:blaze_fuel", ["scguns:empty_tank", {fluidTag: "forge:blaze", amount: 3 * 144}])
     .id("gregitas:filling/blaze_fuel")
