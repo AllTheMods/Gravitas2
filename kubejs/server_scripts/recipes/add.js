@@ -2583,6 +2583,11 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     .duration(2 * 20)
     .EUt(7)
 
+  // Paperback books - makes TFC papyrus recipe chain at least somewhat useful
+  event.shapeless("minecraft:book", ["3x #forge:plates/paper", "tfc:unrefined_paper"])
+    .id("gregitas:shapeless/paperback_book")
+
+  // Immersive Aircraft
   event.recipes.gtceu
   .assembler("gregitas:industrial_gears")
   .itemInputs("gtceu:small_bronze_gear", "gtceu:small_iron_gear", "gtceu:aluminium_rod")
