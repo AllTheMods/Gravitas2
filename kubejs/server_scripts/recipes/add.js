@@ -2552,6 +2552,16 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
   event.recipes.minecraft.smelting('tfcchannelcasting:mold_table', 'tfcchannelcasting:unfired_mold_table')
   event.recipes.minecraft.smelting('tfcchannelcasting:heart_mold', 'tfcchannelcasting:unfired_heart_mold')
 
+  // Scorched Guns blaze fuel
+  event.recipes.create.filling("scguns:blaze_fuel", ["scguns:empty_tank", {fluidTag: "forge:blaze", amount: 3 * 144}])
+    .id("gregitas:filling/blaze_fuel")
+  event.recipes.gtceu.canner("gregitas:blaze_fuel")
+    .itemInputs("scguns:empty_tank")
+    .itemOutputs("scguns:blaze_fuel")
+    .inputFluids(toJSONObject({value: {tag: "forge:blaze"}, amount: 3 * 144}))
+    .duration(2 * 20)
+    .EUt(7)
+
   event.recipes.gtceu
   .assembler("gregitas:industrial_gears")
   .itemInputs("gtceu:small_bronze_gear", "gtceu:small_iron_gear", "gtceu:aluminium_rod")
