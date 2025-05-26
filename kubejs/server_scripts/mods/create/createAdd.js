@@ -669,7 +669,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.pressing("gtceu:treated_wood_plate", "#forge:dusts/treated_wood")
         .id("gregitas:pressing/treated_wood_plate")
 	
-	// Magma Cream, Ender Eye with liquid Blaze
+    // Magma Cream, Ender Eye with liquid Blaze
     event.recipes.create.filling("minecraft:magma_cream", [["tfc:glue", "minecraft:slime_ball"], Fluid.of('gtceu:blaze', 144)])
         .id("gregitas:filling/magma_cream")
     event.recipes.create.filling("minecraft:ender_eye", ["minecraft:ender_pearl", Fluid.of('gtceu:blaze', 144)])
