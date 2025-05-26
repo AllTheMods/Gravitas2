@@ -2552,6 +2552,27 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
   event.recipes.minecraft.smelting('tfcchannelcasting:mold_table', 'tfcchannelcasting:unfired_mold_table')
   event.recipes.minecraft.smelting('tfcchannelcasting:heart_mold', 'tfcchannelcasting:unfired_heart_mold')
 
+  // Experience bottle filling/draining (EnderIO compatible)
+  event.recipes.create.filling("minecraft:experience_bottle", ["minecraft:glass_bottle", {fluidTag: "forge:experience", amount: 250}])
+    .id("gregitas:filling/experience_bottle")
+
+  event.recipes.gtceu.canner("gregitas:experience_bottle_fill")
+    .itemOutputs("minecraft:experience_bottle")
+    .itemInputs("minecraft:glass_bottle")
+    .inputFluids(toJSONObject({value: {tag: "forge:experience"}, amount: 250}))
+    .duration(2 * 20)
+    .EUt(7)
+
+  event.recipes.create.emptying(["minecraft:glass_bottle", Fluid.of("enderio:xp_juice", 250)], "minecraft:experience_bottle")
+    .id("gregitas:emptying/experience_bottle")
+
+  event.recipes.gtceu.canner("gregitas:experience_bottle_drain")
+    .itemInputs("minecraft:experience_bottle")
+    .itemOutputs("minecraft:glass_bottle")
+    .outputFluids(Fluid.of("enderio:xp_juice", 250))
+    .duration(2 * 20)
+    .EUt(7)
+
   // Scorched Guns blaze fuel
   event.recipes.create.filling("scguns:blaze_fuel", ["scguns:empty_tank", {fluidTag: "forge:blaze", amount: 3 * 144}])
     .id("gregitas:filling/blaze_fuel")
