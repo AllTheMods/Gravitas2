@@ -1,5 +1,5 @@
 const gtCreatePressablePlates = [
-	"wrought_iron", "black_bronze", "bismuth_bronze", "americium", "beryllium", "bismuth", "chromium",
+	"steel", "wrought_iron", "black_bronze", "bismuth_bronze", "americium", "beryllium", "bismuth", "chromium",
 	"darmstadtium", "europium", "gallium", "iridium", "iron", "manganese", "molybdenum", "neodymium", 
 	"palladium", "plutonium_241", "rhodium", "ruthenium", "silicon", "tantalum", "thorium", "titanium",
 	"tungsten", "uranium_235", "naquadah", "enriched_naquadah", "naquadria", "neutronium", "tritanium",
