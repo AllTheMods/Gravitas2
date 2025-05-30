@@ -520,42 +520,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		// Pipes
 		{partId:"immersiveengineering:fluid_pipe",					type:"gtPipeTiny",			metal:"iron"			}, // Treated as a tiny gtpipe for fluid amount (some return lost)
 		{partId:"create:fluid_pipe",								type:"gtPipeTiny",			metal:"copper"			}, // Treated as a tiny gtpipe for fluid amount (some return lost)
-		// Molds
-		{partId:"gtceu:empty_mold",									type:"mold",				metal:"steel"			},
-		{partId:"gtceu:plate_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:plate_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:gear_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:gear_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:small_gear_casting_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:small_gear_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:rotor_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:rotor_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:credit_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:bottle_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ingot_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ingot_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ball_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:block_casting_mold",							type:"mold",				metal:"steel"			}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"gtceu:block_extruder_mold",						type:"mold",				metal:"steel"			}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"gtceu:nugget_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:cylinder_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:anvil_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:anvil_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:name_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:pill_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:bolt_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:rod_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:long_rod_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ring_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:cell_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:wire_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:tiny_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:small_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:normal_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:large_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:huge_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:foil_extruder_mold",							type:"mold",				metal:"steel"			},
-		
 		// Bullet casings
 		{partId:"scguns:small_iron_casing",							type:"bulletCasingSmall",	metal:"iron"			},
 		{partId:"scguns:large_iron_casing",							type:"bulletCasingLarge",	metal:"iron"			},
