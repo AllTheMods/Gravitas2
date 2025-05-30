@@ -119,9 +119,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{type:"slab",				fluidAmount:648		}, // 1/2 block
 		{type:"stairs",				fluidAmount:972		}, // 3/4 block (although some stairs are made 6:4 instead of 6:8)
 		{type:"nugget",				fluidAmount:16		}, // 1/9 ingot
-		{type:"dust",				fluidAmount:144		}, // 1 ingot
-		{type:"smallDust",			fluidAmount:36		}, // 1/4 dust
-		{type:"tinyDust",			fluidAmount:16		}, // 1/9 dust
 		{type:"frameBlock",			fluidAmount:288		}, // 2 ingots (based on GT scrap resmelting)
 		{type:"sheetBlock",			fluidAmount:144		}, // 1 ingot
 		{type:"sheetHalf",			fluidAmount:72		}, // 1/2 ingot
@@ -234,12 +231,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		addPartHeatingRecipe("gtceu:" + metal.metal + "_block", "block", metal.metal)
 		// frames
 		addPartHeatingRecipe("gtceu:" + metal.metal + "_frame", "frameBlock", metal.metal)
-		// Dusts
-		addPartHeatingRecipe("gtceu:" + metal.metal + "_dust", "dust", metal.metal)
-		addPartHeatingRecipe("gtceu:pure_" + metal.metal + "_dust", "dust", metal.metal)
-		addPartHeatingRecipe("gtceu:impure_" + metal.metal + "_dust", "dust", metal.metal)
-		addPartHeatingRecipe("gtceu:small_" + metal.metal + "_dust", "smallDust", metal.metal)
-		addPartHeatingRecipe("gtceu:tiny_" + metal.metal + "_dust", "tinyDust", metal.metal)
 		// Plates
 		if( ! GT_metalsWithHeating.includes(metal.metal) ){
 			addPartHeatingRecipe("gtceu:" + metal.metal + "_plate", "plate", metal.metal)
@@ -388,10 +379,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"immersiveengineering:slab_storage_electrum",		type:"slab",				metal:"electrum"		},
 		{partId:"immersiveengineering:slab_storage_constantan",		type:"slab",				metal:"constantan"		},		
 		{partId:"immersiveengineering:slab_storage_steel",			type:"slab",				metal:"steel"			},
-		// Dusts	
-		{partId:"gregitas_core:magnetic_wrought_iron_dust",			type:"dust",				metal:"wrought_iron"	},
-		{partId:"gregitas_core:small_magnetic_wrought_iron_dust",	type:"smallDust",			metal:"wrought_iron"	},
-		{partId:"gregitas_core:tiny_magnetic_wrought_iron_dust",	type:"tinyDust",			metal:"wrought_iron"	},
 		// Plates
 		{partId:"vintageimprovements:cast_iron_sheet",				type:"plate",				metal:"iron"			}, // Fluid amount for this one ends up being halved for an unknown reason.
 		{partId:"vintageimprovements:vanadium_sheet",				type:"plate",				metal:"vanadium"		}, // Fluid amount for this one ends up being halved for an unknown reason.
