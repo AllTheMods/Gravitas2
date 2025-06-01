@@ -346,7 +346,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"gtceu:iron_round",									type:"nugget",				metal:"iron"			}, // worth 1 nugget
 		{partId:"gregitas_core:magnetic_wrought_iron_nugget",		type:"nugget",				metal:"wrought_iron"	}, // handle magnetic wrought manually as wrought_iron
 		{partId:"thoriumreactors:blasted_iron_nugget",				type:"nugget",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_nugget",				type:"nugget",				metal:"iron"			},
 		{partId:"scguns:treated_iron_nugget",						type:"nugget",				metal:"iron"			},
 		{partId:"minecraft:gold_nugget",							type:"nugget",				metal:"gold"			},
 		// Ingots
@@ -354,7 +353,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"gtceu:magnetic_iron_ingot",						type:"ingot",				metal:"magnetic_iron"	}, // Ingots not handled by GT loop
 		{partId:"gregitas_core:magnetic_wrought_iron_ingot",		type:"ingot",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_ingot",				type:"ingot",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_ingot",					type:"ingot",				metal:"iron"			},
 		{partId:"scguns:treated_iron_ingot",						type:"ingot",				metal:"iron"			},
 		{partId:"vintageimprovements:vanadium_ingot",				type:"ingot",				metal:"vanadium"		},
 		{partId:"gtceu:thorium_ingot",								type:"ingot",				metal:"thorium"			}, // thorium ingot wasn't heatable even though the ore is
@@ -363,7 +361,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"minecraft:iron_block",								type:"block",				metal:"iron"			},
 		{partId:"gregitas_core:magnetic_wrought_iron_block",		type:"block",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_block",				type:"block",				metal:"iron"			},
-		{partId:"create:industrial_iron_block",						type:"block",				metal:"iron"			},
 		{partId:"scguns:treated_iron_block",						type:"block",				metal:"iron"			},
 		{partId:"minecraft:gold_block",								type:"block",				metal:"gold"			},
 		{partId:"immersiveengineering:storage_aluminum",			type:"block",				metal:"aluminium"		},
@@ -405,7 +402,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"railcraft:brass_gear",								type:"gear",				metal:"brass"			},		
 		// Coins
 		{partId:"createdeco:iron_coin",								type:"coin",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_coin",					type:"coin",				metal:"iron"			},
 		{partId:"gtceu:ancient_gold_coin",							type:"coin",				metal:"gold"			},
 		{partId:"createdeco:gold_coin",								type:"coin",				metal:"gold"			},
 		{partId:"gtceu:copper_credit",								type:"coin",				metal:"copper"			},
@@ -469,8 +465,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"tfc:metal/block/red_steel",						type:"platedBlock",			metal:"red_steel"		},
 		// Bars
 		{partId:"minecraft:iron_bars",								type:"bars",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_bars",					type:"bars",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_bars_overlay",			type:"bars",				metal:"iron"			},
 		{partId:"create:copper_bars",								type:"bars",				metal:"copper"			},
 		{partId:"createdeco:copper_bars",							type:"bars",				metal:"copper"			},
 		{partId:"createdeco:copper_bars_overlay",					type:"bars",				metal:"copper"			},
