@@ -195,7 +195,9 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 				fluidAmount = fluidAmount * 2
 			}
 			
-			let partHeatCap = metalProps.heatCap * fluidAmount
+			// Fluid amount is floored to an ingot's worth for the purpose of calculating heat capacity.
+			// This protects small items such as nuggets from being vaporized by the create bulk blaster as soon as they are produced.
+			let partHeatCap = metalProps.heatCap * Math.max(144, fluidAmount) 
 			
 			if( partHeatingDebug ){ 
 				console.info("Part found !") 
@@ -342,31 +344,26 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 	// All the other parts:
 	let parts = [
 		// Nuggets
-		{partId:"minecraft:iron_nugget",							type:"nugget",				metal:"iron"			},
+		//{partId:"minecraft:iron_nugget",							type:"nugget",				metal:"iron"			},
 		{partId:"gtceu:iron_round",									type:"nugget",				metal:"iron"			}, // worth 1 nugget
 		{partId:"gregitas_core:magnetic_wrought_iron_nugget",		type:"nugget",				metal:"wrought_iron"	}, // handle magnetic wrought manually as wrought_iron
 		{partId:"thoriumreactors:blasted_iron_nugget",				type:"nugget",				metal:"iron"			},
-		{partId:"scguns:treated_iron_nugget",						type:"nugget",				metal:"iron"			},
 		{partId:"minecraft:gold_nugget",							type:"nugget",				metal:"gold"			},
 		// Ingots
 		{partId:"minecraft:iron_ingot",								type:"ingot",				metal:"iron"			},
 		{partId:"gtceu:magnetic_iron_ingot",						type:"ingot",				metal:"magnetic_iron"	}, // Ingots not handled by GT loop
 		{partId:"gregitas_core:magnetic_wrought_iron_ingot",		type:"ingot",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_ingot",				type:"ingot",				metal:"iron"			},
-		{partId:"scguns:treated_iron_ingot",						type:"ingot",				metal:"iron"			},
 		{partId:"vintageimprovements:vanadium_ingot",				type:"ingot",				metal:"vanadium"		},
 		{partId:"gtceu:thorium_ingot",								type:"ingot",				metal:"thorium"			}, // thorium ingot wasn't heatable even though the ore is
-		{partId:"scguns:treated_brass_ingot",						type:"ingot",				metal:"brass"			},
 		// Blocks		
 		{partId:"minecraft:iron_block",								type:"block",				metal:"iron"			},
 		{partId:"gregitas_core:magnetic_wrought_iron_block",		type:"block",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_block",				type:"block",				metal:"iron"			},
-		{partId:"scguns:treated_iron_block",						type:"block",				metal:"iron"			},
 		{partId:"minecraft:gold_block",								type:"block",				metal:"gold"			},
 		{partId:"immersiveengineering:storage_aluminum",			type:"block",				metal:"aluminium"		},
 		{partId:"thoriumreactors:aluminum_block",					type:"block",				metal:"aluminium"		},
 		{partId:"scguns:ancient_brass_block",						type:"block",				metal:"brass"			},
-		{partId:"scguns:treated_brass_block",						type:"block",				metal:"brass"			},
 		{partId:"immersiveengineering:storage_constantan",			type:"block",				metal:"constantan"		},
 		{partId:"immersiveengineering:storage_steel",				type:"block",				metal:"steel"			},
 		// Slabs
