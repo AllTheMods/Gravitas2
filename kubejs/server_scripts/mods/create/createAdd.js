@@ -663,13 +663,15 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.create.compacting('minecraft:paper', [['#forge:dusts/wood', '#forge:dusts/paper'], Fluid.of('water', 100)])
     event.recipes.create.compacting('minecraft:paper', [['#forge:dusts/wood', '#forge:dusts/paper'], Fluid.of('gtceu:distilled_water', 100)])
 
-    // GregTech wood planks in Create
+    // GregTech wood planks and stone plates in Create
     event.recipes.create.pressing("gtceu:wood_plate", "#forge:dusts/wood")
         .id("gregitas:pressing/wood_plate")
     event.recipes.create.pressing("gtceu:treated_wood_plate", "#forge:dusts/treated_wood")
         .id("gregitas:pressing/treated_wood_plate")
-	
-    // Magma Cream, Ender Eye with liquid Blaze
+    event.recipes.create.pressing("gtceu:stone_plate", "#forge:dusts/stone")
+        .id("gregitas:pressing/stone_plate")
+
+	// Magma Cream, Ender Eye with liquid Blaze
     event.recipes.create.filling("minecraft:magma_cream", [["tfc:glue", "minecraft:slime_ball"], Fluid.of('gtceu:blaze', 144)])
         .id("gregitas:filling/magma_cream")
     event.recipes.create.filling("minecraft:ender_eye", ["minecraft:ender_pearl", Fluid.of('gtceu:blaze', 144)])
