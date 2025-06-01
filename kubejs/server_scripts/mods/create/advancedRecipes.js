@@ -146,4 +146,44 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 		B: ["gtceu:iron_buzz_saw_blade", "gtceu:wrought_iron_buzz_saw_blade"],
 		C: "create:andesite_casing"
 	}).id('create:crafting/kinetics/mechanical_saw')
+	
+	// Making Create Connected Fan Catalysts in GregTech Assembler and Canner
+	event.recipes.gtceu.assembler("empty_fan_catalyst")
+		.itemInputs("4x #forge:ingots/brass", "4x minecraft:iron_bars")
+		.itemOutputs("create_connected:empty_fan_catalyst")
+		.duration(8*20)
+		.EUt(12)
+
+	event.recipes.gtceu.canner("fan_blasting_catalyst")
+		.itemInputs("create_connected:empty_fan_catalyst")
+		.inputFluids(Fluid.of("minecraft:lava", 1000))
+		.itemOutputs("create_connected:fan_blasting_catalyst")
+		.duration(8*20)
+		.EUt(8)
+
+	event.recipes.gtceu.canner("fan_smoking_catalyst")
+		.itemInputs("create_connected:empty_fan_catalyst", "#forge:netherrack")
+		.itemOutputs("create_connected:fan_smoking_catalyst")
+		.duration(8*20)
+		.EUt(8)
+
+	event.recipes.gtceu.canner("fan_splashing_catalyst")
+		.itemInputs("create_connected:empty_fan_catalyst")
+		.inputFluids(Fluid.of("minecraft:water", 1000))
+		.itemOutputs("create_connected:fan_splashing_catalyst")
+		.duration(8*20)
+		.EUt(8)
+
+	event.recipes.gtceu.canner("fan_haunting_catalyst")
+		.itemInputs("create_connected:empty_fan_catalyst", "#minecraft:soul_fire_base_blocks")
+		.itemOutputs("create_connected:fan_haunting_catalyst")
+		.duration(8*20)
+		.EUt(8)
+
+	event.recipes.gtceu.canner("empty_fan_catalyst")
+		.itemInputs([["create_connected:fan_blasting_catalyst", "create_connected:fan_smoking_catalyst", "create_connected:fan_splashing_catalyst", "create_connected:fan_haunting_catalyst"]])
+		.itemOutputs("create_connected:empty_fan_catalyst")
+		.duration(8*20)
+		.EUt(8)
+
 }
