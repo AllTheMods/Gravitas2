@@ -458,12 +458,26 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
 
   event.recipes.gtceu
-    .forming_press(`gregitas:fire_brick`)
-    .itemInputs(`tfc:fire_clay`)
-    .itemOutputs(`tfc:ceramic/unfired_fire_brick`)
-    .notConsumable(`tfc:ceramic/ingot_mold`)
+    .forming_press('gregitas:brick')
+    .notConsumable('gtceu:ingot_casting_mold')
+    .itemInputs('minecraft:clay_ball')
+    .itemOutputs('tfc:ceramic/unfired_brick')
     .duration(100)
-    .EUt(LV)
+    .EUt(8)
+
+  event.recipes.vintageimprovements.curving("tfc:ceramic/unfired_brick", "minecraft:clay_ball", "gtceu:ingot_casting_mold")
+    .id("gregitas:forming/brick")
+
+  event.recipes.gtceu
+    .forming_press('gregitas:fire_brick')
+    .notConsumable('gtceu:ingot_casting_mold')
+    .itemInputs('tfc:fire_clay')
+    .itemOutputs('tfc:ceramic/unfired_fire_brick')
+    .duration(100)
+    .EUt(8)
+
+  event.recipes.vintageimprovements.curving("tfc:ceramic/unfired_fire_brick", "tfc:fire_clay", "gtceu:ingot_casting_mold")
+    .id("gregitas:forming/fire_brick")
 
   event.custom({
     type: "tfc:loom",
