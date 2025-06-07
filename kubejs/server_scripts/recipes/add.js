@@ -466,6 +466,18 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
 
   event.custom({
+    type: "tfc:loom",
+    ingredient: {
+      ingredient: { item: "gtceu:carbon_fibers" },
+      count: 2
+    },
+    result: { item: "gtceu:carbon_fiber_mesh" },
+    steps_required: 8,
+    in_progress_texture: "minecraft:block/black_wool"
+  }).id("gregitas:loom/carbon_fiber_mesh")
+
+
+  event.custom({
     type: "create:compacting",
     ingredients: [{ tag: "tfc:seeds" }],
     results: [{ amount: 100, fluid: "createdieselgenerators:plant_oil" }]
