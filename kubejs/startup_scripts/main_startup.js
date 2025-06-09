@@ -75,6 +75,7 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerTFCHeatingSchema(event)
   registerTFCCastingSchema(event)
   registerTFCAnvilSchema(event)
+  registerTFCGlassworkingSchema(event)
   registerWoodencogFillingSchema(event)
   registerAe2ChargerSchema(event)
   registerAe2InscriberSchema(event)
