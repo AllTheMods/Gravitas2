@@ -392,6 +392,7 @@ global.gregVeins = [
 /*
 GLOBAL FUEL DATA
 Currently used by:
+    Blaze Burner with a Straw (Create Crafts & Additions)
 
 tag:
     Fluid tag (a tag, not an ID!)
