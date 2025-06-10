@@ -392,6 +392,7 @@ global.gregVeins = [
 /*
 GLOBAL FUEL DATA
 Currently used by:
+    Multiblock steam boiler fluid burner (RailCraft)
     Blaze Burner with a Straw (Create Crafts & Additions)
 
 tag:

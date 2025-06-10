@@ -1,8 +1,5 @@
 // priority 0
 
-const $FuelUtil = Java.loadClass("mods.railcraft.api.fuel.FuelUtil")
-const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
-
 StartupEvents.init((e) => {
   if (!Platform.isClientEnvironment()) return
   $CustomClickEvent.register($UtilsJS.makeFunctionProxy("startup", $EventActor, handleFTBCustomClick))
@@ -32,12 +29,6 @@ StartupEvents.postInit((event) => {
 })
 
 StartupEvents.postInit((event) => {
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:creosote"), 4800)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:crude_oil"), 18000)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:ethanol"), 32000)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:diesel"), 96000)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:bio_diesel"), 96000)
-
   if (!Platform.isClientEnvironment()) return
   addTooltipToBlocks(event)
 })
