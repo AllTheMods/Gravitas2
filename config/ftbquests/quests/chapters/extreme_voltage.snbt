@@ -177,7 +177,14 @@
 			id: "44750710EFE8C306"
 			tasks: [{
 				id: "7F49651F2F1E2E70"
-				item: "gtceu:yellow_glass_lens"
+                item: {
+                    Count: 1
+                    id: "itemfilters:tag"
+                    tag: {
+                        value: "forge:lenses/yellow"
+                    }
+                }
+                title: "{gravitas.quest.lens.yellow}"
 				type: "item"
 			}]
 			x: 4.5d

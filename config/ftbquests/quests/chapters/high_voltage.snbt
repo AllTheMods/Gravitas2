@@ -197,8 +197,15 @@
 		{
 			id: "20A0A574F51EEF74"
 			tasks: [{
-				id: "71285AC928BBD40E"
-				item: "gtceu:sapphire_lens"
+				id: "00ED6DEDF02E0E9D"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/blue"
+					}
+				}
+				title: "{gravitas.quest.lens.blue}"
 				type: "item"
 			}]
 			x: -3.0d
@@ -275,7 +282,14 @@
 			id: "3FDC2A2BBAC0EF1B"
 			tasks: [{
 				id: "3265E94FDBE6EF04"
-				item: "gtceu:diamond_lens"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/light_blue"
+					}
+				}
+				title: "{gravitas.quest.lens.light_blue}"
 				type: "item"
 			}]
 			x: 4.5d
@@ -304,32 +318,17 @@
 			y: -6.5d
 		}
 		{
-			dependencies: ["1AF005E292E409D1"]
 			id: "16154B77454631F4"
 			tasks: [{
 				id: "69AB81B8D1A9F5B1"
-				item: "gtceu:cyan_glass_lens"
-				type: "item"
-			}]
-			x: 0.5d
-			y: -8.0d
-		}
-		{
-			dependencies: ["78DC12C2EB504E56"]
-			id: "1AF005E292E409D1"
-			tasks: [{
-				id: "76B5D119B25F6C72"
-				item: "gtceu:glass_lens"
-				type: "item"
-			}]
-			x: 0.5d
-			y: -9.5d
-		}
-		{
-			id: "78DC12C2EB504E56"
-			tasks: [{
-				id: "180F78B65C332EB0"
-				item: "gtceu:glass_plate"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/cyan"
+					}
+				}
+				title: "{gravitas.quest.lens.cyan}"
 				type: "item"
 			}]
 			x: 0.5d
@@ -623,7 +622,14 @@
 			id: "5D58E5CB4F4BDAD5"
 			tasks: [{
 				id: "3459093D8C9EAE43"
-				item: "gtceu:orange_glass_lens"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/orange"
+					}
+				}
+				title: "{gravitas.quest.lens.orange}"
 				type: "item"
 			}]
 			x: -5.0d
