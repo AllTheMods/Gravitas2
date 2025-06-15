@@ -388,7 +388,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
 
   event.add("forge:dusts/saltpeter", "scguns:niter_dust")
   event.add("forge:dusts/quicklime", "tfc:powder/lime")  
-  event.add("tfc:glassworking_potash", "#forge:dusts/soda_ash")
+  event.add("tfc:glassworking_potash", ["#forge:dusts/soda_ash", "#forge:dusts/saltpeter"])
   event.add("forge:dusts/soda_ash", "tfc:powder/soda_ash")
 
   const weakCompostables = [event.get("tfc:compost_greens_low"), event.get("tfc:compost_browns_low")]
