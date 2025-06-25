@@ -72,24 +72,22 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
     event.add("forge:water", "tfc:river_water")
     event.add("gregitas:water", "minecraft:water")
 
-    event.add("forge:crude_oil", "gtceu:oil_medium")
-    event.add("forge:diesel", "gtceu:diesel")
-    event.add("forge:bio_diesel", "gtceu:bio_diesel")
-    event.add("forge:bio_diesel", "createdieselgenerators:biodiesel")
-    event.add("forge:bio_diesel", "immersiveengineering:biodiesel")
+    event.add("forge:oil_medium", ["createdieselgenerators:crude_oil", "gtceu:flowing_oil_medium"])
+    event.add("forge:crude_oil", ["gtceu:oil_medium", "gtceu:flowing_oil_medium"])
+    event.add("forge:bio_diesel", ["createdieselgenerators:biodiesel", "immersiveengineering:biodiesel"])
+    event.add("forge:biodiesel", ["gtceu:biodiesel"])
+    event.add("forge:biofuel", "createaddition:bioethanol")
 
-    const plantTags = ["forge:plant_oil", "forge:seed_oil"];
+    const plantTags = ["forge:plant_oil", "forge:seed_oil"]
     const plantFluids = [
         "immersiveengineering:plantoil",
         "createdieselgenerators:plant_oil",
         "createaddition:seed_oil",
         "gtceu:seed_oil",
         "tfc:olive_oil"
-    ];
+    ]
 
     plantTags.forEach(tag => {
-        plantFluids.forEach(fluid => {
-            event.add(tag, fluid);
-        })
+        event.add(tag, plantFluids)
     })
 }

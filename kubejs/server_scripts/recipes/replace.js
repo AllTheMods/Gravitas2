@@ -366,16 +366,10 @@ event.replaceInput(
   event.replaceInput({ input: "minecraft:apple"} ,"minecraft:apple", "#gregitas_core:apple")
 
   //gtceu
-  event.replaceInput({ mod: "gtceu"}, "minecraft:chest", "#forge:chests/wooden") //fix ULV buses requiring vanilla chest
+  event.replaceInput({ mod: "gtceu"}, "minecraft:chest", "#forge:chests/wooden") // Fixes ULV buses requiring vanilla chest
+  event.replaceInput({ mod: "gtceu" }, "allthemodium:ancient_stone", "#forge:cobblestone/normal") // Fixes multiple items requiring vanilla cobblestone
 
   event.replaceInput({ input: "minecraft:phantom_membrane" }, "minecraft:phantom_membrane", "#gravitas:phantom")
-
-
-  //laserio
-
-  event.replaceInput({ mod: "laserio" }, "minecraft:iron_ingot", "#forge:plates/iron")
-
-  event.replaceInput({ mod: "simpleplanes" }, "simpleplanes:propeller", "create:propeller")
 
   event.replaceInput({ mod: "immersive_aircraft" }, "immersive_aircraft:propeller", "create:propeller")
   event.replaceInput({ mod: "immersive_machinery" }, "immersive_aircraft:propeller", "create:propeller")

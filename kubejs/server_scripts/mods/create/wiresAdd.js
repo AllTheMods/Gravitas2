@@ -14,15 +14,8 @@ let wiresAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
 	// Add 1x wire rolling out of rods to Create Additions Rolling Mill
 	gtRollingSingleWires.forEach((material) => {
-		event.custom({
-			type: "createaddition:rolling",
-			input: {
-				tag: `forge:rods/${material}`
-			},
-			result: {
-				item: `gtceu:${material}_single_wire`
-			}
-		})
+		event.recipes.createaddition.rolling(`gtceu:${material}_single_wire`, `#forge:rods/${material}`)
+			.id(`gregitas:rolling/${material}_single_wire`)
 	})
 	
 	// Import all Gregtech wire -> cable recipes

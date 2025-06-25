@@ -523,7 +523,7 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"immersiveengineering:wirecoil_steel",				type:"createWire",			metal:"steel"			},
 		// Fine wires
 		{partId:"create_new_age:overcharged_iron_wire",				type:"fineWire",			metal:"iron"			}, // new age wires have an equivalent cost to fine wires
-		{partId:"create_new_age:overcharged_golden_wire",			type:"fineWire",			metal:"gold"			},
+		{partId:"create_new_age:overcharged_golden_wire",			type:"fineWire",			metal:"neodymium"		},
 		{partId:"create_new_age:copper_wire",						type:"fineWire",			metal:"copper"			},		
 		// Railcraft electrodes
 		{partId:"railcraft:iron_electrode",							type:"electrode",			metal:"iron"			},
