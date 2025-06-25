@@ -6,7 +6,12 @@
 	icon: "gtceu:advanced_integrated_circuit"
 	id: "37A5A4A81CCB67E5"
 	order_index: 3
-	quest_links: [ ]
+	quest_links: [{
+		id: "63E63F47A8FF28B8"
+		linked_quest: "2C9C440AE26159DB"
+		x: 3.5d
+		y: -8.0d
+	}]
 	quests: [
 		{
 			id: "70C952B8FF3418F6"
@@ -17,23 +22,23 @@
 				item: "gtceu:advanced_integrated_circuit"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 0.0d
+			x: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"5FAA73C52082DC48"
 				"39ACF4D6503067F3"
 				"0AC6B223857CAE94"
 			]
 			id: "54EDFCD65E088296"
+			optional: true
 			subtitle: "{gravitas.quest.hv.subtitle.nand_chip}"
 			tasks: [{
 				id: "28B1CB0A8A7BDC67"
 				item: "gtceu:nand_chip"
 				type: "item"
 			}]
-			x: 0.5d
+			x: -1.5d
 			y: -3.5d
 		}
 		{
@@ -48,14 +53,15 @@
 				item: "gtceu:microchip_processor"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -2.5d
+			x: 0.5d
+			y: -3.5d
 		}
 		{
 			dependencies: [
 				"4A073616799B0D30"
 				"5FAA73C52082DC48"
 				"0AC6B223857CAE94"
+				"791E5CB36B5C1E73"
 			]
 			id: "19DB4970B3D11C1B"
 			tasks: [{
@@ -63,8 +69,8 @@
 				item: "gtceu:micro_processor"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -1.0d
+			x: 2.5d
+			y: -3.5d
 		}
 		{
 			dependencies: [
@@ -80,13 +86,14 @@
 				item: "gtceu:micro_processor_assembly"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 1.0d
+			x: 4.5d
+			y: -3.5d
 		}
 		{
 			dependencies: [
 				"732D201794C228DD"
 				"46F5DC6A7FF02DF2"
+				"0AC6B223857CAE94"
 			]
 			id: "0DB4226BA23A5C09"
 			size: 1.5d
@@ -95,18 +102,19 @@
 				item: "gtceu:micro_processor_computer"
 				type: "item"
 			}]
-			x: 14.5d
+			x: 4.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["70C952B8FF3418F6"]
+			description: ["{gravitas.quest.hv.desc.mv_circuit_assembler}"]
 			id: "0AC6B223857CAE94"
 			tasks: [{
 				id: "7004B0FA13A8D4D1"
 				item: "gtceu:mv_circuit_assembler"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 1.5d
 			y: 0.0d
 		}
 		{
@@ -116,8 +124,8 @@
 				item: "gtceu:cleanroom"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 4.0d
+			x: -7.5d
+			y: -8.0d
 		}
 		{
 			id: "1DF42E30A24A9DEC"
@@ -126,8 +134,8 @@
 				item: "gtceu:plascrete"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 4.0d
+			x: -8.5d
+			y: -9.5d
 		}
 		{
 			id: "6F49C691CF79D4B8"
@@ -136,11 +144,14 @@
 				item: "gtceu:cleanroom_glass"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 6.0d
+			x: -7.5d
+			y: -9.5d
 		}
 		{
-			dependencies: ["3DCCEDC5A817EBEB"]
+			dependencies: [
+				"3DCCEDC5A817EBEB"
+				"72E5439299E957A8"
+			]
 			id: "61262BC1C525E6F1"
 			tasks: [{
 				id: "2BBF580104DF2C41"
@@ -156,21 +167,22 @@
 				}
 				type: "item"
 			}]
-			x: -5.0d
-			y: -3.0d
+			x: -2.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["4E5FE40373675AED"]
+			description: ["{gravitas.quest.hv.desc.mv_energy_hatch}"]
 			id: "3DCCEDC5A817EBEB"
-			subtitle: "EBF Upgrades"
+			subtitle: "{gravitas.quest.hv.subtitle.ebf_upgrade}"
 			tasks: [{
 				count: 2L
 				id: "3E686316F9E6B29E"
 				item: "gtceu:mv_energy_input_hatch"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -3.0d
+			x: -3.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["5B92DA55541B168B"]
@@ -180,8 +192,8 @@
 				item: "gtceu:ulpic_chip"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -5.0d
+			x: -3.5d
+			y: -5.5d
 		}
 		{
 			dependencies: ["20A0A574F51EEF74"]
@@ -191,7 +203,7 @@
 				item: "gtceu:ulpic_wafer"
 				type: "item"
 			}]
-			x: -3.0d
+			x: -3.5d
 			y: -7.0d
 		}
 		{
@@ -208,8 +220,8 @@
 				title: "{gravitas.quest.lens.blue}"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -9.0d
+			x: -3.5d
+			y: -8.5d
 		}
 		{
 			dependencies: [
@@ -222,18 +234,35 @@
 				item: "gtceu:plastic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 5.5d
+			x: 2.5d
 			y: -5.5d
 		}
 		{
+			description: ["{gravitas.quest.hv.desc.etching_fluid}"]
 			id: "0BAD21557994331D"
 			tasks: [{
-				id: "0CBFE2B699BFEC8F"
-				item: "gtceu:iron_iii_chloride_bucket"
+				id: "5461AFDB5B4B03CE"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:iron_iii_chloride_bucket"
+							}
+							{
+								Count: 1b
+								id: "gtceu:sodium_persulfate_bucket"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.hv.title.etching_fluid}"
 				type: "item"
 			}]
-			x: 6.5d
-			y: -7.0d
+			x: 3.5d
+			y: -6.5d
 		}
 		{
 			id: "791E5CB36B5C1E73"
@@ -242,19 +271,23 @@
 				item: "gtceu:capacitor"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -4.0d
+			x: 4.5d
+			y: -5.5d
 		}
 		{
-			dependencies: ["12F24C9C6D2AF887"]
+			dependencies: [
+				"05F94E45A5FA58DA"
+				"3D00F93DE91754A8"
+			]
+			dependency_requirement: "one_completed"
 			id: "0DF9014435C8F4D2"
 			tasks: [{
 				id: "3DB9A596BBFFF2FD"
 				item: "gtceu:inductor"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -2.0d
+			x: 6.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["39F4C5DF07A4A2E9"]
@@ -264,8 +297,8 @@
 				item: "gtceu:cpu_chip"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -2.0d
+			x: 0.5d
+			y: -5.5d
 		}
 		{
 			dependencies: ["3FDC2A2BBAC0EF1B"]
@@ -275,8 +308,8 @@
 				item: "gtceu:cpu_wafer"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -3.0d
+			x: 0.5d
+			y: -7.0d
 		}
 		{
 			id: "3FDC2A2BBAC0EF1B"
@@ -292,33 +325,36 @@
 				title: "{gravitas.quest.lens.light_blue}"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -4.0d
+			x: 0.5d
+			y: -8.5d
 		}
 		{
 			dependencies: ["0B54990168F9B136"]
 			id: "39ACF4D6503067F3"
+			optional: true
 			tasks: [{
 				id: "31899448B5C51F55"
 				item: "gtceu:simple_soc"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -5.0d
+			x: -1.5d
+			y: -5.5d
 		}
 		{
 			dependencies: ["16154B77454631F4"]
 			id: "0B54990168F9B136"
+			optional: true
 			tasks: [{
 				id: "5DFF6A6EA91263D1"
 				item: "gtceu:simple_soc_wafer"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -6.5d
+			x: -1.5d
+			y: -7.0d
 		}
 		{
 			id: "16154B77454631F4"
+			optional: true
 			tasks: [{
 				id: "69AB81B8D1A9F5B1"
 				item: {
@@ -331,29 +367,48 @@
 				title: "{gravitas.quest.lens.cyan}"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -11.0d
+			x: -1.5d
+			y: -8.5d
 		}
 		{
+			dependencies: [
+				"2C9C440AE26159DB"
+				"43671CF1F942ACD4"
+			]
 			id: "124C2A904BF84254"
 			tasks: [{
 				id: "1EB80E78DF5EF7E8"
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 2.5d
 			y: -7.0d
 		}
 		{
 			dependencies: ["68526BA198AADD8E"]
 			id: "46F5DC6A7FF02DF2"
+			rewards: [{
+				count: 8
+				id: "4E05D03ED0C21E9C"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:blue_alloy_bolt"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "1F1D7E8BE88CEE72"
 				item: "gtceu:blue_alloy_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: -2.5d
+			x: 6.5d
+			y: 0.0d
 		}
 		{
 			description: ["{gravitas.quest.hv.desc.electrotine_dust}"]
@@ -363,8 +418,8 @@
 				item: "gtceu:electrotine_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: -4.0d
+			x: 8.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["6A243EDB2A99C76D"]
@@ -374,8 +429,8 @@
 				item: "gtceu:nickel_zinc_ferrite_ingot"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -2.0d
+			x: 8.0d
+			y: -6.0d
 		}
 		{
 			id: "6A243EDB2A99C76D"
@@ -384,59 +439,20 @@
 				item: "gtceu:ferrite_mixture_dust"
 				type: "item"
 			}]
-			x: 11.0d
-			y: -2.0d
+			x: 8.0d
+			y: -7.5d
 		}
 		{
-			id: "3BEDF19CD79D53D5"
-			tasks: [{
-				id: "2A5387EF0991FC1D"
-				item: "gtceu:distillation_tower"
-				type: "item"
-			}]
-			x: 7.0d
-			y: 4.0d
-		}
-		{
-			id: "37913FBDE5C0EF2F"
-			tasks: [{
-				id: "157F5FEC08E4842C"
-				item: "gtceu:vacuum_freezer"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["358706CA93DC2A9C"]
-			id: "72E5439299E957A8"
-			tasks: [{
-				id: "6C8DCC0E471D0163"
-				item: "gtceu:kanthal_coil_block"
-				type: "item"
-			}]
-			x: -1.5d
-			y: 3.5d
-		}
-		{
-			id: "5A356950957F420A"
-			tasks: [{
-				id: "11A23E4297EFCD5E"
-				item: "gtceu:liquid_air_bucket"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 5.5d
-		}
-		{
+			dependencies: ["3DCCEDC5A817EBEB"]
+			description: ["{gravitas.quest.hv.desc.kanthal}"]
 			id: "358706CA93DC2A9C"
 			tasks: [{
 				id: "4E1E15185D672109"
 				item: "gtceu:kanthal_ingot"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 5.5d
+			x: -4.5d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -445,24 +461,24 @@
 				"2ACBA695BB3A47A8"
 			]
 			id: "0D573979B25FAC48"
+			subtitle: "{gravitas.quest.hv.subtitle.ebf_upgrade}"
 			tasks: [{
 				id: "5E6E95015D19F4FE"
 				item: "gtceu:hv_energy_input_hatch"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 4.5d
+			x: -9.5d
+			y: -3.5d
 		}
 		{
-			dependencies: ["40DC4C8DF9616F97"]
 			id: "61A16C4CF0B7A9B2"
 			tasks: [{
 				id: "0E66CBEB7C8E7539"
 				item: "gtceu:black_steel_ingot"
 				type: "item"
 			}]
-			x: -7.0d
-			y: 4.5d
+			x: -11.5d
+			y: -4.5d
 		}
 		{
 			dependencies: ["70C952B8FF3418F6"]
@@ -497,68 +513,63 @@
 				title: "{gravitas.quest.hv.title.any_hv_converter}"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 1.0d
+			x: -1.0d
+			y: 1.5d
 		}
 		{
-			id: "40DC4C8DF9616F97"
-			tasks: [{
-				id: "3A68557D0E516D4E"
-				item: "gtceu:black_bronze_dust"
-				type: "item"
-			}]
-			x: -8.5d
-			y: 4.5d
-		}
-		{
+			dependencies: ["013FC2F6C88D3EB0"]
 			id: "14E4A95B0AA4720F"
 			tasks: [{
 				id: "7CFF327E2DB07B95"
 				item: "gtceu:smd_transistor"
 				type: "item"
 			}]
-			x: 10.0d
-			y: -6.0d
+			x: 9.0d
+			y: 3.0d
 		}
 		{
+			dependencies: ["013FC2F6C88D3EB0"]
 			id: "32B256880A72519B"
 			tasks: [{
 				id: "28974C4025E87D0D"
 				item: "gtceu:smd_resistor"
 				type: "item"
 			}]
-			x: 10.0d
-			y: -7.5d
+			x: 7.0d
+			y: 3.0d
 		}
 		{
+			dependencies: ["013FC2F6C88D3EB0"]
 			id: "3F205ACC5514EF62"
 			tasks: [{
 				id: "38AF2799611DF0C5"
 				item: "gtceu:smd_capacitor"
 				type: "item"
 			}]
-			x: 11.5d
-			y: -7.5d
+			x: 10.0d
+			y: 3.0d
 		}
 		{
+			dependencies: ["013FC2F6C88D3EB0"]
 			id: "31377A76D03D98F6"
 			tasks: [{
 				id: "18C607B82F7F7B62"
 				item: "gtceu:smd_diode"
 				type: "item"
 			}]
-			x: 11.5d
-			y: -6.0d
+			x: 8.0d
+			y: 3.0d
 		}
 		{
+			dependencies: ["013FC2F6C88D3EB0"]
 			id: "391FF84B9C001995"
 			tasks: [{
 				id: "3C78F2CCA9E08FA7"
 				item: "gtceu:smd_inductor"
 				type: "item"
 			}]
-			x: 13.0d
-			y: -6.5d
+			x: 11.0d
+			y: 3.0d
 		}
 		{
 			id: "012366E4E4095FC4"
@@ -567,8 +578,8 @@
 				item: "gtceu:filter_casing"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 6.0d
+			x: -6.5d
+			y: -9.5d
 		}
 		{
 			dependencies: ["0115271C840CD387"]
@@ -579,8 +590,8 @@
 				item: "gtceu:steel_large_boiler"
 				type: "item"
 			}]
-			x: -11.5d
-			y: -1.0d
+			x: -4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["70C952B8FF3418F6"]
@@ -593,8 +604,8 @@
 				item: "gtceu:hv_steam_turbine"
 				type: "item"
 			}]
-			x: -9.5d
-			y: -1.0d
+			x: -2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["6A62263BDB8DA05D"]
@@ -604,19 +615,23 @@
 				item: "gtceu:lpic_chip"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 6.0d
+			x: -9.5d
+			y: -5.5d
 		}
 		{
-			dependencies: ["5D58E5CB4F4BDAD5"]
+			dependencies: [
+				"5D58E5CB4F4BDAD5"
+				"2323C578EDD76C5C"
+				"62BBF61C9849CA26"
+			]
 			id: "6A62263BDB8DA05D"
 			tasks: [{
 				id: "3F2E95916ADC74DE"
 				item: "gtceu:lpic_wafer"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 7.5d
+			x: -9.5d
+			y: -7.0d
 		}
 		{
 			id: "5D58E5CB4F4BDAD5"
@@ -632,8 +647,8 @@
 				title: "{gravitas.quest.lens.orange}"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 9.0d
+			x: -9.5d
+			y: -8.5d
 		}
 		{
 			id: "1E8D496B1CC4F69B"
@@ -642,8 +657,8 @@
 				item: "gtceu:sodium_potassium_bucket"
 				type: "item"
 			}]
-			x: -7.0d
-			y: 6.0d
+			x: -11.5d
+			y: -2.5d
 		}
 		{
 			description: ["{gravitas.quest.hv.desc.tantalite}"]
@@ -654,7 +669,7 @@
 				type: "item"
 			}]
 			x: 14.5d
-			y: -7.0d
+			y: 3.0d
 		}
 		{
 			can_repeat: false
@@ -679,8 +694,8 @@
 				title: "Quests By AllTheMods"
 				type: "checkmark"
 			}]
-			x: -7.5d
-			y: -1.5d
+			x: 1.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0115271C840CD387"]
@@ -692,8 +707,222 @@
 				item: "gtceu:infinite_water_cover"
 				type: "item"
 			}]
-			x: -10.5d
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"72E5439299E957A8"
+				"31ACA0B7A7FB7C5F"
+				"52ABB80CE31D0B3B"
+			]
+			description: ["{gravitas.quest.hv.desc.phosphorus_boule}"]
+			id: "28792C931628BEBE"
+			tasks: [{
+				id: "4EE4173DA4707C5F"
+				item: "gtceu:phosphorus_boule"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"28792C931628BEBE"
+				"2323C578EDD76C5C"
+				"62BBF61C9849CA26"
+			]
+			id: "5207B310852F712F"
+			size: 1.5d
+			tasks: [{
+				id: "5FEDE87E93A9B860"
+				item: "gtceu:phosphorus_wafer"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -7.0d
+		}
+		{
+			id: "31ACA0B7A7FB7C5F"
+			tasks: [{
+				id: "65D5FE4430BF3DF0"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/phosphorus"
+					}
+				}
+				title: "{gravitas.quest.hv.title.phosphorus}"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["61262BC1C525E6F1"]
+			description: [""]
+			id: "37C86843B940C91A"
+			rewards: [{
+				count: 4
+				id: "224A8489AD3D6F08"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:stainless_steel_plate"
+				}
+				random_bonus: 2
+				type: "item"
+			}]
+			size: 1.5d
+			subtitle: "{gravitas.quest.hv.subtitle.hv_machine_hull}"
+			tasks: [{
+				id: "5CF00CD21CF06F9D"
+				item: "gtceu:hv_machine_hull"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			id: "2323C578EDD76C5C"
+			tasks: [{
+				id: "39E7A5D38B79A9EC"
+				item: "gtceu:hv_cutter"
+				type: "item"
+			}]
+			x: -7.5d
+			y: -6.0d
+		}
+		{
+			id: "05F94E45A5FA58DA"
+			tasks: [{
+				id: "4725C24A05BCE362"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ring"
+				}
+				type: "item"
+			}]
+			x: 8.0d
 			y: -2.5d
+		}
+		{
+			dependencies: ["12F24C9C6D2AF887"]
+			id: "3D00F93DE91754A8"
+			tasks: [{
+				id: "097C2FB04086C66D"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:nickel_zinc_ferrite_ring"
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["70C952B8FF3418F6"]
+			description: ["{gravitas.quest.hv.desc.hv_assembler}"]
+			id: "013FC2F6C88D3EB0"
+			tasks: [{
+				id: "0B2FAD24AFC88CAF"
+				item: "gtceu:hv_assembler"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["173FF8D7B6C1569A"]
+			description: ["{gravitas.quest.hv.desc.fine_tantalum_wire}"]
+			id: "7BC5D964E808289A"
+			tasks: [{
+				id: "33E2906A7B8CF82D"
+				item: "gtceu:fine_tantalum_wire"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 3.0d
+		}
+		{
+			description: ["{gravitas.quest.hv.desc.plastic_sheet}"]
+			id: "43671CF1F942ACD4"
+			tasks: [{
+				id: "49EF2C1A1113DECB"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:polyethylene_plate"
+							}
+							{
+								Count: 1b
+								id: "gtceu:polyvinyl_chloride_plate"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.hv.title.plastic_sheet}"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["70C952B8FF3418F6"]
+			description: ["{gravitas.quest.hv.desc.hv_chemical_bath}"]
+			id: "4C3765C1303A26E8"
+			tasks: [{
+				id: "1BF264052BAAA038"
+				item: "gtceu:hv_chemical_bath"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			id: "52ABB80CE31D0B3B"
+			tasks: [{
+				id: "3709486DB1B2EF68"
+				item: "gtceu:nitrogen_bucket"
+				type: "item"
+			}]
+			x: -7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["358706CA93DC2A9C"]
+			description: ["{gravitas.quest.hv.desc.kanthal_coil}"]
+			id: "72E5439299E957A8"
+			subtitle: "{gravitas.quest.hv.subtitle.ebf_upgrade}"
+			tasks: [{
+				id: "6C8DCC0E471D0163"
+				item: "gtceu:kanthal_coil_block"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -0.5d
 		}
 	]
 	title: "{gravitas.chapters.18.title}"

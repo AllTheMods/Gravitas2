@@ -6,7 +6,12 @@
 	icon: "gtceu:micro_processor_computer"
 	id: "489F28A71282B3E7"
 	order_index: 4
-	quest_links: [ ]
+	quest_links: [{
+		id: "2920274D3E0BD461"
+		linked_quest: "5207B310852F712F"
+		x: 3.0d
+		y: -7.5d
+	}]
 	quests: [
 		{
 			id: "5241693278027FFD"
@@ -20,6 +25,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["438E229BEBDDAE81"]
 			id: "2E47C92E3E8D826A"
 			size: 1.5d
 			tasks: [{
@@ -37,8 +43,8 @@
 				item: "gtceu:smd_transistor"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 3.0d
+			x: 8.5d
+			y: -3.0d
 		}
 		{
 			id: "6445DEC19DD55A34"
@@ -47,8 +53,8 @@
 				item: "gtceu:smd_resistor"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 1.5d
+			x: 7.5d
+			y: -3.0d
 		}
 		{
 			id: "3D9B7855B5616DCE"
@@ -57,8 +63,8 @@
 				item: "gtceu:smd_capacitor"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 0.0d
+			x: 6.5d
+			y: -3.0d
 		}
 		{
 			id: "0D9D1462C676C050"
@@ -67,8 +73,8 @@
 				item: "gtceu:smd_diode"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -1.5d
+			x: 9.5d
+			y: -3.0d
 		}
 		{
 			id: "11AAA1DCB452DFFC"
@@ -154,6 +160,7 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["724BA14839627737"]
 			id: "55B9C3F5611AA6F6"
 			tasks: [{
 				id: "2726C0BC8094AD20"
@@ -161,9 +168,13 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
+			dependencies: [
+				"44750710EFE8C306"
+				"5207B310852F712F"
+			]
 			id: "724BA14839627737"
 			tasks: [{
 				id: "30D58696133E492C"
@@ -171,44 +182,24 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -6.5d
+			y: -7.5d
 		}
 		{
 			id: "44750710EFE8C306"
 			tasks: [{
 				id: "7F49651F2F1E2E70"
-                item: {
-                    Count: 1
-                    id: "itemfilters:tag"
-                    tag: {
-                        value: "forge:lenses/yellow"
-                    }
-                }
-                title: "{gravitas.quest.lens.yellow}"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/yellow"
+					}
+				}
+				title: "{gravitas.quest.lens.yellow}"
 				type: "item"
 			}]
 			x: 4.5d
-			y: -7.5d
-		}
-		{
-			id: "5F270891C953486E"
-			tasks: [{
-				id: "03BCFA5724D80E16"
-				item: "gtceu:phosphorus_wafer"
-				type: "item"
-			}]
-			x: 4.5d
-			y: -8.5d
-		}
-		{
-			id: "2CC82170BCE61940"
-			tasks: [{
-				id: "7CFE79284D3FFB61"
-				item: "gtceu:phosphorus_boule"
-				type: "item"
-			}]
-			x: 4.5d
-			y: -9.5d
+			y: -9.0d
 		}
 		{
 			id: "143BF8A4944C471D"
@@ -246,6 +237,61 @@
 			}]
 			x: 0.0d
 			y: -1.5d
+		}
+		{
+			dependencies: ["5241693278027FFD"]
+			id: "438E229BEBDDAE81"
+			tasks: [{
+				id: "4C3C5E24C55A3FF9"
+				item: "gtceu:hv_circuit_assembler"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["78A295D4D1A21BCA"]
+			id: "286E3CF56D960BEE"
+			tasks: [{
+				id: "02B52DA6671A7EC0"
+				item: "gtceu:ev_machine_hull"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["5241693278027FFD"]
+			id: "7A25699010300C79"
+			tasks: [{
+				id: "199F2E3821024C05"
+				item: "gtceu:distillation_tower"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5241693278027FFD"]
+			id: "4F3BE58F34441CD3"
+			tasks: [{
+				id: "6CCE79142BED7A02"
+				item: "gtceu:vacuum_freezer"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4F3BE58F34441CD3"]
+			id: "0B4ADF60F8C9F852"
+			tasks: [{
+				id: "25864BCC50A31614"
+				item: "gtceu:liquid_air_bucket"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
 		}
 	]
 	title: "{gravitas.chapters.19.title}"

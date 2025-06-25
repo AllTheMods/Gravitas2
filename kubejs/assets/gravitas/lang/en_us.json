@@ -1277,16 +1277,31 @@
     "gravitas.quest.mv.desc.alum": "You can acquire Aluminum by processing Bauxite in an Electrolyzer.",
 
     "gravitas.quest.hv.title.any_hv_converter": "Any HV Energy Converter",
+	"gravitas.quest.hv.title.plastic_sheet": "Plastic Sheet",
+	"gravitas.quest.hv.title.etching_fluid": "Etching Fluid",
+	"gravitas.quest.hv.title.phosphorus": "Phosphorus Dust",
 
     "gravitas.quest.hv.subtitle.watercover": "So Much Water",
     "gravitas.quest.hv.subtitle.hv_steam_turbine": "So much steam",
     "gravitas.quest.hv.subtitle.nand_chip": "On the cheap",
     "gravitas.quest.hv.subtitle.advanced_integrated_circuit": "Buckle up",
+    "gravitas.quest.hv.subtitle.ebf_upgrade": "EBF upgrades",
+	"gravitas.quest.hv.subtitle.hv_machine_hull": "Now you can get into HV proper!",
 
-    "gravitas.quest.hv.desc.tantalite": "Electrolyze tantalite dust to acquire tantalum dust\n\nAlso comes as a byproduct of tantalite ore processing!",
+	"gravitas.quest.hv.desc.plastic_sheet": "To make Plastic Circuit Boards, you'll need some plastic sheets.\n\nPolyvinyl Chloride is recommended - it has twice the yield of Polyethylene, but isn't much harder to make.",
+	"gravitas.quest.hv.desc.etching_fluid": "There are two Etching Fluid options - Sodium Persulfate and Iron III Chloride. Both have other industrial uses - which one to use for etching your PCBs is up to you.",
+	"gravitas.quest.hv.desc.mv_circuit_assembler": "Like before, the first machine you'll want to use your new HV circuits for is an MV Circuit Assembler.\\n\\nYou'll need it to advance to EV - and in the meanwhile, it unlocks cheaper recipes for ULV, LV, MV and HV circuits.",
+	"gravitas.quest.hv.desc.mv_energy_hatch": "A power upgrade for Electric Blast Furnace. Allows it to run HV recipes when powered with 4A of MV (2A per hatch).\n\nVital for producing Kanthal, which is required for Kanthal Coils.",
+    "gravitas.quest.hv.desc.kanthal": "The main use of Kanthal is to craft Electric Blast Furnace coils. You'll need stacks of Kanthal for that, so make it in bulk.",
+    "gravitas.quest.hv.desc.kanthal_coil": "A coil upgrade for Electric Blast Furnace.\n\nVital for producing Stainless Steel, which is required for HV machines. Handy for making Red Steel and Blue Steel too.",
+    "gravitas.quest.hv.desc.phosphorus_boule": "The second tier of silicon wafers - with 4 times the chip yields! You'll need to build a Cleanroom to use those new wafers though.",
+	"gravitas.quest.hv.desc.hv_chemical_bath": "Allows for plain glass lenses to be dyed with chemical dyes. Lenses of any color - with no need to hunt for gems or rely on TFC glassworking!\n\nAlso gives better yields when used for ore washing if overclocked.",
+	"gravitas.quest.hv.desc.hv_assembler": "New Assembler unlocks a lot of recipes - including recipes for SMD components. SMD components can be used in place of traditional components, and some of the more advanced recipes require them. \n\nHV Assembler also unlocks LaserIO, and allows one to build an Enchantment Table.",
+    "gravitas.quest.hv.desc.tantalite": "Electrolyze tantalite dust to acquire tantalum dust.\n\nAlso comes as a byproduct of tantalite ore processing!",
+	"gravitas.quest.hv.desc.fine_tantalum_wire": "Tantalum is very useful in manufacturing of SMD components. Almost every component can be made with Fine Tantalum Wire for increased yields.",
     "gravitas.quest.hv.desc.watercover": "Why pump fluid into a Steam Boiler when you can just slap one of these in, and have infinite water.",
     "gravitas.quest.hv.desc.hv_steam_turbine": "Time to upgrade that boiler perhaps?",
-    "gravitas.quest.hv.desc.electrotine_dust": "If you cannot find electrotine, you can create it by mixing electrum and redstone in a mixer",
+    "gravitas.quest.hv.desc.electrotine_dust": "If you cannot find Electrotine, you can create it by mixing Electrum and Redstone in a mixer.",
 
     "gravitas.quest.iv.desc.tungsten": "Tungsten is primarily obtained by processing Scheelite, and Wolframite, though it can also be found in the form of Tungstate Dust in the lairs of Lightning Dragons deep underground.",
 
