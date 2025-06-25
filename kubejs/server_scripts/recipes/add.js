@@ -280,6 +280,9 @@ const tfcFruitSaplings = ["cherry", "green_apple", "lemon", "olive", "orange", "
 const TFCGrains = ["oat", "barley", "maize", "rye", "rice", "wheat"]
 
 const gtVacuumShit = [
+  "black_steel",
+  "red_steel",
+  "blue_steel",
   "europium",
   "iridium",
   "niobium",
