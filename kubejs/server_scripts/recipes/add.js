@@ -2570,6 +2570,16 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     .duration(2 * 20)
     .EUt(7)
 
+  // Fire clay mixing
+  event.recipes.create.mixing(["tfc:fire_clay", Item.of("tfc:fire_clay").withChance(0.15)], ["minecraft:clay_ball", "4x tfc:powder/graphite", "4x tfc:powder/kaolinite"])
+    .id("gregitas:mixing/fire_clay")
+
+  event.recipes.gtceu.mixer("gregitas:fire_clay")
+    .itemInputs(["minecraft:clay_ball", "3x tfc:powder/graphite", "3x tfc:powder/kaolinite"])
+	.itemOutputs("tfc:fire_clay")
+    .duration(1 * 20)
+    .EUt(4)
+
   // Wood pulp -> treated wood pulp
   event.recipes.create.mixing("gtceu:treated_wood_dust", ["#forge:dusts/wood", {fluidTag: "forge:creosote", amount: 100}])
     .id("gregitas:mixing/treated_wood_dust")
