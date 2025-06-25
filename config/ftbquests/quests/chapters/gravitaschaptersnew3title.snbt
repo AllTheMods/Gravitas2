@@ -378,7 +378,14 @@
 			id: "62ECC24E927CF28D"
 			tasks: [{
 				id: "4E46DA34FF58420C"
-				item: "tfc:blowpipe"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:blowpipes"
+					}
+				}
+				title: "{gravitas.quest.stage3.blowpipe}"
 				type: "item"
 			}]
 			x: -2.5d
@@ -507,7 +514,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["35C75E911D6BDE12"]
 			id: "0E2E6B398D3F5CF1"
 			subtitle: "{gravitas.quest.stage3.subt.sanded}"
 			tasks: [
@@ -622,7 +628,14 @@
 			subtitle: "{gravitas.quest.stage3.subt.lime}"
 			tasks: [{
 				id: "3B18F0F1F1DE3CAB"
-				item: "tfc:powder/lime"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/quicklime"
+					}
+				}
+				title: "{gravitas.quest.stage3.quicklime}"
 				type: "item"
 			}]
 			x: -2.5d
@@ -708,25 +721,12 @@
 			id: "19811B419D853CDF"
 			subtitle: "{gravitas.quest.stage3.subt.ash}"
 			tasks: [{
-				id: "21DE1255F5DE75D4"
+				id: "6799BEEFDF636807"
 				item: {
 					Count: 1
-					id: "itemfilters:or"
+					id: "itemfilters:tag"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "tfc:powder/saltpeter"
-							}
-							{
-								Count: 1b
-								id: "gtceu:saltpeter_dust"
-							}
-							{
-								Count: 1b
-								id: "tfc:powder/soda_ash"
-							}
-						]
+						value: "tfc:glassworking_potash"
 					}
 				}
 				title: "{gravitas.quest.stage3.subt.potash}"
