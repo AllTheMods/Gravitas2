@@ -408,6 +408,53 @@ const colorMap = [
   "green"
 ]
 
+const vanTrees = [
+  { id: "acacia",
+    namespace: "tfc",
+    replace:"acacia"
+  },
+  {
+    id: "birch",
+    namespace: "tfc",
+    replace:"birch"
+  },
+  {
+    id: "dark_oak",
+    namespace: "tfc",
+    replace:"hickory"
+  },
+  {
+    id: "jungle",
+    namespace: "tfc",
+    replace:"chestnut"
+  },
+  {
+    id: "oak",
+    namespace: "tfc",
+    replace:"oak"
+  },
+  {
+    id: "spruce",
+    namespace: "tfc",
+    replace:"spruce"
+  },
+  {
+    id: "mangrove",
+    namespace: "tfc",
+    replace:"mangrove"
+  },
+  {
+    id: "crimson",
+    namespace: "beneath",
+    replace:"crimson"
+  },
+  {
+    id: "warped",
+    namespace: "beneath",
+    replace:"warped"
+  }
+]
+
 let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   const tfc = event.recipes.tfc
   const shaped = event.recipes.minecraft.crafting_shaped
@@ -2784,4 +2831,10 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
       P: "tfc:wool_cloth",
       S: "minecraft:string"
     })
+
+    vanTrees.forEach((vanTree) => { 
+         event.recipes.vintageimprovements.polishing("minecraft:" + vanTree.id + "_trapdoor", vanTree.namespace + ":wood/planks/" + vanTree.replace + "_trapdoor", 300,8)
+         event.recipes.vintageimprovements.polishing("minecraft:" + vanTree.id + "_door", vanTree.namespace + ":wood/planks/" + vanTree.replace + "_door", 300,8) 
+
+        })
 }
