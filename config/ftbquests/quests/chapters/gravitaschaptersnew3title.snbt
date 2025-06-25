@@ -778,7 +778,11 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["37180015F854BC0D"]
+			dependencies: [
+				"37180015F854BC0D"
+				"72E5439299E957A8"
+			]
+			dependency_requirement: "one_completed"
 			id: "4C8385E2ACE406EE"
 			tasks: [{
 				id: "24E6F50369952801"
@@ -798,7 +802,11 @@
 			y: 3.5d
 		}
 		{
-			dependencies: ["3F1A57E5A784E739"]
+			dependencies: [
+				"3F1A57E5A784E739"
+				"72E5439299E957A8"
+			]
+			dependency_requirement: "one_completed"
 			id: "15BC783BB17EE2D4"
 			tasks: [{
 				id: "02354F0CF91788C3"
