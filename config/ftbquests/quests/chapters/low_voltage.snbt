@@ -99,7 +99,7 @@
 				type: "item"
 			}]
 			title: "{gravitas.quest.lv.title.bender}"
-			x: -3.5d
+			x: -5.0d
 			y: -2.5d
 		}
 		{
@@ -838,11 +838,11 @@
 				item: "gtceu:lv_arc_furnace"
 				type: "item"
 			}]
-			x: -4.5d
+			x: -3.5d
 			y: -2.5d
 		}
 		{
-			dependencies: ["180322C8A7D2BB7B"]
+			dependencies: ["26387E1BAC45AC03"]
 			description: ["{gravitas.quest.lv.desc.ore_prospector}"]
 			id: "103C0C57708C36E5"
 			rewards: [{
@@ -850,14 +850,15 @@
 				item: "gtceu:basic_electronic_circuit"
 				type: "item"
 			}]
-			subtitle: "{gravitas.quest.mv.subtitle.ore_prospector}"
+			size: 1.5d
+			subtitle: "{gravitas.quest.lv.subtitle.ore_prospector}"
 			tasks: [{
 				id: "7103FD8BC3DD6CE9"
 				item: "gtceu:prospector.lv"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 2.5d
+			x: -8.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["25DBFE887B041E94"]
@@ -887,7 +888,7 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["180322C8A7D2BB7B"]
+			dependencies: ["26387E1BAC45AC03"]
 			description: [""]
 			id: "4C6FE5948A732B43"
 			subtitle: "Increase pickup distance"
@@ -896,8 +897,8 @@
 				item: "gtceu:lv_item_magnet"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 4.0d
+			x: -7.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["6E2F24117ACF3694"]
@@ -920,6 +921,142 @@
 			}]
 			x: 6.0d
 			y: 0.3d
+		}
+		{
+			id: "310F2DB6DF9C27E7"
+			rewards: [{
+				id: "7F912E4C159D6DE9"
+				item: "gtceu:battery_alloy_plate"
+				random_bonus: 1
+				type: "item"
+			}]
+			tasks: [{
+				id: "1FBD95163E5CE89D"
+				item: "gtceu:lv_battery_hull"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"180322C8A7D2BB7B"
+				"3CF0AE29835BE581"
+				"310F2DB6DF9C27E7"
+			]
+			description: ["{gravitas.quest.lv.desc.battery}"]
+			id: "26387E1BAC45AC03"
+			rewards: [{
+				id: "35C7AC01B7A300AD"
+				item: "gtceu:lv_battery_hull"
+				type: "item"
+			}]
+			tasks: [{
+				id: "740CE8E543EE4EF1"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:lv_lithium_battery"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lv_cadmium_battery"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lv_sodium_battery"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.lv.title.battery}"
+			x: -6.5d
+			y: 4.0d
+		}
+		{
+			description: [
+				"{gravitas.quest.lv.desc.battery_materials.0}"
+				""
+				"{gravitas.quest.lv.desc.battery_materials.1}"
+			]
+			id: "3CF0AE29835BE581"
+			tasks: [{
+				count: 2L
+				id: "6F7556583FF17D32"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:lithium_dust"
+							}
+							{
+								Count: 1b
+								id: "gtceu:cadmium_dust"
+							}
+							{
+								Count: 1b
+								id: "gtceu:sodium_dust"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.lv.title.battery_materials}"
+			x: -5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["26387E1BAC45AC03"]
+			description: [
+				"{gravitas.quest.lv.desc.power_unit.0}"
+				""
+				"{gravitas.quest.lv.desc.power_unit.1}"
+			]
+			id: "0F1814EF0487B9BB"
+			optional: true
+			rewards: [{
+				id: "5FEF97EBF1264486"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.lv.subtitle.power_unit}"
+			tasks: [{
+				id: "58C76EF504EBAFC2"
+				item: "gtceu:lv_power_unit"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1906C5D1C80035E4"]
+			description: ["{gravitas.quest.lv.desc.bucket}"]
+			id: "2BB75403A0FA8229"
+			rewards: [{
+				id: "37BF12D4094FA9D8"
+				item: "gtceu:iron_plate"
+				random_bonus: 2
+				type: "item"
+			}]
+			size: 1.5d
+			subtitle: "{gravitas.quest.lv.subtitle.bucket}"
+			tasks: [{
+				id: "5EA05119A7165888"
+				item: "minecraft:bucket"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -4.0d
 		}
 	]
 	title: "{gravitas.chapters.16.title}"
