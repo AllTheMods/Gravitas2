@@ -497,5 +497,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
                             "tfc:rock/magma/dacite"
                            ])
 
+  event.add("vintageimprovements:curving_heads", ["gtceu:ingot_casting_mold"])
   event.add("headlight:lights", ["tfc:torch"])
 }

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "gtceu:graphite_dust"
+  },
+  "result": {
+    "item": "tfc:powder/graphite",
+    "count": 4
+  }
+}

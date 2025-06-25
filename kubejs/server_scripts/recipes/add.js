@@ -458,12 +458,38 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
 
   event.recipes.gtceu
-    .forming_press(`gregitas:fire_brick`)
-    .itemInputs(`tfc:fire_clay`)
-    .itemOutputs(`tfc:ceramic/unfired_fire_brick`)
-    .notConsumable(`tfc:ceramic/ingot_mold`)
+    .forming_press('gregitas:brick')
+    .notConsumable('gtceu:ingot_casting_mold')
+    .itemInputs('minecraft:clay_ball')
+    .itemOutputs('tfc:ceramic/unfired_brick')
     .duration(100)
-    .EUt(LV)
+    .EUt(8)
+
+  event.recipes.vintageimprovements.curving("tfc:ceramic/unfired_brick", "minecraft:clay_ball", "gtceu:ingot_casting_mold")
+    .id("gregitas:forming/brick")
+
+  event.recipes.gtceu
+    .forming_press('gregitas:fire_brick')
+    .notConsumable('gtceu:ingot_casting_mold')
+    .itemInputs('tfc:fire_clay')
+    .itemOutputs('tfc:ceramic/unfired_fire_brick')
+    .duration(100)
+    .EUt(8)
+
+  event.recipes.vintageimprovements.curving("tfc:ceramic/unfired_fire_brick", "tfc:fire_clay", "gtceu:ingot_casting_mold")
+    .id("gregitas:forming/fire_brick")
+
+  event.custom({
+    type: "tfc:loom",
+    ingredient: {
+      ingredient: { item: "gtceu:carbon_fibers" },
+      count: 2
+    },
+    result: { item: "gtceu:carbon_fiber_mesh" },
+    steps_required: 8,
+    in_progress_texture: "minecraft:block/black_wool"
+  }).id("gregitas:loom/carbon_fiber_mesh")
+
 
   event.custom({
     type: "create:compacting",
@@ -2552,6 +2578,53 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
   event.recipes.minecraft.smelting('tfcchannelcasting:mold_table', 'tfcchannelcasting:unfired_mold_table')
   event.recipes.minecraft.smelting('tfcchannelcasting:heart_mold', 'tfcchannelcasting:unfired_heart_mold')
 
+  // Experience bottle filling/draining (EnderIO compatible)
+  event.recipes.create.filling("minecraft:experience_bottle", ["minecraft:glass_bottle", {fluidTag: "forge:experience", amount: 250}])
+    .id("gregitas:filling/experience_bottle")
+
+  event.recipes.gtceu.canner("gregitas:experience_bottle_fill")
+    .itemOutputs("minecraft:experience_bottle")
+    .itemInputs("minecraft:glass_bottle")
+    .inputFluids(toJSONObject({value: {tag: "forge:experience"}, amount: 250}))
+    .duration(2 * 20)
+    .EUt(7)
+
+  event.recipes.create.emptying(["minecraft:glass_bottle", Fluid.of("enderio:xp_juice", 250)], "minecraft:experience_bottle")
+    .id("gregitas:emptying/experience_bottle")
+
+  event.recipes.gtceu.canner("gregitas:experience_bottle_drain")
+    .itemInputs("minecraft:experience_bottle")
+    .itemOutputs("minecraft:glass_bottle")
+    .outputFluids(Fluid.of("enderio:xp_juice", 250))
+    .duration(2 * 20)
+    .EUt(7)
+
+  // Wood pulp -> treated wood pulp
+  event.recipes.create.mixing("gtceu:treated_wood_dust", ["#forge:dusts/wood", {fluidTag: "forge:creosote", amount: 100}])
+    .id("gregitas:mixing/treated_wood_dust")
+	
+  event.recipes.gtceu.chemical_bath("gregitas:treated_wood_dust")
+    .itemInputs("#forge:dusts/wood")
+    .itemOutputs("gtceu:treated_wood_dust")
+    .inputFluids(toJSONObject({value: {tag: "forge:creosote"}, amount: 100}))
+    .duration(1 * 20)
+    .EUt(4)
+
+  // Scorched Guns blaze fuel
+  event.recipes.create.filling("scguns:blaze_fuel", ["scguns:empty_tank", {fluidTag: "forge:blaze", amount: 3 * 144}])
+    .id("gregitas:filling/blaze_fuel")
+  event.recipes.gtceu.canner("gregitas:blaze_fuel")
+    .itemInputs("scguns:empty_tank")
+    .itemOutputs("scguns:blaze_fuel")
+    .inputFluids(toJSONObject({value: {tag: "forge:blaze"}, amount: 3 * 144}))
+    .duration(2 * 20)
+    .EUt(7)
+
+  // Paperback books - makes TFC papyrus recipe chain at least somewhat useful
+  event.shapeless("minecraft:book", ["3x #forge:plates/paper", "tfc:unrefined_paper"])
+    .id("gregitas:shapeless/paperback_book")
+
+  // Immersive Aircraft
   event.recipes.gtceu
   .assembler("gregitas:industrial_gears")
   .itemInputs("gtceu:small_bronze_gear", "gtceu:small_iron_gear", "gtceu:aluminium_rod")
