@@ -713,7 +713,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         tag: "forge:double_plates/red_steel"
       },
       {
-        tag: "forge:plates/blue_steel"
+        tag: "forge:double_plates/blue_steel"
       }
     )
     .itemOutputs("minecraft:enchanting_table")
