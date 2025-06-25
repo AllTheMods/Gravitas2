@@ -119,9 +119,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{type:"slab",				fluidAmount:648		}, // 1/2 block
 		{type:"stairs",				fluidAmount:972		}, // 3/4 block (although some stairs are made 6:4 instead of 6:8)
 		{type:"nugget",				fluidAmount:16		}, // 1/9 ingot
-		{type:"dust",				fluidAmount:144		}, // 1 ingot
-		{type:"smallDust",			fluidAmount:36		}, // 1/4 dust
-		{type:"tinyDust",			fluidAmount:16		}, // 1/9 dust
 		{type:"frameBlock",			fluidAmount:288		}, // 2 ingots (based on GT scrap resmelting)
 		{type:"sheetBlock",			fluidAmount:144		}, // 1 ingot
 		{type:"sheetHalf",			fluidAmount:72		}, // 1/2 ingot
@@ -198,7 +195,9 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 				fluidAmount = fluidAmount * 2
 			}
 			
-			let partHeatCap = metalProps.heatCap * fluidAmount
+			// Fluid amount is floored to an ingot's worth for the purpose of calculating heat capacity.
+			// This protects small items such as nuggets from being vaporized by the create bulk blaster as soon as they are produced.
+			let partHeatCap = metalProps.heatCap * Math.max(144, fluidAmount) 
 			
 			if( partHeatingDebug ){ 
 				console.info("Part found !") 
@@ -234,12 +233,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		addPartHeatingRecipe("gtceu:" + metal.metal + "_block", "block", metal.metal)
 		// frames
 		addPartHeatingRecipe("gtceu:" + metal.metal + "_frame", "frameBlock", metal.metal)
-		// Dusts
-		addPartHeatingRecipe("gtceu:" + metal.metal + "_dust", "dust", metal.metal)
-		addPartHeatingRecipe("gtceu:pure_" + metal.metal + "_dust", "dust", metal.metal)
-		addPartHeatingRecipe("gtceu:impure_" + metal.metal + "_dust", "dust", metal.metal)
-		addPartHeatingRecipe("gtceu:small_" + metal.metal + "_dust", "smallDust", metal.metal)
-		addPartHeatingRecipe("gtceu:tiny_" + metal.metal + "_dust", "tinyDust", metal.metal)
 		// Plates
 		if( ! GT_metalsWithHeating.includes(metal.metal) ){
 			addPartHeatingRecipe("gtceu:" + metal.metal + "_plate", "plate", metal.metal)
@@ -351,34 +344,26 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 	// All the other parts:
 	let parts = [
 		// Nuggets
-		{partId:"minecraft:iron_nugget",							type:"nugget",				metal:"iron"			},
+		//{partId:"minecraft:iron_nugget",							type:"nugget",				metal:"iron"			},
 		{partId:"gtceu:iron_round",									type:"nugget",				metal:"iron"			}, // worth 1 nugget
 		{partId:"gregitas_core:magnetic_wrought_iron_nugget",		type:"nugget",				metal:"wrought_iron"	}, // handle magnetic wrought manually as wrought_iron
 		{partId:"thoriumreactors:blasted_iron_nugget",				type:"nugget",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_nugget",				type:"nugget",				metal:"iron"			},
-		{partId:"scguns:treated_iron_nugget",						type:"nugget",				metal:"iron"			},
 		{partId:"minecraft:gold_nugget",							type:"nugget",				metal:"gold"			},
 		// Ingots
 		{partId:"minecraft:iron_ingot",								type:"ingot",				metal:"iron"			},
 		{partId:"gtceu:magnetic_iron_ingot",						type:"ingot",				metal:"magnetic_iron"	}, // Ingots not handled by GT loop
 		{partId:"gregitas_core:magnetic_wrought_iron_ingot",		type:"ingot",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_ingot",				type:"ingot",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_ingot",					type:"ingot",				metal:"iron"			},
-		{partId:"scguns:treated_iron_ingot",						type:"ingot",				metal:"iron"			},
 		{partId:"vintageimprovements:vanadium_ingot",				type:"ingot",				metal:"vanadium"		},
 		{partId:"gtceu:thorium_ingot",								type:"ingot",				metal:"thorium"			}, // thorium ingot wasn't heatable even though the ore is
-		{partId:"scguns:treated_brass_ingot",						type:"ingot",				metal:"brass"			},
 		// Blocks		
 		{partId:"minecraft:iron_block",								type:"block",				metal:"iron"			},
 		{partId:"gregitas_core:magnetic_wrought_iron_block",		type:"block",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_block",				type:"block",				metal:"iron"			},
-		{partId:"create:industrial_iron_block",						type:"block",				metal:"iron"			},
-		{partId:"scguns:treated_iron_block",						type:"block",				metal:"iron"			},
 		{partId:"minecraft:gold_block",								type:"block",				metal:"gold"			},
 		{partId:"immersiveengineering:storage_aluminum",			type:"block",				metal:"aluminium"		},
 		{partId:"thoriumreactors:aluminum_block",					type:"block",				metal:"aluminium"		},
 		{partId:"scguns:ancient_brass_block",						type:"block",				metal:"brass"			},
-		{partId:"scguns:treated_brass_block",						type:"block",				metal:"brass"			},
 		{partId:"immersiveengineering:storage_constantan",			type:"block",				metal:"constantan"		},
 		{partId:"immersiveengineering:storage_steel",				type:"block",				metal:"steel"			},
 		// Slabs
@@ -388,10 +373,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"immersiveengineering:slab_storage_electrum",		type:"slab",				metal:"electrum"		},
 		{partId:"immersiveengineering:slab_storage_constantan",		type:"slab",				metal:"constantan"		},		
 		{partId:"immersiveengineering:slab_storage_steel",			type:"slab",				metal:"steel"			},
-		// Dusts	
-		{partId:"gregitas_core:magnetic_wrought_iron_dust",			type:"dust",				metal:"wrought_iron"	},
-		{partId:"gregitas_core:small_magnetic_wrought_iron_dust",	type:"smallDust",			metal:"wrought_iron"	},
-		{partId:"gregitas_core:tiny_magnetic_wrought_iron_dust",	type:"tinyDust",			metal:"wrought_iron"	},
 		// Plates
 		{partId:"vintageimprovements:cast_iron_sheet",				type:"plate",				metal:"iron"			}, // Fluid amount for this one ends up being halved for an unknown reason.
 		{partId:"vintageimprovements:vanadium_sheet",				type:"plate",				metal:"vanadium"		}, // Fluid amount for this one ends up being halved for an unknown reason.
@@ -418,7 +399,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"railcraft:brass_gear",								type:"gear",				metal:"brass"			},		
 		// Coins
 		{partId:"createdeco:iron_coin",								type:"coin",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_coin",					type:"coin",				metal:"iron"			},
 		{partId:"gtceu:ancient_gold_coin",							type:"coin",				metal:"gold"			},
 		{partId:"createdeco:gold_coin",								type:"coin",				metal:"gold"			},
 		{partId:"gtceu:copper_credit",								type:"coin",				metal:"copper"			},
@@ -482,8 +462,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"tfc:metal/block/red_steel",						type:"platedBlock",			metal:"red_steel"		},
 		// Bars
 		{partId:"minecraft:iron_bars",								type:"bars",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_bars",					type:"bars",				metal:"iron"			},
-		{partId:"createdeco:industrial_iron_bars_overlay",			type:"bars",				metal:"iron"			},
 		{partId:"create:copper_bars",								type:"bars",				metal:"copper"			},
 		{partId:"createdeco:copper_bars",							type:"bars",				metal:"copper"			},
 		{partId:"createdeco:copper_bars_overlay",					type:"bars",				metal:"copper"			},
@@ -533,42 +511,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		// Pipes
 		{partId:"immersiveengineering:fluid_pipe",					type:"gtPipeTiny",			metal:"iron"			}, // Treated as a tiny gtpipe for fluid amount (some return lost)
 		{partId:"create:fluid_pipe",								type:"gtPipeTiny",			metal:"copper"			}, // Treated as a tiny gtpipe for fluid amount (some return lost)
-		// Molds
-		{partId:"gtceu:empty_mold",									type:"mold",				metal:"steel"			},
-		{partId:"gtceu:plate_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:plate_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:gear_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:gear_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:small_gear_casting_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:small_gear_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:rotor_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:rotor_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:credit_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:bottle_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ingot_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ingot_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ball_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:block_casting_mold",							type:"mold",				metal:"steel"			}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"gtceu:block_extruder_mold",						type:"mold",				metal:"steel"			}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"gtceu:nugget_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:cylinder_casting_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:anvil_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:anvil_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:name_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:pill_casting_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:bolt_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:rod_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:long_rod_extruder_mold",						type:"mold",				metal:"steel"			},
-		{partId:"gtceu:ring_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:cell_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:wire_extruder_mold",							type:"mold",				metal:"steel"			},
-		{partId:"gtceu:tiny_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:small_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:normal_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:large_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:huge_pipe_extruder_mold",					type:"mold",				metal:"steel"			},
-		{partId:"gtceu:foil_extruder_mold",							type:"mold",				metal:"steel"			},
-		
 		// Bullet casings
 		{partId:"scguns:small_iron_casing",							type:"bulletCasingSmall",	metal:"iron"			},
 		{partId:"scguns:large_iron_casing",							type:"bulletCasingLarge",	metal:"iron"			},
