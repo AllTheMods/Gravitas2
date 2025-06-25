@@ -119,33 +119,25 @@
 		}
 		{
 			id: "62BBF61C9849CA26"
-			tasks: [{
-				id: "564B0D84C5688FF2"
-				item: "gtceu:cleanroom"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "564B0D84C5688FF2"
+					item: "gtceu:cleanroom"
+					type: "item"
+				}
+				{
+					id: "1945295F5A5C547D"
+					item: "gtceu:plascrete"
+					type: "item"
+				}
+				{
+					id: "2BEFA1048918A566"
+					item: "gtceu:filter_casing"
+					type: "item"
+				}
+			]
 			x: -7.5d
 			y: -8.0d
-		}
-		{
-			id: "1DF42E30A24A9DEC"
-			tasks: [{
-				id: "1945295F5A5C547D"
-				item: "gtceu:plascrete"
-				type: "item"
-			}]
-			x: -8.5d
-			y: -9.5d
-		}
-		{
-			id: "6F49C691CF79D4B8"
-			tasks: [{
-				id: "71760579D96768C3"
-				item: "gtceu:cleanroom_glass"
-				type: "item"
-			}]
-			x: -7.5d
-			y: -9.5d
 		}
 		{
 			dependencies: [
@@ -570,16 +562,6 @@
 			}]
 			x: 11.0d
 			y: 3.0d
-		}
-		{
-			id: "012366E4E4095FC4"
-			tasks: [{
-				id: "2BEFA1048918A566"
-				item: "gtceu:filter_casing"
-				type: "item"
-			}]
-			x: -6.5d
-			y: -9.5d
 		}
 		{
 			dependencies: ["0115271C840CD387"]
