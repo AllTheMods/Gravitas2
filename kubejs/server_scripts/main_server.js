@@ -7,6 +7,7 @@ ServerEvents.recipes((event) => {
   replaceTFCHeatingAndCasting(event)
   addCollapse(event)
   tfcGregTools(event)
+  recipesTFCGlassblowingLenses(event)
   gtceuAdd(event)
   createAdd(event)
   centrifugeAdd(event)

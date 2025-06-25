@@ -66,6 +66,7 @@ const pkgJson = {
 
 global.itemsToRemove = [
 	"tfc:metal/sheet/steel",
+	"tfc:lens",
 	"immersiveengineering:plate_steel",
 	"vintageimprovements:andesite_sheet",
 	"alltheores:peridot",

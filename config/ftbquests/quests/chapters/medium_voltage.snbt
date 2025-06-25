@@ -245,7 +245,12 @@
 			y: 10.0d
 		}
 		{
-			dependencies: ["4DD7F3508B757EF0"]
+			dependencies: [
+				"4DD7F3508B757EF0"
+				"2A38EF069D69137F"
+			]
+			dependency_requirement: "one_completed"
+			description: ["{gravitas.quest.mv.desc.red_lens}"]
 			id: "26004F997C758011"
 			rewards: [{
 				id: "7742DCB74500D3F7"
@@ -253,8 +258,15 @@
 				xp: 10
 			}]
 			tasks: [{
-				id: "6719992674D5E9F1"
-				item: "gtceu:ruby_lens"
+				id: "6C1D44EE24F8E22B"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/red"
+					}
+				}
+				title: "{gravitas.quest.lens.red}"
 				type: "item"
 			}]
 			x: 17.0d
@@ -304,7 +316,9 @@
 			dependencies: [
 				"545959C8C28C6F2B"
 				"26004F997C758011"
+				"014C95FFC5A1EEFB"
 			]
+			dependency_requirement: "one_completed"
 			description: ["{gravitas.quest.mv.desc.advance_laser_engraver}"]
 			id: "11F7D3DDF5683EB3"
 			rewards: [{
@@ -322,7 +336,12 @@
 			y: 10.0d
 		}
 		{
-			dependencies: ["4DD7F3508B757EF0"]
+			dependencies: [
+				"4DD7F3508B757EF0"
+				"2A38EF069D69137F"
+			]
+			dependency_requirement: "one_completed"
+			description: ["{gravitas.quest.mv.desc.green_lens}"]
 			id: "545959C8C28C6F2B"
 			rewards: [{
 				id: "16950710D10185F1"
@@ -330,8 +349,15 @@
 				xp: 10
 			}]
 			tasks: [{
-				id: "26EADF8B321DFAA6"
-				item: "gtceu:emerald_lens"
+				id: "6EE58D2CAA78E249"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:lenses/green"
+					}
+				}
+				title: "{gravitas.quest.lens.green}"
 				type: "item"
 			}]
 			x: 17.0d
@@ -340,6 +366,7 @@
 		{
 			description: ["{gravitas.quest.mv.desc.gem}"]
 			id: "4DD7F3508B757EF0"
+			optional: true
 			rewards: [{
 				id: "16A756955B6CB9B8"
 				type: "xp"
@@ -388,8 +415,8 @@
 				}
 			]
 			title: "{gravitas.quest.mv.title.gems}"
-			x: 18.5d
-			y: 10.0d
+			x: 20.0d
+			y: 8.5d
 		}
 		{
 			dependencies: ["0D1A6B32FEB51FAD"]
@@ -1065,6 +1092,10 @@
 									Count: 1b
 									id: "gtceu:lv_distillery"
 								}
+								{
+									Count: 1b
+									id: "createdieselgenerators:distillation_controller"
+								}
 							]
 						}
 					}
@@ -1125,6 +1156,42 @@
 			}]
 			x: 3.0d
 			y: 4.5d
+		}
+		{
+			description: ["{gravitas.quest.mv.desc.glassworking}"]
+			id: "2A38EF069D69137F"
+			optional: true
+			tasks: [{
+				id: "526B3EC999CB1552"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tfc:blowpipes"
+					}
+				}
+				title: "{gravitas.quest.mv.title.glassworking}"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 11.5d
+		}
+		{
+			description: ["{gravitas.quest.mv.desc.mv_emitter}"]
+			id: "014C95FFC5A1EEFB"
+			rewards: [{
+				id: "626CBBA6A9C55931"
+				item: "gtceu:basic_electronic_circuit"
+				random_bonus: 1
+				type: "item"
+			}]
+			tasks: [{
+				id: "15557595B8EF22AD"
+				item: "gtceu:mv_emitter"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 10.0d
 		}
 	]
 	title: "{gravitas.chapters.17.title}"
