@@ -39,4 +39,33 @@ let registerVintageImprovementsSchemas = (/** @type {Internal.RecipeSchemaRegist
 	)
 	namespace.register("centrifugation", centrifugationSchema)
 
+	let curvingSchema = new $RecipeSchema(
+		output_item_array_results,
+		input_item_array_ingredients,
+		Component("nonEmptyString").key("itemAsHead").optional(""),
+		Component("intNumberRange", { min: 1, max: 4 }).key("mode").optional(1),
+		Component("intNumber").key("headDamage").optional(0)
+	)
+	namespace.register("curving", curvingSchema)
+
+	let hammeringSchema = new $RecipeSchema(
+		output_item_array_results,
+		input_item_array_ingredients,
+		keys.processing_time,
+		Component("intNumber").key("hammerBlows").optional(1),
+		Component("nonEmptyString").key("anvilBlock").optional("")
+	)
+	namespace.register("hammering", hammeringSchema)
+	
+	let compressorSchema = new $RecipeSchema(
+		keys.fluid_or_item_output_array,
+		keys.fluid_or_item_input_array,
+		keys.processing_time,
+		keys.heat_requirement,
+		Component("intNumber").key("secondaryFluidInput").optional(-1),
+		Component("intNumber").key("secondaryFluidOutput").optional(-1)
+	)
+	namespace.register("vacuumizing", compressorSchema)
+	namespace.register("pressurizing", compressorSchema)
+
 }
