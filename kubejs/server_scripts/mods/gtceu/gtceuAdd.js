@@ -1640,6 +1640,20 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("2x minecraft:white_wool")
     .duration(100)
     .EUt(HV)
+  
+  // TFC chains
+  
+  const TFCChains = ["copper", "bronze", "bismuth_bronze", "black_bronze", "wrought_iron", "steel", "black_steel", "blue_steel", "red_steel"]
+  
+  TFCChains.forEach((material) => {
+    event.recipes.gtceu
+      .assembler(`gregitas:chain_${material}`)
+      .circuit(4)
+      .itemInputs(`4x #forge:rings/${material}`)
+      .itemOutputs(`16x tfc:metal/chain/${material}`)
+      .duration(4 * 20)
+      .EUt(8)
+  })
 
   //wireless chargers
 

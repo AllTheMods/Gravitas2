@@ -143,10 +143,19 @@ const tfcgems = [
   "opal",
   "lapis_lazuli",
   "emerald",
-  "amethyst",
-  "sylvite",
-  "saltpeter"
+  "amethyst"
 ]
+
+const TFCtoGTores = {
+  "diamond": "2x gtceu:crushed_diamond_ore",
+  "sulfur": "2x gtceu:crushed_sulfur_ore",
+  "cinnabar": "8x gtceu:crushed_cinnabar_ore",
+  "cryolite": "8x gtceu:crushed_redstone_ore",
+  "halite": "4x gtceu:crushed_salt_ore",
+  "sylvite": "4x gtceu:crushed_rock_salt_ore",
+  "borax": "6x gtceu:crushed_borax_ore",
+  "saltpeter": "4x gtceu:crushed_saltpeter_ore"
+}
 
 const createstone = ["veridium", "asurine", "crimsite", "ochrum"]
 
@@ -280,6 +289,9 @@ const tfcFruitSaplings = ["cherry", "green_apple", "lemon", "olive", "orange", "
 const TFCGrains = ["oat", "barley", "maize", "rye", "rice", "wheat"]
 
 const gtVacuumShit = [
+  "black_steel",
+  "red_steel",
+  "blue_steel",
   "europium",
   "iridium",
   "niobium",
@@ -342,13 +354,13 @@ const thermalDepositsMap = {
   "tfcthermaldeposits:mineral/brimstone": "gtceu:sulfur_dust",
   "tfcthermaldeposits:mineral/salmiak": "tfcthermaldeposits:mineral/powder/salmiak",
   "tfcthermaldeposits:mineral/zabuyelite": "tfcthermaldeposits:mineral/powder/zabuyelite",
-  "tfcthermaldeposits:mineral/magnesite": "tfcthermaldeposits:mineral/powder/magnesite",
+  "tfcthermaldeposits:mineral/magnesite": "gtceu:magnesite_dust",
   "tfcthermaldeposits:mineral/spherocobaltite": "tfcthermaldeposits:mineral/powder/spherocobaltite",
   "tfcthermaldeposits:mineral/alabandite": "tfcthermaldeposits:mineral/powder/alabandite",
   "tfcthermaldeposits:mineral/smithsonite": "tfcthermaldeposits:mineral/powder/smithsonite",
   "tfcthermaldeposits:mineral/greigite": "tfcthermaldeposits:mineral/powder/greigite",
   "tfcthermaldeposits:mineral/apatite": "tfcthermaldeposits:mineral/powder/apatite",
-  "tfcthermaldeposits:mineral/bastnasite": "tfcthermaldeposits:mineral/powder/bastnasite"
+  "tfcthermaldeposits:mineral/bastnasite": "gtceu:bastnasite_dust"
 }
 
 // ingot/plates/etc. to convert to GT equivalents
@@ -2164,57 +2176,24 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
       .EUt(LV)
   })
 
-  //tfc gem macerating
-
-  event.recipes.gtceu
-    .macerator("gregitas:diamond_crushing")
-    .itemInputs("tfc:ore/diamond")
-    .itemOutputs("4x gtceu:diamond_dust")
-    .EUt(MV)
-    .duration(10)
-
-  event.recipes.gtceu
-    .macerator("gregitas:sulfur_crushing")
-    .itemInputs("tfc:ore/sulfur")
-    .itemOutputs("4x gtceu:sulfur_dust")
-    .EUt(MV)
-    .duration(10)
-
-  event.recipes.gtceu
-    .macerator("gregitas:cinnabar_crushing")
-    .itemInputs("tfc:ore/cinnabar")
-    .itemOutputs("8x minecraft:redstone")
-    .EUt(MV)
-    .duration(10)
-
-  event.recipes.gtceu
-    .macerator("gregitas:cryolite_crushing")
-    .itemInputs("tfc:ore/cryolite")
-    .itemOutputs("8x minecraft:redstone")
-    .EUt(MV)
-    .duration(10)
-
-  event.recipes.gtceu
-    .macerator("gregitas:borax_crushing")
-    .itemInputs("tfc:ore/borax")
-    .itemOutputs("6x tfc:powder/flux")
-    .EUt(MV)
-    .duration(10)
-
-  event.recipes.gtceu
-    .macerator("gregitas:halite_crushing")
-    .itemInputs("tfc:ore/halite")
-    .itemOutputs("4x tfc:powder/salt")
-    .EUt(MV)
-    .duration(10)
-
+  // TFC gem macerating
+  
   tfcgems.forEach((tfcgems) => {
     event.recipes.gtceu
       .macerator(`gregitas:${tfcgems}_crushing`)
       .itemInputs(`tfc:ore/${tfcgems}`)
       .itemOutputs(`4x tfc:powder/${tfcgems}`)
       .duration(10)
-      .EUt(MV)
+      .EUt(40)
+  })
+
+  Object.entries(TFCtoGTores).forEach(([ore, replacement]) => {
+    event.recipes.gtceu
+      .macerator(`gregitas:${ore}_crushing`)
+      .itemInputs(`tfc:ore/${ore}`)
+      .itemOutputs(replacement)
+      .duration(10)
+      .EUt(40)
   })
 
   //create stones
@@ -2605,7 +2584,7 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     F: Item.of("tfc:metal/sword/copper", '{Damage:0}')
   }).id("gregitas:tool_swapper_upgrade")
 
-   //Firmalife
+  //Firmalife
   event.replaceInput(
     { id: 'firmalife:crafting/solar_drier' },
     'firmalife:metal/rod/stainless_steel',
@@ -2637,6 +2616,16 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     .outputFluids(Fluid.of("enderio:xp_juice", 250))
     .duration(2 * 20)
     .EUt(7)
+
+  // Fire clay mixing
+  event.recipes.create.mixing(["tfc:fire_clay", Item.of("tfc:fire_clay").withChance(0.15)], ["minecraft:clay_ball", "4x tfc:powder/graphite", "4x tfc:powder/kaolinite"])
+    .id("gregitas:mixing/fire_clay")
+
+  event.recipes.gtceu.mixer("gregitas:fire_clay")
+    .itemInputs(["minecraft:clay_ball", "3x tfc:powder/graphite", "3x tfc:powder/kaolinite"])
+	.itemOutputs("tfc:fire_clay")
+    .duration(1 * 20)
+    .EUt(4)
 
   // Wood pulp -> treated wood pulp
   event.recipes.create.mixing("gtceu:treated_wood_dust", ["#forge:dusts/wood", {fluidTag: "forge:creosote", amount: 100}])
