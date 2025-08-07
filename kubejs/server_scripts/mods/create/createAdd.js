@@ -731,4 +731,9 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         event.recipes.create.milling(result, ingredient)
     })
+    event.recipes.minecraft.blasting("tfc:dirt/loam", "tfc:mud/loam",250)
+    event.recipes.minecraft.blasting("tfc:dirt/silt", "tfc:mud/silt",250)
+    event.recipes.minecraft.blasting("tfc:dirt/sandy_loam", "tfc:mud/sandy_loam",250)
+    event.recipes.minecraft.blasting("tfc:dirt/silty_loam", "tfc:mud/silty_loam",250)
 }
+
