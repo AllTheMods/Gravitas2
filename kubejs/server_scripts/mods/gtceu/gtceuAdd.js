@@ -1121,7 +1121,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.recipes.gtceu
     .alloy_smelter("alabaster_brick")
-    .itemInputs("4x tfc:ore/gypsum")
+    .itemInputs("tfc:ore/gypsum")
     .notConsumable("gtceu:ingot_casting_mold")
     .itemOutputs("4x tfc:alabaster_brick")
     .EUt(LV)

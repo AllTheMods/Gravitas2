@@ -1633,7 +1633,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   tfcStone.forEach((stone) => {
     event.recipes.gtceu
       .alloy_smelter(`${stone}_brick`)
-      .itemInputs(`4x tfc:rock/loose/${stone}`)
+      .itemInputs(`tfc:rock/loose/${stone}`)
       .notConsumable("gtceu:ingot_casting_mold")
       .itemOutputs(`4x tfc:brick/${stone}`)
       .duration(80)
