@@ -15,12 +15,20 @@
 	}
 	id: "7B9452977B7D7BE1"
 	order_index: 1
-	quest_links: [{
-		id: "412F3582380A8B5A"
-		linked_quest: "735C1C31C684CC3E"
-		x: 8.0d
-		y: -5.0d
-	}]
+	quest_links: [
+		{
+			id: "412F3582380A8B5A"
+			linked_quest: "735C1C31C684CC3E"
+			x: 8.0d
+			y: -5.0d
+		}
+		{
+			id: "2A071C762008D783"
+			linked_quest: "1D3EE99667998CEE"
+			x: 1.5d
+			y: 2.9d
+		}
+	]
 	quests: [
 		{
 			description: ["{gravitas.quest.stage2.desc.start}"]
@@ -58,7 +66,7 @@
 			}]
 			title: "{gravitas.quest.stage2.start}"
 			x: -0.75d
-			y: 0.0d
+			y: 0.2d
 		}
 		{
 			dependencies: ["7DFCB6CF6B7824B1"]
@@ -227,8 +235,8 @@
 				title: "{gravitas.quest.stage2.zn}"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -1.5d
+			x: -0.7000000000000002d
+			y: -2.0d
 		}
 		{
 			dependencies: ["5EE0CF563FDF196C"]
@@ -344,8 +352,8 @@
 				}
 				type: "item"
 			}]
-			x: 1.5d
-			y: -1.5d
+			x: 0.7999999999999999d
+			y: -2.0d
 		}
 		{
 			dependencies: ["3A6A2E6A9E75C645"]
@@ -357,8 +365,8 @@
 				item: { Count: 4, id: "gtceu:small_zinc_dust" }
 				type: "item"
 			}]
-			x: 3.0d
-			y: -1.5d
+			x: 2.3000000000000003d
+			y: -2.0d
 		}
 		{
 			dependencies: ["482EBEA7C1754B4C"]
@@ -378,8 +386,8 @@
 				}
 				type: "item"
 			}]
-			x: 4.5d
-			y: -1.5d
+			x: 3.8000000000000003d
+			y: -2.0d
 		}
 		{
 			dependencies: ["5A094944E06D050A"]
@@ -399,8 +407,8 @@
 				}
 				type: "item"
 			}]
-			x: 6.5d
-			y: -1.5d
+			x: 5.799999999999999d
+			y: -2.0d
 		}
 		{
 			dependencies: ["44F8C37DD9151C22"]
@@ -418,7 +426,7 @@
 				title: "{gravitas.quest.stage2.chisel}"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 1.5d
 			y: 0.5d
 		}
 		{
@@ -517,7 +525,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: -2.5d
+			y: -2.7d
 		}
 		{
 			dependencies: [
@@ -531,8 +539,8 @@
 				item: "create:millstone"
 				type: "item"
 			}]
-			x: 6.5d
-			y: -0.5d
+			x: 3.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["139A1628E970A1F1"]
@@ -558,12 +566,13 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: -0.5d
+			x: 1.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["44F8C37DD9151C22"]
 			id: "2FB772C17B0067E8"
+			optional: true
 			shape: "gear"
 			tasks: [{
 				id: "7D8466FA49B457A0"
@@ -586,8 +595,8 @@
 				title: "{gravitas.quest.stage2.graphite}"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 1.0d
+			x: 3.0d
+			y: 0.4d
 		}
 		{
 			dependencies: ["44F8C37DD9151C22"]
@@ -609,14 +618,16 @@
 				}
 				type: "item"
 			}]
-			x: 4.0d
-			y: 2.0d
+			x: 4.9d
+			y: 3.5d
 		}
 		{
 			dependencies: [
-				"2FB772C17B0067E8"
-				"000CF8AEF83DEC40"
+				"18EEA197750E7C38"
+				"2B1060BB6F2CD77B"
 			]
+			dependency_requirement: "one_completed"
+			description: ["{gravitas.quest.stage2.desc.graphite}"]
 			id: "10CC2F9265A66C65"
 			subtitle: "{gravitas.quest.stage2.desc.graph}"
 			tasks: [{
@@ -624,8 +635,8 @@
 				item: "tfc:powder/graphite"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 0.5d
+			x: 6.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["63626742A6CAE4B7"]
@@ -636,7 +647,7 @@
 				item: "tfc:powder/kaolinite"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 7.0d
 			y: 2.0d
 		}
 		{
@@ -653,8 +664,8 @@
 				item: "tfc:fire_clay"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 0.0d
+			x: 7.000000000000002d
+			y: -0.5000000000000001d
 		}
 		{
 			dependencies: ["510708C4BDFBB6EF"]
@@ -887,8 +898,8 @@
 				}
 				type: "item"
 			}]
-			x: 8.0d
-			y: 1.0d
+			x: 7.600000000000001d
+			y: 0.5000000000000001d
 		}
 		{
 			dependencies: ["514BA24579AE363B"]
@@ -925,7 +936,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.5d
+			x: 8.6d
 			y: 2.5d
 		}
 		{
@@ -970,18 +981,12 @@
 					type: "item"
 				}
 				{
-					id: "57532763ED22174A"
+					id: "4B12C2085BE3A118"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/tuyere/wrought_iron"
+						id: "itemfilters:tag"
 						tag: {
-							Damage: 0
+							value: "tfc:tuyeres"
 						}
 					}
 					type: "item"
@@ -1102,7 +1107,7 @@
 				item: "createaddition:rolling_mill"
 				type: "item"
 			}]
-			x: 8.5d
+			x: 8.3d
 			y: -2.0d
 		}
 		{
@@ -1124,7 +1129,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.5d
+			x: 8.7d
 			y: -0.5d
 		}
 		{
@@ -1137,8 +1142,8 @@
 				item: "gtceu:firebricks"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -1.0d
+			x: 9.799999999999999d
+			y: -1.3000000000000003d
 		}
 		{
 			dependencies: [
@@ -1162,8 +1167,8 @@
 				}
 				type: "item"
 			}]
-			x: 10.5d
-			y: 0.5d
+			x: 10.3d
+			y: 0.30000000000000004d
 		}
 		{
 			dependencies: ["48F40B8850D384F9"]
@@ -1311,8 +1316,8 @@
 				title: "{gravitas.quest.stage2.gemd}"
 				type: "item"
 			}]
-			x: 3.5d
-			y: -0.5d
+			x: 0.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["48F40B8850D384F9"]
@@ -1379,8 +1384,8 @@
 			can_repeat: false
 			description: ["This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks.\\nAs all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission.\\n\\nThis quest is intentionally hidden, if you're seeing this, you're in editing mode."]
 			disable_toast: true
-			hide: true
 			hide_details_until_startable: true
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -1400,6 +1405,132 @@
 			}]
 			x: -2.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["63C836404CDEEF25"]
+			description: ["{gravitas.quest.stage2.desc.wrought_nugget}"]
+			id: "6F1FFC4E469C2B33"
+			rewards: [{
+				count: 2
+				id: "18C7FBB18AFB010B"
+				item: "gtceu:wrought_iron_ingot"
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "239022A0CC00F00F"
+				item: { Count: 9, id: "gtceu:wrought_iron_nugget" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["5249B4D0415DBC97"]
+			description: ["{gravitas.quest.stage2.desc.iron_nugget}"]
+			id: "63C836404CDEEF25"
+			tasks: [{
+				count: 9L
+				id: "7AD7EE6C5FB2E82A"
+				item: { Count: 9, id: "minecraft:iron_nugget" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: -3.75d
+		}
+		{
+			dependencies: [
+				"000CF8AEF83DEC40"
+				"2FB772C17B0067E8"
+			]
+			description: ["{gravitas.quest.stage2.desc.graphite_ore_path}"]
+			id: "18EEA197750E7C38"
+			optional: true
+			tasks: [{
+				id: "7BF668D0A9780CB0"
+				title: "{uwu}"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.stage2.graphite_ore_path}"
+			x: 4.300000000000001d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"66B9834887F40FD2"
+				"0EF7B8AB3859A822"
+			]
+			description: ["{gravitas.quest.stage2.desc.graphite_coke_path}"]
+			id: "2B1060BB6F2CD77B"
+			optional: true
+			tasks: [{
+				id: "0D600D88A93EAF0F"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.stage2.graphite_coke_path}"
+			x: 6.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["59BCE9D352413724"]
+			id: "66B9834887F40FD2"
+			optional: true
+			tasks: [{
+				id: "777224FB95D09716"
+				item: "gtceu:coke_gem"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			description: [""]
+			id: "0EF7B8AB3859A822"
+			optional: true
+			subtitle: "{gravitas.quest.stage3.subt.crushing}"
+			tasks: [{
+				count: 2L
+				id: "0DA79D4CC3098D13"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.crushing_wheel}"
+			x: 4.5d
+			y: 0.8d
+		}
+		{
+			dependencies: ["6C99E7F59F6A40ED"]
+			description: ["{gravitas.quest.stage2.desc.coke_oven}"]
+			hide_dependency_lines: false
+			id: "59BCE9D352413724"
+			optional: true
+			tasks: [
+				{
+					count: 25L
+					id: "4B1DB4789879381C"
+					item: "gtceu:coke_oven_bricks"
+					type: "item"
+				}
+				{
+					id: "0EAA64D027DD5AAD"
+					item: "gtceu:coke_oven"
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5249B4D0415DBC97"]
+			hide_dependent_lines: true
+			id: "6C99E7F59F6A40ED"
+			tasks: [{
+				id: "55C665898D6AEFDC"
+				item: "gtceu:iron_plate"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -2.5d
 		}
 	]
 	title: "{gravitas.chapters.2.title}"
