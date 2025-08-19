@@ -1055,6 +1055,96 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(300000)
 
   //GTCEU End
+  
+  // sgjourney start
+
+  event.recipes.gtceu.chemical_bath("purified_naquadah")
+    .itemInputs("gtceu:naquadah_ingot")
+    .inputFluids("gregitas_core:sculk 144")
+    .itemOutputs("sgjourney:pure_naquadah")
+    .duration(20 * 25)
+    .EUt(IV)
+
+  event.recipes.gtceu.implosion_compressor("crystal_base_itnt")
+    .itemInputs("sgjourney:pure_naquadah", "gtceu:industrial_tnt")
+    .itemOutputs("sgjourney:crystal_base")
+    .duration(20)
+    .EUt(IV)
+  
+  event.recipes.gtceu.chemical_vapor_deposition("communication_crystal")
+    .itemInputs("sgjourney:crystal_base", "3x minecraft:quartz")
+    .inputFluids("gtceu:redstone 432")
+    .itemOutputs("sgjourney:communication_crystal")
+    .duration(20 * 15)
+    .EUt(IV)
+  
+  event.recipes.gtceu.chemical_vapor_deposition("transfer_crystal")
+    .itemInputs("sgjourney:crystal_base", "3x minecraft:glowstone_dust")
+    .inputFluids("gtceu:redstone 432")
+    .itemOutputs("sgjourney:transfer_crystal")
+    .duration(20 * 15)
+    .EUt(IV)
+  
+  event.recipes.gtceu.chemical_vapor_deposition("control_crystal")
+    .itemInputs("sgjourney:crystal_base", "3x tfc:gem/diamond")
+    .inputFluids("gtceu:redstone 432")
+    .itemOutputs("sgjourney:control_crystal")
+    .duration(20 * 15)
+    .EUt(IV)
+  
+  event.recipes.gtceu.chemical_vapor_deposition("materialization_crystal")
+    .itemInputs("sgjourney:crystal_base", "3x minecraft:ender_pearl")
+    .inputFluids("gtceu:redstone 432")
+    .itemOutputs("sgjourney:materialization_crystal")
+    .duration(20 * 15)
+    .EUt(IV)
+  
+  event.recipes.gtceu.chemical_vapor_deposition("energy_crystal")
+    .itemInputs("sgjourney:crystal_base", "3x minecraft:redstone")
+    .inputFluids("gtceu:redstone 432")
+    .itemOutputs("sgjourney:energy_crystal")
+    .duration(20 * 15)
+    .EUt(IV)
+  
+  event.recipes.gtceu.assembly_line("classic_stargate_ring_block")
+    .itemInputs("16x gtceu:uranium_triplatinum_single_wire", "4x gtceu:dense_tungsten_steel_plate", "2x gtceu:iv_conveyor_module", "gtceu:naquadah_alloy_frame")
+    .inputFluids("gtceu:soldering_alloy 576", "gtceu:polybenzimidazole 288")
+    .itemOutputs("sgjourney:classic_stargate_ring_block")
+    .duration(20 * 120)
+    .EUt(IV)
+  
+  event.recipes.gtceu.assembly_line("classic_stargate_chevron_block")
+    .itemInputs("64x gtceu:fine_hssg_wire", "8x gtceu:double_naquadah_plate", "4x #gtceu:circuits/luv", "2x gtceu:iv_conveyor_module", "sgjourney:transfer_crystal", "sgjourney:materialization_crystal", "sgjourney:energy_crystal", "gtceu:naquadah_alloy_frame")
+    .inputFluids("gtceu:soldering_alloy 576", "gtceu:polybenzimidazole 288")
+    .itemOutputs("sgjourney:classic_stargate_chevron_block")
+    ["scannerResearch(java.util.function.UnaryOperator)"]((b) =>
+      b.researchStack("sgjourney:classic_stargate_ring_block").EUt(IV).duration(20 * 60)
+    )
+    .duration(20 * 150)
+    .EUt(IV)
+  
+  event.recipes.gtceu.assembly_line("classic_stargate_base_block")
+    .itemInputs("32x gtceu:fine_osmiridium_wire", "16x gtceu:ruridit_gear", "12x gtceu:osmiridium_ring", "4x gtceu:naquadah_alloy_spring", "4x #gtceu:circuits/zpm", "4x gtceu:dense_naquadah_alloy_plate", "2x gtceu:luv_sensor", "2x gtceu:luv_emitter", "sgjourney:communication_crystal", "sgjourney:transfer_crystal", "sgjourney:control_crystal", "gtceu:naquadah_alloy_frame")
+    .inputFluids("gtceu:lubricant 4000", "gtceu:vanadium_gallium 1152", "gtceu:soldering_alloy 1152", "gtceu:polybenzimidazole 576")
+    .itemOutputs("sgjourney:classic_stargate_base_block")
+    ["scannerResearch(java.util.function.UnaryOperator)"]((b) =>
+      b.researchStack("sgjourney:classic_stargate_chevron_block").EUt(IV).duration(20 * 60)
+    )
+    .duration(20 * 180)
+    .EUt(IV)
+  
+  event.recipes.gtceu.assembly_line("classic_dhd")
+    .itemInputs("64x gtceu:fine_naquadah_wire", "4x gtceu:quantum_star", "4x gtceu:luv_field_generator", "4x gtceu:dense_naquadah_alloy_plate", "2x gtceu:luv_voltage_coil", "#gtceu:circuits/uv", "sgjourney:communication_crystal", "gtceu:naquadah_alloy_frame")
+    .inputFluids("gtceu:sodium_potassium 6000", "gtceu:lubricant 4000", "gtceu:styrene_butadiene_rubber 2304", "gtceu:soldering_alloy 1152")
+    .itemOutputs("sgjourney:classic_dhd")
+    ["scannerResearch(java.util.function.UnaryOperator)"]((b) =>
+      b.researchStack("sgjourney:classic_stargate_base_block").EUt(IV).duration(20 * 60)
+    )
+    .duration(20 * 450)
+    .EUt(IV)
+
+  // sgjourney end
+  
   //Computercraft
   shaped("computercraft:computer_normal", ["sps", "scs", "OPO"], {
     O: "gtceu:iron_plate",
