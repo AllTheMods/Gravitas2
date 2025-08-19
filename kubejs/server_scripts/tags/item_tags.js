@@ -183,6 +183,9 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add("gregitas:eggs/dragon/lightning", `iceandfire:dragonegg_${color}`)
   })
 
+  // remove sgjourney tags
+  event.remove("forge:purified_ores/naquadah", "sgjourney:pure_naquadah")
+
   event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
   event.add("tfc:copper_pieces", [

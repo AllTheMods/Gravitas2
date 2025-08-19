@@ -38,6 +38,18 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "vintageimprovements:curving/iron_sheet"})
   event.remove({ id: "vintageimprovements:rolling/andesite_plate"})
   event.remove({ id: "vintageimprovements:pressing/andesite_alloy"})
+  // sgjourney
+  event.remove({ id: "sgjourney:temp_pure_naquadah_from_blasting" })
+  event.remove({ id: "sgjourney:classic_stargate_base_block" })
+  event.remove({ id: "sgjourney:classic_stargate_chevron_block" })
+  event.remove({ id: "sgjourney:classic_stargate_ring_block" })
+  event.remove({ id: "sgjourney:crystallizing/communication_crystal" })
+  event.remove({ id: "sgjourney:crystallizing/transfer_crystal" })
+  event.remove({ id: "sgjourney:crystallizing/control_crystal" })
+  event.remove({ id: "sgjourney:crystallizing/materialization_crystal" })
+  event.remove({ id: "sgjourney:crystallizing/energy_crystal" })
+  event.remove({ id: "sgjourney:crystal_base" })
+  event.remove({ id: "sgjourney:classic_dhd" })
   //GT
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:cutter/cut_glass_block_to_plate_water"})
