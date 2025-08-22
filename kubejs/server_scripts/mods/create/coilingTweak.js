@@ -2,15 +2,15 @@ let coilingTweak = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     // Remove coiling machine wheel (snowflake item, only used in a single recipe)
     // Replace iron with wrought iron to make the coiling machine more accessible early game, same as Create press
-    event.remove({ id: 'vintageimprovements:craft/spring_coiling_machine_wheel' })
-    event.replaceInput({ id: 'vintageimprovements:craft/spring_coiling_machine' }, 'vintageimprovements:spring_coiling_machine_wheel', '#forge:double_ingots/wrought_iron')
-    event.replaceInput({ id: 'vintageimprovements:craft/spring_coiling_machine' }, 'minecraft:iron_ingot', '#forge:ingots/wrought_iron')
+    event.remove({ id: 'vintage:craft/spring_coiling_machine_wheel' })
+    event.replaceInput({ id: 'vintage:craft/spring_coiling_machine' }, 'vintage:spring_coiling_machine_wheel', '#forge:double_ingots/wrought_iron')
+    event.replaceInput({ id: 'vintage:craft/spring_coiling_machine' }, 'minecraft:iron_ingot', '#forge:ingots/wrought_iron')
     
     // Replace use of Vintage Improvements iron springs with a Forge tag (the tag points to a Gregtech iron spring)
-    event.replaceInput({ mod: 'vintageimprovements' }, 'vintageimprovements:iron_spring', '#forge:springs/iron')
+    event.replaceInput({ mod: 'vintage' }, 'vintage:iron_spring', '#forge:springs/iron')
     
     // Remove crafting of all Vintage Improvements springs
-    event.remove({ mod: 'vintageimprovements', id: /^vintageimprovements:coiling.*/})
+    event.remove({ mod: 'vintage', id: /^vintage:coiling.*/})
     
     
     // Add crafting of every Gregtech spring to Vintage Improvements spring coiling machine
@@ -22,7 +22,7 @@ let coilingTweak = (/** @type {Internal.RecipesEventJS} */ event) => {
         let output = recipe_json.outputs.item.filter((i) => i.content.type == "gtceu:sized")[0].content
            
         event.custom({
-            type: 'vintageimprovements:coiling',
+            type: 'vintage:coiling',
             ingredients: [input.ingredient],
             results: [{
                     item: output.ingredient.item,

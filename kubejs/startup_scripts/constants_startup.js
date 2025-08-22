@@ -68,7 +68,7 @@ global.itemsToRemove = [
 	"tfc:metal/sheet/steel",
 	"tfc:lens",
 	"immersiveengineering:plate_steel",
-	"vintageimprovements:andesite_sheet",
+	"vintage:andesite_sheet",
 	"alltheores:peridot",
 	`/^alltheores:.*_rod/`,
 	`/^alltheores:.*_dust/`,

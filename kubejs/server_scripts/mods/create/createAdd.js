@@ -592,7 +592,7 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
             `tfc:sand/${color}`
             ],
             `tfc:raw_sandstone/${color}`)
-        event.recipes.vintageimprovements.polishing(
+        event.recipes.vintage.polishing(
             `tfc:smooth_sandstone/${color}`,
             `tfc:raw_sandstone/${color}`,
             40

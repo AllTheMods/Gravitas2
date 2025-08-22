@@ -148,8 +148,8 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 	event.hide('create_new_age:copper_circuit')
 
     // Vintage Improvements
-    event.hide('vintageimprovements:spring_coiling_machine_wheel')
-    event.hide(/^vintageimprovements:.*_spring/)
+    event.hide('vintage:spring_coiling_machine_wheel')
+    event.hide(/^vintage:.*_spring/)
 
     // Thorium Reactors
     event.hide('thoriumreactors:generator_block')

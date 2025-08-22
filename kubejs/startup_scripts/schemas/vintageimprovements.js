@@ -1,10 +1,10 @@
 // priority 100
 
-let registerVintageImprovementsSchemas = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event) => {
+let registervintageSchemas = (/** @type {Internal.RecipeSchemaRegistryEventJS} */ event) => {
 	const keys = global.schemas.keys
 	const Component = (string, args) => event.components[string](args)
 	
-	const namespace = event.namespace("vintageimprovements")
+	const namespace = event.namespace("vintage")
 	
 	let input_item_array_ingredients = Component("inputItem").asArray().key("ingredients")
 	let output_item_array_results = Component("outputItem").asArray().key("results")

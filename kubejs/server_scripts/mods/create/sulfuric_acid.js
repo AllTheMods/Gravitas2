@@ -4,7 +4,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
 	
 	// Making GT sulfur dust out of Vintage Improvements sulfur gems
-    event.recipes.gtceu.macerator("vintageimprovements:sulfur")
+    event.recipes.gtceu.macerator("vintage:sulfur")
 		.itemInputs("#forge:gems/sulfur")
 		.itemOutputs("2x gtceu:sulfur_dust")
 		.duration(400)
@@ -15,7 +15,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
 	// Making Sulfur Dioxide with atmospheric O2 and sulfur dust
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -30,11 +30,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 400
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_dust")
 
 	// Same, but at 1/4 the size
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -49,11 +49,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 100
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_small_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_small_dust")
 
 	// A Gregtech compatible version of the original Vintage Improvements recipe for Sulfur Dioxide
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -68,7 +68,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 600
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide")
+	}).id("vintage:pressurizing/sulfur_dioxide")
 
 
 	// Making Sulfur Trioxide with atmospheric O2 and a consumable metal catalyst
@@ -76,7 +76,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
 	// Vanadium catalyst + heated basin (buffed, 2x output per catalyst)
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -100,11 +100,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 400
-	}).id("vintageimprovements:pressurizing/sulfur_trioxide")
+	}).id("vintage:pressurizing/sulfur_trioxide")
 
 	// Iron catalyst + superheated basin
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "superheated",
 		ingredients: [ 
@@ -128,11 +128,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 400
-	}).id("vintageimprovements:pressurizing/sulfur_trioxide_alt")
+	}).id("vintage:pressurizing/sulfur_trioxide_alt")
 
 	// Finally, making Sulfuric Acid
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidInput: 0,
 		ingredients: [ 
 			{
@@ -151,12 +151,12 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 600
-	}).id("vintageimprovements:pressurizing/sulfuric_acid")
+	}).id("vintage:pressurizing/sulfuric_acid")
 
 
 	// Gregtech compatible version of the original Copper Sulfate recipe, just in case
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		ingredients: [ 
 			{
 				fluidTag: "forge:sulfuric_acid",
@@ -177,11 +177,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 		],
 		results: [
 			{
-				item: "vintageimprovements:copper_sulfate"
+				item: "vintage:copper_sulfate"
 			}
 		],
 		processingTime: 800
-	}).id("vintageimprovements:pressurizing/copper_sulfate")
+	}).id("vintage:pressurizing/copper_sulfate")
 	
 
 	// Making Sulfur Dioxide with atmospheric O2 and GregTech sulfide ores
@@ -189,7 +189,7 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 	
 	// Pyrite -> Hematite
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -211,11 +211,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_pyrite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_pyrite_dust")
 	
 	// Stibnite -> Antimony Trioxide
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -237,11 +237,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_stibnite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_stibnite_dust")
 	
 	// Pentlandite -> Garnierite
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -263,11 +263,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_pentlandite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_pentlandite_dust")
 	
 	// Chalcopyrite + Silicon Dioxide -> Cupric Oxide + Ferrosilite
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -291,11 +291,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_chalcopyrite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_chalcopyrite_dust")
 	
 	// Cobaltite -> Cobalt Oxide + Arsenic Trioxide
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -316,11 +316,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_cobaltite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_cobaltite_dust")
 	
 	// Tetrahedrite -> Cupric Oxide + Antimony Trioxide
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -342,11 +342,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_tetrahedrite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_tetrahedrite_dust")
 	
 	// Galena -> Massicot + Silver
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -368,11 +368,11 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_galena_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_galena_dust")
 	
 	// Sphalerite -> Zincite
 	event.custom({
-		type: "vintageimprovements:pressurizing",
+		type: "vintage:pressurizing",
 		secondaryFluidOutput: 0,
 		heatRequirement: "heated",
 		ingredients: [ 
@@ -394,5 +394,5 @@ let viSulfuricAcid = (/** @type {Internal.RecipesEventJS} */ event) => {
 			}
 		],
 		processingTime: 200
-	}).id("vintageimprovements:pressurizing/sulfur_dioxide_from_sphalerite_dust")
+	}).id("vintage:pressurizing/sulfur_dioxide_from_sphalerite_dust")
 }

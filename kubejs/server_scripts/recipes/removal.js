@@ -35,9 +35,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "computercraft:pocket_computer_advanced" })
   event.remove({ id: "computercraft:wireless_modem_normal" })
   event.remove({ id: "computercraft:wireless_modem_advanced"})
-  event.remove({ id: "vintageimprovements:curving/iron_sheet"})
-  event.remove({ id: "vintageimprovements:rolling/andesite_plate"})
-  event.remove({ id: "vintageimprovements:pressing/andesite_alloy"})
+  event.remove({ id: "vintage:curving/iron_sheet"})
+  event.remove({ id: "vintage:rolling/andesite_plate"})
+  event.remove({ id: "vintage:pressing/andesite_alloy"})
   // sgjourney
   event.remove({ id: "sgjourney:temp_pure_naquadah_from_blasting" })
   event.remove({ id: "sgjourney:classic_stargate_base_block" })
@@ -218,8 +218,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:milling/calcite"})
   event.remove({ id: "create:splashing/sand" })
   event.remove({ id: "create:compacting/diorite_from_flint"})
-  event.remove({ id: "vintageimprovements:crushing/scoria_recycling"})
-  event.remove({ id: "vintageimprovements:crushing/scoria"})
+  event.remove({ id: "vintage:crushing/scoria_recycling"})
+  event.remove({ id: "vintage:crushing/scoria"})
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
   event.remove({ id: "createdieselgenerators:crafting/asphalt_block"})
   event.remove({ id: "createdieselgenerators:mixing/asphalt_block"})
@@ -479,7 +479,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //honey
 
-  event.remove({ id: 'vintageimprovements:centrifugation/honey_comb'})
+  event.remove({ id: 'vintage:centrifugation/honey_comb'})
   event.remove({ id: 'minecraft:honey_bottle'})
 
   //apotheosis

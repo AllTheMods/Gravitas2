@@ -383,7 +383,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
   event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
-  event.add("forge:rods/aluminium", ["vintageimprovements:aluminum_rod", "alltheores:aluminum_rod"])
+  event.add("forge:rods/aluminium", ["vintage:aluminum_rod", "alltheores:aluminum_rod"])
 
   event.removeAllTagsFrom("immersiveengineering:storage_steel")
 
@@ -500,6 +500,6 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
                             "tfc:rock/magma/dacite"
                            ])
 
-  event.add("vintageimprovements:curving_heads", ["gtceu:ingot_casting_mold"])
+  event.add("vintage:curving_heads", ["gtceu:ingot_casting_mold"])
   event.add("headlight:lights", ["tfc:torch"])
 }

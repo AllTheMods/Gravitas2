@@ -1,5 +1,5 @@
 {
-  "parent": "vintageimprovements:coiling",
+  "parent": "vintage:coiling",
   "criteria": {
     "0": {
       "conditions": {
@@ -16,7 +16,7 @@
     "announce_to_chat": false,
     "description": {
       "color": "#DBA213",
-      "translate": "advancement.vintageimprovements.iron_spring.desc"
+      "translate": "advancement.vintage.iron_spring.desc"
     },
     "frame": "task",
     "hidden": false,
@@ -25,7 +25,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.vintageimprovements.iron_spring"
+      "translate": "advancement.vintage.iron_spring"
     }
   },
   "requirements": [

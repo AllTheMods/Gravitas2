@@ -524,7 +524,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(100)
     .EUt(8)
 
-  event.recipes.vintageimprovements.curving("tfc:ceramic/unfired_brick", "minecraft:clay_ball", "gtceu:ingot_casting_mold")
+  event.recipes.vintage.curving("tfc:ceramic/unfired_brick", "minecraft:clay_ball", "gtceu:ingot_casting_mold")
     .id("gregitas:forming/brick")
 
   event.recipes.gtceu
@@ -535,7 +535,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(100)
     .EUt(8)
 
-  event.recipes.vintageimprovements.curving("tfc:ceramic/unfired_fire_brick", "tfc:fire_clay", "gtceu:ingot_casting_mold")
+  event.recipes.vintage.curving("tfc:ceramic/unfired_fire_brick", "tfc:fire_clay", "gtceu:ingot_casting_mold")
     .id("gregitas:forming/fire_brick")
 
   event.custom({
@@ -656,7 +656,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         }
       }
     })
-    event.recipes.vintageimprovements
+    event.recipes.vintage
       .polishing(`tfc:gem/${gemStone}`, `tfc:ore/${gemStone}`, 40)
       .speedLimits(1)
   })
@@ -1489,7 +1489,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(EV)
 
   event.recipes.gtceu
-    .assembler("vintageimprovements:redstone_module")
+    .assembler("vintage:redstone_module")
     .itemInputs(
       "gtceu:gold_plate",
       "minecraft:repeater",
@@ -1497,7 +1497,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       "#forge:dusts/redstone",
       "#forge:nuggets/iron"
     )
-    .itemOutputs("vintageimprovements:redstone_module")
+    .itemOutputs("vintage:redstone_module")
     .duration(120)
     .EUt(HV)
 
@@ -1506,7 +1506,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemInputs(
       "gtceu:lpic_chip",
       "#gtceu:circuits/mv",
-      "vintageimprovements:redstone_module",
+      "vintage:redstone_module",
       "#forge:plates/redstone"
     )
     .inputFluids(Fluid.of("gtceu:polytetrafluoroethylene", 144))
@@ -1736,11 +1736,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(60)
       .EUt(LV)
 
-    event.recipes.vintageimprovements
+    event.recipes.vintage
       .polishing(`tfc:brick/${stone}`, [[`tfc:rock/loose/${stone}`, `tfc:rock/mossy_loose/${stone}`]], 10)
       .id(`gregitas:polishing/brick/${stone}`)
 
-    event.recipes.vintageimprovements
+    event.recipes.vintage
       .polishing(`tfc:rock/smooth/${stone}`, `tfc:rock/raw/${stone}`, 40)
       .id(`gregitas:polishing/stone/${stone}`)
   })
@@ -2912,8 +2912,8 @@ event.stonecutting("2x railways:riveted_locometal", "minecraft:iron_ingot")
     })
 
     vanTrees.forEach((vanTree) => { 
-         event.recipes.vintageimprovements.polishing("minecraft:" + vanTree.id + "_trapdoor", vanTree.namespace + ":wood/planks/" + vanTree.replace + "_trapdoor", 300,8)
-         event.recipes.vintageimprovements.polishing("minecraft:" + vanTree.id + "_door", vanTree.namespace + ":wood/planks/" + vanTree.replace + "_door", 300,8) 
+         event.recipes.vintage.polishing("minecraft:" + vanTree.id + "_trapdoor", vanTree.namespace + ":wood/planks/" + vanTree.replace + "_trapdoor", 300,8)
+         event.recipes.vintage.polishing("minecraft:" + vanTree.id + "_door", vanTree.namespace + ":wood/planks/" + vanTree.replace + "_door", 300,8) 
 
         })
 }

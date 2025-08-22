@@ -1,6 +1,6 @@
 let centrifugeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     // Remove this one recipe to avoid duplication - it will be replaced by a Gregtech copy
-    event.remove({ mod: 'vintageimprovements', id: 'vintageimprovements:centrifugation/magma_cream'})
+    event.remove({ mod: 'vintage', id: 'vintage:centrifugation/magma_cream'})
     
     // This centrifuge doesn't support input count, so we have to repeat the input item N times instead
     // Recipes with 9+ inputs already look bad in JEI
@@ -75,6 +75,6 @@ let centrifugeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
         // 64 RPM (128 SU) for ULV, 128 RPM (256 SU) for LV
         let rpm = eu_cost > 8 ? 128 : 64
         
-        event.recipes.vintageimprovements.centrifugation(results, ingredients, duration).minimalRPM(rpm)
+        event.recipes.vintage.centrifugation(results, ingredients, duration).minimalRPM(rpm)
     })
 }

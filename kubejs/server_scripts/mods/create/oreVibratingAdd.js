@@ -7,6 +7,6 @@ let oreVibratingAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 		let input_item = recipe_json.inputs.item.filter((f) => f.content.type == 'gtceu:sized')[0].content
 		let output_items = recipe_json.outputs.item.map((item) => Item.of(item.content.ingredient.item, item.content.count).withChance(item.chance / 10000))
 
-		event.recipes.vintageimprovements.vibrating(output_items, input_item.ingredient, recipe_json.duration)
+		event.recipes.vintage.vibrating(output_items, input_item.ingredient, recipe_json.duration)
 	})
 }

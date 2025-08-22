@@ -354,7 +354,7 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"gtceu:magnetic_iron_ingot",						type:"ingot",				metal:"magnetic_iron"	}, // Ingots not handled by GT loop
 		{partId:"gregitas_core:magnetic_wrought_iron_ingot",		type:"ingot",				metal:"wrought_iron"	},
 		{partId:"thoriumreactors:blasted_iron_ingot",				type:"ingot",				metal:"iron"			},
-		{partId:"vintageimprovements:vanadium_ingot",				type:"ingot",				metal:"vanadium"		},
+		{partId:"vintage:vanadium_ingot",				type:"ingot",				metal:"vanadium"		},
 		{partId:"gtceu:thorium_ingot",								type:"ingot",				metal:"thorium"			}, // thorium ingot wasn't heatable even though the ore is
 		// Blocks		
 		{partId:"minecraft:iron_block",								type:"block",				metal:"iron"			},
@@ -374,16 +374,16 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"immersiveengineering:slab_storage_constantan",		type:"slab",				metal:"constantan"		},		
 		{partId:"immersiveengineering:slab_storage_steel",			type:"slab",				metal:"steel"			},
 		// Plates
-		{partId:"vintageimprovements:cast_iron_sheet",				type:"plate",				metal:"iron"			}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"vintageimprovements:vanadium_sheet",				type:"plate",				metal:"vanadium"		}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"vintageimprovements:constantan_sheet",				type:"plate",				metal:"constantan"		}, // Fluid amount for this one ends up being halved for an unknown reason.
-		{partId:"vintageimprovements:pig_iron_sheet",				type:"plate",				metal:"pig_iron"		}, // Fluid amount for this one ends up being halved for an unknown reason.
+		{partId:"vintage:cast_iron_sheet",				type:"plate",				metal:"iron"			}, // Fluid amount for this one ends up being halved for an unknown reason.
+		{partId:"vintage:vanadium_sheet",				type:"plate",				metal:"vanadium"		}, // Fluid amount for this one ends up being halved for an unknown reason.
+		{partId:"vintage:constantan_sheet",				type:"plate",				metal:"constantan"		}, // Fluid amount for this one ends up being halved for an unknown reason.
+		{partId:"vintage:pig_iron_sheet",				type:"plate",				metal:"pig_iron"		}, // Fluid amount for this one ends up being halved for an unknown reason.
 		{partId:"scguns:ancient_brass",								type:"plate",				metal:"brass"			}, 
 		// Foil
 		// // NA
 		// Rods
 		{partId:"gregitas_core:magnetic_wrought_iron_rod",			type:"longRod",				metal:"wrought_iron"	},
-		{partId:"vintageimprovements:cast_iron_rod",				type:"longRod",				metal:"iron"			},
+		{partId:"vintage:cast_iron_rod",				type:"longRod",				metal:"iron"			},
 		// Bolts & Screws
 		{partId:"firmaciv:copper_bolt",								type:"bolt",				metal:"copper"			},
 		// Rings
@@ -474,30 +474,30 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		{partId:"minecraft:chain",									type:"chain",				metal:"iron"			},
 		// Create/IE wires (IE wire coils are converted 1:1 from create wires)
 		{partId:"createaddition:iron_wire",							type:"createWire",			metal:"iron"			},
-		{partId:"vintageimprovements:cast_iron_wire",				type:"createWire",			metal:"iron"			},
+		{partId:"vintage:cast_iron_wire",				type:"createWire",			metal:"iron"			},
 		{partId:"createaddition:gold_wire",							type:"createWire",			metal:"gold"			},		
 		{partId:"createaddition:copper_wire",						type:"createWire",			metal:"copper"			},
 		{partId:"immersiveengineering:wirecoil_copper",				type:"createWire",			metal:"copper"			},
 		{partId:"immersiveengineering:wirecoil_copper_ins",			type:"createWire",			metal:"copper"			},
-		{partId:"vintageimprovements:tin_wire",						type:"createWire",			metal:"tin"				},
-		{partId:"vintageimprovements:aluminum_wire",				type:"createWire",			metal:"aluminium"		},
-		{partId:"vintageimprovements:lead_wire",					type:"createWire",			metal:"lead"			},
-		{partId:"vintageimprovements:silver_wire",					type:"createWire",			metal:"silver"			},
-		{partId:"vintageimprovements:nickel_wire",					type:"createWire",			metal:"nickel"			},
-		{partId:"vintageimprovements:zinc_wire",					type:"createWire",			metal:"zinc"			},
-		{partId:"vintageimprovements:cobalt_wire",					type:"createWire",			metal:"cobalt"			},
-		{partId:"vintageimprovements:uranium_wire",					type:"createWire",			metal:"uranium"			},
-		{partId:"vintageimprovements:vanadium_wire",				type:"createWire",			metal:"vanadium"		},
+		{partId:"vintage:tin_wire",						type:"createWire",			metal:"tin"				},
+		{partId:"vintage:aluminum_wire",				type:"createWire",			metal:"aluminium"		},
+		{partId:"vintage:lead_wire",					type:"createWire",			metal:"lead"			},
+		{partId:"vintage:silver_wire",					type:"createWire",			metal:"silver"			},
+		{partId:"vintage:nickel_wire",					type:"createWire",			metal:"nickel"			},
+		{partId:"vintage:zinc_wire",					type:"createWire",			metal:"zinc"			},
+		{partId:"vintage:cobalt_wire",					type:"createWire",			metal:"cobalt"			},
+		{partId:"vintage:uranium_wire",					type:"createWire",			metal:"uranium"			},
+		{partId:"vintage:vanadium_wire",				type:"createWire",			metal:"vanadium"		},
 		{partId:"createaddition:electrum_wire",						type:"createWire",			metal:"electrum"		},
 		{partId:"immersiveengineering:wirecoil_electrum",			type:"createWire",			metal:"electrum"		},
 		{partId:"immersiveengineering:wirecoil_electrum_ins",		type:"createWire",			metal:"electrum"		},
-		{partId:"vintageimprovements:bronze_wire",					type:"createWire",			metal:"bronze"			},
-		{partId:"vintageimprovements:brass_wire",					type:"createWire",			metal:"brass"			},
-		{partId:"vintageimprovements:rose_gold_wire",				type:"createWire",			metal:"rose_gold"		},
-		{partId:"vintageimprovements:constantan_wire",				type:"createWire",			metal:"constantan"		},
-		{partId:"vintageimprovements:invar_wire",					type:"createWire",			metal:"invar"			},
-		{partId:"vintageimprovements:pig_iron_wire",				type:"createWire",			metal:"pig_iron"		},
-		{partId:"vintageimprovements:steel_wire",					type:"createWire",			metal:"steel"			},
+		{partId:"vintage:bronze_wire",					type:"createWire",			metal:"bronze"			},
+		{partId:"vintage:brass_wire",					type:"createWire",			metal:"brass"			},
+		{partId:"vintage:rose_gold_wire",				type:"createWire",			metal:"rose_gold"		},
+		{partId:"vintage:constantan_wire",				type:"createWire",			metal:"constantan"		},
+		{partId:"vintage:invar_wire",					type:"createWire",			metal:"invar"			},
+		{partId:"vintage:pig_iron_wire",				type:"createWire",			metal:"pig_iron"		},
+		{partId:"vintage:steel_wire",					type:"createWire",			metal:"steel"			},
 		{partId:"immersiveengineering:wirecoil_steel",				type:"createWire",			metal:"steel"			},
 		// Fine wires
 		{partId:"create_new_age:overcharged_iron_wire",				type:"fineWire",			metal:"iron"			}, // new age wires have an equivalent cost to fine wires

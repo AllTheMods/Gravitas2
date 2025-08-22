@@ -70,7 +70,7 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerWoodencogFillingSchema(event)
   registerAe2ChargerSchema(event)
   registerAe2InscriberSchema(event)
-  registerVintageImprovementsSchemas(event)
+  registervintageSchemas(event)
   registerCreateAdditionsSchemas(event)
   registerCreateDieselGeneratorsSchemas(event)
   registerCreateNewAgeSchemas(event)
