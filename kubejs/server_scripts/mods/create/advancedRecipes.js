@@ -123,12 +123,6 @@ let advancedCreateRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 		P: "#forge:plates/wrought_iron"
 	})
 	
-	// Making a Create rope pulley using Firmaciv jute rope
-	event.recipes.minecraft.crafting_shaped("create:rope_pulley", [" C ", " S ", " P "], {
-		C: "create:andesite_casing",
-		S: "firmaciv:rope_coil",
-		P: "#forge:plates/wrought_iron"
-	})
 
 	
 	// Making a Create Diesel Generators pumpjack head using Gregtech rubber
