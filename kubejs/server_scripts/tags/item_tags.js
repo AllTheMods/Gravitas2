@@ -168,6 +168,11 @@ const ice = ["blue", "white", "sapphire", "silver"]
 const lightning = ["electric", "amethyst", "copper", "black"]
 
 const addItemTags = (/** @type {TagEvent.Item} */ event) => {
+  // Global remove + hides
+  global.itemsToRemove.forEach(item => event.removeAllTagsFrom(item))
+  global.fluidsToRemove.forEach(item => event.removeAllTagsFrom(item))
+  global.fluidsWithBucketsToRemove.forEach(item => event.removeAllTagsFrom(item))
+
   fire.forEach((color) => {
     event.add("gregitas:eggs/dragon/fire", `iceandfire:dragonegg_${color}`)
   })
@@ -177,6 +182,9 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   lightning.forEach((color) => {
     event.add("gregitas:eggs/dragon/lightning", `iceandfire:dragonegg_${color}`)
   })
+
+  // remove sgjourney tags
+  event.remove("forge:purified_ores/naquadah", "sgjourney:pure_naquadah")
 
   event.add("gravitas:igneous_rocks", ["#tfc:igneous_extrusive_rock", "#tfc:igneous_intrusive_rock"])
   event.add("forge:dusts/diamond", "tfc:powder/diamond")
@@ -192,8 +200,22 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:tools/hammers", "#tfc:hammers")
   event.add("forge:tools/knives", ["#tfc:knives"])
 
-  event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/knives", "#forge:tools/files"])
+  event.add("forge:tools", ["#forge:tools/saws", "#forge:tools/hammers", "#forge:tools/wrench", "#forge:tools/knives", "#forge:tools/files"])
+  
+  // Adding GregTech hazmat protection to armor
+  event.add("gtceu:ppe_armor", "#scguns:gas_mask")
+  event.add("gtceu:ppe_armor", ["gcyr:space_helmet", "gcyr:space_chestplate", "gcyr:space_leggings", "gcyr:space_boots"])
+  
+  // Add Scorched Guns gas mask protection to armor
+  event.add("scguns:gas_mask", ["gtceu:hazmat_headpiece", "gtceu:quarktech_helmet", "gcyr:space_helmet"])
 
+
+  // Tagging TFC gems
+  let tfcUntaggedGems = ["amethyst", "opal", "pyrite", "ruby", "sapphire", "topaz"]
+  tfcUntaggedGems.forEach((gem) => {
+    event.add(`forge:gems/${gem}`, `tfc:gem/${gem}`)
+  })
+  
   gtceuIngots.forEach((ingot) => {
     event.add("tfc:pileable_ingots", `gtceu:${ingot}_ingot`)
   })
@@ -223,22 +245,24 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("firmalife:sweetener", "#tfc:sweetener")
   event.add("forge:treated_wood", "firmalife:treated_wood")
 
-  event.add("tfc:any_knapping", [
-    "minecraft:flint",
-    "gtceu:rubber_plate",
-    "gtceu:polyethylene_plate",
-    "gtceu:polytetrafluoroethylene_plate",
-    "gtceu:polybenzimidazole_plate"
-  ])
   event.add("tfc:flint_knapping", "minecraft:flint")
   event.add("tfc:rubber_knapping", [
     "gtceu:rubber_plate",
+    "gtceu:silicone_rubber_plate",
+    "gtceu:styrene_butadiene_rubber_plate",
     "gtceu:polyethylene_plate",
     "gtceu:polytetrafluoroethylene_plate",
     "gtceu:polybenzimidazole_plate"
   ])
+  event.add("tfc:any_knapping", ["#tfc:flint_knapping", "#tfc:rubber_knapping"])
 
-  GTMaterialRegistry.registeredMaterials.forEach((id) => {
+  let refreshGTMaterials = false
+  if (refreshGTMaterials) {
+    JsonIO.write("kubejs/server_scripts/tags/gt_materials.json", {materials: GTMaterialRegistry.registeredMaterials.stream().map(mat => mat.toString()).toList()})
+  }
+
+  let registeredMaterials = JsonIO.read("kubejs/server_scripts/tags/gt_materials.json")
+  registeredMaterials.materials.forEach((id) => {
     event.add("tfc:saws", `${id}_saw`)
     event.add("tfc:hammers", `${id}_hammer`)
     event.add("tfc:knives", `${id}_knife`)
@@ -290,6 +314,8 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.remove("forge:dusts/copper", ["tfc:powder/malachite", "tfc:powder/tetrahedrite", "tfc:powder/native_copper"])
   event.add("forge:plates/aluminum", "#forge:plates/aluminium")
   event.add("forge:nuggets/aluminum", "#forge:nuggets/aluminium")
+  event.add("forge:ingots/aluminum", "#forge:ingots/aluminium")
+  event.add("forge:rods/aluminum", "#forge:rods/aluminium")
 
   event.add("tfc:forge_fuel", [
     "gtceu:coke_gem",
@@ -322,12 +348,20 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     "mininggadgets:mininggadget",
     "mininggadgets:mininggadget_fancy",
     "mininggadgets:mininggadget_simple",
-    "create:wrench",
+    "integrateddynamics:labeller",
+    "integrateddynamics:portable_logic_programmer",
+    "tfc:wool_cloth",
     "buildinggadgets2:gadget_building",
     "buildinggadgets2:gadget_exchanging",
     "buildinggadgets2:gadget_copy_paste",
     "buildinggadgets2:gadget_cut_paste",
     "buildinggadgets2:gadget_destruction",
+    "framedblocks:framed_hammer",
+    "framedblocks:framed_screwdriver",
+    "#immersiveengineering:toolbox/tools",
+    "gtceu:prospector.lv",
+    "gtceu:prospector.hv",
+    "gtceu:prospector.luv",
     "expatternprovider:fishbig",
     "#forge:tools",
     "enderio:dark_steel_sword"
@@ -349,15 +383,16 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("forge:raw_materials/graphite", ["tfc:ore/graphite"])
   event.add("minecraft:axes", ["#tfc:axes"])
   event.add("forge:ingots/aluminum", ["gtceu:aluminium_ingot"])
-  event.add("forge:rods/aluminium", ["vintageimprovements:aluminum_rod", "alltheores:aluminum_rod"])
+  event.add("forge:rods/aluminium", ["vintage:aluminum_rod", "alltheores:aluminum_rod"])
 
   event.removeAllTagsFrom("immersiveengineering:storage_steel")
-
-  event.add("tfc:glassworking_potash", ["gtceu:saltpeter_dust"])
 
   event.add("scguns:advanced_bullet_material", "gtceu:steel_ingot")
 
   event.add("forge:dusts/saltpeter", "scguns:niter_dust")
+  event.add("forge:dusts/quicklime", "tfc:powder/lime")  
+  event.add("tfc:glassworking_potash", ["#forge:dusts/soda_ash", "#forge:dusts/saltpeter"])
+  event.add("forge:dusts/soda_ash", "tfc:powder/soda_ash")
 
   const weakCompostables = [event.get("tfc:compost_greens_low"), event.get("tfc:compost_browns_low")]
     .reduce((arr, iter) => arr.concat(iter), [])
@@ -424,12 +459,36 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
     event.add("create:upgrade_aquatic/coral", `tfc:coral/${coral}`)
   })
 
+  event.add("gregitas:any_rubber_ring", ["gtceu:rubber_ring", "gtceu:silicone_rubber_ring", "gtceu:styrene_butadiene_rubber_ring"])
+  event.add("gregitas:any_rubber_sheet", ["gtceu:rubber_plate", "gtceu:silicone_rubber_plate", "gtceu:styrene_butadiene_rubber_plate"])
+  event.add("gregitas:any_rubber_thin_sheet", ["gtceu:rubber_foil", "gtceu:silicone_rubber_foil", "gtceu:styrene_butadiene_rubber_foil"])
+  event.add("gregitas:any_plastic_thin_sheet", ["gtceu:polyvinyl_chloride_foil", "gtceu:polyphenylene_sulfide_foil", "gtceu:polybenzimidazole_foil", "gtceu:polyethylene_foil", "gtceu:polycaprolactam_foil", "gtceu:polytetrafluoroethylene_foil", "gcyr:kapton_k_foil", "gcyr:para_aramid_foil"])
+
+  event.add("gregitas:any_rubber_or_plastic_thin_sheet", "#gregitas:any_rubber_thin_sheet")
+  event.add("gregitas:any_rubber_or_plastic_thin_sheet", "#gregitas:any_plastic_thin_sheet")
+  
+  event.add("gregitas:create_circuit", "create:electron_tube")
+  event.add("gregitas:create_circuit", "#gtceu:circuits/ulv")
+
   event.add("forge:dusts/apatite", "tfcthermaldeposits:mineral/powder/apatite")
 
   event.add("gravitas:phantom", "minecraft:warped_fungus")
   event.add("gravitas:phantom", "beneath:wood/sapling/warped")
 
   event.add("forge:dusts/phosphorus", "scguns:phosphor_dust")
+  
+  // Create New Age nuclear fuel
+  event.add("create_new_age:nuclear/is_nuclear_fuel", ["#forge:rods/thorium", "#forge:rods/uranium", "#forge:rods/uranium_235"])
+  event.add("create_new_age:nuclear/time_28800", "#forge:rods/thorium") // Thorium rods last the same as the usual New Age fuel
+  event.add("create_new_age:nuclear/time_14400", "#forge:rods/uranium") // Uranium rods have 1/2 the lifetime
+  event.add("create_new_age:nuclear/time_230400", "#forge:rods/uranium_235") // Enriched Uranium rods - lasts 8 times longer
+
+  // Create New Age radiation resistant armor
+  // Adds New Age radiation resistance to GregTech hazmats and advanced armor
+  event.add("create_new_age:nuclear/hazmat_suit", "#gtceu:ppe_armor")
+  
+  // Create New Age magnet blocks
+  event.add("create_new_age:magnet", ["#forge:storage_blocks/magnetic_iron", "#forge:storage_blocks/magnetic_wrought_iron", "#forge:storage_blocks/magnetic_steel", "#forge:storage_blocks/magnetic_neodymium", "#forge:storage_blocks/magnetic_samarium"])
 
   event.add("forge:magma", ["minecraft:magma_block",
                             "tfc:rock/magma/basalt",
@@ -440,4 +499,7 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
                             "tfc:rock/magma/andesite",
                             "tfc:rock/magma/dacite"
                            ])
+
+  event.add("vintage:curving_heads", ["gtceu:ingot_casting_mold"])
+  event.add("headlight:lights", ["tfc:torch"])
 }

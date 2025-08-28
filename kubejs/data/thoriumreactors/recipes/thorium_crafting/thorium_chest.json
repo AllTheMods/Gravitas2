@@ -1,0 +1,40 @@
+
+{
+  "type": "thoriumreactors:thorium_crafting",
+  "key": {
+    "A": {
+      "tag": "forge:nuggets/steel"
+    },
+    "B": {
+      "tag": "forge:nuggets/blasted_iron"
+    },
+    "C": {
+      "item": "thoriumreactors:steel_chest_block"
+    },
+    "D": {
+      "tag": "forge:thorium"
+    },
+    "E": {
+      "tag": "forge:storage_blocks/thorium"
+    },
+    "F": {
+      "tag": "forge:ingots/chromium"
+    },
+    "G": {
+      "tag": "forge:ingots/niobium"
+    },
+    "H": {
+      "tag": "forge:ingots/manganese"
+    }
+  },
+  "pattern": [
+    " ABA ",
+    "ADFDA",
+    "BGEHB",
+    "ADCDA",
+    " ABA "
+  ],
+  "result": {
+    "item": "thoriumreactors:thorium_chest_block"
+  }
+}

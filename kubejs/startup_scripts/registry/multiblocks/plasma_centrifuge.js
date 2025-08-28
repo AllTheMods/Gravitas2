@@ -10,9 +10,14 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
 
 GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   event
-    .create("plasma_centrifuge", "simple", 7, 8, 9, 10, 11, 12, 13)
-    .rotationState(RotationState.NON_Y_AXIS)
-    ["recipeType(com.gregtechceu.gtceu.api.recipe.GTRecipeType,boolean,boolean)"]("plasma_centrifuge", true, true)
+    .create("plasma_centrifuge", "simple")
+    .tiers(GTValues.ZPM, GTValues.UV, GTValues.UHV, GTValues.UEV, GTValues.UIV, GTValues.UXV, GTValues.OpV, GTValues.MAX)
     .tankScalingFunction((tier) => tier * 3200)
-    .workableTieredHullRenderer(GTCEu.id("block/machines/plasma_centrifuge"))
+    .definition((tier, builder) => {
+      builder
+    .rotationState(RotationState.NON_Y_AXIS)
+    .recipeType("plasma_centrifuge")
+    .workableTieredHullRenderer("gtceu:block/machines/plasma_centrifuge")
+    .langValue(`${GTValues.VA[tier]} Plasma Centrifuge`)
+    })
 })

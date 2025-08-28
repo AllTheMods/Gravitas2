@@ -376,141 +376,106 @@ let tfcGregTools = (/** @type {Internal.RecipesEventJS} */ event) => {
       .id(`gregitas:shaped/${metal.id}_wire_cutter`)
   })
 
-  //Soft Mallet
-  event.custom({
-    type: "tfc:knapping",
-    knapping_type: "tfc:rubber",
-    outside_slot_required: false,
-    pattern: [" XX  ", "XXXX ", "XXXXX", " XXXX", "  XX "],
-    result: {
-      item: "gregitas:rubber_mallet_head"
-    },
-    ingredient: {
-      item: "gtceu:rubber_plate"
+  // Soft Mallet and Plunger
+  const gtToolPolymers = ["rubber", "silicone_rubber", "styrene_butadiene_rubber", "polyethylene", "polytetrafluoroethylene", "polybenzimidazole"]
+  
+  function gtAddPolymerTool(tool_type, material, knapping_pattern, casting_mold) {
+    let result_tool = `gtceu:${material}_${tool_type}`
+    let tool_head = `gregitas:${material}_${tool_type}_head`
+	
+    if (knapping_pattern) {
+      event.custom({
+        type: "tfc:knapping",
+        knapping_type: "tfc:rubber",
+        outside_slot_required: false,
+        pattern: knapping_pattern,
+        result: {
+          item: tool_head
+        },
+        ingredient: {
+          item: `gtceu:${material}_plate`
+        }
+      }).id(`gregitas:rubber_knapping/${material}_${tool_type}_head`)
     }
+    
+    if (casting_mold) {
+      let casting_fluid = `gtceu:${material}`
+      event.custom({
+        type: "tfc:casting",
+        mold: {
+          item: casting_mold
+        },
+        fluid: {
+          ingredient: casting_fluid,
+          amount: 144
+        },
+        result: {
+          item: tool_head
+        },
+        break_chance: 0.5
+      }).id(`gregitas:rubber_casting/${material}_${tool_type}_head`)
+	  
+      event.recipes.create.deploying(
+        [tool_head, Item.of(casting_mold).withChance(0.5)],
+        [
+          {
+            type: "tfc:heatable",
+            ingredient: {
+              type: "forge:partial_nbt",
+              item: casting_mold,
+              nbt: {
+                tank: {
+                  Amount: 144, 
+                  FluidName: casting_fluid
+                }
+              }
+	        }
+          },
+          {
+            tag: "tfc:chisels"
+          }
+        ]
+      )
+	  
+      event.recipes.gtceu
+        .fluid_solidifier(tool_head)
+        .inputFluids(casting_fluid + " 144")
+        .notConsumable(casting_mold)
+        .itemOutputs(tool_head)
+        .duration(60)
+        .EUt(LV)
+	}
+    
+    event.shapeless(result_tool, ["gtceu:long_wood_rod", tool_head])
+	event.recipes.create.deploying(result_tool, ["gtceu:long_wood_rod", tool_head])
+  }
+  
+  gtToolPolymers.forEach((material) => {
+    gtAddPolymerTool(
+      "mallet", 
+      material, 
+      [
+        " XX  ", 
+        "XXXX ", 
+        "XXXXX", 
+        " XXXX", 
+        "  XX "
+      ],
+	  "tfc:ceramic/hammer_head_mold"
+	)
+    gtAddPolymerTool(
+      "plunger", 
+      material, 
+      [
+        " X   ",
+        "XXX  ",
+        "XXXX ",
+        "XXXXX",
+        " XXX "
+      ],
+	  null
+	)
   })
-
-  event.custom({
-    type: "tfc:knapping",
-    knapping_type: "tfc:rubber",
-    outside_slot_required: false,
-    pattern: [" XX  ", "XXXX ", "XXXXX", " XXXX", "  XX "],
-    result: {
-      item: "gregitas:polyethylene_mallet_head"
-    },
-    ingredient: {
-      item: "gtceu:polyethylene_plate"
-    }
-  })
-
-  event.custom({
-    type: "tfc:knapping",
-    knapping_type: "tfc:rubber",
-    outside_slot_required: false,
-    pattern: [" XX  ", "XXXX ", "XXXXX", " XXXX", "  XX "],
-    result: {
-      item: "gregitas:polytetrafluoroethylene_mallet_head"
-    },
-    ingredient: {
-      item: "gtceu:polytetrafluoroethylene_plate"
-    }
-  })
-
-  event.custom({
-    type: "tfc:knapping",
-    knapping_type: "tfc:rubber",
-    outside_slot_required: false,
-    pattern: [" XX  ", "XXXX ", "XXXXX", " XXXX", "  XX "],
-    result: {
-      item: "gregitas:polybenzimidazole_mallet_head"
-    },
-    ingredient: {
-      item: "gtceu:polybenzimidazole_plate"
-    }
-  })
-
-  event.shapeless("gtceu:rubber_mallet", ["gtceu:long_wood_rod", "gregitas:rubber_mallet_head"])
-  event.shapeless("gtceu:polyethylene_mallet", ["gtceu:long_wood_rod", "gregitas:polyethylene_mallet_head"])
-  event.shapeless("gtceu:polytetrafluoroethylene_mallet", [
-    "gtceu:long_wood_rod",
-    "gregitas:polytetrafluoroethylene_mallet_head"
-  ])
-  event.shapeless("gtceu:polybenzimidazole_mallet", ["gtceu:long_wood_rod", "gregitas:polybenzimidazole_mallet_head"])
-
-  //Plunger
-  event
-    .custom({
-      type: "tfc:knapping",
-      knapping_type: "tfc:rubber",
-      outside_slot_required: false,
-      pattern: [" X   ", "XXX  ", "XXXX ", "XXXXX", " XXX "],
-      result: {
-        item: "gregitas:rubber_plunger_head"
-      },
-      ingredient: {
-        item: "gtceu:rubber_plate"
-      }
-    })
-    .id("gregitas:rubber_knapping/rubber_plunger_head")
-
-  event
-    .custom({
-      type: "tfc:knapping",
-      knapping_type: "tfc:rubber",
-      outside_slot_required: false,
-      pattern: [" X   ", "XXX  ", "XXXX ", "XXXXX", " XXX "],
-      result: {
-        item: "gregitas:polyethylene_plunger_head"
-      },
-      ingredient: {
-        item: "gtceu:polyethylene_plate"
-      }
-    })
-    .id("gregitas:rubber_knapping/polyethylene_plunger_head")
-
-  event
-    .custom({
-      type: "tfc:knapping",
-      knapping_type: "tfc:rubber",
-      outside_slot_required: false,
-      pattern: [" X   ", "XXX  ", "XXXX ", "XXXXX", " XXX "],
-      result: {
-        item: "gregitas:polytetrafluoroethylene_plunger_head"
-      },
-      ingredient: {
-        item: "gtceu:polytetrafluoroethylene_plate"
-      }
-    })
-    .id("gregitas:rubber_knapping/polytetrafluoroethylene_plunger_head")
-
-  event
-    .custom({
-      type: "tfc:knapping",
-      knapping_type: "tfc:rubber",
-      outside_slot_required: false,
-      pattern: [" X   ", "XXX  ", "XXXX ", "XXXXX", " XXX "],
-      result: {
-        item: "gregitas:polybenzimidazole_plunger_head"
-      },
-      ingredient: {
-        item: "gtceu:polybenzimidazole_plate"
-      }
-    })
-    .id("gregitas:rubber_knapping/polybenzimidazole_plunger_head")
-
-  event.recipes.kubejs.shapeless("gtceu:rubber_plunger", ["gtceu:long_wood_rod", "gregitas:rubber_plunger_head"])
-  event.recipes.kubejs.shapeless("gtceu:polyethylene_plunger", [
-    "gtceu:long_wood_rod",
-    "gregitas:polyethylene_plunger_head"
-  ])
-  event.recipes.kubejs.shapeless("gtceu:polytetrafluoroethylene_plunger", [
-    "gtceu:long_wood_rod",
-    "gregitas:polytetrafluoroethylene_plunger_head"
-  ])
-  event.recipes.kubejs.shapeless("gtceu:polybenzimidazole_plunger", [
-    "gtceu:long_wood_rod",
-    "gregitas:polybenzimidazole_plunger_head"
-  ])
 
   //Wrench
   gtceuToolsTFC.forEach((metal) => {

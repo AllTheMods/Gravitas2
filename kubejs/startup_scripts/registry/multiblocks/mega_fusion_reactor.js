@@ -41,14 +41,15 @@ let VA = [
 ]
 GTCEuStartupEvents.registry("gtceu:machine", (event) => {
   event
-    .create("mega_fusion_reactor", "multiblock", (holder) => new $FusionReactorMachine(holder, UHV))
+    .create("mega_fusion_reactor", "multiblock")
+    .machine((holder) => new $FusionReactorMachine(holder, UHV))
     .rotationState(RotationState.NON_Y_AXIS)
     .recipeTypes(GTRecipeTypes.get("mega_fusion_reactor"))
     .recipeModifiers([
       GTRecipeModifiers.PARALLEL_HATCH,
       GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)
     ])
-    .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
+    .appearanceBlock(GCYMBlocks.CASING_ATOMIC)
     .pattern((definition) =>
       FactoryBlockPattern.start()
         .aisle(

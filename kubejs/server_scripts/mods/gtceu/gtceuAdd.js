@@ -25,6 +25,25 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event
     .custom({
+      type: "firmalife:vat",
+	  input_item: {
+        ingredient: {
+          tag: "forge:small_dusts/sulfur"
+        },
+		count: 2
+	  },
+      input_fluid: {
+        ingredient: "gregitas:raw_resin",
+        amount: 1000
+      },
+      output_item: {
+        item: "gtceu:sticky_resin"
+      }
+    })
+    .id("gregitas:vat/sticky_resin")
+
+  event
+    .custom({
       type: "create:crushing",
       ingredients: [
         {
@@ -147,17 +166,19 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     })
     .id("gregitas:heated_pressing/rubber_plate")
 
+    /*HAD TO CHANGE FROM TAG black_steel_ingot to specific gtceu:black_steel_ingot*/
+    
   const createTfcSteelWelding = [
     {
       ingredients: ["tfc:metal/ingot/weak_steel", "#forge:ingots/pig_iron"],
       result: "high_carbon_black_steel"
     },
     {
-      ingredients: ["tfc:metal/ingot/weak_blue_steel", "#forge:ingots/black_steel"],
+      ingredients: ["tfc:metal/ingot/weak_blue_steel", "gtceu:black_steel_ingot"],
       result: "high_carbon_blue_steel"
     },
     {
-      ingredients: ["tfc:metal/ingot/weak_red_steel", "#forge:ingots/black_steel"],
+      ingredients: ["tfc:metal/ingot/weak_red_steel", "gtceu:black_steel_ingot"],
       result: "high_carbon_red_steel"
     }
   ]
@@ -474,33 +495,50 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceOutput({ mod: "gtceu" }, "minecraft:sand", "tfc:sand/yellow")
   event.replaceInput({ mod: "gtceu" }, "minecraft:dirt", "#minecraft:dirt")
   event.replaceOutput({ mod: "gtceu" }, "minecraft:dirt", "tfc:dirt/loam")
+  event.replaceInput({ id: "gtceu:sifter/gravel_sifting" }, "minecraft:gravel", "#tfc:rock/gravel")
+  event.replaceOutput({ mod: "gtceu" }, "#minecraft:stone_tool_materials", "#forge:cobblestone")
+  event.remove({ id: "gtceu:rock_breaker/deepslate" })
   event.remove({ id: "gtceu:compressor/red_sandstone" })
 
   enderTC.forEach((ender) => {
+    let dye_fluid = Fluid.of(`gtceu:${ender.id}_dye`, 144)
+    let color_nbt = `{code:"${ender.colour}",owner:"all"}`
+
     event.recipes.gtceu
       .chemical_bath(`ender_chest_${ender.id}`)
       .itemInputs("enderchests:ender_chest")
-      .inputFluids(Fluid.of(`gtceu:${ender.id}_dye`, 216))
-      .itemOutputs(Item.of("enderchests:ender_chest", `{code:"${ender.colour}",owner:"all"}`))
-      .duration(500)
+      .inputFluids(dye_fluid)
+      .itemOutputs(Item.of("enderchests:ender_chest", color_nbt))
+      .duration(5 * 20)
       .EUt(LV)
-    console.log(`ender_chest_${ender.id} : ${ender.colour}`)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(
+        Item.of("enderchests:ender_chest", color_nbt), 
+        ["enderchests:ender_chest", dye_fluid]
+	  ).id(`gregitas:filling/ender_chest_${ender.id}`)
+
     event.recipes.gtceu
       .chemical_bath(`ender_tank_${ender.id}`)
       .itemInputs("endertanks:ender_tank")
-      .inputFluids(Fluid.of(`gtceu:${ender.id}_dye`, 216))
-      .itemOutputs(Item.of("endertanks:ender_tank", `{code:"${ender.colour}",owner:"all"}`))
-      .duration(500)
+      .inputFluids(dye_fluid)
+      .itemOutputs(Item.of("endertanks:ender_tank", color_nbt))
+      .duration(5 * 20)
       .EUt(LV)
+      .category("gtceu:chem_dyes")
+    event.recipes.create.filling(
+        [Item.of("endertanks:ender_tank", color_nbt)], 
+        ["endertanks:ender_tank", dye_fluid]
+	  ).id(`gregitas:filling/ender_tank_${ender.id}`)
   })
 
+  event.remove({ id: "gtceu:shaped/wooden_barrel" })
   event.recipes.kubejs
     .shaped("gtceu:wood_drum", ["mRs", "PWP", "PWP"], {
-      m: "#forge:tools/mallets",
-      R: "gtceu:sticky_resin",
+      m: "#forge:tools/files",
+      R: ["gtceu:sticky_resin", "firmalife:beeswax", "create:super_glue"],
       s: "#forge:tools/saws",
       P: "#minecraft:planks",
-      W: "gtceu:long_wrought_iron_rod"
+      W: ["gtceu:long_iron_rod", "gtceu:long_wrought_iron_rod"]
     })
     .damageIngredient(["#forge:tools"])
 
@@ -542,6 +580,27 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       s: "#forge:tools/screwdrivers"
     })
     .damageIngredient(["#forge:tools"])
+  event.recipes.kubejs
+    .shaped("gtceu:wood_small_fluid_pipe", ["   ", "sPf", "   "], {
+      s: "#forge:tools/saws",
+      P: "#minecraft:planks",
+      f: "#forge:tools/files"
+    })
+    .damageIngredient(["#forge:tools"])
+  event.recipes.kubejs
+    .shaped("gtceu:wood_normal_fluid_pipe", ["   ", "PPP", "s f"], {
+      s: "#forge:tools/saws",
+      P: "#minecraft:planks",
+      f: "#forge:tools/files"
+    })
+    .damageIngredient(["#forge:tools"])
+  event.recipes.kubejs
+    .shaped("gtceu:wood_large_fluid_pipe", ["PPP", "s f", "PPP"], {
+      s: "#forge:tools/saws",
+      P: "#minecraft:planks",
+      f: "#forge:tools/files"
+    })
+    .damageIngredient(["#forge:tools"])
   event.recipes.kubejs.shaped("gtceu:improved_coke_oven", ["CCC", "LPL", "TLT"], {
     C: "gtceu:lv_voltage_coil",
     P: "gregitas:bronze_plated_bricks",
@@ -558,7 +617,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .damageIngredient(["#forge:tools"])
   event.recipes.kubejs
     .shaped("3x gtceu:compressed_coke_clay", ["CCC", "SFS", "SSS"], {
-      C: "tfc:fire_clay",
+      C: "minecraft:clay_ball",
       S: "#forge:sand",
       F: "gtceu:brick_wooden_form"
     })
@@ -1006,11 +1065,63 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
     .duration(80)
 
+
+  //wet mud
+
+  event.recipes.gtceu
+    .mixer("gt_loam_mud_bricks")
+    .itemInputs("1x tfc:dirt/loam")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/loam")
+    .EUt(ULV)
+    .duration(160)
+
+  event.recipes.gtceu
+    .mixer("gt_silty_mud_bricks")
+    .itemInputs("1x tfc:dirt/silty_loam")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/silty_loam")
+    .EUt(ULV)
+    .duration(160)
+
+  event.recipes.gtceu
+    .mixer("gt_sandy_mud_bricks")
+    .itemInputs("1x tfc:dirt/sandy_loam")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/sandy_loam")
+    .EUt(ULV)
+    .duration(160)
+  //Clay Using Ore Washer
+
+  event.recipes.gtceu
+    .ore_washer("gt_sand_to_clay")
+    .itemInputs("1x #forge:sand")
+    .inputFluids(Fluid.of("minecraft:water", 1000))
+    .chancedOutput("1x minecraft:clay_ball", 7500, 1000)
+    .chancedOutput("1x minecraft:clay_ball", 2500, 600)
+    .duration(100)
+    .EUt(8)
+
+  //deepslate
+
+  event.recipes.gtceu
+    .rock_breaker("chep_deepslate")
+    .notConsumable("minecraft:deepslate")
+    .itemOutputs("minecraft:deepslate")
+    .addDataString("fluidA", "minecraft:lava")
+    .addDataString("fluidB", "minecraft:water")
+    .duration(16)
+    .EUt(24)
+    .addCondition(RockBreakerCondition.INSTANCE)
+
   //alabaster brick
 
   event.recipes.gtceu
     .alloy_smelter("alabaster_brick")
-    .itemInputs("4x tfc:ore/gypsum")
+    .itemInputs("tfc:ore/gypsum")
     .notConsumable("gtceu:ingot_casting_mold")
     .itemOutputs("4x tfc:alabaster_brick")
     .EUt(LV)
@@ -1357,8 +1468,8 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemInputs("#forge:ingots/brass")
     .notConsumable("gtceu:small_gear_extruder_mold")
     .itemOutputs("2x tfc:brass_mechanisms")
-    .duration(100)
-    .EUt(ULV)
+    .duration(80)
+    .EUt(64)
 
   //integrated omni/mono
 
@@ -1454,7 +1565,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(60)
     .EUt(LV)
 
-  //wrought iron anvil
+  // anvils
 
   event.recipes.gtceu
     .fluid_solidifier("gregitas:wrought_iron_anvil")
@@ -1463,6 +1574,14 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("tfc:metal/anvil/wrought_iron")
     .duration(400)
     .EUt(LV)
+
+  event.recipes.gtceu
+    .fluid_solidifier("gregitas:steel_anvil")
+    .notConsumable("gtceu:anvil_casting_mold")
+    .inputFluids(Fluid.of("gtceu:steel", 2016))
+    .itemOutputs("railcraft:steel_anvil")
+    .duration(400)
+    .EUt(MV)
 
   //amethyst conversion (cut amethyst only has 1 source as of adding, from tfc ore)
 
@@ -1473,6 +1592,22 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("tfc:gem/amethyst")
     .duration(100)
     .EUt(LV)
+
+  //yarn
+
+  event.recipes.gtceu
+    .compressor("gregitas:wool_yarn_from_wool")
+    .itemInputs("1x tfc:wool")
+    .itemOutputs("8x tfc:wool_yarn")
+    .duration(100)
+    .EUt(ULV)
+
+  event.recipes.gtceu
+    .compressor("gregitas:string_from_jute")
+    .itemInputs("1x tfc:jute_fiber")
+    .itemOutputs("2x minecraft:string")
+    .duration(100)
+    .EUt(ULV)
 
   //wool
 
@@ -1505,6 +1640,20 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .itemOutputs("2x minecraft:white_wool")
     .duration(100)
     .EUt(HV)
+  
+  // TFC chains
+  
+  const TFCChains = ["copper", "bronze", "bismuth_bronze", "black_bronze", "wrought_iron", "steel", "black_steel", "blue_steel", "red_steel"]
+  
+  TFCChains.forEach((material) => {
+    event.recipes.gtceu
+      .assembler(`gregitas:chain_${material}`)
+      .circuit(4)
+      .itemInputs(`4x #forge:rings/${material}`)
+      .itemOutputs(`16x tfc:metal/chain/${material}`)
+      .duration(4 * 20)
+      .EUt(8)
+  })
 
   //wireless chargers
 

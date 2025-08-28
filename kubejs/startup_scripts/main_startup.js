@@ -1,8 +1,5 @@
 // priority 0
 
-const $FuelUtil = Java.loadClass("mods.railcraft.api.fuel.FuelUtil")
-const $TagKey = Java.loadClass("net.minecraft.tags.TagKey")
-
 StartupEvents.init((e) => {
   if (!Platform.isClientEnvironment()) return
   $CustomClickEvent.register($UtilsJS.makeFunctionProxy("startup", $EventActor, handleFTBCustomClick))
@@ -21,23 +18,17 @@ StartupEvents.registry("fluid", (event) => {
 })
 
 const $ConfigHolder = Java.loadClass("com.gregtechceu.gtceu.config.ConfigHolder")
-const $ConfigHolder$INSTANCE = $ConfigHolder.INSTANCE
 
 StartupEvents.postInit((event) => {
   Platform.setModName("gregitas", "Gravitas²")
   Platform.setModName("gregitas-core", "Gravitas²")
+  let $ConfigHolder$INSTANCE = $ConfigHolder.INSTANCE
   if ($ConfigHolder$INSTANCE == null) $ConfigHolder.init()
-  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enablePlatformConverters) return
-  console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enablePlatformConverters` to true!")
+  if ($ConfigHolder$INSTANCE.machines.highTierContent && $ConfigHolder$INSTANCE.compat.energy.enableFEConverters) return
+  console.error("Please check your gtceu.yaml at config folder and set `highTierContent` to true and `enableFEConverters` to true!")
 })
 
 StartupEvents.postInit((event) => {
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:creosote"), 4800)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:crude_oil"), 18000)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:ethanol"), 32000)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:diesel"), 96000)
-  $FuelUtil.fuelManager().addFuel($TagKey.create(Utils.getRegistry("fluid").key, "forge:bio_diesel"), 96000)
-
   if (!Platform.isClientEnvironment()) return
   addTooltipToBlocks(event)
 })
@@ -75,9 +66,14 @@ StartupEvents.recipeSchemaRegistry((event) => {
   registerTFCHeatingSchema(event)
   registerTFCCastingSchema(event)
   registerTFCAnvilSchema(event)
+  registerTFCGlassworkingSchema(event)
   registerWoodencogFillingSchema(event)
   registerAe2ChargerSchema(event)
   registerAe2InscriberSchema(event)
+  registervintageSchemas(event)
+  registerCreateAdditionsSchemas(event)
+  registerCreateDieselGeneratorsSchemas(event)
+  registerCreateNewAgeSchemas(event)
 })
 
 // Server only

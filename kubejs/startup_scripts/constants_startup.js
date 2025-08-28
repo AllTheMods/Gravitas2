@@ -64,6 +64,43 @@ const pkgJson = {
 	}
 }
 
+global.itemsToRemove = [
+	"tfc:metal/sheet/steel",
+	"tfc:lens",
+	"immersiveengineering:plate_steel",
+	"vintage:andesite_sheet",
+	"alltheores:peridot",
+	`/^alltheores:.*_rod/`,
+	`/^alltheores:.*_dust/`,
+	`/^alltheores:.*_nugget/`,
+	`/^alltheores:.*_plate/`,
+	`/^alltheores:.*_gear/`,
+	`/^alltheores:.*_ore_hammer/`,
+	`/^alltheores:.*_block/`,
+	`/^alltheores:.*_ingot/`,
+	`/^alltheores:raw_.*/`,
+	`/^allthemodium:.*allthemodium.*/`,
+	`/^allthemodium:.*vibranium.*/`,
+	`/^allthemodium:.*unobtainium.*/`,
+	`/^allthemodium:alloy_.*/`,
+	`/^immersiveengineering:plate_.*/`,
+	`/^immersiveengineering:mold_.*/`,
+	`/^immersiveengineering:wire_.*/`,
+	`/^tfc_ie_addon:metal/sheet/.*/`,
+	`/^tfc:metal/sheet/.*/`,
+	]
+
+global.fluidsWithBucketsToRemove = [
+	"enderio:dew_of_the_void",
+]
+
+global.fluidsToRemove = [
+	"allthemodium:soul_lava",
+	"allthemodium:molten_allthemodium",
+	"allthemodium:molten_unobtainium",
+	"allthemodium:molten_vibranium",
+]
+
 global.gregVeins = [
 	{
 	  name: "apatite",
@@ -352,3 +389,150 @@ global.gregVeins = [
 	  ]
 	}
   ]
+
+/*
+GLOBAL FUEL DATA
+Currently used by:
+    Multiblock steam boiler fluid burner (RailCraft)
+    Blaze Burner with a Straw (Create Crafts & Additions)
+
+tag:
+    Fluid tag (a tag, not an ID!)
+burn_ticks:
+    How many ticks (20 TPS) does 1000mb of fuel burn for 
+    (used by RailCraft and Create blaze burners)
+
+flags:
+superheated:
+    Whether the fuel gets a Create blaze burner into a blue "superheated" burn
+    (this also halves the "burn_ticks" duration when this fuel used in a blaze burner)
+thermal:
+    Whether the fuel works because it's hot, as opposed to because it burns well.
+    This restricts the fuel from being used in things like ICEs and gas turbines.
+gas:
+    Whether the fuel is a gas (unset means "fluid")
+*/
+global.liquidFuels = [
+  {
+    tag: "forge:creosote",
+    burn_ticks: 4 * 60 * 20
+  },
+  {
+    tag: "forge:plant_oil",
+    burn_ticks: 4 * 60 * 20
+  },
+  {
+    tag: "forge:methanol",
+    burn_ticks: 5 * 60 * 20
+  },
+  {
+    tag: "forge:ethanol",
+    burn_ticks: 6 * 60 * 20
+  },
+  {
+    tag: "forge:crude_oil",
+    burn_ticks: 8 * 60 * 20
+  },
+  {
+    tag: "forge:oil",
+    burn_ticks: 8 * 60 * 20
+  },
+  {
+    tag: "forge:oil_light",
+    burn_ticks: 8 * 60 * 20
+  },
+  {
+    tag: "forge:oil_heavy",
+    burn_ticks: 8 * 60 * 20
+  },
+  {
+    tag: "forge:sulfuric_heavy_fuel",
+    burn_ticks: 14 * 60 * 20,
+    sulfuric: true
+  },
+  {
+    tag: "forge:sulfuric_light_fuel",
+    burn_ticks: 14 * 60 * 20,
+    sulfuric: true
+  },
+  {
+    tag: "forge:sulfuric_naphtha",
+    burn_ticks: 14 * 60 * 20,
+    sulfuric: true
+  },
+  {
+    tag: "forge:sulfuric_gas",
+    burn_ticks: 14 * 60 * 20,
+    sulfuric: true,
+    gas: true
+  },
+  {
+    tag: "forge:lava",
+    burn_ticks: 16 * 60 * 20 + 40,
+    thermal: true
+  },
+  {
+    tag: "forge:heavy_fuel",
+    burn_ticks: 30 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:light_fuel",
+    burn_ticks: 30 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:naphtha",
+    burn_ticks: 30 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:refinery_gas",
+    burn_ticks: 30 * 60 * 20,
+    superheated: true,
+    gas: true
+  },
+  {
+    tag: "forge:blaze",
+    burn_ticks: 30 * 60 * 20,
+    superheated: true,
+    thermal: true
+  },
+  {
+    tag: "forge:bio_diesel",
+    burn_ticks: 40 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:biofuel",
+    burn_ticks: 40 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:crude_diesel",
+    burn_ticks: 40 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:diesel",
+    burn_ticks: 80 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:gasoline",
+    burn_ticks: 80 * 60 * 20,
+	superheated: true
+  },
+  {
+    tag: "forge:cetane_boosted_diesel",
+    burn_ticks: 120 * 60 * 20,
+    superheated: true
+  },
+  {
+    tag: "forge:high_octane_gasoline",
+    burn_ticks: 160 * 60 * 20,
+    superheated: true
+  }
+]
+
+global.liquidFuelsCombustion = global.liquidFuels.filter(fuel => !fuel.thermal)

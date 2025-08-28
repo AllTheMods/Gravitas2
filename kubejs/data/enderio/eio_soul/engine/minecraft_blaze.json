@@ -1,0 +1,6 @@
+{
+  "entity": "minecraft:blaze",
+  "fluid": "#forge:blaze",
+  "power/mb": 800,
+  "tick/mb": 18
+}

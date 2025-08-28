@@ -12,7 +12,7 @@
 			rotation: 0.0d
 			width: 7.135483870967742d
 			x: 0.0d
-			y: -2.5d
+			y: -3.0d
 		}
 		{
 			height: 2.0d
@@ -97,10 +97,26 @@
 	]
 	order_index: 1
 	progression_mode: "flexible"
-	quest_links: [ ]
+	quest_links: [
+		{
+			id: "04D7CA76AD8133C8"
+			linked_quest: "15BC783BB17EE2D4"
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			id: "71BFC7E253E4777E"
+			linked_quest: "4C8385E2ACE406EE"
+			x: -1.0d
+			y: 2.0d
+		}
+	]
 	quests: [
 		{
-			dependencies: ["5A0305BB1F8EA932"]
+			dependencies: [
+				"5A0305BB1F8EA932"
+				"597BF02F3CDA95BC"
+			]
 			description: ["{gravitas.quest.affixes.desc.dust}"]
 			id: "40926361B5A17F74"
 			rewards: [{
@@ -202,10 +218,14 @@
 			}]
 			title: "{gravitas.quest.affixes.gems}"
 			x: 0.0d
-			y: -0.5d
+			y: -1.0d
 		}
 		{
-			dependencies: ["40926361B5A17F74"]
+			dependencies: [
+				"40926361B5A17F74"
+				"4C8385E2ACE406EE"
+				"15BC783BB17EE2D4"
+			]
 			description: ["{gravitas.quest.affixes.desc.salvaging_table}"]
 			id: "1A507E77BF750F60"
 			shape: "hexagon"
@@ -320,7 +340,10 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0A70CC1A0F4F1CD1"]
+			dependencies: [
+				"0A70CC1A0F4F1CD1"
+				"3B2B4E5ED232420F"
+			]
 			description: ["{gravitas.quest.affixes.desc.simple}"]
 			id: "375359043E71349C"
 			rewards: [{
@@ -580,6 +603,72 @@
 			]
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["1453F05BD3D1AB45"]
+			id: "597BF02F3CDA95BC"
+			tasks: [{
+				id: "40FD2189DC6C5544"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "minecraft:anvil"
+							}
+							{
+								Count: 1b
+								id: "railcraft:steel_anvil"
+							}
+						]
+					}
+				}
+				title: "{gravitas.quest.affixes.anvil}"
+				type: "item"
+			}]
+			title: "{gravitas.quest.affixes.anvil}"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C1BB559DD83E88F"]
+			id: "1453F05BD3D1AB45"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "4446CB361BC6F776"
+					item: "gtceu:lv_fluid_solidifier"
+					type: "item"
+				}
+				{
+					id: "61C4E77F2224E777"
+					item: "gtceu:lv_extractor"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			description: ["{gravitas.quest.affixes.desc.enchanting_table}"]
+			id: "3B2B4E5ED232420F"
+			rewards: [{
+				count: 3
+				id: "39C7375B3B1F5C9A"
+				item: "apotheosis:common_material"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "08F230D63F64E8F5"
+				item: "minecraft:enchanting_table"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 5.5d
 		}
 	]
 	title: "{gravitas.chapters.8.title}"

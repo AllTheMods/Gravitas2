@@ -1,0 +1,16 @@
+{
+  "type": "tfc:alloy",
+  "contents": [
+    {
+      "metal": "tfc_ie_addon:lead",
+      "max": 0.85,
+      "min": 0.75
+    },
+    {
+      "metal": "gtceu:antimony",
+      "max": 0.25,
+      "min": 0.15
+    }
+  ],
+  "result": "gtceu:battery_alloy"
+}

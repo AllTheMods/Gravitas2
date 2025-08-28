@@ -1,8 +1,0 @@
-{
-	"include_generated_addresses": true,
-	"dimensions":
-	[
-		{"dimension": "allthemodium:the_other", "weight": 4},
-		{"dimension": "sgjourney:abydos", "weight": 1}
-	]
-}
