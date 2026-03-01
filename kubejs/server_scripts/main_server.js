@@ -3,6 +3,7 @@
 ServerEvents.recipes((event) => {
   recipeRemoval(event)
   dfcRecipesRemoval(event)
+  ncRecipesRemoval(event)
   replaceRecipes(event)
   dfcRecipesReplace(event)
   tfcRecipesReplace(event)

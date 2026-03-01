@@ -16,13 +16,22 @@
 const NC_CR_BASE_TIME_TICKS = 200 // processor_time[19] from nuclearcraft-common.toml
 const NC_CR_BASE_POWER_FE = 2000 // base_power(100) × processor_power[19](20)
 const FE_TO_EU_RATIO = 4 // standard: 4 FE = 1 EU
-const FLUID_SCALE = 1.0 // global fluid amount multiplier (1.0 = copy exactly)
 
 // NC uses 90 mB as "1 ingot" for fuel synthesis outputs; Gravitas uses 144 mB.
 // Any recipe whose output is exactly NC_INGOT_MB gets all its fluid amounts
 // scaled so the output becomes GT_INGOT_MB, keeping ratios intact.
 const NC_INGOT_MB = 90
 const GT_INGOT_MB = 144
+
+// Direct mapping of NC fuel input amounts (mB) → GT mixer input amounts (mB).
+// NC's isotope ratios don't have a consistent physical basis, so these are
+// agreed values that sum to GT_INGOT_MB per recipe.
+const NC_FUEL_INPUT_MAP = {
+  30: 16,
+  90: 48,
+  180: 96,
+  270: 128,
+}
 
 // --- Exclusions --------------------------------------------------------------
 //
@@ -229,9 +238,24 @@ let ncToGtChemReactor = (/** @type {Internal.RecipesEventJS} */ event) => {
     }
 
     const isIngotRecipe = rawOutputs.some(f => f.amount === NC_INGOT_MB)
-    const fluidScale = isIngotRecipe ? (GT_INGOT_MB / NC_INGOT_MB) * FLUID_SCALE : FLUID_SCALE
+    const outputScale = isIngotRecipe ? GT_INGOT_MB / NC_INGOT_MB : 1.0
 
     const machine = ncPath.includes("fuel") ? "mixer" : "chemical_reactor"
+
+    // For fuel (mixer) recipes, remap each input amount through NC_FUEL_INPUT_MAP
+    // and store the resolved amounts directly (inputScale = 1.0).
+    // For all other recipes, inputs use the same scale as outputs.
+    let resolvedInputs, inputScale
+    if (machine === "mixer") {
+      resolvedInputs = rawInputs.map(f => ({
+        tag: f.tag,
+        amount: NC_FUEL_INPUT_MAP[f.amount] !== undefined ? NC_FUEL_INPUT_MAP[f.amount] : f.amount,
+      }))
+      inputScale = 1.0
+    } else {
+      resolvedInputs = rawInputs
+      inputScale = outputScale
+    }
     const gtId = sanitizeId(recipe.id, machine === "mixer" ? "gregitas:nc_fuel/" : "gregitas:nc_chem/")
     if (ncGtRegisteredIds[gtId]) {
       console.warn(
@@ -262,9 +286,10 @@ let ncToGtChemReactor = (/** @type {Internal.RecipesEventJS} */ event) => {
       gtId: gtId,
       ncId: recipe.id,
       machine: machine,
-      rawInputs: rawInputs,
+      resolvedInputs: resolvedInputs,
       rawOutputs: rawOutputs,
-      fluidScale: fluidScale,
+      inputScale: inputScale,
+      outputScale: outputScale,
       duration: duration,
       eut: eut
     })
@@ -284,8 +309,8 @@ let ncToGtChemReactor = (/** @type {Internal.RecipesEventJS} */ event) => {
     for (var ci = 0; ci < group.length; ci++) {
       var entry = group[ci]
 
-      var gtInputs = entry.rawInputs.map(e => ncInputFJI(e, entry.fluidScale)).filter(Boolean)
-      var gtOutputs = entry.rawOutputs.map(e => ncOutputFJI(e, entry.fluidScale)).filter(Boolean)
+      var gtInputs = entry.resolvedInputs.map(e => ncInputFJI(e, entry.inputScale)).filter(Boolean)
+      var gtOutputs = entry.rawOutputs.map(e => ncOutputFJI(e, entry.outputScale)).filter(Boolean)
 
       if (gtInputs.length === 0 || gtOutputs.length === 0) {
         console.error("[NC→GT] Empty fluids after scaling: " + entry.ncId)
