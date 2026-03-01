@@ -12,6 +12,7 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   recipesTFCGlassblowingLenses(event)
   gtceuAdd(event)
+  ncToGtChemReactor(event)
   createAdd(event)
   centrifugeAdd(event)
   tfcRecipesAdd(event)
