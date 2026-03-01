@@ -3,6 +3,7 @@
 ServerEvents.recipes((event) => {
   recipeRemoval(event)
   dfcRecipesRemoval(event)
+  ncRecipesRemoval(event)
   replaceRecipes(event)
   dfcRecipesReplace(event)
   tfcRecipesReplace(event)
@@ -12,6 +13,7 @@ ServerEvents.recipes((event) => {
   tfcGregTools(event)
   recipesTFCGlassblowingLenses(event)
   gtceuAdd(event)
+  ncToGtChemReactor(event)
   createAdd(event)
   centrifugeAdd(event)
   tfcRecipesAdd(event)
