@@ -632,6 +632,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "#forge:double_sheets/any_bronze"
   })
 
+  shaped("4x immersiveengineering:wirecoil_structure_steel", [" C ", "CSC", " C "], {
+    C: "#forge:wires/steel",
+    S: "#forge:rods/wooden"
+  })
+	
   event.custom({
     type: "tfc:glassworking",
     operations: ["blow", "blow", "roll", "pinch", "saw"],

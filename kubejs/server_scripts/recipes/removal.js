@@ -674,6 +674,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:nuclearcraft_iridium_dust"})
   event.remove({ id: "nuclearcraft:blast_iridium_dust"})
   event.remove({ id: "nuclearcraft:rock_crusher/purpur_block"})
+
   event.remove({ id: "nuclearcraft:actuator"})
   event.remove({ id: "nuclearcraft:chassis"})
   event.remove({ id: "nuclearcraft:motor"})

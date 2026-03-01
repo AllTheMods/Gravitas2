@@ -1293,6 +1293,36 @@ let gregifyAE2 = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(EV)
 
   event.recipes.gtceu
+    .assembler("gregitas:infinityboostercard")
+    .itemInputs(
+       "32x ae2:wireless_booster",
+       "10x #gtceu:circuits/iv",
+       "5x gtceu:iv_field_generator", 
+       "5x gtceu:iv_emitter"
+      )
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 1440))
+    .itemOutputs("aeinfinitybooster:infinity_card")
+    .duration(1200)
+    .EUt(IV) 
+
+  event.recipes.gtceu
+    .assembly_line("gregitas:dimensional_booster_card")
+    .itemInputs(
+      "4x aeinfinitybooster:infinity_card",
+      "20x #gtceu:circuits/luv",
+      "20x gtceu:luv_emitter",
+      "10x gtceu:luv_sensor",
+      "6x nuclearcraft:expl"
+    )
+    .inputFluids(Fluid.of("gtceu:soldering_alloy", 2880))
+    .inputFluids(Fluid.of("gtceu:pcb_coolant", 5000))
+    .inputFluids(Fluid.of("gcyr:para_aramid", 5000))
+    .inputFluids(Fluid.of("nuclearcraft:cryotheum",10000))
+    .itemOutputs("aeinfinitybooster:dimension_card")
+    .duration(24000)
+    .EUt(LuV)
+
+  event.recipes.gtceu
     .assembler("gregitas:wireless_connector")
     .itemInputs(
       "2x gtceu:iv_machine_hull",
