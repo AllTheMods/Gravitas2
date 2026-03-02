@@ -109,15 +109,6 @@ const NC_CR_EXCLUDED_PATHS = {
 // to disambiguate. Recipes within a group are sorted by GT recipe ID for
 // deterministic, reload-stable circuit assignments.
 
-const $FluidRecipeCapability = Java.loadClass(
-  "com.gregtechceu.gtceu.api.capability.recipe.FluidRecipeCapability"
-)
-const $FluidIngredientJS = Java.loadClass(
-  "com.gregtechceu.gtceu.integration.kjs.recipe.components.GTRecipeComponents$FluidIngredientJS"
-)
-const $ForgeRegistries = Java.loadClass("net.minecraftforge.registries.ForgeRegistries")
-const $ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation")
-
 // --- Helpers -----------------------------------------------------------------
 
 /**
@@ -190,7 +181,7 @@ function sanitizeId(ncId, prefix) {
 }
 
 // Tracks registered GT IDs within this reload to catch any remaining collisions.
-const ncGtRegisteredIds = {}
+var ncGtRegisteredIds = {}
 
 // --- Main function -----------------------------------------------------------
 
