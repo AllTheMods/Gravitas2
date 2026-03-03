@@ -6,16 +6,21 @@
 // Reads all NuclearCraft chemical_reactor recipes and registers equivalent
 // GregTech chemical_reactor recipes.
 //
-// Tune the constants below to match nuclearcraft-common.toml [Processor]:
-//   base_power * processor_power[chemical_reactor]  →  NC_CR_BASE_POWER_FE
-//   processor_time[chemical_reactor]                →  NC_CR_BASE_TIME_TICKS
+// NC powerModifier and timeModifier fields scale from the base EUt/duration
+// constants defined below. Chemical reactor uses MV (fluoride/boron chemistry);
+// mixer uses EV (precision isotope blending for nuclear fuel fabrication).
 // =============================================================================
 
 // --- Knobs -------------------------------------------------------------------
 
-const NC_CR_BASE_TIME_TICKS = 200 // processor_time[19] from nuclearcraft-common.toml
-const NC_CR_BASE_POWER_FE = 2000 // base_power(100) × processor_power[19](20)
-const FE_TO_EU_RATIO = 4 // standard: 4 FE = 1 EU
+// Chemical reactor: MV-tier reactive-gas fluoride/boron chemistry.
+// NC powerModifier/timeModifier scale from these bases.
+const NC_CR_BASE_EUT  = MV  // 128 EU/t
+const NC_CR_BASE_TIME = 80  // 4 seconds
+
+// Mixer: EV-tier precision isotope blending for nuclear fuel fabrication.
+const NC_FUEL_BASE_EUT  = EV   // 2048 EU/t
+const NC_FUEL_BASE_TIME = 1200  // 60 seconds
 
 // NC uses 90 mB as "1 ingot" for fuel synthesis outputs; Gravitas uses 144 mB.
 // Any recipe whose output is exactly NC_INGOT_MB gets all its fluid amounts
@@ -212,11 +217,15 @@ let ncToGtChemReactor = (/** @type {Internal.RecipesEventJS} */ event) => {
       return
     }
 
-    const timeModifier = json.timeModifier != null ? Number(json.timeModifier) : 1.0
+    const machine = ncPath.includes("fuel") ? "mixer" : "chemical_reactor"
+
+    const timeModifier  = json.timeModifier  != null ? Number(json.timeModifier)  : 1.0
     const powerModifier = json.powerModifier != null ? Number(json.powerModifier) : 1.0
 
-    const duration = Math.max(1, Math.round(NC_CR_BASE_TIME_TICKS * timeModifier))
-    const eut = Math.max(1, Math.round((NC_CR_BASE_POWER_FE * powerModifier) / FE_TO_EU_RATIO))
+    const baseEut  = machine === "mixer" ? NC_FUEL_BASE_EUT  : NC_CR_BASE_EUT
+    const baseTime = machine === "mixer" ? NC_FUEL_BASE_TIME : NC_CR_BASE_TIME
+    const eut      = Math.max(1, Math.round(baseEut  * powerModifier))
+    const duration = Math.max(1, Math.round(baseTime * timeModifier))
 
     const rawInputs = (Array.isArray(json.inputFluids) ? json.inputFluids : [])
       .filter(f => f && f.tag && f.amount)
@@ -230,8 +239,6 @@ let ncToGtChemReactor = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     const isIngotRecipe = rawOutputs.some(f => f.amount === NC_INGOT_MB)
     const outputScale = isIngotRecipe ? GT_INGOT_MB / NC_INGOT_MB : 1.0
-
-    const machine = ncPath.includes("fuel") ? "mixer" : "chemical_reactor"
 
     // For fuel (mixer) recipes, remap each input amount through NC_FUEL_INPUT_MAP
     // and store the resolved amounts directly (inputScale = 1.0).

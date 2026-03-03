@@ -19,6 +19,14 @@
 
 // --- Config ------------------------------------------------------------------
 
+// Power and time per recipe category (input fluid type determines mold + tier).
+const NC_IF_EUT_INGOT  = ULV  // 8 EU/t   — standard alloy ingots
+const NC_IF_TIME_INGOT = 40   // 2 seconds
+const NC_IF_EUT_ISO    = LV   // 32 EU/t  — fission isotopes (ball mold)
+const NC_IF_TIME_ISO   = 60   // 3 seconds
+const NC_IF_EUT_FUEL   = MV   // 128 EU/t — liquid fuel (cylinder mold)
+const NC_IF_TIME_FUEL  = 100  // 5 seconds
+
 // NC sometimes uses 90 mB for fluid ingot inputs; GT/TFC uses 144 mB.
 const NC_IF_INGOT_MB = 90
 const GT_IF_INGOT_MB = 144
@@ -202,25 +210,25 @@ let ncIngotFormerToGtSolidifier = (/** @type {Internal.RecipesEventJS} */ event)
     ncIfRegisteredIds[gtId] = recipe.id
 
     // Mold, power, and time based on the input fluid/tag identifier:
-    //   fluid path starts with "fuel"  → cylinder mold, HV, 8 s
-    //   tag path contains "/"          → ball mold,     HV, 1 s
-    //   everything else                → ingot mold,    ULV, 1 s
+    //   fluid path starts with "fuel"  → cylinder mold + NC_IF_FUEL
+    //   tag path contains "/"          → ball mold     + NC_IF_ISO   (fission isotopes)
+    //   everything else                → ingot mold    + NC_IF_INGOT
     const entryPath = rawEntry.fluid
       ? String(rawEntry.fluid).replace(/^[^:]+:/, "")
       : String(rawEntry.tag || "").replace(/^forge:/, "")
     let mold, eut, duration
     if (entryPath.startsWith("fuel")) {
       mold = "gtceu:cylinder_casting_mold"
-      eut = HV
-      duration = 160  // 8 seconds
+      eut = NC_IF_EUT_FUEL
+      duration = NC_IF_TIME_FUEL
     } else if (rawEntry.tag && entryPath.includes("/")) {
       mold = "gtceu:ball_casting_mold"
-      eut = HV
-      duration = 20   // 1 second
+      eut = NC_IF_EUT_ISO
+      duration = NC_IF_TIME_ISO
     } else {
       mold = "gtceu:ingot_casting_mold"
-      eut = ULV
-      duration = 20   // 1 second
+      eut = NC_IF_EUT_INGOT
+      duration = NC_IF_TIME_INGOT
     }
 
     try {

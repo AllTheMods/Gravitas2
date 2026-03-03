@@ -2639,19 +2639,6 @@ event.recipes.create.crushing([`2x minecraft:gray_dye`], `gtceu:stone_dust`, 250
    .duration(400)
    .EUt(EV) 
 
-  event.recipes.gtceu
-   .extractor("gregitas:liquid_boron_from_ingots")
-   .itemInputs("#forge:ingots/boron")
-   .outputFluids(Fluid.of("nuclearcraft:boron", 144))
-   .duration(100)
-   .EUt(LV)
- 
-  event.recipes.gtceu
-   .extractor("gregitas:liquid_boron_from_dusts")
-   .itemInputs("#forge:dusts/boron")
-   .outputFluids(Fluid.of("nuclearcraft:boron", 144))
-   .duration(100)
-   .EUt(LV)  
 
   event.recipes.gtceu.assembler("gregitas:chassis")
     .itemInputs("gtceu:steel_frame", "6x gtceu:lead_plate", "#gtceu:circuits/hv")

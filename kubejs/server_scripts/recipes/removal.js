@@ -483,18 +483,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'wirelessredstone:redstone_receiver'}) 
   event.remove({ id: 'wirelessredstone:redstone_transmitter'})
   
-  // NuclearCraft
-  event.remove({ id: 'nuclearcraft:fission_reactor_casing'})
-  event.remove({ id: 'nuclearcraft:fission_reactor_controller'})
-  event.remove({ id: 'nuclearcraft:fission_reactor_port'})
-  event.remove({ id: 'nuclearcraft:empty_heat_sink'})
-  event.remove({ id: 'nuclearcraft:fission_reactor_solid_fuel_cell'})
-
-  event.remove({ id: 'nuclearcraft:fusion_reactor_casing'})
-  event.remove({ id: 'nuclearcraft:basic_electromagnet'})
-  event.remove({ id: 'nuclearcraft:basic_rf_amplifier'})
-  event.remove({ id: 'nuclearcraft:fusion_reactor_connector'})
-
   //more red
 
   event.remove({ id: 'morered:red_alloy_wire'}) 
@@ -663,30 +651,12 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:milling/bone"})
   event.remove({ id: "minecraft:brewing_stand"})
   event.remove({ id: "tfc_ie_addon:welding/aluminum_double_ingot"})
-  event.remove({ id: "nuclearcraft:alloy_smelter/dusts_steel-dusts_chromium"})
-  event.remove({ id: "nuclearcraft:alloy_smelter/ingots_steel-ingots_chromium"})
   event.remove({ id: "farmersdelight:sweet_berry_cheesecake"})
   event.remove({ id: "farmersdelight:pie_crust"})
   event.remove({ id: "farmersdelight:integration/create/mixing/pie_crust_from_mixing"})
   event.remove({ id: `/^woodencog:heated_mixing\/food\/jams\/*._4/`})
   event.remove({ id: `/^woodencog:heated_mixing\/food\/jams\/*._3/`})
   event.remove({ id: "farmersdelight:cutting/saddle"})
-  event.remove({ id: "minecraft:nuclearcraft_iridium_dust"})
-  event.remove({ id: "nuclearcraft:blast_iridium_dust"})
-  event.remove({ id: "nuclearcraft:rock_crusher/purpur_block"})
-
-  event.remove({ id: "nuclearcraft:actuator"})
-  event.remove({ id: "nuclearcraft:chassis"})
-  event.remove({ id: "nuclearcraft:motor"})
-  event.remove({ id: "nuclearcraft:coil_copper"})
-  event.remove({ id: "nuclearcraft:plate_basic"})
-  event.remove({ id: "nuclearcraft:plate_basic2"})
-  event.remove({ id: "minecraft:nuclearcraft_hsla_steel_dust"})
-  event.remove({ id: "nuclearcraft:rock_crusher/granite"})
-  event.remove({ id: "minecraft:nuclearcraft_tungsten_dust"})
-
-  event.remove({ id: "nuclearcraft:alloy_smelter/ingots_iron-ingots_carbon_manganese"})
-  event.remove({ id: "nuclearcraft:alloy_smelter/dusts_iron-dusts_carbon_manganese"})
   event.remove({ id: "dfc:crafting/alt_fire_clay"})
 
   event.remove({ id: "immersivegeology:crafting/get_ingot_from_iron_nuggets"})
@@ -694,6 +664,5 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: /^immersivegeology:crafting\/.*_with_work_hammer/})
   event.remove({ id: /^immersivegeology:crafting\/.*_with_bronze_hammer/})
-  event.remove({ id: "nuclearcraft:rock_crusher/purpur_block"})
 
 }

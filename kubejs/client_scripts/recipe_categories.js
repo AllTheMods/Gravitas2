@@ -182,6 +182,7 @@ const recipeCategories = {
     immersiveengineering_sawmill: "immersiveengineering:sawmill",
     immersiveengineering_squeezer: "immersiveengineering:squeezer",
     tfc_pumpkin_knapping: "tfc:pumpkin_knapping",
+    nuclearcraft_melter: "nuclearcraft:melter",
     thoriumreactors_thorium_crafting: "thoriumreactors:thorium_crafting",
     minecraft_firedragonforge: "minecraft:firedragonforge",
     minecraft_icedragonforge: "minecraft:icedragonforge",
