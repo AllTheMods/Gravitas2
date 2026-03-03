@@ -23,5 +23,7 @@ let hideCats = (event) => {
 
    event.remove(recipeCategories.gtceu_mega_fusion_reactor)
 
+   event.remove(recipeCategories.nuclearcraft_melter)
+
    event.remove(recipeCategories.minecraft_anvil)
 }

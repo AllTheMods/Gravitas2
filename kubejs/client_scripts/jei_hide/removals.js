@@ -226,6 +226,9 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     global.fluidsWithBucketsToRemove.forEach(item => event.hide(item + "_bucket"))
 
     event.hide('/^createdeco:.*_coin.*/')
+
+    // NuclearCraft machines replaced by GT equivalents
+    event.hide('nuclearcraft:melter')
 }
 
 
