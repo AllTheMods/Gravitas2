@@ -47,15 +47,6 @@ var NC_PR_AUTOCLAVE_DURATION = 1200
 var NC_PR_OTHER_EUT      = 2    // matches GT's default compressor
 var NC_PR_OTHER_DURATION = 300
 
-// High-tier plate EUt overrides (recipe path segment → EUt for all plate machines)
-var NC_PR_PLATE_EUT_OVERRIDES = {
-  "ingots_tough_alloy":      MV,   // 128 EU/t
-  "ingots_hard_carbon":      MV,   // 128 EU/t
-  "netherite_ingot":         HV,   // 512 EU/t
-  "ingots_extreme":          HV,   // 512 EU/t
-  "ingots_thermoconducting": HV,   // 512 EU/t
-}
-
 // --- Skip list ---------------------------------------------------------------
 
 var NC_PR_SKIP_IDS = [
@@ -135,37 +126,30 @@ var ncPressurizer = (/** @type {Internal.RecipesEventJS} */ event) => {
           skipped++; return
         }
 
-        // Apply high-tier EUt override if this recipe is in the override map
-        var plateEutOverride = NC_PR_PLATE_EUT_OVERRIDES[recPathSeg] || null
-        var benderEut    = plateEutOverride || NC_PR_BENDER_EUT
-        var extruderEut  = plateEutOverride || NC_PR_EXTRUDER_PLATE_EUT
-        var fhEut        = plateEutOverride || NC_PR_FORGE_HAMMER_EUT
-        var solidifierEut = plateEutOverride || NC_PR_SOLIDIFIER_PLATE_EUT
-
         event.recipes.gtceu.bender(ncPrSanitizeId(recipe.id, "bender"))
           .itemInputs(inputStr).circuit(1)
-          .itemOutputs(outputId).EUt(benderEut).duration(NC_PR_BENDER_DURATION)
+          .itemOutputs(outputId).EUt(NC_PR_BENDER_EUT).duration(NC_PR_BENDER_DURATION)
 
         event.recipes.gtceu.extruder(ncPrSanitizeId(recipe.id, "extruder"))
           .itemInputs(inputStr).notConsumable("gtceu:plate_extruder_mold")
-          .itemOutputs(outputId).EUt(extruderEut).duration(NC_PR_EXTRUDER_PLATE_DURATION)
+          .itemOutputs(outputId).EUt(NC_PR_EXTRUDER_PLATE_EUT).duration(NC_PR_EXTRUDER_PLATE_DURATION)
 
         var fhPlateInput = { tag: inputEntry.tag, item: inputEntry.item, count: (inputEntry.count || 1) * 3 }
         event.recipes.gtceu.forge_hammer(ncPrSanitizeId(recipe.id, "forge_hammer"))
           .itemInputs(ncPrInputString(fhPlateInput))
-          .itemOutputs("2x " + outputId).EUt(fhEut).duration(NC_PR_FORGE_HAMMER_DURATION)
+          .itemOutputs("2x " + outputId).EUt(NC_PR_FORGE_HAMMER_EUT).duration(NC_PR_FORGE_HAMMER_DURATION)
 
         event.recipes.create.pressing(outputId, inputStr).id(ncPrSanitizeId(recipe.id, "pressing"))
 
         converted++
 
-        try {
-          var plateFluid = ncPrFluidForMaterial(material, outputNs)
+        var plateFluid = ncPrFluidForMaterial(material, outputNs)
+        if ($ForgeRegistries.FLUIDS.containsKey(new $ResourceLocation(String(plateFluid)))) {
           event.recipes.gtceu.fluid_solidifier(ncPrSanitizeId(recipe.id, "solidifier"))
             .notConsumable("gtceu:plate_casting_mold")
             .inputFluids(plateFluid + " 144")
-            .itemOutputs(outputId).EUt(solidifierEut).duration(NC_PR_SOLIDIFIER_PLATE_DURATION)
-        } catch (e) { /* fluid may not exist for this material */ }
+            .itemOutputs(outputId).EUt(NC_PR_SOLIDIFIER_PLATE_EUT).duration(NC_PR_SOLIDIFIER_PLATE_DURATION)
+        }
 
       } else if (outputPath.endsWith("_block")) {
 
@@ -201,11 +185,11 @@ var ncPressurizer = (/** @type {Internal.RecipesEventJS} */ event) => {
 
         converted++
 
-        try {
-          // NC block IDs omit underscore before isotope number (e.g. californium250_block)
-          // but fluid/item IDs include it (e.g. nuclearcraft:californium_250)
-          var blockMaterial = String(ncPrMaterialFrom(outputId, "_block")).replace(/([a-z])(\d+)$/, "$1_$2")
-          var blockFluid = ncPrFluidForMaterial(blockMaterial, outputNs)
+        // NC block IDs omit underscore before isotope number (e.g. californium250_block)
+        // but fluid/item IDs include it (e.g. nuclearcraft:californium_250)
+        var blockMaterial = String(ncPrMaterialFrom(outputId, "_block")).replace(/([a-z])(\d+)$/, "$1_$2")
+        var blockFluid = ncPrFluidForMaterial(blockMaterial, outputNs)
+        if ($ForgeRegistries.FLUIDS.containsKey(new $ResourceLocation(String(blockFluid)))) {
           event.recipes.gtceu.extractor(ncPrSanitizeId(recipe.id, "extractor"))
             .itemInputs(outputId)
             .outputFluids(blockFluid + " 1296")
@@ -214,7 +198,7 @@ var ncPressurizer = (/** @type {Internal.RecipesEventJS} */ event) => {
             .notConsumable("gtceu:block_casting_mold")
             .inputFluids(blockFluid + " 1296")
             .itemOutputs(outputId).EUt(NC_PR_SOLIDIFIER_BLOCK_EUT).duration(NC_PR_SOLIDIFIER_BLOCK_DURATION)
-        } catch (e) { /* fluid may not exist for this material */ }
+        }
 
       } else if (outputPath.endsWith("_gem")) {
         // --- Gem recipes ---
