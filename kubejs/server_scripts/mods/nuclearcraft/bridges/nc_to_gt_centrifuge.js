@@ -28,6 +28,9 @@ const NC_CENT_FLUID_SCALE = 144 / 90  // NC ingot = 90 mB, GT ingot = 144 mB
 const NC_CENT_EXCLUDED_PATHS = {
   carbon_dioxide: true,  // excluded by user
   uranium:        true,  // manual recipe with corrected ratios
+  // Integration with some mod we aren't using
+  fissile_fuel:   true,
+  nuclear_waste:  true,
 }
 
 // --- Helpers -----------------------------------------------------------------
