@@ -14,6 +14,7 @@ ServerEvents.recipes((event) => {
   recipesTFCGlassblowingLenses(event)
   gtceuAdd(event)
   ncBridges(event)
+  ncRecipesAdd(event)
   createAdd(event)
   centrifugeAdd(event)
   tfcRecipesAdd(event)

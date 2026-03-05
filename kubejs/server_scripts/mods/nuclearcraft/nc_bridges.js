@@ -11,4 +11,5 @@ let ncBridges = (/** @type {Internal.RecipesEventJS} */ event) => {
   ncManufactoryToGtMacerator(event)
   ncFluidEnricherToGtMixer(event)
   ncCrystallizerToGtCentrifuge(event)
+  ncCentrifugeToGtCentrifuge(event)
 }

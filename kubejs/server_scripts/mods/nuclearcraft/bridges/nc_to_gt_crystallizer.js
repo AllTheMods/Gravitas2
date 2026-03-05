@@ -95,7 +95,7 @@ let ncCrystallizerToGtCentrifuge = (/** @type {Internal.RecipesEventJS} */ event
     var ncPath = String(recipe.id).replace("nuclearcraft:crystallizer/", "")
 
     if (ncPath.indexOf("slurry") >= 0) {
-      slurrySkipped++
+      skipped++
       return
     }
 
@@ -167,6 +167,6 @@ let ncCrystallizerToGtCentrifuge = (/** @type {Internal.RecipesEventJS} */ event
   })
 
   console.log(
-    `[NC→GT] Crystallizer: ${converted} converted, ${slurrySkipped} slurry-skipped, ${excluded} excluded, ${skipped} skipped`
+    `[NC→GT] Crystallizer: ${converted} converted, ${excluded} excluded, ${skipped} skipped`
   )
 }
