@@ -63,9 +63,8 @@ const chestBanList = [
   "minecraft:iron_nugget",
   "minecraft:powder_snow_bucket",
   "minecraft:soul_torch",
-  "minecraft:enchanting_table",
-  "gtceu:zero_point_module",
-  "sgjourney:zero_point_module"
+  "minecraft:enchanting_table"
+
 ]
 
 const chestReplacementMap = {
