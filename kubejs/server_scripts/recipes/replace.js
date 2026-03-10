@@ -381,6 +381,7 @@ event.replaceInput(
   event.replaceInput({ id: "advanced_ae:quantum_chest"}, "minecraft:netherite_chestplate", "gtceu:titanium_chestplate")
   event.replaceInput({ id: "advanced_ae:quantum_leggings"}, "minecraft:netherite_leggings", "gtceu:titanium_leggings")
   event.replaceInput({ id: "advanced_ae:quantum_boots"}, "minecraft:netherite_boots", "gtceu:titanium_boots")
-
+  
+  event.replaceInput({ input: "minecraft:carrot" }, "minecraft:carrot", "tfc:carrot")
 }
 
