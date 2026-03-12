@@ -32,6 +32,8 @@ var ig_gt_ores = [
   { ig: "scheelite",    gt: "scheelite"        },
   { ig: "ilmenite",     gt: "ilmenite"         },
   { ig: "chalcocite",   gt: "chalcocite"       },
+  { ig: "apatite",      gt: "apatite"          },
+  { ig: "monazite",     gt: "monazite"         },
 ]
 
 let addIgGtConversions = (/** @type {Internal.RecipesEventJS} */ event) => {
@@ -77,6 +79,17 @@ let addIgGtConversions = (/** @type {Internal.RecipesEventJS} */ event) => {
       input: { item: gt_raw },
       result: { item: ig_dirty, count: 2 },
       secondaries: [{ chance: 0.1, output: { item: ig_dirty } }],
+      time: 100,
+    })
+
+    // GT → IG: Gravity Separator (water wash) — unlocks TFC ore → IG pipeline
+    event.custom({
+      type: "immersivegeology:gravity_separator",
+      input: { item: "gtceu:crushed_" + ore.gt + "_ore" },
+      result: { item: "immersivegeology:crushed_ore_" + ore.ig },
+      byproduct: { item: "gtceu:stone_dust" },
+      byproduct_chance: 0.33,
+      water: 100,
       time: 100,
     })
   })

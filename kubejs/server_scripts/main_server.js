@@ -27,6 +27,7 @@ ServerEvents.recipes((event) => {
   wiresAdd(event)
   addOreConversions(event)
   addIgGtConversions(event)
+  igGravitySeparator(event)
   igRefractoryChain(event)
   create_new_age(event)
   createMaterialProcessingAdd(event)
