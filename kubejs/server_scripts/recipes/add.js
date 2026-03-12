@@ -394,11 +394,6 @@ const gtMetalReplaceMap = {
   "create:golden_sheet": "gtceu:gold_plate",
   "create:zinc_ingot": "gtceu:zinc_ingot",
   "createaddition:zinc_sheet": "gtceu:zinc_plate",
-  "immersiveengineering:ingot_aluminum": "gtceu:aluminium_ingot",
-  "immersiveengineering:ingot_lead": "gtceu:lead_ingot",
-  "immersiveengineering:ingot_nickel": "gtceu:nickel_ingot",
-  "immersiveengineering:plate_lead": "gtceu:lead_plate",
-  "immersiveengineering:plate_nickel": "gtceu:nickel_plate",
   "railcraft:brass_plate": "gtceu:brass_plate",
   "railcraft:bronze_ingot": "gtceu:bronze_ingot",
   "railcraft:gold_plate": "gtceu:gold_plate",
@@ -632,11 +627,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "#forge:double_sheets/any_bronze"
   })
 
-  shaped("4x immersiveengineering:wirecoil_structure_steel", [" C ", "CSC", " C "], {
-    C: "#forge:wires/steel",
-    S: "#forge:rods/wooden"
-  })
-	
   event.custom({
     type: "tfc:glassworking",
     operations: ["blow", "blow", "roll", "pinch", "saw"],
@@ -1686,26 +1676,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     T: "gtceu:lv_super_tank",
     f: "gtceu:lv_field_generator"
   })
-  //ImmersiveEngineering
-  shaped("immersiveengineering:wirecutter", ["k k", " b ", "s s"], {
-    k: "tfc:metal/knife_blade/wrought_iron",
-    b: "gtceu:brass_screw",
-    s: "#forge:rods/invar"
-  })
-  shaped("immersiveengineering:craftingtable", ["ppp", "rfr", "rwr"], {
-    p: "#forge:treated_wood",
-    r: "#forge:rods/treated_wood",
-    f: "#forge:frames/treated_wood",
-    w: "#tfc:workbenches"
-  })
-  shaped("immersiveengineering:workbench", [" dq", "pff", "crf"], {
-    q: "#forge:feathers",
-    d: "#forge:dyes/black",
-    p: "#forge:plates/wrought_iron",
-    r: "#forge:rods/treated_wood",
-    f: "#forge:frames/treated_wood",
-    c: "immersiveengineering:craftingtable"
-  })
   shaped("railcraft:wooden_tie", ["   ", "ppp", "   "], {
     p: "gregitas:creosote_treated_lumber"
   })
@@ -2067,9 +2037,6 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   for (const [item, replacement] of Object.entries(gtMetalReplaceMap)) {
     event.shapeless(replacement, [item])
   }
-  event.shapeless("immersiveengineering:storage_steel", "gtceu:steel_block")
-  event.shapeless("gtceu:steel_block", "immersiveengineering:storage_steel")
-
   /* Railways Smokestacks */ {
     event.stonecutting("3x railways:smokestack_caboosestyle", "#tfc:lamps")
     event.stonecutting("3x railways:smokestack_long", "#tfc:lamps")

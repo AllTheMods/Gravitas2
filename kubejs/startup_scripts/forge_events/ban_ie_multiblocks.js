@@ -8,6 +8,7 @@ const banIEMultiblocks = (event) => {
             "multiblocks/crusher",
             "multiblocks/silo",
             "multiblocks/sheetmetal_tank",
+            "multiblocks/refinery",
         ],
         "advancedtfctech" : [
             "multiblocks/grist_mill",

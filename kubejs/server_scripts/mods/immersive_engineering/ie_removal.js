@@ -53,4 +53,6 @@ let ieRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   // IE Crusher: c:raw_materials/* → dust conflicts with IG↔GT raw ore conversion
   event.remove({ id: /^immersiveengineering:crusher\/raw_ore_.*/ })
+
+  event.remove({ id: "immersiveengineering:refinery/biodiesel" })
 }
