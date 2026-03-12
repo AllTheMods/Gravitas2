@@ -5,11 +5,10 @@ function igFluidOutputFix(event) {
     "immersivegeology:fluid_hydrochloric_acid": "gtceu:hydrochloric_acid",
     "immersivegeology:fluid_sulfuric_acid":     "gtceu:sulfuric_acid",
     "immersivegeology:fluid_nitric_acid":       "gtceu:nitric_acid",
-    "immersivegeology:fluid_sodium_hydroxide":  "gtceu:sodium_hydroxide",
-    "immersivegeology:fluid_hydrofluoric_acid":  "gtceu:hydrofluoric_acid",
+    "immersivegeology:fluid_hydrofluoric_acid": "gtceu:hydrofluoric_acid",
     "immersivegeology:fluid_ammonia_solution":  "gtceu:ammonia",
-    "immersivegeology:fluid_phosphoric_acid":  "gtceu:phosphoric_acid",
-    "immersivegeology:fluid_aqua_regia":  "gtceu:aqua_regia",
+    "immersivegeology:fluid_phosphoric_acid":   "gtceu:phosphoric_acid",
+    "immersivegeology:fluid_aqua_regia":        "gtceu:aqua_regia",
   }
 
   function fixFluidOutput(recipeType, fluidField) {
@@ -28,6 +27,5 @@ function igFluidOutputFix(event) {
   fixFluidOutput("immersivegeology:crystallizer",           "fluidResult")
   fixFluidOutput("immersivegeology:chemical_reactor",       "fluidResult")
   fixFluidOutput("immersivegeology:small_chemical_reactor", "fluidResult")
-  fixFluidOutput("immersiveengineering:mixer",              "result")
   fixFluidOutput("immersiveengineering:refinery",           "result")
 }

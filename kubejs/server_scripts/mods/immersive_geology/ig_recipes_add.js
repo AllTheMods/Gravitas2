@@ -5,4 +5,5 @@ var igRecipesAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   igGravitySeparator(event)
   igRefractoryChain(event)
   igFluidOutputFix(event)
+  igMixerBridge(event)
 }

@@ -55,11 +55,7 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide("immersiveengineering:slab_cokebrick")
     event.hide("immersiveengineering:alloybrick")
     event.hide("immersiveengineering:slab_alloybrick")
-    event.hide("immersiveengineering:blastbrick")
-    event.hide("immersiveengineering:blastbrick_reinforced")
     event.hide("immersiveengineering:blastfurnace_preheater")
-    event.hide("immersiveengineering:slab_blastbrick")
-    event.hide("immersiveengineering:slab_blastbrick_reinforced")
     event.hide("immersiveengineering:fertilizer")
     event.hide("immersiveengineering:cloche")
     event.hide("immersiveengineering:waterwheel_segment")
@@ -78,6 +74,8 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     event.hide('immersiveengineering:arc_furnace')
     event.hide('immersiveengineering:blast_furnace')
+    event.hide('immersiveengineering:advanced_blast_furnace')
+    event.hide('immersiveengineering:mixer')
     event.hide('immersivegeology:bloomery')
 
     //ID

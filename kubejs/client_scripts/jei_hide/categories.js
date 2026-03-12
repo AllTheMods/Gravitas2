@@ -3,6 +3,7 @@
 let hideCats = (event) => {
    event.remove(recipeCategories.immersiveengineering_alloy)
    event.remove(recipeCategories.immersiveengineering_arc_furnace)
+   event.remove(recipeCategories.immersiveengineering_mixer)
    event.remove(recipeCategories.immersiveengineering_blast_furnace)
    event.remove(recipeCategories.immersiveengineering_blast_furnace_fuel)
    event.remove(recipeCategories.immersiveengineering_bottling_machine)

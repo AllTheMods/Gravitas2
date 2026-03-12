@@ -169,6 +169,7 @@ const recipeCategories = {
     gtceu_ore_vein_diagram: "gtceu:ore_vein_diagram",
     immersiveengineering_alloy: "immersiveengineering:alloy",
     immersiveengineering_arc_furnace: "immersiveengineering:arc_furnace",
+    immersiveengineering_mixer: "immersiveengineering:mixer",
     immersiveengineering_blast_furnace: "immersiveengineering:blast_furnace",
     immersiveengineering_blast_furnace_fuel: "immersiveengineering:blast_furnace_fuel",
     immersiveengineering_blueprint: "immersiveengineering:blueprint",

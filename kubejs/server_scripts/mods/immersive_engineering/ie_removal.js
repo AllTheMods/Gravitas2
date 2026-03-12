@@ -3,11 +3,7 @@
 let ieRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick" })
-  // event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick" })
-  // event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick_reinforced" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastfurnace_preheater" })
-  // event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick" })
-  // event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick_reinforced" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:fertilizer" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cloche" })
   event.remove({ mod: "immersiveengineering", output: "immersiveengineering:waterwheel_segment" })
