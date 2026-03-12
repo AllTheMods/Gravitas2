@@ -5,7 +5,9 @@ const banIEMultiblocks = (event) => {
             "multiblocks/fermenter",
             "multiblocks/mixer",
             "multiblocks/squeezer",
-            "multiblocks/crusher"
+            "multiblocks/crusher",
+            "multiblocks/silo",
+            "multiblocks/sheetmetal_tank",
         ],
         "advancedtfctech" : [
             "multiblocks/grist_mill",
@@ -17,13 +19,11 @@ const banIEMultiblocks = (event) => {
         "immersivegeology" : [
             "multiblocks/alternator",
             "multiblocks/ballmill",
-            "multiblocks/bloomery",
             "multiblocks/centrifuge",
             "multiblocks/chemical_reactor",
             "multiblocks/coredrill",
             "multiblocks/crystallizer",
-            "multiblocks/foundry",
-            "multiblocks/geothermal_exchanger",
+            // "multiblocks/geothermal_exchanger",
             "multiblocks/gravity_separator",
             "multiblocks/pelletizer",
             "multiblocks/reverberation_furnace",

@@ -2,6 +2,8 @@
 
 ServerEvents.recipes((event) => {
   recipeRemoval(event)
+  ieRecipesRemoval(event)
+  igRecipesRemoval(event)
   dfcRecipesRemoval(event)
   ncRecipesRemoval(event)
   replaceRecipes(event)
@@ -24,6 +26,8 @@ ServerEvents.recipes((event) => {
   viSulfuricAcid(event)
   wiresAdd(event)
   addOreConversions(event)
+  addIgGtConversions(event)
+  igRefractoryChain(event)
   create_new_age(event)
   createMaterialProcessingAdd(event)
   coilingTweak(event)

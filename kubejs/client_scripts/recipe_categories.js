@@ -230,5 +230,6 @@ const recipeCategories = {
     scguns_macerating: "scguns:macerating",
     scguns_mechanical_pressing: "scguns:mechanical_pressing",
     scguns_powered_macerating: "scguns:powered_macerating",
-    scguns_powered_mechanical_pressing: "scguns:powered_mechanical_pressing"
+    scguns_powered_mechanical_pressing: "scguns:powered_mechanical_pressing",
+    immersivegeology_bloomery: "immersivegeology:bloomery"
 }

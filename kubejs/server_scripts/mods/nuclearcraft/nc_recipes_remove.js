@@ -37,4 +37,6 @@ let ncRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:nuclearcraft_iridium_dust" })
   event.remove({ id: "minecraft:nuclearcraft_hsla_steel_dust" })
   event.remove({ id: "minecraft:nuclearcraft_tungsten_dust" })
+    
+  event.remove({ id: "nuclearcraft:blast_tungsten_dust" })
 }
