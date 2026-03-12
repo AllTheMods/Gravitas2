@@ -158,6 +158,13 @@ let addGenericData = (/** @type {Internal.DataPackEventJS} */ event) => {
     addTFCItemHeatsItem('igneous_alloy_dust', 'gregitas_core:igneous_alloy_dust', 4.762, 4.762, 4.762)
     addTFCItemHeatsItem('pebbles', 'scguns:pebbles', 1.0, 1.0, 1.0)
     addTFCItemHeatsItem('seaweed', 'tfc:groundcover/seaweed', 1.0, 1.0, 1.0)   
+  
+
+  global.immGeoOres.forEach((ore) => {
+    addTFCItemHeatsItem(`poor_${ore.ore}`, `immersivegeology:poor_ore_${ore.ore}`, global.immGeoOresCap[ore.ore], 1.0, 1.0)
+    addTFCItemHeatsItem(`normal_${ore.ore}`, `immersivegeology:normal_ore_${ore.ore}`, global.immGeoOresCap[ore.ore], 1.0, 1.0)
+    addTFCItemHeatsItem(`rich_${ore.ore}`, `immersivegeology:rich_ore_${ore.ore}`, global.immGeoOresCap[ore.ore], 1.0, 1.0)
+  })
 
     let addTFCKnappingTypes = (id, tag, count, sound, consume_after, disabled_texture, particles, icon_item) => {
         let json = JsonIO.toObject(

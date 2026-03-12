@@ -1,0 +1,6 @@
+
+[general]
+	#
+	# Enable autoplanting of seeds from your offhand and hotbar when tilling soil.
+	enableHoeAutoplanting = false
+

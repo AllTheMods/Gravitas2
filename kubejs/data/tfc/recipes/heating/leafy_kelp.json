@@ -1,0 +1,10 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfc:plant/leafy_kelp"
+  },
+  "result_item": {
+    "item": "tfc:food/dried_kelp"
+  },
+  "temperature": 200
+}

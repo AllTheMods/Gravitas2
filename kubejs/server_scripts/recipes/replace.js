@@ -381,7 +381,23 @@ event.replaceInput(
   event.replaceInput({ id: "advanced_ae:quantum_chest"}, "minecraft:netherite_chestplate", "gtceu:titanium_chestplate")
   event.replaceInput({ id: "advanced_ae:quantum_leggings"}, "minecraft:netherite_leggings", "gtceu:titanium_leggings")
   event.replaceInput({ id: "advanced_ae:quantum_boots"}, "minecraft:netherite_boots", "gtceu:titanium_boots")
+
   
   event.replaceInput({ input: "minecraft:carrot" }, "minecraft:carrot", "tfc:carrot")
+
+
+  event.replaceInput({ id: "simpleradio:spuddie_talkie"}, "minecraft:potato", "tfc:food/potato")
+  event.replaceInput({ id: "simpleradio:spuddie_talkie"}, "minecraft:iron_ingot", "minecraft:repeater")
+  event.replaceInput({ id: "simpleradio:spuddie_talkie"}, "simpleradio:copper_wire", "gtceu:fine_copper_wire")
+  event.replaceInput({ mod: "hangglider"}, "minecraft:iron_ingot", "#forge:ingots/aluminium")
+  event.replaceInput({ id: "nuclearcraft:manufactory/sugar_cane"}, "minecraft:sugar_cane", "gtceu:bio_chaff")
+      //trackwork
+  event.replaceInput({ id: "trackwork:simple_wheel_part" }, "minecraft:dried_kelp", "gtceu:rubber_plate")
+  
+  //VS ClockWork
+  event.replaceInput({ id: "vs_clockwork:crafting/physics/physics_infuser" }, "vs_clockwork:wanderlite_matrix", "gtceu:lv_field_generator")
+  event.replaceInput({ id: "vs_clockwork:crafting/wanderwand" }, "vs_clockwork:wanderlite_matrix", "gtceu:lv_field_generator")
+  event.replaceInput({ id: "vs_clockwork:mechanical_crafting/gravitron" }, "vs_clockwork:wanderlite_matrix", "gtceu:lv_field_generator")
+
 }
 

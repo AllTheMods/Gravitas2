@@ -444,9 +444,36 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
   event.create("gregitas:packaged_greenhouse").modelJson(pkgJson)
   event.create("gregitas:cane_pulp").texture("gtceu:item/material_sets/dull/dust").color(0, 0xdc6f51)
   event.create("gregitas:triuranium_octoxide").texture("kubejs:item/triuranium_octoxide")
+  event.create("gregitas:lead_carbide_ingot").displayName("Lead Carbide Ingot").texture("kubejs:item/lead_carbide_ingot")
+  event.create("gregitas:lead_carbide_dust").displayName("Lead Carbide Dust").texture("gtceu:item/material_sets/dull/dust").color(0, 0x686264)
 
   event.create("gregitas:crushed_crackle").texture("kubejs:item/triuranium_octoxide").color(0, 0x555555)
   event.create("gregitas:crushed_char").texture("kubejs:item/triuranium_octoxide").color(0, 0x111111)
   event.create("gregitas:crushed_frostburn").texture("kubejs:item/triuranium_octoxide").color(0, 0xFFFFFF)
+
+  // DFC custom items
+  event.create("gregitas:terracotta_tile")
+    .displayName("Terracotta Tile")
+    .texture("kubejs:item/terracotta_tile")
+
+  event.create("gregitas:terracotta_brick")
+    .displayName("Terracotta Brick")
+    .texture("kubejs:item/terracotta_brick")
+
+  event.create("gregitas:terracotta_shingle")
+    .displayName("Terracotta Shingle")
+    .texture("kubejs:item/terracotta_shingle")
+
+  // Leaded glass dust for GT-DFC integration
+  event.create("gregitas:leaded_glass_dust")
+    .displayName("Leaded Glass Dust")
+    .texture("gtceu:item/material_sets/dull/dust")
+    .color(0, 0x938e98)
+
+  // Pewter dust for GT-DFC integration
+  event.create("gregitas:pewter_dust")
+    .displayName("Pewter Dust")
+    .texture("gtceu:item/material_sets/dull/dust")
+    .color(0, 0xd3d4bf)
 
 }

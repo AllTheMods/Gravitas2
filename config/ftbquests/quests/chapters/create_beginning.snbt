@@ -208,19 +208,8 @@
 			description: ["{gravitas.quest.igneous.desc.mechanical_press}"]
 			id: "7B7C7F707BD90FF3"
 			rewards: [{
-				count: 2
-				id: "0DB69532D7CB3A58"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:food": {
-							creationDate: 4854000L
-							traits: [ ]
-						}
-					}
-					id: "tfc:food/sugarcane"
-				}
-				random_bonus: 2
+				id: "32901C68ABFE7731"
+				item: "minecraft:paper"
 				type: "item"
 			}]
 			tasks: [{

@@ -249,16 +249,18 @@
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
+			icon: "advancedtfctech:beamhouse"
 			id: "376F1F47067E2622"
 			tasks: [{
 				icon: "advancedtfctech:beamhouse"
 				id: "67986CF20EE499BB"
 				observe_type: 0
 				timer: 0L
-				title: "{gravitas.quest.steel.metal_press}"
+				title: "{gravitas.quest.steel.beamhouse}"
 				to_observe: "advancedtfctech:beamhouse"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.beamhouse}"
 			x: 6.0d
 			y: -1.5d
 		}
@@ -296,16 +298,18 @@
 		}
 		{
 			dependencies: ["3047ACD6E16944B8"]
+			icon: "advancedtfctech:grist_mill"
 			id: "04927E70A3D89ADD"
 			tasks: [{
 				icon: "advancedtfctech:grist_mill"
 				id: "6BBEC58C850E2FB4"
 				observe_type: 0
 				timer: 0L
-				title: "{gravitas.quest.steel.fermenter}"
+				title: "{gravitas.quest.steel.grist_mill}"
 				to_observe: "advancedtfctech:grist_mill"
 				type: "observation"
 			}]
+			title: "{gravitas.quest.steel.grist_mill}"
 			x: 6.0d
 			y: 1.5d
 		}
@@ -349,3 +353,4 @@
 	]
 	title: "{gravitas.chapters.4.title}"
 }
+

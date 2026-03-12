@@ -320,7 +320,7 @@ machines:
 
     # The max temperature of the Large Bronze Boiler.
     # Default: 800
-    bronzeBoilerMaxTemperature: 800
+    bronzeBoilerMaxTemperature: 200
 
     # The heat speed of the Large Bronze Boiler.
     # Default: 1
@@ -328,7 +328,7 @@ machines:
 
     # The max temperature of the Large Steel Boiler.
     # Default: 1800
-    steelBoilerMaxTemperature: 1800
+    steelBoilerMaxTemperature: 900
 
     # The heat speed of the Large Steel Boiler.
     # Default: 1
@@ -336,7 +336,7 @@ machines:
 
     # The max temperature of the Large Titanium Boiler.
     # Default: 3200
-    titaniumBoilerMaxTemperature: 3200
+    titaniumBoilerMaxTemperature: 2400
 
     # The heat speed of the Large Titanium Boiler.
     # Default: 1

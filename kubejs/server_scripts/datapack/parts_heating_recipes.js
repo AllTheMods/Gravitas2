@@ -1,4 +1,103 @@
 // priority 10
+
+// Metal name = GT name for easy part discovery.
+// Properties found in mods' jar files. Heat cap per mb based on heat cap of ingot / 144.
+// GTCEu metals that are added are those for which the ingot already had a heating recipe.
+let metals = [
+	// Base Metals
+	// // MC|TFC
+	{metal:"iron",									heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
+	{metal:"cast_iron",								heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						},
+	{metal:"wrought_iron",							heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
+	{metal:"gold",									heatCap:0.0116,			meltTemp:1060,	fluidId:"tfc:metal/gold"							},
+	{metal:"copper",								heatCap:0.0198,			meltTemp:1080,	fluidId:"tfc:metal/copper"							},
+	{metal:"tin",									heatCap:0.0198,			meltTemp:230,	fluidId:"tfc:metal/tin"								},
+	{metal:"bismuth",								heatCap:0.0198,			meltTemp:270,	fluidId:"tfc:metal/bismuth"							},
+	{metal:"nickel",								heatCap:0.0198,			meltTemp:1453,	fluidId:"tfc:metal/nickel"							},
+	{metal:"silver",								heatCap:0.0198,			meltTemp:961,	fluidId:"tfc:metal/silver"							},
+	{metal:"zinc",									heatCap:0.0198,			meltTemp:420,	fluidId:"tfc:metal/zinc"							},
+	// // TFC addons
+	{metal:"chromium",								heatCap:0.0331,			meltTemp:420,	fluidId:"gtceu:chromium"							},
+	{metal:"aluminium",								heatCap:0.0198,			meltTemp:650,	fluidId:"tfc_ie_addon:metal/aluminum"				},
+	{metal:"aluminum",								heatCap:0.0198,			meltTemp:650,	fluidId:"tfc_ie_addon:metal/aluminum"				}, // alias
+	{metal:"lead",									heatCap:0.0198,			meltTemp:500,	fluidId:"gtceu:lead"								},
+	// // GTCEu
+	{metal:"magnetic_iron",							heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
+	{metal:"annealed_copper",						heatCap:0.0198,			meltTemp:1080,	fluidId:"gtceu:annealed_copper"						},
+	{metal:"americium",								heatCap:0.0198,			meltTemp:1219,	fluidId:"gtceu:americium"							},
+	{metal:"antimony",								heatCap:0.0198,			meltTemp:674,	fluidId:"gtceu:antimony"							},
+	{metal:"beryllium",								heatCap:0.0198,			meltTemp:1219,	fluidId:"gtceu:beryllium"							},
+	{metal:"cobalt",								heatCap:0.0198,			meltTemp:1538,	fluidId:"gtceu:cobalt"								},
+	{metal:"darmstadtium",							heatCap:0.0198,			meltTemp:1538,	fluidId:"gtceu:darmstadtium"						},
+	{metal:"gallium",								heatCap:0.0198,			meltTemp:73,	fluidId:"gtceu:gallium"								},
+	{metal:"indium",								heatCap:0.0198,			meltTemp:200,	fluidId:"gtceu:indium"								},
+	{metal:"lanthanum",								heatCap:0.0198,			meltTemp:962,	fluidId:"gtceu:lanthanum"							},
+	{metal:"manganese",								heatCap:0.0198,			meltTemp:1289,	fluidId:"gtceu:manganese"							},
+	{metal:"neodymium",								heatCap:0.0198,			meltTemp:1067,	fluidId:"gtceu:neodymium"							},
+	{metal:"plutonium",								heatCap:0.0198,			meltTemp:683,	fluidId:"gtceu:plutonium"							},
+	{metal:"plutonium_241",							heatCap:0.0198,			meltTemp:683,	fluidId:"gtceu:plutonium_241"						},
+	{metal:"samarium",								heatCap:0.0198,			meltTemp:1115,	fluidId:"gtceu:samarium"							},
+	{metal:"thorium",								heatCap:0.0198,			meltTemp:1793,	fluidId:"gtceu:thorium"								},
+	{metal:"uranium",								heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:uranium"								},
+	{metal:"uranium_235",							heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:uranium_235"							},
+	{metal:"vanadium",								heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:vanadium"							},
+	{metal:"yttrium",								heatCap:0.0198,			meltTemp:1569,	fluidId:"gtceu:yttrium"								},
+	// Alloys
+	// // TFC
+	{metal:"bronze",								heatCap:0.0198,			meltTemp:950,	fluidId:"tfc:metal/bronze"							},
+	{metal:"bismuth_bronze",						heatCap:0.0198,			meltTemp:985,	fluidId:"tfc:metal/bismuth_bronze"					},
+	{metal:"black_bronze",							heatCap:0.0198,			meltTemp:1070,	fluidId:"tfc:metal/black_bronze"					},
+	{metal:"brass",									heatCap:0.0198,			meltTemp:930,	fluidId:"tfc:metal/brass"							},
+	{metal:"rose_gold",								heatCap:0.0198,			meltTemp:960,	fluidId:"tfc:metal/rose_gold"						},
+	{metal:"sterling_silver",						heatCap:0.0198,			meltTemp:960,	fluidId:"tfc:metal/sterling_silver"					},
+	// // TFC addons
+	{metal:"constantan",							heatCap:0.0198,			meltTemp:750,	fluidId:"tfc_ie_addon:metal/constantan"				},
+	{metal:"electrum",								heatCap:0.0198,			meltTemp:900,	fluidId:"tfc_ie_addon:metal/electrum"				},
+	// // GTCEu
+	{metal:"cupronickel",							heatCap:0.0198,			meltTemp:1312,	fluidId:"gtceu:cupronickel"							},
+	{metal:"invar",									heatCap:0.0198,			meltTemp:1686,	fluidId:"gtceu:invar"								},
+	{metal:"soldering_alloy",						heatCap:0.0198,			meltTemp:900,	fluidId:"gtceu:soldering_alloy"						},
+	{metal:"battery_alloy",							heatCap:0.0198,			meltTemp:430,	fluidId:"gtceu:battery_alloy"						},
+	{metal:"kanthal",								heatCap:0.0198,			meltTemp:1478,	fluidId:"gtceu:kanthal"								},
+	{metal:"magnalium",								heatCap:0.0198,			meltTemp:699,	fluidId:"gtceu:magnalium"							},
+	{metal:"tin_alloy",								heatCap:0.0198,			meltTemp:1028,	fluidId:"gtceu:tin_alloy"							},
+	{metal:"vanadium_gallium",						heatCap:0.0198,			meltTemp:1482,	fluidId:"gtceu:vanadium_gallium"					},
+	{metal:"gallium_arsenide",						heatCap:0.0198,			meltTemp:1281,	fluidId:"gtceu:gallium_arsenide"					},
+	{metal:"indium_gallium_phosphide",				heatCap:0.0198,			meltTemp:120,	fluidId:"gtceu:indium_gallium_phosphide"			},
+	{metal:"nickel_zinc_ferrite",					heatCap:0.0198,			meltTemp:810,	fluidId:"gtceu:nickel_zinc_ferrite"					},
+	{metal:"manganese_phosphide",					heatCap:0.0198,			meltTemp:1138,	fluidId:"gtceu:manganese_phosphide"					},
+	{metal:"magnesium_diboride",					heatCap:0.0198,			meltTemp:813,	fluidId:"gtceu:magnesium_diboride"					},
+	{metal:"mercury_barium_calcium_cuprate",		heatCap:0.0198,			meltTemp:845,	fluidId:"gtceu:mercury_barium_calcium_cuprate"		},
+	{metal:"nichrome",								heatCap:0.0198,			meltTemp:1588,	fluidId:"gtceu:nichrome"							},
+	{metal:"samarium_iron_arsenic_oxide",			heatCap:0.0198,			meltTemp:1117,	fluidId:"gtceu:samarium_iron_arsenic_oxide"			},
+	{metal:"indium_tin_barium_titanium_cuprate",	heatCap:0.0198,			meltTemp:845,	fluidId:"gtceu:indium_tin_barium_titanium_cuprate"	},
+	{metal:"cobalt_brass",							heatCap:0.0198,			meltTemp:972,	fluidId:"gtceu:cobalt_brass"						},
+	{metal:"potin",									heatCap:0.0198,			meltTemp:854,	fluidId:"gtceu:potin"								},
+	{metal:"red_alloy",								heatCap:0.0198,			meltTemp:1170,	fluidId:"gtceu:red_alloy"							},
+	{metal:"blue_alloy",							heatCap:0.0198,			meltTemp:1170,	fluidId:"gtceu:blue_alloy"							},
+	// Steels
+	// // TFC addons
+	{metal:"pig_iron",								heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/pig_iron"						},
+	{metal:"steel",									heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/steel"							},
+	{metal:"black_steel",							heatCap:0.0198,			meltTemp:1485,	fluidId:"tfc:metal/black_steel"						},
+	{metal:"red_steel",								heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/red_steel"						},
+	{metal:"blue_steel",							heatCap:0.0198,			meltTemp:1250,	fluidId:"tfc:metal/blue_steel"						},
+	{metal:"damascus_steel",						heatCap:0.0198,			meltTemp:1270,	fluidId:"gtceu:damascus_steel"						},
+	// // GTCEu
+	{metal:"stainless_steel",						heatCap:0.0198,			meltTemp:1181,	fluidId:"firmalife:metal/stainless_steel"			},
+	{metal:"vanadium_steel",						heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:vanadium_steel"						},
+	// DFC-specific metals
+	{metal:"platinum",								heatCap:0.0198,			meltTemp:1768,	fluidId:"gtceu:platinum"							},
+	{metal:"alumina",								heatCap:0.0198,			meltTemp:2072,	fluidId:"gtceu:aluminium"							},
+	{metal:"pewter",								heatCap:0.0198,			meltTemp:400,	fluidId:"dfc:metal/dfc_pewter"						}
+]
+
+// Create global metalHeatingData for use by other scripts
+global.metalHeatingData = {}
+metals.forEach(function(m) {
+	global.metalHeatingData[m.metal] = { fluid: m.fluidId, temp: m.meltTemp }
+})
+
 let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) => {
 	let addTFCHeatCapability = (item, heat, forgTemp, weldTemp) => {
 		/** @type {Internal.LinkedHashMap} */
@@ -10,7 +109,7 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 	}
 	
 	let addTFCHeatingRecipe = (item, fluid, meltTemp, amount) => {
-		/** @type {Internal.LinkedHashMap} */	
+		/** @type {Internal.LinkedHashMap} */
 		let json = JsonIO.toObject({
 			type: "tfc:heating",
 			ingredient: Ingredient.of(item).toJson(),
@@ -24,93 +123,6 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 		let itemLocation = Utils.id(item)
 		event.addJson(`tfc:recipes/heating/metal/${itemLocation.path}.json`, json)
 	}
-  
-	let metals = [ 
-		// Metal name = GT name for easy part discovery.
-		// Properties found in mods' jar files. Heat cap per mb based on heat cap of ingot / 144. 
-		// GTCEu metals that are added are those for which the ingot already had a heating recipe.
-		// Base Metals
-		// // MC|TFC
-		{metal:"iron",									heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
-		{metal:"cast_iron",								heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						},
-		{metal:"wrought_iron",							heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
-		{metal:"gold",									heatCap:0.0116,			meltTemp:1060,	fluidId:"tfc:metal/gold"							},
-		{metal:"copper",								heatCap:0.0198,			meltTemp:1080,	fluidId:"tfc:metal/copper"							},
-		{metal:"tin",									heatCap:0.0496,			meltTemp:230,	fluidId:"tfc:metal/tin"								},
-		{metal:"bismuth",								heatCap:0.0496,			meltTemp:270,	fluidId:"tfc:metal/bismuth"							},
-		{metal:"nickel",								heatCap:0.0144,			meltTemp:1453,	fluidId:"tfc:metal/nickel"							},
-		{metal:"silver",								heatCap:0.0144,			meltTemp:961,	fluidId:"tfc:metal/silver"							},
-		{metal:"zinc",									heatCap:0.0331,			meltTemp:420,	fluidId:"tfc:metal/zinc"							},
-		// // TFC addons
-		{metal:"chromium",								heatCap:0.0331,			meltTemp:420,	fluidId:"gtceu:chromium"							},
-		{metal:"aluminium",								heatCap:0.0198,			meltTemp:650,	fluidId:"tfc_ie_addon:metal/aluminum"				},
-		{metal:"lead",									heatCap:0.0198,			meltTemp:500,	fluidId:"gtceu:lead"								},
-		// // GTCEu
-		{metal:"magnetic_iron",							heatCap:0.0198,			meltTemp:1535,	fluidId:"tfc:metal/cast_iron"						}, // All iron melts to cast iron
-		{metal:"annealed_copper",						heatCap:0.0198,			meltTemp:1080,	fluidId:"gtceu:annealed_copper"						},
-		{metal:"americium",								heatCap:0.0198,			meltTemp:1219,	fluidId:"gtceu:americium"							},
-		{metal:"antimony",								heatCap:0.0198,			meltTemp:674,	fluidId:"gtceu:antimony"							},
-		{metal:"beryllium",								heatCap:0.0198,			meltTemp:1219,	fluidId:"gtceu:beryllium"							},
-		{metal:"cobalt",								heatCap:0.0198,			meltTemp:1538,	fluidId:"gtceu:cobalt"								},
-		{metal:"darmstadtium",							heatCap:0.0198,			meltTemp:1538,	fluidId:"gtceu:darmstadtium"						},
-		{metal:"gallium",								heatCap:0.0198,			meltTemp:73,	fluidId:"gtceu:gallium"								},
-		{metal:"indium",								heatCap:0.0198,			meltTemp:200,	fluidId:"gtceu:indium"								},
-		{metal:"lanthanum",								heatCap:0.0198,			meltTemp:962,	fluidId:"gtceu:lanthanum"							},
-		{metal:"manganese",								heatCap:0.0198,			meltTemp:1289,	fluidId:"gtceu:manganese"							},
-		{metal:"neodymium",								heatCap:0.0198,			meltTemp:1067,	fluidId:"gtceu:neodymium"							},
-		{metal:"plutonium",								heatCap:0.0198,			meltTemp:683,	fluidId:"gtceu:plutonium"							},
-		{metal:"plutonium_241",							heatCap:0.0198,			meltTemp:683,	fluidId:"gtceu:plutonium_241"						},
-		{metal:"samarium",								heatCap:0.0198,			meltTemp:1115,	fluidId:"gtceu:samarium"							},
-		{metal:"thorium",								heatCap:0.0198,			meltTemp:1793,	fluidId:"gtceu:thorium"								},
-		{metal:"uranium",								heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:uranium"								},
-		{metal:"uranium_235",							heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:uranium_235"							},
-		{metal:"vanadium",								heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:vanadium"							},
-		{metal:"yttrium",								heatCap:0.0198,			meltTemp:1569,	fluidId:"gtceu:yttrium"								},
-		// Alloys
-		// // TFC
-		{metal:"bronze",								heatCap:0.0198,			meltTemp:950,	fluidId:"tfc:metal/bronze"							},
-		{metal:"bismuth_bronze",						heatCap:0.0198,			meltTemp:985,	fluidId:"tfc:metal/bismuth_bronze"					},
-		{metal:"black_bronze",							heatCap:0.0198,			meltTemp:1070,	fluidId:"tfc:metal/black_bronze"					},
-		{metal:"brass",									heatCap:0.0198,			meltTemp:930,	fluidId:"tfc:metal/brass"							},
-		{metal:"rose_gold",								heatCap:0.0198,			meltTemp:960,	fluidId:"tfc:metal/rose_gold"						},
-		{metal:"sterling_silver",						heatCap:0.0198,			meltTemp:960,	fluidId:"tfc:metal/sterling_silver"					},
-		// // TFC addons
-		{metal:"constantan",							heatCap:0.0198,			meltTemp:750,	fluidId:"tfc_ie_addon:metal/constantan"				},
-		{metal:"electrum",								heatCap:0.0198,			meltTemp:900,	fluidId:"tfc_ie_addon:metal/electrum"				},
-		// // GTCEu
-		{metal:"cupronickel",							heatCap:0.0198,			meltTemp:1312,	fluidId:"gtceu:cupronickel"							},
-		{metal:"invar",									heatCap:0.0198,			meltTemp:1686,	fluidId:"gtceu:invar"								},
-		{metal:"soldering_alloy",						heatCap:0.0198,			meltTemp:900,	fluidId:"gtceu:soldering_alloy"						},
-		{metal:"battery_alloy",							heatCap:0.0198,			meltTemp:430,	fluidId:"gtceu:battery_alloy"						},
-		{metal:"kanthal",								heatCap:0.0198,			meltTemp:1478,	fluidId:"gtceu:kanthal"								},
-		{metal:"magnalium",								heatCap:0.0198,			meltTemp:699,	fluidId:"gtceu:magnalium"							},
-		{metal:"tin_alloy",								heatCap:0.0198,			meltTemp:1028,	fluidId:"gtceu:tin_alloy"							},
-		{metal:"vanadium_gallium",						heatCap:0.0198,			meltTemp:1482,	fluidId:"gtceu:vanadium_gallium"					},
-		{metal:"gallium_arsenide",						heatCap:0.0198,			meltTemp:1281,	fluidId:"gtceu:gallium_arsenide"					},
-		{metal:"indium_gallium_phosphide",				heatCap:0.0198,			meltTemp:120,	fluidId:"gtceu:indium_gallium_phosphide"			},
-		{metal:"nickel_zinc_ferrite",					heatCap:0.0198,			meltTemp:810,	fluidId:"gtceu:nickel_zinc_ferrite"					},
-		{metal:"manganese_phosphide",					heatCap:0.0198,			meltTemp:1138,	fluidId:"gtceu:manganese_phosphide"					},
-		{metal:"magnesium_diboride",					heatCap:0.0198,			meltTemp:813,	fluidId:"gtceu:magnesium_diboride"					},
-		{metal:"mercury_barium_calcium_cuprate",		heatCap:0.0198,			meltTemp:845,	fluidId:"gtceu:mercury_barium_calcium_cuprate"		},
-		{metal:"nichrome",								heatCap:0.0198,			meltTemp:1588,	fluidId:"gtceu:nichrome"							},
-		{metal:"samarium_iron_arsenic_oxide",			heatCap:0.0198,			meltTemp:1117,	fluidId:"gtceu:samarium_iron_arsenic_oxide"			},
-		{metal:"indium_tin_barium_titanium_cuprate",	heatCap:0.0198,			meltTemp:845,	fluidId:"gtceu:indium_tin_barium_titanium_cuprate"	},
-		{metal:"cobalt_brass",							heatCap:0.0198,			meltTemp:972,	fluidId:"gtceu:cobalt_brass"						},
-		{metal:"potin",									heatCap:0.0198,			meltTemp:854,	fluidId:"gtceu:potin"								},
-		{metal:"red_alloy",								heatCap:0.0198,			meltTemp:1170,	fluidId:"gtceu:red_alloy"							},
-		{metal:"blue_alloy",							heatCap:0.0198,			meltTemp:1170,	fluidId:"gtceu:blue_alloy"							},
-		// Steels
-		// // TFC addons
-		{metal:"pig_iron",								heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/pig_iron"						},
-		{metal:"steel",									heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/steel"							},
-		{metal:"black_steel",							heatCap:0.0198,			meltTemp:1485,	fluidId:"tfc:metal/black_steel"						},
-		{metal:"red_steel",								heatCap:0.0198,			meltTemp:1540,	fluidId:"tfc:metal/red_steel"						},
-		{metal:"blue_steel",							heatCap:0.0198,			meltTemp:1250,	fluidId:"tfc:metal/blue_steel"						},
-		{metal:"damascus_steel",						heatCap:0.0198,			meltTemp:1270,	fluidId:"gtceu:damascus_steel"						},
-		// // GTCEu
-		{metal:"stainless_steel",						heatCap:0.0198,			meltTemp:1181,	fluidId:"firmalife:metal/stainless_steel"						},
-		{metal:"vanadium_steel",						heatCap:0.0198,			meltTemp:1175,	fluidId:"gtceu:vanadium_steel"						}		
-	]
 
 	let partTypes = [ // Amounts based on part remelting or lowest possible cost of part type.
 		{type:"ingot",				fluidAmount:144		}, // 1 ingot
@@ -217,7 +229,7 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 			if( partHeatingDebug ){ console.info("Part not found !") }
 		}
 	}
-	
+	addTFCHeatCapability("tfc:plant/leafy_kelp", 1.0)
 	// GT metals with existing support for plates and rods. Will need to be skipped to avoid duplicate recipes.
 	let GT_metalsWithHeating = [
 		"wrought_iron", "gold", "copper", "tin", "bismuth", "nickel", "silver", "zinc",
@@ -340,7 +352,7 @@ let addTFCPartHeatingRecipes = (/** @type {Internal.DataPackEventJS} */ event) =
 			})
 		})
 	})
-	
+
 	// All the other parts:
 	let parts = [
 		// Nuggets

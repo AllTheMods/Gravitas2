@@ -965,6 +965,26 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .EUt(LV)
     .duration(80)
 
+  // === GYPSUM ORE PROCESSING ===
+
+  // Macerator: tfc:ore/gypsum → gtceu:gypsum_dust
+  // 800 EU over 20 seconds = 2 EU/t × 400 ticks
+  event.recipes.gtceu
+    .macerator('tfc_gypsum_ore_macerate')
+    .itemInputs('tfc:ore/gypsum')
+    .itemOutputs('gtceu:gypsum_dust')
+    .duration(400)
+    .EUt(2)
+
+  // Forge Hammer: tfc:ore/gypsum → gtceu:gypsum_dust
+  // 160 EU over 0.5 seconds = 16 EU/t × 10 ticks
+  event.recipes.gtceu
+    .forge_hammer('tfc_gypsum_ore_hammer')
+    .itemInputs('tfc:ore/gypsum')
+    .itemOutputs('gtceu:gypsum_dust')
+    .duration(10)
+    .EUt(16)
+
   //milk vinegar
 
   //couldnt get fluidtags/array stuff to work with fluids
@@ -1406,17 +1426,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .duration(4 * 20)
       .EUt(8)
   })
-//FLux
 
-  event.recipes.gtceu
-    .macerator("gregitas:flux_dust")
-    .itemInputs(Ingredient.of("#tfc:fluxstone", 1))
-    .itemOutputs(Item.of("tfc:powder/flux", 4))
-    .circuit(6)
-    .duration(200)
-    .EUt(LV)
-
-    
   //wireless chargers
 
   event.recipes.gtceu
@@ -1467,6 +1477,24 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(200)
     .EUt(HV)
 
+  // Brick recipes - balanced to match TFC recipe without infinite loops
+  // TFC recipe: 5 bricks + 4 mortar → 4 brick blocks
+  // Compressor saves mortar cost but maintains brick ratio
+  event.recipes.gtceu
+    .compressor("gregitas:bricks_compressor")
+    .itemInputs("5x minecraft:brick")
+    .itemOutputs("4x minecraft:bricks")
+    .duration(60)
+    .EUt(2)
+
+  // Extractor reverses the compressor recipe at 1:1 brick ratio
+  event.recipes.gtceu
+    .extractor("gregitas:bricks_extractor")
+    .itemInputs("4x minecraft:bricks")
+    .itemOutputs("5x minecraft:brick")
+    .duration(60)
+    .EUt(2)
+
     //Rock and Stone!
  
   tfcStone.forEach((stone) => {
@@ -1497,7 +1525,21 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .adjacentFluids('minecraft:water')
       .adjacentFluids('minecraft:lava')    
   })
- 
+
+  // DFC stones
+  const dfcStones = ["travertine", "blueschist", "arkose", "tuff", "serpentine"]
+
+  dfcStones.forEach((stone) => {
+    event.recipes.gtceu
+      .rock_breaker(`dfc_raw_${stone}`)
+      .notConsumable(`dfc:rock/raw/${stone}`)
+      .itemOutputs(`dfc:rock/raw/${stone}`)
+      .duration(16)
+      .EUt(LV)
+      .adjacentFluids('minecraft:water')
+      .adjacentFluids('minecraft:lava')
+  })
+
   //deepslate
  
   event.recipes.gtceu
@@ -1535,7 +1577,7 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
  
   createstoneh.forEach((createstoneh) => {
     event.recipes.gtceu
-      .rock_breaker(`raw_${createstoneh}`)
+      .rock_breaker(`create_${createstoneh}`)
       .notConsumable(`create:${createstoneh}`)
       .itemOutputs(`create:${createstoneh}`)
       .duration(16)
@@ -1577,4 +1619,29 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
       .adjacentFluids('minecraft:lava')
   })
 
+  // Remove GTCEu built-in wool chemical bath dye recipes (replaced below)
+  dfcColors.filter(c => c !== "white").forEach(function(color) {
+    event.remove({ id: `gtceu:chemical_bath/dye_wool_to_${color}` })
+  })
+  event.remove({ id: `gtceu:chemical_bath/wool_to_white` })
+  event.remove({ id: `gtceu:chemical_bath/wool_bleach` })
+
+  // Wool: chemical bath dye (any #minecraft:wool → colored) and bleach (#tfc:colored_wool → white)
+  addChemBathDye(event, {
+    idPrefix: "wool",
+    input: "#minecraft:wool",
+    coloredOutput: color => `minecraft:${color}_wool`,
+  })
+
+  // Remove GTCEu built-in terracotta chemical bath dye recipes (replaced below)
+  dfcColors.forEach(function(color) {
+    event.remove({ id: `gtceu:chemical_bath/dye_terracotta_to_${color}` })
+  })
+
+  // Terracotta: chemical bath dye (any #minecraft:terracotta → colored) and bleach (→ plain)
+  addChemBathDye(event, {
+    idPrefix: "terracotta",
+    input: "#minecraft:terracotta",
+    coloredOutput: color => `minecraft:${color}_terracotta`,
+  })
 }

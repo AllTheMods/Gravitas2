@@ -1149,9 +1149,20 @@
 			description: ["{gravitas.quest.farm.desc.yeast_bucket}"]
 			id: "12C88E77E6ED5D75"
 			tasks: [{
-				id: "43464233272AC355"
-				item: "firmalife:bucket/yeast_starter"
+				id: "523BF2D0C7E3726D"
+				item: {
+					Count: 1
+					id: "tfc:wooden_bucket"
+					tag: {
+						fluid: {
+							Amount: 1000
+							FluidName: "firmalife:yeast_starter"
+						}
+					}
+				}
+				match_nbt: true
 				type: "item"
+				weak_nbt_match: true
 			}]
 			title: "{gravitas.quest.farm.title.yeast_bucket}"
 			x: 9.0d
@@ -2864,4 +2875,5 @@
 	]
 	title: "{gravitas.chapters.7.title}"
 }
+
 

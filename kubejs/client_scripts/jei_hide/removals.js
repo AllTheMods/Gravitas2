@@ -182,11 +182,53 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     // Later unhide ender pearl + nether star block
     event.hide(`/^allthetweaks:.*/`)
 
+    // Decofirmacraft - hide redundant items
+    const dfcMetalsToHide = ["lead", "platinum", "aluminum"]
+  
+    const dfcPowdersToHide = [
+      "bismuth", "bismuth_bronze", "black_bronze", "bronze", "brass",
+      "copper", "gold", "nickel", "rose_gold", "silver", "tin", "zinc",
+      "sterling_silver", "wrought_iron", "steel", "black_steel",
+      "blue_steel", "red_steel", "aluminum", "lead", "platinum",
+      "cast_iron", "pewter"
+    ]
+  
+    const dfcColors = [
+      'white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink',
+      'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black'
+    ]
+  
+    dfcMetalsToHide.forEach((metal) => {
+      event.hide(`dfc:metal/double_ingot/${metal}`)
+      event.hide(`dfc:metal/sheet/${metal}`)
+      event.hide(`dfc:metal/double_sheet/${metal}`)
+      event.hide(`dfc:metal/rod/${metal}`)
+      event.hide(`dfc:metal/dfc_${metal}`)
+    })
+  
+    dfcPowdersToHide.forEach((metal) => {
+      event.hide(`dfc:metal/powder/${metal}`)
+    })
+  
+    dfcColors.forEach((color) => {
+      event.hide(`dfc:concrete/smooth/${color}`)
+    })
+  
+    event.hide('dfc:concrete/large_slab/plain')
+    event.hide(`/^dfc:.*alumina.*/`)
+    event.hide(`/^dfc:.*ore.*/`)
+    event.hide(`/^dfc:.*deposit.*/`)
+    event.hide(`/^dfc:plaster/smooth/terracotta.*/`)
+    event.hide(`/^dfc:plaster/pillar/terracotta.*/`)
+
     // Global remove + hides
     global.itemsToRemove.forEach(item => event.hide(item))
     global.fluidsWithBucketsToRemove.forEach(item => event.hide(item + "_bucket"))
 
     event.hide('/^createdeco:.*_coin.*/')
+
+    // NuclearCraft machines replaced by GT equivalents
+    event.hide('nuclearcraft:melter')
 }
 
 

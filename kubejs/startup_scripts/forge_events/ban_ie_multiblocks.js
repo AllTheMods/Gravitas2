@@ -4,9 +4,16 @@ const banIEMultiblocks = (event) => {
             "feedthrough",
             "multiblocks/fermenter",
             "multiblocks/mixer",
-            "multiblocks/squeezer"
+            "multiblocks/squeezer",
+            "multiblocks/crusher"
         ],
-        "advancedtfctech" : [],
+        "advancedtfctech" : [
+            "multiblocks/grist_mill",
+            "multiblocks/thresher",
+            "multiblocks/beamhouse",
+            "multiblocks/power_loom"
+
+        ],
         "immersivegeology" : [
             "multiblocks/alternator",
             "multiblocks/ballmill",

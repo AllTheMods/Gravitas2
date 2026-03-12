@@ -10,6 +10,7 @@ const toolsToRemove = [
   "blue_steel",
   "red_steel"
 ]
+
 function logRecipeCategories() {
   let categories = global.jeiRuntime.recipeManager.createRecipeCategoryLookup().get().toList()
   categories.forEach(category => {
@@ -38,6 +39,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "vintage:curving/iron_sheet"})
   event.remove({ id: "vintage:rolling/andesite_plate"})
   event.remove({ id: "vintage:pressing/andesite_alloy"})
+  event.remove({ id: "vintage:pressing/cast_iron_ingot"})
+  event.remove({ id: "vintage:rolling/cast_iron_ingot"})
   // sgjourney
   event.remove({ id: "sgjourney:temp_pure_naquadah_from_blasting" })
   event.remove({ id: "sgjourney:classic_stargate_base_block" })
@@ -54,6 +57,8 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "gtceu:shaped/stick_wrought_iron" })
   event.remove({ id: "gtceu:cutter/cut_glass_block_to_plate_water"})
   event.remove({ id: "gtceu:shaped/stick_long_stick_wrought_iron" })
+  event.remove({ id: "gtceu:compressor/bricks" })
+  event.remove({ id: "gtceu:extractor/bricks_extraction" })
   event.remove({ id: "gtceu:shaped/wire_cutter_wrought_iron" })
   event.remove({ id: "gtceu:shaped/iron_bucket" })
   event.remove({ id: "gtceu:shaped/casing_primitive_bricks"})
@@ -478,18 +483,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'wirelessredstone:redstone_receiver'}) 
   event.remove({ id: 'wirelessredstone:redstone_transmitter'})
   
-  // NuclearCraft
-  event.remove({ id: 'nuclearcraft:fission_reactor_casing'})
-  event.remove({ id: 'nuclearcraft:fission_reactor_controller'})
-  event.remove({ id: 'nuclearcraft:fission_reactor_port'})
-  event.remove({ id: 'nuclearcraft:empty_heat_sink'})
-  event.remove({ id: 'nuclearcraft:fission_reactor_solid_fuel_cell'})
-
-  event.remove({ id: 'nuclearcraft:fusion_reactor_casing'})
-  event.remove({ id: 'nuclearcraft:basic_electromagnet'})
-  event.remove({ id: 'nuclearcraft:basic_rf_amplifier'})
-  event.remove({ id: 'nuclearcraft:fusion_reactor_connector'})
-
   //more red
 
   event.remove({ id: 'morered:red_alloy_wire'}) 
@@ -658,16 +651,18 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:milling/bone"})
   event.remove({ id: "minecraft:brewing_stand"})
   event.remove({ id: "tfc_ie_addon:welding/aluminum_double_ingot"})
-  event.remove({ id: "tfc_ie_addon:crafting/metal/block/uranium"})
-  event.remove({ id: "nuclearcraft:alloy_smelter/dusts_steel-dusts_chromium"})
-  event.remove({ id: "nuclearcraft:alloy_smelter/ingots_steel-ingots_chromium"})
   event.remove({ id: "farmersdelight:sweet_berry_cheesecake"})
   event.remove({ id: "farmersdelight:pie_crust"})
   event.remove({ id: "farmersdelight:integration/create/mixing/pie_crust_from_mixing"})
   event.remove({ id: `/^woodencog:heated_mixing\/food\/jams\/*._4/`})
   event.remove({ id: `/^woodencog:heated_mixing\/food\/jams\/*._3/`})
   event.remove({ id: "farmersdelight:cutting/saddle"})
-  event.remove({ id: "minecraft:nuclearcraft_iridium_dust"})
-  event.remove({ id: "nuclearcraft:blast_iridium_dust"})
-  event.remove({ id: "nuclearcraft:rock_crusher/purpur_block"})
+  event.remove({ id: "dfc:crafting/alt_fire_clay"})
+
+  event.remove({ id: "immersivegeology:crafting/get_ingot_from_iron_nuggets"})
+  event.remove({ id: "createdieselgenerators:compression_molding/bucket"})
+
+  event.remove({ id: /^immersivegeology:crafting\/.*_with_work_hammer/})
+  event.remove({ id: /^immersivegeology:crafting\/.*_with_bronze_hammer/})
+
 }

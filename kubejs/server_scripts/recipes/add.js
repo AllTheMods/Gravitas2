@@ -632,6 +632,11 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     B: "#forge:double_sheets/any_bronze"
   })
 
+  shaped("4x immersiveengineering:wirecoil_structure_steel", [" C ", "CSC", " C "], {
+    C: "#forge:wires/steel",
+    S: "#forge:rods/wooden"
+  })
+	
   event.custom({
     type: "tfc:glassworking",
     operations: ["blow", "blow", "roll", "pinch", "saw"],
@@ -2233,26 +2238,6 @@ event.recipes.create.crushing([`2x minecraft:gray_dye`], `gtceu:stone_dust`, 250
 
   //alabaster
 
-  FluidDyes.forEach((dyes) => {
-    event.recipes.gtceu
-      .mixer(`gregitas:mixer_tfc_${dyes}_alabaster`)
-      .itemInputs(`tfc:alabaster/raw`)
-      .inputFluids(Fluid.of(`tfc:${dyes}_dye`, 25))
-      .itemOutputs(`tfc:alabaster/raw/${dyes}`)
-      .duration(40)
-      .EUt(LV)
-  })
-
-  FluidDyes.forEach((dyes) => {
-    event.recipes.gtceu
-      .mixer(`gregitas:mixer_tfc_${dyes}_alabaster_bricks`)
-      .itemInputs(`tfc:alabaster/bricks`)
-      .inputFluids(Fluid.of(`tfc:${dyes}_dye`, 25))
-      .itemOutputs(`tfc:alabaster/bricks/${dyes}`)
-      .duration(40)
-      .EUt(LV)
-  })
-
   event.recipes.gtceu
     .mixer(`gregitas:mixer_tfc_alabaster`)
     .itemInputs(`tfc:ore/gypsum`)
@@ -2260,16 +2245,6 @@ event.recipes.create.crushing([`2x minecraft:gray_dye`], `gtceu:stone_dust`, 250
     .itemOutputs(`tfc:alabaster/raw`)
     .duration(20)
     .EUt(LV)
-
-  FluidDyes.forEach((dyes) => {
-    event.recipes.gtceu
-      .mixer(`gregitas:mixer_tfc_${dyes}_alabaster_polished`)
-      .itemInputs(`tfc:alabaster/polished`)
-      .inputFluids(Fluid.of(`tfc:${dyes}_dye`, 25))
-      .itemOutputs(`tfc:alabaster/polished/${dyes}`)
-      .duration(40)
-      .EUt(LV)
-  })
 
   // TFC gem macerating
   
@@ -2605,6 +2580,126 @@ event.recipes.create.crushing([`2x minecraft:gray_dye`], `gtceu:stone_dust`, 250
 
 
   // Nuclearcraft Recipes
+
+  // Basic Materials
+
+  event.recipes.gtceu
+    .mixer("gregitas:lead_carbide_dust")
+    .itemInputs("#forge:dusts/lead", "#forge:dusts/graphite")
+    .itemOutputs("gregitas:lead_carbide_dust")
+    .duration(400)
+    .EUt(HV)
+
+  event.recipes.gtceu
+    .electric_blast_furnace("gregitas:lead_carbide_ingot")
+    .itemInputs("gregitas:lead_carbide_dust")
+    .inputFluids(Fluid.of("gtceu:helium", 500))
+    .itemOutputs("gregitas:lead_carbide_ingot")
+    .blastFurnaceTemp(3600)
+    .duration(600)
+    .EUt(EV)    
+
+  event.recipes.gtceu
+    .bender("gregitas:plate_basic")
+    .itemInputs("gregitas:lead_carbide_ingot")
+    .itemOutputs("nuclearcraft:plate_basic")
+    .duration(400)
+    .EUt(HV)
+
+  event.recipes.gtceu
+   .chemical_reactor("gregitas:plate_advanced")
+   .itemInputs("nuclearcraft:plate_basic", "nuclearcraft:tough_alloy_ingot")
+   .inputFluids(Fluid.of("gtceu:redstone", 72))
+   .itemOutputs("nuclearcraft:plate_advanced")
+   .duration(400)
+   .EUt(HV)
+
+  event.recipes.gtceu
+   .chemical_reactor("gregitas:plate_du")
+   .itemInputs("nuclearcraft:plate_advanced")
+   .inputFluids(Fluid.of("gtceu:uranium", 576))
+   .inputFluids(Fluid.of("gtceu:sulfuric_acid", 4000))
+   .itemOutputs("nuclearcraft:plate_du")
+   .duration(400)
+   .EUt(HV)   
+ 
+  event.recipes.gtceu
+   .chemical_reactor("gregitas:plate_elite")
+   .itemInputs("nuclearcraft:plate_du", "9x gtceu:energium_dust")
+   .inputFluids(Fluid.of("nuclearcraft:boron", 576))
+   .itemOutputs("nuclearcraft:plate_elite")
+   .duration(400)
+   .EUt(EV) 
+ 
+  event.recipes.gtceu
+   .chemical_reactor("gregitas:plate_extreme")
+   .itemInputs("nuclearcraft:plate_elite", "4x nuclearcraft:extreme_ingot")
+   .inputFluids(Fluid.of("gtceu:hsla_steel", 576))
+   .itemOutputs("nuclearcraft:plate_extreme")
+   .duration(400)
+   .EUt(EV) 
+
+
+  event.recipes.gtceu.assembler("gregitas:chassis")
+    .itemInputs("gtceu:steel_frame", "6x gtceu:lead_plate", "#gtceu:circuits/hv")
+    .itemOutputs("nuclearcraft:chassis")
+    .duration(400)
+    .EUt(HV)
+
+  event.recipes.gtceu.assembler("gregitas:coppercoil")
+    .itemInputs("16x gtceu:fine_copper_wire", "2x gtceu:iron_rod")
+    .itemOutputs("2x nuclearcraft:coil_copper")
+    .duration(200)
+    .EUt(HV)
+    
+  event.recipes.gtceu
+    .alloy_smelter("gregitas:ferroboron")
+    .itemInputs("#forge:ingots/steel", "nuclearcraft:boron_ingot")
+    .itemOutputs("2x nuclearcraft:ferroboron_ingot")
+    .duration(60)
+    .EUt(HV)
+  
+  event.recipes.gtceu
+    .alloy_smelter("gregitas:ferroborondusts")
+    .itemInputs("#forge:dusts/steel", "#forge:dusts/boron")
+    .itemOutputs("2x nuclearcraft:ferroboron_ingot")
+    .duration(60)
+    .EUt(HV)
+  
+  event.recipes.gtceu.assembler("gregitas:nuclearcraftmotor")
+    .itemInputs("4x gtceu:steel_plate", "2x gtceu:copper_bolt", "gtceu:iron_rod", "2x nuclearcraft:coil_copper")
+    .itemOutputs("nuclearcraft:motor")
+    .duration(200)
+    .EUt(HV)
+  
+  event.recipes.gtceu.assembler("gregitas:actuator")
+    .itemInputs("2x nuclearcraft:ferroboron_plate", "minecraft:piston", "8x gtceu:fine_copper_wire", "2x gtceu:steel_bolt") 
+    .itemOutputs("nuclearcraft:actuator")
+    .duration(200)
+    .EUt(HV)
+     
+  event.recipes.gtceu
+    .bender("gregitas:ferroboronplates")
+    .itemInputs("nuclearcraft:ferroboron_ingot")
+    .itemOutputs("nuclearcraft:ferroboron_plate")
+    .duration(200)
+    .EUt(HV)
+
+  //Rock Crusher to Macerators
+  
+  event.recipes.gtceu
+   .macerator("rhodochrosite_villiaumite")
+   .itemInputs("4x tfc:rock/raw/granite")
+   .itemOutputs("2x nuclearcraft:rhodochrosite_dust", "nuclearcraft:villiaumite_dust")
+   .duration(100)
+   .EUt(MV)
+
+  event.recipes.gtceu
+   .macerator("tungstendust_niobiumdust")
+   .itemInputs("7x minecraft:basalt")
+   .itemOutputs("2x nuclearcraft:rhodochrosite_dust", "nuclearcraft:villiaumite_dust")
+   .duration(100)
+   .EUt(MV) 
 
   // Fission
   event.recipes.gtceu.mixer("gregitas:fission_reactor_casing")
@@ -2974,4 +3069,86 @@ event.recipes.create.crushing([`2x minecraft:gray_dye`], `gtceu:stone_dust`, 250
     .chancedOutput("gtceu:saltpeter_dust", 420, 1)
     .duration(180)
     .EUt(80)    
+
+
+    event.custom({
+      type:"firmalife:mixing_bowl",
+      ingredients:[
+        {
+          type: "tfc:not_rotten",
+          ingredient: {
+            item: "tfc:food/cooked_rabbit"
+          }   
+        },
+        {
+          type: "tfc:not_rotten",
+          ingredient: {
+            tag: "tfc:foods/usable_in_soup"
+          }
+        },
+        {
+          type: "tfc:not_rotten",
+          ingredient: {
+            tag: "tfc:foods/usable_in_soup"
+          }
+        },
+        {
+          type: "tfc:not_rotten",
+          ingredient: {
+            tag: "tfc:foods/usable_in_soup"
+          }
+        },
+        {
+          item: "minecraft:rabbit_foot"
+        }
+
+      ],
+    output_item: {
+    item: "minecraft:rabbit_stew",
+    count: 1
+    }
+  
+    })
+
+    event.recipes.gtceu
+    .macerator("gregitas:sulfur_dust_scguns")
+    .itemInputs("scguns:sulfur_chunk")
+    .itemOutputs("gtceu:sulfur_dust")
+    .duration(180)
+    .EUt(ULV)
+
+event.recipes.gtceu
+    .macerator("gregitas:sulfur_dust_hv_scguns")
+    .itemInputs("scguns:sulfur_chunk")
+    .itemOutputs("gtceu:sulfur_dust")
+    .chancedOutput("gtceu:sulfur_dust", 15, 1)
+    .duration(90)
+    .EUt(HV)
+
+event.recipes.gtceu
+    .mixer("gt_silt_mud_bricks")
+    .itemInputs("1x tfc:dirt/silt")
+    .itemInputs("1x tfc:straw")
+    .inputFluids(Fluid.of("minecraft:water", 125))
+    .itemOutputs("4x tfc:drying_bricks/silt")
+    .EUt(ULV)
+    .duration(160)
+
+event.recipes.gtceu
+    .alloy_smelter("silt_brick_dry")
+    .itemInputs("4x tfc:drying_bricks/silt")
+    .notConsumable("gtceu:ingot_casting_mold")
+    .itemOutputs("4x tfc:mud_brick/silt")
+    .EUt(LV)
+    .duration(80)
+
+  shaped("iceandfire:copper_pile", [" CC", "   ", "   "], {
+    C: "tfc:ore/rich_native_copper"
+  }).id("gregitas:copper_pile")
+  shaped("iceandfire:silver_pile", [" CC", "   ", "   "], {
+    C: "tfc:ore/rich_native_silver"
+  }).id("gregitas:silver_pile")
+  shaped("iceandfire:gold_pile", [" CC", "   ", "   "], {
+    C: "tfc:ore/rich_native_gold"
+  }).id("gregitas:gold_pile")
 }

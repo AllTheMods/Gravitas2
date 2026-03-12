@@ -482,15 +482,7 @@
 				"177E7D3A7B2B48FA"
 			]
 			dependency_requirement: "one_completed"
-			description: [
-				"Now that we have access to fire, we can fire our clay molds in a &cPit Kiln&r."
-				""
-				"To create one, make a 1x1 hole and press &aV&r while holding a mold you want to fire up. You can place up to 4 small molds, or one large mold like a Vessel."
-				""
-				"Now right click on the items with 8 pieces of straw, then right click with 8 logs to place them down. Now you can sneak-right click on it to use the &cFirestarter&r to light it on fire."
-				""
-				"It does take a little bit to fire up the molds, roughly 8 in-game hours."
-			]
+			description: ["{gravitas.quest.caveman.desc.pit_kiln}"]
 			id: "466B5ADBED6C1CA3"
 			min_width: 300
 			rewards: [{
@@ -545,7 +537,7 @@
 					type: "item"
 				}
 			]
-			title: "&cPit Kilns&r"
+			title: "{gravitas.quest.caveman.title.pit_kiln}"
 			x: -2.5d
 			y: 1.5d
 		}

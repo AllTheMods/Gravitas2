@@ -1,0 +1,1868 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "nuclearcraft"
+	group: "65922F27A0B1245E"
+	id: "78E8F8C5B971562C"
+	images: [
+		{
+			height: 3.0d
+			image: "atm:textures/questpics/nuclear/nuclear_title.png"
+			rotation: 0.0d
+			width: 16.0d
+			x: 0.0d
+			y: 6.5d
+		}
+		{
+			height: 40.0d
+			image: "atm:textures/questpics/nuclear/nuclear_background.png"
+			rotation: 0.0d
+			width: 40.0d
+			x: 0.0d
+			y: -6.5d
+		}
+	]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["{gravitas.quest.nuclear.desc.start}"]
+			id: "1809DABFB2371677"
+			rewards: [
+				{
+					count: 5
+					id: "27C7E7E9ABAA085E"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:uranium_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "73043FBE27ED5BF8"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "gear"
+			size: 3.0d
+			tasks: [{
+				id: "7E851A05D3B2F3EF"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:uranium_ingot"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.start}"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.manufactory}"]
+			id: "6D5172C7057323D2"
+			rewards: [{
+				id: "1FE484252668B3F9"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			size: 1.25d
+			subtitle: "{gravitas.quest.nuclear.subt.manu}"
+			tasks: [{
+				id: "60316538FF70DF88"
+				item: "nuclearcraft:manufactory"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.manufactory}"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.decay}"]
+			id: "5F117AB966D7C140"
+			rewards: [{
+				count: 4
+				id: "1D8863954474CB3D"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1980719126A11AC8"
+				item: "nuclearcraft:decay_generator"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.decay}"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.solar}"]
+			id: "7315D77C662927FF"
+			rewards: [{
+				id: "06FD6CE22991794A"
+				item: "nuclearcraft:solar_panel_basic"
+				type: "item"
+			}]
+			tasks: [{
+				id: "61FD3490CCD95E11"
+				item: "nuclearcraft:solar_panel_basic"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.solar}"
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.alloy}"]
+			id: "12CBC0CB1CB41D81"
+			rewards: [
+				{
+					count: 2
+					id: "115F46BDE6BED5E8"
+					item: "nuclearcraft:ferroboron_ingot"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "02992C862C07EDF3"
+					item: "nuclearcraft:lithium_ingot"
+					type: "item"
+				}
+			]
+			size: 1.25d
+			tasks: [{
+				id: "37ADAF50960D82D8"
+				item: "nuclearcraft:alloy_smelter"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.alloy}"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4847F36C63F1B440"]
+			description: ["{gravitas.quest.nuclear.desc.multi}"]
+			id: "7B3D0EA176041F2A"
+			rewards: [{
+				id: "20130F51F49BFAD2"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "64285BE2CBAD01A3"
+				item: {
+					Count: 1
+					id: "nuclearcraft:multitool"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.multi}"
+			x: 0.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.assembler}"]
+			id: "4847F36C63F1B440"
+			rewards: [
+				{
+					count: 4
+					id: "0942EB6F6BBDE5F7"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:steel_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "07DAAA19FFD3698F"
+					item: "nuclearcraft:graphite_ingot"
+					type: "item"
+				}
+			]
+			size: 1.25d
+			tasks: [{
+				id: "66E8D81C051F85BC"
+				item: "nuclearcraft:assembler"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.assembler}"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.separator}"]
+			id: "3328AFA730CF03C5"
+			rewards: [{
+				id: "4DA56C53023A867E"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "0F74CEAEC9803518"
+				item: "nuclearcraft:isotope_separator"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.separator}"
+			x: 2.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["12CBC0CB1CB41D81"]
+			description: ["{gravitas.quest.nuclear.desc.hastener}"]
+			id: "47D54F41203E96D6"
+			rewards: [{
+				count: 4
+				id: "26A545DF2EA19C3A"
+				item: "nuclearcraft:tough_alloy_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4CFA973602D90F33"
+				item: "nuclearcraft:decay_hastener"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.hastener}"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.reprocessor}"]
+			id: "68DEB1646316FD31"
+			rewards: [{
+				id: "1A665C60ECDB66BB"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "4476E908F17968CF"
+				item: "nuclearcraft:fuel_reprocessor"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.reprocessor}"
+			x: 2.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.infuser}"]
+			id: "480EDF85167BDCF2"
+			rewards: [{
+				id: "600F9BBDE5ACAF91"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "0503FAFAE0417F6A"
+				item: "nuclearcraft:fluid_infuser"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.infuser}"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.melter}"]
+			id: "59BE22864FE8B075"
+			rewards: [{
+				id: "5E6AC141E2B5C56A"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "7E90E1F26E9B7928"
+				item: "nuclearcraft:melter"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.melter}"
+			x: -2.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.cooler}"]
+			id: "342D51EC3000C55C"
+			rewards: [{
+				id: "0084020728C90903"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "707C2DA906BB5D27"
+				item: "nuclearcraft:supercooler"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.cooler}"
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.electrolyzer}"]
+			id: "2AED3EC1EB9F9843"
+			rewards: [{
+				id: "038C835A41EC8F20"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "04AB30F767A72518"
+				item: "nuclearcraft:electrolyzer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.electrolyzer}"
+			x: 2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.former}"]
+			id: "4CFDD2005CF73B24"
+			rewards: [{
+				id: "62165C11C2935698"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "09379F240E26FF63"
+				item: "nuclearcraft:ingot_former"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.former}"
+			x: -2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.pressurizer}"]
+			id: "3A26541B7F210789"
+			rewards: [{
+				id: "4692121272B6E2F0"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "1D45C89F490E0EE0"
+				item: "nuclearcraft:pressurizer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.pressurizer}"
+			x: -2.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.chemical_reactor}"]
+			id: "0B6BCA899EFAAF12"
+			rewards: [{
+				id: "4D1347F4220397FF"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "5488C64828F88AAD"
+				item: "nuclearcraft:chemical_reactor"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.chemical_reactor}"
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.enricher}"]
+			id: "6F4B228DD7915F78"
+			rewards: [{
+				id: "3DA7139F49AD1D17"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "2D3356038C7672C5"
+				item: "nuclearcraft:fluid_enricher"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.enricher}"
+			x: 3.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.centrifuge}"]
+			id: "7A3D08CF446BFDB6"
+			rewards: [{
+				id: "330CAE1C4A68B1CC"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "7673987B70F63DCC"
+				item: "nuclearcraft:centrifuge"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.centrifuge}"
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7E613B874C774D76"]
+			description: ["{gravitas.quest.nuclear.desc.crusher}"]
+			id: "7AF77AC8666D3E88"
+			rewards: [{
+				id: "567CE319B3C92508"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "11FB789C7B9606F7"
+				item: "nuclearcraft:rock_crusher"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.crusher}"
+			x: -3.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.fission_build}"]
+			id: "0B12AF4976E483B7"
+			rewards: [
+				{
+					count: 5
+					id: "30F822B32EA07FBC"
+					item: "nuclearcraft:fission_reactor_casing"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "2EA2BBE4466EDB15"
+					item: "nuclearcraft:fission_reactor_glass"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "14342C367D093878"
+					item: "nuclearcraft:fission_reactor_casing"
+					type: "item"
+				}
+				{
+					id: "30B8F29B05E45E90"
+					item: "nuclearcraft:fission_reactor_glass"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.fission_build}"
+			x: -5.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["12CBC0CB1CB41D81"]
+			description: ["{gravitas.quest.nuclear.desc.machines}"]
+			id: "7E613B874C774D76"
+			rewards: [
+				{
+					count: 2
+					id: "2DFB4E281D6CA0A1"
+					item: "nuclearcraft:chassis"
+					type: "item"
+				}
+				{
+					id: "3B0514FB60A91E57"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "0C9D53A774DD48C9"
+				item: "nuclearcraft:chassis"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.machines}"
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"3F7576B3A3E9848B"
+				"0B12AF4976E483B7"
+				"12BD6443D7CC971A"
+			]
+			description: ["{gravitas.quest.nuclear.desc.fission}"]
+			id: "20C53336A743FCCD"
+			rewards: [{
+				id: "7C484C1388EC6625"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "pentagon"
+			size: 1.5d
+			subtitle: "{gravitas.quest.nuclear.subt.fission}"
+			tasks: [{
+				id: "4DD4E5E2904CFF59"
+				item: {
+					Count: 1
+					id: "nuclearcraft:fission_reactor_controller"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fission}"
+			x: -5.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["0B12AF4976E483B7"]
+			description: ["{gravitas.quest.nuclear.desc.fission_port}"]
+			id: "12BD6443D7CC971A"
+			rewards: [{
+				count: 10
+				id: "5518B909699C9B2B"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:uranium_ingot"
+				}
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "2EE86E9D9294062F"
+					item: "nuclearcraft:fission_reactor_solid_fuel_cell"
+					type: "item"
+				}
+				{
+					id: "1B41F9ED45C997C3"
+					item: "nuclearcraft:fission_reactor_port"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.fission_port}"
+			x: -7.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["0B12AF4976E483B7"]
+			description: ["{gravitas.quest.nuclear.desc.fission_heat}"]
+			id: "3F7576B3A3E9848B"
+			rewards: [{
+				count: 2
+				id: "3C6B52C5720324F2"
+				item: "nuclearcraft:empty_heat_sink"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "0DCF50928DEFE8F6"
+					item: "nuclearcraft:graphite_block"
+					type: "item"
+				}
+				{
+					id: "1704850B58012188"
+					item: "nuclearcraft:empty_heat_sink"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.fission_heat}"
+			x: -4.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["0B12AF4976E483B7"]
+			description: ["{gravitas.quest.nuclear.desc.fission_irradating}"]
+			id: "189EF287B4D37095"
+			rewards: [{
+				id: "15D6A193EF035DFD"
+				item: "nuclearcraft:fission_reactor_solid_fuel_cell"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "46E78E2503A12E5A"
+				item: "nuclearcraft:fission_reactor_irradiation_chamber"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fission_irradating}"
+			x: -7.0d
+			y: -10.5d
+		}
+		{
+			dependencies: ["189EF287B4D37095"]
+			description: ["{gravitas.quest.nuclear.desc.irradiator}"]
+			id: "0D6FD78BA2726A6A"
+			rewards: [{
+				id: "2ADF2FA14E36D122"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "7399B0F8D950DD21"
+				item: "nuclearcraft:irradiator"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.irradiator}"
+			x: -7.0d
+			y: -11.5d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.fusion_build}"]
+			id: "21E84F489EECBE3A"
+			rewards: [
+				{
+					count: 5
+					id: "313D332FBAFE38B9"
+					item: "nuclearcraft:fusion_reactor_casing"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "6B050E02B4EA3527"
+					item: "nuclearcraft:fusion_reactor_casing_glass"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "35D376B50830000F"
+					item: "nuclearcraft:fusion_reactor_casing"
+					type: "item"
+				}
+				{
+					id: "47223BFA8873EE68"
+					item: "nuclearcraft:fusion_reactor_casing_glass"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.fusion_build}"
+			x: -3.0d
+			y: -15.5d
+		}
+		{
+			dependencies: [
+				"05AB3A1F780765B0"
+				"21E84F489EECBE3A"
+				"6383D117C46274E8"
+				"7A2F7E90D908FF19"
+			]
+			description: ["{gravitas.quest.nuclear.desc.fusion}"]
+			id: "54580E11705A52B4"
+			rewards: [{
+				id: "46F9452E127FE690"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "pentagon"
+			size: 1.5d
+			subtitle: "{gravitas.quest.nuclear.subt.fusion}"
+			tasks: [{
+				id: "607BC085E91B2553"
+				item: {
+					Count: 1
+					id: "nuclearcraft:fusion_core"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fusion}"
+			x: -2.5d
+			y: -17.0d
+		}
+		{
+			dependencies: ["21E84F489EECBE3A"]
+			description: ["{gravitas.quest.nuclear.desc.fusion_magnet}"]
+			id: "05AB3A1F780765B0"
+			rewards: [{
+				count: 3
+				id: "06BC5CE105C848F6"
+				item: "nuclearcraft:basic_electromagnet_slope"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "737F1765AE8E030C"
+				item: "nuclearcraft:basic_electromagnet"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fusion_magnet}"
+			x: -2.0d
+			y: -15.5d
+		}
+		{
+			dependencies: ["21E84F489EECBE3A"]
+			description: ["{gravitas.quest.nuclear.desc.fusion_amplifier}"]
+			id: "6383D117C46274E8"
+			rewards: [{
+				count: 2
+				id: "1227F17139B0415E"
+				item: "nuclearcraft:basic_rf_amplifier"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "718A87FB29EA400E"
+				item: "nuclearcraft:basic_rf_amplifier"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fusion_amplifier}"
+			x: -1.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.pump}"]
+			id: "7A7992C4D742A2CA"
+			rewards: [{
+				id: "3A5625CDAEA765BC"
+				item: "nuclearcraft:water_collector"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6401C75B6E3620D5"
+				item: "nuclearcraft:pump"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.pump}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["51054863EA3F7521"]
+			description: ["{gravitas.quest.nuclear.desc.fuel2}"]
+			id: "776919F6B6377E48"
+			rewards: [{
+				count: 6
+				id: "7E95AAD9876C4B06"
+				item: "nuclearcraft:yellowcake_dust"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "43120C5F7DD6281B"
+				item: "nuclearcraft:yellowcake_dust"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fuel2}"
+			x: -0.5d
+			y: -12.0d
+		}
+		{
+			dependencies: ["2E8B83EE848B1723"]
+			description: ["{gravitas.quest.nuclear.desc.fuel4}"]
+			id: "143B2A19642A7001"
+			rewards: [{
+				count: 3
+				id: "76AEF4096F9762D6"
+				item: "nuclearcraft:fission_reactor_casing"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "0B7E538E5494B1E2"
+				item: "nuclearcraft:fuel_uranium_leu_235"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fuel4}"
+			x: 0.0d
+			y: -14.0d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.fuel1}"]
+			id: "51054863EA3F7521"
+			rewards: [{
+				count: 3
+				id: "5EF10264DC517DEE"
+				item: "gtceu:uranium_dust"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "638F426C4E4306B1"
+				item: "gtceu:uranium_dust"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fuel1}"
+			x: 0.0d
+			y: -11.0d
+		}
+		{
+			dependencies: ["776919F6B6377E48"]
+			description: ["{gravitas.quest.nuclear.desc.fuel3}"]
+			id: "2E8B83EE848B1723"
+			rewards: [
+				{
+					count: 5
+					id: "0B3AFF87848C9F19"
+					item: "nuclearcraft:uranium_235"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "677B2F5D52C966E7"
+					item: "nuclearcraft:uranium_238"
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					id: "0B30AD9902D8EB49"
+					item: "nuclearcraft:uranium_235"
+					type: "item"
+				}
+				{
+					id: "05456519AD4E1BE1"
+					item: "nuclearcraft:uranium_238"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.fuel3}"
+			x: -0.5d
+			y: -13.0d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.turbine_build}"]
+			id: "70ABAA02FEE95182"
+			rewards: [
+				{
+					count: 5
+					id: "05829AA343D45810"
+					item: "nuclearcraft:turbine_casing"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "4B0B58CB0DB5B11C"
+					item: "nuclearcraft:turbine_glass"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "5C663F40506B4302"
+					item: "nuclearcraft:turbine_casing"
+					type: "item"
+				}
+				{
+					id: "7D01EA031E537F0A"
+					item: "nuclearcraft:turbine_glass"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.turbine_build}"
+			x: -3.5d
+			y: -12.0d
+		}
+		{
+			dependencies: [
+				"5456BA66BC7A933A"
+				"70ABAA02FEE95182"
+				"09DE924D8DA210B3"
+				"347B4B8E409D3B12"
+			]
+			description: ["{gravitas.quest.nuclear.desc.turbine}"]
+			id: "5230368594525388"
+			rewards: [{
+				id: "3151BD6D39FD56E4"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{
+				id: "2EEB175691BA4D26"
+				item: {
+					Count: 1
+					id: "nuclearcraft:turbine_controller"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.turbine}"
+			x: -4.0d
+			y: -13.5d
+		}
+		{
+			dependencies: ["70ABAA02FEE95182"]
+			description: ["{gravitas.quest.nuclear.desc.turbine_port}"]
+			id: "5456BA66BC7A933A"
+			rewards: [{
+				count: 5
+				id: "35F5F6BBBAD0C379"
+				item: "nuclearcraft:turbine_casing"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				count: 2L
+				id: "6D51E541135CEBB8"
+				item: "nuclearcraft:turbine_port"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.turbine_port}"
+			x: -5.5d
+			y: -12.5d
+		}
+		{
+			dependencies: ["7F0E2D514E0D1F08"]
+			description: ["{gravitas.quest.nuclear.desc.hazmat}"]
+			id: "1033F8128AD673CC"
+			rewards: [{
+				count: 4
+				id: "5832D564F1762271"
+				item: "nuclearcraft:medium"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "7298B2AD295F65D9"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hazmat_mask"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68E8DF790AC0E781"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hazmat_chest"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "13A3DA73C1A36229"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hazmat_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "03B6A6BC1BF662EC"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hazmat_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.hazmat}"
+			x: -4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.meters}"]
+			id: "6943E0F1381D36F9"
+			rewards: [{
+				id: "1CEE41F4AA6815FD"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "circle"
+			size: 1.25d
+			tasks: [
+				{
+					id: "7939CCF83B42AA8B"
+					item: {
+						Count: 1
+						id: "nuclearcraft:dosimeter"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "22C1430BA0E1A51A"
+					item: "nuclearcraft:geiger_counter"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.meters}"
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.shield}"]
+			id: "7F0E2D514E0D1F08"
+			rewards: [{
+				count: 3
+				id: "5525E4EF9B8143AF"
+				item: "nuclearcraft:light"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "6F5CF83361019112"
+				item: "nuclearcraft:light"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.shield}"
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1033F8128AD673CC"]
+			description: ["{gravitas.quest.nuclear.desc.hev}"]
+			id: "14DB8DDA60182B8A"
+			rewards: [{
+				id: "6DD655EAF3AEDCB7"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "rsquare"
+			subtitle: "{gravitas.quest.nuclear.subt.hev}"
+			tasks: [
+				{
+					id: "465F4F8F5FD8ADD6"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hev_helmet"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "12DAF9CAA26FC017"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hev_chest"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "05F4048709C4BA3B"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hev_pants"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "73D2E92915E33E16"
+					item: {
+						Count: 1
+						id: "nuclearcraft:hev_boots"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.hev}"
+			x: -4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["143B2A19642A7001"]
+			description: ["{gravitas.quest.nuclear.desc.fuel5}"]
+			id: "265A9F12D22783CF"
+			rewards: [{
+				id: "281206D630A61E71"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "6A7CCA41700126F9"
+				item: "nuclearcraft:depleted_fuel_uranium_leu_235"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fuel5}"
+			x: 0.5d
+			y: -13.0d
+		}
+		{
+			dependencies: ["265A9F12D22783CF"]
+			description: ["{gravitas.quest.nuclear.desc.fuel6}"]
+			id: "3482656D55C9170B"
+			rewards: [{
+				count: 3
+				id: "23FC80901045D8AD"
+				item: "nuclearcraft:fuel_uranium_leu_235"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [
+				{
+					count: 4L
+					id: "49BBABDAD5E3A6E6"
+					item: "nuclearcraft:uranium_238"
+					type: "item"
+				}
+				{
+					id: "4EA79AE57AE8706F"
+					item: "nuclearcraft:plutonium_242"
+					type: "item"
+				}
+				{
+					id: "3E9E38FB22D1CC42"
+					item: "nuclearcraft:plutonium_239"
+					type: "item"
+				}
+				{
+					id: "39918EE21175FBA3"
+					item: "nuclearcraft:americium_243"
+					type: "item"
+				}
+				{
+					id: "4AB4861BA350BA9F"
+					item: "nuclearcraft:strontium_90_dust"
+					type: "item"
+				}
+				{
+					id: "080009052B8672E0"
+					item: "nuclearcraft:caesium_137_dust"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.fuel6}"
+			x: 0.5d
+			y: -12.0d
+		}
+		{
+			dependencies: ["1809DABFB2371677"]
+			description: ["{gravitas.quest.nuclear.desc.rads}"]
+			id: "511D4EDA44A06FE8"
+			rewards: [
+				{
+					count: 3
+					id: "7680692DFC84D0F2"
+					item: "nuclearcraft:radaway"
+					type: "item"
+				}
+				{
+					id: "5D188066B3509F5C"
+					item: "nuclearcraft:rad_x"
+					type: "item"
+				}
+			]
+			shape: "circle"
+			size: 1.25d
+			subtitle: "{gravitas.quest.nuclear.subt.rads}"
+			tasks: [
+				{
+					id: "4492DE3C0F2F54F6"
+					item: "nuclearcraft:radaway"
+					type: "item"
+				}
+				{
+					id: "0B9AFE13E300A05F"
+					item: "nuclearcraft:rad_x"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.rads}"
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0D6FD78BA2726A6A"]
+			description: ["{gravitas.quest.nuclear.desc.wasteland}"]
+			id: "2EA02FE365B68AE0"
+			rewards: [{
+				count: 3
+				id: "3B03FF7A5F85C6C1"
+				item: "nuclearcraft:radaway"
+				type: "item"
+			}]
+			shape: "octagon"
+			subtitle: "{gravitas.quest.nuclear.subt.wasteland}"
+			tasks: [{
+				id: "1058838061020FC8"
+				item: "nuclearcraft:portal"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.wasteland}"
+			x: -8.0d
+			y: -11.0d
+		}
+		{
+			dependencies: ["0B12AF4976E483B7"]
+			description: ["{gravitas.quest.nuclear.desc.boiling}"]
+			id: "1B03C86F6E38B4D3"
+			rewards: [{
+				count: 5
+				id: "04BE5EBF675B7557"
+				item: "nuclearcraft:fission_reactor_casing"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				count: 2L
+				id: "7F3284687B59FCCC"
+				item: "nuclearcraft:fission_reactor_port"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.boiling}"
+			x: -4.0d
+			y: -10.5d
+		}
+		{
+			dependencies: ["70ABAA02FEE95182"]
+			description: ["{gravitas.quest.nuclear.desc.spinny}"]
+			id: "09DE924D8DA210B3"
+			rewards: [{
+				count: 4
+				id: "6212A5371A5E9C86"
+				item: "nuclearcraft:turbine_basic_rotor_blade"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "69624E07C3EC6E48"
+					item: "nuclearcraft:turbine_rotor_shaft"
+					type: "item"
+				}
+				{
+					id: "0BDA1CC58E4E5713"
+					item: "nuclearcraft:turbine_bearing"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.spinny}"
+			x: -2.5d
+			y: -12.5d
+		}
+		{
+			dependencies: ["70ABAA02FEE95182"]
+			description: ["{gravitas.quest.nuclear.desc.coil}"]
+			id: "347B4B8E409D3B12"
+			rewards: [{
+				id: "164122011CCE4F88"
+				item: "nuclearcraft:turbine_beryllium_coil"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "74CD59DFDF6E4627"
+				item: "nuclearcraft:turbine_magnesium_coil"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.better_turbine}"
+			x: -4.5d
+			y: -12.0d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.particle_build}"]
+			id: "0BF6AB70451013DC"
+			rewards: [
+				{
+					count: 5
+					id: "181A1B34F456C4D7"
+					item: "nuclearcraft:accelerator_casing"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "577D94DEF4F3EBD9"
+					item: "nuclearcraft:accelerator_casing_glass"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "4BDB9B179CB9AA42"
+					item: "nuclearcraft:accelerator_casing"
+					type: "item"
+				}
+				{
+					id: "28EF4AF82790A5D1"
+					item: "nuclearcraft:accelerator_casing_glass"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.particle_build}"
+			x: 5.5d
+			y: -8.5d
+		}
+		{
+			dependencies: [
+				"128DD10AD59EC098"
+				"6E0C0B2E476A9D09"
+				"05762E3DEC3D14C3"
+				"0BF6AB70451013DC"
+				"4995319724DACC54"
+				"4A844B2BB69C7503"
+				"187290262AFB2983"
+			]
+			description: ["{gravitas.quest.nuclear.desc.particle_accelerator}"]
+			id: "481F227E03AA1D7E"
+			rewards: [{
+				id: "6908A13D3CCED801"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{
+				id: "16554B17E1220674"
+				item: {
+					Count: 1
+					id: "nuclearcraft:linear_accelerator_controller"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.particle_accelerator}"
+			x: 5.5d
+			y: -10.5d
+		}
+		{
+			dependencies: ["0BF6AB70451013DC"]
+			description: ["{gravitas.quest.nuclear.desc.particle_port}"]
+			id: "128DD10AD59EC098"
+			rewards: [{
+				count: 5
+				id: "3C64821345757053"
+				item: "nuclearcraft:accelerator_casing"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "70598ECD21A29A41"
+				item: "nuclearcraft:accelerator_port"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.particle_port}"
+			x: 4.5d
+			y: -9.0d
+		}
+		{
+			dependencies: ["0BF6AB70451013DC"]
+			description: ["{gravitas.quest.nuclear.desc.particle_ion}"]
+			id: "4995319724DACC54"
+			rewards: [
+				{
+					id: "13BA73E76D823259"
+					item: "nuclearcraft:pump"
+					type: "item"
+				}
+				{
+					id: "2C61E825F0942B35"
+					item: "nuclearcraft:helium_collector"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				id: "7B7FF72AE8478BBA"
+				item: "nuclearcraft:accelerator_ion_source_port"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.particle_ion}"
+			x: 7.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["0BF6AB70451013DC"]
+			description: ["{gravitas.quest.nuclear.desc.particle_beam}"]
+			id: "05762E3DEC3D14C3"
+			rewards: [{
+				count: 3
+				id: "47DE2AFF08888E7A"
+				item: "nuclearcraft:particle_beam"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "7F6646C63147D9C0"
+					item: "nuclearcraft:particle_beam"
+					type: "item"
+				}
+				{
+					id: "40D8B801A06A88DC"
+					item: "nuclearcraft:accelerator_beam_port"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.particle_beam}"
+			x: 6.5d
+			y: -9.0d
+		}
+		{
+			dependencies: ["0BF6AB70451013DC"]
+			description: ["{gravitas.quest.nuclear.desc.particle_cooler}"]
+			id: "6E0C0B2E476A9D09"
+			shape: "square"
+			tasks: [{
+				id: "7275F7717A725496"
+				item: "nuclearcraft:empty_cooler"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.particle_cooler}"
+			x: 3.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.chamber_build}"]
+			id: "3C52EB907B0BFC53"
+			rewards: [
+				{
+					count: 5
+					id: "5403B74A412FC10F"
+					item: "nuclearcraft:target_chamber_casing"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "3C0AFCE85D748AC2"
+					item: "nuclearcraft:target_chamber_casing_glass"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "36C58BFB1DCF3638"
+					item: "nuclearcraft:target_chamber_casing"
+					type: "item"
+				}
+				{
+					id: "0E1B9FC864BDE033"
+					item: "nuclearcraft:target_chamber_casing_glass"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.chamber_build}"
+			x: 4.5d
+			y: -12.0d
+		}
+		{
+			dependencies: [
+				"39DE27B2A103D17D"
+				"6BB74E14F529426F"
+				"052DB22D3A8A0732"
+				"3C52EB907B0BFC53"
+				"43A6D9DBAFC9E55F"
+			]
+			description: ["{gravitas.quest.nuclear.desc.chamber}"]
+			id: "568B5AB0A85D5183"
+			rewards: [{
+				id: "10815ED07535C701"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{
+				id: "0366964AAE11F7D4"
+				item: {
+					Count: 1
+					id: "nuclearcraft:target_chamber_controller"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.chamber}"
+			x: 4.5d
+			y: -13.5d
+		}
+		{
+			dependencies: ["3C52EB907B0BFC53"]
+			description: ["{gravitas.quest.nuclear.desc.chamber_port}"]
+			id: "052DB22D3A8A0732"
+			rewards: [{
+				count: 3
+				id: "3C5EF4AD85C91322"
+				item: "nuclearcraft:target_chamber_casing"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "57DC399D13096C86"
+				item: "nuclearcraft:target_chamber_beam_port"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.chamber_port}"
+			x: 3.0d
+			y: -13.5d
+		}
+		{
+			dependencies: ["3C52EB907B0BFC53"]
+			description: ["{gravitas.quest.nuclear.desc.chamber_camera}"]
+			id: "43A6D9DBAFC9E55F"
+			rewards: [{
+				count: 2
+				id: "77B100B01D051DB2"
+				item: "nuclearcraft:particle_beam"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "1710B71D668766D2"
+					item: "nuclearcraft:particle_beam"
+					type: "item"
+				}
+				{
+					id: "7CB4C3315318DB89"
+					item: "nuclearcraft:target_chamber_camera"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.chamber_camera}"
+			x: 3.5d
+			y: -12.5d
+		}
+		{
+			dependencies: ["3C52EB907B0BFC53"]
+			description: ["{gravitas.quest.nuclear.desc.chamber_detector}"]
+			id: "6BB74E14F529426F"
+			rewards: [{
+				count: 4
+				id: "1860E9FBA16BBDA9"
+				item: "nuclearcraft:hadron_calorimeter"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "7D6C8E50FAB714F0"
+				item: "nuclearcraft:empty_detector"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.chamber_detector}"
+			x: 5.5d
+			y: -12.5d
+		}
+		{
+			dependencies: ["3C52EB907B0BFC53"]
+			description: ["{gravitas.quest.nuclear.desc.chamber_beam}"]
+			id: "39DE27B2A103D17D"
+			rewards: [{
+				id: "04BD6D42C2113BD0"
+				item: "nuclearcraft:particle_beam"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "68F8C14649DCE72B"
+				item: "nuclearcraft:target_chamber_port"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.chamber_beam}"
+			x: 6.0d
+			y: -13.5d
+		}
+		{
+			dependencies: ["0BF6AB70451013DC"]
+			description: ["{gravitas.quest.nuclear.desc.particle_amplifier}"]
+			id: "4A844B2BB69C7503"
+			rewards: [{
+				count: 2
+				id: "31391FA00004779B"
+				item: "nuclearcraft:basic_rf_amplifier"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "35C95608173E509F"
+				item: "nuclearcraft:basic_rf_amplifier"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.particle_amplifier}"
+			x: 8.0d
+			y: -11.0d
+		}
+		{
+			dependencies: ["0BF6AB70451013DC"]
+			description: ["{gravitas.quest.nuclear.desc.particle_magnet}"]
+			id: "187290262AFB2983"
+			rewards: [{
+				count: 2
+				id: "4C8A97375DA1514F"
+				item: "nuclearcraft:basic_electromagnet"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "216379592EDED327"
+				item: "nuclearcraft:basic_electromagnet"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.particle_magnet}"
+			x: 3.0d
+			y: -11.0d
+		}
+		{
+			dependencies: [
+				"052DB22D3A8A0732"
+				"4995319724DACC54"
+			]
+			description: ["{gravitas.quest.nuclear.desc.combo}"]
+			id: "6B414FEA9E080402"
+			rewards: [{
+				id: "4EE2392B606915C2"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "heart"
+			size: 1.5d
+			tasks: [
+				{
+					id: "2646742367C95773"
+					item: "nuclearcraft:accelerator_beam_port"
+					type: "item"
+				}
+				{
+					id: "0DC063948E5410E8"
+					item: "nuclearcraft:target_chamber_beam_port"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.combo}"
+			x: 8.0d
+			y: -13.5d
+		}
+		{
+			dependencies: ["21E84F489EECBE3A"]
+			description: ["{gravitas.quest.nuclear.desc.fusion_connector}"]
+			id: "7A2F7E90D908FF19"
+			rewards: [{
+				count: 5
+				id: "7DB1ED24B98682DD"
+				item: "nuclearcraft:fusion_reactor_casing"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "61451DB97A546A2C"
+				item: "nuclearcraft:fusion_reactor_connector"
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.fusion_port}"
+			x: -4.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["7B3D0EA176041F2A"]
+			description: ["{gravitas.quest.nuclear.desc.kugel_build}"]
+			id: "4C5D523EB93C2B62"
+			rewards: [
+				{
+					count: 5
+					id: "5C7A2005E538ABDD"
+					item: "nuclearcraft:neutronium_frame"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "651AC8E7CD74B704"
+					item: "nuclearcraft:event_horizon_stabilizer"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "6ABB419639DFB13A"
+					item: "nuclearcraft:neutronium_frame"
+					type: "item"
+				}
+				{
+					id: "7E98BE38A5B7603C"
+					item: "nuclearcraft:event_horizon_stabilizer"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.kugel_build}"
+			x: 2.0d
+			y: -15.5d
+		}
+		{
+			dependencies: [
+				"05E6EFADB70FACAF"
+				"6FFD6ADA175863BC"
+				"4C5D523EB93C2B62"
+				"346544824B0EF229"
+			]
+			description: ["{gravitas.quest.nuclear.desc.kugel}"]
+			id: "4ECA97AB27BECB70"
+			rewards: [{
+				id: "53FB4DF2EF639A3A"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "pentagon"
+			size: 1.5d
+			subtitle: "{gravitas.quest.nuclear.subt.kugelblitz}"
+			tasks: [{
+				id: "7E5938893C1E4EB1"
+				item: {
+					Count: 1
+					id: "nuclearcraft:chamber_terminal"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.nuclear.kugel}"
+			x: 2.5d
+			y: -17.0d
+		}
+		{
+			dependencies: ["4C5D523EB93C2B62"]
+			description: ["{gravitas.quest.nuclear.desc.kugel_quantum}"]
+			id: "6FFD6ADA175863BC"
+			rewards: [
+				{
+					count: 3
+					id: "334F10FC18681E17"
+					item: "nuclearcraft:quantum_flux_regulator"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "796493CB80A50261"
+					item: "nuclearcraft:quantum_transformer"
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1A2760B94D43CE52"
+					item: "nuclearcraft:quantum_flux_regulator"
+					type: "item"
+				}
+				{
+					id: "0D150F953CC9D75C"
+					item: "nuclearcraft:quantum_transformer"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.kugel_quantum}"
+			x: 3.0d
+			y: -15.5d
+		}
+		{
+			dependencies: ["4C5D523EB93C2B62"]
+			description: ["{gravitas.quest.nuclear.desc.kugel_subliquid}"]
+			id: "05E6EFADB70FACAF"
+			rewards: [{
+				id: "3E84313E6FB3D2B3"
+				item: "nuclearcraft:magnesium_block"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "0F578ADFF21868C1"
+					item: "nuclearcraft:subatomic_liquifier"
+					type: "item"
+				}
+				{
+					id: "6A42FF1CBCE46087"
+					item: "nuclearcraft:chamber_port"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.kugel_subliquid}"
+			x: 4.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["4C5D523EB93C2B62"]
+			description: ["{gravitas.quest.nuclear.desc.kugel_laser}"]
+			id: "346544824B0EF229"
+			rewards: [{
+				count: 2
+				id: "3FF2F91AC96A1D53"
+				item: "nuclearcraft:expl"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "6F3D4FEFEE3EFF9C"
+					item: "nuclearcraft:expl"
+					type: "item"
+				}
+				{
+					id: "043B23A3C472B736"
+					item: "nuclearcraft:photon_concentrator"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.nuclear.kugel_laser}"
+			x: 1.0d
+			y: -16.0d
+		}
+	]
+	title: "NuclearCraft"
+}

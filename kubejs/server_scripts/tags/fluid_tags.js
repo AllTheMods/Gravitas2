@@ -112,4 +112,15 @@ const addFluidTags = (/** @type {TagEvent.Fluid} */ event) => {
         "createdieselgenerators:cyan_cement"
 
     ])
+    event.add("tfc:alcohols", [
+        "tfcagedalcohol:aged_beer",
+        "tfcagedalcohol:aged_cider",
+        "tfcagedalcohol:aged_mead",
+        "tfcagedalcohol:aged_rum",
+        "tfcagedalcohol:aged_vodka",
+        "tfcagedalcohol:aged_whiskey",
+        "tfcagedalcohol:aged_sake",
+        "tfcagedalcohol:aged_corn_whiskey",
+        "tfcagedalcohol:aged_rye_whiskey"
+    ])
 }

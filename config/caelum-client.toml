@@ -31,7 +31,7 @@
 	latitude_effects = "ALL"
 	#Should the northernmost/southernmost points be defined by the world border or by constants here in the config
 	#Allowed Values: CONSTANT, BORDER
-	world_height_type = "BORDER"
+	world_height_type = "CONSTANT"
 	#The min Z - basically what Z is considered to be the north pole
 	#Range: -9223372036854775808 ~ 9223372036854775807
 	min_z = -300000000

@@ -507,6 +507,18 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   event.add("gtceu:tools/crafting_hammers", "#tfc:hammers")
   event.add("gtceu:tools/crafting_knives", "#tfc:knives")
 
+  // TFC - add cast iron plate tags
+  event.add("forge:plates", "tfc:metal/sheet/cast_iron")
+  event.add("forge:plates/cast_iron", "tfc:metal/sheet/cast_iron")
+  event.add("forge:double_plates", "tfc:metal/double_sheet/cast_iron")
+  event.add("forge:double_plates/cast_iron", "tfc:metal/double_sheet/cast_iron")
+
+  // TFC - add cast iron sheet tags
+  event.add("forge:sheets", "tfc:metal/sheet/cast_iron")
+  event.add("forge:sheets/cast_iron", "tfc:metal/sheet/cast_iron")
+  event.add("forge:double_sheets", "tfc:metal/double_sheet/cast_iron")
+  event.add("forge:double_sheets/cast_iron", "tfc:metal/double_sheet/cast_iron")
+
   //armors
   event.removeAll("tombstone:lootable/armor")
   event.removeAll("tombstone:lootable/vanilla_armor")
@@ -514,4 +526,5 @@ const addItemTags = (/** @type {TagEvent.Item} */ event) => {
   //tools
   event.removeAll("tombstone:lootable/tool")
   event.removeAll("tombstone:lootable/vanilla_tool")
+
 }

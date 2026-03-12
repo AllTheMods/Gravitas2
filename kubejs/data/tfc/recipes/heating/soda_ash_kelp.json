@@ -1,0 +1,10 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfc:food/dried_kelp"
+  },
+  "result_item": {
+    "item": "tfc:powder/soda_ash"
+  },
+  "temperature": 200
+}

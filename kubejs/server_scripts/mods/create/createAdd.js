@@ -616,8 +616,8 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 	})
 	
 	TFCGrains.forEach((grain) => {
-		event.recipes.create.mixing([`tfc:food/${grain}_dough`],
-			[Item.of(`tfc:food/${grain}_flour`), Fluid.of('minecraft:water', 100)],
+		event.recipes.create.splashing([`tfc:food/${grain}_dough`],
+			[Item.of(`tfc:food/${grain}_flour`)],
 			250)
 	})
     event.recipes.create.mixing([Fluid.of('gregitas:iced_pina_colada', 250)], [Fluid.of('firmalife:pina_colada', 250), 'gregitas:crushed_frostburn'], 10)
@@ -754,6 +754,16 @@ let createAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.recipes.minecraft.blasting("tfc:dirt/silt", "tfc:mud/silt",250)
     event.recipes.minecraft.blasting("tfc:dirt/sandy_loam", "tfc:mud/sandy_loam",250)
     event.recipes.minecraft.blasting("tfc:dirt/silty_loam", "tfc:mud/silty_loam",250)
+
+    // === GYPSUM ORE PROCESSING ===
+
+    // Create Crushing: tfc:ore/gypsum → gtceu:gypsum_dust
+    event.recipes.create
+      .crushing('gtceu:gypsum_dust', 'tfc:ore/gypsum')
+      .id('gregitas:crushing/gypsum_ore')
+
+    // Create Milling: tfc:ore/gypsum → gtceu:gypsum_dust
+    event.recipes.create
+      .milling('gtceu:gypsum_dust', 'tfc:ore/gypsum')
+      .id('gregitas:milling/gypsum_ore')
 }
-
-
