@@ -31,12 +31,9 @@ let ncRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   // Rock crusher recipes replaced or removed
   event.remove({ id: "nuclearcraft:rock_crusher/purpur_block" })
   event.remove({ id: "nuclearcraft:rock_crusher/granite" })
-  event.remove({ id: "nuclearcraft:blast_iridium_dust" })
+  event.remove({ id: "/^nuclearcraft:blast_.*_dust/" })
 
   // NC-related crafting recipes registered under the minecraft: namespace
-  event.remove({ id: "minecraft:nuclearcraft_iridium_dust" })
-  event.remove({ id: "minecraft:nuclearcraft_hsla_steel_dust" })
-  event.remove({ id: "minecraft:nuclearcraft_tungsten_dust" })
-    
-  event.remove({ id: "nuclearcraft:blast_tungsten_dust" })
+  event.remove({ id: "/^minecraft:nuclearcraft_.*_dust/" })
+  event.remove({ id: "/^minecraft:nuclearcraft_.*_plate/" })
 }

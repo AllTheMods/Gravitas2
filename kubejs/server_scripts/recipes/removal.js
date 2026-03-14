@@ -528,6 +528,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'thoriumreactors:concentrating/yellow_cake'})
   event.remove({ id: 'thoriumreactors:crystallizing/enriched_uranium_pellet'})
   event.remove({ id: 'thoriumreactors:titanium_block_craft_from_ingot'})
+  event.remove({ id: '/^thoriumreactors:.*ingot_craft_from_block/'})
+  event.remove({ id: '/^thoriumreactors:.*ingot_craft_from_nugget/'})
+  event.remove({ id: '/^thoriumreactors:.*block_craft_from_ingot/'})
 
   //wireless chargers
 

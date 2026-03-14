@@ -3,6 +3,7 @@
     "firmalife",
     "gtceu",
     "tfc",
+    "immersivegeology",
     "minecraft",
     "kubejs", 
     "create"
@@ -71,6 +72,7 @@
     "lapis",
     "lead",
     "lumium",
+    "magnesium",
     "manganese",
     "mithril",
     "molybdenum",
@@ -101,9 +103,11 @@
     "tin",
     "titanium",
     "tungsten",
+    "tungsten_carbide",
     "uranium",
     "wrought_iron",
-    "zinc"
+    "zinc",
+    "zirconium"
   ],
   "priorityOverrides": {},
   "customTags": {},
