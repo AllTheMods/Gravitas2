@@ -6,4 +6,7 @@ var igRecipesAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   igRefractoryChain(event)
   igFluidOutputFix(event)
   igMixerBridge(event)
+  igEbfBridge(event)
+  igGtBlocksNuggets(event)
+  igMultiblockRecipes(event)
 }

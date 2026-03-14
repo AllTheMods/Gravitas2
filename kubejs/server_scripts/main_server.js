@@ -8,6 +8,7 @@ ServerEvents.recipes((event) => {
   ncRecipesRemoval(event)
   replaceRecipes(event)
   ieRecipesReplace(event)
+  igRecipesReplace(event)
   dfcRecipesReplace(event)
   tfcRecipesReplace(event)
   recipeAdd(event)

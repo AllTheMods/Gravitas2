@@ -46,20 +46,13 @@ let igRefractoryChain = (/** @type {Internal.RecipesEventJS} */ event) => {
     .curving('gregitas:unfired_refractory_brick', 'immersivegeology:raw_fire_clay', 'gtceu:ingot_casting_mold')
     .id('gregitas:ig/unfired_refractory_brick_curving')
 
-  // Step 4A: PBF — fire the unfired brick
-  event.recipes.gtceu
-    .primitive_blast_furnace('gregitas:ig/refractory_brick_pbf')
-    .itemInputs('gregitas:unfired_refractory_brick')
-    .itemOutputs('immersivegeology:refractory_brick')
-    .duration(1800)
-
-  // Step 4B: EBF — fire the unfired brick
+  // Step 4: EBF — fire the unfired brick
   event.recipes.gtceu
     .electric_blast_furnace('gregitas:ig/refractory_brick_ebf')
     .itemInputs('gregitas:unfired_refractory_brick')
     .itemOutputs('immersivegeology:refractory_brick')
-    .EUt(LV)
-    .blastFurnaceTemp(1500)
+    .EUt(MV)
+    .blastFurnaceTemp(1700)
     .duration(100)
 
   // Step 5: Create Deploying — reinforce refractory brick storage block with bronze plate
