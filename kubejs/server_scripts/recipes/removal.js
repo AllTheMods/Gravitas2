@@ -172,6 +172,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "railcraft:brass_ingot_crafted_with_ingots" })
   event.remove({ id: "railcraft:wooden_tie"})
   event.remove({ id: "railcraft:wooden_tie_bottle"})
+  event.remove({ id: "/^railcraft:.*block_from.*ingot/"})
 
   /// Railways (Steam n Rails)
   event.remove({ mod: "railways", id: /^railways:crafting\/smokestack.*/})
@@ -240,6 +241,19 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "createdieselgenerators:crafting/asphalt_block"})
   event.remove({ id: "createdieselgenerators:mixing/asphalt_block"})
 
+  // Remove create block/ingot/nugget crafting table compression
+  event.remove({ id: "/^create:.*block_from_compacting/"})
+  event.remove({ id: "/^create:.*ingot_from_compacting/"})
+  event.remove({ id: "/^create:.*ingot_from_decompacting/"})
+  event.remove({ id: "/^create:.*nugget_from_decompacting/"})
+  event.remove({ id: "/^createaddition:crafting\/[^_]*_block/"})
+  event.remove({ id: "/^createaddition:crafting\/[^_]*_nugget/"})
+  event.remove({ id: "/^createaddition:crafting\/[^_]*_ingot/"})
+  event.remove({ id: "/^vintage:craft\/.*nuggets_to_ingot/"})
+  event.remove({ id: "/^vintage:craft\/.*ingots_to_block/"})
+  event.remove({ id: "/^vintage:craft\/.*ingot_to_nuggets/"})
+  event.remove({ id: "/^vintage:craft\/.*block_to_ingots/"})
+
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
   event.remove({ id: "create:pressing/iron_ingot" })
@@ -304,57 +318,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ mod: "treetap", output: "treetap:tap" })
   event.remove({ id: "treetap:water_from_crying_obsidian" })
 
-  // Immersive Engineering
-
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cokebrick" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_cokebrick" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastbrick_reinforced" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:blastfurnace_preheater" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_blastbrick_reinforced" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:fertilizer" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:cloche" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:waterwheel_segment" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill_base" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:watermill" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:windmill" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:sample_drill" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dynamo" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:wooden_barrel" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crafting_table" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:crate" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:reinforced_crate" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coal_coke" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:dust_coke" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:coke" })
-  event.remove({ mod: "immersiveengineering", output: "immersiveengineering:slab_coke" })
-
-  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:.*_hammering/})
-  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/raw_hammercrushing.*/})
-  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:crafting\/hammercrushing.*/})
-
-  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:fermenter\/.*/})
-  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:mixer\/.*/})
-  event.remove({ mod: "immersiveengineering", id: /^immersiveengineering:squeezer\/.*/})
-
-  event.remove({ id: "immersiveengineering:crafting/survey_tools"})
-  event.remove({ id: "immersiveengineering:crafting/string"})
-  event.remove({ id: `/^immersiveengineering:crafting\/pickaxe_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting\/axe_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting\/shovel_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting\/sword_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting\/hoe_.*/`})
-  event.remove({ id: `/^immersiveengineering:crafting\/stick_.*/`})
-  event.remove({ id: "immersiveengineering:crafting/wirecutter"})
-  event.remove({ id: "immersiveengineering:crafting/craftingtable"})
-  event.remove({ id: "immersiveengineering:crafting/workbench"})
-  event.remove({ id: "immersiveengineering:crafting/ersatz_leather"})
-  event.remove({ id: "createaddition:pressing/constantan_ingot"})
-  event.remove({output: `/^immersiveengineering:plate_.*/`, input: "immersiveengineering:wirecutter"})
-  event.remove({ id: "createaddition:compat/immersiveengineering/item_application/kiln_brick"})
-  event.remove({ id: "createaddition:compat/immersiveengineering/item_application/kiln_brick_using_deployer"})
-  
 
   //Firmalife
   event.remove({ id: "firmalife:alloy/stainless_steel"})
@@ -392,6 +355,12 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:diorite"})
   event.remove({ id: "minecraft:stone"})
   event.remove({ id: "minecraft:sugar_from_honey_bottle"})
+
+  // Not vanilla but a lot of block and nugget recipes
+  // start with minecraft. Maybe from NC?
+  event.remove({ id: "/^minecraft:.*_from_block/" })
+  event.remove({ id: "/^minecraft:.*_from_nugget/" })
+  event.remove({ id: '/^minecraft:ingot_to_block.*/' })
 
   //PM
   event.remove({ id: "potionsmaster:blaze_powder"})
@@ -579,6 +548,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: 'thoriumreactors:concentrating/yellow_cake'})
   event.remove({ id: 'thoriumreactors:crystallizing/enriched_uranium_pellet'})
   event.remove({ id: 'thoriumreactors:titanium_block_craft_from_ingot'})
+  event.remove({ id: '/^thoriumreactors:.*ingot_craft_from_block/'})
+  event.remove({ id: '/^thoriumreactors:.*ingot_craft_from_nugget/'})
+  event.remove({ id: '/^thoriumreactors:.*block_craft_from_ingot/'})
 
   //wireless chargers
 
@@ -659,10 +631,6 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "farmersdelight:cutting/saddle"})
   event.remove({ id: "dfc:crafting/alt_fire_clay"})
 
-  event.remove({ id: "immersivegeology:crafting/get_ingot_from_iron_nuggets"})
   event.remove({ id: "createdieselgenerators:compression_molding/bucket"})
-
-  event.remove({ id: /^immersivegeology:crafting\/.*_with_work_hammer/})
-  event.remove({ id: /^immersivegeology:crafting\/.*_with_bronze_hammer/})
 
 }

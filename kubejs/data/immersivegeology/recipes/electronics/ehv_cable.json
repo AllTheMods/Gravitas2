@@ -1,0 +1,19 @@
+{
+  "type": "immersiveengineering:blueprint",
+  "category": "electronics",
+  "inputs": [
+    {
+      "base_ingredient": { "item": "immersivegeology:plate_ehv_insulation" },
+      "count": 4
+    },
+    {
+      "base_ingredient": { "tag": "forge:fine_wires/platinum" },
+      "count": 4
+    },
+    {
+      "base_ingredient": { "tag": "forge:storage_blocks/electrum" },
+      "count": 1
+    }
+  ],
+  "result": { "count": 2, "item": "immersivegeology:energy_pipe_high_voltage_cable" }
+}

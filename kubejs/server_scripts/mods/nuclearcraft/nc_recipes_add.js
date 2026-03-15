@@ -2,4 +2,5 @@
 
 const ncRecipesAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   ncCentrifugeManual(event)
+  ncGtNuggets(event)
 }

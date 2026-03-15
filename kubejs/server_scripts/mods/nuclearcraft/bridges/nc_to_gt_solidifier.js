@@ -103,7 +103,9 @@ function resolveNcIfOutput(output) {
     const path = itemId.substring(colon + 1)
     // Only create solidifier recipes for NC items — if another mod owns the item,
     // that mod (or GT natively) already provides a solidifier recipe for it.
-    if (ns !== "nuclearcraft") {
+    // AlmostUnified changes magnesium and zirconium to IG, we still want to
+    // bridge those recipes
+    if (ns !== "nuclearcraft" && ns !== "immersivegeology") {
       return null
     }
     if ($ForgeRegistries.ITEMS.containsKey(new $ResourceLocation("gtceu", path))) {
@@ -165,6 +167,7 @@ let ncIngotFormerToGtSolidifier = (/** @type {Internal.RecipesEventJS} */ event)
       skipped++
       return
     }
+
 
     // Fluid input — always the first (and only) entry in inputFluids
     const rawInputs = Array.isArray(json.inputFluids) ? json.inputFluids : []

@@ -116,9 +116,13 @@ var ncPressurizer = (/** @type {Internal.RecipesEventJS} */ event) => {
     if (!inputStr) { skipped++; return }
 
     try {
-      if (outputPath.endsWith("_plate")) {
+      if (outputPath.endsWith("_plate") || outputPath.startsWith("plate_")) {
         // --- Plate recipes ---
+        // Handles both M_plate (NC/GT) and plate_M (IG) naming conventions
         var material = ncPrMaterialFrom(outputId, "_plate")
+        if (!material && outputPath.startsWith("plate_")) {
+          material = outputPath.slice(6)
+        }
         if (!material) { skipped++; return }
 
         // Skip if GT already generates this plate
@@ -172,7 +176,13 @@ var ncPressurizer = (/** @type {Internal.RecipesEventJS} */ event) => {
         } else if (inputEntry.tag) {
           var tagStr = String(inputEntry.tag)
           if (tagStr.startsWith("forge:ingots/")) {
-            constituentId = "nuclearcraft:" + tagStr.slice(13) + "_ingot"
+            var mat = tagStr.slice(13)
+            // Prefer IG (ingot_M naming) over NC so AU doesn't need to remap outputs
+            if ($ForgeRegistries.ITEMS.containsKey(new $ResourceLocation(String("immersivegeology:ingot_" + mat)))) {
+              constituentId = "immersivegeology:ingot_" + mat
+            } else {
+              constituentId = "nuclearcraft:" + mat + "_ingot"
+            }
           }
         }
         if (constituentId) {

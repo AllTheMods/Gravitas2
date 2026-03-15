@@ -169,16 +169,15 @@ const recipeCategories = {
     gtceu_ore_vein_diagram: "gtceu:ore_vein_diagram",
     immersiveengineering_alloy: "immersiveengineering:alloy",
     immersiveengineering_arc_furnace: "immersiveengineering:arc_furnace",
+    immersiveengineering_mixer: "immersiveengineering:mixer",
     immersiveengineering_blast_furnace: "immersiveengineering:blast_furnace",
     immersiveengineering_blast_furnace_fuel: "immersiveengineering:blast_furnace_fuel",
     immersiveengineering_blueprint: "immersiveengineering:blueprint",
     immersiveengineering_bottling_machine: "immersiveengineering:bottling_machine",
     immersiveengineering_coke_oven: "immersiveengineering:coke_oven",
-    immersiveengineering_crusher: "immersiveengineering:crusher",
     immersiveengineering_fermenter: "immersiveengineering:fermenter",
     immersiveengineering_metal_press: "immersiveengineering:metal_press",
     immersiveengineering_mixer: "immersiveengineering:mixer",
-    immersiveengineering_refinery: "immersiveengineering:refinery",
     immersiveengineering_sawmill: "immersiveengineering:sawmill",
     immersiveengineering_squeezer: "immersiveengineering:squeezer",
     tfc_pumpkin_knapping: "tfc:pumpkin_knapping",
@@ -230,5 +229,6 @@ const recipeCategories = {
     scguns_macerating: "scguns:macerating",
     scguns_mechanical_pressing: "scguns:mechanical_pressing",
     scguns_powered_macerating: "scguns:powered_macerating",
-    scguns_powered_mechanical_pressing: "scguns:powered_mechanical_pressing"
+    scguns_powered_mechanical_pressing: "scguns:powered_mechanical_pressing",
+    immersivegeology_bloomery: "immersivegeology:bloomery"
 }

@@ -12,4 +12,11 @@ let registerFluids = (/** @type {Registry.Fluid} */ event) => {
 
   // Leaded glass fluid for GT-DFC integration
   event.create("gregitas:leaded_glass").thinTexture(0x938e98).displayName("Molten Leaded Glass")
+
+  // IE HOP Graphite chain
+  event.create("gregitas:acetylene")
+    .stillTexture("gtceu:block/material_sets/dull/gas")
+    .flowingTexture("gtceu:block/material_sets/dull/gas")
+    .color(0xd4d4d4)
+    .displayName("Acetylene")
 }

@@ -191,9 +191,6 @@ event.replaceInput({id: "woodencog:crushing/milling_raw_quartzite" }, "tfc:rock/
   event.replaceInput({ id: "firmalife:crafting/vat"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
   event.replaceInput({ id: "firmalife:crafting/jarring_station"}, "firmalife:metal/sheet/stainless_steel", "gtceu:bronze_plate")
 
-  //IE
-  event.replaceInput({ mod: "immersiveengineering"}, "immersiveengineering:hemp_fiber", "tfc:jute_fiber")
-
   //Misc
   event.replaceInput({ type: "minecraft:crafting_shaped"}, "minecraft:gold_block", "#forge:double_plates/gold")
   event.replaceInput({ type: "minecraft:crafting_shapeless"}, "minecraft:amethyst_shard", "#forge:gems/amethyst")
@@ -238,8 +235,6 @@ event.replaceInput(
   event.replaceOutput({ id: `/^gtceu:blasting\/smelt_.*_ore_to_ingot/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceOutput({ id: `/^minecraft:iron_ingot_from_.*/`}, "minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ mod: "computercraft"}, "minecraft:redstone", "#gtceu:circuits/lv")
-
-  event.replaceInput({ mod: "immersiveengineering"}, "#forge:rods/aluminum", "gtceu:aluminium_rod")
 
 //createdeco
 
@@ -350,9 +345,6 @@ event.replaceInput(
 
   event.replaceInput({ input: "firmalife:treated_wood" }, "firmalife:treated_wood", "#forge:treated_wood")
   event.replaceInput({ input: "gtceu:treated_wood_planks" }, "gtceu:treated_wood_planks", "#forge:treated_wood")
-  event.replaceInput({ input: "immersiveengineering:treated_wood_packaged" }, "immersiveengineering:treated_wood_packaged", "#forge:treated_wood")
-  event.replaceInput({ input: "immersiveengineering:treated_wood_vertical" }, "immersiveengineering:treated_wood_vertical", "#forge:treated_wood")
-  event.replaceInput({ input: "immersiveengineering:treated_wood_horizontal" }, "immersiveengineering:treated_wood_horizontal", "#forge:treated_wood")
   
   //netherrack/cinder flour
   event.replaceInput({ input: "minecraft:netherrack" }, "minecraft:netherrack", "#forge:netherrack")

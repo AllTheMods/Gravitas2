@@ -476,4 +476,15 @@ let registerItems = (/** @type {Registry.Item} */ event) => {
     .texture("gtceu:item/material_sets/dull/dust")
     .color(0, 0xd3d4bf)
 
+  // IG Refractory chain items
+  event.create("gregitas:fire_brick_dust")
+    .displayName("Fire Brick Dust")
+    .texture("gtceu:item/material_sets/dull/dust")
+    .color(0, 0xa38568)
+
+  event.create("gregitas:unfired_refractory_brick")
+    .displayName("Unfired Refractory Brick")
+    .texture("gtceu:item/material_sets/dull/ingot")
+    .color(0, 0x6b6d6e)
+
 }
