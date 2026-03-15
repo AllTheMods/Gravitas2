@@ -10,4 +10,6 @@ var igRecipesReplace = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.replaceInput({ mod: "immersivegeology" },`#forge:${form}/high_speed_steel`, `#forge:${form}/hssg`)
     event.replaceOutput({ mod: "immersivegeology" },`#forge:${form}/high_speed_steel`, `#forge:${form}/hssg`)
   });
+
+  event.replaceInput({ mod: "immersivegeology" }, "immersiveengineering:circuit_board", "gtceu:phenolic_circuit_board")
 }

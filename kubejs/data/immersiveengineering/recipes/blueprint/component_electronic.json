@@ -1,0 +1,23 @@
+{
+  "type": "immersiveengineering:blueprint",
+  "category": "components",
+  "inputs": [
+    {
+      "base_ingredient": { "tag": "forge:gems/quartz" },
+      "count": 1
+    },
+    {
+      "base_ingredient": { "tag": "forge:fine_wires/electrum" },
+      "count": 2
+    },
+    {
+      "base_ingredient": { "item": "minecraft:redstone" },
+      "count": 1
+    },
+    {
+      "base_ingredient": { "tag": "forge:treated_wood_slab" },
+      "count": 3
+    }
+  ],
+  "result": { "item": "immersiveengineering:component_electronic" }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:blueprint",
+  "category": "components",
+  "inputs": [
+    {
+      "base_ingredient": { "tag": "forge:plates/tungsten" },
+      "count": 4
+    },
+    {
+      "base_ingredient": { "tag": "forge:ingots/copper" },
+      "count": 1
+    }
+  ],
+  "result": { "item": "immersivegeology:mechanical_component_tungsten" }
+}

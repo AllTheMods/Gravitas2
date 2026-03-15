@@ -172,6 +172,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "railcraft:brass_ingot_crafted_with_ingots" })
   event.remove({ id: "railcraft:wooden_tie"})
   event.remove({ id: "railcraft:wooden_tie_bottle"})
+  event.remove({ id: "/^railcraft:.*block_from.*ingot/"})
 
   /// Railways (Steam n Rails)
   event.remove({ mod: "railways", id: /^railways:crafting\/smokestack.*/})
@@ -239,6 +240,19 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:sequenced_assembly/precision_mechanism"})
   event.remove({ id: "createdieselgenerators:crafting/asphalt_block"})
   event.remove({ id: "createdieselgenerators:mixing/asphalt_block"})
+
+  // Remove create block/ingot/nugget crafting table compression
+  event.remove({ id: "/^create:.*block_from_compacting/"})
+  event.remove({ id: "/^create:.*ingot_from_compacting/"})
+  event.remove({ id: "/^create:.*ingot_from_decompacting/"})
+  event.remove({ id: "/^create:.*nugget_from_decompacting/"})
+  event.remove({ id: "/^createaddition:crafting\/[^_]*_block/"})
+  event.remove({ id: "/^createaddition:crafting\/[^_]*_nugget/"})
+  event.remove({ id: "/^createaddition:crafting\/[^_]*_ingot/"})
+  event.remove({ id: "/^vintage:craft\/.*nuggets_to_ingot/"})
+  event.remove({ id: "/^vintage:craft\/.*ingots_to_block/"})
+  event.remove({ id: "/^vintage:craft\/.*ingot_to_nuggets/"})
+  event.remove({ id: "/^vintage:craft\/.*block_to_ingots/"})
 
   //Cast iron plate jank
   event.remove({ id: "gtceu:shaped/plate_iron" })
@@ -341,6 +355,11 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "minecraft:diorite"})
   event.remove({ id: "minecraft:stone"})
   event.remove({ id: "minecraft:sugar_from_honey_bottle"})
+
+  // Not vanilla but a lot of block and nugget recipes
+  // start with minecraft. Maybe from NC?
+  event.remove({ id: "/^minecraft:.*_from_block/" })
+  event.remove({ id: "/^minecraft:.*_from_nugget/" })
 
   //PM
   event.remove({ id: "potionsmaster:blaze_powder"})

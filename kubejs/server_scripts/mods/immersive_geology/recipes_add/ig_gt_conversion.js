@@ -37,6 +37,20 @@ var ig_gt_ores = [
 ]
 
 let addIgGtConversions = (/** @type {Internal.RecipesEventJS} */ event) => {
+
+  event.remove({ id: "tfc_ie_addon:crusher/cryolite" })
+  event.custom({
+    type: "immersiveengineering:crusher",
+    energy: 6000,
+    input: { item: "tfc:ore/cryolite" },
+    result: { item: "immersivegeology:dirty_crushed_ore_cryolite", count: 1 },
+    secondaries: [
+      { chance: 0.33, output: { item: "immersivegeology:dirty_crushed_ore_cryolite" } },
+      { chance: 0.165, output: { item: "immersivegeology:dirty_crushed_ore_cryolite" } }
+    ],
+    time: 100,
+  })
+  
   ig_gt_ores.forEach((ore) => {
     var gt_crushed = "gtceu:crushed_" + ore.gt + "_ore"
     var gt_raw = (ore.gt === "copper" || ore.gt === "gold")

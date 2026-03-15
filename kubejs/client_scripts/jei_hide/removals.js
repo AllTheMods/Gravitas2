@@ -77,7 +77,7 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
     event.hide('immersiveengineering:advanced_blast_furnace')
     event.hide('immersiveengineering:mixer')
     event.hide('immersivegeology:bloomery')
-    event.hide('/^immersivegeology:.*tungsten_carbide.*/')
+    event.hide('/^immersivegeology:crate_.*/')
 
     //ID
     event.hide("integrateddynamics:squeezer")

@@ -3,10 +3,11 @@
 var igRecipesAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   addIgGtConversions(event)
   igGravitySeparator(event)
+  igCentrifuge(event)
   igRefractoryChain(event)
   igFluidOutputFix(event)
   igMixerBridge(event)
   igEbfBridge(event)
   igGtBlocksNuggets(event)
-  igMultiblockRecipes(event)
+  igMiscRecipes(event)
 }

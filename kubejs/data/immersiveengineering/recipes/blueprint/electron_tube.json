@@ -1,0 +1,23 @@
+{
+  "type": "immersiveengineering:blueprint",
+  "category": "components",
+  "inputs": [
+    {
+      "base_ingredient": { "item": "gtceu:glass_tube" },
+      "count": 1
+    },
+    {
+      "base_ingredient": { "item": "minecraft:redstone" },
+      "count": 1
+    },
+    {
+      "base_ingredient": { "tag": "forge:plates/nickel" },
+      "count": 1
+    },
+    {
+      "base_ingredient": { "tag": "forge:fine_wires/copper" },
+      "count": 2
+    }
+  ],
+  "result": { "item": "immersiveengineering:electron_tube" }
+}

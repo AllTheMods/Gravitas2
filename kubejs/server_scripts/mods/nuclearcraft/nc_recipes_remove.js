@@ -36,4 +36,6 @@ let ncRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   // NC-related crafting recipes registered under the minecraft: namespace
   event.remove({ id: "/^minecraft:nuclearcraft_.*_dust/" })
   event.remove({ id: "/^minecraft:nuclearcraft_.*_plate/" })
+
+  event.remove({ id: "/^nuclearcraft:[^_]*_block/" })
 }
