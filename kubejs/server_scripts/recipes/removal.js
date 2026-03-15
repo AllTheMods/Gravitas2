@@ -360,6 +360,7 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   // start with minecraft. Maybe from NC?
   event.remove({ id: "/^minecraft:.*_from_block/" })
   event.remove({ id: "/^minecraft:.*_from_nugget/" })
+  event.remove({ id: '/^minecraft:ingot_to_block.*/' })
 
   //PM
   event.remove({ id: "potionsmaster:blaze_powder"})
