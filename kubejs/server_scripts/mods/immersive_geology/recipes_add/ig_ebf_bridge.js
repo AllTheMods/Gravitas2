@@ -18,18 +18,20 @@ var igEbfBridge = (/** @type {Internal.RecipesEventJS} */ event) => {
   ]
   for (var i = 0; i < IG_EBF_GRITS.length; i++) {
     var row = IG_EBF_GRITS[i]
-    event.recipes.gtceu
+    var noGasRecipe = event.recipes.gtceu
       .electric_blast_furnace("gregitas:ig/ebf/" + row.id)
       .itemInputs("immersivegeology:" + row.input)
       .itemOutputs(row.out)
       .blastFurnaceTemp(row.temp).EUt(row.eut).duration(row.dur)
     if (row.gas) {
+      noGasRecipe.circuit(1)
       event.recipes.gtceu
         .electric_blast_furnace("gregitas:ig/ebf/" + row.id + "_" + row.gas)
         .itemInputs("immersivegeology:" + row.input)
         .itemOutputs(row.out)
         .inputFluids(Fluid.of("gtceu:" + row.gas, row.mb))
         .blastFurnaceTemp(row.temp).EUt(row.eut).duration(row.gasDur)
+        .circuit(2)
     }
   }
 
@@ -61,6 +63,7 @@ var igEbfBridge = (/** @type {Internal.RecipesEventJS} */ event) => {
     .blastFurnaceTemp(1900)
     .EUt(MV)
     .duration(900)
+    .circuit(1)
 
   event.recipes.gtceu
     .electric_blast_furnace("gregitas:ig/ebf/vanadium_oxide_nitrogen")
@@ -71,6 +74,7 @@ var igEbfBridge = (/** @type {Internal.RecipesEventJS} */ event) => {
     .blastFurnaceTemp(1900)
     .EUt(MV)
     .duration(600)
+    .circuit(2)
 
   // --- EBF: calcium slag (carbothermic reduction) ---------------------------
 
@@ -113,18 +117,20 @@ var igEbfBridge = (/** @type {Internal.RecipesEventJS} */ event) => {
   ]
   for (var i = 0; i < IG_EBF_CRYSTALS.length; i++) {
     var row = IG_EBF_CRYSTALS[i]
-    event.recipes.gtceu
+    var noGasRecipe = event.recipes.gtceu
       .electric_blast_furnace("gregitas:ig/ebf/crystal_" + row.mineral)
       .itemInputs("immersivegeology:crystal_" + row.mineral)
       .itemOutputs(row.out)
       .blastFurnaceTemp(row.temp).EUt(row.eut).duration(row.dur)
     if (row.gas) {
+      noGasRecipe.circuit(1)
       event.recipes.gtceu
         .electric_blast_furnace("gregitas:ig/ebf/crystal_" + row.mineral + "_" + row.gas)
         .itemInputs("immersivegeology:crystal_" + row.mineral)
         .itemOutputs(row.out)
         .inputFluids(Fluid.of("gtceu:" + row.gas, row.mb))
         .blastFurnaceTemp(row.temp).EUt(row.eut).duration(row.gasDur)
+        .circuit(2)
     }
   }
 
@@ -200,18 +206,20 @@ var igEbfBridge = (/** @type {Internal.RecipesEventJS} */ event) => {
   ]
   for (var i = 0; i < IG_BF_OXIDE_PELLETS.length; i++) {
     var row = IG_BF_OXIDE_PELLETS[i]
-    event.recipes.gtceu
+    var noGasRecipe = event.recipes.gtceu
       .electric_blast_furnace("gregitas:ig/ebf/oxide_pellet_" + row.mineral)
       .itemInputs("immersivegeology:oxide_pellet_" + row.mineral)
       .itemOutputs(row.out, row.slag || "immersiveengineering:slag")
       .blastFurnaceTemp(row.temp).EUt(row.eut || MV).duration(row.dur)
     if (row.gas) {
+      noGasRecipe.circuit(1)
       event.recipes.gtceu
         .electric_blast_furnace("gregitas:ig/ebf/oxide_pellet_" + row.mineral + "_" + row.gas)
         .itemInputs("immersivegeology:oxide_pellet_" + row.mineral)
         .itemOutputs(row.out, row.slag || "immersiveengineering:slag")
         .inputFluids(Fluid.of("gtceu:" + row.gas, row.mb))
         .blastFurnaceTemp(row.temp).EUt(row.eut || MV).duration(row.gasDur)
+        .circuit(2)
     }
   }
 
