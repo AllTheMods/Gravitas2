@@ -390,6 +390,31 @@ global.gregVeins = [
 	}
   ]
 
+global.igBookData = [
+  { id: "chalcopyrite", name: "Chalcopyrite",    formations: ["IGNEOUS_INTRUSIVE"],                                    minY: -64, maxY: 256 },
+  { id: "cuprite",      name: "Cuprite",          formations: ["SEDIMENTARY", "IGNEOUS_EXTRUSIVE"],                    minY: -64, maxY: 256 },
+  { id: "chalcocite",   name: "Chalcocite",       formations: ["IGNEOUS_EXTRUSIVE"],                                   minY: -64, maxY: 200 },
+  { id: "acanthite",    name: "Acanthite",        formations: ["IGNEOUS_INTRUSIVE"],                                   minY: -64, maxY: 212 },
+  { id: "apatite",      name: "Apatite",          formations: ["METAMORPHIC", "IGNEOUS_INTRUSIVE"],                    minY: -64, maxY: 212 },
+  { id: "fluorite",     name: "Fluorite",         formations: ["IGNEOUS_INTRUSIVE", "IGNEOUS_EXTRUSIVE"],              minY: -64, maxY: 220 },
+  { id: "pyrolusite",   name: "Pyrolusite",       formations: ["SEDIMENTARY"],                                         minY: -64, maxY: 112 },
+  { id: "ilmenite",     name: "Ilmenite",         formations: ["IGNEOUS_INTRUSIVE"],                                   minY:   5, maxY: 140 },
+  { id: "anatase",      name: "Anatase",          formations: ["IGNEOUS_INTRUSIVE", "IGNEOUS_EXTRUSIVE", "METAMORPHIC"], minY: 20, maxY: 180 },
+  { id: "cobaltite",    name: "Cobaltite",        formations: ["IGNEOUS_INTRUSIVE", "METAMORPHIC"],                    minY: -64, maxY:  72 },
+  { id: "millerite",    name: "Millerite",        formations: ["IGNEOUS_INTRUSIVE"],                                   minY: -64, maxY: 120 },
+  { id: "molybdenite",  name: "Molybdenite",      formations: ["IGNEOUS_INTRUSIVE"],                                   minY: -64, maxY: 212 },
+  { id: "scheelite",    name: "Scheelite",        formations: ["SEDIMENTARY", "IGNEOUS_INTRUSIVE"],                    minY: -32, maxY: 160 },
+  { id: "wolframite",   name: "Wolframite",       formations: ["IGNEOUS_EXTRUSIVE", "IGNEOUS_INTRUSIVE"],              minY:   0, maxY: 192 },
+  { id: "vanadinite",   name: "Vanadinite",       formations: ["IGNEOUS_INTRUSIVE"],                                   minY: -32, maxY: 140 },
+  { id: "smithsonite",  name: "Smithsonite",      formations: ["SEDIMENTARY"],                                         minY:  30, maxY:  70 },
+  { id: "lead",         name: "Lead",             formations: ["SEDIMENTARY"],                                         minY:   0, maxY:  50 },
+  { id: "platinum",     name: "Platinum",         formations: ["IGNEOUS_INTRUSIVE"],                                   minY:  10, maxY:  80 },
+  { id: "zircon",       name: "Zircon",           formations: ["IGNEOUS_INTRUSIVE"],                                   minY: -64, maxY: 200 },
+  { id: "thorianite",   name: "Thorianite",       formations: ["IGNEOUS_INTRUSIVE"],                                   minY: -32, maxY: 128 },
+  { id: "monazite",     name: "Monazite",         formations: ["SEDIMENTARY", "IGNEOUS_EXTRUSIVE"],                    minY:  12, maxY: 120 },
+  { id: "thorite",      name: "Thorite",          formations: ["IGNEOUS_INTRUSIVE"],                                   minY:   0, maxY:  80 },
+]
+
 /*
 GLOBAL FUEL DATA
 Currently used by:
