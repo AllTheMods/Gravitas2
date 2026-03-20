@@ -87,42 +87,51 @@ const replaceTFCHeatingAndCasting = (/** @type {Internal.RecipesEventJS} */ even
 // Immersive Geo ores fix 
 
   global.immGeoOres.forEach((ore) => {
+    if (ore.ore === "smithsonite") return
+
     event.custom({
       type: "tfc:heating",
-      ingredient: {
-        item: `immersivegeology:poor_ore_${ore.ore}`
-      },
-      result_fluid: {
-        fluid: `${ore.fluid}`,
-        amount: 16
-      },
+      ingredient: { item: `immersivegeology:poor_ore_${ore.ore}` },
+      result_fluid: { fluid: `${ore.fluid}`, amount: 24 },
       temperature: global.immGeoOresMelts[ore.ore]
     }).id(`gregitas:tfc/heating/immersive_geology/poor_${ore.ore}`)
-  
-  event.custom({
+
+    event.custom({
       type: "tfc:heating",
-      ingredient: {
-        item: `immersivegeology:normal_ore_${ore.ore}`
-      },
-      result_fluid: {
-        fluid: `${ore.fluid}`,
-        amount: 36
-      },
+      ingredient: { item: `immersivegeology:normal_ore_${ore.ore}` },
+      result_fluid: { fluid: `${ore.fluid}`, amount: 36 },
       temperature: global.immGeoOresMelts[ore.ore]
     }).id(`gregitas:tfc/heating/immersive_geology/normal_${ore.ore}`)
-  
-  event.custom({
+
+    event.custom({
       type: "tfc:heating",
       ingredient: { item: `immersivegeology:rich_ore_${ore.ore}` },
-      result_fluid: {
-        fluid: `${ore.fluid}`,   
-        amount: 48
-      },
+      result_fluid: { fluid: `${ore.fluid}`, amount: 48 },
       temperature: global.immGeoOresMelts[ore.ore]
     }).id(`gregitas:tfc/heating/immersive_geology/rich_${ore.ore}`)
-  
- 
   })
+
+  // Smithsonite: normal yield reduced
+  event.custom({
+    type: "tfc:heating",
+    ingredient: { item: "immersivegeology:poor_ore_smithsonite" },
+    result_fluid: { fluid: "tfc:metal/zinc", amount: 13 },
+    temperature: 420
+  }).id("gregitas:tfc/heating/immersive_geology/poor_smithsonite")
+
+  event.custom({
+    type: "tfc:heating",
+    ingredient: { item: "immersivegeology:normal_ore_smithsonite" },
+    result_fluid: { fluid: "tfc:metal/zinc", amount: 20 },
+    temperature: 420
+  }).id("gregitas:tfc/heating/immersive_geology/normal_smithsonite")
+
+  event.custom({
+    type: "tfc:heating",
+    ingredient: { item: "immersivegeology:rich_ore_smithsonite" },
+    result_fluid: { fluid: "tfc:metal/zinc", amount: 26 },
+    temperature: 420
+  }).id("gregitas:tfc/heating/immersive_geology/rich_smithsonite")
 
 
 
