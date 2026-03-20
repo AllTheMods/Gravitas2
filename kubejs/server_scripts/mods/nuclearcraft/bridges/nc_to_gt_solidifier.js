@@ -34,6 +34,7 @@ const GT_IF_INGOT_MB = 144
 // NC ingot_former recipe paths (everything after "nuclearcraft:ingot_former/") to skip.
 const NC_IF_EXCLUDED_PATHS = {
   "boron_arsenide": true,  // GT handles this via chemical reactor
+  "molten_zirconium": true,
 }
 
 // Hardcoded overrides for NC forge-tag inputs that should resolve to a specific

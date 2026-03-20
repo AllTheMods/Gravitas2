@@ -44,6 +44,8 @@ const NC_MA_EXCLUDED_PATHS = {
   uranium_chunk:    true,
   boron_chunk:      true,
   ingots_aluminum:  true,
+  ingots_zirconium: true,
+  ingots_hafnium:   true,
 }
 
 // Ingot input bypass: NC ingots for these materials are always bridged to GT macerator,

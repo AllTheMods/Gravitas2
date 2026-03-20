@@ -50,7 +50,8 @@ var NC_PR_OTHER_DURATION = 300
 // --- Skip list ---------------------------------------------------------------
 
 var NC_PR_SKIP_IDS = [
-  "dusts_diamond", "ingots_graphite", "dusts_obsidian", "dusts_quartz", "ingots_silicon_carbide"
+  "dusts_diamond", "ingots_graphite", "dusts_obsidian", "dusts_quartz", "ingots_silicon_carbide",
+  "ingots_zirconium"
 ]
 
 // Fluid overrides: material → concrete fluid ID (no amount suffix)
