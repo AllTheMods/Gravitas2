@@ -202,7 +202,16 @@ global.immGeoOres = [
   {
     ore:"uraninite",
     fluid:"tfc_ie_addon:metal/uranium"
-  }
+  },
+  { ore: "chalcocite",  fluid: "tfc:metal/copper" },
+  { ore: "cuprite",     fluid: "tfc:metal/copper" },
+  { ore: "galena",      fluid: "tfc_ie_addon:metal/lead" },
+  { ore: "acanthite",   fluid: "tfc:metal/silver" },
+  { ore: "chromite",    fluid: "gtceu:chromium" },
+  { ore: "thorite",     fluid: "gtceu:thorium" },
+  { ore: "thorianite",  fluid: "gtceu:thorium" },
+  { ore: "smithsonite", fluid: "tfc:metal/zinc" },
+  { ore: "millerite",   fluid: "tfc:metal/nickel" },
 ]
 
 global.immGeoOresMelts = {
@@ -217,9 +226,16 @@ global.immGeoOresMelts = {
   "cassiterite": 230,
   "magnetite": 1535,
   "sphalerite": 420,
-  "uraninite": 1132
-
-
+  "uraninite": 1132,
+  "chalcocite":  1080,
+  "cuprite":     1080,
+  "galena":      327,
+  "acanthite":   960,
+  "chromite":    1907,
+  "thorite":     1793,
+  "thorianite":  1793,
+  "smithsonite": 420,
+  "millerite":   1455,
 }
 
 global.immGeoOresCap = {
@@ -234,7 +250,16 @@ global.immGeoOresCap = {
   "cassiterite": 2.857,
   "magnetite": 1.143,
   "sphalerite": 1.905,
-  "uraninite": 1.143
+  "uraninite": 1.143,
+  "chalcocite":  1.143,
+  "cuprite":     1.143,
+  "galena":      1.143,
+  "acanthite":   0.833,
+  "chromite":    1.143,
+  "thorite":     0.667,
+  "thorianite":  0.667,
+  "smithsonite": 1.905,
+  "millerite":   1.143,
 }
 
 let enderTC = [

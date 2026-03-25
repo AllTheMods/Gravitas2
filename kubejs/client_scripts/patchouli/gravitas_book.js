@@ -40,6 +40,19 @@ let addTFCBookEntries = (/** @type {Internal.GenerateClientAssetsEventJS} */ eve
       multiblocks: patterns
     }
   }
+  const igFormationStones = {
+    IGNEOUS_INTRUSIVE: ["granite", "diorite", "gabbro"],
+    IGNEOUS_EXTRUSIVE: ["andesite", "basalt", "dacite", "rhyolite"],
+    SEDIMENTARY:       ["chalk", "chert", "claystone", "conglomerate", "dolomite", "limestone", "shale"],
+    METAMORPHIC:       ["gneiss", "marble", "phyllite", "quartzite", "schist", "slate"],
+  }
+  const igFormationLabel = {
+    IGNEOUS_INTRUSIVE: "Intrusive Igneous",
+    IGNEOUS_EXTRUSIVE: "Extrusive Igneous",
+    SEDIMENTARY:       "Sedimentary",
+    METAMORPHIC:       "Metamorphic",
+  }
+
   //Veins
   entry.put("name", "Gregtech Veins")
   entry.put("category", "tfc:gregitas")
@@ -81,13 +94,48 @@ let addTFCBookEntries = (/** @type {Internal.GenerateClientAssetsEventJS} */ eve
   entry.put("extra_recipe_mappings", mapping)
   event.add("tfc:patchouli_books/field_guide/en_us/entries/gregitas/greg_veins", entry)
 
+  //IG Ores
+  entry.clear()
+  entry.put("name", "Immersive Geology Ores")
+  entry.put("category", "tfc:gregitas")
+  entry.put("icon", "immersivegeology:normal_ore_copper")
+  entry.put("read_by_default", true)
+  entry.put("sortnum", 2)
+  pages.clear()
+  pages.add({
+    type: "patchouli:text",
+    text: "$(1)Immersive Geology$() adds its own ore veins that spawn in $(1)TerraFirmaCraft$() $(thing)rock$() types."
+  })
+  pages.add({
+    type: "patchouli:text",
+    text: "Navigate through the $(thing)Veins$() to find in which $(thing)rock$() types those veins spawn."
+  })
+  global.igBookData.forEach((ore) => {
+    let formationDesc = ore.formations
+      .map((f) => `$(li)$(thing)${igFormationLabel[f]}$(): ${igFormationStones[f].map((s) => Utils.snakeCaseToTitleCase(s)).join(", ")}`)
+      .join("")
+    let text = `Found between $(thing)y=${ore.minY}$() and $(thing)y=${ore.maxY}$().$(br)Spawns in:${formationDesc}`
+    pages.add(createTextPage(ore.name, text))
+    let blocks = Utils.newList()
+    ore.formations.forEach((f) => {
+      igFormationStones[f].forEach((stone) => {
+        let bl = `immersivegeology:tfc_normal_ore_block_${ore.id}_${stone}`
+        if (Item.exists(bl)) blocks.add(bl)
+        else console.log(`IG book: could not find block ${bl}`)
+      })
+    })
+    pages.add(createMultiblock(blocks, `Normal-quality ore blocks for $(thing)${ore.name}$().`))
+  })
+  entry.put("pages", pages)
+  event.add("tfc:patchouli_books/field_guide/en_us/entries/gregitas/ig_ores", entry)
+
   //Dragons
   entry.clear()
   entry.put("name", "Ice And Fire Dragons")
   entry.put("category", "tfc:gregitas")
   entry.put("icon", "iceandfire:dragon_skull_fire")
   entry.put("read_by_default", true)
-  entry.put("sortnum", 2)
+  entry.put("sortnum", 3)
   pages.clear()
   pages.add({
     type: "patchouli:text",

@@ -51,6 +51,9 @@ let ieRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   // IE Crusher: c:raw_materials/* → dust conflicts with IG↔GT raw ore conversion
   event.remove({ id: /^immersiveengineering:crusher\/raw_ore_.*/ })
 
+  // IE Crusher: tfc_ie_addon default ore crusher recipes — replaced by TFC→IG conversions
+  event.remove({ id: /^tfc_ie_addon:crusher\/ore\/.*/ })
+
   event.remove({ id: "immersiveengineering:refinery/biodiesel" })
 
   event.remove({ id: /^immersiveengineering:crafting\/ingot.*to_nugget.*/})

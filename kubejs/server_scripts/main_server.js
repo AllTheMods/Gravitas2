@@ -61,6 +61,7 @@ ServerEvents.tags("worldgen/biome", (event) => {
 ServerEvents.tags("worldgen/placed_feature", (event) => {
   addGregVeinsToTags(event)
   removeDFCOreVeins(event)
+  addIGOresToTags(event)
 })
 
 ServerEvents.tags("item", (event) => {
@@ -99,6 +100,7 @@ ServerEvents.lowPriorityData((event) => {
   addTFCPartHeatingRecipes(event)
   overrideTFCArmourFinalWeld(event)
   addGregVeinData(event)
+  addIGVeins(event)
   addGenericData(event)
   overrideTFCWorldPreset(event)
 })
