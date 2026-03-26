@@ -232,6 +232,7 @@ let hideItems = (/** @type {Internal.HideJEIEventJS}*/ event) => {
 
     // NuclearCraft machines replaced by GT equivalents
     event.hide('nuclearcraft:melter')
+    event.hide('immersivegeology:hammer_stone')
 }
 
 

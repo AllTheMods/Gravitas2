@@ -16,4 +16,7 @@ let igRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({id: "/^immersivegeology:prospector.*/"})
   event.remove({id: "immersivegeology:crafting/craft_titanium_concrete"})
   event.remove({id: "immersivegeology:crafting/craft_reinforced_concrete"})
+  event.remove({ id: "immersivegeology:crafting/craft_igtoolkit_0"})
+  event.remove({ id: "immersivegeology:crafting/craft_igtoolkit_1"})
+  event.remove({ id: "immersivegeology:crafting/craft_igtoolkit_2"})
 }
