@@ -12,16 +12,6 @@ var IG_BLOCK_NUGGET_MATS = [
     blockFluid: "gtceu:magnesium",
     nuggetFluid: "gtceu:magnesium",
   },
-  {
-    material:   "zirconium",
-    ingotTag:   "#forge:ingots/zirconium",
-    nuggetTag:  "#forge:nuggets/zirconium",
-    blockItem:  "immersivegeology:storage_block_zirconium",
-    ingotItem:  "immersivegeology:ingot_zirconium",
-    nuggetItem: "immersivegeology:nugget_zirconium",
-    blockFluid: "nuclearcraft:zirconium",
-    nuggetFluid: "nuclearcraft:zirconium",
-  },
 ]
 
 var igGtBlocksNuggets = (/** @type {Internal.RecipesEventJS} */ event) => {

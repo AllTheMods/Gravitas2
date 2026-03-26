@@ -20,6 +20,7 @@ var igMiscRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     { gt: "tungsten_block",         ig: "storage_block_tungsten"},
     { gt: "vanadium_block",         ig: "storage_block_vanadium"},
     { gt: "zinc_block",             ig: "storage_block_zinc"},
+    { gt: "zirconium_block",        ig: "storage_block_zirconium"},
     { gt: "tungsten_carbide_block", ig: "storage_block_tungsten_carbide"},
   ]
 

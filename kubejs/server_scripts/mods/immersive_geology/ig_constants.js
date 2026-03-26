@@ -31,8 +31,8 @@ global.igMineralData = {
       id: "cuprite", value: "Cuprite",
       formations: ["SEDIMENTARY", "IGNEOUS_EXTRUSIVE"],
       variants: [
-        { suffix: "deep",    rarity: 55,  size: 30, density: 0.45, minY: -64, maxY: 80,  weights: [35, 40, 25] },
-        { suffix: "surface", rarity: 50,  size: 25, density: 0.30, minY: 40,  maxY: 256, weights: [70, 25, 5]  },
+        { suffix: "deep",    rarity: 80,  size: 30, density: 0.45, minY: -64, maxY: 80,  weights: [35, 40, 25] },
+        { suffix: "surface", rarity: 75,  size: 25, density: 0.30, minY: 40,  maxY: 256, weights: [70, 25, 5]  },
       ],
     },
     // Used to make Osmium, so super rare in the overworld

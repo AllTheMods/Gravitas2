@@ -357,7 +357,9 @@ const gtVacuumShit = [
   "stellite_100",
   "titanium_carbide",
   "titanium_tungsten_carbide",
-  "hastelloy_c_276"
+  "hastelloy_c_276",
+  "zirconium",
+  "hafnium",
 ]
 
 const thermalDepositsMap = {

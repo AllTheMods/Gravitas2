@@ -40,7 +40,17 @@ var ig_gt_ores = [
   { ig: "chalcocite",   gt: "chalcocite"       },
   { ig: "apatite",      gt: "apatite"          },
   { ig: "monazite",     gt: "monazite"         },
-  { ig: "fluorite",     gt: "fluorite",  ns: "gcyr" },
+  { ig: "fluorite",     gt: "fluorite",    ns: "gcyr" },
+  { ig: "zircon",       gt: "zircon",      ns: "gregitas_core" },
+  { ig: "wolframite",   gt: "wolframite",  ns: "gregitas_core" },
+  { ig: "smithsonite",  gt: "smithsonite", ns: "gregitas_core" },
+  { ig: "vanadinite",   gt: "vanadinite",  ns: "gregitas_core" },
+  { ig: "millerite",    gt: "millerite",   ns: "gregitas_core" },
+  { ig: "acanthite",    gt: "acanthite",   ns: "gregitas_core" },
+  { ig: "cuprite",      gt: "cuprite",     ns: "gregitas_core" },
+  { ig: "thorianite",   gt: "thorianite",  ns: "gregitas_core" },
+  { ig: "thorite",      gt: "thorite",     ns: "gregitas_core" },
+  { ig: "anatase",      gt: "anatase",     ns: "gregitas_core" },
 ]
 
 var tfc_ig_ores = [
