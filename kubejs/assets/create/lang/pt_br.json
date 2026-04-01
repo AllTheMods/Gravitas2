@@ -1,0 +1,17 @@
+{
+  "item.create.andesite_alloy": "Liga de Zinco Ígnea",
+  "item.create.electron_tube": "Válvula Eletrônica Primitiva",
+  "item.create.super_glue": "Tubo de Cola",
+  "block.create.andesite_casing": "Revestimento de Zinco Ígneo",
+  "block.create.andesite_encased_cogwheel": "Engrenagem Revestida de Zinco Ígneo",
+  "block.create.andesite_encased_large_cogwheel": "Engrenagem Grande Revestida de Zinco Ígneo",
+  "block.create.andesite_encased_shaft": "Eixo Revestido de Zinco Ígneo",
+  "block.create.andesite_funnel": "Funil de Zinco Ígneo",
+  "block.create.andesite_ladder": "Escada de Mão de Zinco Ígneo",
+  "block.create.andesite_pillar": "Pilar de Zinco Ígneo",
+  "block.create.andesite_tunnel": "Túnel de Zinco Ígneo",
+  "block.create.small_andesite_brick_slab": "Laje de Pequenos Tijolos de Zinco Ígneo",
+  "block.create.small_andesite_brick_stairs": "Escadas de Pequenos Tijolos de Zinco Ígneo",
+  "block.create.small_andesite_brick_wall": "Muro de Pequenos Tijolos de Zinco Ígneo",
+  "block.create.small_andesite_bricks": "Pequenos Tijolos de Zinco Ígneo"
+}

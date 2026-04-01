@@ -1,0 +1,13 @@
+{
+    "item.create_new_age.overcharged_iron_wire": "Fio de Ferro",
+    "item.create_new_age.overcharged_golden_wire": "Fio de Neodímio",
+    "item.create_new_age.overcharged_diamond_wire": "Fio de Grafeno Sobrecarregado",
+	
+    "block.create_new_age.magnetite_block": "Ímã de Ferrite",
+    "block.create_new_age.redstone_magnet": "Ímã de Redstone",
+    "block.create_new_age.layered_magnet": "Ímã de Neodímio-Ferro",
+    "block.create_new_age.fluxuated_magnetite": "Ímã de Neodímio Avançado",
+    "block.create_new_age.netherite_magnet": "Ímã de Samário-Cobalto",
+	
+    "block.create_new_age.generator_coil": "Bobina de Rotor"
+}
