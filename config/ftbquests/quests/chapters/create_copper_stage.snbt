@@ -14,7 +14,7 @@
 		id: "tfc:metal/ingot/copper"
 	}
 	id: "0C39D0EE2BB6E590"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
