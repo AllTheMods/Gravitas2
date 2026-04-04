@@ -1,0 +1,1339 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_rework"
+	group: "4B728CAFC5748917"
+	icon: "create:wrench"
+	id: "76182C5E34C1294B"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5E3723F67FF7EF8F"]
+			description: ["{gravitas.quest.igneous.desc.igneous_zinc_alloy}"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "create:andesite_alloy"
+			}
+			id: "65AA3DD3142F0BB3"
+			rewards: [{
+				count: 2
+				id: "251493E34FC20097"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "create:andesite_alloy"
+				}
+				random_bonus: 2
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "5DBD20052E0626E0"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.igneous_zinc_alloy.title}"
+			x: -1.875d
+			y: -0.625d
+		}
+		{
+			dependencies: ["65AA3DD3142F0BB3"]
+			description: ["{gravitas.quest.igneous.desc.shaft}"]
+			id: "507621DC20734652"
+			rewards: [{
+				count: 2
+				id: "362E7B19F02771FC"
+				item: "create:shaft"
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "4D2629C42A3C8E7F"
+				item: "create:shaft"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.shaft}"
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"507621DC20734652"
+				"744796CFA8BF6A26"
+			]
+			description: ["{gravitas.quest.igneous.desc.water_wheel}"]
+			id: "572045C1A9358D94"
+			rewards: [{
+				id: "1EE799DDB0BC635D"
+				item: "tfc:wooden_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5620EDA147C48814"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.water_wheel}"
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			description: ["{gravitas.quest.create_basic.desc.create}"]
+			icon: "create:wrench"
+			id: "5E3723F67FF7EF8F"
+			size: 1.8d
+			subtitle: "{gravitas.quest.create_basic.sub.create}"
+			tasks: [{
+				id: "39810AF1677F706D"
+				item: "create:wrench"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.create}"
+			x: -1.7999999999999998d
+			y: 0.8999999999999999d
+		}
+		{
+			dependencies: ["75FA4947A2D95EAB"]
+			description: ["{gravitas.quest.brass.desc.brass_casing}"]
+			id: "79B93D3A54E51E66"
+			rewards: [{
+				count: 3
+				id: "1557DD94D170AF9E"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "29B4C49D07EE742F"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.brass_casing}"
+			x: 1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5E3723F67FF7EF8F"]
+			description: ["{gravitas.quest.brass.desc.brass}"]
+			id: "75FA4947A2D95EAB"
+			rewards: [{
+				count: 3
+				id: "3D389DBA4056C56F"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:brass_ingot"
+				}
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "507072469AB68790"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:brass_ingot"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.brass_ingot}"
+			x: -0.625d
+			y: 1.875d
+		}
+		{
+			dependencies: ["5E3723F67FF7EF8F"]
+			description: ["{gravitas.quest.create_copper.desc.copper_ingot}"]
+			id: "180BF4E2EE861C22"
+			rewards: [{
+				id: "2CBCA1C605A9FFF1"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				random_bonus: 1
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "332005316065639E"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.copper_ingot}"
+			x: -3.125d
+			y: 1.875d
+		}
+		{
+			dependencies: ["65AA3DD3142F0BB3"]
+			description: ["{gravitas.quest.create_basic.desc.zinc_casing}"]
+			id: "744796CFA8BF6A26"
+			rewards: [{
+				count: 6
+				id: "1CBA0F3148776FBC"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "18F62134BE45AF8A"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.zinc_casing}"
+			x: -2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"79B93D3A54E51E66"
+				"34135B260DF2E6D3"
+			]
+			description: [
+				"{gravitas.quest.stage3.desc.mechcraft}"
+				"{gravitas.quest.brass.desc.mechanical_crafter}"
+			]
+			id: "6E86F53C8C599534"
+			rewards: [{
+				count: 6
+				id: "56B2A91332EB979D"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			tasks: [{
+				count: 15L
+				id: "6B853927CEB00215"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_crafter}"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6E86F53C8C599534"]
+			description: ["{gravitas.quest.brass.desc.crushing_wheel}"]
+			id: "58B5A72DCDC4A64A"
+			rewards: [{
+				id: "1EFFB9E066F0146D"
+				item: "gtceu:diamond_ore"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.stage3.subt.crushing}"
+			tasks: [{
+				count: 2L
+				id: "2C585E873505CA43"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.crushing_wheel}"
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"6E86F53C8C599534"
+				"58B5A72DCDC4A64A"
+				"36C79B5A1A68DC43"
+			]
+			description: ["{gravitas.quest.brass.desc.mechanical_roller}"]
+			id: "0DF6D3A12A88ED9A"
+			rewards: [{
+				id: "1AAFAF071E5BD716"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "06F6E5AD84F13353"
+				item: "create:mechanical_roller"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_roller.title}"
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			description: ["{gravitas.quest.brass.desc.quartz}"]
+			id: "1745CE8377681958"
+			tasks: [{
+				id: "66D41D39182CD499"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "tfc_ie_addon:mineral/quartz_shard"
+							}
+							{
+								Count: 1b
+								id: "minecraft:quartz"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.quartz}"
+			x: 3.9642857142857153d
+			y: 2.224489795918373d
+		}
+		{
+			dependencies: ["1745CE8377681958"]
+			description: ["{gravitas.quest.brass.desc.rose_quartz}"]
+			id: "057FDE759ABAF954"
+			rewards: [{
+				count: 4
+				id: "7EBEAE5E3EBB9089"
+				item: "create:polished_rose_quartz"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "344565F3904AD035"
+					item: "create:rose_quartz"
+					type: "item"
+				}
+				{
+					id: "631ECF330DB901DE"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "create:sandpaper"
+						}
+					}
+					title: "Any #create:sandpaper"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.brass.title.rose_quartz}"
+			x: 2.984693877551017d
+			y: 2.3877551020408276d
+		}
+		{
+			dependencies: ["057FDE759ABAF954"]
+			description: ["{gravitas.quest.brass.desc.electron_tube}"]
+			id: "34135B260DF2E6D3"
+			rewards: [{
+				count: 2
+				id: "1D01EB66489F76FA"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7B53EDCF3D8C8261"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.title.electron_tube}"
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"4CAED6A008F01912"
+				"34135B260DF2E6D3"
+				"79B93D3A54E51E66"
+			]
+			description: ["{gravitas.quest.brass.desc.deployer}"]
+			id: "2C7699F5E4354E1C"
+			rewards: [
+				{
+					id: "784967232F88B80A"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/chisel/wrought_iron"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 5
+					id: "0D12EB2CAA99DBEA"
+					item: "minecraft:iron_nugget"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "062754E1BBFC5B84"
+				item: "create:deployer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.deployer.title}"
+			x: 2.0051020408163325d
+			y: 3.8163265306122582d
+		}
+		{
+			dependencies: ["75FA4947A2D95EAB"]
+			description: ["{gravitas.quest.brass.desc.brass_hand}"]
+			id: "4CAED6A008F01912"
+			rewards: [
+				{
+					id: "369BFAEC57A26D4A"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+				{
+					id: "51D50013C09AADF5"
+					item: "minecraft:item_frame"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "39F25DA2C5E8E711"
+				item: "create:brass_hand"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.brass_hand}"
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2C7699F5E4354E1C"]
+			description: ["{gravitas.quest.brass.desc.tools}"]
+			id: "0A077A39B89831B6"
+			tasks: [{
+				id: "487725A30C4AA218"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.tools}"
+			x: 4.576530612244902d
+			y: 2.959183673469397d
+		}
+		{
+			dependencies: ["295A8F16BD59D3FE"]
+			description: ["{gravitas.quest.brass.desc.grip}"]
+			id: "2D27013744115002"
+			subtitle: "{gravitas.quest.brass.subt.grip}"
+			tasks: [{
+				id: "123218E09628D679"
+				item: {
+					Count: 1
+					id: "create:extendo_grip"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.extendo_grip.title}"
+			x: 5.838435374149654d
+			y: 0.8639455782313021d
+		}
+		{
+			dependencies: ["295A8F16BD59D3FE"]
+			description: ["{gravitas.quest.brass.desc.wand_of_symmetry}"]
+			id: "573C1AA3742A6D9F"
+			tasks: [{
+				id: "1A5F89D75077F16B"
+				item: "create:wand_of_symmetry"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.wand_of_symmetry.title}"
+			x: 5.743197278911559d
+			y: 2.2210884353741562d
+		}
+		{
+			dependencies: ["295A8F16BD59D3FE"]
+			description: ["{gravitas.quest.brass.desc.potato_cannon}"]
+			id: "302649B93B0E9C81"
+			subtitle: "{gravitas.quest.brass.subt.potato_cannon}"
+			tasks: [{
+				id: "5BE3A73AD6A88A96"
+				item: {
+					Count: 1
+					id: "create:potato_cannon"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.potato_cannon.title}"
+			x: 4.528911564625837d
+			y: 0.22108843537416334d
+		}
+		{
+			dependencies: ["36C79B5A1A68DC43"]
+			description: ["{gravitas.quest.brass.desc.mechanical_plough}"]
+			id: "13C160B4FC8FD7A1"
+			rewards: [{
+				id: "3EB3D35B39C82FA1"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "417B0AB33212D47E"
+				item: "create:mechanical_plough"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_plough.title}"
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["36C79B5A1A68DC43"]
+			description: ["{gravitas.quest.brass.desc.mechanical_harvester}"]
+			id: "72A6538861722E14"
+			rewards: [{
+				id: "3007FE20C903A4C5"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "08BACC75445A461F"
+				item: "create:mechanical_harvester"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_harvester.title}"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["36C79B5A1A68DC43"]
+			description: ["{gravitas.quest.brass.desc.mechanical_saw}"]
+			id: "6571A0873A95E296"
+			rewards: [{
+				id: "050664E2BBA2D7BA"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1EFF400B055FAA5E"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_saw.title}"
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["36C79B5A1A68DC43"]
+			description: ["{gravitas.quest.brass.desc.mechanical_drill}"]
+			id: "38F9A96870A14026"
+			rewards: [{
+				id: "76766FECCC9C12D0"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0F1DD7467BF69CFB"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_drill.title}"
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"65AA3DD3142F0BB3"
+				"0080E27D46503FC9"
+			]
+			description: ["{gravitas.quest.brass.desc.chassis}"]
+			id: "36C79B5A1A68DC43"
+			rewards: [{
+				count: 5
+				id: "1BDC5A2752CE51DA"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			tasks: [{
+				id: "45D58908067A45EF"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create:linear_chassis"
+							}
+							{
+								Count: 1b
+								id: "create:secondary_linear_chassis"
+							}
+							{
+								Count: 1b
+								id: "create:radial_chassis"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.chassis}"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			description: ["{gravitas.quest.brass.desc.mechanical_bearing}"]
+			id: "0080E27D46503FC9"
+			tasks: [
+				{
+					id: "5C2EC5A145AF0228"
+					item: "create:mechanical_bearing"
+					type: "item"
+				}
+				{
+					id: "7FEB985DAE63F8D5"
+					item: {
+						Count: 1
+						id: "create:super_glue"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.brass.mechanical_bearing}"
+			x: -0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"48C8D0CB8C53A8A4"
+				"16A78209EFF39A59"
+			]
+			description: ["{gravitas.quest.create_copper.desc.fluid_pipe}"]
+			id: "35FFC3490943BCD3"
+			rewards: [{
+				count: 2
+				id: "00EC30529BF06F3A"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "create:fluid_pipe"
+				}
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "004C22664B245AD3"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.fluid_pipe}"
+			x: -5.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"27C77CC41F85409A"
+				"35FFC3490943BCD3"
+			]
+			description: ["{gravitas.quest.create_copper.desc.mechanioal_pump}"]
+			id: "7AF1C057487B5714"
+			rewards: [{
+				id: "0623110A08EB4BC6"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "36A923A1184B4913"
+				item: "create:mechanical_pump"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.mechanioal_pump}"
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"27C77CC41F85409A"
+				"5EBEAA428DC6D805"
+				"42F824C2EA0AD914"
+			]
+			description: ["{gravitas.quest.create_copper.desc.fluid_valve}"]
+			id: "24186DD4315614C7"
+			rewards: [{
+				count: 2
+				id: "2496784A34C50593"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "create:fluid_pipe"
+				}
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C2F8124E97AEF61"
+				item: "create:fluid_valve"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.fluid_valve}"
+			x: -3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"48C8D0CB8C53A8A4"
+				"35FFC3490943BCD3"
+			]
+			description: ["{gravitas.quest.create_copper.desc.fluid_tank}"]
+			id: "6CC90F8BD88143BB"
+			rewards: [{
+				id: "1A63EF7A1FACF826"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "66412BDC053E50AD"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.fluid_tank}"
+			x: -5.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"31C52FC411A15844"
+				"35FFC3490943BCD3"
+			]
+			description: ["{gravitas.quest.create_copper.desc.spout}"]
+			id: "5EBEAA428DC6D805"
+			rewards: [{
+				id: "0145B685C9839A3F"
+				item: "tfc:wooden_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0C13537733EDC668"
+				item: "create:spout"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.spout}"
+			x: -4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"31C52FC411A15844"
+				"16A78209EFF39A59"
+			]
+			description: ["{gravitas.quest.create_copper.desc.item_drain}"]
+			id: "2FB92486AF5C09CE"
+			rewards: [{
+				id: "05B9579DAF68578F"
+				item: "tfc:wooden_bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1616075D857D28FB"
+				item: "create:item_drain"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.item_drain}"
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"31C52FC411A15844"
+				"35FFC3490943BCD3"
+			]
+			description: ["{gravitas.quest.create_copper.desc.hose_pulley}"]
+			id: "586DE83FA331118C"
+			rewards: [{
+				id: "2E18294455804DA7"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "043B44671C9F5A50"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_copper.hose_pulley}"
+			x: -6.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"5EBEAA428DC6D805"
+				"45D70FF412983925"
+			]
+			description: ["{gravitas.quest.create_basic.desc.catalyst}"]
+			id: "6163FB1EE4756765"
+			rewards: [{
+				count: 2
+				id: "3BF4A1083FBF6E5D"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "gtceu:brass_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "07846B74D7F8ECE5"
+				item: "create_connected:empty_fan_catalyst"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.catalyst}"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["180BF4E2EE861C22"]
+			description: ["{gravitas.quest.create_basic.desc.copper_casing}"]
+			id: "16A78209EFF39A59"
+			rewards: [{
+				count: 4
+				id: "1FC923F7F6AE0C8E"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "68EAD993F66A7BF8"
+				item: "create:copper_casing"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.copper_casing}"
+			x: -4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"35FFC3490943BCD3"
+				"6CC90F8BD88143BB"
+				"330FEFDB01919688"
+			]
+			id: "5F948188938AA410"
+			tasks: [{
+				id: "69A000B5C050BE9E"
+				item: "create:steam_engine"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["35FFC3490943BCD3"]
+			description: ["{gravitas.quest.create_basic.desc.smart_pipe}"]
+			id: "6717B01E52FF8D63"
+			tasks: [{
+				id: "75A29FB99ECF5E92"
+				item: "create:smart_fluid_pipe"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.smart_pipe}"
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["572045C1A9358D94"]
+			description: ["{gravitas.quest.create_basic.desc.large_ww}"]
+			id: "285B75F17D2F3DD1"
+			tasks: [{
+				id: "60278993C75BD303"
+				item: "create:large_water_wheel"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.large_ww}"
+			x: -5.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["744796CFA8BF6A26"]
+			description: ["{gravitas.quest.create_basic.desc.bcs}"]
+			id: "6CE87DBFEDDEE154"
+			rewards: [{
+				id: "2C3F496D78AF6EFA"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "0AA43285F07D27A2"
+					item: "create:chain_conveyor"
+					type: "item"
+				}
+				{
+					id: "55B65AD3C8DDB7FB"
+					item: "create:belt_connector"
+					type: "item"
+				}
+				{
+					id: "3181630865B55731"
+					item: "create:shaft"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.create_basic.title.bcs}"
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["744796CFA8BF6A26"]
+			description: ["{gravitas.quest.igneous.desc.mechanical_mixer}"]
+			id: "23057A4DA887FA7C"
+			rewards: [
+				{
+					id: "04E81A3D36DD8FB0"
+					item: "tfc:wooden_bucket"
+					type: "item"
+				}
+				{
+					id: "5B271F6A8F3704FF"
+					item: "tfc:jute"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "428E27761F1C4DEE"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.mechanical_mixer.title}"
+			x: -0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["744796CFA8BF6A26"]
+			description: ["{gravitas.quest.igneous.desc.mechanical_press}"]
+			id: "3A1459A1C4D8D71A"
+			rewards: [{
+				count: 2
+				id: "5BE00591C91760E8"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:food": {
+							creationDate: 4854000L
+							traits: [ ]
+						}
+					}
+					id: "tfc:food/sugarcane"
+				}
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "7CB0C71FE20B0909"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.mechanical_press.title}"
+			x: -1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["744796CFA8BF6A26"]
+			description: ["{gravitas.quest.create_basic.desc.cogs}"]
+			id: "2DFDABE31BAA7913"
+			rewards: [{
+				id: "26C48D107E2EF3E3"
+				item: "create:large_cogwheel"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "680305E39FC7DFC9"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "0AF105D085058FF9"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.create_basic.title.cogs}"
+			x: -2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2DFDABE31BAA7913"]
+			description: ["{gravitas.quest.create_basic.desc.gearbox}"]
+			id: "0054F1E61AA75CD7"
+			tasks: [{
+				id: "07BC2AF3911E024B"
+				item: "create:gearbox"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.gearbox}"
+			x: -3.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["744796CFA8BF6A26"]
+			description: ["{gravitas.quest.create_basic.desc.horse_crank}"]
+			id: "26BBE419FF2005D5"
+			rewards: [{
+				count: 4
+				id: "1139C51598783DBA"
+				item: "minecraft:lead"
+				type: "item"
+			}]
+			subtitle: "{gravitas.quest.create_basic.sub.horse_crank}"
+			tasks: [{
+				id: "76CE3605553B2571"
+				item: "createhorsepower:horse_crank"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.horse_crank}"
+			x: -3.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2DFDABE31BAA7913"]
+			description: ["{gravitas.quest.igneous.desc.testing_stress_and_speed}"]
+			id: "778D7811E47060AD"
+			rewards: [{
+				id: "2AC7CCBB34406308"
+				item: "firmaciv:firmaciv_compass"
+				type: "item"
+			}]
+			tasks: [{
+				id: "46BAD52C92AF9C33"
+				title: "{gravitas.quest.igneous.testing_stress_and_speed}"
+				type: "checkmark"
+			}]
+			title: "{gravitas.quest.igneous.testing_stress_and_speed.title}"
+			x: -1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["778D7811E47060AD"]
+			description: ["{gravitas.quest.igneous.desc.speedometer}"]
+			id: "4A0F1185AEE2D75C"
+			rewards: [{
+				count: 2
+				id: "61895B11C858FB47"
+				item: "create:shaft"
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "46DD2E68AAE38451"
+				item: "create:speedometer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.speedometer.title}"
+			x: -1.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["778D7811E47060AD"]
+			description: ["{gravitas.quest.igneous.desc.stressometer}"]
+			id: "56778FD7757F4080"
+			rewards: [{
+				count: 2
+				id: "23791D0C3A566E03"
+				item: "create:shaft"
+				random_bonus: 2
+				type: "item"
+			}]
+			tasks: [{
+				id: "458630343A0E4A07"
+				item: "create:stressometer"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.stressometer.title}"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0A077A39B89831B6"]
+			description: ["{gravitas.quest.create_basic.desc.speed_controller}"]
+			id: "0C39E392C0691F9A"
+			rewards: [{
+				id: "64BDABEC3098A115"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1BF531F83EDB4E2E"
+				item: "create:rotation_speed_controller"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.speed_controller}"
+			x: 5.392857142857153d
+			y: 3.7551020408163396d
+		}
+		{
+			dependencies: ["2DFDABE31BAA7913"]
+			description: ["{gravitas.quest.create_basic.desc.funnel}"]
+			id: "6802A13707909A92"
+			tasks: [
+				{
+					id: "68817A1FEB0BECC1"
+					item: "create:andesite_funnel"
+					type: "item"
+				}
+				{
+					id: "4F2443FD874EA64B"
+					item: "create:chute"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.create_basic.title.funnel}"
+			x: -2.5d
+			y: -5.5d
+		}
+		{
+			description: ["{gravitas.quest.create_basic.desc.valve}"]
+			id: "42F824C2EA0AD914"
+			rewards: [{
+				count: 8
+				id: "081AA04654953E71"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/ingot/copper"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2714F17E05741EE7"
+				item: "create:copper_valve_handle"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.valve}"
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			description: ["{gravitas.quest.igneous.desc.blaze_burner}"]
+			id: "12D0CBA404344570"
+			rewards: [{
+				count: 8
+				id: "6B39E5ED3A92F2EE"
+				item: "tfc:ore/bituminous_coal"
+				random_bonus: 8
+				type: "item"
+			}]
+			tasks: [{
+				id: "3F583F91092D5EF1"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.blaze_burner.title}"
+			x: 1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"3A1459A1C4D8D71A"
+				"23057A4DA887FA7C"
+				"12D0CBA404344570"
+			]
+			description: ["{gravitas.quest.create_basic.desc.basin}"]
+			id: "52795C886FE5DD33"
+			rewards: [{
+				count: 5
+				id: "3B5A8C50624EC33E"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "create:andesite_alloy"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "33C714A437CDF95D"
+					item: "create:basin"
+					type: "item"
+				}
+				{
+					id: "673E3A2232D20EE0"
+					item: "create:depot"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.create_basic.title.basin}"
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["572045C1A9358D94"]
+			description: ["{gravitas.quest.igneous.desc.windmill}"]
+			id: "330FEFDB01919688"
+			rewards: [{
+				count: 5
+				id: "6D1C46930801AD20"
+				item: "create:white_sail"
+				random_bonus: 5
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "13905EC0F939B017"
+					item: "create:windmill_bearing"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "36F3C67F26460A7F"
+					item: "create:white_sail"
+					type: "item"
+				}
+			]
+			title: "{gravitas.quest.igneous.windmill}"
+			x: -5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["507621DC20734652"]
+			description: ["{gravitas.quest.igneous.desc.encased_fan}"]
+			id: "45D70FF412983925"
+			rewards: [{
+				id: "6F107ABF19B6CFE0"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			tasks: [{
+				id: "07306DFB64AEB497"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			title: "{gravitas.quest.igneous.encased_fan}"
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0A077A39B89831B6"]
+			description: ["{gravitas.quest.brass.desc.mechanical_arm}"]
+			id: "02F20DA76D780F6B"
+			rewards: [{
+				count: 3
+				id: "4BA63C1C664AF7FD"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4803DDCB4AE94EDB"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			title: "{gravitas.quest.brass.mechanical_arm}"
+			x: 4.16836734693878d
+			y: 3.959183673469397d
+		}
+		{
+			dependencies: ["6802A13707909A92"]
+			description: ["{gravitas.quest.create_basic.desc.vault}"]
+			id: "39D72BE2930FDF5E"
+			tasks: [{
+				id: "104707376F6B0D90"
+				item: "create:item_vault"
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.vault}"
+			x: -3.0d
+			y: -6.5d
+		}
+		{
+			dependencies: [
+				"6E86F53C8C599534"
+				"0A077A39B89831B6"
+			]
+			description: ["{gravitas.quest.create_basic.desc.adv_tools}"]
+			icon: {
+				Count: 1
+				id: "createdieselgenerators:hammer"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "295A8F16BD59D3FE"
+			tasks: [{
+				count: 3L
+				id: "7985530EC5C87B8A"
+				item: { Count: 3, id: "create:precision_mechanism" }
+				type: "item"
+			}]
+			title: "{gravitas.quest.create_basic.title.adv_tools}"
+			x: 4.695578231292508d
+			y: 1.459183673469397d
+		}
+	]
+	title: "CREATE Basics"
+}
