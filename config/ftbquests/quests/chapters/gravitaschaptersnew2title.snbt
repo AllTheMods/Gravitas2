@@ -341,10 +341,10 @@
 					Count: 1
 					id: "gtceu:flint_mortar"
 					tag: {
+						Damage: 0
 						DisallowContainerItem: 0b
 						GT.Behaviours: { }
 						GT.Tool: {
-							Damage: 0
 							MaxDamage: 63
 						}
 						HideFlags: 2
@@ -1460,11 +1460,14 @@
 		}
 		{
 			dependencies: [
-				"66B9834887F40FD2"
 				"0EF7B8AB3859A822"
+				"66B9834887F40FD2"
 			]
 			description: ["{gravitas.quest.stage2.desc.graphite_coke_path}"]
+			hide_details_until_startable: true
+			hide_until_deps_visible: true
 			id: "2B1060BB6F2CD77B"
+			invisible: true
 			optional: true
 			tasks: [{
 				id: "0D600D88A93EAF0F"
@@ -1476,7 +1479,10 @@
 		}
 		{
 			dependencies: ["59BCE9D352413724"]
+			hide_details_until_startable: true
+			hide_until_deps_visible: true
 			id: "66B9834887F40FD2"
+			invisible: true
 			optional: true
 			tasks: [{
 				id: "777224FB95D09716"
@@ -1488,7 +1494,11 @@
 		}
 		{
 			description: [""]
+			disable_toast: true
+			hide_details_until_startable: true
+			hide_until_deps_visible: true
 			id: "0EF7B8AB3859A822"
+			invisible: true
 			optional: true
 			subtitle: "{gravitas.quest.stage3.subt.crushing}"
 			tasks: [{
@@ -1502,10 +1512,13 @@
 			y: 0.8d
 		}
 		{
-			dependencies: ["6C99E7F59F6A40ED"]
 			description: ["{gravitas.quest.stage2.desc.coke_oven}"]
+			disable_toast: true
 			hide_dependency_lines: false
+			hide_details_until_startable: true
+			hide_until_deps_visible: true
 			id: "59BCE9D352413724"
+			invisible: true
 			optional: true
 			tasks: [
 				{
