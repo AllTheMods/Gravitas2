@@ -670,7 +670,7 @@
     "gravitas.quest.brass.desc.tools": "These are some extra tools that can be useful. They all require a Precision Mechanism to craft.",
     "gravitas.quest.brass.desc.grip": "When put in your offhand the Extendo Grip will give you extended reach. Normally you can only reach 5 blocks away, however with the Extendo Grip you can reach 9.",
     "gravitas.quest.brass.desc.wand_of_symmetry": "The Wand of Symmetry is useful for the Pro-Builders. When right clicked it will place a mirror. When shift right clicked it will open up a menu to change the direction and use. When a mirror is placed any blocks placed near it will also place on the other side of the mirror.",
-    "gravitas.quest.brass.desc.potato_cannon": "The Potato Canon uses... well potatoes as ammunition. Only Minecraft Potatoes though! TFC Potatoes don't work.",
+    "gravitas.quest.brass.desc.potato_cannon": "The Potato Canon uses... well potatoes as ammunition.",
     "gravitas.quest.brass.desc.crushing_wheel": "Crushing Wheels will be needed to get many more things necessary for Create. To set up a Crusher you need 2 Crushing Wheels a block away from each other. The left one must be rotating clockwise and the right counterclockwise. Then just toss items in the top. It will hurt anything in it.",
     "gravitas.quest.brass.desc.mechanical_bearing": "To make a contraption you'll need a Mechanical Bearing to move it and Super Glue to get blocks to stick to it.",
     "gravitas.quest.brass.desc.chassis": "These blocks will automatically stick to the Mechanical Bearing and each other for a contraption.",
