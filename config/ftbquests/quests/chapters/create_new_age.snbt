@@ -5,7 +5,7 @@
 	group: "4B728CAFC5748917"
 	icon: "create_new_age:overcharged_diamond"
 	id: "7064603779F35B9E"
-	order_index: 4
+	order_index: 3
 	quest_links: [{
 		id: "076047BCD63DA572"
 		linked_quest: "15BC783BB17EE2D4"
