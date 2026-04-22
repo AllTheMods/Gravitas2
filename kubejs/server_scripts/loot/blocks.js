@@ -17,7 +17,24 @@ let blockReplacementMap = {
   "minecraft:bell": "tfc:brass_bell",
   "minecraft:torch": "tfc:torch",
   "minecraft:beehive": "firmalife:beehive",
-  "minecraft:lantern": "tfc:metal/lamp/bronze"
+  "minecraft:lantern": "tfc:metal/lamp/bronze",
+  // Restore vanilla concrete drops — DFC overrides these loot tables to drop dfc:concrete/smooth/*
+  "dfc:concrete/smooth/white":      "minecraft:white_concrete",
+  "dfc:concrete/smooth/orange":     "minecraft:orange_concrete",
+  "dfc:concrete/smooth/magenta":    "minecraft:magenta_concrete",
+  "dfc:concrete/smooth/light_blue": "minecraft:light_blue_concrete",
+  "dfc:concrete/smooth/yellow":     "minecraft:yellow_concrete",
+  "dfc:concrete/smooth/lime":       "minecraft:lime_concrete",
+  "dfc:concrete/smooth/pink":       "minecraft:pink_concrete",
+  "dfc:concrete/smooth/gray":       "minecraft:gray_concrete",
+  "dfc:concrete/smooth/light_gray": "minecraft:light_gray_concrete",
+  "dfc:concrete/smooth/cyan":       "minecraft:cyan_concrete",
+  "dfc:concrete/smooth/purple":     "minecraft:purple_concrete",
+  "dfc:concrete/smooth/blue":       "minecraft:blue_concrete",
+  "dfc:concrete/smooth/brown":      "minecraft:brown_concrete",
+  "dfc:concrete/smooth/green":      "minecraft:green_concrete",
+  "dfc:concrete/smooth/red":        "minecraft:red_concrete",
+  "dfc:concrete/smooth/black":      "minecraft:black_concrete"
 }
 
 
