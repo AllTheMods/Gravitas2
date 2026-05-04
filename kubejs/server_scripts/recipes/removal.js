@@ -633,4 +633,5 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   event.remove({ id: "createdieselgenerators:compression_molding/bucket"})
 
+  event.remove({ id: "createbigcannons:mixing/alloy_steel"})
 }
