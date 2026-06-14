@@ -1381,6 +1381,25 @@ let gtceuAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     .duration(100)
     .EUt(ULV)
 
+  //Paraffin Wax
+
+  event.recipes.gtceu
+    .chemical_reactor("gregitas:raw_paraffin")
+    .inputFluids(Fluid.of("gtceu:heavy_fuel", 1000), Fluid.of('gtceu:acetone', 1000))
+    .circuit(1)
+    .outputFluids(Fluid.of("gregitas:raw_paraffin", 1000))
+    .duration(300)
+    .EUt(120)
+
+  event.recipes.gtceu
+    .chemical_reactor("gregitas:paraffin_wax")
+    .itemInputs("gtceu:sulfur_dust")
+    .inputFluids(Fluid.of("gregitas:raw_paraffin", 1000))
+    .circuit(1)
+    .itemOutputs("9x firmalife:beeswax")
+    .duration(600)
+    .EUt(16)
+
   //wool
 
   event.recipes.gtceu
