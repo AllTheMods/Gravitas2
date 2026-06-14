@@ -1899,9 +1899,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   // Create Igneous Alloy
   event.recipes.gtceu
     .alloy_smelter("igneous_alloy")
-    .itemInputs("2x gregitas_core:igneous_dust", "2x gtceu:small_zinc_dust")
-    .itemOutputs("create:andesite_alloy")
-    .duration(60)
+    .itemInputs("4x gregitas_core:igneous_dust", "1x gtceu:zinc_dust")
+    .itemOutputs("4x create:andesite_alloy")
+    .duration(200)
     .EUt(LV)
 
   shaped("computercraft:turtle_normal", ["www", "wpw", "wcw"], {
