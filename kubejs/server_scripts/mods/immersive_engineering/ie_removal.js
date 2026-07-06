@@ -47,6 +47,8 @@ let ieRecipesRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "createaddition:compat/immersiveengineering/item_application/kiln_brick"})
   event.remove({ id: "createaddition:compat/immersiveengineering/item_application/kiln_brick_using_deployer"})
   event.remove({ id: "immersiveengineering:blueprint/circuit_board"})
+  event.remove({ id: "immersiveengineering:crafting/connector_bundled"})
+  event.remove({ id: "immersiveengineering:crafting/toolupgrade_powerpack_antenna"})
 
   // IE Crusher: c:raw_materials/* → dust conflicts with IG↔GT raw ore conversion
   event.remove({ id: /^immersiveengineering:crusher\/raw_ore_.*/ })
