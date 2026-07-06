@@ -259,6 +259,9 @@ let recipeRemoval = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.remove({ id: "create:pressing/iron_ingot" })
   event.remove({ id: "railcraft:rolling/iron_plate" })
 
+  //CreateBigCannons
+  event.remove({ id: "createbigcannons:mixing/alloy_steel" })
+
   //FramedBlocks
   event.remove({ id: "framedblocks:framed_torch" })
   event.remove({ id: "framedblocks:framed_soul_torch" })
