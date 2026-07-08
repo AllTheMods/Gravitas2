@@ -917,7 +917,11 @@
 						items: [
 							{
 								Count: 1b
-								id: "gtceu:steam_miner"
+								id: "gtceu:hp_steam_miner"
+							}
+							{
+								Count: 1b
+								id: "gtceu:lp_steam_miner"
 							}
 							{
 								Count: 1b
