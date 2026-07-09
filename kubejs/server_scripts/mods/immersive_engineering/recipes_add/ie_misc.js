@@ -59,4 +59,16 @@ var ieMiscRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     b: "gtceu:phenolic_printed_circuit_board",
     w: "#forge:fine_wires/aluminium"
   })
+  
+  event.shaped("immersiveengineering:connector_bundled", [" w ", "wcw"," w "], {
+    c: "immersiveengineering:connector_redstone",
+    w: "#forge:fine_wires/aluminium"
+  })
+
+  event.shaped("immersiveengineering:toolupgrade_powerpack_antenna", ["www", "rww","c  "], {
+    c: "immersiveengineering:connector_lv",
+    w: "#forge:fine_wires/aluminium",
+    r: "#forge:rods/aluminium"
+  })
+
 }
