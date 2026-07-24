@@ -1665,9 +1665,9 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
 
   //Ender Tanks & Chests
   shaped("enderchests:ender_bag", ["lsl", "lel", "lll"], {
-    l: "forge:leather",
+    l: "#forge:leather",
     e: "minecraft:ender_chest",
-    s: "forge:string"
+    s: "#forge:string"
   })
 
   shaped("enderchests:ender_chest", ["eOs", "cCc", "OfO"], {
