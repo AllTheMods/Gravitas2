@@ -1670,6 +1670,12 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     s: "#forge:string"
   })
 
+    shaped("enderchests:ender_pouch", ["wsw", "wew", "www"], {
+    w: "#forge:wool",
+    e: "minecraft:ender_eye",
+    s: "#forge:string"
+  })
+
   shaped("enderchests:ender_chest", ["eOs", "cCc", "OfO"], {
     e: "gtceu:mv_emitter",
     O: "gtceu:obsidian_plate",
