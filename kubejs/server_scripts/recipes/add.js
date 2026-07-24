@@ -1664,7 +1664,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   //End of Thorium Reactors
 
   //Ender Tanks & Chests
-  shaped("enderchests:ender_chest", ["lsl", "lel", "lll"], {
+  shaped("enderchests:ender_bag", ["lsl", "lel", "lll"], {
     l: "forge:leather",
     e: "minecraft:ender_chest",
     s: "forge:string"
